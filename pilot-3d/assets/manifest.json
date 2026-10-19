@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "file": "afternoon-studio-v1.glb",
+  "format": "glTF 2.0 binary",
+  "bytes": 3922788,
+  "sha256": "be7f3256bcefe04fc3ed8aedff90732bf8f6029aa69e3af55abeb596838a8f88",
+  "source": "../src/model.mjs",
+  "provenance": "Original procedural geometry authored in this workspace. No third-party model or texture.",
+  "thirdPartyCode": "Three.js (MIT), license copied beside the model",
+  "units": "metres",
+  "up": "+Y",
+  "floorY": 0,
+  "dimensions": {
+    "room": [
+      7.2,
+      2.6,
+      5.6
+    ],
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45,
+    "seatedHeadTop": 1.36
+  },
+  "workspaceOrigin": [
+    0.35,
+    0,
+    0.95
+  ],
+  "animations": [
+    {
+      "name": "idle",
+      "duration": 3.6,
+      "tracks": 4
+    },
+    {
+      "name": "typing",
+      "duration": 0.8,
+      "tracks": 4
+    }
+  ],
+  "meshes": 213,
+  "triangles": 68016,
+  "rig": "Hierarchical transform animation; no skinned skeleton or walking clips",
+  "limitations": [
+    "Stylized pilot model; not a photoreal reconstruction of the PNG",
+    "Only Nara is modeled",
+    "No real AI/backend/authentication"
+  ]
+}

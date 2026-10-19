@@ -1,0 +1,197 @@
+import * as T from "three";
+import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
+
+// Original, reproducible pilot models. Metres, Y up, floor surface Y = 0.
+export const DIMENSIONS = Object.freeze({ room: [7.2, 2.6, 5.6], desk: [1.4, .74, .7], chairSeat: .45, seatedHeadTop: 1.36 });
+export const WORKSPACE_ORIGIN = [.35, 0, .95];
+export const MODEL_VERSION = 1;
+
+export function createOfficeModel() {
+  const root = new T.Group(); root.name = "AfternoonStudio";
+  root.userData = { units: "metres", up: "+Y", floorY: 0, modelVersion: MODEL_VERSION, source: "Original procedural model: pilot-3d/src/model.mjs" };
+  const palette = {
+    ivory: 0xe7dfcd, edge: 0xd4c2a4, wall: 0xa7b29a, trim: 0x718470,
+    oak: 0xc99c69, oakLight: 0xdec09a, oakDark: 0x9d7652,
+    sage: 0x899c80, terra: 0xbb7352, cream: 0xf2e8d7,
+    hair: 0x493429, skin: 0xe2b48e, dark: 0x3c483b, leaf: 0x567355,
+  };
+  const materials = Object.fromEntries(Object.entries(palette).map(([key, color]) => [key, new T.MeshStandardMaterial({ color, roughness: .84 })]));
+  const material = (color, roughness = .85) => new T.MeshStandardMaterial({ color, roughness });
+  function mesh(parent, name, geometry, mat, position = [0, 0, 0]) {
+    const object = new T.Mesh(geometry, typeof mat === "string" ? materials[mat] : mat);
+    object.name = name; object.position.fromArray(position); object.castShadow = true; object.receiveShadow = true; parent.add(object); return object;
+  }
+  function box(parent, name, size, position, mat, radius = .025) {
+    return mesh(parent, name, new RoundedBoxGeometry(...size, 2, Math.min(radius, ...size.map(v => v / 3))), mat, position);
+  }
+  function sphere(parent, name, radius, position, mat, scale = [1, 1, 1]) {
+    const object = mesh(parent, name, new T.SphereGeometry(radius, 20, 14), mat, position); object.scale.fromArray(scale); return object;
+  }
+  function cylinder(parent, name, r1, r2, height, position, mat, sides = 24) {
+    return mesh(parent, name, new T.CylinderGeometry(r1, r2, height, sides), mat, position);
+  }
+  function limb(parent, name, start, end, radius, mat) {
+    const a = new T.Vector3(...start), b = new T.Vector3(...end), length = a.distanceTo(b);
+    const object = mesh(parent, name, new T.CapsuleGeometry(radius, Math.max(0, length - 2 * radius), 4, 12), mat);
+    object.position.copy(a).add(b).multiplyScalar(.5);
+    object.quaternion.setFromUnitVectors(new T.Vector3(0, 1, 0), b.sub(a).normalize()); return object;
+  }
+  const group = (parent, name, position = [0, 0, 0]) => { const g = new T.Group(); g.name = name; g.position.fromArray(position); parent.add(g); return g; };
+  const room = group(root, "Room");
+  box(room, "Floor", [7.2, .18, 5.6], [0, -.09, 0], "ivory", .09);
+  box(room, "LeftWall", [.12, 2.6, 5.6], [-3.6, 1.3, 0], "wall", .055).castShadow = false;
+  box(room, "WindowSillWall", [7.2, .68, .12], [0, .34, -2.8], "wall").castShadow = false;
+  box(room, "WindowTop", [7.2, .16, .12], [0, 2.52, -2.8], "oak").castShadow = false;
+  const skyMat = new T.MeshStandardMaterial({ color: 0xe4eee3, emissive: 0xc9d9c4, emissiveIntensity: .26, roughness: 1 });
+  for (let i = 0; i < 3; i++) {
+    const x = -2.4 + i * 2.4;
+    box(room, `WindowGlass${i}`, [2.26, 1.75, .025], [x, 1.56, -2.84], skyMat, .008).castShadow = false;
+    box(room, `WindowPost${i}`, [.07, 1.87, .13], [x - 1.16, 1.57, -2.76], "oak").castShadow = false;
+    box(room, `WindowCrossbar${i}`, [2.28, .045, .1], [x, 1.5, -2.76], "oak").castShadow = false;
+    // Flat distant silhouettes make the window read as daylight, without texture downloads.
+    for (let j = 0; j < 4; j++) {
+      const canopy = sphere(room, `DistantTree${i}_${j}`, .23 + j * .025, [x - .85 + j * .5, .98 + (j % 2) * .13, -2.79], material(0xb8c5a1), [1, 1.3, .06]);
+      canopy.castShadow = false; canopy.receiveShadow = false;
+    }
+  }
+  box(room, "WindowBottomTrim", [7.2, .08, .2], [0, .7, -2.76], "oakLight");
+  box(room, "WindowRightPost", [.09, 1.86, .13], [3.55, 1.57, -2.76], "oak").castShadow = false;
+  // Restrained tile joints; same floor plane and world scale as the furniture.
+  const seamMat = material(0xd6cfbe);
+  for (let i = -2; i <= 2; i++) box(room, `FloorJointX${i}`, [.009, .001, 5.45], [i * 1.2, .0008, 0], seamMat, .0001);
+  for (let i = -1; i <= 1; i++) box(room, `FloorJointZ${i}`, [7.05, .001, .009], [0, .0008, i * 1.4], seamMat, .0001);
+
+  const shelf = group(root, "Bookshelf", [-3.29, 0, -.5]); shelf.rotation.y = Math.PI / 2;
+  box(shelf, "ShelfBack", [1.65, 2.05, .06], [0, 1.08, -.14], "oakDark");
+  for (const x of [-.84, .84]) box(shelf, `ShelfSide${x}`, [.065, 2.15, .36], [x, 1.075, 0], "oakLight");
+  const bookColors = [0x6b7e65, 0xe1ccb0, 0xae785d, 0x7c8a86, 0xd0ac75];
+  for (let row = 0; row < 4; row++) {
+    const y = .16 + row * .48;
+    box(shelf, `ShelfBoard${row}`, [1.7, .055, .4], [0, y, .015], "oakLight");
+    for (let col = 0; col < 7; col++) {
+      const height = .24 + ((row * 3 + col) % 4) * .035;
+      const book = box(shelf, `Book${row}_${col}`, [.095, height, .18], [-.67 + col * .17, y + .03 + height / 2, .04], material(bookColors[(row + col) % 5]), .008);
+      if (col === 6) book.rotation.z = -.1;
+    }
+  }
+  box(shelf, "ShelfCap", [1.8, .065, .43], [0, 2.14, .015], "oak");
+  const sofa = group(root, "Sofa", [-1.5, 0, -1.91]);
+  for (const x of [-.88, .88]) for (const z of [-.28, .28]) cylinder(sofa, `SofaFoot${x}_${z}`, .028, .024, .16, [x, .08, z], "oakDark", 10);
+  box(sofa, "SofaBase", [2.1, .3, .82], [0, .28, 0], "terra", .10);
+  box(sofa, "SofaBack", [2.1, .58, .19], [0, .63, -.32], "terra", .08);
+  for (const x of [-.99, .99]) box(sofa, `SofaArm${x}`, [.19, .4, .86], [x, .50, 0], "terra", .08);
+  for (const x of [-.48, .48]) box(sofa, `SofaSeat${x}`, [.91, .16, .66], [x, .47, .06], material(0xc5805e), .07);
+  const cushion = box(sofa, "SofaCushion", [.4, .39, .12], [.52, .74, -.14], "sage", .08); cushion.rotation.z = -.12;
+  const rug = cylinder(root, "Rug", .95, .95, .014, [-1.4, .009, -.55], material(0xcdbd9d), 64); rug.scale.z = .8;
+  const coffee = group(root, "CoffeeTable", [-1.4, 0, -.55]);
+  cylinder(coffee, "CoffeeTop", .49, .49, .065, [0, .39, 0], "cream", 48);
+  for (const x of [-.25, .25]) cylinder(coffee, `CoffeeLeg${x}`, .085, .09, .36, [x, .18, 0], "ivory");
+  box(coffee, "CoffeeBook", [.24, .045, .17], [-.12, .445, .03], "sage", .01);
+
+  function chair(parent, name, position) {
+    const c = group(parent, name, position);
+    box(c, `${name}Seat`, [.48, .085, .47], [0, .4075, 0], "sage", .065);
+    box(c, `${name}Back`, [.49, .4, .095], [0, .66, -.22], "sage", .075);
+    for (const x of [-.18, .18]) for (const z of [-.17, .17]) {
+      const leg = cylinder(c, `${name}Foot${x}_${z}`, .022, .025, .365, [x, .1825, z], "oak", 12);
+      leg.userData.groundSupport = true;
+    }
+    return c;
+  }
+  const meeting = group(root, "MeetingTable", [2.23, 0, -1.53]);
+  cylinder(meeting, "MeetingTop", .66, .66, .05, [0, .715, 0], "oakLight", 48);
+  cylinder(meeting, "MeetingBase", .23, .28, .69, [0, .345, 0], "oak", 32);
+  const meetingChair = chair(root, "MeetingChair", [2.5, 0, -.51]); meetingChair.rotation.y = Math.PI;
+  const art = group(root, "WallArt", [-3.515, 1.55, -1.87]); art.rotation.y = Math.PI / 2;
+  box(art, "ArtFrame", [.64, .77, .045], [0, 0, 0], "oakLight");
+  box(art, "ArtPaper", [.57, .70, .01], [0, 0, .028], "cream");
+  const artSun = sphere(art, "ArtSun", .17, [0, .12, .04], "terra", [1, 1, .025]); artSun.castShadow = false;
+  box(art, "ArtShape", [.31, .29, .009], [-.05, -.15, .041], "sage", .08).castShadow = false;
+  function plant(parent, name, position, size) {
+    const p = group(parent, name, position);
+    cylinder(p, `${name}Pot`, .15 * size, .12 * size, .32 * size, [0, .16 * size, 0], "cream");
+    cylinder(p, `${name}Soil`, .138 * size, .138 * size, .015, [0, .32 * size, 0], material(0x68513c));
+    for (let i = 0; i < 9; i++) {
+      const a = i * 2.399, reach = (.11 + (i % 3) * .06) * size, h = (.6 + (i % 4) * .09) * size;
+      const end = [Math.cos(a) * reach, h, Math.sin(a) * reach];
+      limb(p, `${name}Stem${i}`, [0, .3 * size, 0], end, .009 * size, "leaf");
+      const leaf = sphere(p, `${name}Leaf${i}`, .13 * size, end, "leaf", [.42, 1.7, .16]);
+      leaf.rotation.set(.25 * Math.sin(a), a, .5 * Math.cos(a));
+    }
+  }
+  plant(root, "WindowPlant", [3.07, 0, -2.06], 1.2);
+  plant(root, "SofaPlant", [-.14, 0, -2.22], 1);
+  plant(meeting, "TablePlant", [.1, .74, .02], .32);
+
+  const workspace = group(root, "Workspace", WORKSPACE_ORIGIN);
+  workspace.userData = { role: "nara-workspace", deskHeight: .74, chairSeatHeight: .45 };
+  const desk = group(workspace, "Desk");
+  box(desk, "DeskTop", [1.4, .04, .7], [0, .72, .1], "oakLight", .02);
+  for (const x of [-.61, .61]) for (const z of [-.17, .37]) {
+    const leg = box(desk, `DeskFoot${x}_${z}`, [.055, .7, .055], [x, .35, z], "oak", .012); leg.userData.groundSupport = true;
+  }
+  box(desk, "DeskApron", [1.22, .075, .04], [0, .68, -.17], "oak");
+  chair(workspace, "Chair", [0, 0, -.60]);
+  const laptop = group(desk, "Laptop", [-.03, .74, .03]);
+  const metal = material(0xa2aaa5, .45);
+  box(laptop, "LaptopBase", [.43, .025, .29], [0, .0125, 0], metal, .014);
+  box(laptop, "Keyboard", [.34, .004, .14], [0, .027, .005], "dark", .005);
+  const screen = group(laptop, "LaptopLid", [0, .025, .135]); screen.rotation.x = -.16;
+  box(screen, "LaptopShell", [.43, .28, .018], [0, .14, 0], metal, .014);
+  box(screen, "LaptopScreen", [.39, .235, .002], [0, .14, -.011], material(0x617d73, .6), .006);
+  box(desk, "Notebook", [.23, .025, .28], [.44, .755, .13], "cream", .009);
+  cylinder(desk, "Mug", .047, .042, .09, [-.49, .785, .23], "sage");
+  const handle = mesh(desk, "MugHandle", new T.TorusGeometry(.032, .008, 8, 16), "sage", [-.435, .793, .23]); handle.rotation.y = Math.PI / 2;
+
+  const nara = group(workspace, "Nara", [0, 0, -.60]); nara.userData = { selectable: true, agentId: "nara", rig: "hierarchical node animation; no skinning" };
+  const torso = group(nara, "NaraTorso", [0, .78, 0]);
+  sphere(torso, "Cardigan", 1, [0, 0, 0], "sage", [.207, .235, .135]);
+  box(torso, "Shirt", [.14, .30, .035], [0, .025, .125], "cream", .025);
+  for (const x of [-.1, .1]) sphere(nara, `TrouserHip${x}`, .12, [x, .50, .04], "cream", [1, .8, 1.3]);
+  for (const x of [-.105, .105]) {
+    limb(nara, `TrouserThigh${x}`, [x, .51, .03], [x, .48, .34], .074, "cream");
+    limb(nara, `TrouserShin${x}`, [x, .48, .34], [x, .11, .40], .060, "cream");
+    const shoe = box(nara, `Shoe${x}`, [.135, .105, .24], [x, .0525, .46], "cream", .045); shoe.userData.groundSupport = true;
+  }
+  cylinder(nara, "Neck", .063, .067, .11, [0, .99, .012], "skin", 16);
+  const head = group(nara, "NaraHead", [0, 1.155, .02]);
+  sphere(head, "BobBack", .18, [0, .01, -.045], "hair", [1.05, 1.13, .94]);
+  sphere(head, "Face", .17, [0, -.005, .036], "skin", [.87, 1.04, .91]);
+  const cap = mesh(head, "BobCrown", new T.SphereGeometry(.185, 24, 16, 0, Math.PI * 2, 0, 1.48), "hair", [0, .015, -.015]); cap.scale.z = .96;
+  for (const x of [-.155, .155]) sphere(head, `BobSide${x}`, .08, [x, -.055, -.008], "hair", [.55, 1.55, 1.2]);
+  const fringe = sphere(head, "BobFringe", .14, [-.034, .11, .09], "hair", [1.05, .47, .65]); fringe.rotation.z = .13;
+  for (const x of [-.059, .059]) {
+    sphere(head, `Eye${x}`, .013, [x, .014, .181], "hair", [.8, 1.15, .55]);
+    sphere(head, `EyeLight${x}`, .0038, [x - .002, .019, .188], "cream");
+    box(head, `Brow${x}`, [.038, .008, .008], [x, .05, .171], "hair", .003);
+    sphere(head, `Cheek${x}`, .025, [x * 1.45, -.026, .165], material(0xd99d82), [1, .6, .18]);
+  }
+  sphere(head, "Nose", .019, [0, -.023, .196], "skin", [.8, 1, .85]);
+  const smile = new T.QuadraticBezierCurve3(new T.Vector3(-.025, -.065, .183), new T.Vector3(0, -.084, .193), new T.Vector3(.025, -.065, .183));
+  mesh(head, "Smile", new T.TubeGeometry(smile, 12, .0035, 6, false), material(0x8f5e49));
+  for (const [side, x] of [["L", -.18], ["R", .18]]) {
+    const sign = Math.sign(x);
+    limb(nara, `UpperArm${side}`, [x, .91, .01], [x + sign * .035, .78, .23], .067, "sage");
+    const forearm = group(nara, `NaraForearm${side}`, [x + sign * .035, .78, .23]);
+    limb(forearm, `Sleeve${side}`, [0, 0, 0], [-sign * .035, -.005, .21], .046, "sage");
+    limb(forearm, `Wrist${side}`, [-sign * .035, -.005, .20], [-sign * .055, -.005, .30], .032, "skin");
+    sphere(forearm, `Hand${side}`, .047, [-sign * .055, -.005, .33], "skin", [.8, .45, 1.1]);
+  }
+  function quaternionTrack(name, times, eulers) {
+    return new T.QuaternionKeyframeTrack(`${name}.quaternion`, times, eulers.flatMap(e => new T.Quaternion().setFromEuler(new T.Euler(...e)).toArray()));
+  }
+  const idle = new T.AnimationClip("idle", 3.6, [
+    quaternionTrack("NaraHead", [0, 1.8, 3.6], [[0, -.025, 0], [.015, .025, 0], [0, -.025, 0]]),
+    quaternionTrack("NaraForearmL", [0, 3.6], [[0, 0, 0], [0, 0, 0]]),
+    quaternionTrack("NaraForearmR", [0, 3.6], [[0, 0, 0], [0, 0, 0]]),
+    new T.VectorKeyframeTrack("NaraTorso.scale", [0, 1.8, 3.6], [1, 1, 1, 1, 1.012, 1, 1, 1, 1]),
+  ]);
+  const typing = new T.AnimationClip("typing", .8, [
+    quaternionTrack("NaraHead", [0, .4, .8], [[.055, 0, 0], [.075, .012, 0], [.055, 0, 0]]),
+    quaternionTrack("NaraForearmL", [0, .2, .4, .6, .8], [[-.035, 0, 0], [.025, 0, 0], [-.035, 0, 0], [.025, 0, 0], [-.035, 0, 0]]),
+    quaternionTrack("NaraForearmR", [0, .2, .4, .6, .8], [[.025, 0, 0], [-.035, 0, 0], [.025, 0, 0], [-.035, 0, 0], [.025, 0, 0]]),
+    new T.VectorKeyframeTrack("NaraTorso.scale", [0, .4, .8], [1, 1, 1, 1, 1.005, 1, 1, 1, 1]),
+  ]);
+  root.updateMatrixWorld(true);
+  return { root, animations: [idle, typing] };
+}

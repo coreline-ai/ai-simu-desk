@@ -1,0 +1,6 @@
+Afternoon Studio v1
+Original procedural geometry and animation, authored for this workspace on 2026-10-19.
+Source: pilot-3d/src/model.mjs. No purchased, scraped or downloaded third-party models/textures.
+Generated geometry is a project deliverable; no additional third-party model license is required.
+Three.js library is MIT licensed; see THREE-LICENSE.txt.
+Model is a stylized pilot with node animation, not a skinned production character.

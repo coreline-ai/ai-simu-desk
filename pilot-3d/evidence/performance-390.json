@@ -1,0 +1,28 @@
+{
+  "metrics": {
+    "canvas": [
+      337,
+      368
+    ],
+    "clips": [
+      "idle",
+      "typing"
+    ],
+    "drawCalls": 381,
+    "geometries": 214,
+    "loadedMs": 26,
+    "measuredFps": 75.1,
+    "measurementInterrupted": false,
+    "measurementMs": 3010,
+    "measuring": false,
+    "paused": false,
+    "pixelRatio": 1,
+    "pose": "idle",
+    "textures": 3,
+    "triangles": 118778
+  },
+  "viewport": [
+    390,
+    844
+  ]
+}

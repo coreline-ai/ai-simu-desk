@@ -1,0 +1,12 @@
+{
+  "platform": "Darwin",
+  "machine": "arm64",
+  "macOS": "26.5.2",
+  "browser": "Codex in-app browser",
+  "server": "Python HTTP on loopback port 4173",
+  "networkThrottling": false,
+  "physicalMobileDeviceTested": false,
+  "fpsMeasurement": "3 second WebGL animation-loop cadence; not GPU timer query or sustained device benchmark",
+  "modelBytes": 3922788,
+  "bundleBytes": 668327
+}

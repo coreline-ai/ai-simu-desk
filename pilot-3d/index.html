@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6ef"><meta name="description" content="오후의 스튜디오. 나라와 함께하는 실제 3D 사무실 파일럿.">
+  <title>AI Simu Desk · 3D 스튜디오</title><link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#task">업무 입력으로 이동</a>
+  <header class="topbar"><a class="brand" href="../demo/preview.html" aria-label="AI Simu Desk 2.5D 데모"><span class="brand-mark" aria-hidden="true">▥</span>simu<span>desk</span><small>A LITTLE SPACE FOR BIG IDEAS</small></a><nav aria-label="데모 탐색"><a href="../demo/preview.html">2.5D 데모 ↗</a><span class="pilot-pill">3D PILOT · 01</span></nav></header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">AFTERNOON STUDIO / A NEW DIMENSION</p><h1>같은 공간, 같은 빛.</h1><p class="intro">작은 사무실이 입체가 되었어요. 나라와 다음 아이디어를 시작해 보세요.</p></div><span class="chapter" aria-hidden="true">OPEN<br>STUDIO <b>02</b></span></div>
+    <div class="workspace-grid">
+      <section class="studio" aria-labelledby="studio-title">
+        <div class="section-title"><h2 id="studio-title"><i></i>오후의 스튜디오</h2><span id="render-label">3D 준비 중</span></div>
+        <div class="stage" id="stage">
+          <div id="canvas-host" class="canvas-host"></div>
+          <div class="stage-corner"><span class="tiny-pill">LIVE SPACE</span><span>DAYLIGHT · 14:30</span></div>
+          <div class="loading" id="loading" role="status"><span class="spinner"></span>작은 공간을 준비하고 있어요…</div>
+          <div class="fallback" id="fallback" hidden><img src="../demo/assets/office-background-v1.png" alt="3D를 사용할 수 없을 때 보여주는 사무실 참고 이미지"><p id="fallback-message">3D 화면을 불러오지 못했어요. 업무 패널은 계속 사용할 수 있어요.</p><button type="button" id="recover">3D 다시 불러오기</button></div>
+          <div class="stage-caption"><span>✧ &nbsp; A LITTLE ROOM TO THINK</span><span>01 / NARA</span></div>
+        </div>
+        <div class="scene-controls" role="group" aria-label="3D 화면 조절"><div class="view-buttons"><button id="wide-view" type="button" aria-pressed="true">전체 공간</button><button id="focus-view" type="button" aria-pressed="false">나라 가까이</button></div><button id="motion" type="button" aria-pressed="false">움직임 멈추기</button></div>
+        <p class="scene-hint">드래그해서 둘러보고, 스크롤하거나 두 손가락으로 확대해 보세요.</p>
+        <button type="button" class="coworker" id="select-nara" aria-pressed="true"><span class="avatar">N</span><span><strong>나라 <small>기획 · 리서치</small></strong><span id="actor-label">새 업무 대기</span></span><span class="presence" aria-hidden="true"></span></button>
+        <p class="selection-message" id="selection-message" role="status"></p>
+      </section>
+      <aside class="task-panel" aria-labelledby="task-title"><p class="eyebrow">LET’S MAKE SOMETHING</p><h2 id="task-title">나라와 함께하기 <span>✧</span></h2><p class="panel-intro">생각을 정리하고, 다음에 할 일을<br>하나씩 찾아볼까요?</p>
+        <form id="task-form"><div class="input-heading"><label for="task">어떤 일을 함께할까요?</label><span id="character-count">28 / 400</span></div><textarea id="task" maxlength="400" rows="4" aria-describedby="form-error">서비스 첫 화면의 핵심 메시지와 구성을 정리해 줘.</textarea><p id="form-error" class="error" role="alert" hidden></p><label class="scenario-label" for="scenario">모의 업무 시나리오</label><select id="scenario"><option value="normal">정상 완료</option><option value="approval">승인이 필요한 업무</option><option value="failure">연결 실패</option></select><button class="primary" id="start" type="submit">나라에게 업무 맡기기 <span>↗</span></button></form>
+        <section class="run-section" aria-labelledby="run-title"><div class="run-status"><span id="run-status">READY WHEN YOU ARE</span><span id="step-count">0 / 4</span></div><div class="progress" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div aria-live="polite" aria-atomic="true"><h3 id="run-title">새 업무를 기다리고 있어요</h3><p id="run-detail">업무를 맡기면 나라가 작업을 시작해요.</p></div><div class="run-actions"><button type="button" class="secondary" id="cancel" hidden>업무 취소</button><button type="button" class="primary" id="approve" hidden>승인하고 계속하기</button><button type="button" class="secondary" id="decline" hidden>거절하기</button><button type="button" class="secondary" id="retry" hidden>다시 시도하기</button></div></section>
+        <section class="result" id="result" hidden><p class="eyebrow">DEMO RESULT</p><h3 id="result-title"></h3><p id="result-summary"></p><ul id="result-items"></ul><small>미리 준비한 예시 응답입니다.</small></section>
+        <p class="notice">3D는 실제로 렌더링됩니다. 업무는 모의 실행이며 입력을 외부로 전송하지 않아요. 새로고침하면 기록이 초기화됩니다.</p>
+      </aside>
+    </div>
+    <details class="technical" id="technical"><summary>성능·에셋 정보 <span>이 3D 파일럿 살펴보기 ↗</span></summary><div class="metrics"><div><span>GLB 로딩·초기 렌더</span><strong id="load-ms">—</strong></div><div><span>현재 브라우저 측정</span><strong id="fps">측정 전</strong></div><div><span>그리기 / 삼각형</span><strong id="draw-count">—</strong></div><div><span>GPU 형상 / 텍스처</span><strong id="resources">—</strong></div></div><div class="technical-controls"><label for="quality">화질 <select id="quality"><option value="auto">자동</option><option value="high">선명하게</option><option value="low">가볍게</option></select></label><button type="button" id="measure">3초 성능 측정</button><button type="button" id="reload-scene">장면 다시 불러오기</button><button type="button" id="context-test">그래픽 복구 점검</button></div><p id="lifecycle-status" aria-live="polite">첫 장면을 준비하고 있어요.</p><p class="technical-note">자체 제작한 GLB · 미터 단위 · 휴식/타이핑 노드 애니메이션. 원본 PNG를 자동 변환한 모델이 아닙니다. 화면 크기 검증과 실제 모바일 기기 성능은 구분합니다.</p><div class="asset-links"><a href="./assets/afternoon-studio-v1.glb" download>3D 모델 GLB ↓</a><a href="./assets/manifest.json" target="_blank" rel="noopener">모델 사양 ↗</a><a href="./assets/MODEL-PROVENANCE.txt" target="_blank" rel="noopener">제작 출처 ↗</a><a href="../docs/3d-pilot-qa.md" target="_blank" rel="noopener">검증 기록 ↗</a></div></details>
+    <footer><span>AI SIMU DESK</span><span>A little space. Another dimension.</span></footer>
+  </main>
+  <script type="module" src="./dist/app.js"></script>
+</body></html>

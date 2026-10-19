@@ -1,0 +1,27 @@
+{
+  "lostState": {
+    "fallback": true,
+    "state": "lost",
+    "status": "나라 · 취소됨",
+    "taskEnabled": true
+  },
+  "recoveredState": {
+    "canvasCount": 1,
+    "lifecycle": [
+      {
+        "contextLost": true,
+        "released": {
+          "geometries": 214,
+          "materials": 66,
+          "textures": 0
+        },
+        "remaining": {
+          "geometries": 0,
+          "textures": 1
+        }
+      }
+    ],
+    "state": "ready",
+    "status": "나라 · 취소됨"
+  }
+}

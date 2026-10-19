@@ -1,0 +1,475 @@
+{
+  "layout": {
+    "image": "coworkers-atlas-v2.png",
+    "imageSize": [
+      1254,
+      1254
+    ],
+    "logicalSize": 360,
+    "groundAnchor": [
+      180,
+      322
+    ],
+    "frames": [
+      [
+        {
+          "source": [
+            0,
+            0,
+            314,
+            331
+          ],
+          "groundAnchor": [
+            159.5,
+            318
+          ]
+        },
+        {
+          "source": [
+            314,
+            0,
+            313,
+            331
+          ],
+          "groundAnchor": [
+            158.0,
+            317
+          ]
+        },
+        {
+          "source": [
+            627,
+            0,
+            313,
+            331
+          ],
+          "groundAnchor": [
+            159.0,
+            317
+          ]
+        },
+        {
+          "source": [
+            940,
+            0,
+            314,
+            331
+          ],
+          "groundAnchor": [
+            159.5,
+            317
+          ]
+        }
+      ],
+      [
+        {
+          "source": [
+            0,
+            331,
+            314,
+            304
+          ],
+          "groundAnchor": [
+            159.5,
+            299
+          ]
+        },
+        {
+          "source": [
+            314,
+            331,
+            313,
+            304
+          ],
+          "groundAnchor": [
+            158.0,
+            299
+          ]
+        },
+        {
+          "source": [
+            627,
+            331,
+            313,
+            304
+          ],
+          "groundAnchor": [
+            159.0,
+            299
+          ]
+        },
+        {
+          "source": [
+            940,
+            331,
+            314,
+            304
+          ],
+          "groundAnchor": [
+            159.5,
+            299
+          ]
+        }
+      ],
+      [
+        {
+          "source": [
+            0,
+            635,
+            314,
+            310
+          ],
+          "groundAnchor": [
+            158.5,
+            304
+          ]
+        },
+        {
+          "source": [
+            314,
+            635,
+            313,
+            310
+          ],
+          "groundAnchor": [
+            157.0,
+            304
+          ]
+        },
+        {
+          "source": [
+            627,
+            635,
+            313,
+            310
+          ],
+          "groundAnchor": [
+            158.0,
+            304
+          ]
+        },
+        {
+          "source": [
+            940,
+            635,
+            314,
+            310
+          ],
+          "groundAnchor": [
+            158.5,
+            304
+          ]
+        }
+      ],
+      [
+        {
+          "source": [
+            0,
+            945,
+            314,
+            309
+          ],
+          "groundAnchor": [
+            159.0,
+            301
+          ]
+        },
+        {
+          "source": [
+            314,
+            945,
+            313,
+            309
+          ],
+          "groundAnchor": [
+            157.0,
+            301
+          ]
+        },
+        {
+          "source": [
+            627,
+            945,
+            313,
+            309
+          ],
+          "groundAnchor": [
+            158.5,
+            301
+          ]
+        },
+        {
+          "source": [
+            940,
+            945,
+            314,
+            309
+          ],
+          "groundAnchor": [
+            159.5,
+            301
+          ]
+        }
+      ]
+    ]
+  },
+  "coverage": [
+    {
+      "row": 0,
+      "frame": 0,
+      "opaqueBounds": [
+        35,
+        32,
+        284,
+        318
+      ],
+      "sourceBounds": [
+        0,
+        0,
+        314,
+        331
+      ]
+    },
+    {
+      "row": 0,
+      "frame": 1,
+      "opaqueBounds": [
+        33,
+        32,
+        283,
+        317
+      ],
+      "sourceBounds": [
+        314,
+        0,
+        627,
+        331
+      ]
+    },
+    {
+      "row": 0,
+      "frame": 2,
+      "opaqueBounds": [
+        34,
+        33,
+        284,
+        317
+      ],
+      "sourceBounds": [
+        627,
+        0,
+        940,
+        331
+      ]
+    },
+    {
+      "row": 0,
+      "frame": 3,
+      "opaqueBounds": [
+        35,
+        32,
+        284,
+        317
+      ],
+      "sourceBounds": [
+        940,
+        0,
+        1254,
+        331
+      ]
+    },
+    {
+      "row": 1,
+      "frame": 0,
+      "opaqueBounds": [
+        35,
+        14,
+        284,
+        299
+      ],
+      "sourceBounds": [
+        0,
+        331,
+        314,
+        635
+      ]
+    },
+    {
+      "row": 1,
+      "frame": 1,
+      "opaqueBounds": [
+        33,
+        15,
+        283,
+        299
+      ],
+      "sourceBounds": [
+        314,
+        331,
+        627,
+        635
+      ]
+    },
+    {
+      "row": 1,
+      "frame": 2,
+      "opaqueBounds": [
+        34,
+        15,
+        284,
+        299
+      ],
+      "sourceBounds": [
+        627,
+        331,
+        940,
+        635
+      ]
+    },
+    {
+      "row": 1,
+      "frame": 3,
+      "opaqueBounds": [
+        35,
+        15,
+        284,
+        299
+      ],
+      "sourceBounds": [
+        940,
+        331,
+        1254,
+        635
+      ]
+    },
+    {
+      "row": 2,
+      "frame": 0,
+      "opaqueBounds": [
+        30,
+        5,
+        287,
+        304
+      ],
+      "sourceBounds": [
+        0,
+        635,
+        314,
+        945
+      ]
+    },
+    {
+      "row": 2,
+      "frame": 1,
+      "opaqueBounds": [
+        28,
+        5,
+        286,
+        304
+      ],
+      "sourceBounds": [
+        314,
+        635,
+        627,
+        945
+      ]
+    },
+    {
+      "row": 2,
+      "frame": 2,
+      "opaqueBounds": [
+        29,
+        5,
+        287,
+        304
+      ],
+      "sourceBounds": [
+        627,
+        635,
+        940,
+        945
+      ]
+    },
+    {
+      "row": 2,
+      "frame": 3,
+      "opaqueBounds": [
+        30,
+        6,
+        287,
+        304
+      ],
+      "sourceBounds": [
+        940,
+        635,
+        1254,
+        945
+      ]
+    },
+    {
+      "row": 3,
+      "frame": 0,
+      "opaqueBounds": [
+        32,
+        7,
+        286,
+        301
+      ],
+      "sourceBounds": [
+        0,
+        945,
+        314,
+        1254
+      ]
+    },
+    {
+      "row": 3,
+      "frame": 1,
+      "opaqueBounds": [
+        30,
+        8,
+        284,
+        301
+      ],
+      "sourceBounds": [
+        314,
+        945,
+        627,
+        1254
+      ]
+    },
+    {
+      "row": 3,
+      "frame": 2,
+      "opaqueBounds": [
+        31,
+        8,
+        286,
+        301
+      ],
+      "sourceBounds": [
+        627,
+        945,
+        940,
+        1254
+      ]
+    },
+    {
+      "row": 3,
+      "frame": 3,
+      "opaqueBounds": [
+        32,
+        7,
+        287,
+        301
+      ],
+      "sourceBounds": [
+        940,
+        945,
+        1254,
+        1254
+      ]
+    }
+  ],
+  "allOpaqueBoundsInsideSource": true
+}

@@ -1,0 +1,628 @@
+{
+  "method": "Read-only image inspection: alpha >=128 pixels in lower quarter of all 16 atlas cells, mapped by actual DOM bounds. Conservative floor safety polygon is authored inside the background floor top surface; this checks desk/chair/feet support area, not head silhouettes.",
+  "floorPolygon": [
+    [
+      0.04,
+      0.57
+    ],
+    [
+      0.46,
+      0.4
+    ],
+    [
+      0.96,
+      0.57
+    ],
+    [
+      0.64,
+      0.88
+    ]
+  ],
+  "after": [
+    {
+      "viewport": {
+        "height": 900,
+        "width": 1280
+      },
+      "scrollWidth": null,
+      "frames": [
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01996
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01973
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.0201
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01989
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02036
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01987
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.0205
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02036
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04993
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04997
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04941
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04963
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05066
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05014
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05014
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05011
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "height": 900,
+        "width": 390
+      },
+      "scrollWidth": 375,
+      "frames": [
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01999
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01976
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02013
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01992
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02039
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.0199
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02053
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02039
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05003
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04948
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04969
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05073
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05021
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05021
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05017
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "height": 900,
+        "width": 768
+      },
+      "scrollWidth": 753,
+      "frames": [
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01999
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01975
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02012
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01992
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02039
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.0199
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02052
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02039
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04993
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04996
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04941
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04962
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05066
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05014
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05014
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.0501
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "height": 892,
+        "width": 319
+      },
+      "scrollWidth": 304,
+      "frames": [
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01999
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01976
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02012
+        },
+        {
+          "employee": "nara",
+          "row": 0,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.01992
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02039
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.0199
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02053
+        },
+        {
+          "employee": "nara",
+          "row": 1,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.02039
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04994
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04998
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04942
+        },
+        {
+          "employee": "jun",
+          "row": 2,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.04964
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 0,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05067
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 1,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05015
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 2,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05015
+        },
+        {
+          "employee": "jun",
+          "row": 3,
+          "frame": 3,
+          "outsideSafetyPolygon": 0,
+          "minimumNormalizedClearance": 0.05012
+        }
+      ]
+    }
+  ],
+  "beforeFromOriginalDesktopCSS": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "scrollWidth": null,
+    "frames": [
+      {
+        "employee": "nara",
+        "row": 0,
+        "frame": 0,
+        "outsideSafetyPolygon": 8467,
+        "minimumNormalizedClearance": -0.13839
+      },
+      {
+        "employee": "nara",
+        "row": 0,
+        "frame": 1,
+        "outsideSafetyPolygon": 8464,
+        "minimumNormalizedClearance": -0.13867
+      },
+      {
+        "employee": "nara",
+        "row": 0,
+        "frame": 2,
+        "outsideSafetyPolygon": 8429,
+        "minimumNormalizedClearance": -0.13823
+      },
+      {
+        "employee": "nara",
+        "row": 0,
+        "frame": 3,
+        "outsideSafetyPolygon": 8443,
+        "minimumNormalizedClearance": -0.13847
+      },
+      {
+        "employee": "nara",
+        "row": 1,
+        "frame": 0,
+        "outsideSafetyPolygon": 8424,
+        "minimumNormalizedClearance": -0.1379
+      },
+      {
+        "employee": "nara",
+        "row": 1,
+        "frame": 1,
+        "outsideSafetyPolygon": 8398,
+        "minimumNormalizedClearance": -0.13849
+      },
+      {
+        "employee": "nara",
+        "row": 1,
+        "frame": 2,
+        "outsideSafetyPolygon": 8377,
+        "minimumNormalizedClearance": -0.13774
+      },
+      {
+        "employee": "nara",
+        "row": 1,
+        "frame": 3,
+        "outsideSafetyPolygon": 8413,
+        "minimumNormalizedClearance": -0.1379
+      },
+      {
+        "employee": "jun",
+        "row": 2,
+        "frame": 0,
+        "outsideSafetyPolygon": 3294,
+        "minimumNormalizedClearance": -0.06404
+      },
+      {
+        "employee": "jun",
+        "row": 2,
+        "frame": 1,
+        "outsideSafetyPolygon": 3320,
+        "minimumNormalizedClearance": -0.064
+      },
+      {
+        "employee": "jun",
+        "row": 2,
+        "frame": 2,
+        "outsideSafetyPolygon": 3312,
+        "minimumNormalizedClearance": -0.06466
+      },
+      {
+        "employee": "jun",
+        "row": 2,
+        "frame": 3,
+        "outsideSafetyPolygon": 3324,
+        "minimumNormalizedClearance": -0.06441
+      },
+      {
+        "employee": "jun",
+        "row": 3,
+        "frame": 0,
+        "outsideSafetyPolygon": 3236,
+        "minimumNormalizedClearance": -0.06316
+      },
+      {
+        "employee": "jun",
+        "row": 3,
+        "frame": 1,
+        "outsideSafetyPolygon": 3227,
+        "minimumNormalizedClearance": -0.06379
+      },
+      {
+        "employee": "jun",
+        "row": 3,
+        "frame": 2,
+        "outsideSafetyPolygon": 3228,
+        "minimumNormalizedClearance": -0.06379
+      },
+      {
+        "employee": "jun",
+        "row": 3,
+        "frame": 3,
+        "outsideSafetyPolygon": 3230,
+        "minimumNormalizedClearance": -0.06383
+      }
+    ]
+  }
+}

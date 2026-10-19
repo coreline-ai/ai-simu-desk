@@ -1,0 +1,48 @@
+{
+  "approvalView": {
+    "metrics": {
+      "canvas": [
+        839,
+        548
+      ],
+      "clips": [
+        "idle",
+        "typing"
+      ],
+      "drawCalls": 295,
+      "geometries": 214,
+      "loadedMs": 87,
+      "measuring": false,
+      "paused": false,
+      "pixelRatio": 1,
+      "pose": "idle",
+      "textures": 3,
+      "triangles": 90734
+    },
+    "pose": "idle",
+    "status": "나라 · 승인 대기"
+  },
+  "completedView": {
+    "metrics": {
+      "canvas": [
+        839,
+        548
+      ],
+      "clips": [
+        "idle",
+        "typing"
+      ],
+      "drawCalls": 295,
+      "geometries": 214,
+      "loadedMs": 87,
+      "measuring": false,
+      "paused": true,
+      "pixelRatio": 1,
+      "pose": "idle",
+      "textures": 3,
+      "triangles": 90734
+    },
+    "pose": "idle",
+    "status": "나라 · 결과 준비 완료"
+  }
+}

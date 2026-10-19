@@ -1,0 +1,38 @@
+{
+  "name": "ai-simu-desk-visual-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx --test --test-concurrency=1 demo/tests/*.test.mjs pilot-3d/tests/*.test.mjs server/tests/*.test.ts",
+    "build:preview": "node scripts/build-preview.mjs",
+    "check": "node --check demo/src/domain.mjs && node --check demo/src/scene-frames.mjs && node --check demo/src/scene.mjs && node --check demo/src/app.mjs && node --check pilot-3d/src/model.mjs && node --check pilot-3d/src/view-model.mjs && node --check pilot-3d/src/scene.mjs && node --check pilot-3d/src/app.mjs && node --check scripts/build-3d.mjs",
+    "build:3d": "node scripts/build-3d.mjs",
+    "setup:local": "node scripts/setup-local.mjs",
+    "build:product": "node scripts/build-product.mjs",
+    "start": "node --env-file-if-exists=.env.local server/dist/main.js",
+    "dev:product": "node --env-file-if-exists=.env.local --import tsx server/main.ts",
+    "test:server": "node --import tsx --test --test-concurrency=1 server/tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check:boundaries": "node scripts/check-boundaries.mjs",
+    "db:backup": "node --env-file-if-exists=.env.local --import tsx scripts/backup-db.ts backup",
+    "db:restore": "node --env-file-if-exists=.env.local --import tsx scripts/backup-db.ts restore",
+    "serve:demos": "node scripts/serve-demos.mjs",
+    "check:product": "node --check product/src/app.mjs && node --check scripts/build-product.mjs && node --check scripts/serve-demos.mjs && node --check scripts/setup-local.mjs"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "1.7.11",
+    "@electric-sql/pglite": "0.5.10",
+    "@hono/node-server": "2.1.5",
+    "better-auth": "1.7.11",
+    "drizzle-orm": "0.45.4",
+    "hono": "4.13.13",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "esbuild": "0.28.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

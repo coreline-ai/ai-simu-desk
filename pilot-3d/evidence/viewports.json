@@ -1,0 +1,258 @@
+[
+  {
+    "canvasCount": 1,
+    "controls": [
+      {
+        "height": 44,
+        "id": "wide-view",
+        "width": 69.21875
+      },
+      {
+        "height": 44,
+        "id": "focus-view",
+        "width": 78.734375
+      },
+      {
+        "height": 44,
+        "id": "motion",
+        "width": 88.25
+      },
+      {
+        "height": 72,
+        "id": "select-nara",
+        "width": 826
+      },
+      {
+        "height": 44,
+        "id": "start",
+        "width": 285
+      }
+    ],
+    "metrics": {
+      "canvas": [
+        824,
+        548
+      ],
+      "clips": [
+        "idle",
+        "typing"
+      ],
+      "drawCalls": 381,
+      "geometries": 214,
+      "loadedMs": 26,
+      "measuredFps": 75.1,
+      "measurementInterrupted": false,
+      "measurementMs": 3010,
+      "measuring": false,
+      "paused": false,
+      "pixelRatio": 1,
+      "pose": "idle",
+      "textures": 3,
+      "triangles": 118778
+    },
+    "scrollWidth": 1265,
+    "stage": {
+      "height": 550.390625,
+      "width": 826,
+      "x": 38,
+      "y": 304.46875
+    },
+    "state": "ready",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "canvasCount": 1,
+    "controls": [
+      {
+        "height": 44,
+        "id": "wide-view",
+        "width": 69.21875
+      },
+      {
+        "height": 44,
+        "id": "focus-view",
+        "width": 78.734375
+      },
+      {
+        "height": 44,
+        "id": "motion",
+        "width": 88.25
+      },
+      {
+        "height": 72,
+        "id": "select-nara",
+        "width": 705
+      },
+      {
+        "height": 44,
+        "id": "start",
+        "width": 651
+      }
+    ],
+    "metrics": {
+      "canvas": [
+        703,
+        478
+      ],
+      "clips": [
+        "idle",
+        "typing"
+      ],
+      "drawCalls": 381,
+      "geometries": 214,
+      "loadedMs": 26,
+      "measuredFps": 75.1,
+      "measurementInterrupted": false,
+      "measurementMs": 3010,
+      "measuring": false,
+      "paused": false,
+      "pixelRatio": 1,
+      "pose": "idle",
+      "textures": 3,
+      "triangles": 118778
+    },
+    "scrollWidth": 753,
+    "stage": {
+      "height": 480,
+      "width": 705,
+      "x": 24,
+      "y": 281.96875
+    },
+    "state": "ready",
+    "viewport": [
+      768,
+      1024
+    ]
+  },
+  {
+    "canvasCount": 1,
+    "controls": [
+      {
+        "height": 44,
+        "id": "wide-view",
+        "width": 59.53125
+      },
+      {
+        "height": 44,
+        "id": "focus-view",
+        "width": 68.1875
+      },
+      {
+        "height": 44,
+        "id": "motion",
+        "width": 76.84375
+      },
+      {
+        "height": 72,
+        "id": "select-nara",
+        "width": 339
+      },
+      {
+        "height": 44,
+        "id": "start",
+        "width": 295
+      }
+    ],
+    "metrics": {
+      "canvas": [
+        337,
+        368
+      ],
+      "clips": [
+        "idle",
+        "typing"
+      ],
+      "drawCalls": 381,
+      "geometries": 214,
+      "loadedMs": 26,
+      "measuredFps": 75.1,
+      "measurementInterrupted": false,
+      "measurementMs": 3010,
+      "measuring": false,
+      "paused": false,
+      "pixelRatio": 1,
+      "pose": "idle",
+      "textures": 3,
+      "triangles": 118778
+    },
+    "scrollWidth": 375,
+    "stage": {
+      "height": 370,
+      "width": 339,
+      "x": 18,
+      "y": 272.25
+    },
+    "state": "ready",
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "canvasCount": 1,
+    "controls": [
+      {
+        "height": 44,
+        "id": "wide-view",
+        "width": 59.53125
+      },
+      {
+        "height": 44,
+        "id": "focus-view",
+        "width": 68.1875
+      },
+      {
+        "height": 44,
+        "id": "motion",
+        "width": 76.84375
+      },
+      {
+        "height": 72,
+        "id": "select-nara",
+        "width": 268
+      },
+      {
+        "height": 44,
+        "id": "start",
+        "width": 224
+      }
+    ],
+    "metrics": {
+      "canvas": [
+        266,
+        368
+      ],
+      "clips": [
+        "idle",
+        "typing"
+      ],
+      "drawCalls": 381,
+      "geometries": 214,
+      "loadedMs": 26,
+      "measuredFps": 75.1,
+      "measurementInterrupted": false,
+      "measurementMs": 3010,
+      "measuring": false,
+      "paused": false,
+      "pixelRatio": 1,
+      "pose": "idle",
+      "textures": 3,
+      "triangles": 118778
+    },
+    "scrollWidth": 304,
+    "stage": {
+      "height": 370,
+      "width": 268,
+      "x": 18,
+      "y": 272.25
+    },
+    "state": "ready",
+    "viewport": [
+      319,
+      892
+    ]
+  }
+]

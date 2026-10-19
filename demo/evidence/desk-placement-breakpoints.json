@@ -1,0 +1,95 @@
+[
+  {
+    "actors": [
+      {
+        "height": 0.375,
+        "id": "nara",
+        "left": 0.20999262536873156,
+        "top": 0.319966814159292,
+        "touchHeight": 84.75,
+        "touchWidth": 84.75,
+        "width": 0.25
+      },
+      {
+        "height": 0.375,
+        "id": "jun",
+        "left": 0.5099557522123894,
+        "top": 0.3899336283185841,
+        "touchHeight": 84.75,
+        "touchWidth": 84.75,
+        "width": 0.25
+      }
+    ],
+    "scene": {
+      "height": 226,
+      "width": 339
+    },
+    "scrollWidth": 375,
+    "viewport": {
+      "height": 900,
+      "width": 390
+    }
+  },
+  {
+    "actors": [
+      {
+        "height": 0.375,
+        "id": "nara",
+        "left": 0.20999436936936935,
+        "top": 0.31997466216216214,
+        "touchHeight": 138.75,
+        "touchWidth": 138.75,
+        "width": 0.25
+      },
+      {
+        "height": 0.375,
+        "id": "jun",
+        "left": 0.5099943693693694,
+        "top": 0.38999155405405406,
+        "touchHeight": 138.75,
+        "touchWidth": 138.75,
+        "width": 0.25
+      }
+    ],
+    "scene": {
+      "height": 370,
+      "width": 555
+    },
+    "scrollWidth": 753,
+    "viewport": {
+      "height": 900,
+      "width": 768
+    }
+  },
+  {
+    "actors": [
+      {
+        "height": 0.3750218646143082,
+        "id": "nara",
+        "left": 0.2099463619402985,
+        "top": 0.3199230365576351,
+        "touchHeight": 67,
+        "touchWidth": 67,
+        "width": 0.25
+      },
+      {
+        "height": 0.3750218646143082,
+        "id": "jun",
+        "left": 0.5099696828358209,
+        "top": 0.38997726080111944,
+        "touchHeight": 67,
+        "touchWidth": 67,
+        "width": 0.25
+      }
+    ],
+    "scene": {
+      "height": 178.65625,
+      "width": 268
+    },
+    "scrollWidth": 304,
+    "viewport": {
+      "height": 892,
+      "width": 319
+    }
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "generation": "built-in image_gen",
+  "generatedOn": "2026-10-19",
+  "background": {
+    "file": "office-background-v1.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "prompt": "../../prompts/assets/office-background.txt"
+  },
+  "coworkers": {
+    "file": "coworkers-atlas-v2.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "columns": 4,
+    "rows": 4,
+    "framesPerLoop": 4,
+    "rowMeaning": [
+      "nara-idle",
+      "nara-working",
+      "jun-idle",
+      "jun-working"
+    ],
+    "idleFrameMs": 320,
+    "workingFrameMs": 160,
+    "prompt": "../../prompts/assets/coworkers-atlas-v2.txt",
+    "sourceLayout": "../src/scene-frames.mjs",
+    "rowBoundariesPx": [
+      0,
+      331,
+      635,
+      945,
+      1254
+    ],
+    "logicalCanvasSize": [
+      360,
+      360
+    ],
+    "groundAnchorPx": [
+      180,
+      322
+    ],
+    "sourcePixelsModified": false
+  },
+  "limitations": [
+    "2.5D raster compositing; camera/light matching is visual, not a calibrated 3D scene",
+    "Generated logical 4x4 sheet has nonuniform pixel row boundaries; use measured source rectangles",
+    "Small generated pose/shape differences remain; shared ground anchors prevent baseline drift",
+    "Very low-alpha RGB noise is preserved in the original PNG"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "originalDemoCheck": {
+    "canStart": true,
+    "sceneCount": 1,
+    "sprites": [
+      "0:1",
+      "2:1",
+      "0:1",
+      "2:1"
+    ],
+    "url": "http://127.0.0.1:4173/demo/preview.html"
+  },
+  "returnCheck": {
+    "canvases": 1,
+    "state": "ready",
+    "url": "http://127.0.0.1:4173/pilot-3d/"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "anonymousStatus": 401,
+  "health": {
+    "status": "ok",
+    "edition": "local",
+    "database": "pglite",
+    "aiProvider": "fake"
+  },
+  "staticIsolation": [
+    {
+      "port": 4173,
+      "path": "/.env.local",
+      "status": 404
+    },
+    {
+      "port": 4173,
+      "path": "/.data/studio",
+      "status": 404
+    },
+    {
+      "port": 4173,
+      "path": "/server/db/schema.ts",
+      "status": 404
+    },
+    {
+      "port": 4173,
+      "path": "/assets/%2e%2e%2f%2e%2e%2f.env.local",
+      "status": 404
+    },
+    {
+      "port": 4180,
+      "path": "/.env.local",
+      "status": 404
+    },
+    {
+      "port": 4180,
+      "path": "/.data/studio",
+      "status": 404
+    },
+    {
+      "port": 4180,
+      "path": "/server/db/schema.ts",
+      "status": 404
+    },
+    {
+      "port": 4180,
+      "path": "/assets/%2e%2e%2f%2e%2e%2f.env.local",
+      "status": 404
+    }
+  ],
+  "noAuthSecretInClient": true
+}

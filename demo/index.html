@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="작은 오피스에서 AI 동료에게 업무를 맡기는 생성 이미지 기반 모의 데모">
+  <meta name="color-scheme" content="light">
+  <title>AI Simu Desk · 오후의 스튜디오</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#task-input">업무 입력으로 이동</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="AI Simu Desk 처음으로">
+      <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>simu<span class="brand-light">desk</span><small>A LITTLE SPACE FOR BIG IDEAS</small></span>
+    </a>
+    <div class="topbar-right"><span class="demo-badge"><span></span>시각 데모 · 모의 실행</span><button class="quiet-button" id="open-assets" type="button">에셋 보기 <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="작업 공간">
+      <p class="eyebrow">MY WORKSPACE</p>
+      <div class="space-name"><span class="space-monogram">S</span><div><strong>오후의 스튜디오</strong><small>함께 일하는 작은 공간</small></div></div>
+      <nav class="side-nav" aria-label="화면 탐색"><a href="#office" class="active"><span aria-hidden="true">▦</span>오피스<span class="nav-mark"></span></a><a href="#history"><span aria-hidden="true">≡</span>작업 기록<span id="history-count" class="count">0</span></a></nav>
+      <div class="people-heading"><p class="eyebrow">함께하는 동료</p><span>02</span></div>
+      <div class="member-list">
+        <button class="member" type="button" data-select="nara" aria-pressed="true"><span class="avatar nara">N</span><span class="member-info"><strong>나라</strong><small>기획 · 리서치</small></span><span class="member-dot" data-member-status="nara" aria-label="새 업무 대기"></span></button>
+        <button class="member" type="button" data-select="jun" aria-pressed="false"><span class="avatar jun">J</span><span class="member-info"><strong>준</strong><small>개발 · 설계</small></span><span class="member-dot" data-member-status="jun" aria-label="새 업무 대기"></span></button>
+      </div>
+      <div class="sidebar-bottom"><span class="little-label">천천히, 하나씩 완성해요.</span><button type="button" class="motion-button" id="toggle-motion" aria-pressed="false"><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span id="motion-label">움직임 멈추기</span></button><p>생성 이미지와 프레임 애니메이션을<br>사용하는 1차 시각 데모입니다.</p></div>
+    </aside>
+    <main class="main-content" id="office">
+      <div class="page-heading"><div><p class="eyebrow">A GOOD DAY TO MAKE SOMETHING</p><h1>오늘도, 함께 해볼까요?</h1><p class="page-subtitle">생각을 나누고, 작은 일부터 차근차근 완성해요.</p></div><span class="chapter">FIRST LOOK <b>01</b></span></div>
+      <div class="work-grid">
+        <section class="office-column" aria-labelledby="office-title">
+          <div class="office-toolbar"><h2 id="office-title"><span class="live-dot"></span>오후의 스튜디오</h2><span>동료를 선택해 보세요</span></div>
+          <div class="office-scene" id="office-scene">
+            <img class="office-background" id="office-image" src="./assets/office-background-v1.png" width="1536" height="1024" alt="세이지 벽과 큰 창문, 테라코타 소파가 있는 따뜻한 작은 오피스">
+            <div class="image-fallback" id="image-fallback" hidden>오피스 이미지를 불러오지 못했어요.<br>동료 선택과 업무 패널은 계속 사용할 수 있어요.</div>
+            <span class="scene-tag">STUDIO 01 <span>·</span> DAYLIGHT</span>
+            <button class="actor actor-nara" type="button" data-select="nara" aria-label="나라 선택 · 기획과 리서치" aria-pressed="true"><span class="sprite" data-sprite data-agent="nara" data-row="0" aria-hidden="true"></span><span class="actor-label"><span class="actor-status-dot" data-actor-dot="nara"></span><strong>나라</strong><span data-actor-status="nara">새 업무 대기</span></span></button>
+            <button class="actor actor-jun" type="button" data-select="jun" aria-label="준 선택 · 개발과 설계" aria-pressed="false"><span class="sprite" data-sprite data-agent="jun" data-row="2" aria-hidden="true"></span><span class="actor-label"><span class="actor-status-dot" data-actor-dot="jun"></span><strong>준</strong><span data-actor-status="jun">새 업무 대기</span></span></button>
+            <div class="scene-footer"><span class="scene-caption">좋은 아이디어는, 함께하는 공간에서.</span><span class="scene-view">고정 시점 · 이미지 합성</span></div>
+          </div>
+          <div class="office-note"><span class="note-star" aria-hidden="true">✧</span>동료를 선택하면 업무 패널에서 일을 맡길 수 있어요.</div>
+        </section>
+        <aside class="task-panel" aria-labelledby="task-title">
+          <div class="panel-eyebrow"><span>LET’S WORK TOGETHER</span><span class="small-spark" aria-hidden="true">✧</span></div>
+          <div class="selected-person"><span class="avatar large nara" id="selected-avatar">N</span><div><h2 id="task-title">나라와 함께하기</h2><p id="selected-role">기획 · 리서치</p></div></div>
+          <p class="agent-intro" id="agent-intro">복잡한 생각을 정리하고,<br>다음에 할 일을 함께 찾아요.</p>
+          <form id="task-form" novalidate>
+            <div class="input-heading"><label for="task-input">어떤 일을 함께할까요?</label><span id="character-count">0 / 400</span></div>
+            <textarea id="task-input" name="task" maxlength="400" rows="4" placeholder="맡기고 싶은 업무를 적어주세요." aria-describedby="form-error">서비스 첫 화면의 핵심 메시지와 구성을 정리해 줘.</textarea>
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+            <label class="scenario-label" for="scenario">데모 시나리오</label>
+            <select id="scenario" name="scenario"><option value="normal">정상 완료</option><option value="approval">승인이 필요한 업무</option><option value="failure">연결 실패</option></select>
+            <button class="primary-button" id="start-task" type="submit"><span id="start-label">나라에게 업무 맡기기</span><span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="run-section" aria-live="polite" aria-atomic="true"><div class="run-heading"><span id="run-status" class="status-label" data-state="idle">READY WHEN YOU ARE</span><span id="run-step-count">0 / 4</span></div><h3 id="run-title">새 업무를 기다리고 있어요</h3><p id="run-detail">업무를 맡기면 진행 과정을 여기에 보여드릴게요.</p></div>
+          <ol class="work-steps" id="work-steps" aria-label="업무 진행 단계"><li>요청 확인</li><li>맥락 정리</li><li>초안 작성</li><li>결과 정리</li></ol>
+          <div class="approval-box" id="approval-box" hidden><strong>이어서 진행할까요?</strong><p>결과를 확정하기 전, 확인을 기다리고 있어요.<br>모의 승인으로 외부 작업은 실행되지 않아요.</p><div class="approval-actions"><button class="primary-button compact" type="button" id="approve-task">승인하고 계속</button><button class="secondary-button" type="button" id="decline-task">거절</button></div></div>
+          <div class="run-actions"><button class="secondary-button full-width" id="cancel-task" type="button" hidden>업무 취소</button><button class="secondary-button full-width" id="retry-task" type="button" hidden>정상 시나리오로 다시 시도</button></div>
+          <article class="result-card" id="result-card" hidden><span class="result-eyebrow">DEMO RESULT</span><h3 id="result-title"></h3><p id="result-summary"></p><ul id="result-items"></ul><small>실제 AI 호출 없이 준비한 예시 응답입니다.</small></article>
+          <p class="demo-notice">모든 실행은 모의 동작입니다. 입력은 외부로 전송되지 않으며, 새로고침하면 기록이 초기화됩니다.</p>
+        </aside>
+        <section class="history-section" id="history" aria-labelledby="history-title"><div class="section-heading"><h2 id="history-title">함께 완성한 기록</h2><span>이 탭에서만 보관</span></div><div id="history-empty" class="history-empty"><span aria-hidden="true">↗</span><p>첫 번째 기록을 기다리고 있어요.<small>동료에게 작은 업무 하나를 맡겨보세요.</small></p></div><ul id="history-list" class="history-list"></ul></section>
+      </div>
+      <footer class="page-footer"><span>AI SIMU DESK</span><span>A little space. A thoughtful workday.</span></footer>
+    </main>
+  </div>
+  <dialog id="assets-dialog" aria-labelledby="assets-title">
+    <div class="dialog-header"><div><p class="eyebrow">MADE FOR THIS LITTLE OFFICE</p><h2 id="assets-title">오피스를 만드는 에셋</h2></div><button class="close-button" id="close-assets" type="button" aria-label="에셋 보기 닫기">×</button></div>
+    <p class="dialog-description">실제로 생성한 배경 한 장과, 두 동료의 16개 동작 프레임을 사용해요.</p>
+    <div class="asset-preview-row"><div class="preview-worker"><span class="sprite" data-sprite data-preview="nara" data-row="0" aria-hidden="true"></span><strong>나라 <small>기획 · 리서치</small></strong></div><div class="preview-worker"><span class="sprite" data-sprite data-preview="jun" data-row="2" aria-hidden="true"></span><strong>준 <small>개발 · 설계</small></strong></div></div>
+    <div class="pose-controls" role="group" aria-label="에셋 동작"><button type="button" data-pose="idle" aria-pressed="true">쉬는 동작</button><button type="button" data-pose="working" aria-pressed="false">작업하는 동작</button></div>
+    <div class="asset-files"><a href="./assets/office-background-v1.png" target="_blank" rel="noopener">오피스 배경 원본 <span>1536 × 1024 PNG ↗</span></a><a href="./assets/coworkers-atlas-v2.png" target="_blank" rel="noopener">보정된 직원 아틀라스 v2 <span>1254 × 1254 RGBA ↗</span></a></div>
+    <p class="asset-limit">2.5D 이미지 합성용 에셋입니다. 보행·회전·리깅을 가진 3D 모델은 아닙니다.</p>
+  </dialog>
+</body>
+</html>
