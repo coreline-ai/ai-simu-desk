@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, boolean, uniqueIndex, index, integer, bigserial, jsonb, primaryKey, check } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, boolean, uniqueIndex, index, integer, bigint, bigserial, jsonb, primaryKey, check } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 import type { AgentId, RunStatus } from "../domain/contracts.js";
 import type { InviteRole, MemberRole } from "../domain/collaboration.js";
@@ -54,6 +54,7 @@ export const runs = pgTable("runs", {
   output: text("output").notNull().default(""), stage: text("stage").notNull().default("요청 접수"), note: text("note").notNull().default(""),
   provider: text("provider").notNull().default("fake"), externalRef: text("external_ref"),
   scenario: text("scenario").$type<"normal" | "failure">().notNull(),
+  simulatedStartedAt: timestamp("simulated_started_at", { withTimezone: true }),
   finishedAt: timestamp("finished_at", { withTimezone: true }), ...dates(),
 }, t => [
   uniqueIndex("runs_request_key").on(t.workspaceId, t.requestKey),
@@ -73,3 +74,18 @@ export const runEvents = pgTable("run_events", {
   seq: integer("seq").notNull(), kind: text("kind").notNull(), payload: jsonb("payload").$type<Record<string, unknown>>().notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 }, t => [uniqueIndex("events_run_seq").on(t.runId, t.seq), uniqueIndex("events_workspace_revision").on(t.workspaceId,t.seq).where(sql`${t.runId} IS NULL`), index("events_workspace_cursor").on(t.workspaceId, t.cursor)]);
+
+export const presenceRooms=pgTable("presence_rooms",{workspaceId:text("workspace_id").primaryKey().references(()=>workspaces.id,{onDelete:"cascade"}),version:integer("version").notNull().default(0)});
+export const presenceClients=pgTable("presence_clients",{
+  workspaceId:text("workspace_id").notNull().references(()=>workspaces.id,{onDelete:"cascade"}),sessionId:text("session_id").notNull(),clientId:text("client_id").notNull(),
+  userId:text("user_id").notNull().references(()=>user.id,{onDelete:"cascade"}),expiresAt:timestamp("expires_at",{withTimezone:true}).notNull(),closed:boolean("closed").notNull().default(false),
+},t=>[primaryKey({columns:[t.workspaceId,t.sessionId,t.clientId]}),index("presence_clients_session").on(t.sessionId)]);
+export const presenceStatus=pgTable("presence_status",{
+  workspaceId:text("workspace_id").notNull().references(()=>workspaces.id,{onDelete:"cascade"}),userId:text("user_id").notNull().references(()=>user.id,{onDelete:"cascade"}),name:text("name").notNull(),online:boolean("online").notNull(),
+},t=>[primaryKey({columns:[t.workspaceId,t.userId]})]);
+export const presenceEvents=pgTable("presence_events",{
+  workspaceId:text("workspace_id").notNull().references(()=>workspaces.id,{onDelete:"cascade"}),seq:integer("seq").notNull(),userId:text("user_id").notNull(),name:text("name").notNull(),
+  kind:text("kind").$type<"joined"|"left">().notNull(),reason:text("reason").$type<"page"|"timeout"|"logout"|"revoked">().notNull(),happenedAt:timestamp("happened_at",{withTimezone:true}).notNull(),
+},t=>[primaryKey({columns:[t.workspaceId,t.seq]})]);
+
+export const rateLimit=pgTable("auth_rate_limit",{id:text("id").primaryKey(),key:text("key").notNull().unique(),count:integer("count").notNull(),lastRequest:bigint("last_request",{mode:"number"}).notNull()});

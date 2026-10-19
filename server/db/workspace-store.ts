@@ -1,6 +1,6 @@
 import { and, asc, count, eq, isNull } from "drizzle-orm";
 import { randomUUID, randomBytes, createHash } from "node:crypto";
-import type { Database } from "./database.js";
+import type { StudioDatabase as Database } from "./types.js";
 import { members, workspaces, workspaceInvites, runEvents } from "./schema.js";
 import { workspaceMember, type Tx } from "./workspace-access.js";
 import { AppError, validRequestKey } from "../domain/contracts.js";

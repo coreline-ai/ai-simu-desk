@@ -18,8 +18,12 @@
     "db:backup": "node --env-file-if-exists=.env.local --import tsx scripts/backup-db.ts backup",
     "db:restore": "node --env-file-if-exists=.env.local --import tsx scripts/backup-db.ts restore",
     "serve:demos": "node scripts/serve-demos.mjs",
-    "check:product": "node --check product/src/app.mjs && node --check product/src/scene-state.mjs && node --check product/src/workspace-state.mjs && node --check product/src/workspaces.mjs && node --check product/src/presence.mjs && node --check scripts/build-product.mjs && node --check scripts/build-team.mjs && node --check scripts/serve-demos.mjs && node --check scripts/setup-local.mjs && node --check scripts/collaboration-smoke.mjs && node --check scripts/presence-smoke.mjs",
-    "build:team": "node scripts/build-team.mjs"
+    "check:product": "node --check product/src/app.mjs && node --check product/src/scene-state.mjs && node --check product/src/workspace-state.mjs && node --check product/src/workspaces.mjs && node --check product/src/presence.mjs && node --check scripts/build-product.mjs && node --check scripts/build-team.mjs && node --check scripts/serve-demos.mjs && node --check scripts/setup-local.mjs && node --check scripts/collaboration-smoke.mjs && node --check scripts/presence-smoke.mjs && node --check scripts/build-client.mjs && node --check scripts/build-vercel.mjs",
+    "build:team": "node scripts/build-team.mjs",
+    "build:vercel": "node scripts/build-vercel.mjs",
+    "vercel-build": "npm run db:migrate && npm run build:vercel",
+    "db:migrate": "node --import tsx scripts/migrate-postgres.ts",
+    "test:postgres": "node --import tsx --test --test-concurrency=1 server/integration/*.test.ts"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "1.7.11",
@@ -28,12 +32,17 @@
     "better-auth": "1.7.11",
     "drizzle-orm": "0.45.4",
     "hono": "4.13.13",
+    "pg": "8.23.1",
     "three": "0.186.1"
   },
   "devDependencies": {
     "@types/node": "22.20.5",
+    "@types/pg": "8.23.1",
     "esbuild": "0.28.2",
     "tsx": "4.23.15",
     "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }

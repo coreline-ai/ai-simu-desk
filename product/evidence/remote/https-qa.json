@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-19T23:11:52.651Z",
+  "testEnvironment": "loopback HTTPS and native PostgreSQL; two independent application instances",
+  "certificateVerification": true,
+  "untrustedCertificateRejected": true,
+  "postgresTls": true,
+  "secureHttpOnlyCookie": true,
+  "sharedSessionAcrossInstances": true,
+  "twoAccountsOnline": true,
+  "foreignOriginStatus": 403,
+  "privateRoutesStatus": 404,
+  "distributedLoginLimitStatus": 429,
+  "publicCloudDeployment": false,
+  "physicalRemoteDeviceTest": false
+}

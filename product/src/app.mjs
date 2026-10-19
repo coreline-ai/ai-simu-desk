@@ -112,14 +112,17 @@ function render() {
   }
   renderSceneState();
 }
-async function loadSnapshot(ticket = epoch) {
-  if (!identity || !workspaceId) return;
-  const id=workspaceId, next = await api(`/api/workspaces/${id}/snapshot`);
-  if (!acceptsWorkspaceSnapshot({epoch:ticket,workspaceId:id},{epoch,workspaceId,cursor},next.cursor)) return;
-  snapshot=next; cursor=next.cursor; spaceLoading=false;
-  if (!selectedId || !next.runs.some(r=>r.id===selectedId)) {selectedId=next.runs[0]?.id ?? null;followLive=true;}
-  $("workspace-content").hidden=false; $("workspace-loading").hidden=true;
-  connection(); render(); if(!scene) mountScene();
+function applySnapshot(next,ticket,id) {
+  if(!acceptsWorkspaceSnapshot({epoch:ticket,workspaceId:id},{epoch,workspaceId,cursor},next.cursor))return;
+  snapshot=next;cursor=next.cursor;spaceLoading=false;
+  if(!selectedId||!next.runs.some(r=>r.id===selectedId)){selectedId=next.runs[0]?.id??null;followLive=true;}
+  $("workspace-content").hidden=false;$("workspace-loading").hidden=true;
+  connection();render();if(!scene)mountScene();
+}
+async function loadSnapshot(ticket=epoch) {
+  if(!identity||!workspaceId)return;
+  const id=workspaceId,next=await api(`/api/workspaces/${id}/snapshot`);
+  applySnapshot(next,ticket,id);
 }
 async function switchWorkspace(id, notice="") {
   if(!identity) return;
@@ -143,15 +146,23 @@ function schedulePoll(ticket = epoch) {
   poll=setTimeout(async()=>{
     if(ticket!==epoch) return;
     try {
-      const page=await api(`/api/workspaces/${id}/events?after=${cursor}`);
-      if(ticket!==epoch) return;
-      if(!snapshot || page.events.length) await loadSnapshot(ticket);
-      if(ticket!==epoch) return;
-      if(snapshot?.workspace.kind==="shared") {
-        if(!presence.current && !presenceStarted) {presence.start(id,true);presenceStarted=true;}
-        await presence.refresh();
+      if(identity.client?.sync) {
+        if(snapshot?.workspace.kind==="shared"&&!presenceStarted){presence.start(id,true);presenceStarted=true;}
+        const result=snapshot?.workspace.kind==="shared"?await presence.sync(cursor):await api(`/api/workspaces/${id}/sync`,{after:cursor});
+        if(ticket!==epoch)return;
+        if(result?.snapshot)applySnapshot(result.snapshot,ticket,id);
+        else if(!snapshot)await loadSnapshot(ticket);
+      } else {
+        const page=await api(`/api/workspaces/${id}/events?after=${cursor}`);
+        if(ticket!==epoch)return;
+        if(!snapshot||page.events.length)await loadSnapshot(ticket);
+        if(ticket!==epoch)return;
+        if(snapshot?.workspace.kind==="shared"){
+          if(!presenceStarted){presence.start(id,true);presenceStarted=true;}
+          await presence.refresh();
+        }
       }
-      if(ticket!==epoch) return;
+      if(ticket!==epoch)return;
       if(!spaces.length) spaces=await workspacePanel.loadList();
       if(ticket!==epoch) return;
       connection();
@@ -161,7 +172,7 @@ function schedulePoll(ticket = epoch) {
       presence.disconnected();
       connection("서버 연결을 기다리고 있어요. 연결되면 저장된 업무 상태를 다시 확인합니다.");
     } finally {if(ticket===epoch && identity) schedulePoll(ticket);}
-  },document.hidden?2000:500);
+  },document.hidden?(identity.client?.hiddenPollMs??2000):(identity.client?.pollMs??500));
 }
 function mountScene() {
   const ticket = ++sceneEpoch; scene?.dispose(); scene = null; $("fallback").hidden = true; $("scene-state").textContent = "3D 준비 중";

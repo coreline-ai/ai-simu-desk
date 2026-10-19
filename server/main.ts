@@ -9,6 +9,7 @@ import { createRunner } from "./application/runner.js";
 import { createHttp } from "./http.js";
 
 const config = getConfig();
+if(config.deployment==="vercel")throw new Error("Use the Vercel API entrypoint for remote mode");
 const database = await openDatabase(config.dataDir);
 const studio = createStudio(database), auth = createAuth(database, config);
 const runner = createRunner(studio, new FakeAgent(config.fakeDelayMs));

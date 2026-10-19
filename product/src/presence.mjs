@@ -7,12 +7,14 @@ export function createPresenceClient({request,beacon,onChange,newId=()=>crypto.r
     onChange(null);
   }
   function start(workspaceId,shared) {stop();if(shared)visit={workspaceId,clientId:newId()};}
-  async function refresh() {
+  async function refresh(after) {
     const ticket=visit;if(!ticket)return;
     try {
-      const data=await request(`/api/workspaces/${ticket.workspaceId}/presence`,{clientId:ticket.clientId});
+      const syncing=after!==undefined;
+      const result=await request(`/api/workspaces/${ticket.workspaceId}/${syncing?"sync":"presence"}`,{clientId:ticket.clientId,...(syncing?{after}:{})});
+      const data=syncing?result.presence:result;
       if(visit!==ticket)return;
-      latest=data;onChange(data);
+      latest=data;onChange(data);return result;
     } catch(error) {
       if(visit!==ticket)return;
       latest=null;onChange(null);
@@ -21,7 +23,7 @@ export function createPresenceClient({request,beacon,onChange,newId=()=>crypto.r
     }
   }
   function disconnected() {latest=null;onChange(null);}
-  return {start,stop,refresh,disconnected,get current(){return latest;}};
+  return {start,stop,refresh,sync:after=>refresh(after),disconnected,get current(){return latest;}};
 }
 export function presencePresentation(members,data) {
   const states=new Map(data?.members.map(p=>[p.userId,p.online])??[]);

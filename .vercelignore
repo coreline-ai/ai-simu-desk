@@ -1,0 +1,10 @@
+.git
+.data
+.env*
+!.env.example
+node_modules
+product/evidence
+server/tests
+server/integration
+docs
+dev-plan

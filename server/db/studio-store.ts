@@ -1,6 +1,7 @@
+import { simulationFrame } from "../application/simulation.js";
 import { and, asc, desc, eq, gt, inArray, max } from "drizzle-orm";
 import { randomUUID, createHash } from "node:crypto";
-import type { Database } from "./database.js";
+import type { StudioDatabase as Database } from "./types.js";
 import { members, workspaces, tasks, runs, approvals, runEvents, user } from "./schema.js";
 import { AppError, AgentFailure, ACTIVE, TERMINAL, parseInput, validRequestKey, mayTransition } from "../domain/contracts.js";
 import type { StudioPort } from "../domain/studio-port.js";
@@ -15,14 +16,14 @@ type Task = typeof tasks.$inferSelect;
 async function event(db: Store, run: Run, kind: string, payload: Record<string, unknown> = {}) {
   await db.insert(runEvents).values({ id: randomUUID(), workspaceId: run.workspaceId, runId: run.id, seq: run.version, kind, payload: { status: run.status, ...payload } });
 }
-async function change(tx: Tx, run: Run, status: Run["status"], kind: string, patch: Partial<Pick<Run, "output" | "stage" | "note" | "externalRef">> = {}, payload: Record<string, unknown> = {}) {
+async function change(tx: Tx, run: Run, status: Run["status"], kind: string, patch: Partial<Pick<Run, "output" | "stage" | "note" | "externalRef" | "simulatedStartedAt">> = {}, payload: Record<string, unknown> = {}) {
   if (!mayTransition(run.status, status)) throw new AppError(409, "업무 상태가 바뀌었습니다. 다시 확인해 주세요.", "STATE_CONFLICT");
   const [next] = await tx.update(runs).set({ ...patch, status, version: run.version + 1, updatedAt: new Date(), finishedAt: TERMINAL.includes(status) ? new Date() : null }).where(and(eq(runs.id, run.id), eq(runs.version, run.version))).returning();
   if (!next) throw new AppError(409, "업무 상태가 바뀌었습니다.", "STATE_CONFLICT");
   await event(tx, next, kind, payload); return next;
 }
 
-export function createStudio(database: Database): StudioPort {
+export function createStudio(database: Database, simulation?: {answer:(job:AgentJob)=>string;delayMs:number;now?:()=>number}): StudioPort {
   const db = database.db;
   async function ownedRun(tx: Store, userId: string, id: string, permission: "control" | "approve" = "control") {
     const [run] = await tx.select().from(runs).where(eq(runs.id, id));
@@ -46,9 +47,22 @@ export function createStudio(database: Database): StudioPort {
     await event(tx, run, input.approvalRequired ? "approval_requested" : "created", { actorId:userId }); return run;
   }
   const startRun = (userId: string, workspaceId: string, value: unknown, key: string | undefined) => db.transaction(tx => startInTransaction(tx,userId,workspaceId,value,key));
+  async function advance(tx:Tx,workspaceId:string) {
+    if(!simulation)return;
+    const now=simulation.now?.()??Date.now();
+    const [run]=await tx.select().from(runs).where(and(eq(runs.workspaceId,workspaceId),inArray(runs.status,["queued","running","cancel_requested"]))).limit(1);
+    if(!run)return;
+    if(run.status==="cancel_requested"){await change(tx,run,"cancelled","cancelled",{stage:"취소됨",note:"사용자가 취소를 요청했습니다."});return;}
+    if(run.status==="queued"){await change(tx,run,"running","started",{simulatedStartedAt:new Date(now),stage:"요청 분석",externalRef:`fake:${run.id}`});return;}
+    const [task]=await tx.select().from(tasks).where(eq(tasks.id,run.taskId));
+    const answer=simulation.answer({runId:run.id,prompt:task.prompt,agentId:task.agentId,scenario:run.scenario});
+    const frame=simulationFrame(answer,run.scenario,Math.max(0,now-(run.simulatedStartedAt??run.updatedAt).getTime()),simulation.delayMs);
+    if(frame.status!==run.status||frame.output!==run.output||frame.stage!==run.stage)await change(tx,run,frame.status,frame.status==="succeeded"?"completed":frame.status==="failed"?"failed":"delta",frame);
+  }
   async function snapshot(userId: string, workspaceId: string) {
     return db.transaction(async tx => {
       const access = await member(tx, userId, workspaceId);
+      await advance(tx,workspaceId);
       const [workspace] = await tx.select().from(workspaces).where(eq(workspaces.id, workspaceId));
       const rows = await tx.select({ run: runs, task: tasks, requestedByName:user.name }).from(runs).innerJoin(tasks, eq(runs.taskId, tasks.id)).innerJoin(user,eq(runs.requestedBy,user.id)).where(eq(runs.workspaceId, workspaceId)).orderBy(desc(runs.createdAt), desc(runs.id)).limit(20);
       const [latest] = await tx.select({ cursor: max(runEvents.cursor) }).from(runEvents).where(eq(runEvents.workspaceId, workspaceId));
@@ -68,6 +82,7 @@ export function createStudio(database: Database): StudioPort {
     if (!Number.isSafeInteger(after) || after < 0) throw new AppError(400, "이벤트 위치를 확인해 주세요.");
     return db.transaction(async tx => {
       await member(tx, userId, workspaceId);
+      await advance(tx,workspaceId);
       const rows = await tx.select().from(runEvents).where(and(eq(runEvents.workspaceId, workspaceId), gt(runEvents.cursor, after))).orderBy(asc(runEvents.cursor)).limit(100);
       return { events: rows, cursor: rows.at(-1)?.cursor ?? after, hasMore: rows.length === 100 };
     });

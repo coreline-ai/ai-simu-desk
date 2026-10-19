@@ -5,7 +5,8 @@ import { secureHeaders } from "hono/secure-headers";
 import type { Auth } from "./adapters/auth.js";
 import type { Config } from "./config.js";
 import type { StudioPort as Studio } from "./domain/studio-port.js";
-import { createPresence, type Presence } from "./application/presence.js";
+import { createPresence } from "./application/presence.js";
+import type { PresencePort as Presence } from "./domain/presence.js";
 import { AppError } from "./domain/contracts.js";
 
 export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel: (id: string) => void = () => {}, presence: Presence | undefined = studio ? createPresence(studio.presenceMembers) : undefined) {
@@ -13,6 +14,7 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
   app.use("*", secureHeaders({ contentSecurityPolicy: { defaultSrc: ["'self'"], scriptSrc: ["'self'"], styleSrc: ["'self'"], imgSrc: ["'self'", "data:", "blob:"], connectSrc: ["'self'"], objectSrc: ["'none'"], baseUri: ["'none'"], frameAncestors: ["'none'"] } }));
   app.use("/api/*", async (c, next) => {
     c.header("Cache-Control", "no-store");
+    if(config.deployment==="vercel" && new URL(c.req.url).host!==new URL(config.origin).host) return c.json({error:"허용되지 않은 호스트입니다."},403);
     if (!["GET", "HEAD", "OPTIONS"].includes(c.req.method) && c.req.header("origin") !== config.origin) return c.json({ error: "허용되지 않은 요청 출처입니다.", code: "ORIGIN_REJECTED" }, 403);
     await next();
   });
@@ -20,15 +22,15 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
   app.all("/api/auth/*", async c => {
     const leaving = c.req.path === "/api/auth/sign-out" && c.req.method === "POST" ? await auth.api.getSession({headers:c.req.raw.headers}) : null;
     const response=await auth.handler(c.req.raw);
-    if(leaving && response.ok) presence?.leaveSession(leaving.session.id);
+    if(leaving && response.ok) await presence?.leaveSession(leaving.session.id);
     return response;
   });
-  app.get("/api/health", c => c.json({ status: "ok", edition: "local", database: "pglite", aiProvider: "fake" }));
+  app.get("/api/health", c => c.json({ status: "ok", edition: config.deployment??"local", database: config.deployment==="vercel"?"postgresql":"pglite", aiProvider: "fake" }));
   app.get("/api/me", async c => {
     const session = await auth.api.getSession({ headers: c.req.raw.headers });
     if (!session) return c.json({ error: "로그인이 필요합니다." }, 401);
     const workspace = studio ? await studio.personalWorkspace(session.user.id, session.user.name) : undefined;
-    return c.json({ user: { id: session.user.id, name: session.user.name, email: session.user.email }, workspace, provider: { id: "fake", label: "로컬 Fake AI", externalRequests: false } });
+    return c.json({ user: { id: session.user.id, name: session.user.name, email: session.user.email }, workspace, client: config.deployment==="vercel"?{sync:true,pollMs:2500,hiddenPollMs:30000}:undefined, provider: { id: "fake", label: config.deployment==="vercel"?"Fake AI":"로컬 Fake AI", externalRequests: false } });
   });
   if (studio) {
     const who = async (c: Context) => {
@@ -42,6 +44,14 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
       if(!session) throw new AppError(401,"로그인이 필요합니다.","UNAUTHORIZED");
       const body=await json(c);
       return c.json(await presence[action]({userId:session.user.id,sessionId:session.session.id,expiresAt:session.session.expiresAt},c.req.param("workspaceId"),body.clientId));
+    });
+    app.post("/api/workspaces/:workspaceId/sync",async c=>{
+      const identity=await auth.api.getSession({headers:c.req.raw.headers});
+      if(!identity)throw new AppError(401,"로그인이 필요합니다.","UNAUTHORIZED");
+      const body=await json(c),id=c.req.param("workspaceId");
+      const page=await studio.events(identity.user.id,id,body.after);
+      const online=body.clientId!==undefined&&presence?await presence.touch({userId:identity.user.id,sessionId:identity.session.id,expiresAt:identity.session.expiresAt},id,body.clientId):null;
+      return c.json({page,presence:online,snapshot:page.events.length?await studio.snapshot(identity.user.id,id):null});
     });
     app.get("/api/workspaces", async c => c.json({ workspaces: await studio.listWorkspaces(await who(c)) }));
     app.post("/api/workspaces", async c => c.json(await studio.createWorkspace(await who(c),(await json(c)).name,c.req.header("idempotency-key")),201));

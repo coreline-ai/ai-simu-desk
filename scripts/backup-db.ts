@@ -5,7 +5,9 @@ import { openDatabase } from "../server/db/database.js";
 
 const mode = process.argv[2] ?? "backup";
 if (mode === "backup") {
-  const config = getConfig(), database = await openDatabase(config.dataDir);
+  const config = getConfig();
+  if(config.deployment==="vercel")throw new Error("Use PostgreSQL pg_dump/provider backups for remote mode; this command is PGlite-only");
+  const database = await openDatabase(config.dataDir);
   try {
     await mkdir(".data/backups", { recursive: true, mode: 0o700 });
     const file = `.data/backups/studio-${new Date().toISOString().replace(/[:.]/g, "-")}.tar.gz`;

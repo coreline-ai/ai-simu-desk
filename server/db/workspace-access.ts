@@ -1,5 +1,5 @@
 import { and, eq } from "drizzle-orm";
-import type { Database } from "./database.js";
+import type { StudioDatabase as Database } from "./types.js";
 import { members } from "./schema.js";
 import { AppError } from "../domain/contracts.js";
 export type Tx = Parameters<Parameters<Database["db"]["transaction"]>[0]>[0];

@@ -25,3 +25,10 @@ test("presence presentation distinguishes offline from unknown and counts member
   assert.equal(view.online,1);assert.deepEqual(view.members.map(p=>p.status),["online","offline"]);
   assert.equal(presencePresentation([...members,{userId:"new"}],{members:[],events:[]}).members[2].status,"unknown");
 });
+
+test("combined remote sync carries the visit identity and exposes presence separately from task snapshots",async()=>{
+  const calls=[],view={members:[{userId:"a",online:true}],events:[],version:1};
+  const p=createPresenceClient({request:async(path,body)=>{calls.push({path,body});return {presence:view,page:{events:[],cursor:0},snapshot:null};},beacon:()=>{},onChange:()=>{},newId:()=>"visit"});
+  p.start("room",true);const result=await p.sync(12);
+  assert.deepEqual(calls,[{path:"/api/workspaces/room/sync",body:{clientId:"visit",after:12}}]);assert.equal(p.current,view);assert.equal(result.snapshot,null);
+});
