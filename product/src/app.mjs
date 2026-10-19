@@ -1,11 +1,11 @@
 import { createStudioView } from "../../pilot-3d/src/scene.mjs";
 import { ACTIVE } from "../../server/domain/contracts.ts";
+import { AGENT_NAMES, RUN_LABELS as labels, teamSceneState } from "./scene-state.mjs";
 
 const $ = id => document.getElementById(id);
-const labels = { awaiting_approval: "실행 승인 대기", queued: "실행 대기", running: "답변 작성 중", cancel_requested: "취소 확인 중", succeeded: "답변 저장 완료", failed: "실행 실패", cancelled: "취소됨" };
 let signup = false, identity = null, snapshot = null, selectedId = null, busy = false;
 let epoch = 0, requests = new AbortController(), poll = 0, cursor = 0, historyKey = "", pending = null, retryRequest = null;
-let scene = null, sceneEpoch = 0, focusNara = true, motionPaused = matchMedia("(prefers-reduced-motion: reduce)").matches, motionOverridden = false;
+let scene = null, sceneEpoch = 0, cameraFrame = "team", motionPaused = matchMedia("(prefers-reduced-motion: reduce)").matches, motionOverridden = false;
 class RequestError extends Error { constructor(status, data) { super(data.error ?? "서버 요청을 처리하지 못했습니다."); this.status = status; this.code = data.code; } }
 async function api(path, body, key) {
   const response = await fetch(path, { method: body === undefined ? "GET" : "POST", credentials: "same-origin", signal: requests.signal, headers: { ...(body === undefined ? {} : { "content-type": "application/json" }), ...(key ? { "idempotency-key": key } : {}) }, ...(body === undefined ? {} : { body: JSON.stringify(body) }) });
@@ -30,11 +30,12 @@ function handle(error) {
 function current() { return snapshot?.runs.find(r => r.id === selectedId) ?? snapshot?.runs[0] ?? null; }
 function renderSceneState() {
   const active = snapshot?.runs.find(r => ACTIVE.includes(r.status));
-  const naraActive = active?.agentId === "nara" && active.status === "running";
-  const naraLabel = active?.agentId === "nara" ? labels[active.status] : "새 업무 대기";
-  scene?.setViewModel({ agentId: "nara", pose: naraActive ? "typing" : "idle", label: naraLabel, motionPaused });
-  $("stage").dataset.pose = naraActive ? "typing" : "idle";
-  $("scene-caption").textContent = `나라 · ${naraLabel}`;
+  const vm = teamSceneState(snapshot?.runs, $("agent").value, motionPaused);
+  const selected = vm.actors.find(actor => actor.agentId === vm.selectedAgent);
+  scene?.setViewModel(vm);
+  for (const actor of vm.actors) $("stage").dataset[`${actor.agentId}Pose`] = actor.pose;
+  $("stage").dataset.pose = selected.pose; $("stage").dataset.owner = active?.agentId ?? "";
+  $("scene-caption").textContent = `${AGENT_NAMES[selected.agentId]} · ${selected.label}`;
   $("motion").textContent = motionPaused ? "움직임 재생" : "움직임 멈추기"; $("motion").setAttribute("aria-pressed", String(motionPaused));
 }
 function render() {
@@ -43,7 +44,8 @@ function render() {
   $("workspace-heading").textContent = snapshot.workspace.name;
   $("task-title").textContent = `${agentName}${agentName === "준" ? "과" : "와"} 함께하기 ✧`;
   $("start").textContent = busy ? "요청 확인 중…" : active ? "진행 중인 업무가 있어요" : `${agentName}에게 업무 맡기기 ↗`;
-  for (const id of ["start", "task", "agent", "scenario", "require-approval"]) $(id).disabled = busy || active;
+  for (const id of ["start", "task", "scenario", "require-approval"]) $(id).disabled = busy || active;
+  $("agent").disabled = busy;
   $("character-count").textContent = `${$("task").value.length} / 2000`;
   $("run-status").textContent = run ? `${run.agentId === "nara" ? "나라" : "준"} · ${labels[run.status]}` : "READY WHEN YOU ARE";
   $("run-title").textContent = run ? labels[run.status] : "새 업무를 기다리고 있어요";
@@ -100,9 +102,9 @@ function mountScene() {
   try {
     scene = createStudioView($("canvas-host"), {
       onStatus(kind) { if (ticket !== sceneEpoch) return; $("scene-state").textContent = kind === "ready" ? "실제 3D" : "2D 대체 화면"; $("fallback").hidden = kind === "ready"; },
-      onSelect() { $("agent").value = "nara"; render(); },
-    });
-    scene.resetCamera(focusNara); renderSceneState();
+      onSelect: selectColleague,
+    }, { actors: ["nara", "jun"], modelUrl: "/assets/studio-team-v2.glb" });
+    scene.resetCamera(cameraFrame); renderSceneState();
   } catch { $("fallback").hidden = false; $("scene-state").textContent = "2D 대체 화면"; }
 }
 async function enter(me) {
@@ -129,7 +131,7 @@ $("auth-form").addEventListener("submit", async e => {
 });
 $("signout").addEventListener("click", async () => { $("signout").disabled = true; try { await api("/api/auth/sign-out", {}); showLogin(); } catch (e) { handle(e); } finally { $("signout").disabled = false; } });
 $("task").addEventListener("input", () => { $("character-count").textContent = `${$("task").value.length} / 2000`; });
-$("agent").addEventListener("change", render);
+$("agent").addEventListener("change", () => { setCameraFrame($("agent").value); render(); });
 $("task-form").addEventListener("submit", async e => {
   e.preventDefault(); if (!identity || busy) return;
   const body = { prompt: $("task").value.trim(), agentId: $("agent").value, approvalRequired: $("require-approval").checked, scenario: $("scenario").value };
@@ -151,7 +153,16 @@ async function command(action) {
   finally { if (ticket === epoch) { busy = false; render(); } }
 }
 for (const [id, action] of [["approve", "approve"], ["decline", "decline"], ["cancel", "cancel"], ["retry", "retry"]]) $(id).addEventListener("click", () => command(action));
-for (const [id, focus] of [["whole-space", false], ["nara-focus", true]]) $(id).addEventListener("click", () => { focusNara = focus; scene?.resetCamera(focus); $("whole-space").setAttribute("aria-pressed", String(!focus)); $("nara-focus").setAttribute("aria-pressed", String(focus)); });
+function setCameraFrame(frame) {
+  cameraFrame = frame; scene?.resetCamera(frame);
+  for (const [id, value] of [["whole-space", "team"], ["nara-focus", "nara"], ["jun-focus", "jun"]]) $(id).setAttribute("aria-pressed", String(frame === value));
+}
+function selectColleague(id) {
+  if (!AGENT_NAMES[id] || busy) return;
+  $("agent").value = id; setCameraFrame(id); render();
+}
+$("whole-space").addEventListener("click", () => setCameraFrame("team"));
+for (const id of ["nara", "jun"]) $(`${id}-focus`).addEventListener("click", () => selectColleague(id));
 $("motion").addEventListener("click", () => { motionOverridden = true; motionPaused = !motionPaused; renderSceneState(); });
 matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", e => { if (!motionOverridden) { motionPaused = e.matches; renderSceneState(); } });
 $("recover-scene").addEventListener("click", mountScene);

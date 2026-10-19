@@ -5,8 +5,9 @@ import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.j
 export const DIMENSIONS = Object.freeze({ room: [7.2, 2.6, 5.6], desk: [1.4, .74, .7], chairSeat: .45, seatedHeadTop: 1.36 });
 export const WORKSPACE_ORIGIN = [.35, 0, .95];
 export const MODEL_VERSION = 1;
+export const JUN_WORKSPACE_ORIGIN = [2.22, 0, 1.02];
 
-export function createOfficeModel() {
+export function createOfficeModel({ includeJun = false } = {}) {
   const root = new T.Group(); root.name = "AfternoonStudio";
   root.userData = { units: "metres", up: "+Y", floorY: 0, modelVersion: MODEL_VERSION, source: "Original procedural model: pilot-3d/src/model.mjs" };
   const palette = {
@@ -192,6 +193,37 @@ export function createOfficeModel() {
     quaternionTrack("NaraForearmR", [0, .2, .4, .6, .8], [[.025, 0, 0], [-.035, 0, 0], [.025, 0, 0], [-.035, 0, 0], [.025, 0, 0]]),
     new T.VectorKeyframeTrack("NaraTorso.scale", [0, .4, .8], [1, 1, 1, 1, 1.005, 1, 1, 1, 1]),
   ]);
+  let animations = [idle, typing];
+  if (includeJun) {
+    // Reuse metre-scale furniture and the seated rig, with unique node bindings.
+    const junWorkspace = workspace.clone(true);
+    junWorkspace.position.fromArray(JUN_WORKSPACE_ORIGIN);
+    junWorkspace.userData = { ...workspace.userData, role: "jun-workspace" };
+    const navy = material(0x526b7a), junHair = material(0x302c29);
+    junWorkspace.traverse(node => {
+      const previous = node.name;
+      node.name = node === junWorkspace ? "JunWorkspace" : previous.startsWith("Nara") ? previous.replace(/^Nara/, "Jun") : `Jun${previous}`;
+      if (node.userData.selectable) node.userData = { ...node.userData, agentId: "jun" };
+      if (/^(Cardigan|UpperArm|Sleeve)/.test(previous)) node.material = navy;
+      if (/^(Bob|Eye|Brow)/.test(previous) && !previous.startsWith("EyeLight")) node.material = junHair;
+    });
+    const junHead = junWorkspace.getObjectByName("JunHead");
+    junHead.getObjectByName("JunBobBack").scale.y = .87;
+    for (const x of [-.155, .155]) {
+      const side = junHead.getObjectByName(`JunBobSide${x}`); side.scale.y = .68; side.position.y = -.015;
+    }
+    junHead.getObjectByName("JunBobFringe").scale.set(1.1, .33, .67);
+    for (const x of [-.059, .059]) mesh(junHead, `JunGlasses${x}`, new T.TorusGeometry(.039, .004, 8, 24), "dark", [x, .014, .199]);
+    box(junHead, "JunGlassesBridge", [.039, .007, .007], [0, .018, .199], "dark", .002);
+    root.add(junWorkspace);
+    root.userData.modelVersion = 2;
+    root.userData.workspaces = { nara: WORKSPACE_ORIGIN, jun: JUN_WORKSPACE_ORIGIN };
+    animations = ["nara", "jun"].flatMap(id => [idle, typing].map(original => {
+      const clip = original.clone(); clip.name = `${id}_${original.name}`;
+      if (id === "jun") for (const track of clip.tracks) track.name = track.name.replace(/^Nara/, "Jun");
+      return clip;
+    }));
+  }
   root.updateMatrixWorld(true);
-  return { root, animations: [idle, typing] };
+  return { root, animations };
 }

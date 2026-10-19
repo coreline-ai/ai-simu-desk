@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "file": "studio-team-v2.glb",
+  "format": "glTF 2.0 binary",
+  "bytes": 3985852,
+  "sha256": "c1ecc5792cfe4ec0734934457d92ae825a11125d12a12d8cd2a4275baa61f2ab",
+  "source": "../../pilot-3d/src/model.mjs",
+  "provenance": "Original procedural geometry and node animation authored in this project. No third-party model or texture.",
+  "libraryLicense": "Three.js MIT; see ../../pilot-3d/assets/THREE-LICENSE.txt",
+  "units": "metres",
+  "up": "+Y",
+  "floorY": 0,
+  "dimensions": {
+    "room": [
+      7.2,
+      2.6,
+      5.6
+    ],
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45,
+    "seatedHeadTop": 1.36
+  },
+  "workspaces": {
+    "nara": [
+      0.35,
+      0,
+      0.95
+    ],
+    "jun": [
+      2.22,
+      0,
+      1.02
+    ]
+  },
+  "animations": [
+    {
+      "name": "nara_idle",
+      "duration": 3.6,
+      "tracks": 4
+    },
+    {
+      "name": "nara_typing",
+      "duration": 0.8,
+      "tracks": 4
+    },
+    {
+      "name": "jun_idle",
+      "duration": 3.6,
+      "tracks": 4
+    },
+    {
+      "name": "jun_typing",
+      "duration": 0.8,
+      "tracks": 4
+    }
+  ],
+  "meshes": 270,
+  "triangles": 86980,
+  "limitations": [
+    "Stylized seated characters with hierarchical node animation",
+    "No skinning, walking or speech animation",
+    "Fake AI is a separate rule-based server adapter"
+  ]
+}
