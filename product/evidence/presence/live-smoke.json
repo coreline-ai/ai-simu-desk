@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-19T11:25:57.244Z",
+  "independentSessions": true,
+  "twoUsersOnline": true,
+  "duplicateTabNoJoin": true,
+  "oneTabLeaveNoDeparture": true,
+  "closedTabHeartbeatStatus": 409,
+  "anonymousStatus": 401,
+  "invalidIdStatus": 400,
+  "workspaceRevisionUnchanged": true,
+  "durableEventCursorUnchanged": true,
+  "runSnapshotsUnchanged": true,
+  "runs": 2,
+  "runSha256": "332932440843f5c67e650f6907fe3987654157754fb781f067555665fa9b7a68",
+  "noClientOrSessionIdentifiersInResponse": true
+}

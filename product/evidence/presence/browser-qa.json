@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-10-19T11:26:08.677Z",
+  "bothOnline": "온라인 2명 / 참여자 2명",
+  "members": "QA 동료\n소유자\n온라인\nQA 분리\n보기 전용\n온라인\n보기 전용\n업무 참여\n권한 적용\n내보내기",
+  "initialEvents": "QA 분리 · 입장\n오후 08:19:42\nQA 동료 · 입장\n오후 08:19:29",
+  "extraTabCountedOnce": true,
+  "extraTabNoJoin": true,
+  "closedOneTabKeepsOnline": true,
+  "closedOneTabNoLeave": true,
+  "roleDraftPreserved": true,
+  "lastTabLeaveObserved": true,
+  "safariPageLeave": "온라인 1명 / 참여자 2명",
+  "pageLeaveEvents": "QA 분리 · 퇴장\n오후 08:20:40\nQA 분리 · 입장\n오후 08:19:42\nQA 동료 · 입장\n오후 08:19:29",
+  "currentEvents": "QA 동료 · 입장\n오후 08:23:08\nQA 동료 · 퇴장\n오후 08:22:35\nQA 분리 · 입장\n오후 08:22:35\nQA 분리 · 퇴장\n오후 08:22:28\nQA 분리 · 입장\n오후 08:22:27\nQA 분리 · 퇴장\n오후 08:20:40\nQA 분리 · 입장\n오후 08:19:42\nQA 동료 · 입장\n오후 08:19:29",
+  "disconnectedUnknown": true,
+  "disconnectedBadges": [
+    "확인 중",
+    "확인 중"
+  ],
+  "recovered": true,
+  "restartEvents": "QA 동료 · 입장\n오후 08:24:14\nQA 분리 · 입장\n오후 08:24:13",
+  "peerLogout": true,
+  "logoutEvent": true,
+  "responsive": [
+    {
+      "width": 1280,
+      "badges": [
+        "온라인",
+        "온라인"
+      ],
+      "document": 1265,
+      "events": 8,
+      "summary": "온라인 2명 / 참여자 2명",
+      "viewport": 1280,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 768,
+      "badges": [
+        "온라인",
+        "온라인"
+      ],
+      "document": 753,
+      "events": 8,
+      "summary": "온라인 2명 / 참여자 2명",
+      "viewport": 768,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "badges": [
+        "온라인",
+        "온라인"
+      ],
+      "document": 375,
+      "events": 8,
+      "summary": "온라인 2명 / 참여자 2명",
+      "viewport": 390,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 319,
+      "badges": [
+        "온라인",
+        "온라인"
+      ],
+      "document": 304,
+      "events": 8,
+      "summary": "온라인 2명 / 참여자 2명",
+      "viewport": 319,
+      "noHorizontalOverflow": true
+    }
+  ],
+  "finalSummary": "온라인 2명 / 참여자 2명",
+  "finalRunCount": "2개"
+}

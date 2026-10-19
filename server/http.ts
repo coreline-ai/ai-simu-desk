@@ -5,9 +5,10 @@ import { secureHeaders } from "hono/secure-headers";
 import type { Auth } from "./adapters/auth.js";
 import type { Config } from "./config.js";
 import type { StudioPort as Studio } from "./domain/studio-port.js";
+import { createPresence, type Presence } from "./application/presence.js";
 import { AppError } from "./domain/contracts.js";
 
-export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel: (id: string) => void = () => {}) {
+export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel: (id: string) => void = () => {}, presence: Presence | undefined = studio ? createPresence(studio.presenceMembers) : undefined) {
   const app = new Hono();
   app.use("*", secureHeaders({ contentSecurityPolicy: { defaultSrc: ["'self'"], scriptSrc: ["'self'"], styleSrc: ["'self'"], imgSrc: ["'self'", "data:", "blob:"], connectSrc: ["'self'"], objectSrc: ["'none'"], baseUri: ["'none'"], frameAncestors: ["'none'"] } }));
   app.use("/api/*", async (c, next) => {
@@ -16,7 +17,12 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
     await next();
   });
   app.use("/api/*", bodyLimit({ maxSize: 16 * 1024, onError: c => c.json({ error: "요청이 너무 큽니다." }, 413) }));
-  app.all("/api/auth/*", c => auth.handler(c.req.raw));
+  app.all("/api/auth/*", async c => {
+    const leaving = c.req.path === "/api/auth/sign-out" && c.req.method === "POST" ? await auth.api.getSession({headers:c.req.raw.headers}) : null;
+    const response=await auth.handler(c.req.raw);
+    if(leaving && response.ok) presence?.leaveSession(leaving.session.id);
+    return response;
+  });
   app.get("/api/health", c => c.json({ status: "ok", edition: "local", database: "pglite", aiProvider: "fake" }));
   app.get("/api/me", async c => {
     const session = await auth.api.getSession({ headers: c.req.raw.headers });
@@ -31,6 +37,12 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
       return identity.user.id;
     };
     const json = async (c: Context) => { try { const value = await c.req.json(); if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(); return value; } catch { throw new AppError(400, "JSON 요청을 확인해 주세요."); } };
+    if(presence) for(const action of ["touch","leave"] as const) app.post(`/api/workspaces/:workspaceId/presence${action==="leave" ? "/leave" : ""}`,async c=>{
+      const session=await auth.api.getSession({headers:c.req.raw.headers});
+      if(!session) throw new AppError(401,"로그인이 필요합니다.","UNAUTHORIZED");
+      const body=await json(c);
+      return c.json(await presence[action]({userId:session.user.id,sessionId:session.session.id,expiresAt:session.session.expiresAt},c.req.param("workspaceId"),body.clientId));
+    });
     app.get("/api/workspaces", async c => c.json({ workspaces: await studio.listWorkspaces(await who(c)) }));
     app.post("/api/workspaces", async c => c.json(await studio.createWorkspace(await who(c),(await json(c)).name,c.req.header("idempotency-key")),201));
     app.post("/api/workspaces/join", async c => c.json(await studio.joinWorkspace(await who(c),(await json(c)).code)));

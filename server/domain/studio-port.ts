@@ -11,6 +11,7 @@ export interface Snapshot { workspace: Workspace; role: MemberRole; members: Wor
 export interface StoredEvent { cursor: number; id: string; workspaceId: string; runId: string | null; seq: number; kind: string; payload: Record<string, unknown>; createdAt: Date }
 // Transaction-sized storage operations, not one generic repository per entity.
 export interface StudioPort extends WorkspacePort {
+  presenceMembers(userId: string, workspaceId: string): Promise<WorkspaceMember[]>;
   startRun(userId: string, workspaceId: string, input: unknown, key: string | undefined): Promise<Run>;
   snapshot(userId: string, workspaceId: string): Promise<Snapshot>;
   events(userId: string, workspaceId: string, after: number): Promise<{ events: StoredEvent[]; cursor: number; hasMore: boolean }>;

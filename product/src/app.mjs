@@ -1,22 +1,34 @@
 import { createStudioView } from "../../pilot-3d/src/scene.mjs";
 import { ACTIVE } from "../../server/domain/contracts.ts";
 import { AGENT_NAMES, RUN_LABELS as labels, teamSceneState } from "./scene-state.mjs";
+import { createPresenceClient } from "./presence.mjs";
 import { createWorkspacePanel } from "./workspaces.mjs";
 import { workspacePresentation, acceptsWorkspaceSnapshot } from "./workspace-state.mjs";
 
 const $ = id => document.getElementById(id);
 let signup = false, identity = null, snapshot = null, selectedId = null, busy = false;
+let presenceStarted=false;
 let workspaceId = null, spaces = [], followLive = true, spaceLoading = false;
 let epoch = 0, requests = new AbortController(), poll = 0, cursor = 0, historyKey = "", pending = null, retryRequest = null;
 let scene = null, sceneEpoch = 0, cameraFrame = "team", motionPaused = matchMedia("(prefers-reduced-motion: reduce)").matches, motionOverridden = false;
 class RequestError extends Error { constructor(status, data) { super(data.error ?? "서버 요청을 처리하지 못했습니다."); this.status = status; this.code = data.code; } }
 async function api(path, body, key) {
-  const response = await fetch(path, { method: body === undefined ? "GET" : "POST", credentials: "same-origin", signal: requests.signal, headers: { ...(body === undefined ? {} : { "content-type": "application/json" }), ...(key ? { "idempotency-key": key } : {}) }, ...(body === undefined ? {} : { body: JSON.stringify(body) }) });
-  const data = await response.json(); if (!response.ok) throw new RequestError(response.status, data); return data;
+  const parent=requests.signal, controller=new AbortController(), abort=()=>controller.abort();
+  parent.addEventListener("abort",abort,{once:true});
+  const timeout=setTimeout(()=>controller.abort(new DOMException("서버 응답 시간이 초과됐습니다.","TimeoutError")),10_000);
+  try {
+    const response = await fetch(path, { method: body === undefined ? "GET" : "POST", credentials: "same-origin", signal:controller.signal, headers: { ...(body === undefined ? {} : { "content-type": "application/json" }), ...(key ? { "idempotency-key": key } : {}) }, ...(body === undefined ? {} : { body: JSON.stringify(body) }) });
+    const data = await response.json(); if (!response.ok) throw new RequestError(response.status, data); return data;
+  } finally {clearTimeout(timeout);parent.removeEventListener("abort",abort);}
 }
 function connection(text = "") { $("connection").textContent = text; $("connection").hidden = !text; }
 const workspacePanel = createWorkspacePanel({ request: api, onSelect: switchWorkspace, onBusy(value) { busy=value; render(); }, onError: handle, refreshSnapshot: () => loadSnapshot() });
+const presence = createPresenceClient({request:api,onChange:data=>workspacePanel.renderPresence(data),beacon(path,body){
+  const json=JSON.stringify(body);
+  if(!navigator.sendBeacon(path,new Blob([json],{type:"application/json"}))) void fetch(path,{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:json,keepalive:true}).catch(()=>{});
+}});
 function invalidateWorkspace() {
+  presence.stop();presenceStarted=false;
   epoch++; requests.abort(); requests = new AbortController(); clearTimeout(poll); poll=0;
   snapshot=null; selectedId=null; cursor=0; pending=null; retryRequest=null; historyKey=""; busy=false; followLive=true;
   $("workspace-content").hidden=true; $("answer").textContent="첫 업무를 맡기면 답변이 여기에 쌓여요.";
@@ -114,7 +126,10 @@ async function switchWorkspace(id, notice="") {
   invalidateWorkspace(); workspaceId=id; spaceLoading=true; workspacePanel.beginSwitch(id); workspacePanel.setNotice(notice);
   $("workspace-loading").hidden=false; $("workspace-loading").textContent="작업 공간을 불러오고 있어요…";
   connection(); const ticket=epoch;
-  try { await loadSnapshot(ticket); if(ticket===epoch) history.replaceState(null,"",`/?workspace=${encodeURIComponent(id)}`); }
+  try { await loadSnapshot(ticket); if(ticket===epoch) {
+    history.replaceState(null,"",`/?workspace=${encodeURIComponent(id)}`);
+    presence.start(id,snapshot.workspace.kind==="shared");presenceStarted=true;await presence.refresh();
+  } }
   catch(error) {
     if(ticket!==epoch || error.name==="AbortError") return;
     if(error.status===401 || error.status===404) {await handle(error,ticket);return;}
@@ -131,11 +146,19 @@ function schedulePoll(ticket = epoch) {
       const page=await api(`/api/workspaces/${id}/events?after=${cursor}`);
       if(ticket!==epoch) return;
       if(!snapshot || page.events.length) await loadSnapshot(ticket);
+      if(ticket!==epoch) return;
+      if(snapshot?.workspace.kind==="shared") {
+        if(!presence.current && !presenceStarted) {presence.start(id,true);presenceStarted=true;}
+        await presence.refresh();
+      }
+      if(ticket!==epoch) return;
       if(!spaces.length) spaces=await workspacePanel.loadList();
+      if(ticket!==epoch) return;
       connection();
     } catch(error) {
       if(ticket!==epoch || error.name==="AbortError") return;
       if([401,404].includes(error.status)) {await handle(error,ticket);return;}
+      presence.disconnected();
       connection("서버 연결을 기다리고 있어요. 연결되면 저장된 업무 상태를 다시 확인합니다.");
     } finally {if(ticket===epoch && identity) schedulePoll(ticket);}
   },document.hidden?2000:500);
@@ -214,7 +237,7 @@ $("motion").addEventListener("click", () => { motionOverridden = true; motionPau
 matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", e => { if (!motionOverridden) { motionPaused = e.matches; renderSceneState(); } });
 $("recover-scene").addEventListener("click", mountScene);
 document.addEventListener("visibilitychange", () => { if (identity && !document.hidden) { const ticket = epoch; void loadSnapshot(ticket).then(() => schedulePoll(ticket)).catch(error=>handle(error,ticket)); } });
-window.addEventListener("pagehide", () => { clearTimeout(poll); requests.abort(); ++sceneEpoch; scene?.dispose(); scene = null; });
+window.addEventListener("pagehide", () => { presence.stop();clearTimeout(poll); requests.abort(); ++sceneEpoch; scene?.dispose(); scene = null; });
 window.addEventListener("pageshow", e => { if (e.persisted) { requests = new AbortController(); void api("/api/me").then(enter).catch(() => showLogin()); } });
 $("auth-submit").disabled = true;
 api("/api/me").then(enter).catch(() => showLogin());

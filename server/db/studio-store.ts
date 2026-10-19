@@ -56,6 +56,14 @@ export function createStudio(database: Database): StudioPort {
       return { workspace, role:access.role, members:people, runs: rows.map(({ run, task, requestedByName }) => ({ ...run, prompt: task.prompt, agentId: task.agentId, approvalRequired: task.approvalRequired, requestedByName })), cursor: latest.cursor ?? 0 };
     });
   }
+  async function presenceMembers(userId: string, workspaceId: string) {
+    return db.transaction(async tx => {
+      await member(tx,userId,workspaceId);
+      const [space] = await tx.select().from(workspaces).where(eq(workspaces.id,workspaceId));
+      if(space.kind!=="shared") throw new AppError(400,"공동 공간에서만 접속 상태를 공유합니다.");
+      return tx.select({userId:members.userId,name:user.name,role:members.role}).from(members).innerJoin(user,eq(members.userId,user.id)).where(eq(members.workspaceId,workspaceId));
+    });
+  }
   async function events(userId: string, workspaceId: string, after: number) {
     if (!Number.isSafeInteger(after) || after < 0) throw new AppError(400, "이벤트 위치를 확인해 주세요.");
     return db.transaction(async tx => {
@@ -124,5 +132,5 @@ export function createStudio(database: Database): StudioPort {
     });
   }
   const getStatus = async (id: string) => (await db.select({ status: runs.status }).from(runs).where(eq(runs.id, id)))[0]?.status;
-  return { ...createWorkspaceStore(database), startRun, snapshot, events, approve, cancel, retry, claim, progress, finish, recoverInterrupted, getStatus };
+  return { ...createWorkspaceStore(database), presenceMembers, startRun, snapshot, events, approve, cancel, retry, claim, progress, finish, recoverInterrupted, getStatus };
 }
