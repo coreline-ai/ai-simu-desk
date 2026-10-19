@@ -84,9 +84,9 @@ flowchart LR
 
 ## 운영 전 남은 일
 
-- 현재는 localhost HTTP, 단일 프로세스, 개인 작업 공간용이다. TLS·공개 가입 정책·메일 확인/재설정·OAuth/MFA·운영 관측·부하/보관 정책은 운영 계획에서 검증해야 한다.
+- 초기 검증은 localhost HTTP·단일 프로세스·개인 공간을 대상으로 했다. 이후 [공동 공간 상태 공유](collaboration-qa.md)를 추가했다. TLS·공개 가입 정책·메일 확인/재설정·OAuth/MFA·운영 관측·부하/보관 정책은 운영 계획에서 검증해야 한다.
 - PGlite는 실제 파일에 저장되는 Postgres WASM이다. 별도 PostgreSQL 서버·복제·여러 호스트 동시 접속 성능은 검증하지 않았다. 백업은 서버를 멈춘 상태에서 수행한다.
-- 초기 로그인·DB 검증 당시 GLB는 나라 한 명이었다. 이후 [두 동료 v2 장면](team-3d-qa.md)에서 준의 전용 모델과 독립 동작을 완료했다. 다중 사용자 공동 공간과 실제 LLM은 미구현이다.
+- 초기 로그인·DB 검증 당시 GLB는 나라 한 명이었다. 이후 [두 동료 v2 장면](team-3d-qa.md)에서 준의 전용 모델과 독립 동작을 완료했다. 이후 [공동 작업 공간](collaboration-qa.md)도 구현했다. 실제 LLM·공동 편집은 미구현이다.
 - 자동·브라우저 검사는 구현 범위의 동작 근거이며 침투 테스트나 운영 보안 인증을 대신하지 않는다.
 
 참고: [Better Auth Hono](https://better-auth.com/docs/integrations/hono), [Drizzle adapter](https://better-auth.com/docs/adapters/drizzle), [PGlite](https://pglite.dev/docs/).

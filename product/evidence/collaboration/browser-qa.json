@@ -1,0 +1,203 @@
+{
+  "personalId": "2e1b87f6-6b47-471f-9e33-0444d2074690",
+  "created": {
+    "history": "0개",
+    "id": "9fbb5627-cc35-4c71-8ad0-fa9fb9b84460",
+    "role": "소유자",
+    "workspace": "함께 만드는 스튜디오"
+  },
+  "viewer": {
+    "readOnly": true,
+    "workspace": true,
+    "members": true,
+    "noStart": true
+  },
+  "ownerMembers": {
+    "inviteCleared": true,
+    "members": "QA 동료소유자QA 분리보기 전용보기 전용업무 참여권한 적용내보내기",
+    "summary": "참여자 2명 · 초대와 권한 관리"
+  },
+  "sharedApproval": {
+    "viewerSeesPending": true,
+    "viewerHasNoApprove": true,
+    "ownerStatus": "준 · 실행 승인 대기"
+  },
+  "ownerRunning": {
+    "clips": "{\"nara\":\"nara_idle\",\"jun\":\"jun_typing\"}",
+    "runId": "c1324142-a503-4020-8f60-fe2025fb3f70",
+    "status": "준 · 답변 작성 중"
+  },
+  "viewerRunning": {
+    "seesRunning": true,
+    "noCancel": true
+  },
+  "completed": {
+    "answer": "준의 제안\n\n요청: 우리 팀 공동 공간에서 업무 상태를 공유하는 개발 계획을 정리해 줘.\n핵심 단어: 우리 · 공동 · 공간에서 · 업무 · 상태를 · 공유하는\n\n개발과 설계 관점에서 다음과 같이 접근해 볼 수 있어요.\n\n1. 목표와 완료 기준을 한 문장으로 정합니다.\n\n2. 준비 → 초안 → 검토 → 완료 순서로 작업을 나눕니다.\n\n3. 각 작업에 담당자·예상 기간·확인할 산출물을 적습니다.\n\n확인할 것: 선행 작업, 일정 여유, 완료를 판단할 기준.\n\n첫 번째 행동\n가장 작은 구현 단위 하나와 통과해야 할 테스트를 정해 보세요.\n\n이 답변은 입력의 키워드와 작업 유형을 이용한 로컬 Fake AI 시뮬레이션입니다. 실제 언어 모델의 추론·검색 결과가 아닙니다.",
+    "runId": "c1324142-a503-4020-8f60-fe2025fb3f70",
+    "status": "준 · 답변 저장 완료"
+  },
+  "viewerCompleted": {
+    "seesCompleted": true,
+    "sameFullAnswer": true
+  },
+  "memberRequest": {
+    "pending": true,
+    "canCancelOwn": true,
+    "cannotApprove": true
+  },
+  "switches": [
+    {
+      "heading": "QA 동료의 스튜디오",
+      "history": "6개",
+      "id": "2e1b87f6-6b47-471f-9e33-0444d2074690",
+      "inviteEmpty": true,
+      "owner": "",
+      "requester": "요청한 사람 · QA 동료"
+    },
+    {
+      "heading": "함께 만드는 스튜디오",
+      "history": "2개",
+      "id": "9fbb5627-cc35-4c71-8ad0-fa9fb9b84460",
+      "inviteEmpty": true,
+      "owner": "nara",
+      "requester": "요청한 사람 · QA 분리"
+    },
+    {
+      "heading": "QA 동료의 스튜디오",
+      "history": "6개",
+      "id": "2e1b87f6-6b47-471f-9e33-0444d2074690",
+      "inviteEmpty": true,
+      "owner": "",
+      "requester": "요청한 사람 · QA 동료"
+    },
+    {
+      "heading": "함께 만드는 스튜디오",
+      "history": "2개",
+      "id": "9fbb5627-cc35-4c71-8ad0-fa9fb9b84460",
+      "inviteEmpty": true,
+      "owner": "nara",
+      "requester": "요청한 사람 · QA 분리"
+    }
+  ],
+  "naraRunning": {
+    "clips": "{\"nara\":\"nara_typing\",\"jun\":\"jun_idle\"}",
+    "requester": "요청한 사람 · QA 분리",
+    "status": "나라 · 답변 작성 중"
+  },
+  "memberRunning": {
+    "seesNaraRunning": true,
+    "canCancelOwn": true
+  },
+  "memberCancelled": true,
+  "cancelSync": {
+    "clips": "{\"nara\":\"nara_idle\",\"jun\":\"jun_idle\"}",
+    "status": "나라 · 취소됨"
+  },
+  "downgraded": {
+    "viewer": true,
+    "noStart": true,
+    "noCancel": true
+  },
+  "restartBefore": {
+    "answer": "나라의 제안\n\n요청: 공동 공간에서 나라와 함께 다음 서비스 기획의 우선순위를 제안해 줘.\n핵심 단어: 공동 · 공간에서 · 나라와 · 함께 · 다음 · 서비스\n\n기획과 리서치 관점에서 다음과 같이 접근해 볼 수 있어요.\n\n1. ",
+    "id": "9fbb5627-cc35-4c71-8ad0-fa9fb9b84460",
+    "members": "참여자 2명 · 초대와 권한 관리",
+    "runId": "d7404b03-5a0f-44ea-ab2e-6fdbc1dd0fba"
+  },
+  "disconnected": {
+    "owner": "서버 연결을 기다리고 있어요. 연결되면 저장된 업무 상태를 다시 확인합니다.",
+    "viewer": true
+  },
+  "restart": {
+    "ownerSameWorkspace": true,
+    "sameRunAndAnswer": true,
+    "ownerRole": "소유자",
+    "viewerRestored": true,
+    "members": "참여자 2명 · 초대와 권한 관리"
+  },
+  "revoked": {
+    "automaticallyReturned": true,
+    "notice": true,
+    "noSharedAnswer": true,
+    "noSharedHeading": true
+  },
+  "revokedBookmark": {
+    "personalFallback": true,
+    "notice": true
+  },
+  "rejoined": {
+    "shared": true,
+    "viewer": true
+  },
+  "viewports": [
+    {
+      "clientWidth": 1280,
+      "expanded": false,
+      "scrollWidth": 1280,
+      "width": 1280,
+      "workspace": "함께 만드는 스튜디오"
+    },
+    {
+      "clientWidth": 1280,
+      "expanded": true,
+      "scrollWidth": 1280,
+      "smallestButton": 44,
+      "width": 1280
+    },
+    {
+      "clientWidth": 768,
+      "expanded": false,
+      "scrollWidth": 768,
+      "width": 768,
+      "workspace": "함께 만드는 스튜디오"
+    },
+    {
+      "clientWidth": 768,
+      "expanded": true,
+      "scrollWidth": 768,
+      "smallestButton": 44,
+      "width": 768
+    },
+    {
+      "clientWidth": 390,
+      "expanded": false,
+      "scrollWidth": 390,
+      "width": 390,
+      "workspace": "함께 만드는 스튜디오"
+    },
+    {
+      "clientWidth": 390,
+      "expanded": true,
+      "scrollWidth": 390,
+      "smallestButton": 44,
+      "width": 390
+    },
+    {
+      "clientWidth": 319,
+      "expanded": false,
+      "scrollWidth": 319,
+      "width": 319,
+      "workspace": "함께 만드는 스튜디오"
+    },
+    {
+      "clientWidth": 319,
+      "expanded": true,
+      "scrollWidth": 319,
+      "smallestButton": 44,
+      "width": 319
+    }
+  ],
+  "finalPeer": {
+    "viewer": true,
+    "members": true,
+    "seesCompleted": true,
+    "sameFullAnswer": true
+  },
+  "finalOwner": {
+    "inviteCleared": true,
+    "members": "참여자 2명 · 초대와 권한 관리",
+    "role": "소유자",
+    "status": "준 · 답변 저장 완료",
+    "workspaceSelectHeight": 44
+  }
+}

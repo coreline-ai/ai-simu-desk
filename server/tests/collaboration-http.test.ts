@@ -1,0 +1,50 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { randomBytes } from "node:crypto";
+import { openDatabase } from "../db/database.js";
+import { createAuth } from "../adapters/auth.js";
+import { createStudio } from "../db/studio-store.js";
+import { createHttp } from "../http.js";
+
+test("real authenticated sessions share state with enforced HTTP roles, management versions and immediate revoked reads",async()=>{
+  const d=await openDatabase();
+  try {
+    const config={origin:"http://127.0.0.1:4180",secret:randomBytes(48).toString("base64url"),port:4180,dataDir:"",fakeDelayMs:0};
+    const studio=createStudio(d), app=createHttp(createAuth(d,config),config,studio);
+    const call=(path:string,cookie?:string,body?:unknown,key?:string)=>app.request(config.origin+path,{method:body===undefined?"GET":"POST",headers:{...(cookie?{cookie}:{}),...(body!==undefined?{origin:config.origin,"content-type":"application/json"}:{}),...(key?{"idempotency-key":key}:{})},...(body!==undefined?{body:JSON.stringify(body)}:{})});
+    const register=async(name:string)=>{const response=await call("/api/auth/sign-up/email",undefined,{name,email:`${name}@example.test`,password:"Synthetic-collaboration-password-5820"});assert.equal(response.status,200);const cookie=response.headers.get("set-cookie")!.split(";")[0];return{cookie,...await(await call("/api/me",cookie)).json()};};
+    const a=await register("owner"),b=await register("observer"),c=await register("outsider");
+    assert.equal((await call("/api/workspaces")).status,401);
+    assert.equal((await call("/api/workspaces",a.cookie,null,"invalid-space-key")).status,400);
+    const created=await call("/api/workspaces",a.cookie,{name:"협업 HTTP 공간"},"http-space-key");assert.equal(created.status,201);
+    const space=await created.json(),id=space.id;
+    const snapshot=async(cookie:string)=>(await call(`/api/workspaces/${id}/snapshot`,cookie)).json();
+    const currentVersion=async()=>(await snapshot(a.cookie)).workspace.revision;
+    assert.equal((await call(`/api/workspaces/${id}/snapshot`,c.cookie)).status,404);
+    assert.equal((await call(`/api/workspaces/${id}/invites`,b.cookie,{role:"member",version:1})).status,404);
+    const inviteResponse=await call(`/api/workspaces/${id}/invites`,a.cookie,{role:"viewer",version:await currentVersion()});assert.equal(inviteResponse.status,201);
+    const invite=await inviteResponse.json();
+    assert.equal((await call("/api/workspaces/join",b.cookie,{code:invite.code,role:"owner"})).status,200);
+    assert.equal((await snapshot(b.cookie)).role,"viewer");
+    const listed=await(await call("/api/workspaces",b.cookie)).json();assert.ok(listed.workspaces.some((w:{id:string})=>w.id===id));assert.ok(!listed.workspaces.some((w:{id:string})=>w.id===a.workspace.id));
+    const body={prompt:"함께 볼 준의 개발 제안",agentId:"jun",approvalRequired:true,scenario:"normal"};
+    assert.equal((await call(`/api/workspaces/${id}/runs`,b.cookie,body,"viewer-start-key")).status,403);
+    const run=await(await call(`/api/workspaces/${id}/runs`,a.cookie,body,"owner-start-key")).json();
+    assert.equal((await call(`/api/runs/${run.id}/approval`,b.cookie,{version:run.version,approved:true})).status,403);
+    assert.equal((await call(`/api/runs/${run.id}/cancel`,b.cookie,{})).status,403);
+    assert.equal((await call(`/api/workspaces/${id}/members/${b.user.id}`,b.cookie,{role:"member",version:await currentVersion()})).status,403);
+    await call(`/api/runs/${run.id}/approval`,a.cookie,{version:run.version,approved:true});await studio.claim();await studio.progress(run.id,"공유되는 답변 청크");
+    const sa=await snapshot(a.cookie),sb=await snapshot(b.cookie);assert.deepEqual(sa.runs,sb.runs);assert.equal(sa.cursor,sb.cursor);
+    assert.ok(!JSON.stringify(sb).includes(invite.code));assert.ok(!JSON.stringify(await(await call(`/api/workspaces/${id}/events?after=0`,b.cookie)).json()).includes(invite.code));
+    await studio.finish(run.id,"succeeded");
+    const before=await currentVersion();assert.equal((await call(`/api/workspaces/${id}/members/${b.user.id}`,a.cookie,{role:"member",version:before})).status,200);
+    assert.equal((await call(`/api/workspaces/${id}/members/${b.user.id}`,a.cookie,{role:"viewer",version:before})).status,409);
+    const own=await call(`/api/workspaces/${id}/runs`,b.cookie,{...body,approvalRequired:false},"member-start-key");assert.equal(own.status,201);const ownRun=await own.json();
+    assert.equal((await call(`/api/runs/${ownRun.id}/cancel`,b.cookie,{})).status,200);
+    assert.equal((await call(`/api/runs/${run.id}/retry`,b.cookie,{},"foreign-retry-key")).status,403);
+    await call(`/api/workspaces/${id}/members/${b.user.id}`,a.cookie,{role:null,version:await currentVersion()});
+    for(const path of [`/api/workspaces/${id}/snapshot`,`/api/workspaces/${id}/events?after=0`])assert.equal((await call(path,b.cookie)).status,404);
+    assert.equal((await call(`/api/runs/${ownRun.id}/retry`,b.cookie,{},"revoked-retry-key")).status,404);
+    assert.equal((await call(`/api/workspaces/${b.workspace.id}/snapshot`,b.cookie)).status,200);
+  } finally {await d.close();}
+});

@@ -1,6 +1,7 @@
 import { pgTable, text, timestamp, boolean, uniqueIndex, index, integer, bigserial, jsonb, primaryKey, check } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 import type { AgentId, RunStatus } from "../domain/contracts.js";
+import type { InviteRole, MemberRole } from "../domain/collaboration.js";
 
 const dates = () => ({ createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(), updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow() });
 export const user = pgTable("auth_user", {
@@ -24,13 +25,21 @@ export const verification = pgTable("auth_verification", {
 }, t => [index("verification_identifier_idx").on(t.identifier)]);
 
 export const workspaces = pgTable("workspaces", {
-  id: text("id").primaryKey(), ownerId: text("owner_id").notNull().unique().references(() => user.id, { onDelete: "cascade" }),
-  name: text("name").notNull(), ...dates(),
-});
+  id: text("id").primaryKey(), ownerId: text("owner_id").notNull().references(() => user.id, { onDelete: "cascade" }),
+  name: text("name").notNull(), kind: text("kind").$type<"personal" | "shared">().notNull().default("personal"),
+  revision: integer("revision").notNull().default(1), creationKey: text("creation_key"), ...dates(),
+}, t => [uniqueIndex("workspaces_one_personal").on(t.ownerId).where(sql`${t.kind}='personal'`), uniqueIndex("workspaces_creation_key").on(t.ownerId, t.creationKey)]);
 export const members = pgTable("members", {
   workspaceId: text("workspace_id").notNull().references(() => workspaces.id, { onDelete: "cascade" }),
-  userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }), role: text("role").notNull().default("owner"),
-}, t => [primaryKey({ columns: [t.workspaceId, t.userId] })]);
+  userId: text("user_id").notNull().references(() => user.id, { onDelete: "cascade" }), role: text("role").$type<MemberRole>().notNull().default("viewer"),
+}, t => [primaryKey({ columns: [t.workspaceId, t.userId] }), uniqueIndex("members_one_owner").on(t.workspaceId).where(sql`${t.role}='owner'`)]);
+export const workspaceInvites = pgTable("workspace_invites", {
+  id: text("id").primaryKey(), workspaceId: text("workspace_id").notNull().references(() => workspaces.id, { onDelete: "cascade" }),
+  tokenHash: text("token_hash").notNull().unique(), role: text("role").$type<InviteRole>().notNull(),
+  issuedBy: text("issued_by").notNull().references(() => user.id), expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  usedBy: text("used_by").references(() => user.id), usedAt: timestamp("used_at", { withTimezone: true }), revokedAt: timestamp("revoked_at", { withTimezone: true }),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+}, t => [index("invites_workspace_idx").on(t.workspaceId)]);
 export const tasks = pgTable("tasks", {
   id: text("id").primaryKey(), workspaceId: text("workspace_id").notNull().references(() => workspaces.id),
   authorId: text("author_id").notNull().references(() => user.id), prompt: text("prompt").notNull(),
@@ -60,7 +69,7 @@ export const approvals = pgTable("approvals", {
 });
 export const runEvents = pgTable("run_events", {
   cursor: bigserial("cursor", { mode: "number" }).primaryKey(), id: text("id").notNull().unique(),
-  workspaceId: text("workspace_id").notNull().references(() => workspaces.id), runId: text("run_id").notNull().references(() => runs.id),
+  workspaceId: text("workspace_id").notNull().references(() => workspaces.id), runId: text("run_id").references(() => runs.id),
   seq: integer("seq").notNull(), kind: text("kind").notNull(), payload: jsonb("payload").$type<Record<string, unknown>>().notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-}, t => [uniqueIndex("events_run_seq").on(t.runId, t.seq), index("events_workspace_cursor").on(t.workspaceId, t.cursor)]);
+}, t => [uniqueIndex("events_run_seq").on(t.runId, t.seq), uniqueIndex("events_workspace_revision").on(t.workspaceId,t.seq).where(sql`${t.runId} IS NULL`), index("events_workspace_cursor").on(t.workspaceId, t.cursor)]);

@@ -1,0 +1,12 @@
+{
+  "independentSessions": true,
+  "ownerRole": "owner",
+  "viewerRole": "viewer",
+  "members": 2,
+  "runs": 2,
+  "sameRunSnapshots": true,
+  "sameEventPages": true,
+  "viewerWriteStatus": 403,
+  "latestRunId": "d7404b03-5a0f-44ea-ab2e-6fdbc1dd0fba",
+  "latestOutputSha256": "8d255064cd556c2a9823de37f35397ad9af88714935875ce367555858bd0b939"
+}

@@ -30,7 +30,22 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
       if (!identity) throw new AppError(401, "로그인이 필요합니다.", "UNAUTHORIZED");
       return identity.user.id;
     };
-    const json = async (c: Context) => { try { return await c.req.json(); } catch { throw new AppError(400, "JSON 요청을 확인해 주세요."); } };
+    const json = async (c: Context) => { try { const value = await c.req.json(); if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(); return value; } catch { throw new AppError(400, "JSON 요청을 확인해 주세요."); } };
+    app.get("/api/workspaces", async c => c.json({ workspaces: await studio.listWorkspaces(await who(c)) }));
+    app.post("/api/workspaces", async c => c.json(await studio.createWorkspace(await who(c),(await json(c)).name,c.req.header("idempotency-key")),201));
+    app.post("/api/workspaces/join", async c => c.json(await studio.joinWorkspace(await who(c),(await json(c)).code)));
+    app.post("/api/workspaces/:workspaceId/invites", async c => {
+      const userId = await who(c), body = await json(c);
+      return c.json(await studio.issueInvite(userId,c.req.param("workspaceId"),body.role ?? "viewer",body.version),201);
+    });
+    app.post("/api/workspaces/:workspaceId/invites/revoke", async c => {
+      const userId = await who(c), body = await json(c);
+      return c.json(await studio.revokeInvites(userId,c.req.param("workspaceId"),body.version));
+    });
+    app.post("/api/workspaces/:workspaceId/members/:userId", async c => {
+      const userId = await who(c), body = await json(c);
+      return c.json(await studio.updateMember(userId,c.req.param("workspaceId"),c.req.param("userId"),body.role,body.version));
+    });
     app.get("/api/workspaces/:workspaceId/snapshot", async c => c.json(await studio.snapshot(await who(c), c.req.param("workspaceId"))));
     app.get("/api/workspaces/:workspaceId/events", async c => c.json(await studio.events(await who(c), c.req.param("workspaceId"), Number(c.req.query("after") ?? 0))));
     app.post("/api/workspaces/:workspaceId/runs", async c => c.json(await studio.startRun(await who(c), c.req.param("workspaceId"), await json(c), c.req.header("idempotency-key")), 201));

@@ -1,20 +1,17 @@
 import { and, asc, desc, eq, gt, inArray, max } from "drizzle-orm";
 import { randomUUID, createHash } from "node:crypto";
 import type { Database } from "./database.js";
-import { members, workspaces, tasks, runs, approvals, runEvents } from "./schema.js";
+import { members, workspaces, tasks, runs, approvals, runEvents, user } from "./schema.js";
 import { AppError, AgentFailure, ACTIVE, TERMINAL, parseInput, validRequestKey, mayTransition } from "../domain/contracts.js";
 import type { StudioPort } from "../domain/studio-port.js";
 import type { AgentJob } from "../domain/contracts.js";
+import { canStartRun, canControlRun } from "../domain/collaboration.js";
+import { workspaceMember as member, type Tx, type Store } from "./workspace-access.js";
+import { createWorkspaceStore } from "./workspace-store.js";
 
-type Tx = Parameters<Parameters<Database["db"]["transaction"]>[0]>[0];
-type Store = Database["db"] | Tx;
 type Run = typeof runs.$inferSelect;
 type Task = typeof tasks.$inferSelect;
 
-async function member(db: Store, userId: string, workspaceId: string) {
-  const [row] = await db.select().from(members).where(and(eq(members.userId, userId), eq(members.workspaceId, workspaceId)));
-  if (!row) throw new AppError(404, "작업 공간을 찾을 수 없습니다.", "NOT_FOUND");
-}
 async function event(db: Store, run: Run, kind: string, payload: Record<string, unknown> = {}) {
   await db.insert(runEvents).values({ id: randomUUID(), workspaceId: run.workspaceId, runId: run.id, seq: run.version, kind, payload: { status: run.status, ...payload } });
 }
@@ -27,55 +24,53 @@ async function change(tx: Tx, run: Run, status: Run["status"], kind: string, pat
 
 export function createStudio(database: Database): StudioPort {
   const db = database.db;
-  async function personalWorkspace(userId: string, name: string) {
-    return db.transaction(async tx => {
-      const [created] = await tx.insert(workspaces).values({ id: randomUUID(), ownerId: userId, name: `${name.slice(0, 30)}의 스튜디오` }).onConflictDoNothing({ target: workspaces.ownerId }).returning();
-      if (created) await tx.insert(members).values({ workspaceId: created.id, userId, role: "owner" });
-      const [space] = created ? [created] : await tx.select().from(workspaces).where(eq(workspaces.ownerId, userId));
-      await member(tx, userId, space.id); return space;
-    });
-  }
-  async function ownedRun(tx: Store, userId: string, id: string) {
+  async function ownedRun(tx: Store, userId: string, id: string, permission: "control" | "approve" = "control") {
     const [run] = await tx.select().from(runs).where(eq(runs.id, id));
     if (!run) throw new AppError(404, "업무를 찾을 수 없습니다.", "NOT_FOUND");
-    await member(tx, userId, run.workspaceId); return run;
+    const access = await member(tx, userId, run.workspaceId);
+    if (permission === "approve" ? access.role !== "owner" : !canControlRun(access.role,run.requestedBy,userId)) throw new AppError(403,"이 업무를 조작할 권한이 없습니다.","ROLE_FORBIDDEN");
+    return run;
   }
-  async function startRun(userId: string, workspaceId: string, value: unknown, requestKey: string | undefined, existingTask?: Task) {
+  async function startInTransaction(tx: Tx, userId: string, workspaceId: string, value: unknown, requestKey: string | undefined, existingTask?: Task) {
     const input = parseInput(value), key = validRequestKey(requestKey);
     const hash = createHash("sha256").update(JSON.stringify({ ...input, retryTask: existingTask?.id ?? null })).digest("hex");
-    return db.transaction(async tx => {
-      await member(tx, userId, workspaceId);
-      const [old] = await tx.select().from(runs).where(and(eq(runs.workspaceId, workspaceId), eq(runs.requestKey, key)));
-      if (old) { if (old.requestHash !== hash) throw new AppError(409, "같은 요청 키에 다른 업무를 보낼 수 없습니다.", "KEY_CONFLICT"); return old; }
-      const [active] = await tx.select({ id: runs.id }).from(runs).where(and(eq(runs.workspaceId, workspaceId), inArray(runs.status, [...ACTIVE]))).limit(1);
-      if (active) throw new AppError(409, "진행 중인 업무를 먼저 마쳐 주세요.", "RUN_ACTIVE");
-      const task = existingTask ?? (await tx.insert(tasks).values({ id: randomUUID(), workspaceId, authorId: userId, prompt: input.prompt, agentId: input.agentId, approvalRequired: input.approvalRequired }).returning())[0];
-      const [run] = await tx.insert(runs).values({ id: randomUUID(), workspaceId, taskId: task.id, requestedBy: userId, requestKey: key, requestHash: hash, status: input.approvalRequired ? "awaiting_approval" : "queued", scenario: input.scenario, stage: input.approvalRequired ? "실행 승인 대기" : "실행 대기" }).returning();
-      if (input.approvalRequired) await tx.insert(approvals).values({ id: randomUUID(), runId: run.id, workspaceId, status: "pending" });
-      await event(tx, run, input.approvalRequired ? "approval_requested" : "created"); return run;
-    });
+    const access = await member(tx, userId, workspaceId);
+    if (!canStartRun(access.role)) throw new AppError(403,"보기 전용 사용자는 업무를 요청할 수 없습니다.","ROLE_FORBIDDEN");
+    const [old] = await tx.select().from(runs).where(and(eq(runs.workspaceId, workspaceId), eq(runs.requestKey, key)));
+    if (old) { if (old.requestedBy !== userId || old.requestHash !== hash) throw new AppError(409, "같은 요청 키에 다른 업무를 보낼 수 없습니다.", "KEY_CONFLICT"); return old; }
+    const [active] = await tx.select({ id: runs.id }).from(runs).where(and(eq(runs.workspaceId, workspaceId), inArray(runs.status, [...ACTIVE]))).limit(1);
+    if (active) throw new AppError(409, "진행 중인 업무를 먼저 마쳐 주세요.", "RUN_ACTIVE");
+    const task = existingTask ?? (await tx.insert(tasks).values({ id: randomUUID(), workspaceId, authorId: userId, prompt: input.prompt, agentId: input.agentId, approvalRequired: input.approvalRequired }).returning())[0];
+    const [run] = await tx.insert(runs).values({ id: randomUUID(), workspaceId, taskId: task.id, requestedBy: userId, requestKey: key, requestHash: hash, status: input.approvalRequired ? "awaiting_approval" : "queued", scenario: input.scenario, stage: input.approvalRequired ? "실행 승인 대기" : "실행 대기" }).returning();
+    if (input.approvalRequired) await tx.insert(approvals).values({ id: randomUUID(), runId: run.id, workspaceId, status: "pending" });
+    await event(tx, run, input.approvalRequired ? "approval_requested" : "created", { actorId:userId }); return run;
   }
+  const startRun = (userId: string, workspaceId: string, value: unknown, key: string | undefined) => db.transaction(tx => startInTransaction(tx,userId,workspaceId,value,key));
   async function snapshot(userId: string, workspaceId: string) {
     return db.transaction(async tx => {
-      await member(tx, userId, workspaceId);
+      const access = await member(tx, userId, workspaceId);
       const [workspace] = await tx.select().from(workspaces).where(eq(workspaces.id, workspaceId));
-      const rows = await tx.select({ run: runs, task: tasks }).from(runs).innerJoin(tasks, eq(runs.taskId, tasks.id)).where(eq(runs.workspaceId, workspaceId)).orderBy(desc(runs.createdAt), desc(runs.id)).limit(20);
+      const rows = await tx.select({ run: runs, task: tasks, requestedByName:user.name }).from(runs).innerJoin(tasks, eq(runs.taskId, tasks.id)).innerJoin(user,eq(runs.requestedBy,user.id)).where(eq(runs.workspaceId, workspaceId)).orderBy(desc(runs.createdAt), desc(runs.id)).limit(20);
       const [latest] = await tx.select({ cursor: max(runEvents.cursor) }).from(runEvents).where(eq(runEvents.workspaceId, workspaceId));
-      return { workspace, runs: rows.map(({ run, task }) => ({ ...run, prompt: task.prompt, agentId: task.agentId, approvalRequired: task.approvalRequired })), cursor: latest.cursor ?? 0 };
+      const people = await tx.select({ userId:members.userId,name:user.name,role:members.role }).from(members).innerJoin(user,eq(members.userId,user.id)).where(eq(members.workspaceId,workspaceId)).orderBy(asc(user.name),asc(user.id));
+      return { workspace, role:access.role, members:people, runs: rows.map(({ run, task, requestedByName }) => ({ ...run, prompt: task.prompt, agentId: task.agentId, approvalRequired: task.approvalRequired, requestedByName })), cursor: latest.cursor ?? 0 };
     });
   }
   async function events(userId: string, workspaceId: string, after: number) {
     if (!Number.isSafeInteger(after) || after < 0) throw new AppError(400, "이벤트 위치를 확인해 주세요.");
-    await member(db, userId, workspaceId);
-    const rows = await db.select().from(runEvents).where(and(eq(runEvents.workspaceId, workspaceId), gt(runEvents.cursor, after))).orderBy(asc(runEvents.cursor)).limit(100);
-    return { events: rows, cursor: rows.at(-1)?.cursor ?? after, hasMore: rows.length === 100 };
+    return db.transaction(async tx => {
+      await member(tx, userId, workspaceId);
+      const rows = await tx.select().from(runEvents).where(and(eq(runEvents.workspaceId, workspaceId), gt(runEvents.cursor, after))).orderBy(asc(runEvents.cursor)).limit(100);
+      return { events: rows, cursor: rows.at(-1)?.cursor ?? after, hasMore: rows.length === 100 };
+    });
   }
+
   async function approve(userId: string, id: string, version: unknown, accepted: boolean) {
     return db.transaction(async tx => {
-      const run = await ownedRun(tx, userId, id);
+      const run = await ownedRun(tx, userId, id, "approve");
       if (run.status !== "awaiting_approval" || run.version !== version) throw new AppError(409, "이미 처리되었거나 변경된 승인입니다.", "STATE_CONFLICT");
       await tx.update(approvals).set({ status: accepted ? "approved" : "declined", decidedBy: userId, decidedAt: new Date() }).where(eq(approvals.runId, id));
-      return change(tx, run, accepted ? "queued" : "cancelled", accepted ? "approved" : "cancelled", { stage: accepted ? "실행 대기" : "승인 거절", note: accepted ? "" : "사용자가 실행을 승인하지 않았습니다." });
+      return change(tx, run, accepted ? "queued" : "cancelled", accepted ? "approved" : "cancelled", { stage: accepted ? "실행 대기" : "승인 거절", note: accepted ? "" : "사용자가 실행을 승인하지 않았습니다." }, { actorId:userId });
     });
   }
   async function cancel(userId: string, id: string) {
@@ -83,15 +78,18 @@ export function createStudio(database: Database): StudioPort {
       const run = await ownedRun(tx, userId, id);
       if (TERMINAL.includes(run.status) || run.status === "cancel_requested") return run;
       if (run.status === "awaiting_approval") await tx.update(approvals).set({ status: "declined", decidedBy: userId, decidedAt: new Date() }).where(eq(approvals.runId, id));
-      return change(tx, run, run.status === "running" ? "cancel_requested" : "cancelled", run.status === "running" ? "cancel_requested" : "cancelled", { stage: "취소 요청", note: "사용자가 취소를 요청했습니다." });
+      return change(tx, run, run.status === "running" ? "cancel_requested" : "cancelled", run.status === "running" ? "cancel_requested" : "cancelled", { stage: "취소 요청", note: "사용자가 취소를 요청했습니다." }, { actorId:userId });
     });
   }
   async function retry(userId: string, id: string, key: string | undefined) {
-    const old = await ownedRun(db, userId, id);
-    if (!["failed", "cancelled"].includes(old.status)) throw new AppError(409, "실패하거나 취소한 업무만 재시도할 수 있습니다.");
-    const [task] = await db.select().from(tasks).where(eq(tasks.id, old.taskId));
-    return startRun(userId, old.workspaceId, { ...task, scenario: "normal" }, key, task);
+    return db.transaction(async tx => {
+      const old = await ownedRun(tx,userId,id);
+      if (!["failed", "cancelled"].includes(old.status)) throw new AppError(409, "실패하거나 취소한 업무만 재시도할 수 있습니다.");
+      const [task] = await tx.select().from(tasks).where(eq(tasks.id,old.taskId));
+      return startInTransaction(tx,userId,old.workspaceId,{...task,scenario:"normal"},key,task);
+    });
   }
+
   async function claim(): Promise<AgentJob | null> {
     return db.transaction(async tx => {
       const [run] = await tx.select().from(runs).where(eq(runs.status, "queued")).orderBy(asc(runs.createdAt)).limit(1);
@@ -126,5 +124,5 @@ export function createStudio(database: Database): StudioPort {
     });
   }
   const getStatus = async (id: string) => (await db.select({ status: runs.status }).from(runs).where(eq(runs.id, id)))[0]?.status;
-  return { personalWorkspace, startRun, snapshot, events, approve, cancel, retry, claim, progress, finish, recoverInterrupted, getStatus };
+  return { ...createWorkspaceStore(database), startRun, snapshot, events, approve, cancel, retry, claim, progress, finish, recoverInterrupted, getStatus };
 }
