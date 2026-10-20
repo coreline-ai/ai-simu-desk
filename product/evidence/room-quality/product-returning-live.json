@@ -1,0 +1,43 @@
+{
+  "message": "나라 · 업무 진행 · 자리 복귀 중",
+  "actors": {
+    "nara": {
+      "action": "standing",
+      "time": 17.27119999999993,
+      "cycle": 1,
+      "returning": true,
+      "basePose": "preparing",
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "sora": {
+      "action": "preparing",
+      "time": 0.2684000000000015,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "jun": {
+      "action": "preparing",
+      "time": 0.2684000000000015,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "min": {
+      "action": "preparing",
+      "time": 0.2684000000000015,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "leo": {
+      "action": "preparing",
+      "time": 0.2684000000000015,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    }
+  }
+}

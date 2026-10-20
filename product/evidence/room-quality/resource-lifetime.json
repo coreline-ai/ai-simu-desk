@@ -1,0 +1,196 @@
+{
+  "reloads": [
+    {
+      "load": 1,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 2,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 3,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 4,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 5,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 6,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 7,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 8,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 9,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    },
+    {
+      "load": 10,
+      "textures": 48,
+      "geometries": 190,
+      "canvasCount": 1,
+      "time": 0
+    }
+  ],
+  "switches": [
+    {
+      "switch": 1,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 2,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 3,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 4,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 5,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 6,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 7,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 8,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 9,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 10,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 11,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 12,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 13,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 14,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 15,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 16,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 17,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 18,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 19,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    },
+    {
+      "switch": 20,
+      "textures": 48,
+      "geometries": 190,
+      "time": 0
+    }
+  ]
+}

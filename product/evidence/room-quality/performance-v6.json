@@ -1,0 +1,257 @@
+{
+  "viewport": [
+    1280,
+    720
+  ],
+  "runs": [
+    {
+      "loadedMs": 107,
+      "firstRenderMs": 223,
+      "lastEmit": 36026.5,
+      "measuredFps": 75,
+      "frameP50": 13.300000000001091,
+      "frameP95": 13.699999999998909,
+      "measurementMs": 30004,
+      "measurementCompletedAt": 31198.2,
+      "measurementFrames": 2250,
+      "drawCalls": 998,
+      "triangles": 804344,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 35.77980000000067,
+      "paused": false,
+      "pixelRatio": 1,
+      "modelVersion": 6,
+      "measuring": false,
+      "quality": "auto",
+      "lighting": "day",
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "actors": {
+        "nara": "nara_turn",
+        "sora": "sora_idle",
+        "jun": "jun_idle",
+        "min": "min_idle",
+        "leo": "leo_idle"
+      },
+      "activities": {
+        "nara": {
+          "action": "turn",
+          "time": 18.766499999999862,
+          "cycle": 1,
+          "returning": false,
+          "basePose": "idle",
+          "restCount": 0,
+          "microCount": 1,
+          "interruptions": 0
+        },
+        "sora": {
+          "action": "idle",
+          "time": 35.77980000000067,
+          "restCount": 0,
+          "microCount": 1,
+          "interruptions": 0
+        },
+        "jun": {
+          "action": "idle",
+          "time": 35.77980000000067,
+          "restCount": 0,
+          "microCount": 1,
+          "interruptions": 0
+        },
+        "min": {
+          "action": "idle",
+          "time": 35.77980000000067,
+          "restCount": 0,
+          "microCount": 1,
+          "interruptions": 0
+        },
+        "leo": {
+          "action": "idle",
+          "time": 35.77980000000067,
+          "restCount": 0,
+          "microCount": 1,
+          "interruptions": 0
+        }
+      },
+      "reservation": "nara",
+      "resetTimes": 0,
+      "cutaway": {
+        "left": false,
+        "back": false
+      }
+    },
+    {
+      "loadedMs": 107,
+      "firstRenderMs": 223,
+      "lastEmit": 102104.6,
+      "measuredFps": 75,
+      "frameP50": 13.30000000000291,
+      "frameP95": 13.5,
+      "measurementMs": 30004,
+      "measurementCompletedAt": 66398,
+      "measurementFrames": 2250,
+      "drawCalls": 998,
+      "triangles": 804344,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 101.85789999999395,
+      "paused": false,
+      "pixelRatio": 1,
+      "modelVersion": 6,
+      "measuring": false,
+      "quality": "auto",
+      "lighting": "day",
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "actors": {
+        "nara": "nara_idle",
+        "sora": "sora_idle",
+        "jun": "jun_idle",
+        "min": "min_turn",
+        "leo": "leo_idle"
+      },
+      "activities": {
+        "nara": {
+          "action": "idle",
+          "time": 63.837100000000405,
+          "restCount": 1,
+          "microCount": 3,
+          "interruptions": 0
+        },
+        "sora": {
+          "action": "idle",
+          "time": 39.82820000000027,
+          "restCount": 1,
+          "microCount": 3,
+          "interruptions": 0
+        },
+        "jun": {
+          "action": "idle",
+          "time": 16.81959999999986,
+          "restCount": 1,
+          "microCount": 2,
+          "interruptions": 0
+        },
+        "min": {
+          "action": "turn",
+          "time": 14.818499999999853,
+          "cycle": 1,
+          "returning": false,
+          "basePose": "idle",
+          "restCount": 0,
+          "microCount": 3,
+          "interruptions": 0
+        },
+        "leo": {
+          "action": "idle",
+          "time": 101.85789999999395,
+          "restCount": 0,
+          "microCount": 3,
+          "interruptions": 0
+        }
+      },
+      "reservation": "min",
+      "resetTimes": 0,
+      "cutaway": {
+        "left": false,
+        "back": false
+      }
+    },
+    {
+      "loadedMs": 107,
+      "firstRenderMs": 223,
+      "lastEmit": 171223.6,
+      "measuredFps": 75,
+      "frameP50": 13.30000000000291,
+      "frameP95": 13.400000000008731,
+      "measurementMs": 30002,
+      "measurementCompletedAt": 132916.1,
+      "measurementFrames": 2250,
+      "drawCalls": 998,
+      "triangles": 804344,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 170.97689999998244,
+      "paused": false,
+      "pixelRatio": 1,
+      "modelVersion": 6,
+      "measuring": false,
+      "quality": "auto",
+      "lighting": "day",
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "actors": {
+        "nara": "nara_idle",
+        "sora": "sora_turn",
+        "jun": "jun_idle",
+        "min": "min_idle",
+        "leo": "leo_idle"
+      },
+      "activities": {
+        "nara": {
+          "action": "idle",
+          "time": 16.91289999999992,
+          "restCount": 2,
+          "microCount": 4,
+          "interruptions": 0
+        },
+        "sora": {
+          "action": "turn",
+          "time": 14.91180000000001,
+          "cycle": 2,
+          "returning": false,
+          "basePose": "idle",
+          "restCount": 1,
+          "microCount": 5,
+          "interruptions": 0
+        },
+        "jun": {
+          "action": "idle",
+          "time": 85.93859999999759,
+          "restCount": 1,
+          "microCount": 4,
+          "interruptions": 0
+        },
+        "min": {
+          "action": "idle",
+          "time": 62.9302000000001,
+          "restCount": 1,
+          "microCount": 5,
+          "interruptions": 0
+        },
+        "leo": {
+          "action": "idle",
+          "time": 39.92149999999958,
+          "restCount": 1,
+          "microCount": 4,
+          "interruptions": 0
+        }
+      },
+      "reservation": "sora",
+      "resetTimes": 0,
+      "cutaway": {
+        "left": false,
+        "back": false
+      }
+    }
+  ]
+}

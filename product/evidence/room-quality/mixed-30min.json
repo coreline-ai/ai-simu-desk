@@ -1,0 +1,1186 @@
+{
+  "mode": "mixed",
+  "elapsedSeconds": 1801,
+  "targetSeconds": 1800,
+  "activeSeconds": 1799,
+  "samples": 1796,
+  "complete": true,
+  "passed": true,
+  "errors": [],
+  "hiddenEvents": 0,
+  "pausedSamples": 0,
+  "restarts": 0,
+  "peak": {
+    "textures": 48,
+    "geometries": 190
+  },
+  "actors": {
+    "nara": {
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "stretch",
+        "rest",
+        "sit_down",
+        "typing",
+        "success",
+        "shoulder_roll",
+        "wrist_relax",
+        "standing"
+      ],
+      "maxRest": 14,
+      "maxMicro": 48,
+      "interruptions": 2
+    },
+    "sora": {
+      "actions": [
+        "shoulder_roll",
+        "idle",
+        "wrist_relax",
+        "stand_up",
+        "turn",
+        "walk",
+        "stretch",
+        "rest",
+        "sit_down",
+        "typing",
+        "success"
+      ],
+      "maxRest": 14,
+      "maxMicro": 47,
+      "interruptions": 2
+    },
+    "jun": {
+      "actions": [
+        "idle",
+        "wrist_relax",
+        "stretch",
+        "stand_up",
+        "turn",
+        "walk",
+        "rest",
+        "sit_down",
+        "shoulder_roll",
+        "typing",
+        "success"
+      ],
+      "maxRest": 14,
+      "maxMicro": 47,
+      "interruptions": 2
+    },
+    "min": {
+      "actions": [
+        "idle",
+        "stretch",
+        "shoulder_roll",
+        "wrist_relax",
+        "stand_up",
+        "turn",
+        "walk",
+        "rest",
+        "sit_down",
+        "typing",
+        "success"
+      ],
+      "maxRest": 14,
+      "maxMicro": 45,
+      "interruptions": 2
+    },
+    "leo": {
+      "actions": [
+        "idle",
+        "shoulder_roll",
+        "wrist_relax",
+        "stretch",
+        "stand_up",
+        "turn",
+        "walk",
+        "rest",
+        "sit_down",
+        "typing",
+        "success"
+      ],
+      "maxRest": 13,
+      "maxMicro": 40,
+      "interruptions": 1
+    }
+  },
+  "history": [
+    {
+      "elapsed": 10,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 19.627400000000026
+    },
+    {
+      "elapsed": 20,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 29.631200000000472
+    },
+    {
+      "elapsed": 30,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 39.66160000000072
+    },
+    {
+      "elapsed": 40,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 49.718800000000954
+    },
+    {
+      "elapsed": 50,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 59.802700000001145
+    },
+    {
+      "elapsed": 60,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 69.9532000000013
+    },
+    {
+      "elapsed": 70,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 80.03170000000166
+    },
+    {
+      "elapsed": 80,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 90.14300000000138
+    },
+    {
+      "elapsed": 91,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 100.26560000000143
+    },
+    {
+      "elapsed": 101,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 110.3504000000017
+    },
+    {
+      "elapsed": 111,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 120.48700000000215
+    },
+    {
+      "elapsed": 121,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 130.56630000000217
+    },
+    {
+      "elapsed": 131,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 140.7036000000009
+    },
+    {
+      "elapsed": 141,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 150.7464999999993
+    },
+    {
+      "elapsed": 151,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 160.77779999999763
+    },
+    {
+      "elapsed": 161,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 170.80839999999654
+    },
+    {
+      "elapsed": 171,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 180.8526999999949
+    },
+    {
+      "elapsed": 181,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 190.8702999999936
+    },
+    {
+      "elapsed": 191,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 200.88739999999214
+    },
+    {
+      "elapsed": 201,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 210.9424999999907
+    },
+    {
+      "elapsed": 211,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 220.961599999989
+    },
+    {
+      "elapsed": 221,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 230.97879999998776
+    },
+    {
+      "elapsed": 231,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 241.00909999998643
+    },
+    {
+      "elapsed": 242,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 251.0662999999854
+    },
+    {
+      "elapsed": 252,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 261.0700999999867
+    },
+    {
+      "elapsed": 262,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 271.0871999999984
+    },
+    {
+      "elapsed": 272,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 281.1176000000104
+    },
+    {
+      "elapsed": 282,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 291.14810000002194
+    },
+    {
+      "elapsed": 292,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 301.2052000000327
+    },
+    {
+      "elapsed": 302,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 311.2356000000436
+    },
+    {
+      "elapsed": 312,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 321.2528000000555
+    },
+    {
+      "elapsed": 322,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 331.28320000006806
+    },
+    {
+      "elapsed": 332,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 341.3270000000805
+    },
+    {
+      "elapsed": 342,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 351.3309000000915
+    },
+    {
+      "elapsed": 352,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 361.3480000001029
+    },
+    {
+      "elapsed": 362,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 371.37850000011554
+    },
+    {
+      "elapsed": 372,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 381.4089000001278
+    },
+    {
+      "elapsed": 382,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 391.41270000014043
+    },
+    {
+      "elapsed": 392,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 401.4299000001541
+    },
+    {
+      "elapsed": 402,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 411.4337000001661
+    },
+    {
+      "elapsed": 412,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 421.4897000001786
+    },
+    {
+      "elapsed": 422,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 431.5069000001947
+    },
+    {
+      "elapsed": 432,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 441.53740000020014
+    },
+    {
+      "elapsed": 442,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 451.62120000020036
+    },
+    {
+      "elapsed": 452,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 461.7317000002022
+    },
+    {
+      "elapsed": 462,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 471.8295000002072
+    },
+    {
+      "elapsed": 472,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 481.846700000221
+    },
+    {
+      "elapsed": 482,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 491.8638000002343
+    },
+    {
+      "elapsed": 492,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 501.86760000024447
+    },
+    {
+      "elapsed": 502,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 511.92480000025637
+    },
+    {
+      "elapsed": 512,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 521.9552000002496
+    },
+    {
+      "elapsed": 522,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 531.9857000002646
+    },
+    {
+      "elapsed": 532,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 542.0028000002839
+    },
+    {
+      "elapsed": 543,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 552.0200000003031
+    },
+    {
+      "elapsed": 553,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 562.0371000003222
+    },
+    {
+      "elapsed": 563,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 572.0409000003414
+    },
+    {
+      "elapsed": 573,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 582.0580000003606
+    },
+    {
+      "elapsed": 583,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 592.0409000003797
+    },
+    {
+      "elapsed": 593,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 602.044700000399
+    },
+    {
+      "elapsed": 603,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 612.0618000004182
+    },
+    {
+      "elapsed": 613,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 622.0790000004375
+    },
+    {
+      "elapsed": 623,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 632.0827000004567
+    },
+    {
+      "elapsed": 633,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 642.0865000004759
+    },
+    {
+      "elapsed": 643,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 652.0903000004951
+    },
+    {
+      "elapsed": 653,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 662.0940000005144
+    },
+    {
+      "elapsed": 663,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 672.1112000005336
+    },
+    {
+      "elapsed": 673,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 682.1149000005528
+    },
+    {
+      "elapsed": 683,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 692.1320000005721
+    },
+    {
+      "elapsed": 693,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 702.1758000005914
+    },
+    {
+      "elapsed": 703,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 712.1929000006106
+    },
+    {
+      "elapsed": 713,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 722.21000000063
+    },
+    {
+      "elapsed": 723,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 732.2134000006491
+    },
+    {
+      "elapsed": 733,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 742.2175000006685
+    },
+    {
+      "elapsed": 743,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 752.2479000006877
+    },
+    {
+      "elapsed": 753,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 762.2517000007069
+    },
+    {
+      "elapsed": 763,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 772.2210000007259
+    },
+    {
+      "elapsed": 773,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 782.2381000007451
+    },
+    {
+      "elapsed": 783,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 792.2553000007645
+    },
+    {
+      "elapsed": 793,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 802.2723000007837
+    },
+    {
+      "elapsed": 803,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 812.289400000803
+    },
+    {
+      "elapsed": 813,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 822.3065000008222
+    },
+    {
+      "elapsed": 823,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 832.3236000008415
+    },
+    {
+      "elapsed": 833,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 842.3273000008608
+    },
+    {
+      "elapsed": 843,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 852.3311000008799
+    },
+    {
+      "elapsed": 853,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 862.3481000008992
+    },
+    {
+      "elapsed": 863,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 872.3519000009185
+    },
+    {
+      "elapsed": 873,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 882.3556000009377
+    },
+    {
+      "elapsed": 883,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 892.359400000957
+    },
+    {
+      "elapsed": 893,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 902.3632000009761
+    },
+    {
+      "elapsed": 903,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 912.3669000009954
+    },
+    {
+      "elapsed": 913,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 922.3706000010146
+    },
+    {
+      "elapsed": 923,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 932.4010000010339
+    },
+    {
+      "elapsed": 933,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 942.4049000010532
+    },
+    {
+      "elapsed": 943,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 952.4352000010724
+    },
+    {
+      "elapsed": 953,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 962.4523000010918
+    },
+    {
+      "elapsed": 963,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 972.5219000011111
+    },
+    {
+      "elapsed": 973,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 982.5265000011303
+    },
+    {
+      "elapsed": 983,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 992.5303000011496
+    },
+    {
+      "elapsed": 993,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1002.5473000011689
+    },
+    {
+      "elapsed": 1003,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1012.5779000011881
+    },
+    {
+      "elapsed": 1013,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1022.5949000012074
+    },
+    {
+      "elapsed": 1023,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1032.5987000012008
+    },
+    {
+      "elapsed": 1033,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1042.629300001191
+    },
+    {
+      "elapsed": 1043,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1052.6330000011772
+    },
+    {
+      "elapsed": 1053,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1062.636800001159
+    },
+    {
+      "elapsed": 1063,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1072.6539000011396
+    },
+    {
+      "elapsed": 1073,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1082.6577000011196
+    },
+    {
+      "elapsed": 1083,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1092.6614000010993
+    },
+    {
+      "elapsed": 1093,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1102.7052000010804
+    },
+    {
+      "elapsed": 1103,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1112.7490000010603
+    },
+    {
+      "elapsed": 1113,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1122.7922000010403
+    },
+    {
+      "elapsed": 1123,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1132.8232000010207
+    },
+    {
+      "elapsed": 1133,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1142.880400001003
+    },
+    {
+      "elapsed": 1143,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1152.897500000983
+    },
+    {
+      "elapsed": 1153,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1162.9013000009652
+    },
+    {
+      "elapsed": 1163,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1172.9185000009447
+    },
+    {
+      "elapsed": 1174,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1182.9488000009255
+    },
+    {
+      "elapsed": 1184,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1192.952700000905
+    },
+    {
+      "elapsed": 1194,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1202.9564000008872
+    },
+    {
+      "elapsed": 1204,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1212.986800000869
+    },
+    {
+      "elapsed": 1214,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1222.9905000008496
+    },
+    {
+      "elapsed": 1224,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1232.9943000008304
+    },
+    {
+      "elapsed": 1234,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1242.9981000008117
+    },
+    {
+      "elapsed": 1244,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1253.001800000793
+    },
+    {
+      "elapsed": 1254,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1263.0189000007747
+    },
+    {
+      "elapsed": 1264,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1273.0227000007558
+    },
+    {
+      "elapsed": 1274,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1283.0397000007379
+    },
+    {
+      "elapsed": 1284,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1293.0568000007186
+    },
+    {
+      "elapsed": 1294,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1303.0872000006975
+    },
+    {
+      "elapsed": 1304,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1312.9061000006782
+    },
+    {
+      "elapsed": 1314,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1322.909800000658
+    },
+    {
+      "elapsed": 1324,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1332.9269000006366
+    },
+    {
+      "elapsed": 1334,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1342.9571000006179
+    },
+    {
+      "elapsed": 1344,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1352.9744000005946
+    },
+    {
+      "elapsed": 1354,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1363.0316000005719
+    },
+    {
+      "elapsed": 1364,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1373.0886000005487
+    },
+    {
+      "elapsed": 1374,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1383.1191000005267
+    },
+    {
+      "elapsed": 1384,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1393.1630000005073
+    },
+    {
+      "elapsed": 1394,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1403.1668000004886
+    },
+    {
+      "elapsed": 1404,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1413.1706000004708
+    },
+    {
+      "elapsed": 1414,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1423.2011000004525
+    },
+    {
+      "elapsed": 1424,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1433.2192000004368
+    },
+    {
+      "elapsed": 1434,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1443.2496000004223
+    },
+    {
+      "elapsed": 1444,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1453.2668000004044
+    },
+    {
+      "elapsed": 1454,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1463.3106000003913
+    },
+    {
+      "elapsed": 1464,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1473.341000000379
+    },
+    {
+      "elapsed": 1474,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1483.3582000003669
+    },
+    {
+      "elapsed": 1484,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1493.3753000003555
+    },
+    {
+      "elapsed": 1494,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1503.405800000341
+    },
+    {
+      "elapsed": 1504,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1513.4486000003242
+    },
+    {
+      "elapsed": 1514,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1523.4791000003047
+    },
+    {
+      "elapsed": 1524,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1533.4829000002878
+    },
+    {
+      "elapsed": 1534,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1543.4867000002707
+    },
+    {
+      "elapsed": 1544,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1553.5038000002517
+    },
+    {
+      "elapsed": 1554,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1563.5476000002318
+    },
+    {
+      "elapsed": 1564,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1573.5915000002128
+    },
+    {
+      "elapsed": 1574,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1583.5952000001937
+    },
+    {
+      "elapsed": 1584,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1593.6124000001766
+    },
+    {
+      "elapsed": 1594,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1603.6162000001568
+    },
+    {
+      "elapsed": 1604,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1613.6333000001378
+    },
+    {
+      "elapsed": 1614,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1623.63710000012
+    },
+    {
+      "elapsed": 1624,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1633.6408000001004
+    },
+    {
+      "elapsed": 1634,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1643.6580000000797
+    },
+    {
+      "elapsed": 1644,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1653.6617000000595
+    },
+    {
+      "elapsed": 1654,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1663.6655000000408
+    },
+    {
+      "elapsed": 1664,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1673.6692000000219
+    },
+    {
+      "elapsed": 1674,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1683.6730000000023
+    },
+    {
+      "elapsed": 1684,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1693.6900999999818
+    },
+    {
+      "elapsed": 1694,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1703.6937999999614
+    },
+    {
+      "elapsed": 1704,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1713.7109999999404
+    },
+    {
+      "elapsed": 1715,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1723.7413999999235
+    },
+    {
+      "elapsed": 1725,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1733.771899999903
+    },
+    {
+      "elapsed": 1735,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1743.7888999998856
+    },
+    {
+      "elapsed": 1745,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1753.8193999998678
+    },
+    {
+      "elapsed": 1755,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1763.822899999849
+    },
+    {
+      "elapsed": 1765,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1773.866899999829
+    },
+    {
+      "elapsed": 1775,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1783.9106999998103
+    },
+    {
+      "elapsed": 1785,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1793.9144999997923
+    },
+    {
+      "elapsed": 1795,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 1803.9315999997716
+    }
+  ]
+}

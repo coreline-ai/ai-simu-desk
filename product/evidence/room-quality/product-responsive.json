@@ -1,0 +1,106 @@
+[
+  {
+    "requested": 320,
+    "labels": [
+      "나라",
+      "소라",
+      "준",
+      "민",
+      "레오"
+    ],
+    "model": "6",
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "requested": 360,
+    "labels": [
+      "나라",
+      "소라",
+      "준",
+      "민",
+      "레오"
+    ],
+    "model": "6",
+    "scrollWidth": 360,
+    "width": 360
+  },
+  {
+    "requested": 390,
+    "labels": [
+      "나라",
+      "소라",
+      "준",
+      "민",
+      "레오"
+    ],
+    "model": "6",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "requested": 480,
+    "labels": [
+      "나라",
+      "소라",
+      "준",
+      "민",
+      "레오"
+    ],
+    "model": "6",
+    "scrollWidth": 480,
+    "width": 480
+  },
+  {
+    "requested": 600,
+    "labels": [
+      "나라 · 기획",
+      "소라 · 디자인",
+      "준 · 개발",
+      "민 · QA",
+      "레오 · 정리"
+    ],
+    "model": "6",
+    "scrollWidth": 600,
+    "width": 600
+  },
+  {
+    "requested": 768,
+    "labels": [
+      "나라 · 기획",
+      "소라 · 디자인",
+      "준 · 개발",
+      "민 · QA",
+      "레오 · 정리"
+    ],
+    "model": "6",
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "requested": 1024,
+    "labels": [
+      "나라 · 기획",
+      "소라 · 디자인",
+      "준 · 개발",
+      "민 · QA",
+      "레오 · 정리"
+    ],
+    "model": "6",
+    "scrollWidth": 1024,
+    "width": 1024
+  },
+  {
+    "requested": 1440,
+    "labels": [
+      "나라 · 기획",
+      "소라 · 디자인",
+      "준 · 개발",
+      "민 · QA",
+      "레오 · 정리"
+    ],
+    "model": "6",
+    "scrollWidth": 1440,
+    "width": 1440
+  }
+]

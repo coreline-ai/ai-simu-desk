@@ -1,0 +1,21 @@
+{
+  "before": {
+    "action": "walk",
+    "time": 17.12609999999987,
+    "cycle": 1,
+    "returning": false,
+    "basePose": "idle",
+    "restCount": 0,
+    "microCount": 1,
+    "interruptions": 0
+  },
+  "after": {
+    "action": "idle",
+    "time": 7.162699999999998,
+    "restCount": 0,
+    "microCount": 1,
+    "interruptions": 1
+  },
+  "message": "",
+  "status": "실제 3D · 공간 품질 v6"
+}

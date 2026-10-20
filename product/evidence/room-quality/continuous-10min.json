@@ -1,0 +1,455 @@
+{
+  "mode": "idle",
+  "elapsedSeconds": 600,
+  "targetSeconds": 600,
+  "activeSeconds": 599,
+  "samples": 598,
+  "complete": true,
+  "passed": true,
+  "errors": [],
+  "hiddenEvents": 0,
+  "pausedSamples": 0,
+  "restarts": 0,
+  "peak": {
+    "textures": 48,
+    "geometries": 190
+  },
+  "actors": {
+    "nara": {
+      "actions": [
+        "stretch",
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "rest",
+        "sit_down",
+        "shoulder_roll",
+        "wrist_relax"
+      ],
+      "maxRest": 5,
+      "maxMicro": 16,
+      "interruptions": 0
+    },
+    "sora": {
+      "actions": [
+        "idle",
+        "shoulder_roll",
+        "stand_up",
+        "turn",
+        "walk",
+        "stretch",
+        "rest",
+        "sit_down",
+        "wrist_relax"
+      ],
+      "maxRest": 5,
+      "maxMicro": 15,
+      "interruptions": 0
+    },
+    "jun": {
+      "actions": [
+        "idle",
+        "wrist_relax",
+        "stretch",
+        "stand_up",
+        "turn",
+        "walk",
+        "rest",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "maxRest": 5,
+      "maxMicro": 15,
+      "interruptions": 0
+    },
+    "min": {
+      "actions": [
+        "idle",
+        "stretch",
+        "shoulder_roll",
+        "wrist_relax",
+        "stand_up",
+        "turn",
+        "walk",
+        "rest",
+        "sit_down"
+      ],
+      "maxRest": 5,
+      "maxMicro": 16,
+      "interruptions": 0
+    },
+    "leo": {
+      "actions": [
+        "idle",
+        "shoulder_roll",
+        "wrist_relax",
+        "stretch",
+        "stand_up",
+        "turn",
+        "walk",
+        "rest",
+        "sit_down"
+      ],
+      "maxRest": 5,
+      "maxMicro": 15,
+      "interruptions": 0
+    }
+  },
+  "history": [
+    {
+      "elapsed": 9,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 9.823699999999974
+    },
+    {
+      "elapsed": 19,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 19.84080000000008
+    },
+    {
+      "elapsed": 29,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 29.857900000000523
+    },
+    {
+      "elapsed": 39,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 39.86180000000077
+    },
+    {
+      "elapsed": 49,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 49.90550000000102
+    },
+    {
+      "elapsed": 59,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 60.0027000000013
+    },
+    {
+      "elapsed": 70,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 70.18000000000147
+    },
+    {
+      "elapsed": 80,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 80.28950000000108
+    },
+    {
+      "elapsed": 90,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 90.38770000000035
+    },
+    {
+      "elapsed": 100,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 100.47149999999968
+    },
+    {
+      "elapsed": 110,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 110.62199999999903
+    },
+    {
+      "elapsed": 120,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 120.73269999999872
+    },
+    {
+      "elapsed": 130,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 130.78989999999874
+    },
+    {
+      "elapsed": 140,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 140.87359999999686
+    },
+    {
+      "elapsed": 150,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 150.87749999999514
+    },
+    {
+      "elapsed": 160,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 160.90699999999353
+    },
+    {
+      "elapsed": 170,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 170.93749999999204
+    },
+    {
+      "elapsed": 180,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 180.96869999999066
+    },
+    {
+      "elapsed": 190,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 191.00039999998947
+    },
+    {
+      "elapsed": 200,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 201.01749999998793
+    },
+    {
+      "elapsed": 211,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 211.06129999998655
+    },
+    {
+      "elapsed": 221,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 221.09179999998486
+    },
+    {
+      "elapsed": 231,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 231.10889999998358
+    },
+    {
+      "elapsed": 241,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 241.13929999998234
+    },
+    {
+      "elapsed": 251,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 251.18309999998115
+    },
+    {
+      "elapsed": 261,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 261.2001999999834
+    },
+    {
+      "elapsed": 271,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 271.2172999999958
+    },
+    {
+      "elapsed": 281,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 281.26110000000733
+    },
+    {
+      "elapsed": 291,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 291.2782000000196
+    },
+    {
+      "elapsed": 301,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 301.2820000000305
+    },
+    {
+      "elapsed": 311,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 311.3105000000413
+    },
+    {
+      "elapsed": 321,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 321.31630000005254
+    },
+    {
+      "elapsed": 331,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 331.3333000000638
+    },
+    {
+      "elapsed": 341,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 341.3638000000756
+    },
+    {
+      "elapsed": 351,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 351.3809000000871
+    },
+    {
+      "elapsed": 361,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 361.3980000000992
+    },
+    {
+      "elapsed": 371,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 371.4285000001109
+    },
+    {
+      "elapsed": 381,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 381.4457000001232
+    },
+    {
+      "elapsed": 391,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 391.4627000001366
+    },
+    {
+      "elapsed": 401,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 401.4800000001489
+    },
+    {
+      "elapsed": 411,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 411.4837000001614
+    },
+    {
+      "elapsed": 421,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 421.53980000017424
+    },
+    {
+      "elapsed": 431,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 431.5570000001902
+    },
+    {
+      "elapsed": 441,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 441.58750000019836
+    },
+    {
+      "elapsed": 451,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 451.65790000019894
+    },
+    {
+      "elapsed": 461,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 461.7418000001991
+    },
+    {
+      "elapsed": 471,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 471.7856000002002
+    },
+    {
+      "elapsed": 481,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 481.80280000021355
+    },
+    {
+      "elapsed": 491,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 491.8199000002277
+    },
+    {
+      "elapsed": 501,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 501.8771000002388
+    },
+    {
+      "elapsed": 511,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 511.9399000002499
+    },
+    {
+      "elapsed": 521,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 521.9437000002431
+    },
+    {
+      "elapsed": 531,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 531.9608000002573
+    },
+    {
+      "elapsed": 541,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 541.9913000002766
+    },
+    {
+      "elapsed": 551,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 552.0217000002959
+    },
+    {
+      "elapsed": 562,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 562.0656000003152
+    },
+    {
+      "elapsed": 572,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 572.0694000003344
+    },
+    {
+      "elapsed": 582,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 582.0998000003536
+    },
+    {
+      "elapsed": 592,
+      "textures": 48,
+      "geometries": 190,
+      "animationTime": 591.9502000003723
+    }
+  ]
+}

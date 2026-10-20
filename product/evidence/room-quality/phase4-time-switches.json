@@ -1,0 +1,1382 @@
+[
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 1010.3,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 43,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "auto",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 1010.3,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 43,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "auto",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 1010.3,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 43,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "auto",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 2010.7,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 2010.7,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 2010.7,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 2010.7,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 2010.7,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 2010.7,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 3011,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 3011,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 3011,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 3011,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 3011,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "low",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 4011.4,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "high",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 4011.4,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "high",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 4011.4,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "high",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 4011.4,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "high",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 4011.4,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 44,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "high",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  },
+  {
+    "loadedMs": 96,
+    "firstRenderMs": 203,
+    "lastEmit": 5011.8,
+    "drawCalls": 820,
+    "triangles": 681581,
+    "textures": 43,
+    "geometries": 185,
+    "animationTime": 0.24669999999999992,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "quality": "balanced",
+    "lighting": "evening",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 0.24669999999999992,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "resetTimes": 0
+  }
+]

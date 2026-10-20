@@ -1,0 +1,81 @@
+{
+  "message": "나라 · 기획 · 동작 정지 · 자리 복귀 대기 / 소라 · 디자인: idle / 준 · 개발: idle / 민 · QA: idle / 레오 · 정리: idle",
+  "metrics": {
+    "loadedMs": 92,
+    "firstRenderMs": 230,
+    "lastEmit": 146187.1,
+    "drawCalls": 998,
+    "triangles": 804344,
+    "textures": 48,
+    "geometries": 190,
+    "animationTime": 123.76569999998996,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "measuring": false,
+    "quality": "auto",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_turn",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "turn",
+        "time": 18.806799999999896,
+        "cycle": 1,
+        "returning": true,
+        "basePose": "typing",
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 24.20809999999998,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 24.20809999999998,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 24.20809999999998,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 24.20809999999998,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      }
+    },
+    "reservation": "nara",
+    "resetTimes": 1,
+    "cutaway": {
+      "left": false,
+      "back": false
+    }
+  },
+  "latestUserAction": "업무 종료"
+}

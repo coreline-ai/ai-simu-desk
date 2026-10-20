@@ -1,11 +1,20 @@
-import{createQualityView}from'./quality-view.mjs';import{createStudioView}from'../src/scene.mjs';
-// Asset+renderer switch as a unit. Preserve user presentation state across automatic v4 recovery.
+import {createQualityView} from './quality-view.mjs';
+import {createStudioView} from '../src/scene.mjs';
+// Recover the renderer and its matching asset together; replay only presentation state.
 export function createProductionView(host,callbacks={},options={}){
- let active,version=5,disposed=false,fallback=false,vm={actors:[],motionPaused:false},focus=false,quality='auto',lighting='day',resolveReady;
+ const requested=options.modelVersion??(options.modelUrl?.includes('studio-team-v5')?5:6);
+ const targets=requested===6?[
+  {version:6,url:options.modelUrl??'/assets/studio-room-v6.glb'},
+  {version:5,url:options.fallbackModelUrl??'/assets/studio-team-v5.glb'},
+  {version:4,url:'/assets/studio-team-v4.glb'},
+ ]:[{version:5,url:options.modelUrl??'/assets/studio-team-v5.glb'},{version:4,url:'/assets/studio-team-v4.glb'}];
+ let active,index=0,epoch=0,disposed=false,vm={actors:[],motionPaused:false},focus=false,quality='auto',lighting='day',resolveReady;
  const ready=new Promise(resolve=>resolveReady=resolve);
- const metrics=data=>{if(!disposed)callbacks.onMetrics?.({...data,modelVersion:version});};
  function replay(){active?.setViewModel(vm);active?.resetCamera(focus);active?.setQuality(quality);active?.setLighting?.(lighting);}
- function recover(error){if(disposed||fallback)return;fallback=true;active?.dispose();version=4;try{active=createStudioView(host,{onStatus(kind,err){if(!disposed)callbacks.onStatus?.(kind,err??error,4);},onSelect:id=>callbacks.onSelect?.(id),onMetrics:metrics},{...options,modelUrl:'/assets/studio-team-v4.glb'});replay();active.ready.then(ok=>resolveReady(ok));}catch(err){callbacks.onStatus?.('error',err,4);resolveReady(false);}}
- try{active=createQualityView(host,{onStatus(kind,error){if(disposed)return;if(kind==='error'){recover(error);return;}callbacks.onStatus?.(kind,error,5);},onSelect:id=>callbacks.onSelect?.(id),onMetrics:metrics},options);active.ready.then(ok=>{if(disposed)return;if(ok)resolveReady(true);else recover(new Error('V5 load failed'));});}catch(error){recover(error);}
- return {ready,setViewModel(next){vm=next;active?.setViewModel(next);},resetCamera(next=false){focus=next;active?.resetCamera(next);},setQuality(next){quality=next;active?.setQuality(next);},setLighting(next){lighting=next;active?.setLighting?.(next);},startDemo(){return version===5?active?.startDemo():false;},resetActivity(){active?.resetActivity?.();},diagnostics(){return {...active?.diagnostics(),modelVersion:version};},measure(duration){return active?.measure(duration);},loseContext(){active?.loseContext();},restoreContext(){active?.restoreContext?.();},dispose(){disposed=true;const result=active?.dispose();resolveReady(false);return result;}};
+ function mount(cause){const ticket=++epoch,target=targets[index];active?.dispose();callbacks.onStatus?.('loading',cause,target.version);
+  const recover=error=>{if(disposed||ticket!==epoch)return;if(index+1<targets.length){index++;mount(error);}else{callbacks.onStatus?.('error',error,target.version);resolveReady(false);}};
+  try{const factory=target.version===4?createStudioView:createQualityView;active=factory(host,{onStatus(kind,error){if(disposed||ticket!==epoch)return;if(kind==='error'){recover(error);return;}callbacks.onStatus?.(kind,error??cause,target.version);},onSelect:id=>callbacks.onSelect?.(id),onMetrics:data=>{if(!disposed&&ticket===epoch)callbacks.onMetrics?.({...data,modelVersion:target.version});}},{...options,modelUrl:target.url,roomQuality:target.version===6});replay();active.ready.then(ok=>{if(disposed||ticket!==epoch)return;if(ok)resolveReady(true);else recover(new Error('Studio asset load failed'));});}catch(error){recover(error);}
+ }
+ mount();
+ return {ready,cameraState(){return active?.cameraState?.();},restoreCamera(state){active?.restoreCamera?.(state);},setViewModel(next){vm=next;active?.setViewModel(next);},resetCamera(next=false){focus=next;active?.resetCamera(next);},setQuality(next){quality=next;active?.setQuality(next);},setLighting(next){lighting=next;active?.setLighting?.(next);},startDemo(){return targets[index].version>=5?active?.startDemo():false;},resetActivity(){active?.resetActivity?.();},diagnostics(){return {...active?.diagnostics(),modelVersion:targets[index].version};},measure(duration){return active?.measure(duration);},loseContext(){active?.loseContext();},restoreContext(){active?.restoreContext?.();},dispose(){disposed=true;++epoch;const result=active?.dispose();resolveReady(false);return result;}};
 }

@@ -25,7 +25,8 @@
     "db:migrate": "node --import tsx scripts/migrate-postgres.ts",
     "test:postgres": "node --import tsx --test --test-concurrency=1 server/integration/*.test.ts",
     "build:sample": "node scripts/build-sample-page.mjs",
-    "build:office": "node scripts/build-office-v5.mjs && node scripts/build-office-page.mjs"
+    "build:office": "node scripts/build-office-v5.mjs && node scripts/build-office-page.mjs",
+    "build:room": "node scripts/build-room-quality.mjs"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "1.7.11",

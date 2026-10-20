@@ -1,3 +1,4 @@
+import {buildRoomQuality,buildRoomPage} from './build-room-quality.mjs';
 import{buildOfficeV5}from'./build-office-v5.mjs';
 import{buildOfficePage}from'./build-office-page.mjs';
 import {build,transform} from 'esbuild';
@@ -16,6 +17,8 @@ export async function buildClient(remote=false) {
   await writeFile('product/dist/assets/styles.css',css.code);
   await buildOfficeV5();
   await buildOfficePage();
+  await buildRoomQuality();
+  await buildRoomPage();
   await buildSamplePage();
   await buildLibrary(remote);
 }

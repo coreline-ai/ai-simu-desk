@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 5,
+  "modelVersion": 6,
+  "naturalMotion": true,
+  "fullBody": true,
+  "units": "metres",
+  "up": "+Y",
+  "floorY": 0,
+  "actorIds": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "workspaces": {
+    "nara": [
+      -2.5,
+      0,
+      -0.35
+    ],
+    "sora": [
+      0,
+      0,
+      -0.35
+    ],
+    "jun": [
+      2.5,
+      0,
+      -0.35
+    ],
+    "min": [
+      -1.25,
+      0,
+      2
+    ],
+    "leo": [
+      1.25,
+      0,
+      2
+    ]
+  },
+  "room": [
+    9.6,
+    2.6,
+    7.6
+  ],
+  "colliders": [
+    {
+      "id": "sofa",
+      "min": [
+        -3.65,
+        -3.45
+      ],
+      "max": [
+        -1.55,
+        -2.59
+      ]
+    },
+    {
+      "id": "shelf",
+      "min": [
+        -4.7,
+        -1.93
+      ],
+      "max": [
+        -4.27,
+        -0.13
+      ]
+    },
+    {
+      "id": "meeting",
+      "min": [
+        2.82,
+        1.77
+      ],
+      "max": [
+        4.18,
+        3.13
+      ]
+    },
+    {
+      "id": "nara-desk",
+      "min": [
+        -3.2,
+        -0.6
+      ],
+      "max": [
+        -1.8,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "nara-chair-parked",
+      "min": [
+        -2.7800000000000002,
+        -2.02
+      ],
+      "max": [
+        -2.2199999999999998,
+        -1.38
+      ]
+    },
+    {
+      "id": "sora-desk",
+      "min": [
+        -0.7,
+        -0.6
+      ],
+      "max": [
+        0.7,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "sora-chair-parked",
+      "min": [
+        -0.28,
+        -2.02
+      ],
+      "max": [
+        0.28,
+        -1.38
+      ]
+    },
+    {
+      "id": "jun-desk",
+      "min": [
+        1.8,
+        -0.6
+      ],
+      "max": [
+        3.2,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "jun-chair-parked",
+      "min": [
+        2.2199999999999998,
+        -2.02
+      ],
+      "max": [
+        2.7800000000000002,
+        -1.38
+      ]
+    },
+    {
+      "id": "min-desk",
+      "min": [
+        -1.95,
+        1.75
+      ],
+      "max": [
+        -0.55,
+        2.45
+      ]
+    },
+    {
+      "id": "min-chair-parked",
+      "min": [
+        -1.53,
+        0.33000000000000007
+      ],
+      "max": [
+        -0.97,
+        0.97
+      ]
+    },
+    {
+      "id": "leo-desk",
+      "min": [
+        0.55,
+        1.75
+      ],
+      "max": [
+        1.95,
+        2.45
+      ]
+    },
+    {
+      "id": "leo-chair-parked",
+      "min": [
+        0.97,
+        0.33000000000000007
+      ],
+      "max": [
+        1.53,
+        0.97
+      ]
+    },
+    {
+      "id": "reading-lamp",
+      "min": [
+        -1.08,
+        -3.25
+      ],
+      "max": [
+        -0.62,
+        -2.79
+      ]
+    }
+  ],
+  "bodyRadius": 0.22,
+  "route": [
+    [
+      0,
+      -0.48
+    ],
+    [
+      -1.35,
+      -0.48
+    ]
+  ],
+  "dimensions": {
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45
+  },
+  "actorBounds": {
+    "standing": [
+      [
+        -0.3,
+        0,
+        -0.3
+      ],
+      [
+        0.3,
+        1.75,
+        0.3
+      ]
+    ],
+    "stretch": [
+      [
+        -0.75,
+        0,
+        -0.65
+      ],
+      [
+        0.75,
+        2.25,
+        0.65
+      ]
+    ]
+  },
+  "source": "Original local room-quality source; shared v5 characters and 105 clips",
+  "bindings": {
+    "nara": {
+      "actor": "NaraActorRoot",
+      "head": "NaraHead",
+      "feet": [
+        "NaraFootL",
+        "NaraFootR"
+      ],
+      "seat": "NaraSeatAnchor"
+    },
+    "sora": {
+      "actor": "SoraActorRoot",
+      "head": "SoraHead",
+      "feet": [
+        "SoraFootL",
+        "SoraFootR"
+      ],
+      "seat": "SoraSeatAnchor"
+    },
+    "jun": {
+      "actor": "JunActorRoot",
+      "head": "JunHead",
+      "feet": [
+        "JunFootL",
+        "JunFootR"
+      ],
+      "seat": "JunSeatAnchor"
+    },
+    "min": {
+      "actor": "MinActorRoot",
+      "head": "MinHead",
+      "feet": [
+        "MinFootL",
+        "MinFootR"
+      ],
+      "seat": "MinSeatAnchor"
+    },
+    "leo": {
+      "actor": "LeoActorRoot",
+      "head": "LeoHead",
+      "feet": [
+        "LeoFootL",
+        "LeoFootR"
+      ],
+      "seat": "LeoSeatAnchor"
+    }
+  },
+  "cost": {
+    "meshes": 510,
+    "triangles": 407519
+  },
+  "zones": {
+    "work": "WorkWoolRug",
+    "rest": "LinenSofa",
+    "meeting": "MeetingCorner"
+  },
+  "exteriorLayers": [
+    "sky-hills",
+    "mid-trees",
+    "near-shrubs"
+  ],
+  "surfaceBudget": {
+    "materialVariants": 28,
+    "textureKinds": [
+      "oak",
+      "stone",
+      "fabric",
+      "linen",
+      "plaster"
+    ],
+    "rgbaEstimate": 11534336
+  },
+  "environmentVersion": 6,
+  "qualityStage": 6,
+  "optimization": {
+    "before": {
+      "meshes": 1143,
+      "triangles": 407519
+    },
+    "after": {
+      "meshes": 510,
+      "triangles": 407519
+    },
+    "instancedParts": 779
+  },
+  "file": "studio-room-v6.glb",
+  "bytes": 7749228,
+  "sha256": "7d6addce4b58447bdc8d45c4c725fefb26df4986a96759e14c75cb1bb7dd1aab",
+  "clips": 105,
+  "textureBudget": {
+    "images": [
+      {
+        "name": "oak",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "stone",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "fabric",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "linen",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "roughness",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "StaticFurnitureAO",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "stone_color",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "stone_normal",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "stone_orm",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "plaster_color",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "plaster_normal",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "plaster_orm",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "oak_color",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "oak_normal",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "oak_orm",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "fabric_color",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "fabric_normal",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "fabric_orm",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "linen_color",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "linen_normal",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "linen_orm",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "Screen_nara",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_sora",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_jun",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_min",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_leo",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      }
+    ],
+    "rgbaMipEstimate": 15772348
+  }
+}

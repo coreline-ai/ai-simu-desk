@@ -1,3 +1,4 @@
+import {returnStatus} from '../../pilot-3d/room-quality/presentation.mjs';
 import {createHandoffTracker,publicHandoff} from "./team-handoff.mjs";
 import {TEAM} from "../../server/domain/team.ts";
 import {teamProgress} from "./scene-state.mjs";
@@ -48,7 +49,7 @@ const presence = createPresenceClient({request:api,onChange:data=>workspacePanel
   if(!navigator.sendBeacon(path,new Blob([json],{type:"application/json"}))) void fetch(path,{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:json,keepalive:true}).catch(()=>{});
 }});
 function invalidateWorkspace() {
-  scene?.resetActivity?.();
+  scene?.resetActivity?.();$('room-activity').hidden=true;$('room-activity').textContent='';
   clearTimeout(handoffTimer);handoffs.reset();handoffReaction=null;handoffLog=[];$("stage").dataset.handoffLog="[]";lastAnnouncement="";$("handoff-live").textContent="";sceneCues.reset(); followupSource=null; archivedRun=null; workTools.reset(); discussion.reset();
   presence.stop();presenceStarted=false;
   epoch++; requests.abort(); requests = new AbortController(); clearTimeout(poll); poll=0;
@@ -245,10 +246,10 @@ function mountScene() {
   const ticket = ++sceneEpoch; scene?.dispose(); scene = null; $("fallback").hidden = true; $("scene-state").textContent = "3D 준비 중";
   try {
     scene = createProductionView($("canvas-host"), {
-      onStatus(kind,error,version) { if (ticket !== sceneEpoch) return;if(kind==='ready')document.querySelector('.stage-tag').textContent=version===4?'STUDIO V4 · RECOVERED':$('scene-lighting').value==='evening'?'STUDIO V5 · EVENING':'STUDIO V5 · DAYLIGHT'; $("scene-state").textContent = kind === "ready" ? (version===4?"실제 3D · v4 복구":"실제 3D · 고품질 v5") : "2D 대체 화면"; $("fallback").hidden = kind === "ready"; },
+      onStatus(kind,error,version) { if (ticket !== sceneEpoch) return;$('ambient-demo').disabled=kind!=='ready'||version===4;if(kind==='ready')document.querySelector('.stage-tag').textContent='STUDIO V'+version+' · '+(version===6?($('scene-lighting').value==='evening'?'EVENING':'DAYLIGHT'):'RECOVERED'); $("scene-state").textContent = kind === "ready" ? (version===6?"실제 3D · 공간 품질 v6":"실제 3D · v"+version+" 복구") : "2D 대체 화면"; $("fallback").hidden = kind === "ready"; },
       onSelect: selectColleague,
-      onMetrics(stats){if(ticket!==sceneEpoch)return;$('stage').dataset.animationTime=String(stats.animationTime);$('stage').dataset.actions=JSON.stringify(stats.actors);$('stage').dataset.drawCalls=String(stats.drawCalls);$('stage').dataset.modelVersion=String(stats.modelVersion);$('stage').dataset.activities=JSON.stringify(stats.activities??{});$('scene-lighting').disabled=stats.modelVersion===4;$('ambient-demo').disabled=stats.modelVersion===4;},
-    }, { actors: TEAM.map(p=>p.id), actorLabels:Object.fromEntries(TEAM.map(p=>[p.id,p.name+" · "+p.role])), modelUrl: "/assets/studio-team-v5.glb" });
+      onMetrics(stats){if(ticket!==sceneEpoch)return;$('stage').dataset.animationTime=String(stats.animationTime);$('stage').dataset.actions=JSON.stringify(stats.actors);$('stage').dataset.drawCalls=String(stats.drawCalls);$('stage').dataset.modelVersion=String(stats.modelVersion);$('stage').dataset.activities=JSON.stringify(stats.activities??{});const returnText=Object.entries(stats.activities??{}).map(([id,state])=>returnStatus(AGENT_NAMES[id]??id,state,{paused:stats.paused})).filter(Boolean).join(' / ');if($('room-activity').textContent!==returnText)$('room-activity').textContent=returnText;$('room-activity').hidden=!returnText;$('scene-lighting').disabled=stats.modelVersion===4;$('ambient-demo').disabled=stats.modelVersion===4;},
+    }, { actors: TEAM.map(p=>p.id), actorLabels:Object.fromEntries(TEAM.map(p=>[p.id,p.name+" · "+p.role])), modelVersion:6,modelUrl: "/assets/studio-room-v6.glb" });
     scene.resetCamera(cameraFrame);scene.setQuality($('scene-quality').value);scene.setLighting($('scene-lighting').value);renderSceneState();
   } catch { $("fallback").hidden = false; $("scene-state").textContent = "2D 대체 화면"; }
 }
@@ -348,7 +349,7 @@ function setOfficeFocus(focused){document.body.classList.toggle('office-focus-mo
 $('expand-office').addEventListener('click',()=>{const focused=!document.body.classList.contains('office-focus-mode');setOfficeFocus(focused);history.replaceState(null,'',location.pathname+location.search+(focused?'#office':'#scene-title'));$('scene-title').scrollIntoView({block:'start'});});
 $('start-team-demo').addEventListener('click',()=>{if(busy||!snapshot||snapshot.role==='viewer'||snapshot.runs.some(r=>ACTIVE.includes(r.status)))return;followupSource=null;$('team-task').checked=true;$('agent').value='nara';$('task').value='5명이 2주 안에 무료 도구로 첫 화면 개선 프로젝트를 진행해 줘. 기획, 디자인, 개발, QA, 최종 정리의 계획과 완료 기준을 만들어 줘.';$('require-approval').checked=false;$('scenario').value='normal';followLive=true;setCameraFrame('team');render();$('task-form').requestSubmit();});
 $('scene-quality').addEventListener('change',e=>scene?.setQuality(e.target.value));
-$('scene-lighting').addEventListener('change',e=>{scene?.setLighting(e.target.value);document.querySelector('.stage-tag').textContent=e.target.value==='evening'?'STUDIO V5 · EVENING':'STUDIO V5 · DAYLIGHT';});
+$('scene-lighting').addEventListener('change',e=>{scene?.setLighting(e.target.value);document.querySelector('.stage-tag').textContent=e.target.value==='evening'?'STUDIO V'+($('stage').dataset.modelVersion??6)+' · EVENING':'STUDIO V'+($('stage').dataset.modelVersion??6)+' · DAYLIGHT';});
 $('ambient-demo').addEventListener('click',()=>{scene?.startDemo();});
 $("recover-scene").addEventListener("click", mountScene);
 document.addEventListener("visibilitychange", () => { handoffContinuous=false;handoffReaction=null;clearTimeout(handoffTimer);sceneCues.reset();renderSceneState();if (identity && !document.hidden) { const ticket = epoch; void loadSnapshot(ticket).then(() => schedulePoll(ticket)).catch(error=>handle(error,ticket)); } });
