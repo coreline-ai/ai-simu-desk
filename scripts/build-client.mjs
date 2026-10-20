@@ -1,3 +1,4 @@
+import {buildActivities} from './build-activities.mjs';
 import {buildRoomQuality,buildRoomPage} from './build-room-quality.mjs';
 import{buildOfficeV5}from'./build-office-v5.mjs';
 import{buildOfficePage}from'./build-office-page.mjs';
@@ -19,6 +20,7 @@ export async function buildClient(remote=false) {
   await buildOfficePage();
   await buildRoomQuality();
   await buildRoomPage();
+  await buildActivities();
   await buildSamplePage();
   await buildLibrary(remote);
 }

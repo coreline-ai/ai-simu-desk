@@ -1,0 +1,93 @@
+{
+  "loadedMs": 113,
+  "firstRenderMs": 270,
+  "lastEmit": 49071.1,
+  "drawCalls": 705,
+  "triangles": 576009,
+  "textures": 48,
+  "geometries": 190,
+  "animationTime": 26.72330000000035,
+  "paused": true,
+  "pixelRatio": 1,
+  "modelVersion": 6,
+  "measuring": false,
+  "quality": "auto",
+  "lighting": "day",
+  "canvas": [
+    1149,
+    608
+  ],
+  "cssCanvas": [
+    1149,
+    608
+  ],
+  "actors": {
+    "nara": "nara_sofa_rest",
+    "sora": "sora_idle",
+    "jun": "jun_idle",
+    "min": "min_idle",
+    "leo": "leo_idle"
+  },
+  "activities": {
+    "nara": {
+      "action": "sofa_rest",
+      "time": 0.9202999999999993,
+      "restCount": 0,
+      "microCount": 0,
+      "interruptions": 0,
+      "returning": false,
+      "basePose": "idle"
+    },
+    "sora": {
+      "action": "idle",
+      "time": 26.72330000000035,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "jun": {
+      "action": "idle",
+      "time": 26.72330000000035,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "min": {
+      "action": "idle",
+      "time": 26.72330000000035,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "leo": {
+      "action": "idle",
+      "time": 26.72330000000035,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    }
+  },
+  "reservation": "nara-sofa",
+  "sofa": {
+    "stage": "rest",
+    "label": "소파에서 휴식",
+    "returning": false,
+    "reason": "",
+    "completed": 0,
+    "interruptions": 0,
+    "claims": {
+      "walkway": "nara-sofa",
+      "sofa-left": "nara-sofa"
+    },
+    "position": [
+      -0.579999989271164,
+      -2.4299999999999997
+    ]
+  },
+  "resetTimes": 0,
+  "cutaway": {
+    "left": false,
+    "back": false
+  },
+  "activityVersion": 1
+}

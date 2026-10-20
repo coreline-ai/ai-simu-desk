@@ -1,0 +1,85 @@
+{
+  "loadedMs": 109,
+  "firstRenderMs": 223,
+  "lastEmit": 87145.1,
+  "drawCalls": 998,
+  "triangles": 804344,
+  "textures": 48,
+  "geometries": 190,
+  "animationTime": 69.95279999999921,
+  "paused": false,
+  "pixelRatio": 1,
+  "modelVersion": 6,
+  "measuring": false,
+  "quality": "auto",
+  "lighting": "day",
+  "canvas": [
+    1149,
+    608
+  ],
+  "cssCanvas": [
+    1149,
+    608
+  ],
+  "actors": {
+    "nara": "nara_typing",
+    "sora": "sora_stretch",
+    "jun": "jun_idle",
+    "min": "min_idle",
+    "leo": "leo_idle"
+  },
+  "activities": {
+    "nara": {
+      "action": "typing",
+      "time": 39.52140000000019,
+      "restCount": 0,
+      "microCount": 0,
+      "interruptions": 0
+    },
+    "sora": {
+      "action": "stretch",
+      "time": 0.9203000000000022,
+      "restCount": 0,
+      "microCount": 2,
+      "interruptions": 0
+    },
+    "jun": {
+      "action": "idle",
+      "time": 69.95279999999921,
+      "restCount": 0,
+      "microCount": 2,
+      "interruptions": 0
+    },
+    "min": {
+      "action": "idle",
+      "time": 69.95279999999921,
+      "restCount": 0,
+      "microCount": 2,
+      "interruptions": 0
+    },
+    "leo": {
+      "action": "idle",
+      "time": 69.95279999999921,
+      "restCount": 0,
+      "microCount": 2,
+      "interruptions": 0
+    }
+  },
+  "reservation": null,
+  "sofa": {
+    "stage": "idle",
+    "label": "책상 대기",
+    "returning": false,
+    "reason": "업무 도착",
+    "completed": 0,
+    "interruptions": 1,
+    "claims": {},
+    "position": null
+  },
+  "resetTimes": 0,
+  "cutaway": {
+    "left": false,
+    "back": false
+  },
+  "activityVersion": 1
+}

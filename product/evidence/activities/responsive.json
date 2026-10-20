@@ -1,0 +1,98 @@
+[
+  {
+    "canvases": 1,
+    "labels": 1,
+    "primaryButtons": [
+      {
+        "height": 44,
+        "id": "start"
+      },
+      {
+        "height": 44,
+        "id": "work"
+      },
+      {
+        "height": 44,
+        "id": "idle"
+      },
+      {
+        "height": 44,
+        "id": "pause"
+      }
+    ],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "canvases": 1,
+    "labels": 1,
+    "primaryButtons": [
+      {
+        "height": 44,
+        "id": "start"
+      },
+      {
+        "height": 44,
+        "id": "work"
+      },
+      {
+        "height": 44,
+        "id": "idle"
+      },
+      {
+        "height": 44,
+        "id": "pause"
+      }
+    ],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "canvases": 1,
+    "labels": 1,
+    "primaryButtons": [
+      {
+        "height": 44,
+        "id": "start"
+      },
+      {
+        "height": 44,
+        "id": "work"
+      },
+      {
+        "height": 44,
+        "id": "idle"
+      },
+      {
+        "height": 44,
+        "id": "pause"
+      }
+    ],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "canvases": 1,
+    "labels": 1,
+    "primaryButtons": [
+      {
+        "height": 44,
+        "id": "start"
+      },
+      {
+        "height": 44,
+        "id": "work"
+      },
+      {
+        "height": 44,
+        "id": "idle"
+      },
+      {
+        "height": 44,
+        "id": "pause"
+      }
+    ],
+    "scrollWidth": 1440,
+    "width": 1440
+  }
+]

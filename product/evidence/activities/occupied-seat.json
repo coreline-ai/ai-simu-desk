@@ -1,0 +1,87 @@
+{
+  "loadedMs": 52,
+  "firstRenderMs": 153,
+  "lastEmit": 199960.4,
+  "drawCalls": 998,
+  "triangles": 804344,
+  "textures": 48,
+  "geometries": 190,
+  "animationTime": 26.863399999999572,
+  "paused": false,
+  "pixelRatio": 1,
+  "modelVersion": 6,
+  "measuring": false,
+  "quality": "balanced",
+  "lighting": "day",
+  "canvas": [
+    1149,
+    608
+  ],
+  "cssCanvas": [
+    1149,
+    608
+  ],
+  "actors": {
+    "nara": "nara_idle",
+    "sora": "sora_idle",
+    "jun": "jun_idle",
+    "min": "min_idle",
+    "leo": "leo_idle"
+  },
+  "activities": {
+    "nara": {
+      "action": "idle",
+      "time": 26.863399999999572,
+      "restCount": 0,
+      "microCount": 0,
+      "interruptions": 0
+    },
+    "sora": {
+      "action": "idle",
+      "time": 26.863399999999572,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "jun": {
+      "action": "idle",
+      "time": 26.863399999999572,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "min": {
+      "action": "idle",
+      "time": 26.863399999999572,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    },
+    "leo": {
+      "action": "idle",
+      "time": 26.863399999999572,
+      "restCount": 0,
+      "microCount": 1,
+      "interruptions": 0
+    }
+  },
+  "reservation": null,
+  "sofa": {
+    "stage": "idle",
+    "label": "책상 대기",
+    "returning": false,
+    "reason": "좌석·통로 이용 불가 · 책상에서 대기",
+    "completed": 0,
+    "interruptions": 0,
+    "claims": {
+      "sofa-left": "visitor"
+    },
+    "position": null
+  },
+  "resetTimes": 0,
+  "cutaway": {
+    "left": false,
+    "back": false
+  },
+  "activityVersion": 1
+}
