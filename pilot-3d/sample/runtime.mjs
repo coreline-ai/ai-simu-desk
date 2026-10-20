@@ -11,5 +11,6 @@ export function createOfficeRuntime(model,metadata,options={}){
    options.afterPose?.(id,actor,state);
    const chair=model.getObjectByName(actor.userData.prefix+'SampleChair');if(chair)chair.position.z=-.60-(state.pose?.chair??0)*.75;actor.updateMatrixWorld(true);
   }
+  options.afterUpdate?.(actors,scheduler);
  },diagnostics(){return scheduler.diagnostics();},dispose(){scheduler.dispose();transition.clear();}};
 }

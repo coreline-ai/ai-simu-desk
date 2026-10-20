@@ -1,0 +1,182 @@
+[
+  {
+    "round": 1,
+    "quality": "low",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 2,
+    "quality": "balanced",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 3,
+    "quality": "high",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 4,
+    "quality": "auto",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 5,
+    "quality": "low",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 6,
+    "quality": "balanced",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 7,
+    "quality": "high",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 8,
+    "quality": "auto",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 9,
+    "quality": "low",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 10,
+    "quality": "balanced",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 11,
+    "quality": "high",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 12,
+    "quality": "auto",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 13,
+    "quality": "low",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 14,
+    "quality": "balanced",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 15,
+    "quality": "high",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 16,
+    "quality": "auto",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 17,
+    "quality": "low",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 18,
+    "quality": "balanced",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 19,
+    "quality": "high",
+    "lighting": "evening",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  },
+  {
+    "round": 20,
+    "quality": "auto",
+    "lighting": "day",
+    "clock": 0,
+    "textures": 48,
+    "geometries": 194,
+    "canvases": 1
+  }
+]

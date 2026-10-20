@@ -1,0 +1,50 @@
+[
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 360,
+    "width": 360
+  },
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 414,
+    "width": 414
+  },
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 1024,
+    "width": 1024
+  },
+  {
+    "canvases": 1,
+    "header": [],
+    "scrollWidth": 1440,
+    "width": 1440
+  }
+]

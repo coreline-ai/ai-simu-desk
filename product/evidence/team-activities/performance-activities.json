@@ -1,0 +1,690 @@
+[
+  {
+    "loadedMs": 105,
+    "firstRenderMs": 224,
+    "lastEmit": 83177.5,
+    "measuredFps": 75,
+    "frameP50": 13.30000000000291,
+    "frameP95": 14.400000000001455,
+    "measurementMs": 30000,
+    "measurementCompletedAt": 62836.6,
+    "measurementFrames": 2250,
+    "drawCalls": 1000,
+    "triangles": 803000,
+    "textures": 48,
+    "geometries": 197,
+    "animationTime": 82.91859999999815,
+    "paused": false,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "measuring": false,
+    "quality": "balanced",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_sit_down",
+      "jun": "jun_meeting_wait",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 12.431299999999915,
+        "restCount": 1,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "sit_down",
+        "time": 0.22669999999999713,
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "meeting_wait",
+        "time": 25.64959999999999,
+        "returning": false,
+        "basePose": "idle",
+        "activity": "meeting",
+        "variant": 0,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 80.01749999999839,
+        "activity": "meeting",
+        "variant": 0,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 74.60219999999907,
+        "restCount": 0,
+        "microCount": 2,
+        "interruptions": 0
+      }
+    },
+    "reservation": "sora-sofa",
+    "teamActivities": {
+      "version": 2,
+      "violations": [],
+      "auto": true,
+      "time": 82.91859999999815,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "sora-sofa",
+        "walkway": "sora-sofa"
+      },
+      "waiting": [
+        "min-meeting"
+      ],
+      "meeting": {
+        "ids": [
+          "jun",
+          "min"
+        ],
+        "phase": "arriving",
+        "time": 82.53849999999812,
+        "talk": 0,
+        "ending": false,
+        "reason": ""
+      },
+      "meetings": 0,
+      "cancelledMeetings": 0,
+      "actors": {
+        "nara": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 1,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "sora": {
+          "kind": "sofa",
+          "stage": "deskSit",
+          "returning": false,
+          "slot": 1,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "jun": {
+          "kind": "meeting",
+          "stage": "rest",
+          "returning": false,
+          "slot": 0,
+          "cup": {
+            "state": "tableRest",
+            "time": 24.542,
+            "owner": "meeting",
+            "events": 2,
+            "done": 0,
+            "returning": false,
+            "handError": 4.577566798522237e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "min": {
+          "kind": "meeting",
+          "stage": "queued",
+          "returning": false,
+          "slot": 1,
+          "cup": {
+            "state": "carry",
+            "time": 0,
+            "owner": "hand",
+            "events": 1,
+            "done": 0,
+            "returning": false,
+            "handError": 1.1102230246251565e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "leo": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 2,
+            "done": 1,
+            "returning": false,
+            "handError": 1.1102230246251565e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        }
+      }
+    },
+    "resetTimes": 0,
+    "cutaway": {
+      "left": false,
+      "back": false
+    }
+  },
+  {
+    "loadedMs": 105,
+    "firstRenderMs": 224,
+    "lastEmit": 130208.3,
+    "measuredFps": 75,
+    "frameP50": 13.30000000000291,
+    "frameP95": 14.200000000011642,
+    "measurementMs": 30004,
+    "measurementCompletedAt": 113442.2,
+    "measurementFrames": 2250,
+    "drawCalls": 1006,
+    "triangles": 805240,
+    "textures": 48,
+    "geometries": 197,
+    "animationTime": 129.94939999999067,
+    "paused": false,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "measuring": false,
+    "quality": "balanced",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_wrist_relax",
+      "sora": "sora_idle",
+      "jun": "jun_meeting_talk",
+      "min": "min_meeting_listen",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "wrist_relax",
+        "time": 1.4404999999999994,
+        "restCount": 1,
+        "microCount": 2,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 45.25680000000037,
+        "restCount": 1,
+        "microCount": 2,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "meeting_talk",
+        "time": 72.68039999999903,
+        "returning": false,
+        "basePose": "idle",
+        "activity": "meeting",
+        "lookAt": "min",
+        "variant": 0,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "meeting_listen",
+        "time": 1.106999999999999,
+        "returning": false,
+        "basePose": "idle",
+        "activity": "meeting",
+        "lookAt": "jun",
+        "variant": 0,
+        "restCount": 0,
+        "microCount": 0,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 121.63299999999057,
+        "restCount": 0,
+        "microCount": 4,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "teamActivities": {
+      "version": 2,
+      "violations": [],
+      "auto": true,
+      "time": 129.94939999999067,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting"
+      },
+      "waiting": [],
+      "meeting": {
+        "ids": [
+          "jun",
+          "min"
+        ],
+        "phase": "discussion",
+        "time": 129.5692999999904,
+        "talk": 1.120300000000002,
+        "ending": false,
+        "reason": ""
+      },
+      "meetings": 0,
+      "cancelledMeetings": 0,
+      "actors": {
+        "nara": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 1,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "sora": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 1,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "jun": {
+          "kind": "meeting",
+          "stage": "rest",
+          "returning": false,
+          "slot": 0,
+          "cup": {
+            "state": "tableRest",
+            "time": 71.573,
+            "owner": "meeting",
+            "events": 2,
+            "done": 0,
+            "returning": false,
+            "handError": 4.577566798522237e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "min": {
+          "kind": "meeting",
+          "stage": "rest",
+          "returning": false,
+          "slot": 1,
+          "cup": {
+            "state": "tableRest",
+            "time": 0,
+            "owner": "meeting",
+            "events": 2,
+            "done": 0,
+            "returning": false,
+            "handError": 9.992007221626409e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "leo": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 2,
+            "done": 1,
+            "returning": false,
+            "handError": 1.1102230246251565e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        }
+      }
+    },
+    "resetTimes": 0,
+    "cutaway": {
+      "left": false,
+      "back": false
+    }
+  },
+  {
+    "loadedMs": 105,
+    "firstRenderMs": 224,
+    "lastEmit": 264671.7,
+    "measuredFps": 75,
+    "frameP50": 13.300000000017462,
+    "frameP95": 14.5,
+    "measurementMs": 30003,
+    "measurementCompletedAt": 160658.8,
+    "measurementFrames": 2250,
+    "drawCalls": 1000,
+    "triangles": 803000,
+    "textures": 48,
+    "geometries": 199,
+    "animationTime": 264.4127999999908,
+    "paused": false,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "measuring": false,
+    "quality": "balanced",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_meeting_wait",
+      "sora": "sora_walk",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "meeting_wait",
+        "time": 3.6147000000000227,
+        "returning": false,
+        "basePose": "idle",
+        "activity": "meeting",
+        "variant": 0,
+        "restCount": 1,
+        "microCount": 6,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "walk",
+        "time": 1.6139000000000225,
+        "returning": false,
+        "basePose": "idle",
+        "activity": "meeting",
+        "variant": 1,
+        "restCount": 1,
+        "microCount": 5,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 19.9417999999998,
+        "activity": "sofa",
+        "variant": 0,
+        "restCount": 0,
+        "microCount": 3,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 11.937800000000085,
+        "activity": "sofa",
+        "variant": 0,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 256.09639999998416,
+        "restCount": 0,
+        "microCount": 7,
+        "interruptions": 0
+      }
+    },
+    "reservation": "sora-meeting",
+    "teamActivities": {
+      "version": 2,
+      "violations": [],
+      "auto": true,
+      "time": 264.4127999999908,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "sora-meeting",
+        "walkway": "sora-meeting"
+      },
+      "waiting": [
+        "jun-sofa",
+        "min-sofa"
+      ],
+      "meeting": {
+        "ids": [
+          "nara",
+          "sora"
+        ],
+        "phase": "arriving",
+        "time": 43.94970000000002,
+        "talk": 0,
+        "ending": false,
+        "reason": ""
+      },
+      "meetings": 1,
+      "cancelledMeetings": 0,
+      "actors": {
+        "nara": {
+          "kind": "meeting",
+          "stage": "rest",
+          "returning": false,
+          "slot": 0,
+          "cup": {
+            "state": "tableRest",
+            "time": 2.51,
+            "owner": "meeting",
+            "events": 4,
+            "done": 1,
+            "returning": false,
+            "handError": 4.577566798522237e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "sora": {
+          "kind": "meeting",
+          "stage": "out",
+          "returning": false,
+          "slot": 1,
+          "cup": {
+            "state": "carry",
+            "time": 0,
+            "owner": "hand",
+            "events": 3,
+            "done": 1,
+            "returning": false,
+            "handError": 2.220446049250313e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        },
+        "jun": {
+          "kind": "sofa",
+          "stage": "queued",
+          "returning": false,
+          "slot": 0,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 4,
+            "done": 1,
+            "returning": false,
+            "handError": 2.482534153247273e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 1,
+            "interruptions": 0
+          }
+        },
+        "min": {
+          "kind": "sofa",
+          "stage": "queued",
+          "returning": false,
+          "slot": 1,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 4,
+            "done": 1,
+            "returning": false,
+            "handError": 1.1102230246251565e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 1,
+            "interruptions": 0
+          }
+        },
+        "leo": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 2,
+            "done": 1,
+            "returning": false,
+            "handError": 1.1102230246251565e-16,
+            "cupCount": 1
+          },
+          "counts": {
+            "sofa": 0,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0
+          }
+        }
+      }
+    },
+    "resetTimes": 0,
+    "cutaway": {
+      "left": false,
+      "back": false
+    }
+  }
+]

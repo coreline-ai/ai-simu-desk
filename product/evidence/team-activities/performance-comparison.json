@@ -1,0 +1,34 @@
+{
+  "conditions": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "canvas": [
+      1149,
+      608
+    ],
+    "dpr": 1,
+    "quality": "balanced",
+    "lighting": "day",
+    "camera": "room reset",
+    "otherScenes": "paused",
+    "samples": "3 x real 30 seconds per version",
+    "metric": "requestAnimationFrame intervals; not GPU duration"
+  },
+  "baseline": {
+    "p50": 13.300000000046566,
+    "p95": 14.5,
+    "calls": 998,
+    "triangles": 804344
+  },
+  "activities": {
+    "p50": 13.300000000017462,
+    "p95": 14.5,
+    "calls": 1006,
+    "triangles": 805240
+  },
+  "callIncreasePercent": 0.8016032064128265,
+  "triangleIncreasePercent": 0.11139512447411182,
+  "passed": true
+}

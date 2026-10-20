@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "path": "product/dist/assets/studio-room-v6.glb",
+      "bytes": 7749228
+    },
+    {
+      "path": "product/dist/assets/app.js",
+      "bytes": 790985
+    },
+    {
+      "path": "product/dist/assets/office-background-v1.png",
+      "bytes": 2254908
+    }
+  ],
+  "totalBytes": 10795121,
+  "totalMiB": 10.295029640197754,
+  "limitMiB": 15,
+  "assetSha256": "7d6addce4b58447bdc8d45c4c725fefb26df4986a96759e14c75cb1bb7dd1aab",
+  "note": "Network payload estimate; texture/GPU/JS heap allocation is separate."
+}

@@ -1,0 +1,220 @@
+{
+  "loadedMs": 137,
+  "firstRenderMs": 299,
+  "lastEmit": 179198.4,
+  "drawCalls": 1006,
+  "triangles": 805240,
+  "textures": 48,
+  "geometries": 196,
+  "animationTime": 72.67419999999973,
+  "paused": true,
+  "pixelRatio": 1,
+  "modelVersion": 6,
+  "measuring": false,
+  "quality": "auto",
+  "lighting": "day",
+  "canvas": [
+    1149,
+    608
+  ],
+  "cssCanvas": [
+    1149,
+    608
+  ],
+  "actors": {
+    "nara": "nara_meeting_talk",
+    "sora": "sora_stretch",
+    "jun": "jun_meeting_listen",
+    "min": "min_idle",
+    "leo": "leo_idle"
+  },
+  "activities": {
+    "nara": {
+      "action": "meeting_talk",
+      "time": 2.8009999999999957,
+      "returning": false,
+      "basePose": "idle",
+      "activity": "meeting",
+      "lookAt": "jun",
+      "variant": 1,
+      "restCount": 0,
+      "microCount": 0,
+      "interruptions": 0
+    },
+    "sora": {
+      "action": "stretch",
+      "time": 3.641299999999995,
+      "restCount": 0,
+      "microCount": 2,
+      "interruptions": 0
+    },
+    "jun": {
+      "action": "meeting_listen",
+      "time": 40.25519999999981,
+      "returning": false,
+      "basePose": "idle",
+      "activity": "meeting",
+      "lookAt": "nara",
+      "variant": 1,
+      "restCount": 0,
+      "microCount": 0,
+      "interruptions": 0
+    },
+    "min": {
+      "action": "idle",
+      "time": 72.67419999999973,
+      "restCount": 0,
+      "microCount": 2,
+      "interruptions": 0
+    },
+    "leo": {
+      "action": "idle",
+      "time": 72.67419999999973,
+      "restCount": 0,
+      "microCount": 2,
+      "interruptions": 0
+    }
+  },
+  "reservation": null,
+  "teamActivities": {
+    "version": 2,
+    "violations": [],
+    "auto": false,
+    "time": 72.67419999999973,
+    "claims": {
+      "meeting-0": "jun-meeting",
+      "meeting-1": "nara-meeting"
+    },
+    "waiting": [],
+    "meeting": {
+      "ids": [
+        "jun",
+        "nara"
+      ],
+      "phase": "discussion",
+      "time": 72.25399999999969,
+      "talk": 2.81439999999999,
+      "ending": false,
+      "reason": ""
+    },
+    "meetings": 0,
+    "cancelledMeetings": 0,
+    "actors": {
+      "nara": {
+        "kind": "meeting",
+        "stage": "rest",
+        "returning": false,
+        "slot": 1,
+        "cup": {
+          "state": "tableRest",
+          "time": 1.694,
+          "owner": "meeting",
+          "events": 2,
+          "done": 0,
+          "returning": false,
+          "handError": 2.220446049250313e-16,
+          "cupCount": 1
+        },
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0
+        }
+      },
+      "sora": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0
+        }
+      },
+      "jun": {
+        "kind": "meeting",
+        "stage": "rest",
+        "returning": false,
+        "slot": 0,
+        "cup": {
+          "state": "tableRest",
+          "time": 39.148,
+          "owner": "meeting",
+          "events": 2,
+          "done": 0,
+          "returning": false,
+          "handError": 6.377745716588144e-16,
+          "cupCount": 1
+        },
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0
+        }
+      },
+      "min": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0
+        }
+      },
+      "leo": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0
+        }
+      }
+    }
+  },
+  "resetTimes": 0,
+  "cutaway": {
+    "left": false,
+    "back": false
+  }
+}

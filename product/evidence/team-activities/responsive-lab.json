@@ -1,0 +1,634 @@
+[
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 44,
+        "right": 76,
+        "text": "전체 공간",
+        "width": 63
+      },
+      {
+        "height": 44,
+        "right": 168,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 246,
+        "text": "가까이 보기",
+        "width": 73
+      },
+      {
+        "height": 44,
+        "right": 303,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 65,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 158,
+        "text": "5명 생활 시연",
+        "width": 130
+      },
+      {
+        "height": 44,
+        "right": 292,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 130
+      },
+      {
+        "height": 44,
+        "right": 158,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 130
+      },
+      {
+        "height": 44,
+        "right": 292,
+        "text": "선택 동료와 2인 회의",
+        "width": 130
+      },
+      {
+        "height": 44,
+        "right": 158,
+        "text": "선택 동료 업무 시작",
+        "width": 130
+      },
+      {
+        "height": 44,
+        "right": 292,
+        "text": "모두 업무 종료",
+        "width": 130
+      },
+      {
+        "height": 44,
+        "right": 158,
+        "text": "재생",
+        "width": 130
+      }
+    ],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 44,
+        "right": 78,
+        "text": "전체 공간",
+        "width": 63
+      },
+      {
+        "height": 44,
+        "right": 170,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 247,
+        "text": "가까이 보기",
+        "width": 73
+      },
+      {
+        "height": 44,
+        "right": 304,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 66,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 178,
+        "text": "5명 생활 시연",
+        "width": 148
+      },
+      {
+        "height": 44,
+        "right": 331,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 148
+      },
+      {
+        "height": 44,
+        "right": 178,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 148
+      },
+      {
+        "height": 44,
+        "right": 331,
+        "text": "선택 동료와 2인 회의",
+        "width": 148
+      },
+      {
+        "height": 44,
+        "right": 178,
+        "text": "선택 동료 업무 시작",
+        "width": 148
+      },
+      {
+        "height": 44,
+        "right": 331,
+        "text": "모두 업무 종료",
+        "width": 148
+      },
+      {
+        "height": 44,
+        "right": 178,
+        "text": "재생",
+        "width": 148
+      }
+    ],
+    "scrollWidth": 360,
+    "width": 360
+  },
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 44,
+        "right": 78,
+        "text": "전체 공간",
+        "width": 63
+      },
+      {
+        "height": 44,
+        "right": 170,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 248,
+        "text": "가까이 보기",
+        "width": 73
+      },
+      {
+        "height": 44,
+        "right": 305,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 67,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 185,
+        "text": "5명 생활 시연",
+        "width": 155
+      },
+      {
+        "height": 44,
+        "right": 345,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 155
+      },
+      {
+        "height": 44,
+        "right": 185,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 155
+      },
+      {
+        "height": 44,
+        "right": 345,
+        "text": "선택 동료와 2인 회의",
+        "width": 155
+      },
+      {
+        "height": 44,
+        "right": 185,
+        "text": "선택 동료 업무 시작",
+        "width": 155
+      },
+      {
+        "height": 44,
+        "right": 345,
+        "text": "모두 업무 종료",
+        "width": 155
+      },
+      {
+        "height": 44,
+        "right": 185,
+        "text": "재생",
+        "width": 155
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 375
+  },
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 44,
+        "right": 79,
+        "text": "전체 공간",
+        "width": 63
+      },
+      {
+        "height": 44,
+        "right": 171,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 249,
+        "text": "가까이 보기",
+        "width": 73
+      },
+      {
+        "height": 44,
+        "right": 306,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 363,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 193,
+        "text": "5명 생활 시연",
+        "width": 162
+      },
+      {
+        "height": 44,
+        "right": 359,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 162
+      },
+      {
+        "height": 44,
+        "right": 193,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 162
+      },
+      {
+        "height": 44,
+        "right": 359,
+        "text": "선택 동료와 2인 회의",
+        "width": 162
+      },
+      {
+        "height": 44,
+        "right": 193,
+        "text": "선택 동료 업무 시작",
+        "width": 162
+      },
+      {
+        "height": 44,
+        "right": 359,
+        "text": "모두 업무 종료",
+        "width": 162
+      },
+      {
+        "height": 44,
+        "right": 193,
+        "text": "재생",
+        "width": 162
+      }
+    ],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 44,
+        "right": 80,
+        "text": "전체 공간",
+        "width": 63
+      },
+      {
+        "height": 44,
+        "right": 172,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 250,
+        "text": "가까이 보기",
+        "width": 73
+      },
+      {
+        "height": 44,
+        "right": 307,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 364,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 205,
+        "text": "5명 생활 시연",
+        "width": 173
+      },
+      {
+        "height": 44,
+        "right": 382,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 173
+      },
+      {
+        "height": 44,
+        "right": 205,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 173
+      },
+      {
+        "height": 44,
+        "right": 382,
+        "text": "선택 동료와 2인 회의",
+        "width": 173
+      },
+      {
+        "height": 44,
+        "right": 205,
+        "text": "선택 동료 업무 시작",
+        "width": 173
+      },
+      {
+        "height": 44,
+        "right": 382,
+        "text": "모두 업무 종료",
+        "width": 173
+      },
+      {
+        "height": 44,
+        "right": 205,
+        "text": "재생",
+        "width": 173
+      }
+    ],
+    "scrollWidth": 414,
+    "width": 414
+  },
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 34,
+        "right": 442,
+        "text": "전체 공간",
+        "width": 71
+      },
+      {
+        "height": 32,
+        "right": 534,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 34,
+        "right": 619,
+        "text": "가까이 보기",
+        "width": 81
+      },
+      {
+        "height": 32,
+        "right": 676,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 32,
+        "right": 733,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 144,
+        "text": "5명 생활 시연",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 273,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 121
+      },
+      {
+        "height": 44,
+        "right": 398,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "right": 523,
+        "text": "선택 동료와 2인 회의",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "right": 710,
+        "text": "선택 동료 업무 시작",
+        "width": 112
+      },
+      {
+        "height": 44,
+        "right": 147,
+        "text": "모두 업무 종료",
+        "width": 89
+      },
+      {
+        "height": 44,
+        "right": 199,
+        "text": "재생",
+        "width": 45
+      }
+    ],
+    "scrollWidth": 768,
+    "width": 768
+  },
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 34,
+        "right": 686,
+        "text": "전체 공간",
+        "width": 71
+      },
+      {
+        "height": 32,
+        "right": 778,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 34,
+        "right": 864,
+        "text": "가까이 보기",
+        "width": 81
+      },
+      {
+        "height": 32,
+        "right": 921,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 32,
+        "right": 978,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 156,
+        "text": "5명 생활 시연",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 284,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 121
+      },
+      {
+        "height": 44,
+        "right": 409,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "right": 535,
+        "text": "선택 동료와 2인 회의",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "right": 688,
+        "text": "선택 동료 업무 시작",
+        "width": 112
+      },
+      {
+        "height": 44,
+        "right": 784,
+        "text": "모두 업무 종료",
+        "width": 89
+      },
+      {
+        "height": 44,
+        "right": 837,
+        "text": "재생",
+        "width": 45
+      }
+    ],
+    "scrollWidth": 1024,
+    "width": 1024
+  },
+  {
+    "canvases": 1,
+    "controls": [
+      {
+        "height": 34,
+        "right": 1004,
+        "text": "전체 공간",
+        "width": 71
+      },
+      {
+        "height": 32,
+        "right": 1096,
+        "text": "나라 · 기획소라 · 디자인준 · 개발민 · QA레오 · 정리",
+        "width": 87
+      },
+      {
+        "height": 34,
+        "right": 1182,
+        "text": "가까이 보기",
+        "width": 81
+      },
+      {
+        "height": 32,
+        "right": 1239,
+        "text": "자동낮음균형높음",
+        "width": 52
+      },
+      {
+        "height": 32,
+        "right": 1296,
+        "text": "낮저녁",
+        "width": 52
+      },
+      {
+        "height": 44,
+        "right": 254,
+        "text": "5명 생활 시연",
+        "width": 87
+      },
+      {
+        "height": 44,
+        "right": 383,
+        "text": "선택 동료 · 컵 한 모금",
+        "width": 121
+      },
+      {
+        "height": 44,
+        "right": 508,
+        "text": "선택 동료 · 소파 휴식",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "right": 633,
+        "text": "선택 동료와 2인 회의",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "right": 1006,
+        "text": "선택 동료 업무 시작",
+        "width": 112
+      },
+      {
+        "height": 44,
+        "right": 1102,
+        "text": "모두 업무 종료",
+        "width": 89
+      },
+      {
+        "height": 44,
+        "right": 1154,
+        "text": "재생",
+        "width": 45
+      }
+    ],
+    "scrollWidth": 1440,
+    "width": 1440
+  }
+]

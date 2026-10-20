@@ -1,0 +1,2389 @@
+{
+  "kind": "actual-browser-wall-clock",
+  "mode": "mixed",
+  "elapsedSeconds": 1800,
+  "activeSeconds": 1799,
+  "targetSeconds": 1800,
+  "complete": true,
+  "passed": true,
+  "samples": 1797,
+  "errors": [],
+  "hiddenEvents": 0,
+  "pausedSamples": 0,
+  "restarts": 0,
+  "peak": {
+    "textures": 48,
+    "geometries": 199
+  },
+  "actors": {
+    "nara": {
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "standing",
+        "sit_down",
+        "typing",
+        "success",
+        "stretch",
+        "idle",
+        "shoulder_roll",
+        "waiting",
+        "wrist_relax",
+        "meeting_wait",
+        "meeting_talk",
+        "meeting_listen"
+      ],
+      "cupOwners": [
+        "desk",
+        "hand",
+        "meeting"
+      ],
+      "cupStates": [
+        "idle",
+        "reach",
+        "lift",
+        "sip",
+        "lower",
+        "place",
+        "carry",
+        "tablePlace",
+        "tableRest",
+        "tableReach",
+        "release",
+        "tableGrasp"
+      ],
+      "sofa": 4,
+      "cup": 4,
+      "meeting": 4,
+      "interruptions": 4
+    },
+    "sora": {
+      "actions": [
+        "idle",
+        "stand_up",
+        "walk",
+        "turn",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "standing",
+        "sit_down",
+        "shoulder_roll",
+        "typing",
+        "success",
+        "wrist_relax",
+        "stretch",
+        "waiting",
+        "meeting_wait",
+        "meeting_talk",
+        "meeting_listen"
+      ],
+      "cupOwners": [
+        "desk",
+        "hand",
+        "meeting"
+      ],
+      "cupStates": [
+        "idle",
+        "reach",
+        "lift",
+        "sip",
+        "lower",
+        "place",
+        "carry",
+        "tablePlace",
+        "tableRest",
+        "tableReach",
+        "grasp",
+        "tableGrasp",
+        "release"
+      ],
+      "sofa": 3,
+      "cup": 3,
+      "meeting": 2,
+      "interruptions": 3
+    },
+    "jun": {
+      "actions": [
+        "waiting",
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "meeting_wait",
+        "meeting_talk",
+        "meeting_listen",
+        "sofa_rise",
+        "sit_down",
+        "wrist_relax",
+        "typing",
+        "success",
+        "stretch",
+        "sofa_rest",
+        "shoulder_roll"
+      ],
+      "cupOwners": [
+        "desk",
+        "hand",
+        "meeting"
+      ],
+      "cupStates": [
+        "reach",
+        "lift",
+        "carry",
+        "tablePlace",
+        "tableRest",
+        "tableReach",
+        "place",
+        "idle",
+        "sip",
+        "lower",
+        "release",
+        "grasp",
+        "tableGrasp"
+      ],
+      "sofa": 2,
+      "cup": 2,
+      "meeting": 3,
+      "interruptions": 1
+    },
+    "min": {
+      "actions": [
+        "waiting",
+        "idle",
+        "stand_up",
+        "walk",
+        "turn",
+        "sofa_sit",
+        "meeting_listen",
+        "meeting_talk",
+        "sofa_rise",
+        "standing",
+        "sit_down",
+        "stretch",
+        "typing",
+        "success",
+        "shoulder_roll",
+        "sofa_rest",
+        "wrist_relax"
+      ],
+      "cupOwners": [
+        "desk",
+        "hand",
+        "meeting"
+      ],
+      "cupStates": [
+        "reach",
+        "lift",
+        "carry",
+        "tablePlace",
+        "tableRest",
+        "tableReach",
+        "place",
+        "idle",
+        "sip",
+        "lower",
+        "release"
+      ],
+      "sofa": 3,
+      "cup": 3,
+      "meeting": 3,
+      "interruptions": 2
+    },
+    "leo": {
+      "actions": [
+        "waiting",
+        "idle",
+        "shoulder_roll",
+        "wrist_relax",
+        "stretch",
+        "stand_up",
+        "walk",
+        "turn",
+        "standing",
+        "sofa_sit",
+        "meeting_listen",
+        "meeting_talk",
+        "sofa_rise",
+        "sit_down",
+        "typing",
+        "success",
+        "sofa_rest",
+        "meeting_wait"
+      ],
+      "cupOwners": [
+        "desk",
+        "hand",
+        "meeting"
+      ],
+      "cupStates": [
+        "reach",
+        "lift",
+        "sip",
+        "lower",
+        "place",
+        "idle",
+        "carry",
+        "tablePlace",
+        "tableRest",
+        "tableReach",
+        "release",
+        "tableGrasp"
+      ],
+      "sofa": 2,
+      "cup": 3,
+      "meeting": 2,
+      "interruptions": 1
+    }
+  },
+  "history": [
+    {
+      "elapsed": 9,
+      "clock": 9.67699999999997,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-sofa",
+        "sofa-0": "nara-sofa"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 19,
+      "clock": 19.680700000000027,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-0": "nara-sofa",
+        "walkway": "sora-sofa",
+        "sofa-1": "sora-sofa"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 29,
+      "clock": 29.711200000000524,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "sora-sofa",
+        "walkway": "nara-sofa"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 39,
+      "clock": 39.715000000000764,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "sora-sofa",
+        "walkway": "nara-sofa"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 49,
+      "clock": 49.7188000000009,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "sora-sofa",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 59,
+      "clock": 59.749300000001156,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "sora-sofa",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 69,
+      "clock": 69.79310000000065,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "sora-sofa",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 79,
+      "clock": 79.81019999999904,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "sora-sofa",
+        "walkway": "sora-sofa"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 89,
+      "clock": 89.84069999999771,
+      "textures": 48,
+      "geometries": 197,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 99,
+      "clock": 99.85789999999622,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 109,
+      "clock": 109.86169999999463,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 119,
+      "clock": 119.87879999999275,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 129,
+      "clock": 129.88259999999187,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 139,
+      "clock": 139.88629999999048,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 149,
+      "clock": 149.89019999998845,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 159,
+      "clock": 159.89389999998653,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 169,
+      "clock": 169.91109999998457,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 179,
+      "clock": 179.91489999998254,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 189,
+      "clock": 189.9319999999807,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 199,
+      "clock": 199.93579999997866,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 209,
+      "clock": 209.93959999997654,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 0
+    },
+    {
+      "elapsed": 219,
+      "clock": 219.9700999999746,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {},
+      "meetings": 1
+    },
+    {
+      "elapsed": 229,
+      "clock": 229.97379999997267,
+      "textures": 48,
+      "geometries": 198,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 239,
+      "clock": 240.0042999999706,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 249,
+      "clock": 250.06139999996856,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 259,
+      "clock": 260.0651999999696,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 269,
+      "clock": 270.0956999999832,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 279,
+      "clock": 280.1260999999973,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 289,
+      "clock": 290.14320000001146,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 300,
+      "clock": 300.17370000002654,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "jun-sofa",
+        "sofa-0": "jun-sofa"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 310,
+      "clock": 310.2042000000411,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "walkway": "jun-sofa",
+        "sofa-0": "jun-sofa"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 320,
+      "clock": 320.2336000000544,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "sofa-0": "jun-sofa",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 330,
+      "clock": 330.25170000006847,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "sofa-0": "jun-sofa",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 340,
+      "clock": 340.2822000000822,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "sofa-0": "jun-sofa",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 350,
+      "clock": 350.29930000009676,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "leo-meeting",
+        "sofa-0": "jun-sofa",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 360,
+      "clock": 360.3297000001112,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "leo-meeting",
+        "sofa-0": "jun-sofa",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 370,
+      "clock": 370.3726000001257,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "leo-meeting",
+        "sofa-0": "jun-sofa",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 380,
+      "clock": 380.39070000013896,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "leo-meeting",
+        "sofa-0": "jun-sofa",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 1
+    },
+    {
+      "elapsed": 390,
+      "clock": 390.4077000001524,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "jun-sofa",
+        "walkway": "jun-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 400,
+      "clock": 400.42490000016653,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "jun-sofa",
+        "walkway": "jun-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 410,
+      "clock": 410.4553000001807,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "min-sofa",
+        "sofa-1": "min-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 420,
+      "clock": 420.4725000001948,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "min-sofa",
+        "sofa-1": "min-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 430,
+      "clock": 430.4895000002092,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "walkway": "nara-sofa",
+        "sofa-0": "nara-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 440,
+      "clock": 440.5334000002239,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "sofa-0": "nara-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 450,
+      "clock": 450.57710000023735,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "sofa-0": "nara-sofa",
+        "walkway": "min-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 460,
+      "clock": 460.5943000002518,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "sofa-0": "nara-sofa",
+        "walkway": "min-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 470,
+      "clock": 470.6247000002656,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "nara-sofa",
+        "walkway": "nara-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 480,
+      "clock": 480.6417000002815,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "leo-sofa",
+        "sofa-0": "leo-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 490,
+      "clock": 490.65890000029793,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "leo-sofa",
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 500,
+      "clock": 500.67600000031393,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "leo-sofa",
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 510,
+      "clock": 510.6798000003304,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 520,
+      "clock": 520.6969000003265,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 530,
+      "clock": 530.7006000003374,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 540,
+      "clock": 540.7443000003566,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 550,
+      "clock": 550.7874000003759,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "leo-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 560,
+      "clock": 560.8320000003953,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "leo-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 570,
+      "clock": 570.8492000004145,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "leo-sofa"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 580,
+      "clock": 580.8796000004338,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 590,
+      "clock": 590.883400000453,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 600,
+      "clock": 600.9004000004722,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 610,
+      "clock": 610.9167000004916,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {},
+      "meetings": 2
+    },
+    {
+      "elapsed": 620,
+      "clock": 620.9481000005109,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 630,
+      "clock": 630.9517000005301,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 640,
+      "clock": 640.9555000005494,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 650,
+      "clock": 650.9593000005685,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 660,
+      "clock": 660.9763000005878,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 670,
+      "clock": 671.0065000006072,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 680,
+      "clock": 681.0372000006264,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 690,
+      "clock": 691.0943000006457,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 700,
+      "clock": 701.1381000006651,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 710,
+      "clock": 711.1552000006843,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 721,
+      "clock": 721.1722000007036,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 731,
+      "clock": 731.2149000007229,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 741,
+      "clock": 741.2330000007422,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "nara-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 751,
+      "clock": 751.2768000007615,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 761,
+      "clock": 761.2939000007807,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 771,
+      "clock": 771.2976000008,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 781,
+      "clock": 781.3147000008192,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 791,
+      "clock": 791.3451000008386,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 2
+    },
+    {
+      "elapsed": 801,
+      "clock": 801.3622000008578,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 811,
+      "clock": 811.3660000008771,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 821,
+      "clock": 821.3830000008963,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 831,
+      "clock": 831.3868000009155,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 841,
+      "clock": 841.404800000934,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 851,
+      "clock": 851.4353000009507,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 861,
+      "clock": 861.4790000009681,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 871,
+      "clock": 871.496100000982,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "walkway": "nara-sofa",
+        "sofa-0": "nara-sofa"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 881,
+      "clock": 881.4998000009962,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "walkway": "min-sofa",
+        "sofa-1": "min-sofa"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 891,
+      "clock": 891.5282000010101,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "walkway": "min-sofa",
+        "sofa-1": "min-sofa"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 901,
+      "clock": 901.5930000010276,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 911,
+      "clock": 911.6234000010469,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 921,
+      "clock": 921.6538000010661,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 931,
+      "clock": 931.6842000010854,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 941,
+      "clock": 941.7013000011046,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 951,
+      "clock": 951.731700001124,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "jun-meeting",
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 3
+    },
+    {
+      "elapsed": 961,
+      "clock": 961.7488000011432,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "nara-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 971,
+      "clock": 971.7659000011625,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "nara-sofa",
+        "sofa-1": "min-sofa",
+        "walkway": "nara-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 981,
+      "clock": 981.7830000011818,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "walkway": "min-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 991,
+      "clock": 991.786700001201,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "walkway": "min-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1001,
+      "clock": 1001.8038000012202,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "sora-sofa",
+        "sofa-0": "sora-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1011,
+      "clock": 1011.8075000012395,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1021,
+      "clock": 1021.8246000012588,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa",
+        "walkway": "sora-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1031,
+      "clock": 1031.841600001256,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "jun-sofa",
+        "sofa-1": "jun-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1041,
+      "clock": 1041.858600001247,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "jun-sofa",
+        "sofa-1": "jun-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1051,
+      "clock": 1051.8757000012345,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "jun-sofa",
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1061,
+      "clock": 1061.9195000012128,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "jun-sofa",
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1071,
+      "clock": 1071.9366000011944,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "jun-sofa",
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1081,
+      "clock": 1081.940100001175,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "jun-sofa",
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1091,
+      "clock": 1091.9441000011584,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "jun-sofa",
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-sofa"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1101,
+      "clock": 1101.96110000114,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1111,
+      "clock": 1111.9782000011207,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1121,
+      "clock": 1122.008600001099,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1131,
+      "clock": 1132.0313000010835,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1141,
+      "clock": 1142.035000001067,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1151,
+      "clock": 1152.06550000105,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1161,
+      "clock": 1162.094900001031,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1171,
+      "clock": 1172.1129000010117,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1181,
+      "clock": 1182.116700000991,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1191,
+      "clock": 1192.1338000009719,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1201,
+      "clock": 1202.1375000009548,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1211,
+      "clock": 1212.1412000009352,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 4
+    },
+    {
+      "elapsed": 1222,
+      "clock": 1222.158200000917,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {},
+      "meetings": 4
+    },
+    {
+      "elapsed": 1232,
+      "clock": 1232.1620000008973,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1242,
+      "clock": 1242.165700000877,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1252,
+      "clock": 1252.1827000008589,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1262,
+      "clock": 1262.18650000084,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1272,
+      "clock": 1272.1902000008215,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1282,
+      "clock": 1282.1940000008026,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1292,
+      "clock": 1292.197600000784,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1302,
+      "clock": 1302.214700000766,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1312,
+      "clock": 1312.218500000745,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-sofa",
+        "sofa-1": "nara-sofa"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1322,
+      "clock": 1322.2222000007293,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "nara-sofa",
+        "sofa-1": "nara-sofa"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1332,
+      "clock": 1332.226000000712,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "nara-sofa",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1342,
+      "clock": 1342.243100000692,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "nara-sofa",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1352,
+      "clock": 1352.2470000006729,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "sora-meeting",
+        "meeting-1": "min-meeting",
+        "sofa-1": "nara-sofa",
+        "walkway": "sora-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1362,
+      "clock": 1362.2774000006548,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "sofa-1": "nara-sofa",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1372,
+      "clock": 1372.294600000636,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "sofa-1": "nara-sofa",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1382,
+      "clock": 1382.325000000618,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "sofa-1": "nara-sofa",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1392,
+      "clock": 1392.342100000597,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "min-meeting",
+        "sofa-1": "nara-sofa",
+        "walkway": "min-meeting"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1402,
+      "clock": 1402.3726000005795,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "nara-sofa",
+        "walkway": "nara-sofa"
+      },
+      "meetings": 5
+    },
+    {
+      "elapsed": 1412,
+      "clock": 1412.3897000005613,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "nara-sofa",
+        "walkway": "nara-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1422,
+      "clock": 1422.372800000547,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "leo-sofa",
+        "sofa-0": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1432,
+      "clock": 1432.3767000005287,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "leo-sofa",
+        "sofa-0": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1442,
+      "clock": 1442.3804000005093,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "leo-sofa",
+        "sofa-0": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1452,
+      "clock": 1452.3842000004902,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1462,
+      "clock": 1462.3880000004697,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1472,
+      "clock": 1472.3918000004498,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "walkway": "min-sofa",
+        "sofa-1": "min-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1482,
+      "clock": 1482.3956000004325,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "walkway": "min-sofa",
+        "sofa-1": "min-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1492,
+      "clock": 1492.4261000004128,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "sofa-1": "min-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1502,
+      "clock": 1502.429900000393,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "sofa-1": "min-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1512,
+      "clock": 1512.4470000003753,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "leo-sofa",
+        "sofa-1": "min-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "leo-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1522,
+      "clock": 1522.4642000003566,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "min-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1532,
+      "clock": 1532.4813000003385,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-1": "min-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "min-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1542,
+      "clock": 1542.511700000322,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1552,
+      "clock": 1552.5413000003032,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1562,
+      "clock": 1562.5594000002839,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1572,
+      "clock": 1572.5765000002636,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1582,
+      "clock": 1582.5803000002438,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "walkway": "sora-sofa",
+        "sofa-0": "sora-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1592,
+      "clock": 1592.584000000226,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1602,
+      "clock": 1602.5878000002085,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1612,
+      "clock": 1612.645000000191,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1622,
+      "clock": 1622.6754000001747,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1632,
+      "clock": 1632.719200000158,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1642,
+      "clock": 1642.7764000001373,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "sora-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1652,
+      "clock": 1652.7934000001167,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "sofa-0": "sora-sofa",
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "sora-sofa"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1662,
+      "clock": 1662.8239000000972,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1672,
+      "clock": 1672.8677000000791,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1682,
+      "clock": 1682.9105000000611,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1692,
+      "clock": 1692.9153000000417,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1702,
+      "clock": 1702.9324000000236,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1712,
+      "clock": 1712.961900000004,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1722,
+      "clock": 1722.993199999986,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1732,
+      "clock": 1733.022799999969,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "jun-meeting",
+        "meeting-1": "nara-meeting",
+        "walkway": "jun-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1742,
+      "clock": 1743.0407999999493,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1752,
+      "clock": 1753.0578999999304,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1762,
+      "clock": 1763.061699999912,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-1": "nara-meeting",
+        "walkway": "nara-meeting"
+      },
+      "meetings": 6
+    },
+    {
+      "elapsed": 1772,
+      "clock": 1773.065399999895,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {},
+      "meetings": 6
+    },
+    {
+      "elapsed": 1782,
+      "clock": 1783.0691999998753,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "min-meeting"
+      },
+      "meetings": 7
+    },
+    {
+      "elapsed": 1793,
+      "clock": 1793.0862999998574,
+      "textures": 48,
+      "geometries": 199,
+      "claims": {
+        "meeting-0": "leo-meeting",
+        "meeting-1": "min-meeting",
+        "walkway": "leo-meeting"
+      },
+      "meetings": 7
+    }
+  ]
+}

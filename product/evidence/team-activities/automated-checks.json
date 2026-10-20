@@ -1,0 +1,23 @@
+{
+  "testCommand": "npm test",
+  "tests": 169,
+  "passed": 169,
+  "failed": 0,
+  "syntaxModules": 54,
+  "typecheck": true,
+  "boundaries": true,
+  "productBuild": true,
+  "initialMiB": 10.294981956481934,
+  "actualContinuous": {
+    "passed": true,
+    "elapsedSeconds": 600,
+    "activeSeconds": 599,
+    "report": "continuous-10min.json"
+  },
+  "actualMixed": {
+    "passed": true,
+    "elapsedSeconds": 1800,
+    "activeSeconds": 1799,
+    "report": "mixed-30min.json"
+  }
+}

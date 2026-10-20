@@ -4,22 +4,23 @@ import {Route} from './routes.mjs';
 import {Reservations} from './reservations.mjs';
 const mix=(a,b,u)=>a+(b-a)*u;
 const lerp=(a,b,u)=>a.map((v,i)=>mix(v,b[i],u));
-const OWNER='nara-sofa';
+
 export const STAGE_NAMES={queued:'좌석·통로 확인',stand:'의자에서 일어서기',out:'소파로 이동',settle:'안전하게 디디기',align:'소파 앞 정렬',back:'뒤로 디디기',sit:'소파에 앉기',rest:'소파에서 휴식',rise:'소파에서 일어서기',forward:'통로로 나오기',home:'자리로 복귀',deskTurn:'책상 바라보기',deskSit:'업무 자리에 앉기',idle:'책상 대기'};
 export class SofaScheduler {
- constructor(ids, anchors){this.base=new AmbientScheduler(ids);this.base.nextRest=Infinity;this.anchors=anchors;this.book=new Reservations();this.vm={actors:[]};this.stage='idle';this.elapsed=0;this.time=0;this.completed=0;this.interruptions=0;this.reason='';this.returning=false;this.route=null;this.disposed=false;}
+ constructor(ids, anchors,options={}){this.options=options;this.actorId=options.actorId??'nara';this.owner=options.owner??this.actorId+'-sofa';this.base=new AmbientScheduler(ids);this.base.nextRest=Infinity;this.anchors=anchors;this.book=options.book??new Reservations();this.vm={actors:[]};this.stage='idle';this.elapsed=0;this.time=0;this.completed=0;this.interruptions=0;this.reason='';this.returning=false;this.route=null;this.disposed=false;}
  get paused(){return !!this.vm.motionPaused;}
- setViewModel(vm){this.vm=vm;const desired=vm.actors?.find(a=>a.agentId==='nara')?.pose??'idle';if(desired!=='idle'&&this.stage!=='idle'){this.returning=true;this.reason='업무 도착';if(this.stage==='queued')this.finish(false);}}
- refreshBase(){this.base.setViewModel({...this.vm,actors:this.base.ids.map(id=>{const item=this.vm.actors?.find(a=>a.agentId===id)??{agentId:id,pose:'idle'};return id==='nara'&&(this.stage!=='idle'||item.pose==='idle')?{agentId:id,pose:'waiting'}:item;})});}
+ setViewModel(vm){this.vm=vm;const desired=vm.actors?.find(a=>a.agentId===this.actorId)?.pose??'idle';if(desired!=='idle'&&this.stage!=='idle'){this.returning=true;this.reason='업무 도착';if(this.stage==='queued')this.finish(false);}}
+ refreshBase(){this.base.setViewModel({...this.vm,actors:this.base.ids.map(id=>{const item=this.vm.actors?.find(a=>a.agentId===id)??{agentId:id,pose:'idle'};return id===this.actorId&&(this.stage!=='idle'||item.pose==='idle')?{agentId:id,pose:'waiting'}:item;})});}
  startDemo(){return this.startSofa();}
- startSofa(){if(this.disposed||this.stage!=='idle'||this.vm.actors?.some(a=>a.agentId==='nara'&&a.pose!=='idle'))return false;this.stage='queued';this.elapsed=0;this.returning=false;this.reason='';return true;}
- enter(stage){this.stage=stage;this.elapsed=0;}
- finish(success){this.book.release(OWNER);if(this.base.owner===OWNER)this.base.owner=null;this.base.nextRest=Infinity;this.route=null;this.stage='idle';this.elapsed=0;if(success){if(this.returning)this.interruptions++;else this.completed++;}this.returning=false;}
- beginHome(points,yaw){this.route=new Route(points,yaw);this.enter('home');}
+ startSofa(){if(this.disposed||this.stage!=='idle'||this.vm.actors?.some(a=>a.agentId===this.actorId&&a.pose!=='idle'))return false;this.stage='queued';this.elapsed=0;this.returning=false;this.reason='';return true;}
+ enter(stage){this.stage=stage;this.elapsed=0;if(stage==='rest'&&this.options.sharedTransit){this.book.releaseKeys(this.owner,['walkway']);this.base.owner=null;}}
+ requestReturn(reason='회의 종료'){this.returning=true;this.reason=reason;}
+ finish(success){this.book.release(this.owner);if(this.base.owner===this.owner)this.base.owner=null;this.base.nextRest=Infinity;this.route=null;this.stage='idle';this.elapsed=0;if(success){if(this.returning)this.interruptions++;else this.completed++;}this.returning=false;}
+ beginHome(points,yaw){this.route=new Route(points,yaw,this.options.routeMotion);this.enter('home');}
  tick(raw){if(this.disposed||this.paused)return;const dt=Math.max(0,Math.min(.06,raw));this.time+=dt;this.refreshBase();this.base.nextRest=Infinity;this.base.tick(dt);this.elapsed+=dt;const a=this.anchors;
   if(this.stage==='idle')return;
-  if(this.stage==='queued'){if(!this.base.owner&&this.book.acquire(OWNER,['walkway',a.seat])){this.base.owner=OWNER;this.enter('stand');}else if(this.elapsed>=6){this.reason='좌석·통로 이용 불가 · 책상에서 대기';this.finish(false);}return;}
-  if(this.stage==='stand'&&this.elapsed>=2){if(this.returning)this.beginHome([a.route[0]],0);else{this.route=new Route(a.route);this.enter('out');}return;}
+  if(this.stage==='queued'){if(!this.base.owner&&(this.options.sharedTransit?this.book.request(this.owner,['walkway',a.seat]):this.book.acquire(this.owner,['walkway',a.seat]))){this.base.owner=this.owner;this.enter('stand');}else if(this.elapsed>=(this.options.waitLimit??6)){this.reason='좌석·통로 이용 불가 · 책상에서 대기';this.finish(false);}return;}
+  if(this.stage==='stand'&&this.elapsed>=2){if(this.returning)this.beginHome([a.route[0]],0);else{this.route=new Route(a.route,0,this.options.routeMotion);this.enter('out');}return;}
   if(this.stage==='out'||this.stage==='home'){
    this.route.tick(dt);
    if(this.stage==='out'&&this.returning){this.settleStart=this.route.state();this.homePoints=this.route.reversePoints();this.enter('settle');return;}
@@ -29,7 +30,7 @@ export class SofaScheduler {
   else if(this.stage==='align'&&this.elapsed>=.7){if(this.returning)this.beginHome(a.route.toReversed(),0);else this.enter('back');}
   else if(this.stage==='back'&&this.elapsed>=.8){this.enter(this.returning?'forward':'sit');}
   else if(this.stage==='sit'&&this.elapsed>=2.6)this.enter(this.returning?'rise':'rest');
-  else if(this.stage==='rest'&&(this.returning||this.elapsed>=10))this.enter('rise');
+  else if(this.stage==='rest'&&(this.returning||this.elapsed>=(this.options.restDuration??10))&&(!this.options.canDepart||this.options.canDepart())&&(!this.options.sharedTransit||this.book.request(this.owner,['walkway'],0)))this.enter('rise');
   else if(this.stage==='rise'&&this.elapsed>=2.6)this.enter('forward');
   else if(this.stage==='forward'&&this.elapsed>=.8)this.beginHome(a.route.toReversed(),0);
   else if(this.stage==='deskTurn'&&this.elapsed>=.7)this.enter('deskSit');
@@ -45,8 +46,8 @@ export class SofaScheduler {
   if(this.stage==='deskSit')return cyclePose(19+Math.min(2,t));
   return cyclePose(0);
  }
- pose(){const p=this.rawPose(),a=this.anchors,r=a.rug;if(p.feet&&r)p.feet=p.feet.map(f=>{const x=f.position[0]+a.stationOrigin[0],z=f.position[2]+a.stationOrigin[2],height=((x-r.x)/r.rx)**2+((z-r.z)/r.rz)**2<=1?r.top:0;return {...f,position:[f.position[0],f.position[1]+height,f.position[2]]};});return p;}
- state(id){if(id==='nara'&&this.stage!=='idle'&&this.stage!=='queued'){const pose=this.pose();return{action:pose.action,time:this.elapsed,pose,returning:this.returning,basePose:this.vm.actors?.find(a=>a.agentId===id)?.pose??'idle'};}if(id==='nara'&&(this.vm.actors?.find(a=>a.agentId===id)?.pose??'idle')==='idle')return{action:'idle',time:this.time};return this.base.state(id);}
- diagnostics(){const d=this.base.diagnostics();return{...d,time:this.time,reservation:this.base.owner,actors:{...d.actors,nara:{...d.actors.nara,...this.state('nara'),pose:undefined}},sofa:{stage:this.stage,label:STAGE_NAMES[this.stage],returning:this.returning,reason:this.reason,completed:this.completed,interruptions:this.interruptions,claims:this.book.snapshot(),position:this.stage==='idle'||this.stage==='queued'?null:[this.pose().x,this.pose().z]}};}
- dispose(){this.disposed=true;this.finish(false);this.book.clear();this.base.dispose();}
+ pose(){const p=this.rawPose(),a=this.anchors,r=a.rug;if(p.feet&&r)p.feet=p.feet.map(f=>{const x=f.position[0]+a.stationOrigin[0],z=f.position[2]+a.stationOrigin[2],height=Math.max(0,...(a.surfaces??[r]).map(surface=>((x-surface.x)/surface.rx)**2+((z-surface.z)/surface.rz)**2<=1?surface.top:0));return {...f,position:[f.position[0],f.position[1]+height,f.position[2]]};});return p;}
+ state(id){if(id===this.actorId&&this.stage!=='idle'&&this.stage!=='queued'){const pose=this.pose();return{action:pose.action,time:this.elapsed,pose,returning:this.returning,basePose:this.vm.actors?.find(a=>a.agentId===id)?.pose??'idle'};}if(id===this.actorId&&(this.vm.actors?.find(a=>a.agentId===id)?.pose??'idle')==='idle')return{action:'idle',time:this.time};return this.base.state(id);}
+ diagnostics(){const d=this.base.diagnostics();return{...d,time:this.time,reservation:this.base.owner,actors:{...d.actors,[this.actorId]:{...d.actors[this.actorId],...this.state(this.actorId),pose:undefined}},sofa:{stage:this.stage,label:STAGE_NAMES[this.stage],returning:this.returning,reason:this.reason,completed:this.completed,interruptions:this.interruptions,claims:this.book.snapshot(),position:this.stage==='idle'||this.stage==='queued'?null:[this.pose().x,this.pose().z]}};}
+ dispose(){this.disposed=true;this.finish(false);if(!this.options.book)this.book.clear();this.base.dispose();}
 }

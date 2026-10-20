@@ -1,0 +1,11 @@
+{
+  "activityFailure": {
+    "status": "기존 v6 준비 완료 · 안전 복구",
+    "modelVersion": 6,
+    "canvases": 1
+  },
+  "webgl": {
+    "status": "다섯 동료의 생활 동작 준비 완료",
+    "canvases": 1
+  }
+}

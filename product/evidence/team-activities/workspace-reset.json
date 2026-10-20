@@ -1,0 +1,127 @@
+{
+  "activities": {
+    "actors": {
+      "jun": {
+        "counts": {
+          "cup": 0,
+          "interruptions": 0,
+          "meeting": 0,
+          "sofa": 0
+        },
+        "cup": {
+          "cupCount": 1,
+          "done": 0,
+          "events": 0,
+          "handError": 0,
+          "owner": "desk",
+          "returning": false,
+          "state": "idle",
+          "time": 0
+        },
+        "kind": "desk",
+        "returning": false,
+        "slot": null,
+        "stage": "idle"
+      },
+      "leo": {
+        "counts": {
+          "cup": 0,
+          "interruptions": 0,
+          "meeting": 0,
+          "sofa": 0
+        },
+        "cup": {
+          "cupCount": 1,
+          "done": 0,
+          "events": 0,
+          "handError": 0,
+          "owner": "desk",
+          "returning": false,
+          "state": "idle",
+          "time": 0
+        },
+        "kind": "desk",
+        "returning": false,
+        "slot": null,
+        "stage": "idle"
+      },
+      "min": {
+        "counts": {
+          "cup": 0,
+          "interruptions": 0,
+          "meeting": 0,
+          "sofa": 0
+        },
+        "cup": {
+          "cupCount": 1,
+          "done": 0,
+          "events": 0,
+          "handError": 0,
+          "owner": "desk",
+          "returning": false,
+          "state": "idle",
+          "time": 0
+        },
+        "kind": "desk",
+        "returning": false,
+        "slot": null,
+        "stage": "idle"
+      },
+      "nara": {
+        "counts": {
+          "cup": 0,
+          "interruptions": 0,
+          "meeting": 0,
+          "sofa": 0
+        },
+        "cup": {
+          "cupCount": 1,
+          "done": 0,
+          "events": 0,
+          "handError": 0,
+          "owner": "desk",
+          "returning": false,
+          "state": "idle",
+          "time": 0
+        },
+        "kind": "desk",
+        "returning": false,
+        "slot": null,
+        "stage": "idle"
+      },
+      "sora": {
+        "counts": {
+          "cup": 0,
+          "interruptions": 0,
+          "meeting": 0,
+          "sofa": 0
+        },
+        "cup": {
+          "cupCount": 1,
+          "done": 0,
+          "events": 0,
+          "handError": 0,
+          "owner": "desk",
+          "returning": false,
+          "state": "idle",
+          "time": 0
+        },
+        "kind": "desk",
+        "returning": false,
+        "slot": null,
+        "stage": "idle"
+      }
+    },
+    "auto": true,
+    "cancelledMeetings": 0,
+    "claims": {},
+    "meeting": null,
+    "meetings": 0,
+    "time": 11.21749999999993,
+    "version": 2,
+    "violations": [],
+    "waiting": []
+  },
+  "canvases": 1,
+  "heading": "생활 동작 검수 공간"
+}

@@ -4,13 +4,14 @@ const angle=(a,b,u)=>a+Math.atan2(Math.sin(b-a),Math.cos(b-a))*u;
 export const SPEED=.45;
 // Each corner settles before a foot-led turn. Position is station-local, metres.
 export class Route {
-  constructor(points, yaw=0) {
+  constructor(points, yaw=0, motion={}) {
+    this.speed=motion.speed??SPEED;this.period=motion.period??1;
     this.points=points.map(p=>[...p]);this.time=0;this.parts=[];let at=0,heading=yaw;
     for(let i=1;i<points.length;i++) {
       const from=points[i-1],to=points[i],length=Math.hypot(to[0]-from[0],to[2]-from[2]);if(length<1e-5)continue;
       const next=Math.atan2(to[0]-from[0],to[2]-from[2]);
       this.parts.push({kind:'turn',start:at,duration:.7,from,to:from,yaw:heading,endYaw:next,index:i-1});at+=.7;
-      this.parts.push({kind:'walk',start:at,duration:length/SPEED,from,to,yaw:next,endYaw:next,index:i-1});at+=length/SPEED;heading=next;
+      this.parts.push({kind:'walk',start:at,duration:length/this.speed,from,to,yaw:next,endYaw:next,index:i-1});at+=length/this.speed;heading=next;
     }
     this.duration=at;this.endYaw=heading;
   }
@@ -27,12 +28,12 @@ export class Route {
       root.feet=[0,1].map(i=>{const phase=i===0?Math.min(1,u*2):Math.max(0,u*2-1),footYaw=angle(part.yaw,part.endYaw,ease(phase)),offset=i===0?-.10:.10,position=[root.x+Math.cos(footYaw)*offset,.085+.025*Math.sin(Math.PI*phase),root.z-Math.sin(footYaw)*offset];return {position,planted:phase===0||phase===1};});
     } else {
       root.hip=.80+.04*Math.max(1-ease(t/.25),ease((t-part.duration+.25)/.25));
-      const dir=[Math.sin(root.yaw),0,Math.cos(root.yaw)],at=s=>[part.from[0]+dir[0]*SPEED*Math.max(0,Math.min(part.duration,s)),0,part.from[2]+dir[2]*SPEED*Math.max(0,Math.min(part.duration,s))];
-      root.feet=[0,1].map(i=>{const phase=(t+i*.5)%1,strike=t-phase,a=side(i,at(strike)),b=side(i,at(strike+1));let position=a,planted=phase<.6;
+      const dir=[Math.sin(root.yaw),0,Math.cos(root.yaw)],at=s=>[part.from[0]+dir[0]*this.speed*Math.max(0,Math.min(part.duration,s)),0,part.from[2]+dir[2]*this.speed*Math.max(0,Math.min(part.duration,s))];
+      root.feet=[0,1].map(i=>{const phase=(t/this.period+i*.5)%1,strike=t-phase*this.period,a=side(i,at(strike)),b=side(i,at(strike+this.period));let position=a,planted=phase<.6;
         if(!planted){const v=(phase-.6)/.4;position=a.map((n,j)=>mix(n,b[j],ease(v)));position[1]+=.065*Math.sin(Math.PI*v);}
         if(t<.25){const v=ease(t/.25),initial=side(i,part.from);position=initial.map((n,j)=>mix(n,position[j],v));planted=false;}
         if(t>part.duration-.25){const v=ease((t-part.duration+.25)/.25),final=side(i,part.to);position=position.map((n,j)=>mix(n,final[j],v));planted=false;}
-        return {position,planted};});root.gaitTime=t;root.gaitFade=ease(t/.25)*(1-ease((t-part.duration+.25)/.25));
+        return {position,planted};});root.gaitTime=t/this.period;root.gaitFade=ease(t/.25)*(1-ease((t-part.duration+.25)/.25));
     }
     root.contact=root.feet.map(f=>f.planted);return root;
   }
