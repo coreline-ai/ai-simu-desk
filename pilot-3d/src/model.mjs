@@ -162,8 +162,8 @@ export function createOfficeModel({ includeJun = false } = {}) {
   for (const x of [-.155, .155]) sphere(head, `BobSide${x}`, .08, [x, -.055, -.008], "hair", [.55, 1.55, 1.2]);
   const fringe = sphere(head, "BobFringe", .14, [-.034, .11, .09], "hair", [1.05, .47, .65]); fringe.rotation.z = .13;
   for (const x of [-.059, .059]) {
-    sphere(head, `Eye${x}`, .013, [x, .014, .181], "hair", [.8, 1.15, .55]);
-    sphere(head, `EyeLight${x}`, .0038, [x - .002, .019, .188], "cream");
+    sphere(head, `NaraEye${x < 0 ? "L" : "R"}`, .013, [x, .014, .181], "hair", [.8, 1.15, .55]);
+    sphere(head, `NaraEyeLight${x < 0 ? "L" : "R"}`, .0038, [x - .002, .019, .188], "cream");
     box(head, `Brow${x}`, [.038, .008, .008], [x, .05, .171], "hair", .003);
     sphere(head, `Cheek${x}`, .025, [x * 1.45, -.026, .165], material(0xd99d82), [1, .6, .18]);
   }
@@ -181,19 +181,48 @@ export function createOfficeModel({ includeJun = false } = {}) {
   function quaternionTrack(name, times, eulers) {
     return new T.QuaternionKeyframeTrack(`${name}.quaternion`, times, eulers.flatMap(e => new T.Quaternion().setFromEuler(new T.Euler(...e)).toArray()));
   }
-  const idle = new T.AnimationClip("idle", 3.6, [
-    quaternionTrack("NaraHead", [0, 1.8, 3.6], [[0, -.025, 0], [.015, .025, 0], [0, -.025, 0]]),
-    quaternionTrack("NaraForearmL", [0, 3.6], [[0, 0, 0], [0, 0, 0]]),
-    quaternionTrack("NaraForearmR", [0, 3.6], [[0, 0, 0], [0, 0, 0]]),
-    new T.VectorKeyframeTrack("NaraTorso.scale", [0, 1.8, 3.6], [1, 1, 1, 1, 1.012, 1, 1, 1, 1]),
+  // Readable at the room camera: a quiet look-around and hand adjustment.
+  // Arm X stays negative so hands lift above the keyboard instead of entering it.
+  const idle = new T.AnimationClip("idle", 5.6, [
+    quaternionTrack("NaraHead", [0, 1.4, 2.8, 4.2, 5.6], [[.025, -.20, -.035], [.065, .04, .025], [.025, .22, .035], [-.025, .02, -.02], [.025, -.20, -.035]]),
+    quaternionTrack("NaraForearmL", [0, 1.4, 2.8, 4.2, 5.6], [[-.04, -.04, 0], [-.24, -.10, -.03], [-.09, -.04, 0], [-.04, .02, 0], [-.04, -.04, 0]]),
+    quaternionTrack("NaraForearmR", [0, 1.4, 2.8, 4.2, 5.6], [[-.10, .04, 0], [-.04, -.02, 0], [-.04, .04, 0], [-.22, .10, .03], [-.10, .04, 0]]),
+    new T.VectorKeyframeTrack("NaraTorso.scale", [0, 2.8, 5.6], [1, 1, 1, 1, 1.025, 1, 1, 1, 1]),
   ]);
   const typing = new T.AnimationClip("typing", .8, [
-    quaternionTrack("NaraHead", [0, .4, .8], [[.055, 0, 0], [.075, .012, 0], [.055, 0, 0]]),
-    quaternionTrack("NaraForearmL", [0, .2, .4, .6, .8], [[-.035, 0, 0], [.025, 0, 0], [-.035, 0, 0], [.025, 0, 0], [-.035, 0, 0]]),
-    quaternionTrack("NaraForearmR", [0, .2, .4, .6, .8], [[.025, 0, 0], [-.035, 0, 0], [.025, 0, 0], [-.035, 0, 0], [.025, 0, 0]]),
-    new T.VectorKeyframeTrack("NaraTorso.scale", [0, .4, .8], [1, 1, 1, 1, 1.005, 1, 1, 1, 1]),
+    quaternionTrack("NaraHead", [0, .4, .8], [[.09, -.035, -.015], [.14, .035, .015], [.09, -.035, -.015]]),
+    quaternionTrack("NaraForearmL", [0, .2, .4, .6, .8], [[-.22, -.02, -.02], [-.015, .02, 0], [-.22, -.02, -.02], [-.015, .02, 0], [-.22, -.02, -.02]]),
+    quaternionTrack("NaraForearmR", [0, .2, .4, .6, .8], [[-.015, -.02, 0], [-.22, .02, .02], [-.015, -.02, 0], [-.22, .02, .02], [-.015, -.02, 0]]),
+    new T.VectorKeyframeTrack("NaraTorso.scale", [0, .4, .8], [1, 1, 1, 1, 1.015, 1, 1, 1, 1]),
   ]);
-  let animations = [idle, typing];
+  const arms = (left, right) => [
+    quaternionTrack("NaraForearmL", [0, 1.4, 2.8], left),
+    quaternionTrack("NaraForearmR", [0, 1.4, 2.8], right),
+  ];
+  const thinking = new T.AnimationClip("thinking",2.8,[
+    quaternionTrack("NaraHead",[0,1.4,2.8],[[.02,-.15,.12],[-.07,.08,.18],[.02,-.15,.12]]),
+    ...arms([[-.32,-.06,-.05],[-.20,-.08,-.02],[-.32,-.06,-.05]],[[-.08,.04,0],[-.14,.08,.02],[-.08,.04,0]]),
+  ]);
+  const waiting = new T.AnimationClip("waiting",2.8,[
+    quaternionTrack("NaraHead",[0,1.4,2.8],[[-.13,.20,-.03],[-.10,.28,.03],[-.13,.20,-.03]]),
+    ...arms([[-.28,-.10,-.04],[-.23,-.06,-.02],[-.28,-.10,-.04]],[[-.28,.10,.04],[-.23,.06,.02],[-.28,.10,.04]]),
+  ]);
+  const success = new T.AnimationClip("success",1.4,[
+    quaternionTrack("NaraHead",[0,.35,.7,1.05,1.4],[[-.08,.08,0],[.18,.08,0],[-.08,.08,0],[.12,.08,0],[.02,0,0]]),
+    quaternionTrack("NaraForearmR",[0,.35,.7,1.05,1.4],[[-.05,0,0],[-.40,.12,.06],[-.32,.06,0],[-.40,.12,.06],[-.05,0,0]]),
+    quaternionTrack("NaraForearmL",[0,1.4],[[-.06,0,0],[-.06,0,0]]),
+  ]);
+  const error = new T.AnimationClip("error",1.4,[
+    quaternionTrack("NaraHead",[0,.35,.7,1.05,1.4],[[.03,0,0],[.06,-.20,.10],[.06,.20,-.10],[.06,-.12,.08],[.03,0,0]]),
+    quaternionTrack("NaraForearmL",[0,.7,1.4],[[-.04,0,0],[-.18,-.04,-.02],[-.04,0,0]]),
+    quaternionTrack("NaraForearmR",[0,.7,1.4],[[-.04,0,0],[-.18,.04,.02],[-.04,0,0]]),
+  ]);
+  const blinkTimes = [0,3.10,3.18,3.32,4.8];
+  const blink = new T.AnimationClip("blink",4.8,["L","R"].flatMap(side=>[
+    new T.VectorKeyframeTrack("NaraEye"+side+".scale",blinkTimes,[1,1,.06,1,1].flatMap(y=>[.8,1.15*y,.55])),
+    new T.VectorKeyframeTrack("NaraEyeLight"+side+".scale",blinkTimes,[1,1,.01,1,1].flatMap(y=>[1,y,1])),
+  ]));
+  let animations = [idle, typing, thinking, waiting, success, error, blink];
   if (includeJun) {
     // Reuse metre-scale furniture and the seated rig, with unique node bindings.
     const junWorkspace = workspace.clone(true);
@@ -218,7 +247,7 @@ export function createOfficeModel({ includeJun = false } = {}) {
     root.add(junWorkspace);
     root.userData.modelVersion = 2;
     root.userData.workspaces = { nara: WORKSPACE_ORIGIN, jun: JUN_WORKSPACE_ORIGIN };
-    animations = ["nara", "jun"].flatMap(id => [idle, typing].map(original => {
+    animations = ["nara", "jun"].flatMap(id => [idle, typing, thinking, waiting, success, error, blink].map(original => {
       const clip = original.clone(); clip.name = `${id}_${original.name}`;
       if (id === "jun") for (const track of clip.tracks) track.name = track.name.replace(/^Nara/, "Jun");
       return clip;

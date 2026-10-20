@@ -1,3 +1,4 @@
+import {createFakeAnswer,type SourceContext,type FakeAnswer} from "../domain/fake-answer.js";
 import { simulationFrame } from "../application/simulation.js";
 import { and, asc, desc, eq, gt, inArray, max } from "drizzle-orm";
 import { randomUUID, createHash } from "node:crypto";
@@ -16,7 +17,7 @@ type Task = typeof tasks.$inferSelect;
 async function event(db: Store, run: Run, kind: string, payload: Record<string, unknown> = {}) {
   await db.insert(runEvents).values({ id: randomUUID(), workspaceId: run.workspaceId, runId: run.id, seq: run.version, kind, payload: { status: run.status, ...payload } });
 }
-async function change(tx: Tx, run: Run, status: Run["status"], kind: string, patch: Partial<Pick<Run, "output" | "stage" | "note" | "externalRef" | "simulatedStartedAt">> = {}, payload: Record<string, unknown> = {}) {
+async function change(tx: Tx, run: Run, status: Run["status"], kind: string, patch: Partial<Pick<Run, "output" | "stage" | "note" | "externalRef" | "simulatedStartedAt" | "phase">> = {}, payload: Record<string, unknown> = {}) {
   if (!mayTransition(run.status, status)) throw new AppError(409, "업무 상태가 바뀌었습니다. 다시 확인해 주세요.", "STATE_CONFLICT");
   const [next] = await tx.update(runs).set({ ...patch, status, version: run.version + 1, updatedAt: new Date(), finishedAt: TERMINAL.includes(status) ? new Date() : null }).where(and(eq(runs.id, run.id), eq(runs.version, run.version))).returning();
   if (!next) throw new AppError(409, "업무 상태가 바뀌었습니다.", "STATE_CONFLICT");
@@ -32,8 +33,9 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
     if (permission === "approve" ? access.role !== "owner" : !canControlRun(access.role,run.requestedBy,userId)) throw new AppError(403,"이 업무를 조작할 권한이 없습니다.","ROLE_FORBIDDEN");
     return run;
   }
-  async function startInTransaction(tx: Tx, userId: string, workspaceId: string, value: unknown, requestKey: string | undefined, existingTask?: Task) {
+  async function startInTransaction(tx: Tx, userId: string, workspaceId: string, value: unknown, requestKey: string | undefined, existingTask?: Task, retryAnswer?:FakeAnswer|null) {
     const input = parseInput(value), key = validRequestKey(requestKey);
+    if(input.mode==="handoff")input.approvalRequired=true;
     const hash = createHash("sha256").update(JSON.stringify({ ...input, retryTask: existingTask?.id ?? null })).digest("hex");
     const access = await member(tx, userId, workspaceId);
     if (!canStartRun(access.role)) throw new AppError(403,"보기 전용 사용자는 업무를 요청할 수 없습니다.","ROLE_FORBIDDEN");
@@ -41,12 +43,38 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
     if (old) { if (old.requestedBy !== userId || old.requestHash !== hash) throw new AppError(409, "같은 요청 키에 다른 업무를 보낼 수 없습니다.", "KEY_CONFLICT"); return old; }
     const [active] = await tx.select({ id: runs.id }).from(runs).where(and(eq(runs.workspaceId, workspaceId), inArray(runs.status, [...ACTIVE]))).limit(1);
     if (active) throw new AppError(409, "진행 중인 업무를 먼저 마쳐 주세요.", "RUN_ACTIVE");
-    const task = existingTask ?? (await tx.insert(tasks).values({ id: randomUUID(), workspaceId, authorId: userId, prompt: input.prompt, agentId: input.agentId, approvalRequired: input.approvalRequired }).returning())[0];
-    const [run] = await tx.insert(runs).values({ id: randomUUID(), workspaceId, taskId: task.id, requestedBy: userId, requestKey: key, requestHash: hash, status: input.approvalRequired ? "awaiting_approval" : "queued", scenario: input.scenario, stage: input.approvalRequired ? "실행 승인 대기" : "실행 대기" }).returning();
+    let context:SourceContext|undefined=existingTask?.sourceContext??undefined;
+    if(input.sourceRunId&&!existingTask){
+      const [source]=await tx.select().from(runs).where(and(eq(runs.id,input.sourceRunId),eq(runs.workspaceId,workspaceId)));
+      if(!source)throw new AppError(404,"같은 공간에서 접근 가능한 원본 결과를 선택해 주세요.","SOURCE_NOT_FOUND");
+      if(source.status!=="succeeded"||!source.output)throw new AppError(400,"완료된 답변만 수정하거나 인계할 수 있습니다.","SOURCE_NOT_READY");
+      const [original]=await tx.select().from(tasks).where(eq(tasks.id,source.taskId));
+      if(input.mode==="handoff"&&original.agentId===input.agentId)throw new AppError(400,"인계할 다른 동료를 선택해 주세요.","SAME_AGENT");
+      context={runId:source.id,version:source.version,agentId:original.agentId,prompt:original.prompt,output:source.output.slice(0,4000),truncated:source.output.length>4000,
+        ...(source.generatedAnswer?{conditions:{days:source.generatedAnswer.analysis.days,deadline:source.generatedAnswer.analysis.deadline,people:source.generatedAnswer.analysis.people,budget:source.generatedAnswer.analysis.budget,freeOnly:source.generatedAnswer.analysis.freeOnly,exclusions:source.generatedAnswer.analysis.exclusions}}:{}),
+        ...(source.generatedAnswer?.text===source.output?{body:source.generatedAnswer.body.slice(0,4000)}:{}),mode:input.mode!};
+    }
+    const task = existingTask ?? (await tx.insert(tasks).values({ id: randomUUID(), workspaceId, authorId: userId, sourceContext:context??null, prompt: input.prompt, agentId: input.agentId, approvalRequired: input.approvalRequired }).returning())[0];
+    const runId=randomUUID(), job:AgentJob={runId,prompt:task.prompt,agentId:task.agentId,scenario:input.scenario,context};
+    const generatedAnswer=retryAnswer??createFakeAnswer(job);
+    if(simulation&&!retryAnswer)generatedAnswer.text=simulation.answer(job);
+    const [run] = await tx.insert(runs).values({ id: runId, generatedAnswer, workspaceId, taskId: task.id, requestedBy: userId, requestKey: key, requestHash: hash, status: input.approvalRequired ? "awaiting_approval" : "queued", scenario: input.scenario, stage: input.approvalRequired ? "실행 승인 대기" : "실행 대기" }).returning();
     if (input.approvalRequired) await tx.insert(approvals).values({ id: randomUUID(), runId: run.id, workspaceId, status: "pending" });
     await event(tx, run, input.approvalRequired ? "approval_requested" : "created", { actorId:userId }); return run;
   }
   const startRun = (userId: string, workspaceId: string, value: unknown, key: string | undefined) => db.transaction(tx => startInTransaction(tx,userId,workspaceId,value,key));
+  async function frozenAnswer(tx:Tx,run:Run,task:Task) {
+    if(run.generatedAnswer)return run.generatedAnswer;
+    const job:AgentJob={runId:run.id,prompt:task.prompt,agentId:task.agentId,scenario:run.scenario,context:task.sourceContext??undefined};
+    const answer=createFakeAnswer(job);
+    if(simulation)answer.text=simulation.answer(job);
+    if(run.output&&!answer.text.startsWith(run.output)) {
+      await change(tx,run,"failed","failed",{note:"이전 생성 규칙의 실행입니다. 저장된 답변은 보존했고 새 실행으로 재시도할 수 있습니다."});
+      return null;
+    }
+    await tx.update(runs).set({generatedAnswer:answer}).where(eq(runs.id,run.id));
+    return answer;
+  }
   async function advance(tx:Tx,workspaceId:string) {
     if(!simulation)return;
     const now=simulation.now?.()??Date.now();
@@ -55,9 +83,9 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
     if(run.status==="cancel_requested"){await change(tx,run,"cancelled","cancelled",{stage:"취소됨",note:"사용자가 취소를 요청했습니다."});return;}
     if(run.status==="queued"){await change(tx,run,"running","started",{simulatedStartedAt:new Date(now),stage:"요청 분석",externalRef:`fake:${run.id}`});return;}
     const [task]=await tx.select().from(tasks).where(eq(tasks.id,run.taskId));
-    const answer=simulation.answer({runId:run.id,prompt:task.prompt,agentId:task.agentId,scenario:run.scenario});
-    const frame=simulationFrame(answer,run.scenario,Math.max(0,now-(run.simulatedStartedAt??run.updatedAt).getTime()),simulation.delayMs);
-    if(frame.status!==run.status||frame.output!==run.output||frame.stage!==run.stage)await change(tx,run,frame.status,frame.status==="succeeded"?"completed":frame.status==="failed"?"failed":"delta",frame);
+    const answer=await frozenAnswer(tx,run,task);if(!answer)return;
+    const frame=simulationFrame(answer.text,run.scenario,Math.max(0,now-(run.simulatedStartedAt??run.updatedAt).getTime()),simulation.delayMs,800);
+    if(frame.status!==run.status||frame.output!==run.output||frame.stage!==run.stage||frame.phase!==run.phase)await change(tx,run,frame.status,frame.status==="succeeded"?"completed":frame.status==="failed"?"failed":"delta",frame);
   }
   async function snapshot(userId: string, workspaceId: string) {
     return db.transaction(async tx => {
@@ -67,7 +95,7 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
       const rows = await tx.select({ run: runs, task: tasks, requestedByName:user.name }).from(runs).innerJoin(tasks, eq(runs.taskId, tasks.id)).innerJoin(user,eq(runs.requestedBy,user.id)).where(eq(runs.workspaceId, workspaceId)).orderBy(desc(runs.createdAt), desc(runs.id)).limit(20);
       const [latest] = await tx.select({ cursor: max(runEvents.cursor) }).from(runEvents).where(eq(runEvents.workspaceId, workspaceId));
       const people = await tx.select({ userId:members.userId,name:user.name,role:members.role }).from(members).innerJoin(user,eq(members.userId,user.id)).where(eq(members.workspaceId,workspaceId)).orderBy(asc(user.name),asc(user.id));
-      return { workspace, role:access.role, members:people, runs: rows.map(({ run, task, requestedByName }) => ({ ...run, prompt: task.prompt, agentId: task.agentId, approvalRequired: task.approvalRequired, requestedByName })), cursor: latest.cursor ?? 0 };
+      return { workspace, role:access.role, members:people, runs: rows.map(({ run, task, requestedByName }) => { const {generatedAnswer,...safe}=run;return { ...safe, answerMeta:generatedAnswer?{version:generatedAnswer.version,analysis:generatedAnswer.analysis,checks:generatedAnswer.checks}:null, source:task.sourceContext?{runId:task.sourceContext.runId,version:task.sourceContext.version,agentId:task.sourceContext.agentId,prompt:task.sourceContext.prompt,mode:task.sourceContext.mode,truncated:task.sourceContext.truncated,preview:task.sourceContext.output.slice(0,240)}:null, prompt: task.prompt, agentId: task.agentId, approvalRequired: task.approvalRequired, requestedByName }; }), cursor: latest.cursor ?? 0 };
     });
   }
   async function presenceMembers(userId: string, workspaceId: string) {
@@ -109,7 +137,7 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
       const old = await ownedRun(tx,userId,id);
       if (!["failed", "cancelled"].includes(old.status)) throw new AppError(409, "실패하거나 취소한 업무만 재시도할 수 있습니다.");
       const [task] = await tx.select().from(tasks).where(eq(tasks.id,old.taskId));
-      return startInTransaction(tx,userId,old.workspaceId,{...task,scenario:"normal"},key,task);
+      return startInTransaction(tx,userId,old.workspaceId,{...task,...(task.sourceContext?{sourceRunId:task.sourceContext.runId,mode:task.sourceContext.mode}:{}),scenario:"normal"},key,task,old.generatedAnswer);
     });
   }
 
@@ -118,16 +146,17 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
       const [run] = await tx.select().from(runs).where(eq(runs.status, "queued")).orderBy(asc(runs.createdAt)).limit(1);
       if (!run) return null;
       const [task] = await tx.select().from(tasks).where(eq(tasks.id, run.taskId));
-      await change(tx, run, "running", "started", { stage: "요청 분석", externalRef: `fake:${run.id}` });
-      return { runId: run.id, prompt: task.prompt, agentId: task.agentId, scenario: run.scenario };
+      const answer=await frozenAnswer(tx,run,task);if(!answer)return null;
+      await change(tx, run, "running", "started", { stage: "요청 분석", phase:"analyze", externalRef: `fake:${run.id}` });
+      return { runId: run.id, prompt: task.prompt, agentId: task.agentId, scenario: run.scenario, answer,context:task.sourceContext??undefined };
     });
   }
-  async function progress(id: string, delta: string | null, stage?: string) {
+  async function progress(id: string, delta: string | null, stage?: string,phase?:import("../domain/fake-answer.js").AnswerPhase) {
     return db.transaction(async tx => {
       const [run] = await tx.select().from(runs).where(eq(runs.id, id));
       if (!run || run.status !== "running") return false;
       if (run.output.length + (delta?.length ?? 0) > 16000) throw new AgentFailure("OUTPUT_LIMIT");
-      await change(tx, run, "running", delta === null ? "progress" : "delta", { ...(delta === null ? {} : { output: run.output + delta }), ...(stage ? { stage } : {}) }, delta === null ? { stage } : { text: delta }); return true;
+      await change(tx, run, "running", delta === null ? "progress" : "delta", { ...(delta === null ? {} : { output: run.output + delta }), ...(stage ? { stage } : {}),...(phase?{phase}:{}) }, delta === null ? { stage } : { text: delta }); return true;
     });
   }
   async function finish(id: string, outcome: "succeeded" | "failed" | "cancelled", note = "", externalRef?: string) {

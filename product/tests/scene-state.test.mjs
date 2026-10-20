@@ -17,11 +17,19 @@ test("server run owner controls each actor independently of selected colleague a
 
 test("approval, queued, cancel request and terminal states do not type; reduced motion changes no run", () => {
   for (const status of ["awaiting_approval", "queued", "cancel_requested", "succeeded", "failed", "cancelled"]) {
-    assert.deepEqual(teamSceneState([{ agentId: "jun", status }]).actors.map(a => a.pose), ["idle", "idle"]);
+    assert.deepEqual(teamSceneState([{ agentId: "jun", status }]).actors.map(a => a.pose), ["idle", status==="queued"?"thinking":status==="awaiting_approval"?"waiting":"idle"]);
   }
   const run = { agentId: "jun", status: "running" };
   const paused = teamSceneState([run], "unknown", true);
   assert.equal(paused.motionPaused, true); assert.equal(paused.selectedAgent, "nara");
   assert.equal(paused.actors[1].pose, "typing"); assert.equal(run.status, "running");
   assert.deepEqual(teamSceneState().actors.map(a => a.pose), ["idle", "idle"]);
+});
+
+
+test("analysis and review phases think, composition types, and a terminal cue belongs to its actor",()=>{
+  for(const phase of ["analyze","review"])assert.equal(teamSceneState([{agentId:"nara",status:"running",phase}]).actors[0].pose,"thinking");
+  assert.equal(teamSceneState([{agentId:"nara",status:"running",phase:"compose"}]).actors[0].pose,"typing");
+  const vm=teamSceneState([],"jun",false,{nara:{pose:"success",cue:"run:success"}});
+  assert.equal(vm.actors[0].pose,"success");assert.equal(vm.actors[0].cue,"run:success");
 });

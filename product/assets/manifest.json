@@ -2,8 +2,8 @@
   "version": 2,
   "file": "studio-team-v2.glb",
   "format": "glTF 2.0 binary",
-  "bytes": 3985852,
-  "sha256": "c1ecc5792cfe4ec0734934457d92ae825a11125d12a12d8cd2a4275baa61f2ab",
+  "bytes": 4006260,
+  "sha256": "9a668919e892fae54235178e152e1dcf39f6204f605fde4a28ae4331ddb33f5f",
   "source": "../../pilot-3d/src/model.mjs",
   "provenance": "Original procedural geometry and node animation authored in this project. No third-party model or texture.",
   "libraryLicense": "Three.js MIT; see ../../pilot-3d/assets/THREE-LICENSE.txt",
@@ -39,7 +39,7 @@
   "animations": [
     {
       "name": "nara_idle",
-      "duration": 3.6,
+      "duration": 5.6,
       "tracks": 4
     },
     {
@@ -48,13 +48,63 @@
       "tracks": 4
     },
     {
+      "name": "nara_thinking",
+      "duration": 2.8,
+      "tracks": 3
+    },
+    {
+      "name": "nara_waiting",
+      "duration": 2.8,
+      "tracks": 3
+    },
+    {
+      "name": "nara_success",
+      "duration": 1.4,
+      "tracks": 3
+    },
+    {
+      "name": "nara_error",
+      "duration": 1.4,
+      "tracks": 3
+    },
+    {
+      "name": "nara_blink",
+      "duration": 4.8,
+      "tracks": 4
+    },
+    {
       "name": "jun_idle",
-      "duration": 3.6,
+      "duration": 5.6,
       "tracks": 4
     },
     {
       "name": "jun_typing",
       "duration": 0.8,
+      "tracks": 4
+    },
+    {
+      "name": "jun_thinking",
+      "duration": 2.8,
+      "tracks": 3
+    },
+    {
+      "name": "jun_waiting",
+      "duration": 2.8,
+      "tracks": 3
+    },
+    {
+      "name": "jun_success",
+      "duration": 1.4,
+      "tracks": 3
+    },
+    {
+      "name": "jun_error",
+      "duration": 1.4,
+      "tracks": 3
+    },
+    {
+      "name": "jun_blink",
+      "duration": 4.8,
       "tracks": 4
     }
   ],

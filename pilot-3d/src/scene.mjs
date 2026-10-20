@@ -1,4 +1,5 @@
 import * as T from "three";
+import { POSES, applyActorPoses } from "./animation.mjs";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
@@ -46,12 +47,12 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   scene.add(new T.AmbientLight(0xe6eee1, .28));
   const backdrop = new T.Mesh(new T.PlaneGeometry(200, 200), new T.MeshStandardMaterial({ color: 0xf4efe3, roughness: 1 }));
   backdrop.name = "StudioGround"; backdrop.rotation.x = -Math.PI / 2; backdrop.position.y = -.185; backdrop.receiveShadow = true; scene.add(backdrop);
-  let model = null, mixer = null, actions = {}, currentActions = {};
+  let model = null, mixer = null, actions = {}, currentActions = {}, consumedCues = {};
   let disposed = false, ready = false, lost = false, paused = false, quality = "auto", framing = "room";
   let lastTime = 0, lastStats = 0, sample = null, lastMetrics = {};
   let currentVM = { pose: "idle", motionPaused: false };
   const events = new AbortController();
-  const getStats = () => ({ ...lastMetrics, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, drawCalls: renderer.info.render.calls, triangles: renderer.info.render.triangles, pose: currentVM.pose, actors: Object.fromEntries(actorIds.map(id => [id, currentActions[id]?.getClip().name ?? null])), paused, measuring: Boolean(sample), pixelRatio: renderer.getPixelRatio(), canvas: [renderer.domElement.width, renderer.domElement.height] });
+  const getStats = () => ({ ...lastMetrics, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, drawCalls: renderer.info.render.calls, triangles: renderer.info.render.triangles, pose: currentVM.pose, animationTime: mixer?.time ?? 0, actors: Object.fromEntries(actorIds.map(id => [id, currentActions[id]?.getClip().name ?? null])), paused, measuring: Boolean(sample), pixelRatio: renderer.getPixelRatio(), canvas: [renderer.domElement.width, renderer.domElement.height] });
   function emitStats() { lastMetrics = getStats(); callbacks.onMetrics?.(lastMetrics); }
   function draw() { if (!disposed && ready && !lost) { renderer.render(scene, camera); } }
   function tick(now) {
@@ -101,15 +102,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   function applyViewModel(vm) {
     currentVM = vm; paused = vm.motionPaused;
     if (ready) {
-      if (paused) mixer.stopAllAction();
-      for (const id of actorIds) {
-        const pose = vm.actors?.find(actor => actor.agentId === id)?.pose ?? (id === "nara" ? vm.pose : "idle") ?? "idle";
-        const next = actions[id]?.[pose] ?? actions[id]?.idle, previous = currentActions[id];
-        if (!next) continue;
-        if (paused || !previous) next.reset().play();
-        else if (previous !== next) { previous.fadeOut(.22); next.reset().fadeIn(.22).play(); }
-        currentActions[id] = next;
-      }
+      applyActorPoses(actions, currentActions, actorIds, vm, consumedCues);
       if (paused) mixer.update(0);
       renderer.domElement.dataset.clips = JSON.stringify(Object.fromEntries(actorIds.map(id => [id, currentActions[id]?.getClip().name])));
     }
@@ -138,11 +131,21 @@ export function createStudioView(host, callbacks = {}, options = {}) {
     model = gltf.scene; scene.add(model);
     model.traverse(node => { if (node.isMesh) { node.castShadow = !/Wall|Window|DistantTree/.test(node.name); node.receiveShadow = true; } });
     mixer = new T.AnimationMixer(model);
-    actions = Object.fromEntries(actorIds.map(id => [id, Object.fromEntries(["idle", "typing"].map(pose => {
+    actions = Object.fromEntries(actorIds.map(id => [id, Object.fromEntries(POSES.map(pose => {
       const clip = gltf.animations.find(c => c.name === `${id}_${pose}` || (id === "nara" && c.name === pose));
       if (!clip) throw new Error("필수 3D 동작을 읽지 못했어요.");
       return [pose, mixer.clipAction(clip)];
     }))]));
+    for (const [index,id] of actorIds.entries()) {
+      const blink = gltf.animations.find(c=>c.name===id+"_blink" || (id==="nara" && c.name==="blink"));
+      if(blink) {const action=mixer.clipAction(blink).play();action.time=index*1.3;}
+    }
+    mixer.addEventListener("finished",event=>{
+      for(const id of actorIds) if(currentActions[id]===event.action) {
+        event.action.fadeOut(.25);
+        currentActions[id]=actions[id].idle.reset().fadeIn(.25).play();
+      }
+    });
     ready = true;
     lastMetrics.clips = gltf.animations.map(c => c.name);
     applyViewModel(currentVM);

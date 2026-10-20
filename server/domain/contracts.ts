@@ -4,9 +4,10 @@ export const ACTIVE: readonly RunStatus[] = ["awaiting_approval", "queued", "run
 export const TERMINAL: readonly RunStatus[] = ["succeeded", "failed", "cancelled"];
 export const AGENTS = ["nara", "jun"] as const;
 export type AgentId = typeof AGENTS[number];
-export interface TaskInput { prompt: string; agentId: AgentId; approvalRequired: boolean; scenario: "normal" | "failure" }
-export interface AgentJob { runId: string; prompt: string; agentId: AgentId; scenario: "normal" | "failure" }
-export type AgentEvent = { kind: "progress"; stage: string } | { kind: "delta"; text: string } | { kind: "completed"; externalRef: string };
+export interface TaskInput { sourceRunId?:string; mode?:"revise"|"handoff"; prompt: string; agentId: AgentId; approvalRequired: boolean; scenario: "normal" | "failure" }
+import type {SourceContext, FakeAnswer, AnswerPhase} from "./fake-answer.js";
+export interface AgentJob { context?:SourceContext; answer?:FakeAnswer; runId: string; prompt: string; agentId: AgentId; scenario: "normal" | "failure" }
+export type AgentEvent = { kind: "progress"; stage: string; phase?:AnswerPhase } | { kind: "delta"; text: string } | { kind: "completed"; externalRef: string };
 export interface AgentPort {
   readonly provider: "fake";
   execute(job: AgentJob, signal: AbortSignal): AsyncIterable<AgentEvent>;
@@ -23,7 +24,9 @@ export function parseInput(value: unknown): TaskInput {
   if (typeof v.prompt !== "string" || v.prompt.trim().length < 2 || v.prompt.trim().length > 2000) throw new AppError(400, "업무는 2~2000자로 입력해 주세요.");
   if (!AGENTS.includes(v.agentId as AgentId)) throw new AppError(400, "동료를 선택해 주세요.");
   if (typeof v.approvalRequired !== "boolean" || !["normal", "failure"].includes(String(v.scenario))) throw new AppError(400, "실행 설정을 확인해 주세요.");
-  return { prompt: v.prompt.trim(), agentId: v.agentId as AgentId, approvalRequired: v.approvalRequired, scenario: v.scenario as TaskInput["scenario"] };
+  if(v.sourceRunId!==undefined && (typeof v.sourceRunId!=="string" || !/^[0-9a-f-]{36}$/i.test(v.sourceRunId) || !["revise","handoff"].includes(String(v.mode))))throw new AppError(400,"원본 결과와 수정 방식을 확인해 주세요.");
+  if(v.mode!==undefined && v.sourceRunId===undefined)throw new AppError(400,"먼저 원본 결과를 선택해 주세요.");
+  return { ...(v.sourceRunId?{sourceRunId:v.sourceRunId as string,mode:v.mode as "revise"|"handoff"}:{}), prompt: v.prompt.trim(), agentId: v.agentId as AgentId, approvalRequired: v.approvalRequired, scenario: v.scenario as TaskInput["scenario"] };
 }
 export function validRequestKey(key: string | undefined): string {
   if (!key || !/^[A-Za-z0-9_-]{8,100}$/.test(key)) throw new AppError(400, "유효한 요청 키가 필요합니다.");

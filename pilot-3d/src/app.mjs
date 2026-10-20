@@ -1,8 +1,11 @@
 import { ACTIVE, STATUS_LABELS, createState, reduce, validateTask } from "../../demo/src/domain.mjs";
+import { createCueTracker } from "./animation.mjs";
 import { studioViewModel } from "./view-model.mjs";
 import { createStudioView } from "./scene.mjs";
 
 const $ = id => document.getElementById(id);
+const cues = createCueTracker();
+const viewModel = () => studioViewModel(state,motionPaused,cues.observe(state.currentRun ? [{...state.currentRun,agentId:state.currentRun.agentId??"nara"}] : []).nara);
 let state = createState(), view = null, timer = 0, timerKey = "", generation = 0;
 let motionPaused = matchMedia("(prefers-reduced-motion: reduce)").matches, motionOverridden = false;
 let mounts = 0, lifecycle = [], quality = "auto", closeup = false;
@@ -20,7 +23,7 @@ function schedule() {
 }
 function render() {
   const run = state.currentRun, active = Boolean(run && ACTIVE.has(run.status));
-  const vm = studioViewModel(state, motionPaused);
+  const vm = viewModel();
   view?.setViewModel(vm);
   $("stage").dataset.pose = vm.pose;
   $("actor-label").textContent = vm.label;
@@ -92,7 +95,7 @@ function mountScene() {
       onStatus: status,
       onSelect: () => { $("selection-message").textContent = "나라를 선택했어요. 오른쪽 업무 패널에서 일을 맡겨보세요."; },
     });
-    view.setQuality(quality); view.resetCamera(closeup); view.setViewModel(studioViewModel(state, motionPaused));
+    view.setQuality(quality); view.resetCamera(closeup); view.setViewModel(viewModel());
   } catch { status("error"); }
 }
 $("task-form").addEventListener("submit", e => { e.preventDefault(); start(); });

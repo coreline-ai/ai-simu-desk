@@ -18,7 +18,7 @@ test('request-driven Fake AI survives a new app instance, preserves approval and
     const input={prompt:'서버리스 개발 계획 검토',agentId:'jun',approvalRequired:true,scenario:'normal'};
     const run=await s.startRun('simulation-user',space.id,input,'simulation-approval-key');
     time+=10000;assert.equal((await s.snapshot('simulation-user',space.id)).runs[0].status,'awaiting_approval');
-    await s.approve('simulation-user',run.id,run.version,true);await s.events('simulation-user',space.id,0);time+=400;
+    await s.approve('simulation-user',run.id,run.version,true);await s.events('simulation-user',space.id,0);time+=1200;
     let snap=await s.snapshot('simulation-user',space.id);assert.equal(snap.runs[0].status,'running');assert.ok(snap.runs[0].output.length>0);
     s=make();time+=100000;snap=await s.snapshot('simulation-user',space.id);assert.equal(snap.runs[0].status,'succeeded');assert.equal(snap.runs[0].output,composeFakeAnswer({runId:run.id,prompt:input.prompt,agentId:'jun',scenario:'normal'}));
     const failed=await s.startRun('simulation-user',space.id,{...input,approvalRequired:false,scenario:'failure'},'simulation-failure-key');await s.snapshot('simulation-user',space.id);time+=2000;

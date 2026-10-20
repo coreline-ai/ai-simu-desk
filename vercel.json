@@ -16,6 +16,10 @@
     {
       "source": "/api/:path*",
       "destination": "/api/index"
+    },
+    {
+      "source": "/start",
+      "destination": "/start.html"
     }
   ],
   "headers": [

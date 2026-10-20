@@ -11,10 +11,10 @@ test("3D pose follows the run owner and running state; pausing changes no busine
   state = reduce(state, { type: "START", task: "기획 정리", scenario: "approval", runId: "r", requestKey: "q", now: 0 });
   for (let step = 0; step < 4; step++) {
     state = reduce(state, { type: "ADVANCE", runId: "r", expectedStep: state.currentRun.step, now: step });
-    assert.equal(studioViewModel(state).pose, state.currentRun.status === "running" ? "typing" : "idle");
+    assert.equal(studioViewModel(state).pose, state.currentRun.status === "running" ? "typing" : state.currentRun.status==="awaiting_approval"?"waiting":state.currentRun.status==="queued"?"thinking":"idle");
   }
   assert.equal(state.currentRun.status, "awaiting_approval");
-  assert.equal(studioViewModel(state).pose, "idle");
+  assert.equal(studioViewModel(state).pose, "waiting");
   const snapshot = JSON.stringify(state);
   assert.equal(studioViewModel(state, true).motionPaused, true);
   assert.equal(JSON.stringify(state), snapshot);

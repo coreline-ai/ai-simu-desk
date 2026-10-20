@@ -1,5 +1,6 @@
 import { pgTable, text, timestamp, boolean, uniqueIndex, index, integer, bigint, bigserial, jsonb, primaryKey, check } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
+import type {FakeAnswer,AnswerPhase,SourceContext} from "../domain/fake-answer.js";
 import type { AgentId, RunStatus } from "../domain/contracts.js";
 import type { InviteRole, MemberRole } from "../domain/collaboration.js";
 
@@ -42,7 +43,7 @@ export const workspaceInvites = pgTable("workspace_invites", {
 }, t => [index("invites_workspace_idx").on(t.workspaceId)]);
 export const tasks = pgTable("tasks", {
   id: text("id").primaryKey(), workspaceId: text("workspace_id").notNull().references(() => workspaces.id),
-  authorId: text("author_id").notNull().references(() => user.id), prompt: text("prompt").notNull(),
+  authorId: text("author_id").notNull().references(() => user.id), sourceContext:jsonb("source_context").$type<SourceContext>(), prompt: text("prompt").notNull(),
   agentId: text("agent_id").$type<AgentId>().notNull(), approvalRequired: boolean("approval_required").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
@@ -54,6 +55,8 @@ export const runs = pgTable("runs", {
   output: text("output").notNull().default(""), stage: text("stage").notNull().default("요청 접수"), note: text("note").notNull().default(""),
   provider: text("provider").notNull().default("fake"), externalRef: text("external_ref"),
   scenario: text("scenario").$type<"normal" | "failure">().notNull(),
+  generatedAnswer: jsonb("generated_answer").$type<FakeAnswer>(),
+  phase: text("phase").$type<AnswerPhase>().notNull().default("analyze"),
   simulatedStartedAt: timestamp("simulated_started_at", { withTimezone: true }),
   finishedAt: timestamp("finished_at", { withTimezone: true }), ...dates(),
 }, t => [

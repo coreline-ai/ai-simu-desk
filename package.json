@@ -18,7 +18,7 @@
     "db:backup": "node --env-file-if-exists=.env.local --import tsx scripts/backup-db.ts backup",
     "db:restore": "node --env-file-if-exists=.env.local --import tsx scripts/backup-db.ts restore",
     "serve:demos": "node scripts/serve-demos.mjs",
-    "check:product": "node --check product/src/app.mjs && node --check product/src/scene-state.mjs && node --check product/src/workspace-state.mjs && node --check product/src/workspaces.mjs && node --check product/src/presence.mjs && node --check scripts/build-product.mjs && node --check scripts/build-team.mjs && node --check scripts/serve-demos.mjs && node --check scripts/setup-local.mjs && node --check scripts/collaboration-smoke.mjs && node --check scripts/presence-smoke.mjs && node --check scripts/build-client.mjs && node --check scripts/build-vercel.mjs",
+    "check:product": "node --check product/src/app.mjs && node --check product/src/followups.mjs && node --check product/src/answer-view.mjs && node --check product/src/scene-state.mjs && node --check product/src/workspace-state.mjs && node --check product/src/workspaces.mjs && node --check product/src/presence.mjs && node --check scripts/build-product.mjs && node --check scripts/build-team.mjs && node --check scripts/serve-demos.mjs && node --check scripts/setup-local.mjs && node --check scripts/collaboration-smoke.mjs && node --check scripts/presence-smoke.mjs && node --check scripts/build-client.mjs && node --check scripts/build-vercel.mjs && node --check scripts/build-library.mjs",
     "build:team": "node scripts/build-team.mjs",
     "build:vercel": "node scripts/build-vercel.mjs",
     "vercel-build": "npm run db:migrate && npm run build:vercel",

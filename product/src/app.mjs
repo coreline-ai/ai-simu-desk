@@ -1,3 +1,6 @@
+import { renderAnswer } from "./answer-view.mjs";
+import { followupDraft } from "./followups.mjs";
+import { createCueTracker } from "../../pilot-3d/src/animation.mjs";
 import { createStudioView } from "../../pilot-3d/src/scene.mjs";
 import { ACTIVE } from "../../server/domain/contracts.ts";
 import { AGENT_NAMES, RUN_LABELS as labels, teamSceneState } from "./scene-state.mjs";
@@ -6,6 +9,8 @@ import { createWorkspacePanel } from "./workspaces.mjs";
 import { workspacePresentation, acceptsWorkspaceSnapshot } from "./workspace-state.mjs";
 
 const $ = id => document.getElementById(id);
+const sceneCues = createCueTracker();
+let authBusy = false, followupSource=null;
 let signup = false, identity = null, snapshot = null, selectedId = null, busy = false;
 let presenceStarted=false;
 let workspaceId = null, spaces = [], followLive = true, spaceLoading = false;
@@ -28,10 +33,11 @@ const presence = createPresenceClient({request:api,onChange:data=>workspacePanel
   if(!navigator.sendBeacon(path,new Blob([json],{type:"application/json"}))) void fetch(path,{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:json,keepalive:true}).catch(()=>{});
 }});
 function invalidateWorkspace() {
+  sceneCues.reset(); followupSource=null;
   presence.stop();presenceStarted=false;
   epoch++; requests.abort(); requests = new AbortController(); clearTimeout(poll); poll=0;
   snapshot=null; selectedId=null; cursor=0; pending=null; retryRequest=null; historyKey=""; busy=false; followLive=true;
-  $("workspace-content").hidden=true; $("answer").textContent="첫 업무를 맡기면 답변이 여기에 쌓여요.";
+  $("workspace-content").hidden=true; renderAnswer($("answer"),"첫 업무를 맡기면 답변이 여기에 쌓여요.");
   $("history-list").replaceChildren(); $("task").value=""; $("task-error").hidden=true;
   $("answer").dataset.runId=""; $("answer-prompt").textContent=""; $("answer-prompt").hidden=true; $("run-requester").textContent=""; $("history-count").textContent="0개"; $("shared-live").textContent=""; $("run-title").textContent="업무를 불러오고 있어요"; $("run-detail").textContent="";
   renderSceneState();
@@ -41,8 +47,9 @@ function resetSession() {
   sceneEpoch++; scene?.dispose(); scene=null; identity=null; $("workspace-loading").hidden=true;
 }
 function showLogin(message = "") {
+  $("guest-session-note").hidden=true; $("guest-error").hidden=true;
   resetSession(); $("studio-view").hidden = true; $("login-view").hidden = false; $("signout").hidden = true; $("signed-user").hidden = true;
-  $("auth-error").textContent = message; $("auth-error").hidden = !message; $("auth-submit").disabled = false;
+  $("auth-error").textContent = message; $("auth-error").hidden = !message; setAuthBusy(false);
 }
 async function handle(error, ticket=epoch) {
   if (ticket!==epoch || error.name === "AbortError") return;
@@ -59,7 +66,7 @@ async function handle(error, ticket=epoch) {
 function current() { return snapshot && identity ? workspacePresentation(snapshot,identity.user.id,selectedId,followLive).run : null; }
 function renderSceneState() {
   const active = snapshot?.runs.find(r => ACTIVE.includes(r.status));
-  const vm = teamSceneState(snapshot?.runs, $("agent").value, motionPaused);
+  const vm = teamSceneState(snapshot?.runs, $("agent").value, motionPaused, sceneCues.observe(snapshot?.runs));
   const selected = vm.actors.find(actor => actor.agentId === vm.selectedAgent);
   scene?.setViewModel(vm);
   for (const actor of vm.actors) { $("stage").dataset[`${actor.agentId}Pose`] = actor.pose; $(`${actor.agentId}-live`).textContent=`${AGENT_NAMES[actor.agentId]} · ${actor.label}`; }
@@ -78,15 +85,28 @@ function render() {
   $("task-form").hidden=!presentation.canStart; $("read-only-note").hidden=presentation.canStart;
   $("task-title").textContent=presentation.canStart ? `${agentName}${agentName === "준" ? "과" : "와"} 함께하기 ✧` : "업무 함께 보기 ✧";
   const live=presentation.active;
-  $("shared-live").textContent=live ? `${AGENT_NAMES[live.agentId]} · ${labels[live.status]} · 요청 ${live.requestedByName}` : snapshot.workspace.kind==="shared" ? "공동 공간의 업무·승인·답변을 참여자와 함께 확인해요." : "이곳의 업무는 나만 확인할 수 있어요.";
+  $("shared-live").textContent=live ? `${AGENT_NAMES[live.agentId]} · ${labels[live.status]} · 요청 ${live.requestedByName}` : snapshot.workspace.kind==="shared" ? "공동 공간의 업무·승인·답변을 참여자와 함께 확인해요." : identity.user.isGuest ? "공용 체험 계정으로 접속한 게스트가 업무와 답변을 함께 확인해요." : "이곳의 업무는 나만 확인할 수 있어요.";
   $("live-run").hidden=!live || run?.id===live.id;
   $("run-requester").hidden=!run; $("run-requester").textContent=run ? `요청한 사람 · ${run.requestedByName}` : "";
   $("start").textContent = busy ? "요청 확인 중…" : active ? "진행 중인 업무가 있어요" : `${agentName}에게 업무 맡기기 ↗`;
   for (const id of ["start", "task", "scenario", "require-approval"]) $(id).disabled = busy || active || !presentation.canStart;
-  $("agent").disabled = busy;
+  $("agent").disabled = busy || followupSource?.mode==="handoff";
+  $("followup-context").hidden=!followupSource;
+  $("followup-description").textContent=followupSource?((followupSource.mode==="handoff"?"인계":"수정")+" 원본 · "+AGENT_NAMES[followupSource.sourceAgent]+" · v"+followupSource.sourceVersion+"\n"+followupSource.sourcePrompt+(followupSource.mode==="handoff"?"\n인계 업무는 승인 후 실행됩니다.":"")):"";
+  if(followupSource?.mode==="handoff"){$("require-approval").checked=true;$("require-approval").disabled=true;}
+  $("followup-tools").hidden=run?.status!=="succeeded"||!presentation.canStart;
+  for(const id of ["revise-lines","revise-table","handoff-result"])$(id).disabled=busy||active;
+  $("handoff-result").textContent=(run?.agentId==="nara"?"준":"나라")+"에게 인계 검토하기 ↗";
+  $("answer-source").hidden=!run?.source;
+  $("answer-source-label").textContent=run?.source?AGENT_NAMES[run.source.agentId]+" · v"+run.source.version+" · "+(run.source.mode==="handoff"?"인계":"수정")+"\n"+run.source.prompt+(run.source.truncated?"\n긴 원본의 앞 4,000자를 기준으로 작업했습니다.":""):"";
+  $("answer-source-preview").textContent=run?.source?.preview??"";
   $("character-count").textContent = `${$("task").value.length} / 2000`;
   $("run-status").textContent = run ? `${run.agentId === "nara" ? "나라" : "준"} · ${labels[run.status]}` : "READY WHEN YOU ARE";
   $("run-title").textContent = run ? labels[run.status] : "새 업무를 기다리고 있어요";
+  const parsed=run?.answerMeta?.analysis;
+  const conditions=parsed?[parsed.deadline?parsed.deadline:null,parsed.people?parsed.people+"명":null,parsed.freeOnly?"무료 조건":parsed.budget,parsed.count?parsed.count+"개 항목":null,parsed.lines?parsed.lines+"줄":null].filter(Boolean):[];
+  $("recognized-conditions").hidden=!conditions.length;
+  $("recognized-conditions").textContent="반영한 조건 · "+conditions.join(" / ");
   $("run-detail").textContent = run ? run.note || run.stage : "요청한 업무의 진행 상황을 여기에 보여드릴게요.";
   $("progress-fill").style.width = !run ? "0%" : ["succeeded", "failed", "cancelled"].includes(run.status) ? "100%" : run.status === "awaiting_approval" ? "8%" : run.output ? "75%" : "30%";
   $("approve").hidden = $("decline").hidden = run?.status !== "awaiting_approval" || !presentation.canApprove;
@@ -95,7 +115,7 @@ function render() {
   for (const id of ["approve", "decline", "cancel", "retry"]) $(id).disabled = busy || (id === "cancel" && run?.status === "cancel_requested");
   $("answer-status").textContent = run ? labels[run.status] : "저장된 답변";
   $("answer-prompt").textContent = run ? `요청 · ${run.prompt}` : ""; $("answer-prompt").hidden = !run;
-  $("answer").textContent = run?.output || (run?.status === "awaiting_approval" ? "승인하면 Fake AI가 답변 작성을 시작해요." : run && ACTIVE.includes(run.status) ? "답변을 준비하고 있어요…" : "첫 업무를 맡기면 답변이 여기에 쌓여요.");
+  renderAnswer($("answer"),run?.output || (run?.status === "awaiting_approval" ? "승인하면 Fake AI가 답변 작성을 시작해요." : run && ACTIVE.includes(run.status) ? "답변을 준비하고 있어요…" : "첫 업무를 맡기면 답변이 여기에 쌓여요."));
   $("answer").dataset.runId = run?.id ?? "";
   $("history-count").textContent = `${snapshot.runs.length}개`;
   $("history-empty").hidden = snapshot.runs.length > 0;
@@ -185,7 +205,7 @@ function mountScene() {
   } catch { $("fallback").hidden = false; $("scene-state").textContent = "2D 대체 화면"; }
 }
 async function enter(me) {
-  resetSession(); identity = me;
+  resetSession(); identity = me; $("guest-session-note").hidden=!me.user.isGuest;
   $("login-view").hidden = true; $("studio-view").hidden = false; $("signout").hidden = false; $("signed-user").hidden = false; $("signed-user").textContent = `${me.user.name}님`;
   $("auth-error").hidden = true; $("password").value = ""; $("task-error").hidden = true;
   try { spaces=await workspacePanel.loadList(); } catch(error) { if(error.status===401){showLogin();return;} spaces=[]; }
@@ -193,6 +213,22 @@ async function enter(me) {
   const target=spaces.some(space=>space.id===desired) ? desired : me.workspace.id;
   await switchWorkspace(target,desired && desired!==target ? "접근할 수 없는 공간 대신 개인 공간을 열었어요." : "");
 }
+function setAuthBusy(value) {
+  authBusy=value;
+  for(const id of ["auth-submit","guest-login","login-tab","signup-tab"]) $(id).disabled=value;
+  $("guest-login").textContent=value ? "로그인 확인 중…" : "게스트로 바로 시작하기 ↗";
+}
+$("guest-login").addEventListener("click", async () => {
+  if(authBusy)return;
+  setAuthBusy(true); $("guest-error").hidden=true; $("auth-error").hidden=true;
+  try {
+    await api("/api/auth/sign-in/guest", {});
+    await enter(await api("/api/me"));
+  } catch(error) {
+    $("guest-error").textContent=error.status===429 ? "요청이 많아요. 잠시 후 다시 시도해 주세요." : "게스트 로그인에 실패했어요. 잠시 후 다시 시도해 주세요.";
+    $("guest-error").hidden=false;
+  } finally {setAuthBusy(false);}
+});
 function setAuthMode(value) {
   signup = value; $("login-tab").setAttribute("aria-pressed", String(!value)); $("signup-tab").setAttribute("aria-pressed", String(value));
   $("name-field").hidden = !value; $("name").required = value;
@@ -202,23 +238,23 @@ function setAuthMode(value) {
 }
 $("login-tab").addEventListener("click", () => setAuthMode(false)); $("signup-tab").addEventListener("click", () => setAuthMode(true));
 $("auth-form").addEventListener("submit", async e => {
-  e.preventDefault(); $("auth-submit").disabled = true; $("auth-error").hidden = true;
+  e.preventDefault(); if(authBusy)return; setAuthBusy(true); $("auth-error").hidden = true; $("guest-error").hidden=true;
   try {
     const body = { email: $("email").value.trim(), password: $("password").value, ...(signup ? { name: $("name").value.trim() } : {}) };
     await api(`/api/auth/${signup ? "sign-up" : "sign-in"}/email`, body); await enter(await api("/api/me"));
   } catch (error) { $("auth-error").textContent = error.status === 429 ? "요청이 많아요. 잠시 후 다시 시도해 주세요." : signup ? "이름·이메일·비밀번호를 확인해 주세요. 이미 사용 중인 이메일일 수 있어요." : "이메일과 비밀번호를 확인해 주세요."; $("auth-error").hidden = false; }
-  finally { $("auth-submit").disabled = false; }
+  finally { setAuthBusy(false); }
 });
 $("signout").addEventListener("click", async () => { $("signout").disabled = true; try { await api("/api/auth/sign-out", {}); history.replaceState(null,"","/"); showLogin(); } catch (e) { handle(e); } finally { $("signout").disabled = false; } });
 $("task").addEventListener("input", () => { $("character-count").textContent = `${$("task").value.length} / 2000`; });
 $("agent").addEventListener("change", () => { setCameraFrame($("agent").value); render(); });
 $("task-form").addEventListener("submit", async e => {
   e.preventDefault(); if (!identity || busy) return;
-  const body = { prompt: $("task").value.trim(), agentId: $("agent").value, approvalRequired: $("require-approval").checked, scenario: $("scenario").value };
+  const body = { prompt: $("task").value.trim(), agentId: $("agent").value, approvalRequired: $("require-approval").checked, scenario: $("scenario").value, ...(followupSource?{sourceRunId:followupSource.sourceRunId,mode:followupSource.mode}:{}) };
   if (body.prompt.length < 2) { $("task-error").textContent = "업무를 두 글자 이상 입력해 주세요."; $("task-error").hidden = false; $("task").focus(); return; }
   const signature = JSON.stringify(body); if (!pending || pending.signature !== signature) pending = { signature, key: crypto.randomUUID() };
   const ticket = epoch; busy = true; $("task-error").hidden = true; render();
-  try { const run = await api(`/api/workspaces/${workspaceId}/runs`, body, pending.key); if (ticket !== epoch) return; selectedId = run.id; followLive=true; pending = null; await loadSnapshot(ticket); }
+  try { const run = await api(`/api/workspaces/${workspaceId}/runs`, body, pending.key); if (ticket !== epoch) return; selectedId = run.id; followLive=true; pending = null; followupSource=null; await loadSnapshot(ticket); }
   catch (error) { if (ticket === epoch) { await handle(error,ticket); if(ticket===epoch) {try { await loadSnapshot(ticket); } catch {}} } }
   finally { if (ticket === epoch) { busy = false; render(); } }
 });
@@ -232,6 +268,15 @@ async function command(action) {
   } catch (error) { if (ticket === epoch) { await handle(error,ticket); if(ticket===epoch) {try { await loadSnapshot(ticket); } catch {}} } }
   finally { if (ticket === epoch) { busy = false; render(); } }
 }
+for(const [id,kind] of [["revise-lines","lines"],["revise-table","table"],["handoff-result","handoff"]])$(id).addEventListener("click",()=>{
+  const run=current();
+  if(busy||!snapshot||!identity||!workspacePresentation(snapshot,identity.user.id,selectedId,followLive).canStart)return;
+  followupSource=followupDraft(run,kind);if(!followupSource)return;
+  $("agent").value=followupSource.agentId;$("task").value=followupSource.prompt;
+  $("require-approval").checked=followupSource.approvalRequired;
+  setCameraFrame(followupSource.agentId);render();$("task").focus();
+});
+$("clear-source").addEventListener("click",()=>{followupSource=null;$("require-approval").checked=false;render();});
 $("live-run").addEventListener("click",()=>{followLive=true;render();});
 for (const [id, action] of [["approve", "approve"], ["decline", "decline"], ["cancel", "cancel"], ["retry", "retry"]]) $(id).addEventListener("click", () => command(action));
 function setCameraFrame(frame) {
@@ -250,5 +295,5 @@ $("recover-scene").addEventListener("click", mountScene);
 document.addEventListener("visibilitychange", () => { if (identity && !document.hidden) { const ticket = epoch; void loadSnapshot(ticket).then(() => schedulePoll(ticket)).catch(error=>handle(error,ticket)); } });
 window.addEventListener("pagehide", () => { presence.stop();clearTimeout(poll); requests.abort(); ++sceneEpoch; scene?.dispose(); scene = null; });
 window.addEventListener("pageshow", e => { if (e.persisted) { requests = new AbortController(); void api("/api/me").then(enter).catch(() => showLogin()); } });
-$("auth-submit").disabled = true;
+setAuthBusy(true);
 api("/api/me").then(enter).catch(() => showLogin());

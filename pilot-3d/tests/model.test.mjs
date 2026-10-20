@@ -13,7 +13,7 @@ test("the actual GLB roundtrip contains metre-scale geometry and both named anim
   assert.equal(bytes.readUInt32LE(4), 2);
   assert.equal(bytes.readUInt32LE(8), bytes.byteLength);
   for (const name of ["Floor", "DeskTop", "ChairSeat", "Nara", "NaraHead", "NaraForearmL", "NaraForearmR", "Laptop"]) assert.ok(model.scene.getObjectByName(name), name);
-  assert.deepEqual(model.animations.map(a => a.name), ["idle", "typing"]);
+  assert.deepEqual(model.animations.map(a => a.name), ["idle", "typing", "thinking", "waiting", "success", "error", "blink"]);
   const size = new T.Box3().setFromObject(model.scene.getObjectByName("DeskTop"));
   assert.ok(Math.abs(size.max.y - .74) < .0001);
   const chair = new T.Box3().setFromObject(model.scene.getObjectByName("ChairSeat"));
@@ -42,8 +42,8 @@ test("animation loops close, move typing hands, and never move grounded shoes or
   for (const clip of model.animations) {
     for (const track of clip.tracks) {
       const stride = track.getValueSize();
-      assert.deepEqual([...track.values.slice(0, stride)], [...track.values.slice(-stride)], track.name);
-      assert.ok(/Nara(Head|Torso|Forearm[LR])\./.test(track.name));
+      if(!["success","error"].includes(clip.name)) assert.deepEqual([...track.values.slice(0, stride)], [...track.values.slice(-stride)], track.name);
+      assert.ok(/Nara(Head|Torso|Forearm[LR]|Eye(?:Light)?[LR])\./.test(track.name));
     }
     const mixer = new T.AnimationMixer(model.scene);
     mixer.clipAction(clip).play();

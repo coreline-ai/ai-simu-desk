@@ -40,8 +40,8 @@ test("all team support points stay on the floor and inside room bounds", () => {
   assert.equal(count, 24);
 });
 
-test("independent imported clips move only their owner's hands and leave feet and furniture fixed", () => {
-  assert.deepEqual(model.animations.map(c => c.name), ["nara_idle", "nara_typing", "jun_idle", "jun_typing"]);
+test("independent typing does not alter the other colleague's idle motion or grounded furniture", () => {
+  assert.deepEqual(model.animations.map(c => c.name), ["nara","jun"].flatMap(id=>["idle","typing","thinking","waiting","success","error","blink"].map(p=>id+"_"+p)));
   const get = name => model.scene.getObjectByName(name).getWorldPosition(new T.Vector3());
   for (const owner of ["nara", "jun"]) {
     const mixer = new T.AnimationMixer(model.scene);
@@ -51,16 +51,19 @@ test("independent imported clips move only their owner's hands and leave feet an
     for (const clip of model.animations) {
       for (const track of clip.tracks) {
         assert.ok(track.name.startsWith(clip.name.startsWith("nara_") ? "Nara" : "Jun"));
-        const stride = track.getValueSize(); assert.deepEqual([...track.values.slice(0,stride)], [...track.values.slice(-stride)]);
+        const stride = track.getValueSize(); if(!/_(success|error)$/.test(clip.name)) assert.deepEqual([...track.values.slice(0,stride)], [...track.values.slice(-stride)]);
       }
     }
+    const otherHand = owner === "nara" ? "JunHandL" : "HandL";
+    const idleAction = mixer.clipAction(model.animations.find(c => c.name === `${owner === "nara" ? "jun" : "nara"}_idle`));
+    idleAction.play(); mixer.setTime(.2); model.scene.updateMatrixWorld(true);
+    const independentIdle = get(otherHand);
     mixer.clipAction(model.animations.find(c => c.name === `${owner}_typing`)).play();
-    mixer.clipAction(model.animations.find(c => c.name === `${owner === "nara" ? "jun" : "nara"}_idle`)).play();
     mixer.setTime(0); model.scene.updateMatrixWorld(true);
     const hands = [get("HandL"), get("JunHandL")];
     mixer.setTime(.2); model.scene.updateMatrixWorld(true);
     assert.ok(get(owner === "nara" ? "HandL" : "JunHandL").distanceTo(hands[owner === "nara" ? 0 : 1]) > .005);
-    assert.ok(get(owner === "nara" ? "JunHandL" : "HandL").distanceTo(hands[owner === "nara" ? 1 : 0]) < .0001);
+    assert.ok(get(otherHand).distanceTo(independentIdle) < .0001);
     stable.forEach((node,i) => assert.ok(node.getWorldPosition(new T.Vector3()).distanceTo(before[i]) < .0001, node.name));
     mixer.stopAllAction(); mixer.uncacheRoot(model.scene);
   }

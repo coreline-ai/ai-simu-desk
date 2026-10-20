@@ -18,7 +18,7 @@ export function createRunner(studio: Studio, agent: AgentPort, options: { timeou
           controller.signal.throwIfAborted();
           if (await studio.getStatus(job.runId) === "cancel_requested") { controller.abort("cancel"); controller.signal.throwIfAborted(); }
           if (item.kind === "completed") { await studio.finish(job.runId, "succeeded", "로컬 Fake AI 응답을 저장했습니다.", item.externalRef); completed = true; break; }
-          const applied = item.kind === "delta" ? await studio.progress(job.runId, item.text) : await studio.progress(job.runId, null, item.stage);
+          const applied = item.kind === "delta" ? await studio.progress(job.runId, item.text) : await studio.progress(job.runId, null, item.stage, item.phase);
           if (!applied) { controller.abort("cancel"); controller.signal.throwIfAborted(); }
         }
         if (!completed) await studio.finish(job.runId, "failed", "완료 신호 없이 응답이 끝났습니다.");

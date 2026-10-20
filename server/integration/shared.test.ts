@@ -1,3 +1,4 @@
+import {setTimeout as wait} from 'node:timers/promises';
 import test from 'node:test';import assert from 'node:assert/strict';import {randomUUID,randomBytes} from 'node:crypto';import {readFile} from 'node:fs/promises';import {eq} from 'drizzle-orm';
 import {openPostgres} from '../db/postgres.js';import {createStudio} from '../db/studio-store.js';import {createSharedPresence} from '../db/shared-presence.js';import {createRemote} from '../remote.js';import {user,session} from '../db/schema.js';
 const url=process.env.TEST_DATABASE_URL;
@@ -47,8 +48,21 @@ test('two independent serverless HTTP instances share Secure sessions, sync stat
     assert.equal((await call(b.app,base+'/runs',peer,{prompt:'서버리스 개발 계획',agentId:'jun',approvalRequired:false,scenario:'normal'},randomUUID())).status,403);
     const started=await call(a.app,base+'/runs',owner,{prompt:'서버리스 개발 계획',agentId:'jun',approvalRequired:false,scenario:'normal'},randomUUID());assert.equal(started.status,201);
     await call(a.app,base+'/sync',owner,{after:0,clientId:oa});
-    for(let i=0;i<20;i++){result=await(await call(b.app,base+'/sync',peer,{after:0,clientId:pb})).json();if(result.snapshot.runs[0].status==='succeeded')break;}
+    for(let i=0;i<100;i++){await wait(30);result=await(await call(b.app,base+'/sync',peer,{after:0,clientId:pb})).json();if(result.snapshot.runs[0].status==='succeeded')break;}
     assert.equal(result.snapshot.runs[0].status,'succeeded');const same=await(await call(a.app,base+'/snapshot',owner)).json();assert.deepEqual(same.runs,result.snapshot.runs);
+    const source=same.runs[0];
+    const handoff=await(await call(a.app,base+'/runs',owner,{prompt:'사용자 관점 기획 계획으로 바꿔줘',agentId:'nara',approvalRequired:false,scenario:'normal',sourceRunId:source.id,mode:'handoff'},randomUUID())).json();
+    assert.equal(handoff.status,'awaiting_approval');assert.ok(!('generatedAnswer' in handoff));
+    assert.equal((await call(b.app,'/api/runs/'+handoff.id+'/approval',owner,{version:handoff.version,approved:true})).status,200);
+    let followed:any;
+    for(let i=0;i<100;i++){await wait(30);followed=await(await call((i%2?a:b).app,base+'/snapshot',owner)).json();if(followed.runs.find((r:any)=>r.id===handoff.id)?.status==='succeeded')break;}
+    const handoffResult=followed.runs.find((r:any)=>r.id===handoff.id);
+    assert.equal(handoffResult.status,'succeeded');assert.equal(handoffResult.source.runId,source.id);assert.match(handoffResult.output,/인계받은 요구사항/);
+    const guest=await call(a.app,'/api/auth/sign-in/guest',undefined,{});
+    assert.equal(guest.status,200);assert.match(guest.headers.get('set-cookie')??'',/Secure/);
+    const guestCookie=guest.headers.get('set-cookie')!.split(';')[0];
+    assert.equal((await call(b.app,'/api/me',guestCookie)).status,200);
+    assert.equal((await call(b.app,base+'/snapshot',guestCookie)).status,404);
     assert.equal((await call(a.app,base+'/sync',owner,{after:-1,clientId:oa})).status,400);
     await call(b.app,'/api/auth/sign-out',peer,{});result=await(await call(a.app,base+'/sync',owner,{after:0,clientId:oa})).json();assert.equal(result.presence.members.filter((p:{online:boolean})=>p.online).length,1);
   }finally{await a.close();await b.close();}

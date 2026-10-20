@@ -1,3 +1,4 @@
+import type {AnswerPhase,FakeAnswer,SourceContext} from "./fake-answer.js";
 import type { AgentId, AgentJob, RunStatus } from "./contracts.js";
 import type { Workspace, WorkspaceMember, WorkspacePort } from "./workspace-port.js";
 import type { MemberRole } from "./collaboration.js";
@@ -5,6 +6,8 @@ import type { MemberRole } from "./collaboration.js";
 export interface Run {
   id: string; workspaceId: string; taskId: string; requestedBy: string; requestKey: string; requestHash: string;
   status: RunStatus; version: number; output: string; stage: string; note: string; provider: string; externalRef: string | null;
+  source?: (Omit<SourceContext,"output"|"body"> & {preview:string})|null;
+  phase?:AnswerPhase; answerMeta?:Pick<FakeAnswer,"version"|"analysis"|"checks">|null;
   scenario: "normal" | "failure"; finishedAt: Date | null; createdAt: Date; updatedAt: Date;
 }
 export interface Snapshot { workspace: Workspace; role: MemberRole; members: WorkspaceMember[]; runs: (Run & { prompt: string; agentId: AgentId; approvalRequired: boolean; requestedByName: string })[]; cursor: number }
@@ -19,7 +22,7 @@ export interface StudioPort extends WorkspacePort {
   cancel(userId: string, id: string): Promise<Run>;
   retry(userId: string, id: string, key: string | undefined): Promise<Run>;
   claim(): Promise<AgentJob | null>;
-  progress(id: string, delta: string | null, stage?: string): Promise<boolean>;
+  progress(id: string, delta: string | null, stage?: string,phase?:AnswerPhase): Promise<boolean>;
   finish(id: string, outcome: "succeeded" | "failed" | "cancelled", note?: string, externalRef?: string): Promise<Run | undefined>;
   recoverInterrupted(): Promise<number>;
   getStatus(id: string): Promise<RunStatus | undefined>;
