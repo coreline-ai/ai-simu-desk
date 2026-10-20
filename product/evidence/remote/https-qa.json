@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-20T00:27:17.305Z",
+  "checkedAt": "2026-10-20T01:30:08.498Z",
   "testEnvironment": "loopback HTTPS and native PostgreSQL; two independent application instances",
   "certificateVerification": true,
   "untrustedCertificateRejected": true,

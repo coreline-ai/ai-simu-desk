@@ -62,7 +62,7 @@ test("v2 evaluation: a new app's changed generator cannot rewrite a persisted st
   now+=100000;const complete=(await next.snapshot("v2",space.id)).runs[0];
   assert.equal(complete.status,"succeeded");assert.ok(complete.output.startsWith(partial.output));
   assert.equal(complete.output,answer(input.prompt).text);
-  assert.equal(complete.answerMeta?.version,"rules-2");assert.ok(!("generatedAnswer" in complete));
+  assert.equal(complete.answerMeta?.version,"rules-2.1");assert.ok(!("generatedAnswer" in complete));
  }finally{await d.close();}
 });
 test("v2 evaluation: pending approval APIs never expose the precomputed answer",async()=>{
@@ -79,4 +79,10 @@ test("v2 evaluation: pending approval APIs never expose the precomputed answer",
   const snap=await(await app.request(config.origin+"/api/workspaces/"+me.workspace.id+"/snapshot",{headers:{cookie}})).json();
   assert.ok(!("generatedAnswer" in snap.runs[0]));assert.equal(snap.runs[0].output,"");
  }finally{await d.close();}
+});
+
+
+test('project lines do not turn the preceding technology into an exclusion; punctuation keeps people count',()=>{
+ const answer=createFakeAnswer({runId:'project-punctuation',agentId:'nara',scenario:'normal',prompt:'첫 화면 개선 계획을 2주, 1명, 무료 도구 조건으로 3개 항목으로 제안해 줘.\n목표: 무료 도구로 첫 화면 개선\n대상: 학생\n기술: PostgreSQL 호환 로컬 DB\n제외: 유료 도구 제외'});
+ assert.equal(answer.analysis.people,1);assert.deepEqual(answer.analysis.exclusions,['유료 도구']);
 });

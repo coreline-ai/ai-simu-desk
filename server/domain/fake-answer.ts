@@ -1,5 +1,5 @@
 import type {AgentJob} from "./contracts.js";
-export const FAKE_ENGINE_VERSION = "rules-2";
+export const FAKE_ENGINE_VERSION = "rules-2.1";
 export type AnswerPhase = "analyze"|"compose"|"review";
 export interface SourceContext { runId:string; version:number; agentId:"nara"|"jun"; prompt:string; output:string; body?:string; conditions?:Pick<AnswerAnalysis,"days"|"deadline"|"people"|"budget"|"freeOnly"|"exclusions">; truncated?:boolean; mode:"revise"|"handoff" }
 export interface AnswerAnalysis {
@@ -19,13 +19,13 @@ export function analyzeRequest(prompt:string):AnswerAnalysis {
   const durations=[...flat.matchAll(/(\d+)\s*(주|일|시간)(?:일|간)?/g)];
   const unique=[...new Set(durations.map(m=>m[1]+m[2]))];
   const duration=durations[0];
-  const people=flat.match(/(\d+)\s*(?:명|인)(?:이|으|에|의|만|\s|$)/)?.[1];
+  const people=flat.match(/(\d+)\s*(?:명|인)(?=이|으|에|의|만|[\s,.;·/]|$)/)?.[1];
   const budget=flat.match(/(?:예산\s*)?(\d[\d,]*)\s*(만원|원)/);
   const freeOnly=!/무료(?:는|가)?\s*(?:아니|안|금지|제외)/.test(flat)&&/무료|유료\s*(?:도구|서비스|API)?\s*(?:없이|제외|금지)|예산\s*0|(?<![\d,])0\s*원/.test(flat);
   const count=flat.match(/(\d+)\s*(?:개|가지)(?:\s*(?:항목|단계|제안|추천))?/)?.[1];
   const lines=flat.match(/(\d+)\s*줄/)?.[1];
   const source=text.match(/(?:원문|자료|내용)\s*[:：]\s*([\s\S]+)/)?.[1]?.trim()??null;
-  const exclusions=[...flat.matchAll(/(유료\s*(?:API|도구|서비스)?|[^\s,.;]{1,20}?)\s*(?:제외|금지|없이)/g)].map(m=>m[1]);
+  const exclusions=text.split(/(?:원문|자료|내용)\s*[:：]/)[0].split(/\n/).flatMap(line=>[...line.matchAll(/(유료\s*(?:API|도구|서비스)?|[^\s,.;]{1,20}?)\s*(?:제외|금지|없이)/g)].map(m=>m[1]));
   const issues:string[]=[];
   if(unique.length>1)issues.push("기간 조건이 여러 개예요. 최종 마감 기간을 하나로 지정해 주세요.");
   if(duration&&Number(duration[1])<1)issues.push("기간은 1 이상의 숫자로 지정해 주세요.");

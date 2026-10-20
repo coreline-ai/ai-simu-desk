@@ -22,5 +22,5 @@ export function getConfig(env:NodeJS.ProcessEnv=process.env):Config {
   if(remote&&!env.DATABASE_URL)throw new Error("Vercel requires DATABASE_URL for PostgreSQL");
   if(env.DATABASE_SSL&&!['verify-full','disable'].includes(env.DATABASE_SSL))throw new Error("DATABASE_SSL must be verify-full or loopback-only disable");
   if(remote&&env.DATABASE_SSL==='disable'&&!loopback)throw new Error("Remote HTTPS requires verified PostgreSQL TLS");
-  return {origin:origin.origin,port,secret,dataDir:resolve(env.STUDIO_DATA_DIR??".data/studio"),fakeDelayMs:delay,deployment:remote?'vercel':'local',...(remote?{databaseUrl:env.DATABASE_URL,databaseSsl:env.DATABASE_SSL!=='disable',databaseCa:env.DATABASE_CA}: {})};
+  return {origin:origin.origin,port,secret,dataDir:resolve(env.STUDIO_DATA_DIR??".data/studio"),fakeDelayMs:delay,deployment:remote?'vercel':'local',databaseUrl:env.DATABASE_URL||undefined,databaseSsl:env.DATABASE_SSL!=='disable',databaseCa:env.DATABASE_CA};
 }

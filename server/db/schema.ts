@@ -92,3 +92,16 @@ export const presenceEvents=pgTable("presence_events",{
 },t=>[primaryKey({columns:[t.workspaceId,t.seq]})]);
 
 export const rateLimit=pgTable("auth_rate_limit",{id:text("id").primaryKey(),key:text("key").notNull().unique(),count:integer("count").notNull(),lastRequest:bigint("last_request",{mode:"number"}).notNull()});
+
+export const projectSettings=pgTable('project_settings',{
+ workspaceId:text('workspace_id').primaryKey().references(()=>workspaces.id,{onDelete:'cascade'}),version:integer('version').notNull().default(1),
+ goal:text('goal').notNull().default(''),audience:text('audience').notNull().default(''),technology:text('technology').notNull().default(''),exclusions:text('exclusions').notNull().default(''),
+ updatedAt:timestamp('updated_at',{withTimezone:true}).notNull().defaultNow(),
+});
+
+export const taskComments=pgTable('task_comments',{
+ id:text('id').primaryKey(),workspaceId:text('workspace_id').notNull().references(()=>workspaces.id,{onDelete:'cascade'}),runId:text('run_id').notNull().references(()=>runs.id,{onDelete:'cascade'}),authorId:text('author_id').notNull().references(()=>user.id),body:text('body').notNull(),requestKey:text('request_key').notNull(),createdAt:timestamp('created_at',{withTimezone:true}).notNull().defaultNow(),
+},t=>[uniqueIndex('comments_request_key').on(t.runId,t.authorId,t.requestKey)]);
+export const notifications=pgTable('notifications',{
+ id:text('id').primaryKey(),workspaceId:text('workspace_id').notNull().references(()=>workspaces.id,{onDelete:'cascade'}),userId:text('user_id').notNull().references(()=>user.id,{onDelete:'cascade'}),runId:text('run_id').notNull().references(()=>runs.id,{onDelete:'cascade'}),kind:text('kind').$type<'approval_requested'|'completed'|'failed'|'comment'>().notNull(),sourceKey:text('source_key').notNull(),readAt:timestamp('read_at',{withTimezone:true}),createdAt:timestamp('created_at',{withTimezone:true}).notNull().defaultNow(),
+},t=>[uniqueIndex('notifications_source').on(t.userId,t.sourceKey)]);

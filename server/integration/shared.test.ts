@@ -65,5 +65,6 @@ test('two independent serverless HTTP instances share Secure sessions, sync stat
     assert.equal((await call(b.app,base+'/snapshot',guestCookie)).status,404);
     assert.equal((await call(a.app,base+'/sync',owner,{after:-1,clientId:oa})).status,400);
     await call(b.app,'/api/auth/sign-out',peer,{});result=await(await call(a.app,base+'/sync',owner,{after:0,clientId:oa})).json();assert.equal(result.presence.members.filter((p:{online:boolean})=>p.online).length,1);
+    await call(a.app,'/api/auth/sign-out',guestCookie,{});
   }finally{await a.close();await b.close();}
 });

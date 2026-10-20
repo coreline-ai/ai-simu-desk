@@ -1,3 +1,5 @@
+import {createDiscussion} from "./discussion.mjs";
+import { createWorkTools } from "./work-tools.mjs";
 import { renderAnswer } from "./answer-view.mjs";
 import { followupDraft } from "./followups.mjs";
 import { createCueTracker } from "../../pilot-3d/src/animation.mjs";
@@ -10,7 +12,7 @@ import { workspacePresentation, acceptsWorkspaceSnapshot } from "./workspace-sta
 
 const $ = id => document.getElementById(id);
 const sceneCues = createCueTracker();
-let authBusy = false, followupSource=null;
+let authBusy = false, followupSource=null, archivedRun=null;
 let signup = false, identity = null, snapshot = null, selectedId = null, busy = false;
 let presenceStarted=false;
 let workspaceId = null, spaces = [], followLive = true, spaceLoading = false;
@@ -28,12 +30,14 @@ async function api(path, body, key) {
 }
 function connection(text = "") { $("connection").textContent = text; $("connection").hidden = !text; }
 const workspacePanel = createWorkspacePanel({ request: api, onSelect: switchWorkspace, onBusy(value) { busy=value; render(); }, onError: handle, refreshSnapshot: () => loadSnapshot() });
+const discussion=createDiscussion({request:api,onOpen:openArchived,onError:handle});
+const workTools=createWorkTools({request:api,onError:handle,onOpen:openArchived,onTemplate(item){if(busy||followupSource||snapshot?.role==='viewer')return;$("task").value=item.prompt;$("agent").value=item.agentId;render();},onConditions(text){if(!text||busy||snapshot?.role==='viewer')return;const next=[$("task").value.trim(),text].filter(Boolean).join('\n\n');if(next.length>2000){$("task-error").textContent='공통 조건을 넣으면 2000자를 넘어요. 업무를 줄여 주세요.';$("task-error").hidden=false;return;}$("task").value=next;render();}});
 const presence = createPresenceClient({request:api,onChange:data=>workspacePanel.renderPresence(data),beacon(path,body){
   const json=JSON.stringify(body);
   if(!navigator.sendBeacon(path,new Blob([json],{type:"application/json"}))) void fetch(path,{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:json,keepalive:true}).catch(()=>{});
 }});
 function invalidateWorkspace() {
-  sceneCues.reset(); followupSource=null;
+  sceneCues.reset(); followupSource=null; archivedRun=null; workTools.reset(); discussion.reset();
   presence.stop();presenceStarted=false;
   epoch++; requests.abort(); requests = new AbortController(); clearTimeout(poll); poll=0;
   snapshot=null; selectedId=null; cursor=0; pending=null; retryRequest=null; historyKey=""; busy=false; followLive=true;
@@ -63,7 +67,9 @@ async function handle(error, ticket=epoch) {
   $("task-error").hidden=false;
   if ([403,409].includes(error.status) && snapshot) { try { await loadSnapshot(ticket); } catch (nextError) {if([401,404].includes(nextError.status)) await handle(nextError,ticket);} }
 }
-function current() { return snapshot && identity ? workspacePresentation(snapshot,identity.user.id,selectedId,followLive).run : null; }
+function selectionSnapshot(){return archivedRun&&!snapshot.runs.some(r=>r.id===archivedRun.id)?{...snapshot,runs:[...snapshot.runs,archivedRun]}:snapshot;}
+function current() { return snapshot && identity ? workspacePresentation(selectionSnapshot(),identity.user.id,selectedId,followLive).run : null; }
+async function openArchived(id){if(!workspaceId)return;const stamp=epoch;try{const run=await api(`/api/workspaces/${workspaceId}/runs/${id}`);if(stamp!==epoch)return;archivedRun=run;selectedId=id;followLive=false;render();$('answer-title').scrollIntoView({block:'start'});}catch(e){if(stamp===epoch)await handle(e,stamp);}}
 function renderSceneState() {
   const active = snapshot?.runs.find(r => ACTIVE.includes(r.status));
   const vm = teamSceneState(snapshot?.runs, $("agent").value, motionPaused, sceneCues.observe(snapshot?.runs));
@@ -77,15 +83,16 @@ function renderSceneState() {
 function render() {
   workspacePanel.setBusy(busy||spaceLoading);
   if (!snapshot || !identity) return;
-  const presentation=workspacePresentation(snapshot,identity.user.id,selectedId,followLive);
+  const presentation=workspacePresentation(selectionSnapshot(),identity.user.id,selectedId,followLive);
   const run = presentation.run, active = Boolean(presentation.active), agentName = $("agent").value === "nara" ? "나라" : "준";
   if (followLive) selectedId=run?.id ?? null;
-  workspacePanel.render(snapshot);
+  workspacePanel.render(snapshot); workTools.render(snapshot); workTools.renderRun(run); discussion.render(snapshot,run);
+  $("apply-template").disabled=busy||active||!!followupSource;$("apply-project").disabled=busy||active||!presentation.canStart;
   $("workspace-heading").textContent = snapshot.workspace.name;
   $("task-form").hidden=!presentation.canStart; $("read-only-note").hidden=presentation.canStart;
   $("task-title").textContent=presentation.canStart ? `${agentName}${agentName === "준" ? "과" : "와"} 함께하기 ✧` : "업무 함께 보기 ✧";
   const live=presentation.active;
-  $("shared-live").textContent=live ? `${AGENT_NAMES[live.agentId]} · ${labels[live.status]} · 요청 ${live.requestedByName}` : snapshot.workspace.kind==="shared" ? "공동 공간의 업무·승인·답변을 참여자와 함께 확인해요." : identity.user.isGuest ? "공용 체험 계정으로 접속한 게스트가 업무와 답변을 함께 확인해요." : "이곳의 업무는 나만 확인할 수 있어요.";
+  $("shared-live").textContent=live ? `${AGENT_NAMES[live.agentId]} · ${labels[live.status]} · 요청 ${live.requestedByName}` : snapshot.workspace.kind==="shared" ? "공동 공간의 업무·승인·답변을 참여자와 함께 확인해요." : identity.user.isGuest ? "이 게스트 공간의 업무와 답변은 다른 게스트와 분리돼요." : "이곳의 업무는 나만 확인할 수 있어요.";
   $("live-run").hidden=!live || run?.id===live.id;
   $("run-requester").hidden=!run; $("run-requester").textContent=run ? `요청한 사람 · ${run.requestedByName}` : "";
   $("start").textContent = busy ? "요청 확인 중…" : active ? "진행 중인 업무가 있어요" : `${agentName}에게 업무 맡기기 ↗`;
@@ -135,7 +142,7 @@ function render() {
 function applySnapshot(next,ticket,id) {
   if(!acceptsWorkspaceSnapshot({epoch:ticket,workspaceId:id},{epoch,workspaceId,cursor},next.cursor))return;
   snapshot=next;cursor=next.cursor;spaceLoading=false;
-  if(!selectedId||!next.runs.some(r=>r.id===selectedId)){selectedId=next.runs[0]?.id??null;followLive=true;}
+  if(!selectedId||!next.runs.some(r=>r.id===selectedId)&&archivedRun?.id!==selectedId){selectedId=next.runs[0]?.id??null;followLive=true;}
   $("workspace-content").hidden=false;$("workspace-loading").hidden=true;
   connection();render();if(!scene)mountScene();
 }
@@ -168,10 +175,12 @@ function schedulePoll(ticket = epoch) {
     try {
       if(identity.client?.sync) {
         if(snapshot?.workspace.kind==="shared"&&!presenceStarted){presence.start(id,true);presenceStarted=true;}
-        const result=snapshot?.workspace.kind==="shared"?await presence.sync(cursor):await api(`/api/workspaces/${id}/sync`,{after:cursor});
+        const selected=current()?.id;
+        const result=snapshot?.workspace.kind==="shared"?await presence.sync(cursor,{selectedRunId:selected}):await api(`/api/workspaces/${id}/sync`,{after:cursor,selectedRunId:selected});
         if(ticket!==epoch)return;
         if(result?.snapshot)applySnapshot(result.snapshot,ticket,id);
         else if(!snapshot)await loadSnapshot(ticket);
+        discussion.sync(result,selected);
       } else {
         const page=await api(`/api/workspaces/${id}/events?after=${cursor}`);
         if(ticket!==epoch)return;
@@ -225,7 +234,7 @@ $("guest-login").addEventListener("click", async () => {
     await api("/api/auth/sign-in/guest", {});
     await enter(await api("/api/me"));
   } catch(error) {
-    $("guest-error").textContent=error.status===429 ? "요청이 많아요. 잠시 후 다시 시도해 주세요." : "게스트 로그인에 실패했어요. 잠시 후 다시 시도해 주세요.";
+    $("guest-error").textContent=error.code==="GUEST_FULL" ? error.message : error.status===429 ? "요청이 많아요. 잠시 후 다시 시도해 주세요." : "게스트 로그인에 실패했어요. 잠시 후 다시 시도해 주세요.";
     $("guest-error").hidden=false;
   } finally {setAuthBusy(false);}
 });

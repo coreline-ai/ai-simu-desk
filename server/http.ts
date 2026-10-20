@@ -3,7 +3,7 @@ import type { Context } from "hono";
 import { bodyLimit } from "hono/body-limit";
 import { secureHeaders } from "hono/secure-headers";
 import type { Auth } from "./adapters/auth.js";
-import { GUEST_ID } from "./adapters/guest-auth.js";
+import { isGuestId } from "./adapters/guest-auth.js";
 import type { Config } from "./config.js";
 import type {Run} from "./domain/studio-port.js";
 import type { StudioPort as Studio } from "./domain/studio-port.js";
@@ -29,12 +29,12 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
     if(leaving && response.ok) await presence?.leaveSession(leaving.session.id);
     return response;
   });
-  app.get("/api/health", c => c.json({ status: "ok", edition: config.deployment??"local", database: config.deployment==="vercel"?"postgresql":"pglite", aiProvider: "fake" }));
+  app.get("/api/health", c => c.json({ status: "ok", edition: config.deployment??"local", database: config.databaseUrl?"postgresql":"pglite", aiProvider: "fake" }));
   app.get("/api/me", async c => {
     const session = await auth.api.getSession({ headers: c.req.raw.headers });
     if (!session) return c.json({ error: "로그인이 필요합니다." }, 401);
     const workspace = studio ? await studio.personalWorkspace(session.user.id, session.user.name) : undefined;
-    return c.json({ user: { id: session.user.id, name: session.user.name, email: session.user.email, isGuest: session.user.id === GUEST_ID }, workspace, client: config.deployment==="vercel"?{sync:true,pollMs:2500,hiddenPollMs:30000}:undefined, provider: { id: "fake", label: config.deployment==="vercel"?"Fake AI":"로컬 Fake AI", externalRequests: false } });
+    return c.json({ user: { id: session.user.id, name: session.user.name, email: session.user.email, isGuest: isGuestId(session.user.id) }, workspace, client: {sync:true,pollMs:2500,hiddenPollMs:30000}, provider: { id: "fake", label: config.deployment==="vercel"?"Fake AI":"로컬 Fake AI", externalRequests: false } });
   });
   if (studio) {
     const who = async (c: Context) => {
@@ -55,9 +55,19 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
       const body=await json(c),id=c.req.param("workspaceId");
       const page=await studio.events(identity.user.id,id,body.after);
       const online=body.clientId!==undefined&&presence?await presence.touch({userId:identity.user.id,sessionId:identity.session.id,expiresAt:identity.session.expiresAt},id,body.clientId):null;
-      return c.json({page,presence:online,snapshot:page.events.length?await studio.snapshot(identity.user.id,id):null});
+      if(body.selectedRunId!==undefined&&(typeof body.selectedRunId!=="string"||body.selectedRunId.length>100))throw new AppError(400,"선택한 업무를 확인해 주세요.");
+      return c.json({page,presence:online,snapshot:page.events.length?await studio.snapshot(identity.user.id,id):null,inbox:await studio.inbox(identity.user.id,id),comments:body.selectedRunId?await studio.comments(identity.user.id,id,body.selectedRunId):null});
     });
     app.get("/api/workspaces", async c => c.json({ workspaces: await studio.listWorkspaces(await who(c)) }));
+    app.get("/api/workspaces/:workspaceId/project",async c=>c.json(await studio.project(await who(c),c.req.param("workspaceId"))));
+    app.post("/api/workspaces/:workspaceId/project",async c=>c.json(await studio.saveProject(await who(c),c.req.param("workspaceId"),await json(c))));
+    app.get("/api/workspaces/:workspaceId/runs",async c=>c.json(await studio.findRuns(await who(c),c.req.param("workspaceId"),c.req.query())));
+    app.get("/api/workspaces/:workspaceId/runs/:id",async c=>c.json(await studio.readRun(await who(c),c.req.param("workspaceId"),c.req.param("id"))));
+    app.get("/api/workspaces/:workspaceId/runs/:id/compare",async c=>c.json(await studio.compareRun(await who(c),c.req.param("workspaceId"),c.req.param("id"))));
+    app.get("/api/workspaces/:workspaceId/runs/:id/comments",async c=>c.json(await studio.comments(await who(c),c.req.param("workspaceId"),c.req.param("id"),c.req.query("before"))));
+    app.post("/api/workspaces/:workspaceId/runs/:id/comments",async c=>c.json(await studio.addComment(await who(c),c.req.param("workspaceId"),c.req.param("id"),await json(c),c.req.header("idempotency-key")),201));
+    app.get("/api/workspaces/:workspaceId/inbox",async c=>c.json(await studio.inbox(await who(c),c.req.param("workspaceId"))));
+    app.post("/api/workspaces/:workspaceId/inbox/read",async c=>c.json(await studio.readNotifications(await who(c),c.req.param("workspaceId"))));
     app.post("/api/workspaces", async c => c.json(await studio.createWorkspace(await who(c),(await json(c)).name,c.req.header("idempotency-key")),201));
     app.post("/api/workspaces/join", async c => c.json(await studio.joinWorkspace(await who(c),(await json(c)).code)));
     app.post("/api/workspaces/:workspaceId/invites", async c => {

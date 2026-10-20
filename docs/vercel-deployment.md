@@ -1,5 +1,7 @@
 # Vercel Hobby + PostgreSQL 배포
 
+> 현재 결정: 외부 제공 DB 금지, 로컬 개발만 진행한다. 아래 배포 경로는 기존 준비 문서이며 이번 작업에서 실행하지 않았다. 유료 업그레이드는 수행하지 않는다. Vercel 자체 Postgres 신규 제공은 종료되었다. [공식 안내](https://vercel.com/docs/postgres).
+
 확인일: 2026-10-20 KST. Docker 없이 Node.js 22 Vercel Function 하나와 정적 CDN, Neon Free PostgreSQL을 사용한다. 별도 도메인 없이 프로젝트의 기본 `vercel.app` HTTPS로 시작한다. 현재 저장소에는 배포 설정과 검증된 코드가 있으며, 실제 사용자 Vercel/Neon 프로젝트에 배포한 상태는 아니다.
 
 ## 먼저 정할 것
@@ -75,3 +77,6 @@ npm run test:postgres
 ## Docker 지원 여부
 
 2026-10-20 확인한 [Vercel 공식 Docker 안내](https://vercel.com/kb/guide/deploy-nodejs-on-vercel-with-docker)는 `Dockerfile.vercel` 지원을 설명한다. 컨테이너도 요청 기반 Function으로 실행되며 PostgreSQL 저장과 상시 작업자를 함께 띄우는 Compose 서버가 아니다. 이 저장소의 Hobby 배포 경로는 Docker가 필요 없는 네이티브 Node Function이다.
+
+## 공통 런타임 변경 (2026-10-20)
+`server/runtime.ts`가 로컬과 함수 진입점의 요청 기반 Fake AI·DB presence·API 조합을 공유한다. 로컬에서도 DATABASE_URL을 지정하면 동일한 pg 어댑터와 SQL 마이그레이션을 사용하며, 없으면 기존 PGlite 데이터를 보존한다. 현재 사용자 결정에 따라 URL은 미설정이고 외부 연결은 하지 않았다. 로컬도 활성 2.5초/숨김 30초 sync를 사용한다. PGlite는 로컬 개발용이며 배포 함수의 파일 DB로 사용하지 않는다.

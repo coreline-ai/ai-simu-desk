@@ -10,11 +10,15 @@ import type { AgentJob } from "../domain/contracts.js";
 import { canStartRun, canControlRun } from "../domain/collaboration.js";
 import { workspaceMember as member, type Tx, type Store } from "./workspace-access.js";
 import { createWorkspaceStore } from "./workspace-store.js";
+import { notifyRun } from "./notifications.js";
+import { runView } from "./run-view.js";
+import { createWorkspaceTools } from "./workspace-tools.js";
 
 type Run = typeof runs.$inferSelect;
 type Task = typeof tasks.$inferSelect;
 
 async function event(db: Store, run: Run, kind: string, payload: Record<string, unknown> = {}) {
+  if(kind==="approval_requested"||kind==="completed"||kind==="failed")await notifyRun(db,run,kind,`${run.id}:${kind}`);
   await db.insert(runEvents).values({ id: randomUUID(), workspaceId: run.workspaceId, runId: run.id, seq: run.version, kind, payload: { status: run.status, ...payload } });
 }
 async function change(tx: Tx, run: Run, status: Run["status"], kind: string, patch: Partial<Pick<Run, "output" | "stage" | "note" | "externalRef" | "simulatedStartedAt" | "phase">> = {}, payload: Record<string, unknown> = {}) {
@@ -95,7 +99,7 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
       const rows = await tx.select({ run: runs, task: tasks, requestedByName:user.name }).from(runs).innerJoin(tasks, eq(runs.taskId, tasks.id)).innerJoin(user,eq(runs.requestedBy,user.id)).where(eq(runs.workspaceId, workspaceId)).orderBy(desc(runs.createdAt), desc(runs.id)).limit(20);
       const [latest] = await tx.select({ cursor: max(runEvents.cursor) }).from(runEvents).where(eq(runEvents.workspaceId, workspaceId));
       const people = await tx.select({ userId:members.userId,name:user.name,role:members.role }).from(members).innerJoin(user,eq(members.userId,user.id)).where(eq(members.workspaceId,workspaceId)).orderBy(asc(user.name),asc(user.id));
-      return { workspace, role:access.role, members:people, runs: rows.map(({ run, task, requestedByName }) => { const {generatedAnswer,...safe}=run;return { ...safe, answerMeta:generatedAnswer?{version:generatedAnswer.version,analysis:generatedAnswer.analysis,checks:generatedAnswer.checks}:null, source:task.sourceContext?{runId:task.sourceContext.runId,version:task.sourceContext.version,agentId:task.sourceContext.agentId,prompt:task.sourceContext.prompt,mode:task.sourceContext.mode,truncated:task.sourceContext.truncated,preview:task.sourceContext.output.slice(0,240)}:null, prompt: task.prompt, agentId: task.agentId, approvalRequired: task.approvalRequired, requestedByName }; }), cursor: latest.cursor ?? 0 };
+      return { workspace, role:access.role, members:people, runs: rows.map(({run,task,requestedByName})=>runView(run,task,requestedByName)), cursor: latest.cursor ?? 0 };
     });
   }
   async function presenceMembers(userId: string, workspaceId: string) {
@@ -176,5 +180,5 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
     });
   }
   const getStatus = async (id: string) => (await db.select({ status: runs.status }).from(runs).where(eq(runs.id, id)))[0]?.status;
-  return { ...createWorkspaceStore(database), presenceMembers, startRun, snapshot, events, approve, cancel, retry, claim, progress, finish, recoverInterrupted, getStatus };
+  return { ...createWorkspaceStore(database), ...createWorkspaceTools(database), presenceMembers, startRun, snapshot, events, approve, cancel, retry, claim, progress, finish, recoverInterrupted, getStatus };
 }
