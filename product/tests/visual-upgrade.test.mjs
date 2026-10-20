@@ -1,0 +1,53 @@
+import{createHash}from'node:crypto';import test from'node:test';import assert from'node:assert/strict';import *as T from'three';import{createSample}from'../../pilot-3d/sample/model.mjs';import{modelCost}from'../../pilot-3d/sample/optimize.mjs';
+test('rigid instancing reduces draw objects without deleting surfaces, bounds or character joints',()=>{
+ const raw=createSample({detailed:true}),optimized=createSample({detailed:true,optimized:true});
+ const before=modelCost(raw.root),after=modelCost(optimized.root);assert.equal(before.triangles,after.triangles);assert.ok(after.meshes<=before.meshes*.7);
+ const a=new T.Box3().setFromObject(raw.root),b=new T.Box3().setFromObject(optimized.root);assert.ok(a.min.distanceTo(b.min)<1e-5&&a.max.distanceTo(b.max)<1e-5);
+ for(const name of ['NaraActorRoot','NaraHead','NaraKneeL','NaraFootR','SampleChair'])assert.ok(optimized.root.getObjectByName(name));
+ const hash=clips=>createHash('sha256').update(JSON.stringify(clips.map(c=>({name:c.name,duration:c.duration,tracks:c.toJSON().tracks})))).digest('hex');assert.equal(hash(optimized.animations),hash(raw.animations));
+});
+import{MATERIAL_FAMILIES,studioMaterial}from'../../pilot-3d/sample/materials.mjs';import{studioLighting,qualitySettings}from'../../pilot-3d/sample/lighting.mjs';
+test('seven material families and three lighting-quality budgets are explicit and reversible',()=>{
+ assert.equal(Object.keys(MATERIAL_FAMILIES).length,7);for(const family of Object.keys(MATERIAL_FAMILIES)){const m=studioMaterial(family,family,0xaaaaaa);assert.equal(m.userData.family,family);assert.ok(m.roughness>0);m.dispose();}
+ assert.equal(qualitySettings('auto',390).shadow,512);assert.equal(qualitySettings('balanced').dpr,1.5);const scene=new T.Scene(),rig=studioLighting(scene);for(let i=0;i<20;i++){rig.setTime(i%2?'evening':'day');rig.setQuality(i%2?'low':'high');}assert.equal(scene.children.length,4);rig.setTime('day');assert.equal(rig.sun.intensity,3.1);rig.dispose();assert.equal(scene.children.length,0);
+});
+import{createOfficeV5}from'../../pilot-3d/sample/office-model.mjs';import{STATIONS}from'../../pilot-3d/sample/room.mjs';import{cyclePose,COLLIDERS,BODY_RADIUS}from'../../pilot-3d/sample/motion.mjs';
+test('five role workspaces have distinct kits and lateral routes clear of real room furniture',()=>{
+ const {root}=createOfficeV5();for(const[id,origin]of Object.entries(STATIONS)){const prefix=id[0].toUpperCase()+id.slice(1),station=root.getObjectByName(prefix+'Workspace');assert.deepEqual(station.position.toArray(),origin);const kit=station.getObjectByName(prefix+'RoleKit');assert.ok(kit.userData.props.length>=3);for(let t=4;t<7;t+=.04){const p=cyclePose(t),x=origin[0]+p.x,z=origin[2]+p.z;for(const c of root.userData.colliders){const dx=Math.max(c.min[0]-x,0,x-c.max[0]),dz=Math.max(c.min[1]-z,0,z-c.max[1]);assert.ok(Math.hypot(dx,dz)>=BODY_RADIUS,c.id+' '+id);}}}
+ const species=new Set();root.traverse(o=>{if(o.userData.species)species.add(o.userData.species);});assert.equal(species.size,3);assert.ok(root.getObjectByName('LinenSofa'));assert.ok(root.getObjectByName('TallBookshelf'));
+});
+import{STATES,applyCharacterPose}from'../../pilot-3d/sample/poses.mjs';import{part,LEG}from'../../pilot-3d/sample/character-rig.mjs';import{readFile}from'node:fs/promises';import{GLTFLoader}from'three/addons/loaders/GLTFLoader.js';
+test('five independent full-body rigs have distinct silhouettes, 105 meaningful bindings and valid contacts',()=>{
+ const {root,actors,animations}=createOfficeV5();assert.equal(actors.length,5);assert.equal(animations.length,105);assert.equal(new Set(animations.map(c=>c.name)).size,105);assert.equal(new Set(actors.map(a=>a.userData.silhouette)).size,5);
+ for(const actor of actors)for(const state of STATES)for(const time of[0,.4,1.2]){applyCharacterPose(actor,state,time);for(const side of['L','R']){const hip=part(actor,'NaraHip'+side).getWorldPosition(new T.Vector3()),knee=part(actor,'NaraKnee'+side).getWorldPosition(new T.Vector3()),foot=part(actor,'NaraFoot'+side).getWorldPosition(new T.Vector3());assert.ok(Math.abs(hip.distanceTo(knee)-LEG.upper)<1e-5);assert.ok(Math.abs(knee.distanceTo(foot)-LEG.lower)<1e-5);}}
+ for(const pose of['idle','typing','stretch','rest']){const hashes=actors.map(actor=>{const c=animations.find(c=>c.name===actor.userData.agentId+'_'+pose);return createHash('sha256').update(JSON.stringify(c.toJSON().tracks.filter(t=> /Head|Shoulder|Elbow|Pelvis/.test(t.name)).map(t=>t.values))).digest('hex');});assert.ok(new Set(hashes).size>=4,pose);}
+});
+test('actual v5 GLB round-trip retains independent skins, metadata and every clip binding within budget',async()=>{
+ const bytes=await readFile('product/assets/studio-team-v5.glb');assert.ok(bytes.length<15*1024*1024);globalThis.self??=globalThis;const loader=new GLTFLoader();loader.register(parser=>{parser.textureLoader={load(url,done){const t=new T.Texture();queueMicrotask(()=>done(t));return t;}};return{name:'TestImageDecoder'};});const gltf=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length),'');assert.equal(gltf.animations.length,105);const root=gltf.scene.getObjectByName('AfternoonStudio');assert.equal(root.userData.schemaVersion,5);assert.equal(root.userData.actorIds.length,5);
+ let skins=0;gltf.scene.traverse(o=>{if(o.isSkinnedMesh){skins++;let owner=o;while(owner&&!owner.userData.translationOwner)owner=owner.parent;assert.ok(owner);for(const bone of o.skeleton.bones){let boneOwner=bone;while(boneOwner&&!boneOwner.userData.translationOwner)boneOwner=boneOwner.parent;assert.equal(boneOwner,owner);}}});assert.equal(skins,20);
+ for(const id of root.userData.actorIds){const bind=root.userData.bindings[id];assert.ok(gltf.scene.getObjectByName(bind.actor).userData.selectable);assert.ok(gltf.scene.getObjectByName(bind.head));for(const state of STATES)assert.ok(gltf.animations.some(c=>c.name===id+'_'+state));}
+});
+import{AmbientScheduler}from'../../pilot-3d/sample/ambient-motion.mjs';
+test('ten simulated minutes give all five micro-activities and rest trips with exactly one route owner',()=>{
+ const ids=Object.keys(STATIONS),s=new AmbientScheduler(ids);s.setViewModel({actors:ids.map(agentId=>({agentId,pose:'idle'}))});
+ for(let i=0;i<12000;i++){if(i%10===0)s.setViewModel({actors:ids.map(agentId=>({agentId,pose:'idle'}))});s.tick(.05);const moving=Object.values(s.actors).filter(a=>a.nav);assert.ok(moving.length<=1);if(moving.length)assert.equal(s.owner,moving[0].id);}
+ for(const a of Object.values(s.actors)){assert.ok(a.microCount>0,a.id+' micro');assert.ok(a.restCount>0,a.id+' rest');}s.dispose();assert.equal(s.owner,null);
+});
+test('pause, repeated snapshots, work interruption and consumed cue handling preserve the motion clock',()=>{
+ const s=new AmbientScheduler(Object.keys(STATIONS));s.startDemo();for(let i=0;i<250;i++)s.tick(.05);const owner=s.owner;assert.ok(owner);const before=s.state(owner).pose;s.setViewModel({motionPaused:true,actors:[{agentId:owner,pose:'typing'}]});const clock=s.time;for(let i=0;i<30;i++)s.tick(.05);assert.equal(s.time,clock);assert.deepEqual(s.state(owner).pose,before);s.setViewModel({actors:[{agentId:owner,pose:'typing'}]});s.tick(.01);assert.ok(s.state(owner).pose);assert.ok(Math.abs(s.state(owner).pose.x-before.x)<.03);for(let i=0;i<220;i++)s.tick(.05);assert.equal(s.state(owner).action,'typing');assert.equal(s.actors[owner].nav,null);assert.notEqual(s.owner,owner);
+ const id='nara';s.setViewModel({actors:[{agentId:id,pose:'sending',cue:'same',basePose:'reviewing'}]});s.tick(.05);for(let i=0;i<30;i++)s.tick(.05);assert.equal(s.state(id).action,'reviewing');s.setViewModel({actors:[{agentId:id,pose:'idle'}]});s.tick(.05);s.setViewModel({actors:[{agentId:id,pose:'sending',cue:'same',basePose:'reviewing'}]});s.tick(.05);assert.equal(s.state(id).action,'reviewing');
+});
+import{createOfficeRuntime}from'../../pilot-3d/sample/runtime.mjs';
+test('runtime keeps world feet on translated stations, freezes during pause and seats before resuming work',()=>{
+ const {root}=createOfficeV5(),runtime=createOfficeRuntime(root,root.userData);runtime.setViewModel({actors:[]});runtime.startDemo();for(let i=0;i<210;i++)runtime.update(.05);const owner=runtime.scheduler.owner;assert.ok(owner);const actor=root.getObjectByName(root.userData.bindings[owner].actor),before=actor.position.clone();runtime.setViewModel({actors:[{agentId:owner,pose:'typing'}],motionPaused:true});runtime.update(.05);assert.ok(before.equals(actor.position));runtime.setViewModel({actors:[{agentId:owner,pose:'typing'}]});for(let i=0;i<220;i++){runtime.update(.05);for(const side of['L','R']){const hip=part(actor,'NaraHip'+side).getWorldPosition(new T.Vector3()),knee=part(actor,'NaraKnee'+side).getWorldPosition(new T.Vector3()),foot=part(actor,'NaraFoot'+side).getWorldPosition(new T.Vector3());assert.ok(Math.abs(hip.distanceTo(knee)-LEG.upper)<1e-5);assert.ok(Math.abs(knee.distanceTo(foot)-LEG.lower)<1e-5);assert.ok(foot.y>.0749);}}assert.equal(runtime.scheduler.state(owner).action,'typing');assert.equal(actor.position.x,0);assert.equal(actor.position.z,-.6);runtime.dispose();assert.equal(runtime.scheduler.owner,null);
+});
+test('an expired completion cue never replays after a full ambient rest round-trip',()=>{
+ const s=new AmbientScheduler(['nara']);s.setViewModel({actors:[{agentId:'nara',pose:'success',cue:'saved-completion'}]});let leftSeat=false,returned=false;for(let i=0;i<900;i++){s.tick(.05);if(s.owner)leftSeat=true;if(leftSeat&&!s.owner){returned=true;assert.notEqual(s.state('nara').action,'success');}}assert.ok(returned);
+});
+import{validateOfficeAsset}from'../../pilot-3d/sample/asset-contract.mjs';import{releaseModel}from'../../pilot-3d/src/scene.mjs';
+test('broken actor units, anchors or required clips reject v5 instead of silently substituting idle',()=>{
+ const model=createOfficeV5(),gltf={scene:model.root,animations:model.animations};assert.equal(validateOfficeAsset(gltf).schemaVersion,5);const first=gltf.animations.shift();assert.throws(()=>validateOfficeAsset(gltf));gltf.animations.unshift(first);model.root.userData.units='cm';assert.throws(()=>validateOfficeAsset(gltf));model.root.userData.units='metres';const foot=model.root.getObjectByName('NaraFootL');foot.name='MissingFoot';assert.throws(()=>validateOfficeAsset(gltf));
+});
+test('rigid instance buffers are explicitly disposed with their owning asset',()=>{
+ const {root}=createSample({detailed:true,optimized:true});let expected=0,disposed=0;root.traverse(o=>{if(o.isInstancedMesh){expected++;o.addEventListener('dispose',()=>disposed++);}});releaseModel(root);assert.ok(expected>0);assert.equal(disposed,expected);
+});

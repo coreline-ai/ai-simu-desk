@@ -1,0 +1,113 @@
+{
+  "elapsedSeconds": 600,
+  "targetSeconds": 600,
+  "loads": 11,
+  "peakGeometry": 158,
+  "peakTextures": 28,
+  "canvasCount": 1,
+  "errors": [],
+  "activities": {
+    "nara": [
+      "stretch",
+      "idle",
+      "stand_up",
+      "turn",
+      "walk",
+      "rest",
+      "sit_down",
+      "shoulder_roll",
+      "wrist_relax"
+    ],
+    "sora": [
+      "idle",
+      "shoulder_roll",
+      "stand_up",
+      "turn",
+      "walk",
+      "stretch",
+      "rest",
+      "sit_down",
+      "wrist_relax"
+    ],
+    "jun": [
+      "idle",
+      "wrist_relax",
+      "stretch",
+      "stand_up",
+      "turn",
+      "walk",
+      "rest",
+      "sit_down",
+      "shoulder_roll"
+    ],
+    "min": [
+      "idle",
+      "stretch",
+      "shoulder_roll",
+      "wrist_relax",
+      "stand_up",
+      "walk",
+      "turn",
+      "rest",
+      "sit_down"
+    ],
+    "leo": [
+      "idle",
+      "shoulder_roll",
+      "wrist_relax",
+      "stretch",
+      "stand_up",
+      "turn",
+      "walk",
+      "rest",
+      "sit_down"
+    ]
+  },
+  "loadResources": {
+    "1": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "2": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "3": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "4": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "5": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "6": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "7": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "8": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "9": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "10": {
+      "geometries": 158,
+      "textures": 28
+    },
+    "11": {
+      "geometries": 158,
+      "textures": 28
+    }
+  },
+  "complete": true
+}

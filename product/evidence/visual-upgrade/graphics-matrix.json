@@ -1,0 +1,218 @@
+[
+  {
+    "focus": "room",
+    "lighting": "day",
+    "quality": "low",
+    "filename": "room-day-low.png"
+  },
+  {
+    "focus": "room",
+    "lighting": "day",
+    "quality": "balanced",
+    "filename": "room-day-balanced.png"
+  },
+  {
+    "focus": "room",
+    "lighting": "day",
+    "quality": "high",
+    "filename": "room-day-high.png"
+  },
+  {
+    "focus": "room",
+    "lighting": "evening",
+    "quality": "low",
+    "filename": "room-evening-low.png"
+  },
+  {
+    "focus": "room",
+    "lighting": "evening",
+    "quality": "balanced",
+    "filename": "room-evening-balanced.png"
+  },
+  {
+    "focus": "room",
+    "lighting": "evening",
+    "quality": "high",
+    "filename": "room-evening-high.png"
+  },
+  {
+    "focus": "nara",
+    "lighting": "day",
+    "quality": "low",
+    "filename": "nara-day-low.png"
+  },
+  {
+    "focus": "nara",
+    "lighting": "day",
+    "quality": "balanced",
+    "filename": "nara-day-balanced.png"
+  },
+  {
+    "focus": "nara",
+    "lighting": "day",
+    "quality": "high",
+    "filename": "nara-day-high.png"
+  },
+  {
+    "focus": "nara",
+    "lighting": "evening",
+    "quality": "low",
+    "filename": "nara-evening-low.png"
+  },
+  {
+    "focus": "nara",
+    "lighting": "evening",
+    "quality": "balanced",
+    "filename": "nara-evening-balanced.png"
+  },
+  {
+    "focus": "nara",
+    "lighting": "evening",
+    "quality": "high",
+    "filename": "nara-evening-high.png"
+  },
+  {
+    "focus": "sora",
+    "lighting": "day",
+    "quality": "low",
+    "filename": "sora-day-low.png"
+  },
+  {
+    "focus": "sora",
+    "lighting": "day",
+    "quality": "balanced",
+    "filename": "sora-day-balanced.png"
+  },
+  {
+    "focus": "sora",
+    "lighting": "day",
+    "quality": "high",
+    "filename": "sora-day-high.png"
+  },
+  {
+    "focus": "sora",
+    "lighting": "evening",
+    "quality": "low",
+    "filename": "sora-evening-low.png"
+  },
+  {
+    "focus": "sora",
+    "lighting": "evening",
+    "quality": "balanced",
+    "filename": "sora-evening-balanced.png"
+  },
+  {
+    "focus": "sora",
+    "lighting": "evening",
+    "quality": "high",
+    "filename": "sora-evening-high.png"
+  },
+  {
+    "focus": "jun",
+    "lighting": "day",
+    "quality": "low",
+    "filename": "jun-day-low.png"
+  },
+  {
+    "focus": "jun",
+    "lighting": "day",
+    "quality": "balanced",
+    "filename": "jun-day-balanced.png"
+  },
+  {
+    "focus": "jun",
+    "lighting": "day",
+    "quality": "high",
+    "filename": "jun-day-high.png"
+  },
+  {
+    "focus": "jun",
+    "lighting": "evening",
+    "quality": "low",
+    "filename": "jun-evening-low.png"
+  },
+  {
+    "focus": "jun",
+    "lighting": "evening",
+    "quality": "balanced",
+    "filename": "jun-evening-balanced.png"
+  },
+  {
+    "focus": "jun",
+    "lighting": "evening",
+    "quality": "high",
+    "filename": "jun-evening-high.png"
+  },
+  {
+    "focus": "min",
+    "lighting": "day",
+    "quality": "low",
+    "filename": "min-day-low.png"
+  },
+  {
+    "focus": "min",
+    "lighting": "day",
+    "quality": "balanced",
+    "filename": "min-day-balanced.png"
+  },
+  {
+    "focus": "min",
+    "lighting": "day",
+    "quality": "high",
+    "filename": "min-day-high.png"
+  },
+  {
+    "focus": "min",
+    "lighting": "evening",
+    "quality": "low",
+    "filename": "min-evening-low.png"
+  },
+  {
+    "focus": "min",
+    "lighting": "evening",
+    "quality": "balanced",
+    "filename": "min-evening-balanced.png"
+  },
+  {
+    "focus": "min",
+    "lighting": "evening",
+    "quality": "high",
+    "filename": "min-evening-high.png"
+  },
+  {
+    "focus": "leo",
+    "lighting": "day",
+    "quality": "low",
+    "filename": "leo-day-low.png"
+  },
+  {
+    "focus": "leo",
+    "lighting": "day",
+    "quality": "balanced",
+    "filename": "leo-day-balanced.png"
+  },
+  {
+    "focus": "leo",
+    "lighting": "day",
+    "quality": "high",
+    "filename": "leo-day-high.png"
+  },
+  {
+    "focus": "leo",
+    "lighting": "evening",
+    "quality": "low",
+    "filename": "leo-evening-low.png"
+  },
+  {
+    "focus": "leo",
+    "lighting": "evening",
+    "quality": "balanced",
+    "filename": "leo-evening-balanced.png"
+  },
+  {
+    "focus": "leo",
+    "lighting": "evening",
+    "quality": "high",
+    "filename": "leo-evening-high.png"
+  }
+]

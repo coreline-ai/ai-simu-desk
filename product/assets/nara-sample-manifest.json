@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "assetId": "nara-workspace-sample-v1",
+  "scope": "one-character-prototype",
+  "units": "metres",
+  "up": "+Y",
+  "floorY": 0,
+  "actorId": "nara",
+  "root": "NaraActorRoot",
+  "rig": "NaraRigRoot",
+  "anchors": [
+    "NaraHead",
+    "NaraSeatAnchor",
+    "NaraFootL",
+    "NaraFootR"
+  ],
+  "clipPolicy": "in-place; ActorRoot owned by runtime; analytic foot-lock correction from same source",
+  "colliders": [
+    {
+      "id": "desk",
+      "min": [
+        -0.7,
+        -0.25
+      ],
+      "max": [
+        0.7,
+        0.45
+      ]
+    },
+    {
+      "id": "chair-parked",
+      "min": [
+        -0.28,
+        -1.67
+      ],
+      "max": [
+        0.28,
+        -1.03
+      ]
+    }
+  ],
+  "bodyRadius": 0.22,
+  "route": [
+    [
+      0,
+      -0.48
+    ],
+    [
+      -1.35,
+      -0.48
+    ]
+  ],
+  "dimensions": {
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45
+  },
+  "environment": "window-workstation-quality-sample",
+  "materialKinds": [
+    "wood",
+    "fabric",
+    "metal",
+    "plastic",
+    "glass-like opaque daylight",
+    "stone",
+    "leaf"
+  ],
+  "clips": [
+    {
+      "name": "nara_typing",
+      "duration": 1
+    },
+    {
+      "name": "nara_stand_up",
+      "duration": 2
+    },
+    {
+      "name": "nara_standing",
+      "duration": 0.5
+    },
+    {
+      "name": "nara_turn",
+      "duration": 1
+    },
+    {
+      "name": "nara_walk",
+      "duration": 3
+    },
+    {
+      "name": "nara_stretch",
+      "duration": 4
+    },
+    {
+      "name": "nara_rest",
+      "duration": 2
+    },
+    {
+      "name": "nara_sit_down",
+      "duration": 2
+    }
+  ],
+  "optimization": {
+    "before": {
+      "meshes": 264,
+      "triangles": 105900
+    },
+    "after": {
+      "meshes": 164,
+      "triangles": 105900
+    },
+    "instancedParts": 121
+  },
+  "file": "nara-workspace-sample.glb",
+  "bytes": 2432548,
+  "sha256": "b140e80c71c41f0901bd35066554a0ac47b8a76a224c2c19dc7ee5a2ff6b01b4",
+  "meshes": 164,
+  "triangles": 105900,
+  "textures": {
+    "count": 5,
+    "resolution": 256,
+    "estimatedRGBAWithMipmapsBytes": 1747627
+  },
+  "source": "pilot-3d/sample; scripts/sample-textures.mjs",
+  "provenance": "Original local geometry, deterministic procedural PNGs and node animation; no external models/textures",
+  "rigDescription": "articulated joints with partial two-bone sleeve/trouser skinning; silhouette visually checked",
+  "limitations": [
+    "One Nara prototype; five-person product remains v4",
+    "No speech, finger articulation or cloth simulation",
+    "Desktop/viewport QA does not certify physical mobile GPU performance"
+  ]
+}

@@ -1,0 +1,3 @@
+import *as T from'three';
+export const MATERIAL_FAMILIES=Object.freeze({wood:{roughness:.76,textureKind:'oak'},fabric:{roughness:.96,textureKind:'fabric'},metal:{roughness:.36,metalness:.72},plastic:{roughness:.58},glass:{roughness:.16,transparent:true,opacity:.22,depthWrite:false},stone:{roughness:.96,textureKind:'stone'},leaf:{roughness:.82}});
+export function studioMaterial(family,name,color){const spec=MATERIAL_FAMILIES[family];if(!spec)throw Error('Unknown material family');const {textureKind,...options}=spec;const m=new T.MeshStandardMaterial({color,...options});m.name=name;m.userData={family,...(textureKind?{textureKind}:{})};return m;}

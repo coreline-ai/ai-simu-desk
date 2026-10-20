@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 5,
+  "modelVersion": 5,
+  "naturalMotion": true,
+  "fullBody": true,
+  "units": "metres",
+  "up": "+Y",
+  "floorY": 0,
+  "actorIds": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "workspaces": {
+    "nara": [
+      -2.5,
+      0,
+      -0.35
+    ],
+    "sora": [
+      0,
+      0,
+      -0.35
+    ],
+    "jun": [
+      2.5,
+      0,
+      -0.35
+    ],
+    "min": [
+      -1.25,
+      0,
+      2
+    ],
+    "leo": [
+      1.25,
+      0,
+      2
+    ]
+  },
+  "room": [
+    9.6,
+    2.6,
+    7.6
+  ],
+  "colliders": [
+    {
+      "id": "sofa",
+      "min": [
+        -3.65,
+        -3.45
+      ],
+      "max": [
+        -1.55,
+        -2.59
+      ]
+    },
+    {
+      "id": "shelf",
+      "min": [
+        -4.7,
+        -1.93
+      ],
+      "max": [
+        -4.27,
+        -0.13
+      ]
+    },
+    {
+      "id": "meeting",
+      "min": [
+        2.82,
+        1.77
+      ],
+      "max": [
+        4.18,
+        3.13
+      ]
+    },
+    {
+      "id": "nara-desk",
+      "min": [
+        -3.2,
+        -0.6
+      ],
+      "max": [
+        -1.8,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "nara-chair-parked",
+      "min": [
+        -2.7800000000000002,
+        -2.02
+      ],
+      "max": [
+        -2.2199999999999998,
+        -1.38
+      ]
+    },
+    {
+      "id": "sora-desk",
+      "min": [
+        -0.7,
+        -0.6
+      ],
+      "max": [
+        0.7,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "sora-chair-parked",
+      "min": [
+        -0.28,
+        -2.02
+      ],
+      "max": [
+        0.28,
+        -1.38
+      ]
+    },
+    {
+      "id": "jun-desk",
+      "min": [
+        1.8,
+        -0.6
+      ],
+      "max": [
+        3.2,
+        0.10000000000000003
+      ]
+    },
+    {
+      "id": "jun-chair-parked",
+      "min": [
+        2.2199999999999998,
+        -2.02
+      ],
+      "max": [
+        2.7800000000000002,
+        -1.38
+      ]
+    },
+    {
+      "id": "min-desk",
+      "min": [
+        -1.95,
+        1.75
+      ],
+      "max": [
+        -0.55,
+        2.45
+      ]
+    },
+    {
+      "id": "min-chair-parked",
+      "min": [
+        -1.53,
+        0.33000000000000007
+      ],
+      "max": [
+        -0.97,
+        0.97
+      ]
+    },
+    {
+      "id": "leo-desk",
+      "min": [
+        0.55,
+        1.75
+      ],
+      "max": [
+        1.95,
+        2.45
+      ]
+    },
+    {
+      "id": "leo-chair-parked",
+      "min": [
+        0.97,
+        0.33000000000000007
+      ],
+      "max": [
+        1.53,
+        0.97
+      ]
+    }
+  ],
+  "bodyRadius": 0.22,
+  "route": [
+    [
+      0,
+      -0.48
+    ],
+    [
+      -1.35,
+      -0.48
+    ]
+  ],
+  "dimensions": {
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45
+  },
+  "actorBounds": {
+    "standing": [
+      [
+        -0.3,
+        0,
+        -0.3
+      ],
+      [
+        0.3,
+        1.75,
+        0.3
+      ]
+    ],
+    "stretch": [
+      [
+        -0.75,
+        0,
+        -0.65
+      ],
+      [
+        0.75,
+        2.25,
+        0.65
+      ]
+    ]
+  },
+  "source": "Original local models; pilot-3d/sample",
+  "optimization": {
+    "before": {
+      "meshes": 1104,
+      "triangles": 406450
+    },
+    "after": {
+      "meshes": 471,
+      "triangles": 406450
+    },
+    "instancedParts": 776
+  },
+  "bindings": {
+    "nara": {
+      "actor": "NaraActorRoot",
+      "head": "NaraHead",
+      "feet": [
+        "NaraFootL",
+        "NaraFootR"
+      ],
+      "seat": "NaraSeatAnchor"
+    },
+    "sora": {
+      "actor": "SoraActorRoot",
+      "head": "SoraHead",
+      "feet": [
+        "SoraFootL",
+        "SoraFootR"
+      ],
+      "seat": "SoraSeatAnchor"
+    },
+    "jun": {
+      "actor": "JunActorRoot",
+      "head": "JunHead",
+      "feet": [
+        "JunFootL",
+        "JunFootR"
+      ],
+      "seat": "JunSeatAnchor"
+    },
+    "min": {
+      "actor": "MinActorRoot",
+      "head": "MinHead",
+      "feet": [
+        "MinFootL",
+        "MinFootR"
+      ],
+      "seat": "MinSeatAnchor"
+    },
+    "leo": {
+      "actor": "LeoActorRoot",
+      "head": "LeoHead",
+      "feet": [
+        "LeoFootL",
+        "LeoFootR"
+      ],
+      "seat": "LeoSeatAnchor"
+    }
+  },
+  "cost": {
+    "meshes": 471,
+    "triangles": 406450
+  },
+  "file": "studio-team-v5.glb",
+  "bytes": 6920216,
+  "sha256": "f77c93ccb17d05d3d0f9c47041b625e1039d8b54298e268e49830da60d468ed0",
+  "animations": [
+    {
+      "name": "nara_idle",
+      "duration": 4
+    },
+    {
+      "name": "nara_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "nara_thinking",
+      "duration": 4
+    },
+    {
+      "name": "nara_waiting",
+      "duration": 4
+    },
+    {
+      "name": "nara_success",
+      "duration": 1.5
+    },
+    {
+      "name": "nara_error",
+      "duration": 1.6
+    },
+    {
+      "name": "nara_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "nara_preparing",
+      "duration": 3
+    },
+    {
+      "name": "nara_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "nara_sending",
+      "duration": 1.2
+    },
+    {
+      "name": "nara_receiving",
+      "duration": 1.2
+    },
+    {
+      "name": "nara_acknowledge",
+      "duration": 1
+    },
+    {
+      "name": "nara_stretch",
+      "duration": 4
+    },
+    {
+      "name": "nara_shoulder_roll",
+      "duration": 4
+    },
+    {
+      "name": "nara_wrist_relax",
+      "duration": 3
+    },
+    {
+      "name": "nara_stand_up",
+      "duration": 2
+    },
+    {
+      "name": "nara_standing",
+      "duration": 3
+    },
+    {
+      "name": "nara_walk",
+      "duration": 3
+    },
+    {
+      "name": "nara_turn",
+      "duration": 1
+    },
+    {
+      "name": "nara_sit_down",
+      "duration": 2
+    },
+    {
+      "name": "nara_rest",
+      "duration": 4
+    },
+    {
+      "name": "sora_idle",
+      "duration": 4
+    },
+    {
+      "name": "sora_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "sora_thinking",
+      "duration": 4
+    },
+    {
+      "name": "sora_waiting",
+      "duration": 4
+    },
+    {
+      "name": "sora_success",
+      "duration": 1.5
+    },
+    {
+      "name": "sora_error",
+      "duration": 1.6
+    },
+    {
+      "name": "sora_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "sora_preparing",
+      "duration": 3
+    },
+    {
+      "name": "sora_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "sora_sending",
+      "duration": 1.2
+    },
+    {
+      "name": "sora_receiving",
+      "duration": 1.2
+    },
+    {
+      "name": "sora_acknowledge",
+      "duration": 1
+    },
+    {
+      "name": "sora_stretch",
+      "duration": 4
+    },
+    {
+      "name": "sora_shoulder_roll",
+      "duration": 4
+    },
+    {
+      "name": "sora_wrist_relax",
+      "duration": 3
+    },
+    {
+      "name": "sora_stand_up",
+      "duration": 2
+    },
+    {
+      "name": "sora_standing",
+      "duration": 3
+    },
+    {
+      "name": "sora_walk",
+      "duration": 3
+    },
+    {
+      "name": "sora_turn",
+      "duration": 1
+    },
+    {
+      "name": "sora_sit_down",
+      "duration": 2
+    },
+    {
+      "name": "sora_rest",
+      "duration": 4
+    },
+    {
+      "name": "jun_idle",
+      "duration": 4
+    },
+    {
+      "name": "jun_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "jun_thinking",
+      "duration": 4
+    },
+    {
+      "name": "jun_waiting",
+      "duration": 4
+    },
+    {
+      "name": "jun_success",
+      "duration": 1.5
+    },
+    {
+      "name": "jun_error",
+      "duration": 1.6
+    },
+    {
+      "name": "jun_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "jun_preparing",
+      "duration": 3
+    },
+    {
+      "name": "jun_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "jun_sending",
+      "duration": 1.2
+    },
+    {
+      "name": "jun_receiving",
+      "duration": 1.2
+    },
+    {
+      "name": "jun_acknowledge",
+      "duration": 1
+    },
+    {
+      "name": "jun_stretch",
+      "duration": 4
+    },
+    {
+      "name": "jun_shoulder_roll",
+      "duration": 4
+    },
+    {
+      "name": "jun_wrist_relax",
+      "duration": 3
+    },
+    {
+      "name": "jun_stand_up",
+      "duration": 2
+    },
+    {
+      "name": "jun_standing",
+      "duration": 3
+    },
+    {
+      "name": "jun_walk",
+      "duration": 3
+    },
+    {
+      "name": "jun_turn",
+      "duration": 1
+    },
+    {
+      "name": "jun_sit_down",
+      "duration": 2
+    },
+    {
+      "name": "jun_rest",
+      "duration": 4
+    },
+    {
+      "name": "min_idle",
+      "duration": 4
+    },
+    {
+      "name": "min_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "min_thinking",
+      "duration": 4
+    },
+    {
+      "name": "min_waiting",
+      "duration": 4
+    },
+    {
+      "name": "min_success",
+      "duration": 1.5
+    },
+    {
+      "name": "min_error",
+      "duration": 1.6
+    },
+    {
+      "name": "min_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "min_preparing",
+      "duration": 3
+    },
+    {
+      "name": "min_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "min_sending",
+      "duration": 1.2
+    },
+    {
+      "name": "min_receiving",
+      "duration": 1.2
+    },
+    {
+      "name": "min_acknowledge",
+      "duration": 1
+    },
+    {
+      "name": "min_stretch",
+      "duration": 4
+    },
+    {
+      "name": "min_shoulder_roll",
+      "duration": 4
+    },
+    {
+      "name": "min_wrist_relax",
+      "duration": 3
+    },
+    {
+      "name": "min_stand_up",
+      "duration": 2
+    },
+    {
+      "name": "min_standing",
+      "duration": 3
+    },
+    {
+      "name": "min_walk",
+      "duration": 3
+    },
+    {
+      "name": "min_turn",
+      "duration": 1
+    },
+    {
+      "name": "min_sit_down",
+      "duration": 2
+    },
+    {
+      "name": "min_rest",
+      "duration": 4
+    },
+    {
+      "name": "leo_idle",
+      "duration": 4
+    },
+    {
+      "name": "leo_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "leo_thinking",
+      "duration": 4
+    },
+    {
+      "name": "leo_waiting",
+      "duration": 4
+    },
+    {
+      "name": "leo_success",
+      "duration": 1.5
+    },
+    {
+      "name": "leo_error",
+      "duration": 1.6
+    },
+    {
+      "name": "leo_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "leo_preparing",
+      "duration": 3
+    },
+    {
+      "name": "leo_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "leo_sending",
+      "duration": 1.2
+    },
+    {
+      "name": "leo_receiving",
+      "duration": 1.2
+    },
+    {
+      "name": "leo_acknowledge",
+      "duration": 1
+    },
+    {
+      "name": "leo_stretch",
+      "duration": 4
+    },
+    {
+      "name": "leo_shoulder_roll",
+      "duration": 4
+    },
+    {
+      "name": "leo_wrist_relax",
+      "duration": 3
+    },
+    {
+      "name": "leo_stand_up",
+      "duration": 2
+    },
+    {
+      "name": "leo_standing",
+      "duration": 3
+    },
+    {
+      "name": "leo_walk",
+      "duration": 3
+    },
+    {
+      "name": "leo_turn",
+      "duration": 1
+    },
+    {
+      "name": "leo_sit_down",
+      "duration": 2
+    },
+    {
+      "name": "leo_rest",
+      "duration": 4
+    }
+  ],
+  "textureRGBAEstimate": 1747627
+}

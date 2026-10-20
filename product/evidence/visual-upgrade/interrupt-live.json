@@ -1,0 +1,146 @@
+{
+  "before": {
+    "loadedMs": 164,
+    "firstRenderMs": 239,
+    "lastEmit": 39035.7,
+    "drawCalls": 771,
+    "triangles": 684250,
+    "textures": 28,
+    "geometries": 158,
+    "animationTime": 38.79450000000077,
+    "paused": false,
+    "pixelRatio": 1,
+    "modelVersion": 5,
+    "quality": "auto",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_stretch",
+      "jun": "jun_stretch",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 12.498099999999901,
+        "restCount": 1,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "stretch",
+        "time": 10.49689999999994,
+        "cycle": 1,
+        "returning": false,
+        "basePose": "idle",
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "stretch",
+        "time": 3.694799999999997,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 38.79450000000077,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 38.79450000000077,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 0
+      }
+    },
+    "reservation": "sora",
+    "resetTimes": 0
+  },
+  "after": {
+    "loadedMs": 164,
+    "firstRenderMs": 239,
+    "lastEmit": 83172.3,
+    "drawCalls": 851,
+    "triangles": 751250,
+    "textures": 28,
+    "geometries": 158,
+    "animationTime": 82.93109999999912,
+    "paused": false,
+    "pixelRatio": 1,
+    "modelVersion": 5,
+    "quality": "auto",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_idle",
+      "sora": "sora_typing",
+      "jun": "jun_idle",
+      "min": "min_stretch",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "idle",
+        "time": 56.63470000000028,
+        "restCount": 1,
+        "microCount": 3,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "typing",
+        "time": 36.520400000000095,
+        "restCount": 0,
+        "microCount": 1,
+        "interruptions": 1
+      },
+      "jun": {
+        "action": "idle",
+        "time": 13.511799999999903,
+        "restCount": 1,
+        "microCount": 2,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "stretch",
+        "time": 11.510599999999947,
+        "cycle": 1,
+        "returning": false,
+        "basePose": "idle",
+        "restCount": 0,
+        "microCount": 2,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 82.93109999999912,
+        "restCount": 0,
+        "microCount": 3,
+        "interruptions": 0
+      }
+    },
+    "reservation": "min",
+    "resetTimes": 0
+  }
+}

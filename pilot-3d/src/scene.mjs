@@ -7,6 +7,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 export function releaseModel(root) {
   const geometries = new Set(), materials = new Set(), textures = new Set();
   root?.traverse(node => {
+    if(node.isInstancedMesh)node.dispose();
     if (node.geometry) geometries.add(node.geometry);
     for (const mat of [node.material].flat().filter(Boolean)) {
       materials.add(mat);

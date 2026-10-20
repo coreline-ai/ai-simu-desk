@@ -1,0 +1,4 @@
+old · 1149×508 · DPR 1 · ACES 1.03 · warmup 5s / 30s × 3
+1회 · 2249 frames · p50 13.30ms · p95 14.10ms
+2회 · 2249 frames · p50 13.30ms · p95 14.30ms
+3회 · 2249 frames · p50 13.30ms · p95 14.00ms

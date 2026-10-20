@@ -6,7 +6,7 @@ import { createWorkTools } from "./work-tools.mjs";
 import { renderAnswer } from "./answer-view.mjs";
 import { followupDraft } from "./followups.mjs";
 import { createCueTracker } from "../../pilot-3d/src/animation.mjs";
-import { createStudioView } from "../../pilot-3d/src/scene.mjs";
+import {createProductionView}from"../../pilot-3d/sample/production-view.mjs";
 import { ACTIVE } from "../../server/domain/contracts.ts";
 import { AGENT_NAMES, RUN_LABELS as labels, teamSceneState, motionPolicy } from "./scene-state.mjs";
 import { createPresenceClient } from "./presence.mjs";
@@ -48,6 +48,7 @@ const presence = createPresenceClient({request:api,onChange:data=>workspacePanel
   if(!navigator.sendBeacon(path,new Blob([json],{type:"application/json"}))) void fetch(path,{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:json,keepalive:true}).catch(()=>{});
 }});
 function invalidateWorkspace() {
+  scene?.resetActivity?.();
   clearTimeout(handoffTimer);handoffs.reset();handoffReaction=null;handoffLog=[];$("stage").dataset.handoffLog="[]";lastAnnouncement="";$("handoff-live").textContent="";sceneCues.reset(); followupSource=null; archivedRun=null; workTools.reset(); discussion.reset();
   presence.stop();presenceStarted=false;
   epoch++; requests.abort(); requests = new AbortController(); clearTimeout(poll); poll=0;
@@ -243,12 +244,12 @@ function schedulePoll(ticket = epoch) {
 function mountScene() {
   const ticket = ++sceneEpoch; scene?.dispose(); scene = null; $("fallback").hidden = true; $("scene-state").textContent = "3D 준비 중";
   try {
-    scene = createStudioView($("canvas-host"), {
-      onStatus(kind) { if (ticket !== sceneEpoch) return; $("scene-state").textContent = kind === "ready" ? "실제 3D" : "2D 대체 화면"; $("fallback").hidden = kind === "ready"; },
+    scene = createProductionView($("canvas-host"), {
+      onStatus(kind,error,version) { if (ticket !== sceneEpoch) return;if(kind==='ready')document.querySelector('.stage-tag').textContent=version===4?'STUDIO V4 · RECOVERED':$('scene-lighting').value==='evening'?'STUDIO V5 · EVENING':'STUDIO V5 · DAYLIGHT'; $("scene-state").textContent = kind === "ready" ? (version===4?"실제 3D · v4 복구":"실제 3D · 고품질 v5") : "2D 대체 화면"; $("fallback").hidden = kind === "ready"; },
       onSelect: selectColleague,
-      onMetrics(stats){if(ticket!==sceneEpoch)return;$('stage').dataset.animationTime=String(stats.animationTime);$('stage').dataset.actions=JSON.stringify(stats.actors);$('stage').dataset.drawCalls=String(stats.drawCalls);},
-    }, { actors: TEAM.map(p=>p.id), actorLabels:Object.fromEntries(TEAM.map(p=>[p.id,p.name+" · "+p.role])), modelUrl: "/assets/studio-team-v4.glb" });
-    scene.resetCamera(cameraFrame); renderSceneState();
+      onMetrics(stats){if(ticket!==sceneEpoch)return;$('stage').dataset.animationTime=String(stats.animationTime);$('stage').dataset.actions=JSON.stringify(stats.actors);$('stage').dataset.drawCalls=String(stats.drawCalls);$('stage').dataset.modelVersion=String(stats.modelVersion);$('stage').dataset.activities=JSON.stringify(stats.activities??{});$('scene-lighting').disabled=stats.modelVersion===4;$('ambient-demo').disabled=stats.modelVersion===4;},
+    }, { actors: TEAM.map(p=>p.id), actorLabels:Object.fromEntries(TEAM.map(p=>[p.id,p.name+" · "+p.role])), modelUrl: "/assets/studio-team-v5.glb" });
+    scene.resetCamera(cameraFrame);scene.setQuality($('scene-quality').value);scene.setLighting($('scene-lighting').value);renderSceneState();
   } catch { $("fallback").hidden = false; $("scene-state").textContent = "2D 대체 화면"; }
 }
 async function enter(me) {
@@ -346,6 +347,9 @@ $('team-task').addEventListener('change',()=>{if($('team-task').checked){followu
 function setOfficeFocus(focused){document.body.classList.toggle('office-focus-mode',focused);$('expand-office').textContent=focused?'업무 화면으로 돌아가기':'사무실만 보기';$('expand-office').setAttribute('aria-pressed',String(focused));}
 $('expand-office').addEventListener('click',()=>{const focused=!document.body.classList.contains('office-focus-mode');setOfficeFocus(focused);history.replaceState(null,'',location.pathname+location.search+(focused?'#office':'#scene-title'));$('scene-title').scrollIntoView({block:'start'});});
 $('start-team-demo').addEventListener('click',()=>{if(busy||!snapshot||snapshot.role==='viewer'||snapshot.runs.some(r=>ACTIVE.includes(r.status)))return;followupSource=null;$('team-task').checked=true;$('agent').value='nara';$('task').value='5명이 2주 안에 무료 도구로 첫 화면 개선 프로젝트를 진행해 줘. 기획, 디자인, 개발, QA, 최종 정리의 계획과 완료 기준을 만들어 줘.';$('require-approval').checked=false;$('scenario').value='normal';followLive=true;setCameraFrame('team');render();$('task-form').requestSubmit();});
+$('scene-quality').addEventListener('change',e=>scene?.setQuality(e.target.value));
+$('scene-lighting').addEventListener('change',e=>{scene?.setLighting(e.target.value);document.querySelector('.stage-tag').textContent=e.target.value==='evening'?'STUDIO V5 · EVENING':'STUDIO V5 · DAYLIGHT';});
+$('ambient-demo').addEventListener('click',()=>{scene?.startDemo();});
 $("recover-scene").addEventListener("click", mountScene);
 document.addEventListener("visibilitychange", () => { handoffContinuous=false;handoffReaction=null;clearTimeout(handoffTimer);sceneCues.reset();renderSceneState();if (identity && !document.hidden) { const ticket = epoch; void loadSnapshot(ticket).then(() => schedulePoll(ticket)).catch(error=>handle(error,ticket)); } });
 window.addEventListener("pagehide", () => { presence.stop();clearTimeout(poll); requests.abort(); ++sceneEpoch; scene?.dispose(); scene = null; });

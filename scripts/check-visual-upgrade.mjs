@@ -1,0 +1,2 @@
+import{readdirSync}from'node:fs';import{spawnSync}from'node:child_process';
+const files=readdirSync('pilot-3d/sample').filter(n=>n.endsWith('.mjs')).map(n=>'pilot-3d/sample/'+n).concat(['scripts/build-office-v5.mjs','scripts/build-office-page.mjs','scripts/sample-textures.mjs','scripts/build-visual-sample.mjs']);for(const file of files){const result=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});if(result.status!==0){process.stderr.write(result.stderr);process.exit(1);}}console.log('Visual upgrade syntax OK:',files.length,'modules');

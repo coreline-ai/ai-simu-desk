@@ -1,0 +1,3 @@
+import{build}from'esbuild';import{mkdir,copyFile}from'node:fs/promises';import{buildVisualSample}from'./build-visual-sample.mjs';
+export async function buildSamplePage({detailed=true}={}){await buildVisualSample({detailed});const dir='product/dist/demos/visual-upgrade';await mkdir(dir,{recursive:true});for(const name of ['index.html','styles.css'])await copyFile('pilot-3d/sample/'+name,dir+'/'+name);await copyFile('product/assets/nara-workspace-sample.glb',dir+'/nara-workspace-sample.glb');await build({entryPoints:['pilot-3d/sample/app.mjs'],outfile:dir+'/app.js',bundle:true,format:'esm',minify:true,target:['es2022'],legalComments:'linked'});}
+if(process.argv[1]?.endsWith('build-sample-page.mjs'))await buildSamplePage({detailed:!process.argv.includes('--greybox')});

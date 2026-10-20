@@ -1,0 +1,113 @@
+{
+  "sameRendererCameraLighting": true,
+  "runs": [
+    {
+      "loadedMs": 26,
+      "firstRenderMs": 44,
+      "lastEmit": 180776.6,
+      "measuredFps": 75,
+      "frameP50": 13.300000000017462,
+      "frameP95": 14.299999999988358,
+      "measurementMs": 30005,
+      "measurementFrames": 2250,
+      "drawCalls": 784,
+      "triangles": 255420,
+      "textures": 3,
+      "geometries": 220,
+      "animationTime": 170.29726799998346,
+      "paused": false,
+      "pixelRatio": 1,
+      "modelVersion": 4,
+      "quality": "auto",
+      "lighting": "day",
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "actors": {
+        "nara": "nara_idle",
+        "sora": "sora_idle",
+        "jun": "jun_idle",
+        "min": "min_idle",
+        "leo": "leo_idle"
+      },
+      "resetTimes": 0
+    },
+    {
+      "loadedMs": 26,
+      "firstRenderMs": 44,
+      "lastEmit": 260846.4,
+      "measuredFps": 75,
+      "frameP50": 13.300000000017462,
+      "frameP95": 13.60000000000582,
+      "measurementMs": 30006,
+      "measurementFrames": 2250,
+      "drawCalls": 784,
+      "triangles": 255420,
+      "textures": 3,
+      "geometries": 220,
+      "animationTime": 250.36706799996855,
+      "paused": false,
+      "pixelRatio": 1,
+      "modelVersion": 4,
+      "quality": "auto",
+      "lighting": "day",
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "actors": {
+        "nara": "nara_idle",
+        "sora": "sora_idle",
+        "jun": "jun_idle",
+        "min": "min_idle",
+        "leo": "leo_idle"
+      },
+      "resetTimes": 0
+    },
+    {
+      "loadedMs": 26,
+      "firstRenderMs": 44,
+      "lastEmit": 304982.9,
+      "measuredFps": 75,
+      "frameP50": 13.300000000046566,
+      "frameP95": 14.299999999988358,
+      "measurementMs": 30004,
+      "measurementFrames": 2250,
+      "drawCalls": 784,
+      "triangles": 255420,
+      "textures": 3,
+      "geometries": 220,
+      "animationTime": 294.5035680000142,
+      "paused": false,
+      "pixelRatio": 1,
+      "modelVersion": 4,
+      "quality": "auto",
+      "lighting": "day",
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "actors": {
+        "nara": "nara_idle",
+        "sora": "sora_idle",
+        "jun": "jun_idle",
+        "min": "min_idle",
+        "leo": "leo_idle"
+      },
+      "resetTimes": 0
+    }
+  ]
+}

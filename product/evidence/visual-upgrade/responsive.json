@@ -1,0 +1,370 @@
+[
+  {
+    "requested": 320,
+    "canvas": [
+      279,
+      358
+    ],
+    "labels": [
+      {
+        "bottom": 442,
+        "left": 100,
+        "name": "나라",
+        "right": 130,
+        "top": 420
+      },
+      {
+        "bottom": 456,
+        "left": 147,
+        "name": "소라",
+        "right": 177,
+        "top": 434
+      },
+      {
+        "bottom": 469,
+        "left": 197,
+        "name": "준",
+        "right": 219,
+        "top": 447
+      },
+      {
+        "bottom": 471,
+        "left": 102,
+        "name": "민",
+        "right": 124,
+        "top": 449
+      },
+      {
+        "bottom": 484,
+        "left": 145,
+        "name": "레오",
+        "right": 174,
+        "top": 462
+      }
+    ],
+    "scrollWidth": 305,
+    "viewport": 320
+  },
+  {
+    "requested": 360,
+    "canvas": [
+      315,
+      358
+    ],
+    "labels": [
+      {
+        "bottom": 438,
+        "left": 115,
+        "name": "나라",
+        "right": 145,
+        "top": 416
+      },
+      {
+        "bottom": 453,
+        "left": 168,
+        "name": "소라",
+        "right": 197,
+        "top": 431
+      },
+      {
+        "bottom": 468,
+        "left": 224,
+        "name": "준",
+        "right": 246,
+        "top": 446
+      },
+      {
+        "bottom": 470,
+        "left": 116,
+        "name": "민",
+        "right": 138,
+        "top": 448
+      },
+      {
+        "bottom": 486,
+        "left": 165,
+        "name": "레오",
+        "right": 195,
+        "top": 464
+      }
+    ],
+    "scrollWidth": 345,
+    "viewport": 360
+  },
+  {
+    "requested": 390,
+    "canvas": [
+      343,
+      358
+    ],
+    "labels": [
+      {
+        "bottom": 434,
+        "left": 127,
+        "name": "나라",
+        "right": 156,
+        "top": 412
+      },
+      {
+        "bottom": 451,
+        "left": 184,
+        "name": "소라",
+        "right": 213,
+        "top": 429
+      },
+      {
+        "bottom": 468,
+        "left": 245,
+        "name": "준",
+        "right": 267,
+        "top": 446
+      },
+      {
+        "bottom": 470,
+        "left": 128,
+        "name": "민",
+        "right": 149,
+        "top": 448
+      },
+      {
+        "bottom": 486,
+        "left": 181,
+        "name": "레오",
+        "right": 211,
+        "top": 464
+      }
+    ],
+    "scrollWidth": 375,
+    "viewport": 390
+  },
+  {
+    "requested": 480,
+    "canvas": [
+      426,
+      358
+    ],
+    "labels": [
+      {
+        "bottom": 424,
+        "left": 160,
+        "name": "나라",
+        "right": 190,
+        "top": 402
+      },
+      {
+        "bottom": 445,
+        "left": 232,
+        "name": "소라",
+        "right": 261,
+        "top": 423
+      },
+      {
+        "bottom": 466,
+        "left": 307,
+        "name": "준",
+        "right": 329,
+        "top": 444
+      },
+      {
+        "bottom": 468,
+        "left": 161,
+        "name": "민",
+        "right": 183,
+        "top": 446
+      },
+      {
+        "bottom": 489,
+        "left": 228,
+        "name": "레오",
+        "right": 258,
+        "top": 467
+      }
+    ],
+    "scrollWidth": 465,
+    "viewport": 480
+  },
+  {
+    "requested": 600,
+    "canvas": [
+      536,
+      358
+    ],
+    "labels": [
+      {
+        "bottom": 416,
+        "left": 199,
+        "name": "나라 · 기획",
+        "right": 253,
+        "top": 394
+      },
+      {
+        "bottom": 440,
+        "left": 278,
+        "name": "소라 · 디자인",
+        "right": 339,
+        "top": 418
+      },
+      {
+        "bottom": 464,
+        "left": 368,
+        "name": "준 · 개발",
+        "right": 414,
+        "top": 442
+      },
+      {
+        "bottom": 467,
+        "left": 200,
+        "name": "민 · QA",
+        "right": 243,
+        "top": 445
+      },
+      {
+        "bottom": 491,
+        "left": 278,
+        "name": "레오 · 정리",
+        "right": 331,
+        "top": 469
+      }
+    ],
+    "scrollWidth": 585,
+    "viewport": 600
+  },
+  {
+    "requested": 768,
+    "canvas": [
+      683,
+      608
+    ],
+    "labels": [
+      {
+        "bottom": 512,
+        "left": 253,
+        "name": "나라 · 기획",
+        "right": 316,
+        "top": 487
+      },
+      {
+        "bottom": 544,
+        "left": 362,
+        "name": "소라 · 디자인",
+        "right": 435,
+        "top": 519
+      },
+      {
+        "bottom": 578,
+        "left": 485,
+        "name": "준 · 개발",
+        "right": 540,
+        "top": 553
+      },
+      {
+        "bottom": 582,
+        "left": 253,
+        "name": "민 · QA",
+        "right": 305,
+        "top": 557
+      },
+      {
+        "bottom": 615,
+        "left": 361,
+        "name": "레오 · 정리",
+        "right": 425,
+        "top": 590
+      }
+    ],
+    "scrollWidth": 753,
+    "viewport": 768
+  },
+  {
+    "requested": 1024,
+    "canvas": [
+      916,
+      608
+    ],
+    "labels": [
+      {
+        "bottom": 493,
+        "left": 360,
+        "name": "나라 · 기획",
+        "right": 423,
+        "top": 468
+      },
+      {
+        "bottom": 533,
+        "left": 496,
+        "name": "소라 · 디자인",
+        "right": 568,
+        "top": 508
+      },
+      {
+        "bottom": 574,
+        "left": 644,
+        "name": "준 · 개발",
+        "right": 699,
+        "top": 549
+      },
+      {
+        "bottom": 579,
+        "left": 359,
+        "name": "민 · QA",
+        "right": 411,
+        "top": 554
+      },
+      {
+        "bottom": 620,
+        "left": 493,
+        "name": "레오 · 정리",
+        "right": 557,
+        "top": 595
+      }
+    ],
+    "scrollWidth": 1009,
+    "viewport": 1024
+  },
+  {
+    "requested": 1440,
+    "canvas": [
+      1149,
+      608
+    ],
+    "labels": [
+      {
+        "bottom": 493,
+        "left": 568,
+        "name": "나라 · 기획",
+        "right": 631,
+        "top": 468
+      },
+      {
+        "bottom": 533,
+        "left": 704,
+        "name": "소라 · 디자인",
+        "right": 776,
+        "top": 508
+      },
+      {
+        "bottom": 574,
+        "left": 852,
+        "name": "준 · 개발",
+        "right": 907,
+        "top": 549
+      },
+      {
+        "bottom": 579,
+        "left": 567,
+        "name": "민 · QA",
+        "right": 619,
+        "top": 554
+      },
+      {
+        "bottom": 620,
+        "left": 701,
+        "name": "레오 · 정리",
+        "right": 765,
+        "top": 595
+      }
+    ],
+    "scrollWidth": 1425,
+    "viewport": 1440
+  }
+]

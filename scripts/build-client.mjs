@@ -1,4 +1,7 @@
+import{buildOfficeV5}from'./build-office-v5.mjs';
+import{buildOfficePage}from'./build-office-page.mjs';
 import {build,transform} from 'esbuild';
+import {buildSamplePage} from './build-sample-page.mjs';
 import {buildLibrary} from './build-library.mjs';
 import {mkdir,copyFile,readFile,writeFile,rm} from 'node:fs/promises';
 export async function buildClient(remote=false) {
@@ -11,5 +14,8 @@ export async function buildClient(remote=false) {
   const css=await transform(await readFile('product/styles.css','utf8'),{loader:'css',minify:true});
   if(css.warnings.length)throw new Error('Product stylesheet validation failed');
   await writeFile('product/dist/assets/styles.css',css.code);
+  await buildOfficeV5();
+  await buildOfficePage();
+  await buildSamplePage();
   await buildLibrary(remote);
 }
