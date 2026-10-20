@@ -8,8 +8,9 @@ import type {Comment,Inbox} from "./discussion.js";
 export interface Run {
   id: string; workspaceId: string; taskId: string; requestedBy: string; requestKey: string; requestHash: string;
   status: RunStatus; version: number; output: string; stage: string; note: string; provider: string; externalRef: string | null;
+  team?:boolean;
   source?: (Omit<SourceContext,"output"|"body"> & {preview:string})|null;
-  phase?:AnswerPhase; answerMeta?:Pick<FakeAnswer,"version"|"analysis"|"checks">|null;
+  phase?:AnswerPhase; answerMeta?:Pick<FakeAnswer,"version"|"analysis"|"checks"|"team">|null;
   scenario: "normal" | "failure"; finishedAt: Date | null; createdAt: Date; updatedAt: Date;
 }
 export interface Snapshot { workspace: Workspace; role: MemberRole; members: WorkspaceMember[]; runs: (Run & { prompt: string; agentId: AgentId; approvalRequired: boolean; requestedByName: string })[]; cursor: number }

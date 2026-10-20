@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-20T01:53:37.774Z",
+  "desktopWidth": 1280,
+  "mobile": {
+    "viewport": 390,
+    "pageWidth": 390,
+    "visibleNames": [
+      "나라",
+      "소라",
+      "준",
+      "민",
+      "레오"
+    ],
+    "nameOverlaps": 0
+  },
+  "narrow": {
+    "focusMode": true,
+    "nameOverlaps": 0,
+    "pageWidth": 319,
+    "viewport": 319,
+    "visibleNames": [
+      "나라",
+      "소라",
+      "준",
+      "민",
+      "레오"
+    ]
+  },
+  "pause": {
+    "beforeFocus": 89.9099999999991,
+    "afterFocus": 89.9099999999991
+  },
+  "motion": {
+    "before": {
+      "actions": {
+        "jun": "jun_thinking",
+        "leo": "leo_thinking",
+        "min": "min_thinking",
+        "nara": "nara_thinking",
+        "sora": "sora_thinking"
+      },
+      "caption": "다섯 동료가 공통 조건을 살펴보고 있어요.",
+      "time": 103.64636799999464
+    },
+    "after": {
+      "actions": {
+        "jun": "jun_typing",
+        "leo": "leo_typing",
+        "min": "min_typing",
+        "nara": "nara_typing",
+        "sora": "sora_typing"
+      },
+      "caption": "나라 · 기획 작성 / 나머지 동료는 자료 준비·검토 중",
+      "time": 105.52766799999448
+    },
+    "animationAdvanced": true
+  },
+  "consoleWarningsAndErrors": 0,
+  "pilotRegression": {
+    "typing": {
+      "clips": "{\"nara\":\"typing\"}",
+      "status": "아이디어를 정리하고 있어요"
+    },
+    "afterCancel": {
+      "status": "업무를 취소했어요",
+      "clips": "{\"nara\":\"idle\"}"
+    }
+  }
+}

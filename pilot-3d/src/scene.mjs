@@ -1,4 +1,5 @@
 import * as T from "three";
+import {fitOrthographic} from "./framing.mjs";
 import { POSES, applyActorPoses } from "./animation.mjs";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
@@ -20,7 +21,7 @@ export function releaseModel(root) {
 
 export function createStudioView(host, callbacks = {}, options = {}) {
   const actorIds = options.actors ?? ["nara"];
-  const started = performance.now();
+  const started = performance.now(),five=actorIds.length>2;
   const renderer = new T.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "low-power" });
   renderer.setClearColor(0xf8f6ee, 0);
   renderer.outputColorSpace = T.SRGBColorSpace;
@@ -28,9 +29,10 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   renderer.toneMappingExposure = 1.13;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = T.PCFShadowMap;
-  renderer.domElement.setAttribute("aria-label", `${actorIds.includes("jun") ? "나라·준과" : "나라와"} 가구를 같은 카메라와 빛으로 그리는 3D 사무실. 드래그로 회전하고 스크롤로 확대할 수 있습니다.`);
+  renderer.domElement.setAttribute("aria-label", `${five?"다섯 동료와":actorIds.includes("jun")?"나라·준과":"나라와"} 가구를 같은 카메라와 빛으로 그리는 3D 사무실. 드래그로 회전하고 스크롤로 확대할 수 있습니다.`);
   renderer.domElement.setAttribute("role", "img");
   host.append(renderer.domElement);
+  const actorLabels=five?Object.fromEntries(actorIds.map(id=>{const button=document.createElement('button');button.type='button';button.className='actor-label';button.textContent=options.actorLabels?.[id]??id;button.setAttribute('aria-label',button.textContent+' 가까이 보기');button.hidden=true;button.addEventListener('click',()=>callbacks.onSelect?.(id));host.append(button);return [id,button];})):{};
   const scene = new T.Scene();
   const camera = new T.OrthographicCamera(-5, 5, 4, -4, .1, 60);
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -43,6 +45,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   Object.assign(sun.shadow.camera, { left: -5.4, right: 5.4, top: 5.4, bottom: -5.4, near: .5, far: 18 });
   sun.shadow.normalBias = .022; sun.shadow.bias = -.00015;
   sun.shadow.radius = 4; sun.shadow.intensity = .78;
+  if(five){sun.position.set(4,10,-3);Object.assign(sun.shadow.camera,{left:-8,right:8,top:8,bottom:-8,far:25});}
   scene.add(sun, sun.target);
   scene.add(new T.AmbientLight(0xe6eee1, .28));
   const backdrop = new T.Mesh(new T.PlaneGeometry(200, 200), new T.MeshStandardMaterial({ color: 0xf4efe3, roughness: 1 }));
@@ -54,7 +57,17 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   const events = new AbortController();
   const getStats = () => ({ ...lastMetrics, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, drawCalls: renderer.info.render.calls, triangles: renderer.info.render.triangles, pose: currentVM.pose, animationTime: mixer?.time ?? 0, actors: Object.fromEntries(actorIds.map(id => [id, currentActions[id]?.getClip().name ?? null])), paused, measuring: Boolean(sample), pixelRatio: renderer.getPixelRatio(), canvas: [renderer.domElement.width, renderer.domElement.height] });
   function emitStats() { lastMetrics = getStats(); callbacks.onMetrics?.(lastMetrics); }
-  function draw() { if (!disposed && ready && !lost) { renderer.render(scene, camera); } }
+  function draw() { if (!disposed && ready && !lost) {
+    renderer.render(scene, camera);
+    for(const [id,label] of Object.entries(actorLabels)){
+      const origin=model?.userData.workspaces?.[id];if(!origin)continue;
+      const full=options.actorLabels?.[id]??id,name=host.clientWidth<500?full.split(' · ')[0]:full;if(label.textContent!==name)label.textContent=name;
+      const point=new T.Vector3(origin[0],1.65,origin[2]-.60).project(camera);
+      label.hidden=(actorIds.includes(framing)&&framing!==id)||Math.abs(point.x)>1||Math.abs(point.y)>1||point.z>1;
+      label.style.left=((point.x+1)/2*host.clientWidth)+'px';label.style.top=((-point.y+1)/2*host.clientHeight)+'px';
+      label.dataset.selected=String(currentVM.selectedAgent===id);
+    }
+  } }
   function tick(now) {
     if (disposed || lost || !ready || document.hidden) return;
     const dt = lastTime ? Math.min((now - lastTime) / 1000, .06) : 0; lastTime = now;
@@ -84,17 +97,27 @@ export function createStudioView(host, callbacks = {}, options = {}) {
     if (sun.shadow.mapSize.x !== resolution) {
       sun.shadow.mapSize.set(resolution, resolution); sun.shadow.map?.dispose(); sun.shadow.map = null;
     }
-    const aspect = width / Math.max(height, 1), half = ["nara", "jun"].includes(framing) ? Math.max(1.32, 1.4 / aspect) : framing === "team" ? Math.max(1.75, 2.1 / aspect) : Math.max(3.65, 4.8 / aspect);
+    const aspect = width / Math.max(height, 1);
+    if(five){
+      let bounds;
+      if(actorIds.includes(framing)){
+        const origin=model?.userData.workspaces?.[framing]??[0,0,0];
+        bounds=new T.Box3(new T.Vector3(origin[0]-.85,0,origin[2]-1),new T.Vector3(origin[0]+.85,1.6,origin[2]+.65));
+      }else bounds=new T.Box3(new T.Vector3(-4.8,-.18,-3.8),new T.Vector3(4.8,2.6,3.8));
+      fitOrthographic(camera,bounds,aspect,1.04);draw();emitStats();return;
+    }
+    const half = ["nara", "jun"].includes(framing) ? Math.max(1.32, 1.4 / aspect) : framing === "team" ? Math.max(1.75, 2.1 / aspect) : Math.max(3.65, 4.8 / aspect);
     camera.left = -half * aspect; camera.right = half * aspect; camera.top = half; camera.bottom = -half; camera.updateProjectionMatrix();
     draw(); emitStats();
   }
   function resetCamera(focus = false) {
     framing = focus === true ? "nara" : focus === false ? "room" : ["room", "team", ...actorIds].includes(focus) ? focus : "room"; camera.zoom = 1;
-    if (["nara", "jun"].includes(framing)) {
+    if (actorIds.includes(framing)) {
       const origin = model?.userData.workspaces?.[framing] ?? (framing === "jun" ? [2.22, 0, 1.02] : [.35, 0, .95]);
       controls.target.set(origin[0], .77, origin[2] - .32);
       camera.position.copy(controls.target).add(new T.Vector3(3.05, 2.03, 4.57));
     }
+    else if(five){controls.target.set(0,.65,0);camera.position.copy(controls.target).add(new T.Vector3(7,7.5,12));}
     else if (framing === "team") { controls.target.set(1.28, .76, .72); camera.position.copy(controls.target).add(new T.Vector3(4.1, 2.9, 6.0)); }
     else { camera.position.set(8, 6.8, 10); controls.target.set(0, .7, 0); }
     controls.update(); resize();
@@ -128,7 +151,9 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   const loading = new GLTFLoader().loadAsync(options.modelUrl ?? new URL("../assets/afternoon-studio-v1.glb", import.meta.url).href).then(gltf => {
     // The bundled module lives in dist/, so ../assets resolves next to index.html.
     if (disposed) { releaseModel(gltf.scene); return false; }
-    model = gltf.scene; scene.add(model);
+    model = gltf.scene;
+    const office=model.getObjectByName("AfternoonStudio");if(office)model.userData={...model.userData,...office.userData};
+    scene.add(model);
     model.traverse(node => { if (node.isMesh) { node.castShadow = !/Wall|Window|DistantTree/.test(node.name); node.receiveShadow = true; } });
     mixer = new T.AnimationMixer(model);
     actions = Object.fromEntries(actorIds.map(id => [id, Object.fromEntries(POSES.map(pose => {
@@ -147,6 +172,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
       }
     });
     ready = true;
+    if(five)resetCamera(framing);
     lastMetrics.clips = gltf.animations.map(c => c.name);
     applyViewModel(currentVM);
     lastMetrics.loadedMs = Math.round(performance.now() - started);
@@ -163,7 +189,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
       disposed = true; renderer.setAnimationLoop(null); observer.disconnect(); events.abort(); controls.dispose();
       mixer?.stopAllAction(); if (model) mixer?.uncacheRoot(model);
       const released = releaseModel(scene); sun.shadow.dispose();
-      renderer.renderLists.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
+      renderer.renderLists.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();for(const label of Object.values(actorLabels))label.remove();
       return { released, remaining: { ...renderer.info.memory }, contextLost: renderer.getContext().isContextLost() };
     },
   };

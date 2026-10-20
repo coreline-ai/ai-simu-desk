@@ -58,6 +58,11 @@ test('two independent serverless HTTP instances share Secure sessions, sync stat
     for(let i=0;i<100;i++){await wait(30);followed=await(await call((i%2?a:b).app,base+'/snapshot',owner)).json();if(followed.runs.find((r:any)=>r.id===handoff.id)?.status==='succeeded')break;}
     const handoffResult=followed.runs.find((r:any)=>r.id===handoff.id);
     assert.equal(handoffResult.status,'succeeded');assert.equal(handoffResult.source.runId,source.id);assert.match(handoffResult.output,/인계받은 요구사항/);
+    const team=await call(a.app,base+'/runs',owner,{prompt:'5명이 2주 안에 무료로 로그인 개발 계획을 작성해 줘.',agentId:'nara',team:true,approvalRequired:false,scenario:'normal'},randomUUID());assert.equal(team.status,201);
+    const teamRun=await team.json();assert.ok(!('generatedAnswer' in teamRun));
+    let teamView:any;
+    for(let i=0;i<100;i++){await wait(30);teamView=await(await call((i%2?a:b).app,base+'/snapshot',owner)).json();if(teamView.runs[0].status==='succeeded')break;}
+    assert.equal(teamView.runs[0].status,'succeeded');assert.equal(teamView.runs[0].team,true);assert.equal(teamView.runs[0].answerMeta.team.members.length,5);assert.match(teamView.runs[0].output,/민 · QA/);assert.match(teamView.runs[0].output,/레오 · 정리/);
     const guest=await call(a.app,'/api/auth/sign-in/guest',undefined,{});
     assert.equal(guest.status,200);assert.match(guest.headers.get('set-cookie')??'',/Secure/);
     const guestCookie=guest.headers.get('set-cookie')!.split(';')[0];

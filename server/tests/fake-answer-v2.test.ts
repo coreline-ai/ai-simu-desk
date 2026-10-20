@@ -62,7 +62,7 @@ test("v2 evaluation: a new app's changed generator cannot rewrite a persisted st
   now+=100000;const complete=(await next.snapshot("v2",space.id)).runs[0];
   assert.equal(complete.status,"succeeded");assert.ok(complete.output.startsWith(partial.output));
   assert.equal(complete.output,answer(input.prompt).text);
-  assert.equal(complete.answerMeta?.version,"rules-2.1");assert.ok(!("generatedAnswer" in complete));
+  assert.equal(complete.answerMeta?.version,"rules-3.1");assert.ok(!("generatedAnswer" in complete));
  }finally{await d.close();}
 });
 test("v2 evaluation: pending approval APIs never expose the precomputed answer",async()=>{

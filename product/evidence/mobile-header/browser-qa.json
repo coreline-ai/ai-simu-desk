@@ -1,0 +1,250 @@
+{
+  "office": [
+    {
+      "clientWidth": 265,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 108,
+      "scrollWidth": 265,
+      "width": 280
+    },
+    {
+      "clientWidth": 283,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 108,
+      "scrollWidth": 283,
+      "width": 298
+    },
+    {
+      "clientWidth": 304,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 108,
+      "scrollWidth": 304,
+      "width": 319
+    },
+    {
+      "clientWidth": 375,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 108,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "clientWidth": 600,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 108,
+      "scrollWidth": 600,
+      "width": 600
+    },
+    {
+      "clientWidth": 601,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 64,
+      "scrollWidth": 601,
+      "width": 601
+    },
+    {
+      "clientWidth": 768,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 64,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "clientWidth": 1280,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 64,
+      "scrollWidth": 1280,
+      "width": 1280
+    }
+  ],
+  "work": [
+    {
+      "clientWidth": 283,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 108,
+      "mode": "work",
+      "scrollWidth": 283,
+      "width": 298
+    },
+    {
+      "clientWidth": 375,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 108,
+      "mode": "work",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "clientWidth": 586,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 90,
+      "mode": "work",
+      "scrollWidth": 586,
+      "width": 601
+    },
+    {
+      "clientWidth": 1265,
+      "controls": [
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "insideHeader": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "headerHeight": 90,
+      "mode": "work",
+      "scrollWidth": 1265,
+      "width": 1280
+    }
+  ]
+}

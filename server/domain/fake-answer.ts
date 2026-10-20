@@ -1,7 +1,9 @@
+import {TEAM,TEAM_NAMES,type TeamId} from "./team.js";
+import type {AgentId} from "./contracts.js";
 import type {AgentJob} from "./contracts.js";
-export const FAKE_ENGINE_VERSION = "rules-2.1";
+export const FAKE_ENGINE_VERSION = "rules-3.1";
 export type AnswerPhase = "analyze"|"compose"|"review";
-export interface SourceContext { runId:string; version:number; agentId:"nara"|"jun"; prompt:string; output:string; body?:string; conditions?:Pick<AnswerAnalysis,"days"|"deadline"|"people"|"budget"|"freeOnly"|"exclusions">; truncated?:boolean; mode:"revise"|"handoff" }
+export interface SourceContext { runId:string; version:number; agentId:AgentId; prompt:string; output:string; body?:string; conditions?:Pick<AnswerAnalysis,"days"|"deadline"|"people"|"budget"|"freeOnly"|"exclusions">; truncated?:boolean; mode:"revise"|"handoff" }
 export interface AnswerAnalysis {
   domain:"engineering"|"product"|"writing"|"general";
   deliverable:"plan"|"summary"|"writing"|"comparison"|"checklist"|"general";
@@ -78,10 +80,16 @@ function baseSteps(a:AnswerAnalysis,agent:string):string[][] {
      ["검토","작은 화면과 결과의 유용성 점검","목표와 비교하고 보완 항목 기록"]];
 }
 function stepsFor(a:AnswerAnalysis,agent:string):string[][] {
-  const steps=baseSteps(a,agent);
+  const extra:Record<string,string[][]>={
+    sora:[['화면 구성','앞선 기획의 핵심 행동과 정보 순서를 화면으로 정리','첫 행동과 결과 화면의 연결 확인'],['상태 디자인','진행·오류·완료를 글과 색으로 구분','색 없이도 상태 구분 가능'],['작은 화면','주요 버튼과 결과를 좁은 화면에 배치','가로 넘침과 작은 터치 영역 확인'],['디자인 인계','화면별 상태와 수용 기준을 개발에 전달','구현 전에 누락 상태 목록 확인']],
+    min:[['검증 범위','개발 산출물의 정상·오류·취소 흐름을 시험 항목으로 변환','재현 입력과 기대 결과 명시'],['권한 검사','소유자·참여자·보기 전용의 접근 경계 확인','다른 공간 정보 노출 없음'],['회귀 검사','새로고침·중복 요청·작은 화면의 기존 기능 확인','결과 보존과 상태 일치 확인'],['검토 인계','결함·심각도·수정 확인 내용을 최종 정리에 전달','미해결 항목과 다음 행동 표시']],
+    leo:[['결과 수집','기획·디자인·개발·QA의 산출물과 조건을 모아 요약','각 역할의 전달 내용과 출처 확인'],['결정 정리','완료 기준과 남은 질문을 구분해 기록','가정이나 미검증 사항을 완료로 적지 않음'],['다음 행동','남은 항목의 담당과 검토 순서를 제안','소유자와 진행 조건 표시'],['공유 준비','팀이 다시 읽을 수 있는 최종 검토 요약 작성','완료·미완료·후속 항목이 구분됨']],
+  };
+  const steps=extra[agent]??baseSteps(a,agent);
   return agent==="nara"?steps.map(s=>[s[0]+" 요구사항","사용 흐름 초안: "+s[1],"사용자 관점 수용 기준: "+s[2]]):steps;
 }
-export interface FakeAnswer {version:string; analysis:AnswerAnalysis; text:string; body:string; checks:string[]; items:string[]}
+export interface TeamAnswer {members:TeamId[];stages:{agentId:TeamId;title:string;start:number;end:number;from?:TeamId}[];total:number}
+export interface FakeAnswer {team?:TeamAnswer;version:string; analysis:AnswerAnalysis; text:string; body:string; checks:string[]; items:string[]}
 function contentLines(text:string):string[]{
   return sentences(text).filter(s=>!/^요청:|Fake AI|핵심 단어:|조건:|원본:|기간 \||항목 \||[-|\s]+$|^(제목·문구 초안|본문 초안|화면·메시지 초안|인계받은 요구사항|구현 작업과 테스트)$/.test(s));
 }
@@ -120,6 +128,7 @@ function planContent(a:AnswerAnalysis,agent:string){
   return {body,items};
 }
 export function createFakeAnswer(job:AgentJob):FakeAnswer {
+  if(job.team)return createTeamAnswer(job);
   const a=analyzeRequest(job.prompt), context=job.context;
   if(context){
     const inherited=context.conditions??analyzeRequest(context.prompt);
@@ -131,7 +140,7 @@ export function createFakeAnswer(job:AgentJob):FakeAnswer {
     if(a.freeOnly&&a.budget&&Number(a.budget.replace(/[^0-9]/g,""))>0&&!a.issues.some(s=>s.includes("유료 예산")))a.issues.push("원본의 무료 조건과 수정 예산이 충돌해요. 우선할 조건을 확인해 주세요.");
   }
   if(context&&a.deliverable==="summary")a.issues=a.issues.filter(s=>!s.startsWith("요약할 원문"));
-  const role=job.agentId==="nara"?"나라":"준";
+  const role=TEAM_NAMES[job.agentId];
   const conditions=[a.deadline?"기간 "+a.deadline:null,a.people?"담당 "+a.people+"명":null,a.freeOnly?"비용: 무료 도구 범위":a.budget?"예산 "+a.budget:null,a.audience?"대상 "+a.audience:null,a.exclusions.length?"제외: "+a.exclusions.join(", "):null].filter(Boolean).join(" · ");
   let items:string[]=[],body="";
   if(a.issues.length){
@@ -140,7 +149,7 @@ export function createFakeAnswer(job:AgentJob):FakeAnswer {
     const brief=contentLines(context.body??context.output).slice(0,4);
     const planned=planContent({...a,topic:context.prompt+" "+a.topic+" "+(context.body??context.output).slice(0,1000)},job.agentId);
     items=planned.items;
-    body="인계받은 요구사항\n"+brief.map(s=>"- "+s.slice(0,200)).join("\n")+"\n\n"+(job.agentId==="jun"?"구현 작업과 테스트":"사용자 관점 검토와 수용 기준")+"\n"+planned.body;
+    body="인계받은 요구사항\n"+brief.map(s=>"- "+s.slice(0,200)).join("\n")+"\n\n"+(job.agentId==="jun"?"구현 작업과 테스트":job.agentId==="nara"?"사용자 관점 검토와 수용 기준":TEAM.find(p=>p.id===job.agentId)!.role+" 작업과 완료 기준")+"\n"+planned.body;
   }else if(context?.mode==="revise"&&!a.lines&&!a.table&&a.deliverable!=="summary"){
     body="지원하는 수정은 줄 수 지정 요약과 표 정리입니다. 예: ‘3줄로 요약해줘’, ‘표로 정리해줘’. 다른 동료의 관점이 필요하면 인계를 선택해 주세요.";
   }else if(a.deliverable==="summary"||context?.mode==="revise"){
@@ -177,4 +186,25 @@ export function createFakeAnswer(job:AgentJob):FakeAnswer {
 }
 export function phaseAt(outputLength:number,total:number):AnswerPhase {
   return outputLength===0?"analyze":outputLength>=total*.86?"review":"compose";
+}
+
+
+function createTeamAnswer(job:AgentJob):FakeAnswer {
+ const analysis=analyzeRequest(job.prompt);
+ if(analysis.issues.length)return createFakeAnswer({...job,team:false});
+ const compact=(text:string,max:number)=>text.length>max?text.slice(0,max-1).trimEnd()+'…':text;
+ const stages:TeamAnswer['stages']=[],items:string[]=[];
+ let text='5명 협업 결과\n'+job.prompt.slice(0,180)+'\n\n',previous:{id:TeamId;summary:string;answer:FakeAnswer}|null=null;
+ for(const [i,person] of TEAM.entries()){
+  const answer=createFakeAnswer({...job,team:false,agentId:person.id,prompt:job.prompt+'\n역할별 계획을 3개 항목으로 작성해줘.',...(previous?{context:{runId:job.runId,version:1,agentId:previous.id,prompt:job.prompt,output:previous.answer.text,body:previous.answer.body,mode:'handoff' as const}}:{})});
+  const received=previous?'받은 내용 · '+TEAM_NAMES[previous.id]+': '+compact(previous.summary,120)+'\n':'공통 목표와 조건을 정리합니다.\n';
+  const rows=answer.items.slice(0,3).map(s=>compact(s,170));
+  const section=(i+1)+'. '+person.name+' · '+person.role+'\n'+received+rows.map(s=>'• '+s).join('\n')+'\n\n';
+  const start=text.length;text+=section;
+  stages.push({agentId:person.id,title:person.role,start,end:text.length,...(previous?{from:previous.id}:{})});
+  items.push(person.name+' · '+person.role+': '+rows[0]);
+  previous={id:person.id,summary:rows[0]??answer.body.slice(0,120),answer};
+ }
+ text+='공통 검토: 역할별 제안을 실제 구현·검증으로 확정해야 합니다.\nFake AI 협업 시뮬레이션 · 하나의 실행에 5개 역할의 규칙 기반 결과를 저장합니다. 외부 AI를 호출하지 않습니다.';
+ return {version:FAKE_ENGINE_VERSION,analysis,text,body:text,items,checks:['5개 역할 산출물','앞 단계 전달 요약','외부 호출 없음'],team:{members:TEAM.map(p=>p.id),stages,total:text.length}};
 }

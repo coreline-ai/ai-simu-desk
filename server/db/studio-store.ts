@@ -58,8 +58,8 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
         ...(source.generatedAnswer?{conditions:{days:source.generatedAnswer.analysis.days,deadline:source.generatedAnswer.analysis.deadline,people:source.generatedAnswer.analysis.people,budget:source.generatedAnswer.analysis.budget,freeOnly:source.generatedAnswer.analysis.freeOnly,exclusions:source.generatedAnswer.analysis.exclusions}}:{}),
         ...(source.generatedAnswer?.text===source.output?{body:source.generatedAnswer.body.slice(0,4000)}:{}),mode:input.mode!};
     }
-    const task = existingTask ?? (await tx.insert(tasks).values({ id: randomUUID(), workspaceId, authorId: userId, sourceContext:context??null, prompt: input.prompt, agentId: input.agentId, approvalRequired: input.approvalRequired }).returning())[0];
-    const runId=randomUUID(), job:AgentJob={runId,prompt:task.prompt,agentId:task.agentId,scenario:input.scenario,context};
+    const task = existingTask ?? (await tx.insert(tasks).values({ id: randomUUID(), workspaceId, authorId: userId, sourceContext:context??null, prompt: input.prompt, agentId: input.agentId, approvalRequired: input.approvalRequired,team:!!input.team }).returning())[0];
+    const runId=randomUUID(), job:AgentJob={runId,prompt:task.prompt,agentId:task.agentId,scenario:input.scenario,context,team:task.team};
     const generatedAnswer=retryAnswer??createFakeAnswer(job);
     if(simulation&&!retryAnswer)generatedAnswer.text=simulation.answer(job);
     const [run] = await tx.insert(runs).values({ id: runId, generatedAnswer, workspaceId, taskId: task.id, requestedBy: userId, requestKey: key, requestHash: hash, status: input.approvalRequired ? "awaiting_approval" : "queued", scenario: input.scenario, stage: input.approvalRequired ? "실행 승인 대기" : "실행 대기" }).returning();
@@ -69,7 +69,7 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
   const startRun = (userId: string, workspaceId: string, value: unknown, key: string | undefined) => db.transaction(tx => startInTransaction(tx,userId,workspaceId,value,key));
   async function frozenAnswer(tx:Tx,run:Run,task:Task) {
     if(run.generatedAnswer)return run.generatedAnswer;
-    const job:AgentJob={runId:run.id,prompt:task.prompt,agentId:task.agentId,scenario:run.scenario,context:task.sourceContext??undefined};
+    const job:AgentJob={runId:run.id,prompt:task.prompt,agentId:task.agentId,scenario:run.scenario,context:task.sourceContext??undefined,team:task.team};
     const answer=createFakeAnswer(job);
     if(simulation)answer.text=simulation.answer(job);
     if(run.output&&!answer.text.startsWith(run.output)) {
@@ -152,7 +152,7 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
       const [task] = await tx.select().from(tasks).where(eq(tasks.id, run.taskId));
       const answer=await frozenAnswer(tx,run,task);if(!answer)return null;
       await change(tx, run, "running", "started", { stage: "요청 분석", phase:"analyze", externalRef: `fake:${run.id}` });
-      return { runId: run.id, prompt: task.prompt, agentId: task.agentId, scenario: run.scenario, answer,context:task.sourceContext??undefined };
+      return { runId: run.id, prompt: task.prompt, agentId: task.agentId, scenario: run.scenario, answer,context:task.sourceContext??undefined,team:task.team };
     });
   }
   async function progress(id: string, delta: string | null, stage?: string,phase?:import("../domain/fake-answer.js").AnswerPhase) {

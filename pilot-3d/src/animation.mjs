@@ -13,7 +13,7 @@ export function applyActorPoses(actions, currentActions, actorIds, vm, consumed 
     next.setLoop(once.has(pose) ? LoopOnce : LoopRepeat, once.has(pose) ? 1 : Infinity);
     next.clampWhenFinished = once.has(pose);
     if (previous) { previous.fadeOut(.25); next.reset().fadeIn(.25).play(); }
-    else { next.reset().play(); next.time = id === "jun" ? .53 : 0; }
+    else { next.reset().play(); next.time = actorIds.indexOf(id)*.53; }
     currentActions[id] = next;
   }
 }
@@ -22,9 +22,12 @@ export function createCueTracker() {
   return {
     observe(runs = []) {
       for (const run of runs) {
-        if(!["succeeded","failed","cancelled"].includes(run.status))delete cues[run.agentId];
+        const owners=run.team&&run.answerMeta?.team?run.answerMeta.team.members:[run.agentId];
+        for(const owner of owners){
+        if(!["succeeded","failed","cancelled"].includes(run.status))delete cues[owner];
         if (previous.has(run.id) && !["succeeded","failed","cancelled"].includes(previous.get(run.id)) && ["succeeded","failed"].includes(run.status))
-          cues[run.agentId] = {pose:run.status === "succeeded" ? "success" : "error",cue:run.id+":"+run.status};
+          cues[owner] = {pose:run.status === "succeeded" ? "success" : "error",cue:run.id+":"+run.status+(run.team?":"+owner:"")};
+      }
       }
       previous = new Map(runs.map(run=>[run.id,run.status]));
       return cues;

@@ -44,7 +44,7 @@ export const workspaceInvites = pgTable("workspace_invites", {
 export const tasks = pgTable("tasks", {
   id: text("id").primaryKey(), workspaceId: text("workspace_id").notNull().references(() => workspaces.id),
   authorId: text("author_id").notNull().references(() => user.id), sourceContext:jsonb("source_context").$type<SourceContext>(), prompt: text("prompt").notNull(),
-  agentId: text("agent_id").$type<AgentId>().notNull(), approvalRequired: boolean("approval_required").notNull(),
+  agentId: text("agent_id").$type<AgentId>().notNull(), team:boolean("team").notNull().default(false), approvalRequired: boolean("approval_required").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 export const runs = pgTable("runs", {

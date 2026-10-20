@@ -7,7 +7,11 @@ export const WORKSPACE_ORIGIN = [.35, 0, .95];
 export const MODEL_VERSION = 1;
 export const JUN_WORKSPACE_ORIGIN = [2.22, 0, 1.02];
 
-export function createOfficeModel({ includeJun = false } = {}) {
+export const TEAM_DIMENSIONS = Object.freeze({...DIMENSIONS,room:[9.6,2.6,7.6]});
+export const TEAM_WORKSPACES = Object.freeze({nara:[-2.5,0,-.35],sora:[0,0,-.35],jun:[2.5,0,-.35],min:[-1.25,0,2.0],leo:[1.25,0,2.0]});
+export function createOfficeModel({ includeJun = false, includeTeam = false } = {}) {
+  const [roomWidth,,roomDepth]=(includeTeam?TEAM_DIMENSIONS:DIMENSIONS).room;
+  const back=-roomDepth/2, left=-roomWidth/2, windowWidth=roomWidth/3;
   const root = new T.Group(); root.name = "AfternoonStudio";
   root.userData = { units: "metres", up: "+Y", floorY: 0, modelVersion: MODEL_VERSION, source: "Original procedural model: pilot-3d/src/model.mjs" };
   const palette = {
@@ -39,30 +43,30 @@ export function createOfficeModel({ includeJun = false } = {}) {
   }
   const group = (parent, name, position = [0, 0, 0]) => { const g = new T.Group(); g.name = name; g.position.fromArray(position); parent.add(g); return g; };
   const room = group(root, "Room");
-  box(room, "Floor", [7.2, .18, 5.6], [0, -.09, 0], "ivory", .09);
-  box(room, "LeftWall", [.12, 2.6, 5.6], [-3.6, 1.3, 0], "wall", .055).castShadow = false;
-  box(room, "WindowSillWall", [7.2, .68, .12], [0, .34, -2.8], "wall").castShadow = false;
-  box(room, "WindowTop", [7.2, .16, .12], [0, 2.52, -2.8], "oak").castShadow = false;
+  box(room, "Floor", [roomWidth, .18, roomDepth], [0, -.09, 0], "ivory", .09);
+  box(room, "LeftWall", [.12, 2.6, roomDepth], [left, 1.3, 0], "wall", .055).castShadow = false;
+  box(room, "WindowSillWall", [roomWidth, .68, .12], [0, .34, back], "wall").castShadow = false;
+  box(room, "WindowTop", [roomWidth, .16, .12], [0, 2.52, back], "oak").castShadow = false;
   const skyMat = new T.MeshStandardMaterial({ color: 0xe4eee3, emissive: 0xc9d9c4, emissiveIntensity: .26, roughness: 1 });
   for (let i = 0; i < 3; i++) {
-    const x = -2.4 + i * 2.4;
-    box(room, `WindowGlass${i}`, [2.26, 1.75, .025], [x, 1.56, -2.84], skyMat, .008).castShadow = false;
-    box(room, `WindowPost${i}`, [.07, 1.87, .13], [x - 1.16, 1.57, -2.76], "oak").castShadow = false;
-    box(room, `WindowCrossbar${i}`, [2.28, .045, .1], [x, 1.5, -2.76], "oak").castShadow = false;
+    const x = -windowWidth + i * windowWidth;
+    box(room, `WindowGlass${i}`, [windowWidth-.14, 1.75, .025], [x, 1.56, back-.04], skyMat, .008).castShadow = false;
+    box(room, `WindowPost${i}`, [.07, 1.87, .13], [x-windowWidth/2+.04, 1.57, back+.04], "oak").castShadow = false;
+    box(room, `WindowCrossbar${i}`, [windowWidth-.12, .045, .1], [x, 1.5, back+.04], "oak").castShadow = false;
     // Flat distant silhouettes make the window read as daylight, without texture downloads.
     for (let j = 0; j < 4; j++) {
-      const canopy = sphere(room, `DistantTree${i}_${j}`, .23 + j * .025, [x - .85 + j * .5, .98 + (j % 2) * .13, -2.79], material(0xb8c5a1), [1, 1.3, .06]);
+      const canopy = sphere(room, `DistantTree${i}_${j}`, .23 + j * .025, [x - .85 + j * .5, .98 + (j % 2) * .13, back+.01], material(0xb8c5a1), [1, 1.3, .06]);
       canopy.castShadow = false; canopy.receiveShadow = false;
     }
   }
-  box(room, "WindowBottomTrim", [7.2, .08, .2], [0, .7, -2.76], "oakLight");
-  box(room, "WindowRightPost", [.09, 1.86, .13], [3.55, 1.57, -2.76], "oak").castShadow = false;
+  box(room, "WindowBottomTrim", [roomWidth, .08, .2], [0, .7, back+.04], "oakLight");
+  box(room, "WindowRightPost", [.09, 1.86, .13], [includeTeam?roomWidth/2-.05:3.55, 1.57, back+.04], "oak").castShadow = false;
   // Restrained tile joints; same floor plane and world scale as the furniture.
   const seamMat = material(0xd6cfbe);
-  for (let i = -2; i <= 2; i++) box(room, `FloorJointX${i}`, [.009, .001, 5.45], [i * 1.2, .0008, 0], seamMat, .0001);
-  for (let i = -1; i <= 1; i++) box(room, `FloorJointZ${i}`, [7.05, .001, .009], [0, .0008, i * 1.4], seamMat, .0001);
+  for (let i = -2; i <= 2; i++) box(room, `FloorJointX${i}`, [.009, .001, roomDepth-.15], [i * 1.2, .0008, 0], seamMat, .0001);
+  for (let i = -1; i <= 1; i++) box(room, `FloorJointZ${i}`, [roomWidth-.15, .001, .009], [0, .0008, i * 1.4], seamMat, .0001);
 
-  const shelf = group(root, "Bookshelf", [-3.29, 0, -.5]); shelf.rotation.y = Math.PI / 2;
+  const shelf = group(root, "Bookshelf", [left+.31, 0, includeTeam?-1.0:-.5]); shelf.rotation.y = Math.PI / 2;
   box(shelf, "ShelfBack", [1.65, 2.05, .06], [0, 1.08, -.14], "oakDark");
   for (const x of [-.84, .84]) box(shelf, `ShelfSide${x}`, [.065, 2.15, .36], [x, 1.075, 0], "oakLight");
   const bookColors = [0x6b7e65, 0xe1ccb0, 0xae785d, 0x7c8a86, 0xd0ac75];
@@ -76,15 +80,15 @@ export function createOfficeModel({ includeJun = false } = {}) {
     }
   }
   box(shelf, "ShelfCap", [1.8, .065, .43], [0, 2.14, .015], "oak");
-  const sofa = group(root, "Sofa", [-1.5, 0, -1.91]);
+  const sofa = group(root, "Sofa", includeTeam?[-2.6,0,-3.0]:[-1.5,0,-1.91]);
   for (const x of [-.88, .88]) for (const z of [-.28, .28]) cylinder(sofa, `SofaFoot${x}_${z}`, .028, .024, .16, [x, .08, z], "oakDark", 10);
   box(sofa, "SofaBase", [2.1, .3, .82], [0, .28, 0], "terra", .10);
   box(sofa, "SofaBack", [2.1, .58, .19], [0, .63, -.32], "terra", .08);
   for (const x of [-.99, .99]) box(sofa, `SofaArm${x}`, [.19, .4, .86], [x, .50, 0], "terra", .08);
   for (const x of [-.48, .48]) box(sofa, `SofaSeat${x}`, [.91, .16, .66], [x, .47, .06], material(0xc5805e), .07);
   const cushion = box(sofa, "SofaCushion", [.4, .39, .12], [.52, .74, -.14], "sage", .08); cushion.rotation.z = -.12;
-  const rug = cylinder(root, "Rug", .95, .95, .014, [-1.4, .009, -.55], material(0xcdbd9d), 64); rug.scale.z = .8;
-  const coffee = group(root, "CoffeeTable", [-1.4, 0, -.55]);
+  const rug = cylinder(root, "Rug", .95, .95, .014, includeTeam?[-2.6,.009,-1.9]:[-1.4,.009,-.55], material(0xcdbd9d), 64); rug.scale.z = .8;
+  const coffee = group(root, "CoffeeTable", includeTeam?[-2.6,0,-1.9]:[-1.4,0,-.55]);
   cylinder(coffee, "CoffeeTop", .49, .49, .065, [0, .39, 0], "cream", 48);
   for (const x of [-.25, .25]) cylinder(coffee, `CoffeeLeg${x}`, .085, .09, .36, [x, .18, 0], "ivory");
   box(coffee, "CoffeeBook", [.24, .045, .17], [-.12, .445, .03], "sage", .01);
@@ -99,11 +103,11 @@ export function createOfficeModel({ includeJun = false } = {}) {
     }
     return c;
   }
-  const meeting = group(root, "MeetingTable", [2.23, 0, -1.53]);
+  const meeting = group(root, "MeetingTable", includeTeam?[2.35,0,-2.65]:[2.23,0,-1.53]);
   cylinder(meeting, "MeetingTop", .66, .66, .05, [0, .715, 0], "oakLight", 48);
   cylinder(meeting, "MeetingBase", .23, .28, .69, [0, .345, 0], "oak", 32);
-  const meetingChair = chair(root, "MeetingChair", [2.5, 0, -.51]); meetingChair.rotation.y = Math.PI;
-  const art = group(root, "WallArt", [-3.515, 1.55, -1.87]); art.rotation.y = Math.PI / 2;
+  const meetingChair = chair(root, "MeetingChair", includeTeam?[2.65,0,-1.65]:[2.5,0,-.51]); meetingChair.rotation.y = Math.PI;
+  const art = group(root, "WallArt", [left+.085,1.55,includeTeam?-2.8:-1.87]); art.rotation.y = Math.PI / 2;
   box(art, "ArtFrame", [.64, .77, .045], [0, 0, 0], "oakLight");
   box(art, "ArtPaper", [.57, .70, .01], [0, 0, .028], "cream");
   const artSun = sphere(art, "ArtSun", .17, [0, .12, .04], "terra", [1, 1, .025]); artSun.castShadow = false;
@@ -120,11 +124,11 @@ export function createOfficeModel({ includeJun = false } = {}) {
       leaf.rotation.set(.25 * Math.sin(a), a, .5 * Math.cos(a));
     }
   }
-  plant(root, "WindowPlant", [3.07, 0, -2.06], 1.2);
-  plant(root, "SofaPlant", [-.14, 0, -2.22], 1);
+  plant(root, "WindowPlant", includeTeam?[roomWidth/2-.53,0,back+.74]:[3.07,0,-2.06], 1.2);
+  plant(root, "SofaPlant", includeTeam?[-.6,0,-3.12]:[-.14,0,-2.22], 1);
   plant(meeting, "TablePlant", [.1, .74, .02], .32);
 
-  const workspace = group(root, "Workspace", WORKSPACE_ORIGIN);
+  const workspace = group(root, "Workspace", includeTeam?TEAM_WORKSPACES.nara:WORKSPACE_ORIGIN);
   workspace.userData = { role: "nara-workspace", deskHeight: .74, chairSeatHeight: .45 };
   const desk = group(workspace, "Desk");
   box(desk, "DeskTop", [1.4, .04, .7], [0, .72, .1], "oakLight", .02);
@@ -223,10 +227,10 @@ export function createOfficeModel({ includeJun = false } = {}) {
     new T.VectorKeyframeTrack("NaraEyeLight"+side+".scale",blinkTimes,[1,1,.01,1,1].flatMap(y=>[1,y,1])),
   ]));
   let animations = [idle, typing, thinking, waiting, success, error, blink];
-  if (includeJun) {
+  if (includeJun || includeTeam) {
     // Reuse metre-scale furniture and the seated rig, with unique node bindings.
     const junWorkspace = workspace.clone(true);
-    junWorkspace.position.fromArray(JUN_WORKSPACE_ORIGIN);
+    junWorkspace.position.fromArray(includeTeam?TEAM_WORKSPACES.jun:JUN_WORKSPACE_ORIGIN);
     junWorkspace.userData = { ...workspace.userData, role: "jun-workspace" };
     const navy = material(0x526b7a), junHair = material(0x302c29);
     junWorkspace.traverse(node => {
@@ -252,6 +256,27 @@ export function createOfficeModel({ includeJun = false } = {}) {
       if (id === "jun") for (const track of clip.tracks) track.name = track.name.replace(/^Nara/, "Jun");
       return clip;
     }));
+  }
+  if(includeTeam){
+    const clips=[idle,typing,thinking,waiting,success,error,blink];
+    for(const [id,prefix,color,hair] of [['sora','Sora',0xba8c77,0x644339],['min','Min',0x91809e,0x2c292b],['leo','Leo',0xc39a58,0x6c4f31]]){
+      const station=workspace.clone(true);station.position.fromArray(TEAM_WORKSPACES[id]);
+      station.userData={...workspace.userData,role:id+'-workspace'};
+      const outfit=material(color),hairMat=material(hair);
+      station.traverse(node=>{const previous=node.name;node.name=node===station?prefix+'Workspace':previous.startsWith('Nara')?previous.replace(/^Nara/,prefix):prefix+previous;
+        if(node.userData.selectable)node.userData={...node.userData,agentId:id};
+        if(/^(Cardigan|UpperArm|Sleeve)/.test(previous))node.material=outfit;
+        if(/^(Bob|Brow)/.test(previous))node.material=hairMat;
+      });
+      const head=station.getObjectByName(prefix+'Head');
+      if(id==='sora'){sphere(head,prefix+'HairBun',.105,[.15,.08,-.11],hairMat,[.85,1,1]);}
+      else {head.getObjectByName(prefix+'BobBack').scale.y=.8;for(const x of [-.155,.155]){const side=head.getObjectByName(prefix+'BobSide'+x);side.scale.y=.55;side.position.y=.005;}head.getObjectByName(prefix+'BobFringe').scale.y=.31;}
+      if(id==='min'){for(const x of [-.059,.059])mesh(head,prefix+'Glasses'+x,new T.TorusGeometry(.038,.004,8,20),'dark',[x,.014,.199]);box(head,prefix+'Bridge',[.039,.007,.007],[0,.018,.199],'dark',.002);}
+      root.add(station);
+      animations.push(...clips.map(original=>{const clip=original.clone();clip.name=id+'_'+original.name;for(const track of clip.tracks)track.name=track.name.replace(/^Nara/,prefix);return clip;}));
+    }
+    root.userData.modelVersion=3;root.userData.workspaces=TEAM_WORKSPACES;root.userData.dimensions=TEAM_DIMENSIONS;
+    root.userData.teamOrder=['nara','sora','jun','min','leo'];
   }
   root.updateMatrixWorld(true);
   return { root, animations };

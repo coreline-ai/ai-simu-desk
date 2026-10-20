@@ -124,7 +124,7 @@ test("v2 disk DB upgrades in place without changing existing personal workspace,
       assert.equal((await s.personalWorkspace("legacy","Legacy")).id,"old-space");
       assert.equal((await s.startRun("legacy","old-space",input,"old-idempotency-key")).id,"old-run");
       assert.equal((await d.client.query("SELECT id FROM auth_session")).rows.length,1);
-      assert.equal((await d.client.query("SELECT name FROM studio_migrations")).rows.length,10);
+      assert.equal((await d.client.query("SELECT name FROM studio_migrations")).rows.length,11);
       const shared=await s.createWorkspace("legacy","새 공동 공간","upgraded-space-key");assert.equal(shared.kind,"shared");
       await d.db.insert(user).values({id:"restored-member",name:"Restore",email:"restore@example.test"});
       const invite=await s.issueInvite("legacy",shared.id,"viewer",shared.revision);

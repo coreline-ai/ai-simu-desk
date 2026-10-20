@@ -1,0 +1,199 @@
+{
+  "version": 3,
+  "file": "studio-team-v3.glb",
+  "bytes": 4135844,
+  "sha256": "57bf1df4e100ecd29621d6a0ad1f2e1cb0856f959b8a0ebde6afe4bb4636b410",
+  "source": "../../pilot-3d/src/model.mjs",
+  "provenance": "Original procedural geometry; no external model or texture",
+  "units": "metres",
+  "floorY": 0,
+  "dimensions": {
+    "room": [
+      9.6,
+      2.6,
+      7.6
+    ],
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45,
+    "seatedHeadTop": 1.36
+  },
+  "workspaces": {
+    "nara": [
+      -2.5,
+      0,
+      -0.35
+    ],
+    "sora": [
+      0,
+      0,
+      -0.35
+    ],
+    "jun": [
+      2.5,
+      0,
+      -0.35
+    ],
+    "min": [
+      -1.25,
+      0,
+      2
+    ],
+    "leo": [
+      1.25,
+      0,
+      2
+    ]
+  },
+  "animations": [
+    {
+      "name": "nara_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "nara_typing",
+      "duration": 0.8
+    },
+    {
+      "name": "nara_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "nara_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "nara_success",
+      "duration": 1.4
+    },
+    {
+      "name": "nara_error",
+      "duration": 1.4
+    },
+    {
+      "name": "nara_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "jun_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "jun_typing",
+      "duration": 0.8
+    },
+    {
+      "name": "jun_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "jun_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "jun_success",
+      "duration": 1.4
+    },
+    {
+      "name": "jun_error",
+      "duration": 1.4
+    },
+    {
+      "name": "jun_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "sora_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "sora_typing",
+      "duration": 0.8
+    },
+    {
+      "name": "sora_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "sora_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "sora_success",
+      "duration": 1.4
+    },
+    {
+      "name": "sora_error",
+      "duration": 1.4
+    },
+    {
+      "name": "sora_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "min_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "min_typing",
+      "duration": 0.8
+    },
+    {
+      "name": "min_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "min_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "min_success",
+      "duration": 1.4
+    },
+    {
+      "name": "min_error",
+      "duration": 1.4
+    },
+    {
+      "name": "min_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "leo_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "leo_typing",
+      "duration": 0.8
+    },
+    {
+      "name": "leo_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "leo_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "leo_success",
+      "duration": 1.4
+    },
+    {
+      "name": "leo_error",
+      "duration": 1.4
+    },
+    {
+      "name": "leo_blink",
+      "duration": 4.8
+    }
+  ],
+  "meshes": 436,
+  "triangles": 142128,
+  "limitations": [
+    "Seated hierarchical node animation; no walking or skinning",
+    "Rule-based Fake AI; no external AI calls"
+  ]
+}

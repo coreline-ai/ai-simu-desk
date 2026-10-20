@@ -1,9 +1,11 @@
+import {TEAM,TEAM_NAMES} from "../../server/domain/team.ts";
 import {compareLines} from "./comparison.mjs";
 import {TASK_TEMPLATES} from '../../server/domain/project.ts';
 import {projectPrompt} from './project.mjs';
 const $=id=>document.getElementById(id);
 export function createWorkTools({request,onTemplate,onConditions,onOpen,onError}) {
  let context=null,project=null,ticket=0,searchTicket=0,nextPage=null,currentRun=null;
+ for(const person of TEAM.filter(p=>!['nara','jun'].includes(p.id))){const option=document.createElement('option');option.value=person.id;option.textContent=person.name;$('search-agent').append(option);}
  const template=$('task-template');
  for(const item of TASK_TEMPLATES){const option=document.createElement('option');option.value=item.id;option.textContent=item.name;template.append(option);}
  $('apply-template').addEventListener('click',()=>{const item=TASK_TEMPLATES.find(t=>t.id===template.value);if(item)onTemplate(item);});
@@ -27,7 +29,7 @@ export function createWorkTools({request,onTemplate,onConditions,onOpen,onError}
   $('search-submit').disabled=true;$('search-more').disabled=true;
   try{const result=await request(`/api/workspaces/${id}/runs?${params}`);if(stamp!==ticket||searchStamp!==searchTicket)return;
    if(!more)$('search-results').replaceChildren();
-   for(const run of result.items){const li=document.createElement('li'),button=document.createElement('button');button.type='button';button.textContent=`${run.agentId==='nara'?'나라':'준'} · ${run.prompt.slice(0,90)}`;button.addEventListener('click',()=>void onOpen(run.id));li.append(button);$('search-results').append(li);}
+   for(const run of result.items){const li=document.createElement('li'),button=document.createElement('button');button.type='button';button.textContent=`${run.team?'5명 협업':TEAM_NAMES[run.agentId]} · ${run.prompt.slice(0,90)}`;button.addEventListener('click',()=>void onOpen(run.id));li.append(button);$('search-results').append(li);}
    nextPage=result.next;$('search-more').hidden=!nextPage;$('search-notice').textContent=result.items.length?'검색 결과를 선택하면 저장된 업무를 열어요.':'검색 결과가 없어요.';
   }catch(e){if(stamp===ticket)onError(e);}finally{if(stamp===ticket){$('search-submit').disabled=false;$('search-more').disabled=false;}}
  }

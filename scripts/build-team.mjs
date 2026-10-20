@@ -25,3 +25,14 @@ try {
   }, null, 2) + "\n");
   console.log(`Team GLB built: ${Math.round(binary.length / 1024)} KiB, ${meshes} meshes, ${triangles} triangles`);
 } finally { releaseModel(root); }
+
+// Keep the two-person artifact for regression; the product now loads v3.
+const teamFive= createOfficeModel({includeTeam:true});
+try {
+ const {TEAM_DIMENSIONS,TEAM_WORKSPACES}=await import('../pilot-3d/src/model.mjs');
+ const binary=Buffer.from(await new GLTFExporter().parseAsync(teamFive.root,{binary:true,trs:true,animations:teamFive.animations}));
+ let meshes=0,triangles=0;teamFive.root.traverse(node=>{if(node.isMesh){meshes++;triangles+=(node.geometry.index?.count??node.geometry.attributes.position.count)/3;}});
+ await writeFile('product/assets/studio-team-v3.glb',binary);
+ await writeFile('product/assets/manifest-v3.json',JSON.stringify({version:3,file:'studio-team-v3.glb',bytes:binary.length,sha256:createHash('sha256').update(binary).digest('hex'),source:'../../pilot-3d/src/model.mjs',provenance:'Original procedural geometry; no external model or texture',units:'metres',floorY:0,dimensions:TEAM_DIMENSIONS,workspaces:TEAM_WORKSPACES,animations:teamFive.animations.map(c=>({name:c.name,duration:c.duration})),meshes,triangles,limitations:['Seated hierarchical node animation; no walking or skinning','Rule-based Fake AI; no external AI calls']},null,2)+'\n');
+ console.log(`Five-person GLB: ${Math.round(binary.length/1024)} KiB, ${meshes} meshes, ${triangles} triangles`);
+}finally{releaseModel(teamFive.root);}
