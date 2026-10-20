@@ -34,7 +34,7 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
     const session = await auth.api.getSession({ headers: c.req.raw.headers });
     if (!session) return c.json({ error: "로그인이 필요합니다." }, 401);
     const workspace = studio ? await studio.personalWorkspace(session.user.id, session.user.name) : undefined;
-    return c.json({ user: { id: session.user.id, name: session.user.name, email: session.user.email, isGuest: isGuestId(session.user.id) }, workspace, client: {sync:true,pollMs:2500,hiddenPollMs:30000}, provider: { id: "fake", label: config.deployment==="vercel"?"Fake AI":"로컬 Fake AI", externalRequests: false } });
+    return c.json({ user: { id: session.user.id, name: session.user.name, email: session.user.email, isGuest: isGuestId(session.user.id) }, workspace, client: {sync:true,pollMs:2500,activePollMs:config.deployment==="vercel"?2500:500,hiddenPollMs:30000}, provider: { id: "fake", label: config.deployment==="vercel"?"Fake AI":"로컬 Fake AI", externalRequests: false } });
   });
   if (studio) {
     const who = async (c: Context) => {

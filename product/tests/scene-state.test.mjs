@@ -38,8 +38,8 @@ test('team composition shows five independent tasks; handoff completion moves th
  const {createCueTracker}=await import('../../pilot-3d/src/animation.mjs');
  const stages=['nara','sora','jun','min','leo'].map((agentId,i)=>({agentId,title:agentId,start:i*100,end:(i+1)*100}));
  const run={id:'team-run',team:true,agentId:'nara',status:'running',phase:'compose',output:'x'.repeat(250),answerMeta:{team:{members:stages.map(s=>s.agentId),stages,total:500}}};
- const vm=teamSceneState([run],'leo');assert.equal(vm.actors.length,5);assert.equal(vm.actors[2].label,'jun 작성');assert.equal(vm.actors[0].pose,'thinking');assert.equal(vm.actors[4].pose,'typing');
+ const vm=teamSceneState([run],'leo');assert.equal(vm.actors.length,5);assert.equal(vm.actors[2].label,'jun 작성');assert.equal(vm.actors[0].pose,'reviewing');assert.equal(vm.actors[4].pose,'preparing');
  const tracker=createCueTracker();tracker.observe([run]);const finished={...run,status:'succeeded',output:'x'.repeat(500)},cues=tracker.observe([finished]);assert.equal(Object.keys(cues).length,5);
- assert.ok(teamSceneState([finished],'sora',false,cues).actors.every(a=>a.pose==='success'));
+ assert.deepEqual(teamSceneState([finished],'sora',false,cues).actors.map(a=>a.pose),['acknowledge','acknowledge','acknowledge','acknowledge','success']);
  assert.ok(teamSceneState([{...run,status:'awaiting_approval'}]).actors.every(a=>a.pose==='waiting'));
 });

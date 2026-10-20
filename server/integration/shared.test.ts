@@ -40,7 +40,7 @@ test('two independent serverless HTTP instances share Secure sessions, sync stat
     const call=(app:typeof a.app,path:string,cookie?:string,body?:unknown,key?:string)=>app.request(config.origin+path,{method:body===undefined?'GET':'POST',headers:{...(cookie?{cookie}:{}),origin:config.origin,'content-type':'application/json',...(key?{'idempotency-key':key}:{})},...(body===undefined?{}:{body:JSON.stringify(body)})});
     const register=async(app:typeof a.app)=>{const r=await call(app,'/api/auth/sign-up/email',undefined,{name:'원격 QA',email:`${randomUUID()}@http.test`,password:'Remote-synthetic-password-4627'});assert.equal(r.status,200);assert.match(r.headers.get('set-cookie')??'',/Secure/);return r.headers.get('set-cookie')!.split(';')[0];};
     const owner=await register(a.app),peer=await register(b.app);assert.equal((await call(b.app,'/api/me',owner)).status,200);
-    const me=await(await call(a.app,'/api/me',owner)).json();assert.equal(me.client.pollMs,2500);assert.equal(me.client.hiddenPollMs,30000);
+    const me=await(await call(a.app,'/api/me',owner)).json();assert.equal(me.client.pollMs,2500);assert.equal(me.client.activePollMs,2500);assert.equal(me.client.hiddenPollMs,30000);
     const space=await(await call(a.app,'/api/workspaces',owner,{name:'서버리스 HTTP 검증'},randomUUID())).json();
     const base=`/api/workspaces/${space.id}`;
     const invite=await(await call(a.app,base+'/invites',owner,{role:'viewer',version:space.revision})).json();assert.equal((await call(b.app,'/api/workspaces/join',peer,{code:invite.code})).status,200);

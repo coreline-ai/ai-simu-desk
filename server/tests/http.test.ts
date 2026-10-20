@@ -19,6 +19,10 @@ test("authenticated HTTP workspace boundaries, revocation, origin, body and even
     const aCookie = await register("alice"), bCookie = await register("bob");
     const a = await (await call("/api/me", aCookie)).json(), b = await (await call("/api/me", bCookie)).json();
     assert.notEqual(a.workspace.id, b.workspace.id);
+    assert.equal(a.client.pollMs,2500);assert.equal(a.client.activePollMs,500);assert.equal(a.client.hiddenPollMs,30000);
+    const remoteApp=createHttp(createAuth(d,config),{...config,deployment:'vercel'},createStudio(d));
+    const remoteMe=await(await remoteApp.request(config.origin+'/api/me',{headers:{cookie:aCookie}})).json();
+    assert.equal(remoteMe.client.activePollMs,2500);assert.equal(remoteMe.client.pollMs,2500);
     assert.equal((await call(`/api/workspaces/${a.workspace.id}/snapshot`)).status, 401);
     assert.equal((await call(`/api/workspaces/${a.workspace.id}/snapshot`, bCookie)).status, 404);
     assert.equal((await call(`/api/workspaces/${a.workspace.id}/events?after=0`, bCookie)).status, 404);

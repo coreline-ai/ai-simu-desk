@@ -9,7 +9,7 @@ export const JUN_WORKSPACE_ORIGIN = [2.22, 0, 1.02];
 
 export const TEAM_DIMENSIONS = Object.freeze({...DIMENSIONS,room:[9.6,2.6,7.6]});
 export const TEAM_WORKSPACES = Object.freeze({nara:[-2.5,0,-.35],sora:[0,0,-.35],jun:[2.5,0,-.35],min:[-1.25,0,2.0],leo:[1.25,0,2.0]});
-export function createOfficeModel({ includeJun = false, includeTeam = false } = {}) {
+export function createOfficeModel({ includeJun = false, includeTeam = false, naturalMotion = false } = {}) {
   const [roomWidth,,roomDepth]=(includeTeam?TEAM_DIMENSIONS:DIMENSIONS).room;
   const back=-roomDepth/2, left=-roomWidth/2, windowWidth=roomWidth/3;
   const root = new T.Group(); root.name = "AfternoonStudio";
@@ -259,6 +259,20 @@ export function createOfficeModel({ includeJun = false, includeTeam = false } = 
   }
   if(includeTeam){
     const clips=[idle,typing,thinking,waiting,success,error,blink];
+    if(naturalMotion){
+      const restL=[-.08,-.02,0],restR=[-.08,.02,0];
+      const make=(name,duration,times,head,left,right)=>new T.AnimationClip(name,duration,[quaternionTrack('NaraHead',times,head),quaternionTrack('NaraForearmL',times,left),quaternionTrack('NaraForearmR',times,right)]);
+      clips.push(
+        make('preparing',3.6,[0,1.2,2.4,3.6],[[.10,.16,0],[.16,.24,.03],[.08,-.10,0],[.10,.16,0]],[restL,[-.12,-.04,0],restL,restL],[restR,[-.18,.04,.02],[-.10,.06,0],restR]),
+        make('reviewing',3,[0,1,2,3],[[.02,-.10,0],[.12,-.08,.025],[-.04,.10,0],[.02,-.10,0]],[restL,restL,[-.15,-.04,0],restL],[restR,[-.14,.05,0],restR,restR]),
+        make('sending',.9,[0,.3,.6,.9],[[.02,0,0],[.04,0,0],[.02,0,0],[.02,0,0]],[restL,restL,restL,restL],[restR,[-.38,.12,.06],[-.30,.08,.04],restR]),
+        make('receiving',.9,[0,.3,.6,.9],[[.02,0,0],[.16,0,0],[-.04,0,0],[.02,0,0]],[restL,restL,restL,restL],[restR,[-.16,.04,0],restR,restR]),
+        make('acknowledge',.9,[0,.3,.6,.9],[[.02,0,0],[.14,0,0],[-.03,0,0],[.02,0,0]],[restL,restL,restL,restL],[restR,restR,restR,restR])
+      );
+      const times=Array.from({length:13},(_,i)=>i*.2).concat([2.8,3.2]);
+      const typingNatural=make('typing',3.2,times,times.map((_,i)=>[.10+(i%2)*.025,(i%2?1:-1)*.025,0]),times.map((_,i)=>i===13?restL:[i%2?-.04:-.20,-.02,0]),times.map((_,i)=>i===13?restR:[i%2?-.20:-.04,.02,0]));
+      clips[1]=typingNatural;
+    }
     for(const [id,prefix,color,hair] of [['sora','Sora',0xba8c77,0x644339],['min','Min',0x91809e,0x2c292b],['leo','Leo',0xc39a58,0x6c4f31]]){
       const station=workspace.clone(true);station.position.fromArray(TEAM_WORKSPACES[id]);
       station.userData={...workspace.userData,role:id+'-workspace'};
@@ -275,7 +289,11 @@ export function createOfficeModel({ includeJun = false, includeTeam = false } = 
       root.add(station);
       animations.push(...clips.map(original=>{const clip=original.clone();clip.name=id+'_'+original.name;for(const track of clip.tracks)track.name=track.name.replace(/^Nara/,prefix);return clip;}));
     }
-    root.userData.modelVersion=3;root.userData.workspaces=TEAM_WORKSPACES;root.userData.dimensions=TEAM_DIMENSIONS;
+    if(naturalMotion){
+      animations=['nara','jun','sora','min','leo'].flatMap(id=>clips.map(original=>{const clip=original.clone();clip.name=id+'_'+original.name;for(const track of clip.tracks)track.name=track.name.replace(/^Nara/,id[0].toUpperCase()+id.slice(1));return clip;}));
+      root.userData.naturalMotion=true;
+    }
+    root.userData.modelVersion=naturalMotion?4:3;root.userData.workspaces=TEAM_WORKSPACES;root.userData.dimensions=TEAM_DIMENSIONS;
     root.userData.teamOrder=['nara','sora','jun','min','leo'];
   }
   root.updateMatrixWorld(true);

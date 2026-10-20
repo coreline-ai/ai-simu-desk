@@ -1,0 +1,290 @@
+{
+  "version": 4,
+  "file": "studio-team-v4.glb",
+  "bytes": 4184596,
+  "sha256": "118d87d9d89c8a4492243cba16dfe16896ba9030e552a471c639348c0666420c",
+  "dimensions": {
+    "room": [
+      9.6,
+      2.6,
+      7.6
+    ],
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45,
+    "seatedHeadTop": 1.36
+  },
+  "workspaces": {
+    "nara": [
+      -2.5,
+      0,
+      -0.35
+    ],
+    "sora": [
+      0,
+      0,
+      -0.35
+    ],
+    "jun": [
+      2.5,
+      0,
+      -0.35
+    ],
+    "min": [
+      -1.25,
+      0,
+      2
+    ],
+    "leo": [
+      1.25,
+      0,
+      2
+    ]
+  },
+  "animations": [
+    {
+      "name": "nara_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "nara_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "nara_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "nara_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "nara_success",
+      "duration": 1.4
+    },
+    {
+      "name": "nara_error",
+      "duration": 1.4
+    },
+    {
+      "name": "nara_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "nara_preparing",
+      "duration": 3.6
+    },
+    {
+      "name": "nara_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "nara_sending",
+      "duration": 0.9
+    },
+    {
+      "name": "nara_receiving",
+      "duration": 0.9
+    },
+    {
+      "name": "nara_acknowledge",
+      "duration": 0.9
+    },
+    {
+      "name": "jun_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "jun_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "jun_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "jun_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "jun_success",
+      "duration": 1.4
+    },
+    {
+      "name": "jun_error",
+      "duration": 1.4
+    },
+    {
+      "name": "jun_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "jun_preparing",
+      "duration": 3.6
+    },
+    {
+      "name": "jun_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "jun_sending",
+      "duration": 0.9
+    },
+    {
+      "name": "jun_receiving",
+      "duration": 0.9
+    },
+    {
+      "name": "jun_acknowledge",
+      "duration": 0.9
+    },
+    {
+      "name": "sora_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "sora_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "sora_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "sora_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "sora_success",
+      "duration": 1.4
+    },
+    {
+      "name": "sora_error",
+      "duration": 1.4
+    },
+    {
+      "name": "sora_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "sora_preparing",
+      "duration": 3.6
+    },
+    {
+      "name": "sora_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "sora_sending",
+      "duration": 0.9
+    },
+    {
+      "name": "sora_receiving",
+      "duration": 0.9
+    },
+    {
+      "name": "sora_acknowledge",
+      "duration": 0.9
+    },
+    {
+      "name": "min_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "min_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "min_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "min_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "min_success",
+      "duration": 1.4
+    },
+    {
+      "name": "min_error",
+      "duration": 1.4
+    },
+    {
+      "name": "min_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "min_preparing",
+      "duration": 3.6
+    },
+    {
+      "name": "min_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "min_sending",
+      "duration": 0.9
+    },
+    {
+      "name": "min_receiving",
+      "duration": 0.9
+    },
+    {
+      "name": "min_acknowledge",
+      "duration": 0.9
+    },
+    {
+      "name": "leo_idle",
+      "duration": 5.6
+    },
+    {
+      "name": "leo_typing",
+      "duration": 3.2
+    },
+    {
+      "name": "leo_thinking",
+      "duration": 2.8
+    },
+    {
+      "name": "leo_waiting",
+      "duration": 2.8
+    },
+    {
+      "name": "leo_success",
+      "duration": 1.4
+    },
+    {
+      "name": "leo_error",
+      "duration": 1.4
+    },
+    {
+      "name": "leo_blink",
+      "duration": 4.8
+    },
+    {
+      "name": "leo_preparing",
+      "duration": 3.6
+    },
+    {
+      "name": "leo_reviewing",
+      "duration": 3
+    },
+    {
+      "name": "leo_sending",
+      "duration": 0.9
+    },
+    {
+      "name": "leo_receiving",
+      "duration": 0.9
+    },
+    {
+      "name": "leo_acknowledge",
+      "duration": 0.9
+    }
+  ],
+  "provenance": "Original procedural geometry and node animation; seated rigs; no external assets"
+}

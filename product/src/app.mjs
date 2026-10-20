@@ -1,3 +1,4 @@
+import {createHandoffTracker,publicHandoff} from "./team-handoff.mjs";
 import {TEAM} from "../../server/domain/team.ts";
 import {teamProgress} from "./scene-state.mjs";
 import {createDiscussion} from "./discussion.mjs";
@@ -7,13 +8,15 @@ import { followupDraft } from "./followups.mjs";
 import { createCueTracker } from "../../pilot-3d/src/animation.mjs";
 import { createStudioView } from "../../pilot-3d/src/scene.mjs";
 import { ACTIVE } from "../../server/domain/contracts.ts";
-import { AGENT_NAMES, RUN_LABELS as labels, teamSceneState } from "./scene-state.mjs";
+import { AGENT_NAMES, RUN_LABELS as labels, teamSceneState, motionPolicy } from "./scene-state.mjs";
 import { createPresenceClient } from "./presence.mjs";
 import { createWorkspacePanel } from "./workspaces.mjs";
 import { workspacePresentation, acceptsWorkspaceSnapshot } from "./workspace-state.mjs";
 
 const $ = id => document.getElementById(id);
-const sceneCues = createCueTracker();
+const sceneCues = createCueTracker(),handoffs=createHandoffTracker();
+let handoffReaction=null,handoffTimer=0,handoffContinuous=true,lastAnnouncement="",handoffLog=[];
+const reducedMotion=matchMedia("(prefers-reduced-motion: reduce)");
 for(const person of TEAM){
  const option=document.createElement('option');option.value=person.id;option.textContent=person.name+' · '+person.role;$('agent').append(option);
  const focus=document.createElement('button');focus.type='button';focus.id=person.id+'-focus';focus.textContent=person.name+' 가까이';focus.setAttribute('aria-pressed','false');$('actor-focus-controls').append(focus);
@@ -45,7 +48,7 @@ const presence = createPresenceClient({request:api,onChange:data=>workspacePanel
   if(!navigator.sendBeacon(path,new Blob([json],{type:"application/json"}))) void fetch(path,{method:"POST",credentials:"same-origin",headers:{"content-type":"application/json"},body:json,keepalive:true}).catch(()=>{});
 }});
 function invalidateWorkspace() {
-  sceneCues.reset(); followupSource=null; archivedRun=null; workTools.reset(); discussion.reset();
+  clearTimeout(handoffTimer);handoffs.reset();handoffReaction=null;handoffLog=[];$("stage").dataset.handoffLog="[]";lastAnnouncement="";$("handoff-live").textContent="";sceneCues.reset(); followupSource=null; archivedRun=null; workTools.reset(); discussion.reset();
   presence.stop();presenceStarted=false;
   epoch++; requests.abort(); requests = new AbortController(); clearTimeout(poll); poll=0;
   snapshot=null; selectedId=null; cursor=0; pending=null; retryRequest=null; historyKey=""; busy=false; followLive=true;
@@ -80,15 +83,33 @@ function current() { return snapshot && identity ? workspacePresentation(selecti
 async function openArchived(id){if(!workspaceId)return;const stamp=epoch;try{const run=await api(`/api/workspaces/${workspaceId}/runs/${id}`);if(stamp!==epoch)return;archivedRun=run;selectedId=id;followLive=false;render();$('answer-title').scrollIntoView({block:'start'});}catch(e){if(stamp===epoch)await handle(e,stamp);}}
 function renderSceneState() {
   const active = snapshot?.runs.find(r => ACTIVE.includes(r.status));
-  const vm = teamSceneState(snapshot?.runs, TEAM.some(p=>p.id===cameraFrame)?cameraFrame:$("agent").value, motionPaused, sceneCues.observe(snapshot?.runs));
+  const teamRun=active?.team?active:snapshot?.runs.find(r=>r.team);
+  const policy=motionPolicy(motionPaused,reducedMotion.matches,document.hidden),animated=policy.animate;
+  const event=handoffs.observe(workspaceId,teamRun,{animate:animated,continuous:handoffContinuous});
+  if(event){
+    handoffLog.push({from:event.from,to:event.to,key:event.key});handoffLog=handoffLog.slice(-8);$("stage").dataset.handoffLog=JSON.stringify(handoffLog);
+    handoffReaction=event;clearTimeout(handoffTimer);
+    handoffTimer=setTimeout(()=>{handoffReaction=null;renderSceneState();},1000);
+    if(lastAnnouncement!==event.key){$('handoff-live').textContent=AGENT_NAMES[event.from]+'에서 '+AGENT_NAMES[event.to]+'에게 '+event.title+' 내용을 전달했어요.';lastAnnouncement=event.key;}
+  }
+  if(!animated||!active||active.id!==handoffReaction?.runId){handoffReaction=null;clearTimeout(handoffTimer);}
+  if(!animated)sceneCues.reset();
+  const cues=animated?sceneCues.observe(snapshot?.runs):{};
+  const vm = teamSceneState(snapshot?.runs, TEAM.some(p=>p.id===cameraFrame)?cameraFrame:$("agent").value, policy.paused, animated?cues:{});
+  const reaction=handoffReaction;
+  const sceneVM={...vm,actors:vm.actors.map(actor=>reaction&&[reaction.from,reaction.to].includes(actor.agentId)?{...actor,basePose:actor.pose,pose:actor.agentId===reaction.from?'sending':'receiving',cue:reaction.key+':'+actor.agentId,lookAt:actor.agentId===reaction.from?reaction.to:reaction.from}:actor)};
   const selected = vm.actors.find(actor => actor.agentId === vm.selectedAgent);
-  scene?.setViewModel(vm);
+  scene?.setViewModel(sceneVM);
   for (const actor of vm.actors) { $("stage").dataset[`${actor.agentId}Pose`] = actor.pose; $(`${actor.agentId}-live`).textContent=`${AGENT_NAMES[actor.agentId]} · ${actor.label}`; }
   $("stage").dataset.pose = selected.pose; $("stage").dataset.owner = active?.team?"team":active?.agentId ?? "";
-  const teamRun=active?.team?active:snapshot?.runs.find(r=>r.team),progress=teamProgress(teamRun);
+  const progress=teamProgress(teamRun);
+  const cardData=publicHandoff(teamRun);
+  $('handoff-card').hidden=!cardData;
+  if(cardData){$('handoff-route').textContent=AGENT_NAMES[cardData.from]+' → '+AGENT_NAMES[cardData.to];$('handoff-summary').textContent=cardData.summary;$('handoff-status').textContent=reaction?'내용을 전달하고 있어요':teamRun.status==='succeeded'?'마지막 인계 · 협업 완료':'최근 인계 · 다음 업무 진행 중';$('handoff-card').dataset.reacting=String(!!reaction);$('handoff-card').dataset.boundary=String(cardData.boundary);}
+  $('stage').dataset.handoff=reaction?reaction.from+'→'+reaction.to:'';
   const stage=Object.entries(progress).find(([,p])=>p.state==='active');
   $('team-stage-caption').textContent=active?.team?(stage?AGENT_NAMES[stage[0]]+' · '+stage[1].label+' / 나머지 동료는 자료 준비·검토 중':active.status==='awaiting_approval'?'협업 실행 승인을 기다리고 있어요.':'다섯 동료가 공통 조건을 살펴보고 있어요.'):teamRun?.status==='succeeded'?'5개 역할의 협업 결과가 저장됐어요. 새 협업을 시작하거나 개별 업무를 맡길 수 있어요.':'동료별 이름표와 카드를 누르면 가까이 볼 수 있어요.';
-  for(const card of $('team-members').children){card.dataset.state=progress[card.dataset.agentId]?.state??'idle';card.setAttribute('aria-pressed',String(card.dataset.agentId===vm.selectedAgent));}
+  for(const card of $('team-members').children){card.dataset.state=progress[card.dataset.agentId]?.state??'idle';card.dataset.handoff=reaction?.from===card.dataset.agentId?'sending':reaction?.to===card.dataset.agentId?'receiving':'';card.setAttribute('aria-pressed',String(card.dataset.agentId===vm.selectedAgent));}
   for(const actor of vm.actors){if((active?.team||!active)&&progress[actor.agentId])$(`${actor.agentId}-live`).textContent=progress[actor.agentId].label;}
   $("scene-caption").textContent = `${AGENT_NAMES[selected.agentId]} · ${selected.label}`;
   $("motion").textContent = motionPaused ? "움직임 재생" : "움직임 멈추기"; $("motion").setAttribute("aria-pressed", String(motionPaused));
@@ -155,10 +176,12 @@ function render() {
 }
 function applySnapshot(next,ticket,id) {
   if(!acceptsWorkspaceSnapshot({epoch:ticket,workspaceId:id},{epoch,workspaceId,cursor},next.cursor))return;
+  const wasActive=snapshot?.runs.some(r=>ACTIVE.includes(r.status));
   snapshot=next;cursor=next.cursor;spaceLoading=false;
   if(!selectedId||!next.runs.some(r=>r.id===selectedId)&&archivedRun?.id!==selectedId){selectedId=next.runs[0]?.id??null;followLive=true;}
   $("workspace-content").hidden=false;$("workspace-loading").hidden=true;
-  connection();render();if(!scene)mountScene();
+  connection();render();handoffContinuous=true;if(!scene)mountScene();
+  if(!wasActive&&next.runs.some(r=>ACTIVE.includes(r.status)))schedulePoll(ticket);
 }
 async function loadSnapshot(ticket=epoch) {
   if(!identity||!workspaceId)return;
@@ -215,7 +238,7 @@ function schedulePoll(ticket = epoch) {
       presence.disconnected();
       connection("서버 연결을 기다리고 있어요. 연결되면 저장된 업무 상태를 다시 확인합니다.");
     } finally {if(ticket===epoch && identity) schedulePoll(ticket);}
-  },document.hidden?(identity.client?.hiddenPollMs??2000):(identity.client?.pollMs??500));
+  },document.hidden?(identity.client?.hiddenPollMs??2000):(snapshot?.runs.some(r=>ACTIVE.includes(r.status))?identity.client?.activePollMs??identity.client?.pollMs??500:identity.client?.pollMs??500));
 }
 function mountScene() {
   const ticket = ++sceneEpoch; scene?.dispose(); scene = null; $("fallback").hidden = true; $("scene-state").textContent = "3D 준비 중";
@@ -224,7 +247,7 @@ function mountScene() {
       onStatus(kind) { if (ticket !== sceneEpoch) return; $("scene-state").textContent = kind === "ready" ? "실제 3D" : "2D 대체 화면"; $("fallback").hidden = kind === "ready"; },
       onSelect: selectColleague,
       onMetrics(stats){if(ticket!==sceneEpoch)return;$('stage').dataset.animationTime=String(stats.animationTime);$('stage').dataset.actions=JSON.stringify(stats.actors);$('stage').dataset.drawCalls=String(stats.drawCalls);},
-    }, { actors: TEAM.map(p=>p.id), actorLabels:Object.fromEntries(TEAM.map(p=>[p.id,p.name+" · "+p.role])), modelUrl: "/assets/studio-team-v3.glb" });
+    }, { actors: TEAM.map(p=>p.id), actorLabels:Object.fromEntries(TEAM.map(p=>[p.id,p.name+" · "+p.role])), modelUrl: "/assets/studio-team-v4.glb" });
     scene.resetCamera(cameraFrame); renderSceneState();
   } catch { $("fallback").hidden = false; $("scene-state").textContent = "2D 대체 화면"; }
 }
@@ -317,14 +340,14 @@ function selectColleague(id) {
 }
 $("whole-space").addEventListener("click", () => setCameraFrame("team"));
 for (const {id} of TEAM) $(`${id}-focus`).addEventListener("click", () => selectColleague(id));
-$("motion").addEventListener("click", () => { motionOverridden = true; motionPaused = !motionPaused; renderSceneState(); });
-matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", e => { if (!motionOverridden) { motionPaused = e.matches; renderSceneState(); } });
+$("motion").addEventListener("click", () => { motionOverridden = true; motionPaused = !motionPaused; handoffContinuous=false;renderSceneState(); });
+reducedMotion.addEventListener("change", e => { if (!motionOverridden)motionPaused=e.matches;handoffContinuous=false;renderSceneState(); });
 $('team-task').addEventListener('change',()=>{if($('team-task').checked){followupSource=null;$('agent').value='nara';}render();});
 function setOfficeFocus(focused){document.body.classList.toggle('office-focus-mode',focused);$('expand-office').textContent=focused?'업무 화면으로 돌아가기':'사무실만 보기';$('expand-office').setAttribute('aria-pressed',String(focused));}
 $('expand-office').addEventListener('click',()=>{const focused=!document.body.classList.contains('office-focus-mode');setOfficeFocus(focused);history.replaceState(null,'',location.pathname+location.search+(focused?'#office':'#scene-title'));$('scene-title').scrollIntoView({block:'start'});});
 $('start-team-demo').addEventListener('click',()=>{if(busy||!snapshot||snapshot.role==='viewer'||snapshot.runs.some(r=>ACTIVE.includes(r.status)))return;followupSource=null;$('team-task').checked=true;$('agent').value='nara';$('task').value='5명이 2주 안에 무료 도구로 첫 화면 개선 프로젝트를 진행해 줘. 기획, 디자인, 개발, QA, 최종 정리의 계획과 완료 기준을 만들어 줘.';$('require-approval').checked=false;$('scenario').value='normal';followLive=true;setCameraFrame('team');render();$('task-form').requestSubmit();});
 $("recover-scene").addEventListener("click", mountScene);
-document.addEventListener("visibilitychange", () => { if (identity && !document.hidden) { const ticket = epoch; void loadSnapshot(ticket).then(() => schedulePoll(ticket)).catch(error=>handle(error,ticket)); } });
+document.addEventListener("visibilitychange", () => { handoffContinuous=false;handoffReaction=null;clearTimeout(handoffTimer);sceneCues.reset();renderSceneState();if (identity && !document.hidden) { const ticket = epoch; void loadSnapshot(ticket).then(() => schedulePoll(ticket)).catch(error=>handle(error,ticket)); } });
 window.addEventListener("pagehide", () => { presence.stop();clearTimeout(poll); requests.abort(); ++sceneEpoch; scene?.dispose(); scene = null; });
 window.addEventListener("pageshow", e => { if (e.persisted) { requests = new AbortController(); void api("/api/me").then(enter).catch(() => showLogin()); } });
 setAuthBusy(true);

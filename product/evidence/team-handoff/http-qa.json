@@ -1,0 +1,68 @@
+{
+  "independentAuthenticatedSessions": true,
+  "sharedMetadataAndOutputPrefixesMatch": true,
+  "approvalHidesOutput": true,
+  "normal": {
+    "status": "succeeded",
+    "events": [
+      [
+        "nara",
+        "sora"
+      ],
+      [
+        "sora",
+        "jun"
+      ],
+      [
+        "jun",
+        "min"
+      ],
+      [
+        "min",
+        "leo"
+      ]
+    ],
+    "publicCard": true,
+    "outputLength": 2015
+  },
+  "cancelled": {
+    "status": "cancelled",
+    "events": [
+      [
+        "nara",
+        "sora"
+      ]
+    ],
+    "publicCard": false,
+    "outputLength": 432
+  },
+  "failed": {
+    "status": "failed",
+    "events": [],
+    "publicCard": false,
+    "outputLength": 96
+  },
+  "retried": {
+    "status": "succeeded",
+    "events": [
+      [
+        "nara",
+        "sora"
+      ],
+      [
+        "sora",
+        "jun"
+      ],
+      [
+        "jun",
+        "min"
+      ],
+      [
+        "min",
+        "leo"
+      ]
+    ],
+    "publicCard": true,
+    "outputLength": 2015
+  }
+}

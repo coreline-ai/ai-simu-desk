@@ -1,0 +1,281 @@
+{
+  "liveHandoffs": [
+    {
+      "actions": "{\"nara\":\"nara_sending\",\"sora\":\"sora_receiving\",\"jun\":\"jun_preparing\",\"min\":\"min_preparing\",\"leo\":\"leo_preparing\"}",
+      "done": false,
+      "log": "[{\"from\":\"nara\",\"to\":\"sora\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:458\"}]",
+      "reacting": "nara→sora",
+      "route": "나라 → 소라"
+    },
+    {
+      "actions": "{\"nara\":\"nara_reviewing\",\"sora\":\"sora_sending\",\"jun\":\"jun_receiving\",\"min\":\"min_preparing\",\"leo\":\"leo_preparing\"}",
+      "done": false,
+      "log": "[{\"from\":\"nara\",\"to\":\"sora\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:458\"},{\"from\":\"sora\",\"to\":\"jun\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:841\"}]",
+      "reacting": "sora→jun",
+      "route": "소라 → 준"
+    },
+    {
+      "actions": "{\"nara\":\"nara_reviewing\",\"sora\":\"sora_reviewing\",\"jun\":\"jun_sending\",\"min\":\"min_receiving\",\"leo\":\"leo_preparing\"}",
+      "done": false,
+      "log": "[{\"from\":\"nara\",\"to\":\"sora\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:458\"},{\"from\":\"sora\",\"to\":\"jun\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:841\"},{\"from\":\"jun\",\"to\":\"min\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:1194\"}]",
+      "reacting": "jun→min",
+      "route": "준 → 민"
+    },
+    {
+      "actions": "{\"nara\":\"nara_reviewing\",\"sora\":\"sora_reviewing\",\"jun\":\"jun_reviewing\",\"min\":\"min_sending\",\"leo\":\"leo_receiving\"}",
+      "done": false,
+      "log": "[{\"from\":\"nara\",\"to\":\"sora\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:458\"},{\"from\":\"sora\",\"to\":\"jun\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:841\"},{\"from\":\"jun\",\"to\":\"min\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:1194\"},{\"from\":\"min\",\"to\":\"leo\",\"key\":\"39daad01-0c5a-4a90-988b-ca325b73d6b0:cfb09497-8928-4147-84c8-be0d0b2e3f4b:1573\"}]",
+      "reacting": "min→leo",
+      "route": "민 → 레오"
+    }
+  ],
+  "viewports": [
+    {
+      "cardWidth": 256,
+      "client": 280,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 280,
+      "width": 280
+    },
+    {
+      "cardWidth": 274,
+      "client": 298,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 298,
+      "width": 298
+    },
+    {
+      "cardWidth": 295,
+      "client": 319,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 319,
+      "width": 319
+    },
+    {
+      "cardWidth": 366,
+      "client": 390,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "cardWidth": 576,
+      "client": 600,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 600,
+      "width": 600
+    },
+    {
+      "cardWidth": 553,
+      "client": 601,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 601,
+      "width": 601
+    },
+    {
+      "cardWidth": 720,
+      "client": 768,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 768,
+      "width": 768
+    },
+    {
+      "cardWidth": 1232,
+      "client": 1280,
+      "controls": [
+        {
+          "height": 44,
+          "inside": true,
+          "text": "전체 둘러보기",
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 44,
+          "inside": true,
+          "text": "로그아웃",
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scroll": 1280,
+      "width": 1280
+    }
+  ],
+  "performance": {
+    "v3": [
+      {
+        "fps": 75.1,
+        "canvas": [
+          1240,
+          640
+        ],
+        "drawCalls": 827,
+        "interrupted": false
+      },
+      {
+        "fps": 75.1,
+        "canvas": [
+          1240,
+          640
+        ],
+        "drawCalls": 827,
+        "interrupted": false
+      },
+      {
+        "fps": 75.1,
+        "canvas": [
+          1240,
+          640
+        ],
+        "drawCalls": 827,
+        "interrupted": false
+      }
+    ],
+    "v4": [
+      {
+        "fps": 75.1,
+        "canvas": [
+          1240,
+          640
+        ],
+        "drawCalls": 827,
+        "interrupted": false
+      },
+      {
+        "fps": 75.1,
+        "canvas": [
+          1240,
+          640
+        ],
+        "drawCalls": 827,
+        "interrupted": false
+      },
+      {
+        "fps": 75.2,
+        "canvas": [
+          1240,
+          640
+        ],
+        "drawCalls": 827,
+        "interrupted": false
+      }
+    ]
+  },
+  "handoffPerformance": {
+    "fps": 75.1,
+    "canvas": [
+      1240,
+      640
+    ],
+    "drawCalls": 827
+  },
+  "pause": {
+    "before": "0.6778340000000002",
+    "afterFocus": "0.6778340000000002",
+    "completeWhilePaused": {
+      "time": "0.6778340000000002",
+      "done": true
+    }
+  },
+  "refresh": {
+    "log": "[]",
+    "live": "",
+    "reaction": "",
+    "card": "민 → 레오"
+  },
+  "consoleErrorsAndWarnings": 0,
+  "limitations": [
+    "Browser viewport tests, not physical mobile devices",
+    "OS reduced-motion and document-hidden lifecycle covered by deterministic policy/continuity tests; browser hidden flag remained false in this host"
+  ]
+}

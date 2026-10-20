@@ -1,6 +1,6 @@
 import * as T from "three";
 import {fitOrthographic} from "./framing.mjs";
-import { POSES, applyActorPoses } from "./animation.mjs";
+import { POSES, EXTRA_POSES, applyActorPoses, finishActorAction } from "./animation.mjs";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
@@ -54,6 +54,22 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   let disposed = false, ready = false, lost = false, paused = false, quality = "auto", framing = "room";
   let lastTime = 0, lastStats = 0, sample = null, lastMetrics = {};
   let currentVM = { pose: "idle", motionPaused: false };
+  const gazeBases=new Map();
+  function restoreGaze(){for(const [node,q] of gazeBases)node.quaternion.copy(q);gazeBases.clear();}
+  function updateGaze(){
+    if(!model?.userData.naturalMotion)return;
+    for(const actor of currentVM.actors??[]){
+      const action=currentActions[actor.agentId];
+      if(!actor.lookAt||!['sending','receiving'].some(p=>action?.getClip().name===actor.agentId+'_'+p))continue;
+      const head=model.getObjectByName(actor.agentId[0].toUpperCase()+actor.agentId.slice(1)+'Head'),origin=model.userData.workspaces?.[actor.lookAt];if(!head||!origin)continue;
+      head.parent.updateWorldMatrix(true,false);
+      const target=head.parent.worldToLocal(new T.Vector3(origin[0],1.155,origin[2]-.58)).sub(head.position);
+      const envelope=Math.sin(Math.PI*Math.min(1,action.time/action.getClip().duration));
+      const yaw=T.MathUtils.clamp(Math.atan2(target.x,target.z),-.349,.349)*envelope;
+      gazeBases.set(head,head.quaternion.clone());
+      const e=new T.Euler().setFromQuaternion(head.quaternion);e.y=yaw;e.x=T.MathUtils.clamp(e.x,-.174,.174);head.quaternion.setFromEuler(e);
+    }
+  }
   const events = new AbortController();
   const getStats = () => ({ ...lastMetrics, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, drawCalls: renderer.info.render.calls, triangles: renderer.info.render.triangles, pose: currentVM.pose, animationTime: mixer?.time ?? 0, actors: Object.fromEntries(actorIds.map(id => [id, currentActions[id]?.getClip().name ?? null])), paused, measuring: Boolean(sample), pixelRatio: renderer.getPixelRatio(), canvas: [renderer.domElement.width, renderer.domElement.height] });
   function emitStats() { lastMetrics = getStats(); callbacks.onMetrics?.(lastMetrics); }
@@ -71,7 +87,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   function tick(now) {
     if (disposed || lost || !ready || document.hidden) return;
     const dt = lastTime ? Math.min((now - lastTime) / 1000, .06) : 0; lastTime = now;
-    if (!paused) mixer.update(dt);
+    if (!paused) {restoreGaze();mixer.update(dt);updateGaze();}
     draw();
     if (sample) {
       sample.frames++;
@@ -123,9 +139,10 @@ export function createStudioView(host, callbacks = {}, options = {}) {
     controls.update(); resize();
   }
   function applyViewModel(vm) {
-    currentVM = vm; paused = vm.motionPaused;
+    currentVM = {...vm,naturalMotion:!!model?.userData.naturalMotion}; paused = vm.motionPaused;
     if (ready) {
-      applyActorPoses(actions, currentActions, actorIds, vm, consumedCues);
+      if(!paused)restoreGaze();
+      applyActorPoses(actions, currentActions, actorIds, currentVM, consumedCues);
       if (paused) mixer.update(0);
       renderer.domElement.dataset.clips = JSON.stringify(Object.fromEntries(actorIds.map(id => [id, currentActions[id]?.getClip().name])));
     }
@@ -156,9 +173,9 @@ export function createStudioView(host, callbacks = {}, options = {}) {
     scene.add(model);
     model.traverse(node => { if (node.isMesh) { node.castShadow = !/Wall|Window|DistantTree/.test(node.name); node.receiveShadow = true; } });
     mixer = new T.AnimationMixer(model);
-    actions = Object.fromEntries(actorIds.map(id => [id, Object.fromEntries(POSES.map(pose => {
+    actions = Object.fromEntries(actorIds.map(id => [id, Object.fromEntries([...POSES,...EXTRA_POSES].map(pose => {
       const clip = gltf.animations.find(c => c.name === `${id}_${pose}` || (id === "nara" && c.name === pose));
-      if (!clip) throw new Error("필수 3D 동작을 읽지 못했어요.");
+      if (!clip) {if(EXTRA_POSES.includes(pose))return [pose,null];throw new Error("필수 3D 동작을 읽지 못했어요.");}
       return [pose, mixer.clipAction(clip)];
     }))]));
     for (const [index,id] of actorIds.entries()) {
@@ -167,8 +184,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
     }
     mixer.addEventListener("finished",event=>{
       for(const id of actorIds) if(currentActions[id]===event.action) {
-        event.action.fadeOut(.25);
-        currentActions[id]=actions[id].idle.reset().fadeIn(.25).play();
+        finishActorAction(actions,currentActions,id,currentVM);
       }
     });
     ready = true;

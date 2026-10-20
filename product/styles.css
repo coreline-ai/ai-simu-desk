@@ -40,3 +40,10 @@ select{appearance:none;-webkit-appearance:none;height:44px;min-height:44px;paddi
   .topbar-right #signout{grid-column:2;grid-row:2;justify-self:end}
   .topbar-right .quiet{font-size:12px;padding:8px 5px}
 }
+
+/* Public handoff information stays readable even when motion is paused. */
+.handoff-card{border:1px solid #c9d5ba;border-left:4px solid #86a27d;background:#f1f5e9;border-radius:12px;margin:12px 0;padding:14px 18px;min-width:0}
+.handoff-card>div{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.handoff-card small{font-size:10px;color:#6c805e}.handoff-card strong{font-size:15px}.handoff-card span{font-size:10px;color:#708363;margin-left:auto}.handoff-card p{font-size:12px;margin:6px 0 0;line-height:1.8;overflow-wrap:anywhere}
+.handoff-card[data-reacting=true]{border-color:#698956;background:#eaf1df}.team-member[data-state=preparing]{border-top-color:#b9c5ad}.team-member[data-state=active]{background:#e7efdc}.team-member[data-handoff=sending],.team-member[data-handoff=receiving]{outline:2px solid #8ca875;outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:600px){.handoff-card{padding:11px 12px}.handoff-card>div{gap:6px 9px}.handoff-card span{flex-basis:100%;margin-left:0}.handoff-card p{font-size:11px}}
