@@ -1,0 +1,7 @@
+{
+  "fiveActorMixedReportUnchanged": true,
+  "beforeSha256": "3cbdb5f2ed468cbc9f2a9a35a1242affd0b18cc0d1af3a7a28eac7accb8f7978",
+  "afterSha256": "3cbdb5f2ed468cbc9f2a9a35a1242affd0b18cc0d1af3a7a28eac7accb8f7978",
+  "subsetTest": "Nara-only candidate keeps baseline partners eligible for repeated meetings",
+  "subsetTestPassed": true
+}

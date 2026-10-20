@@ -46,10 +46,11 @@ export class CupInteraction {
   else if(this.state==='grasp'){this.hand.attach(this.mug);this.owner='hand';this.events++;this.setGrip(true);this.enter('lift');}
   else if(this.state==='lift')this.enter(this.carryOnly?'carry':'sip');
   else if(this.state==='sip')this.enter('lower');
-  else if(this.state==='lower')this.enter('place');
+  else if(this.state==='lower'){this.enter(this.heldSip?'carry':'place');this.heldSip=false;}
   else if(this.state==='place'){this.releaseToDesk();this.enter('release');}
   else {this.state='idle';this.time=0;this.done++;this.returning=false;}
  }
+ sipHeld(){if(this.state!=='carry'||this.owner!=='hand')return false;this.heldSip=true;this.enter('sip');return true;}
  finishCarry(){if(this.state==='carry')this.enter('place');}
  setDownAt(drop){if(this.state!=='carry')return false;this.drop=drop;this.retrieve=false;this.enter('tablePlace');return true;}
  returnToHand(){this.retrieve=true;if(this.state==='tableRest')this.enter('tableReach');}

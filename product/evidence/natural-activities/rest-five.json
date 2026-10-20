@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "id": "nara",
+      "style": "one_arm",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "nara",
+      "style": "back_open",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "sora",
+      "style": "back_open",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "sora",
+      "style": "side_stretch",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "jun",
+      "style": "one_arm",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "jun",
+      "style": "shoulder_release",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "min",
+      "style": "side_stretch",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "min",
+      "style": "back_open",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "leo",
+      "style": "shoulder_release",
+      "errors": [],
+      "canvas": 1
+    },
+    {
+      "id": "leo",
+      "style": "one_arm",
+      "errors": [],
+      "canvas": 1
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,68 @@
+{
+  "kind": "local-verification",
+  "tests": 181,
+  "failedTests": 0,
+  "checks": [
+    {
+      "name": "typecheck",
+      "exitCode": 0
+    },
+    {
+      "name": "syntax",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "exitCode": 0
+    },
+    {
+      "name": "tests",
+      "exitCode": 0
+    },
+    {
+      "name": "performance",
+      "exitCode": 0
+    },
+    {
+      "name": "preview",
+      "exitCode": 0
+    },
+    {
+      "name": "side",
+      "exitCode": 0
+    },
+    {
+      "name": "productProfile",
+      "exitCode": 0
+    },
+    {
+      "name": "fallback",
+      "exitCode": 0
+    },
+    {
+      "name": "ui",
+      "exitCode": 0
+    },
+    {
+      "name": "continuous",
+      "exitCode": 0
+    },
+    {
+      "name": "mixedActual30Minutes",
+      "exitCode": 0
+    },
+    {
+      "name": "actualDefaultProduct",
+      "exitCode": 0
+    },
+    {
+      "name": "finalTypecheck",
+      "exitCode": 0
+    },
+    {
+      "name": "finalBuild",
+      "exitCode": 0
+    }
+  ],
+  "pending": []
+}

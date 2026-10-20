@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "title": "AI Simu Desk · 나의 스튜디오"
+  },
+  {
+    "path": "/start",
+    "status": 200,
+    "title": "AI Simu Desk · 전체 둘러보기"
+  },
+  {
+    "path": "/demos/activities/natural/?play=1",
+    "status": 200,
+    "title": "더 자연스럽게 움직이는 다섯 동료"
+  },
+  {
+    "path": "/demos/activities/team/",
+    "status": 200,
+    "title": "함께 쉬고, 다시 일하는 다섯 동료"
+  },
+  {
+    "path": "/library/docs/natural-activities-qa.html",
+    "status": 200,
+    "title": "자연스러운 5명 생활 동작 · 로컬 검수 · AI Simu Desk"
+  }
+]

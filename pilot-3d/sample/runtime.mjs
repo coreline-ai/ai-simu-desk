@@ -8,7 +8,7 @@ export function createOfficeRuntime(model,metadata,options={}){
    const targetActor=actors[state.lookAt],targetHead=targetActor?part(targetActor,'NaraHead').getWorldPosition(new T.Vector3()).toArray():null;
    applyCharacterPose(actor,state.action,state.time,{pose:state.pose,lookAt:targetHead});
    if(!state.pose&&current.time<.25){const u=ease(current.time/.25);for(const[name,from]of current.from){const node=part(actor,name);node.position.lerpVectors(from.p,node.position,u);node.quaternion.slerpQuaternions(from.q,node.quaternion,u);}}
-   options.afterPose?.(id,actor,state);
+   options.afterPose?.(id,actor,state,dt);
    const chair=model.getObjectByName(actor.userData.prefix+'SampleChair');if(chair)chair.position.z=-.60-(state.pose?.chair??0)*.75;actor.updateMatrixWorld(true);
   }
   options.afterUpdate?.(actors,scheduler);

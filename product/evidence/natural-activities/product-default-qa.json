@@ -1,0 +1,193 @@
+{
+  "kind": "actual-default-product-no-interception",
+  "runtime": {
+    "version": 3,
+    "status": "실제 3D · 5명 자연스러운 동작",
+    "canvas": 1
+  },
+  "collaboration": {
+    "id": "2af18838-5db0-4e8d-820d-64337226a268",
+    "status": "succeeded",
+    "outputLength": 2059,
+    "roles": [
+      "nara",
+      "sora",
+      "jun",
+      "min",
+      "leo"
+    ],
+    "handoffs": [
+      {
+        "from": "nara",
+        "to": "sora",
+        "key": "3b3220c6-0d8b-4030-a4bd-9868062fe291:2af18838-5db0-4e8d-820d-64337226a268:458"
+      },
+      {
+        "from": "sora",
+        "to": "jun",
+        "key": "3b3220c6-0d8b-4030-a4bd-9868062fe291:2af18838-5db0-4e8d-820d-64337226a268:841"
+      },
+      {
+        "from": "jun",
+        "to": "min",
+        "key": "3b3220c6-0d8b-4030-a4bd-9868062fe291:2af18838-5db0-4e8d-820d-64337226a268:1194"
+      },
+      {
+        "from": "min",
+        "to": "leo",
+        "key": "3b3220c6-0d8b-4030-a4bd-9868062fe291:2af18838-5db0-4e8d-820d-64337226a268:1573"
+      }
+    ]
+  },
+  "postCollaboration": {
+    "version": 3,
+    "naturalActors": [
+      "nara",
+      "sora",
+      "jun",
+      "min",
+      "leo"
+    ],
+    "seed": 17,
+    "socialHistory": [],
+    "social": null,
+    "violations": [],
+    "auto": true,
+    "time": 9.459600000000018,
+    "claims": {},
+    "waiting": [],
+    "meeting": null,
+    "meetings": 0,
+    "cancelledMeetings": 1,
+    "actors": {
+      "nara": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 1,
+          "rest": 0,
+          "social": 0
+        }
+      },
+      "sora": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 1,
+          "rest": 0,
+          "social": 0
+        }
+      },
+      "jun": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 1,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 1,
+          "rest": 0,
+          "social": 0
+        }
+      },
+      "min": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 1,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 1,
+          "rest": 0,
+          "social": 0
+        }
+      },
+      "leo": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 1,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 1,
+          "rest": 0,
+          "social": 0
+        }
+      }
+    }
+  },
+  "persisted": "2af18838-5db0-4e8d-820d-64337226a268",
+  "logoutCanvas": 0,
+  "errors": []
+}

@@ -1,0 +1,394 @@
+{
+  "collaboration": {
+    "id": "fbed6aa3-2267-49fc-b0cd-48e3297e7f1b",
+    "status": "succeeded",
+    "outputLength": 2059,
+    "stages": [
+      "nara",
+      "sora",
+      "jun",
+      "min",
+      "leo"
+    ],
+    "handoffs": [
+      {
+        "from": "nara",
+        "to": "sora",
+        "key": "d4e67895-2186-4645-8447-dd95bd1292a7:fbed6aa3-2267-49fc-b0cd-48e3297e7f1b:458"
+      },
+      {
+        "from": "sora",
+        "to": "jun",
+        "key": "d4e67895-2186-4645-8447-dd95bd1292a7:fbed6aa3-2267-49fc-b0cd-48e3297e7f1b:841"
+      },
+      {
+        "from": "jun",
+        "to": "min",
+        "key": "d4e67895-2186-4645-8447-dd95bd1292a7:fbed6aa3-2267-49fc-b0cd-48e3297e7f1b:1194"
+      },
+      {
+        "from": "min",
+        "to": "leo",
+        "key": "d4e67895-2186-4645-8447-dd95bd1292a7:fbed6aa3-2267-49fc-b0cd-48e3297e7f1b:1573"
+      }
+    ]
+  },
+  "persisted": {
+    "runId": "fbed6aa3-2267-49fc-b0cd-48e3297e7f1b",
+    "canvas": 1
+  },
+  "workspace": {
+    "shared": "537926d4-0976-4304-b446-10280e0cfcfd",
+    "reset": {
+      "version": 3,
+      "naturalActors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "seed": 17,
+      "socialHistory": [],
+      "social": null,
+      "violations": [],
+      "auto": true,
+      "time": 1.0167000000000002,
+      "claims": {},
+      "waiting": [],
+      "meeting": null,
+      "meetings": 0,
+      "cancelledMeetings": 0,
+      "actors": {
+        "nara": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 0,
+            "social": 0
+          }
+        },
+        "sora": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 0,
+            "social": 0
+          }
+        },
+        "jun": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 0,
+            "social": 0
+          }
+        },
+        "min": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 0,
+            "social": 0
+          }
+        },
+        "leo": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 0,
+            "cup": 0,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 0,
+            "social": 0
+          }
+        }
+      }
+    },
+    "canvas": 1
+  },
+  "responsive": [
+    {
+      "width": 320,
+      "scroll": 320
+    },
+    {
+      "width": 360,
+      "scroll": 360
+    },
+    {
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "width": 414,
+      "scroll": 414
+    },
+    {
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "width": 1024,
+      "scroll": 1024
+    },
+    {
+      "width": 1440,
+      "scroll": 1440
+    }
+  ],
+  "beforeLogout": {
+    "version": 3,
+    "naturalActors": [
+      "nara",
+      "sora",
+      "jun",
+      "min",
+      "leo"
+    ],
+    "seed": 17,
+    "socialHistory": [],
+    "social": null,
+    "violations": [],
+    "auto": true,
+    "time": 138.12120000001758,
+    "claims": {
+      "meeting-0": "jun-meeting",
+      "meeting-1": "min-meeting"
+    },
+    "waiting": [],
+    "meeting": {
+      "ids": [
+        "jun",
+        "min"
+      ],
+      "phase": "discussion",
+      "time": 136.0713000000177,
+      "talk": 0.3333000000000175,
+      "ending": false,
+      "reason": "",
+      "natural": true,
+      "cupCues": {}
+    },
+    "meetings": 0,
+    "cancelledMeetings": 0,
+    "actors": {
+      "nara": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 1,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0,
+          "rest": 1,
+          "social": 0
+        }
+      },
+      "sora": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 0,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 1,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0,
+          "rest": 1,
+          "social": 0
+        }
+      },
+      "jun": {
+        "kind": "meeting",
+        "stage": "rest",
+        "returning": false,
+        "slot": 0,
+        "cup": {
+          "state": "tableRest",
+          "time": 74.564,
+          "owner": "meeting",
+          "events": 2,
+          "done": 0,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0,
+          "rest": 0,
+          "social": 0
+        }
+      },
+      "min": {
+        "kind": "meeting",
+        "stage": "rest",
+        "returning": false,
+        "slot": 1,
+        "cup": {
+          "state": "carry",
+          "time": 0,
+          "owner": "hand",
+          "events": 1,
+          "done": 0,
+          "returning": false,
+          "handError": 4.577566798522237e-16,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 0,
+          "meeting": 0,
+          "interruptions": 0,
+          "rest": 0,
+          "social": 0
+        }
+      },
+      "leo": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 2,
+          "done": 1,
+          "returning": false,
+          "handError": 2.220446049250313e-16,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 0,
+          "cup": 1,
+          "meeting": 0,
+          "interruptions": 0,
+          "rest": 0,
+          "social": 0
+        }
+      }
+    }
+  },
+  "logout": {
+    "canvas": 0,
+    "login": true
+  },
+  "errors": []
+}

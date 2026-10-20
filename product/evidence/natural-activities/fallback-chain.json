@@ -1,0 +1,16 @@
+[
+  {
+    "target": 5,
+    "version": 5,
+    "status": "기존 v5 준비 완료",
+    "canvas": 1,
+    "errors": []
+  },
+  {
+    "target": 4,
+    "version": 4,
+    "status": "기존 v4 준비 완료",
+    "canvas": 1,
+    "errors": []
+  }
+]

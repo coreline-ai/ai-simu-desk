@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "assets/studio-room-v6.glb",
+      "bytes": 7749228
+    },
+    {
+      "path": "assets/app.js",
+      "bytes": 802604
+    },
+    {
+      "path": "assets/office-background-v1.png",
+      "bytes": 2254908
+    },
+    {
+      "path": "assets/styles.css",
+      "bytes": 27066
+    },
+    {
+      "path": "index.html",
+      "bytes": 17410
+    }
+  ],
+  "totalBytes": 10851216,
+  "totalMiB": 10.348526000976562,
+  "budgetMiB": 15,
+  "unchangedRoomSha256": "7d6addce4b58447bdc8d45c4c725fefb26df4986a96759e14c75cb1bb7dd1aab"
+}

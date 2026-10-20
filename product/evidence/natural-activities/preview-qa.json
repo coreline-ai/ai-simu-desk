@@ -1,0 +1,18 @@
+{
+  "autoplay": {
+    "started": true,
+    "version": 3
+  },
+  "subset": {
+    "junRestDisabled": true,
+    "socialDisabled": true,
+    "soakDisabled": true,
+    "naraRestEnabled": true
+  },
+  "reducedAutoplay": {
+    "paused": true,
+    "auto": false,
+    "claims": {}
+  },
+  "errors": []
+}
