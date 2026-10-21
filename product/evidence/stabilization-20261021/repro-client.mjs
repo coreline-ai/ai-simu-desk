@@ -1,0 +1,30 @@
+// Read-only review reproduction, not a passing regression gate. Run from repository root.
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {createWorkTools} from '../../../product/src/work-tools.mjs';
+import {motionPolicy} from '../../../product/src/scene-state.mjs';
+const output=[];
+const source=fs.readFileSync(new URL('../../../product/src/app.mjs',import.meta.url),'utf8');
+const open=source.match(/async function openArchived\(id\)\{[^\n]+/)[0];
+const pending=[];
+const context={epoch:1,workspaceId:'space-A',archivedRun:null,selectedId:null,followLive:true,api:path=>new Promise(resolve=>pending.push({path,resolve})),render(){},$:()=>({scrollIntoView(){}}),handle:async()=>{}};
+vm.createContext(context);vm.runInContext(open,context);
+const first=context.openArchived('older-click'),second=context.openArchived('latest-click');
+pending[1].resolve({id:'latest-click'});await second;const afterLatest=context.selectedId;
+pending[0].resolve({id:'older-click'});await first;
+output.push({id:'CLIENT-01',latestClick:'latest-click',afterLatestResponse:afterLatest,afterOlderResponse:context.selectedId,issueReproduced:context.selectedId!=='latest-click'});
+class Element{constructor(){this.value='';this.hidden=false;this.disabled=false;this.textContent='';this.listeners={};this.children=[];}addEventListener(type,fn){this.listeners[type]=fn;}append(...x){this.children.push(...x);}replaceChildren(...x){this.children=x;}}
+const elements=new Map();const get=id=>elements.get(id)||elements.set(id,new Element()).get(id);globalThis.document={getElementById:get,createElement:()=>new Element()};
+const projectRequests=[];const tools=createWorkTools({request:(path,body)=>new Promise(resolve=>projectRequests.push({path,body,resolve})),onTemplate(){},onConditions(){},onOpen(){},onError(){}});
+const snapshot={workspace:{id:'space'},role:'owner'};tools.render(snapshot);
+projectRequests.shift().resolve({version:1,goal:'original',audience:'',technology:'',exclusions:''});await new Promise(r=>setImmediate(r));
+get('project-goal').value='new draft';const save=get('project-form').listeners.submit({preventDefault(){}});
+const lockedBeforeSync=get('save-project').disabled;tools.render(snapshot);const lockedAfterSync=get('save-project').disabled;
+get('reload-project').listeners.click();const saveReq=projectRequests.shift(),reloadReq=projectRequests.shift();
+saveReq.resolve({version:2,goal:'new draft',audience:'',technology:'',exclusions:''});await save;const afterSaved=get('project-goal').value;
+reloadReq.resolve({version:1,goal:'original',audience:'',technology:'',exclusions:''});await new Promise(r=>setImmediate(r));
+output.push({id:'CLIENT-02',lockedBeforeSync,lockedAfterSync,afterSaved,afterStaleReload:get('project-goal').value,issueReproduced:lockedBeforeSync&&!lockedAfterSync&&get('project-goal').value!=='new draft',scope:'Client state regresses; server version conflict still protects stored data.'});
+let motionPaused=true;motionPaused=!motionPaused;const policy=motionPolicy(motionPaused,true,false);
+const buttonText=motionPaused?'움직임 재생':'움직임 멈추기';
+output.push({id:'CLIENT-03',reducedMotion:true,buttonText,actualPaused:policy.paused,issueReproduced:policy.paused&&buttonText==='움직임 멈추기',scope:'Reduced-motion override is intentional; the button text is inconsistent.'});
+console.log(JSON.stringify({reviewedAt:new Date().toISOString(),method:'Controlled deferred promises and minimal DOM mocks; no real DB/server writes.',results:output},null,2));

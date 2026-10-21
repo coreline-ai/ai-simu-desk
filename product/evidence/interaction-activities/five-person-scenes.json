@@ -1,0 +1,1120 @@
+{
+  "kind": "actual browser controls; not accelerated",
+  "errors": [],
+  "tour": [
+    {
+      "ids": [
+        "nara",
+        "jun"
+      ],
+      "transfer": {
+        "active": true,
+        "stage": "read",
+        "owner": "hand:nara",
+        "time": 0.8332000000000042,
+        "cancelled": false,
+        "complete": false,
+        "events": 2,
+        "transfers": 1,
+        "handError": 2.3525204118543076e-15,
+        "supports": {
+          "nara": {
+            "L": 0.7400000008940695,
+            "R": 0.7720000000521541
+          },
+          "sora": {
+            "L": 0.7400000008940697,
+            "R": 0.7645000151728325
+          },
+          "jun": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          },
+          "min": {
+            "L": 0.7400000008940697,
+            "R": 0.7570000001899898
+          },
+          "leo": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          }
+        },
+        "history": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read"
+        ],
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "desk": "nara",
+            "side": "L",
+            "supportTop": 0.7400000008940695,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "desk": "sora",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "hand:nara",
+            "desk": "jun",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": null
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "desk": "min",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "desk": "leo",
+            "side": "R",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          }
+        ]
+      },
+      "hands": {
+        "nara": {
+          "R": {
+            "blend": 1,
+            "padError": 6.938893903907228e-18,
+            "maxReach": 0.054817880059462136,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "sora": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "jun": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "min": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "leo": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        }
+      },
+      "claims": {
+        "visit-jun": "nara-visit"
+      }
+    },
+    {
+      "ids": [
+        "sora",
+        "min"
+      ],
+      "transfer": {
+        "active": true,
+        "stage": "read",
+        "owner": "hand:sora",
+        "time": 0.6165999999999914,
+        "cancelled": false,
+        "complete": false,
+        "events": 2,
+        "transfers": 1,
+        "handError": 7.679822824578358e-15,
+        "supports": {
+          "nara": {
+            "L": 0.7400000008940695,
+            "R": 0.7720000000521541
+          },
+          "sora": {
+            "L": 0.7400000008940697,
+            "R": 0.7645000151728325
+          },
+          "jun": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          },
+          "min": {
+            "L": 0.7400000008940697,
+            "R": 0.7570000001899898
+          },
+          "leo": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          }
+        },
+        "history": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read"
+        ],
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "desk": "nara",
+            "side": "L",
+            "supportTop": 0.7400000008940695,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "desk": "sora",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "desk": "jun",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "hand:sora",
+            "desk": "min",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": null
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "desk": "leo",
+            "side": "R",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          }
+        ]
+      },
+      "hands": {
+        "nara": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "sora": {
+          "R": {
+            "blend": 1,
+            "padError": 6.938893903907228e-18,
+            "maxReach": 0.05481788005946223,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "jun": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "min": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "leo": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        }
+      },
+      "claims": {
+        "visit-min": "sora-visit"
+      }
+    },
+    {
+      "ids": [
+        "leo",
+        "nara"
+      ],
+      "transfer": {
+        "active": true,
+        "stage": "read",
+        "owner": "hand:leo",
+        "time": 0.4832999999999886,
+        "cancelled": false,
+        "complete": false,
+        "events": 2,
+        "transfers": 1,
+        "handError": 7.679822824578358e-15,
+        "supports": {
+          "nara": {
+            "L": 0.7400000008940695,
+            "R": 0.7720000000521541
+          },
+          "sora": {
+            "L": 0.7400000008940697,
+            "R": 0.7645000151728325
+          },
+          "jun": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          },
+          "min": {
+            "L": 0.7400000008940697,
+            "R": 0.7570000001899898
+          },
+          "leo": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          }
+        },
+        "history": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read"
+        ],
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "hand:leo",
+            "desk": "nara",
+            "side": "L",
+            "supportTop": 0.7400000008940695,
+            "supportGap": null
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "desk": "sora",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "desk": "jun",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "desk": "min",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "desk": "leo",
+            "side": "R",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          }
+        ]
+      },
+      "hands": {
+        "nara": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "sora": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "jun": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "min": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        },
+        "leo": {
+          "R": {
+            "blend": 1,
+            "padError": 7.806255641895632e-18,
+            "maxReach": 0.05481788005946187,
+            "fingers": 5
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5
+          }
+        }
+      },
+      "claims": {
+        "visit-nara": "leo-visit"
+      }
+    }
+  ],
+  "completedVisits": {
+    "availability": [
+      {
+        "visitor": "nara",
+        "host": "sora",
+        "available": true,
+        "position": [
+          -1.05,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "nara",
+        "host": "jun",
+        "available": true,
+        "position": [
+          1.45,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "nara",
+        "host": "min",
+        "available": true,
+        "position": [
+          -2.3,
+          0,
+          1.52
+        ]
+      },
+      {
+        "visitor": "nara",
+        "host": "leo",
+        "available": true,
+        "position": [
+          2.3,
+          0,
+          1.52
+        ]
+      },
+      {
+        "visitor": "sora",
+        "host": "nara",
+        "available": true,
+        "position": [
+          -3.55,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "sora",
+        "host": "jun",
+        "available": true,
+        "position": [
+          1.45,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "sora",
+        "host": "min",
+        "available": true,
+        "position": [
+          -2.3,
+          0,
+          1.52
+        ]
+      },
+      {
+        "visitor": "sora",
+        "host": "leo",
+        "available": true,
+        "position": [
+          2.3,
+          0,
+          1.52
+        ]
+      },
+      {
+        "visitor": "jun",
+        "host": "nara",
+        "available": true,
+        "position": [
+          -3.55,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "jun",
+        "host": "sora",
+        "available": true,
+        "position": [
+          -1.05,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "jun",
+        "host": "min",
+        "available": true,
+        "position": [
+          -2.3,
+          0,
+          1.52
+        ]
+      },
+      {
+        "visitor": "jun",
+        "host": "leo",
+        "available": true,
+        "position": [
+          2.3,
+          0,
+          1.52
+        ]
+      },
+      {
+        "visitor": "min",
+        "host": "nara",
+        "available": true,
+        "position": [
+          -3.55,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "min",
+        "host": "sora",
+        "available": true,
+        "position": [
+          -1.05,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "min",
+        "host": "jun",
+        "available": true,
+        "position": [
+          1.45,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "min",
+        "host": "leo",
+        "available": true,
+        "position": [
+          2.3,
+          0,
+          1.52
+        ]
+      },
+      {
+        "visitor": "leo",
+        "host": "nara",
+        "available": true,
+        "position": [
+          -3.55,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "leo",
+        "host": "sora",
+        "available": true,
+        "position": [
+          -1.05,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "leo",
+        "host": "jun",
+        "available": true,
+        "position": [
+          1.45,
+          0,
+          -0.83
+        ]
+      },
+      {
+        "visitor": "leo",
+        "host": "min",
+        "available": true,
+        "position": [
+          -2.3,
+          0,
+          1.52
+        ]
+      }
+    ],
+    "counts": {
+      "nara": 2,
+      "sora": 1,
+      "jun": 1,
+      "min": 1,
+      "leo": 1
+    },
+    "history": [
+      {
+        "ids": [
+          "nara",
+          "jun"
+        ],
+        "cue": "visit-1",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "note",
+          "explain",
+          "reflect",
+          "reply",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "nara": 0,
+          "jun": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 1,
+        "leader": "jun",
+        "speakers": [
+          "jun",
+          "nara"
+        ],
+        "transfer": true,
+        "transferComplete": true
+      },
+      {
+        "ids": [
+          "sora",
+          "min"
+        ],
+        "cue": "visit-2",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "reply",
+          "reflect",
+          "note",
+          "explain",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "sora": 0,
+          "min": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 2,
+        "leader": "sora",
+        "speakers": [
+          "sora",
+          "min"
+        ],
+        "transfer": true,
+        "transferComplete": true
+      },
+      {
+        "ids": [
+          "leo",
+          "nara"
+        ],
+        "cue": "visit-3",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "reflect",
+          "note",
+          "explain",
+          "reply",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "leo": 0,
+          "nara": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 0,
+        "leader": "nara",
+        "speakers": [
+          "nara",
+          "leo"
+        ],
+        "transfer": true,
+        "transferComplete": true
+      }
+    ],
+    "current": null
+  },
+  "flows": [
+    {
+      "id": "nara",
+      "linked": {
+        "pending": [
+          [
+            "nara",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 248.54060000000237
+            }
+          ],
+          [
+            "sora",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 320.65430000001703
+            }
+          ],
+          [
+            "leo",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 409.4341000000373
+            }
+          ]
+        ],
+        "history": [
+          {
+            "id": "nara",
+            "kind": "standing_rest_to_window",
+            "time": 239.0838000000395
+          }
+        ],
+        "tour": null
+      },
+      "counts": {
+        "sofa": 0,
+        "cup": 0,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 0,
+        "role": 0,
+        "sofaPair": 0,
+        "pairAttempts": 0,
+        "window": 1
+      },
+      "claims": {}
+    },
+    {
+      "id": "sora",
+      "linked": {
+        "pending": [
+          [
+            "nara",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 248.54060000000237
+            }
+          ],
+          [
+            "sora",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 320.65430000001703
+            }
+          ],
+          [
+            "leo",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 409.4341000000373
+            }
+          ]
+        ],
+        "history": [
+          {
+            "id": "nara",
+            "kind": "standing_rest_to_window",
+            "time": 239.0838000000395
+          },
+          {
+            "id": "sora",
+            "kind": "standing_rest_to_window",
+            "time": 299.7646000000486
+          }
+        ],
+        "tour": null
+      },
+      "counts": {
+        "sofa": 0,
+        "cup": 0,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 0,
+        "role": 0,
+        "sofaPair": 0,
+        "pairAttempts": 0,
+        "window": 1
+      },
+      "claims": {}
+    },
+    {
+      "id": "jun",
+      "linked": {
+        "pending": [
+          [
+            "nara",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 248.54060000000237
+            }
+          ],
+          [
+            "sora",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 320.65430000001703
+            }
+          ],
+          [
+            "leo",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 409.4341000000373
+            }
+          ]
+        ],
+        "history": [
+          {
+            "id": "nara",
+            "kind": "standing_rest_to_window",
+            "time": 239.0838000000395
+          },
+          {
+            "id": "sora",
+            "kind": "standing_rest_to_window",
+            "time": 299.7646000000486
+          },
+          {
+            "id": "jun",
+            "kind": "standing_rest_to_window",
+            "time": 349.4460000000599
+          }
+        ],
+        "tour": null
+      },
+      "counts": {
+        "sofa": 0,
+        "cup": 0,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 0,
+        "role": 0,
+        "sofaPair": 0,
+        "pairAttempts": 0,
+        "window": 1
+      },
+      "claims": {}
+    },
+    {
+      "id": "min",
+      "linked": {
+        "pending": [
+          [
+            "nara",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 248.54060000000237
+            }
+          ],
+          [
+            "sora",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 320.65430000001703
+            }
+          ],
+          [
+            "leo",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 409.4341000000373
+            }
+          ]
+        ],
+        "history": [
+          {
+            "id": "nara",
+            "kind": "standing_rest_to_window",
+            "time": 239.0838000000395
+          },
+          {
+            "id": "sora",
+            "kind": "standing_rest_to_window",
+            "time": 299.7646000000486
+          },
+          {
+            "id": "jun",
+            "kind": "standing_rest_to_window",
+            "time": 349.4460000000599
+          },
+          {
+            "id": "min",
+            "kind": "standing_rest_to_window",
+            "time": 394.32090000007014
+          }
+        ],
+        "tour": null
+      },
+      "counts": {
+        "sofa": 0,
+        "cup": 0,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 0,
+        "role": 0,
+        "sofaPair": 0,
+        "pairAttempts": 0,
+        "window": 1
+      },
+      "claims": {}
+    },
+    {
+      "id": "leo",
+      "linked": {
+        "pending": [
+          [
+            "nara",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 248.54060000000237
+            }
+          ],
+          [
+            "sora",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 320.65430000001703
+            }
+          ],
+          [
+            "leo",
+            {
+              "kind": "role",
+              "origin": "review",
+              "expires": 409.4341000000373
+            }
+          ]
+        ],
+        "history": [
+          {
+            "id": "nara",
+            "kind": "standing_rest_to_window",
+            "time": 239.0838000000395
+          },
+          {
+            "id": "sora",
+            "kind": "standing_rest_to_window",
+            "time": 299.7646000000486
+          },
+          {
+            "id": "jun",
+            "kind": "standing_rest_to_window",
+            "time": 349.4460000000599
+          },
+          {
+            "id": "min",
+            "kind": "standing_rest_to_window",
+            "time": 394.32090000007014
+          },
+          {
+            "id": "leo",
+            "kind": "standing_rest_to_window",
+            "time": 466.1545000000865
+          }
+        ],
+        "tour": null
+      },
+      "counts": {
+        "sofa": 0,
+        "cup": 0,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 0,
+        "role": 0,
+        "sofaPair": 0,
+        "pairAttempts": 0,
+        "window": 1
+      },
+      "claims": {}
+    }
+  ]
+}

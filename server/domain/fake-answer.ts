@@ -1,7 +1,7 @@
 import {TEAM,TEAM_NAMES,type TeamId} from "./team.js";
 import type {AgentId} from "./contracts.js";
 import type {AgentJob} from "./contracts.js";
-export const FAKE_ENGINE_VERSION = "rules-3.1";
+export const FAKE_ENGINE_VERSION = "rules-3.2";
 export type AnswerPhase = "analyze"|"compose"|"review";
 export interface SourceContext { runId:string; version:number; agentId:AgentId; prompt:string; output:string; body?:string; conditions?:Pick<AnswerAnalysis,"days"|"deadline"|"people"|"budget"|"freeOnly"|"exclusions">; truncated?:boolean; mode:"revise"|"handoff" }
 export interface AnswerAnalysis {
@@ -89,7 +89,8 @@ function stepsFor(a:AnswerAnalysis,agent:string):string[][] {
   return agent==="nara"?steps.map(s=>[s[0]+" 요구사항","사용 흐름 초안: "+s[1],"사용자 관점 수용 기준: "+s[2]]):steps;
 }
 export interface TeamAnswer {members:TeamId[];stages:{agentId:TeamId;title:string;start:number;end:number;from?:TeamId}[];total:number}
-export interface FakeAnswer {team?:TeamAnswer;version:string; analysis:AnswerAnalysis; text:string; body:string; checks:string[]; items:string[]}
+export interface AnswerDecision {status:'ready'|'needs_input';reasons:string[]}
+export interface FakeAnswer {team?:TeamAnswer;decision?:AnswerDecision;version:string; analysis:AnswerAnalysis; text:string; body:string; checks:string[]; items:string[]}
 function contentLines(text:string):string[]{
   return sentences(text).filter(s=>!/^요청:|Fake AI|핵심 단어:|조건:|원본:|기간 \||항목 \||[-|\s]+$|^(제목·문구 초안|본문 초안|화면·메시지 초안|인계받은 요구사항|구현 작업과 테스트)$/.test(s));
 }
@@ -177,12 +178,16 @@ export function createFakeAnswer(job:AgentJob):FakeAnswer {
   }else body="지원하는 결과: 개발·기획 계획, 체크리스트, 문구 초안, 제공 원문 요약, 두 대상 비교 틀입니다.\n원하는 산출물과 대상, 지켜야 할 조건을 알려주세요.";
   const checks=["외부 호출 없음","입력 조건과 가정 분리"];
   const forbidden=a.exclusions.filter(term=>!/^유료|무료|비용/.test(term));
-  if(forbidden.some(term=>term.length>1&&body.includes(term))&&!a.issues.length)
+  const decision:AnswerDecision={status:a.issues.length?'needs_input':'ready',reasons:[...a.issues]};
+  if(forbidden.some(term=>term.length>1&&(body.includes(term)||items.some(item=>item.includes(term))))&&!a.issues.length){
     body="제외 조건에 해당하는 작업이 기본 초안에 포함되어 있어 결과를 확정하지 않았습니다. 제외할 범위와 대체 방법을 알려주세요.";
+    decision.status='needs_input';decision.reasons.push('제외 조건에 해당하는 기본 작업');
+  }
+  if(decision.status==='needs_input')items=[];
   const heading=role+"의 제안";
   const text=a.lines&&!a.issues.length&&items.length===a.lines&&!a.table?body:
     heading+"\n\n요청: "+a.topic+"\n"+(conditions?"조건: "+conditions+"\n":"")+"\n"+body+"\n\n"+(context?"원본: "+context.runId+" · v"+context.version+" · "+context.mode+"\n":"")+"Fake AI 시뮬레이션 · 규칙 기반 초안이며 실제 언어 모델의 추론·검색 결과가 아닙니다.";
-  return {version:FAKE_ENGINE_VERSION,analysis:a,text:text.slice(0,4000),body,checks,items};
+  return {version:FAKE_ENGINE_VERSION,analysis:a,text:text.slice(0,4000),body,checks,items,decision};
 }
 export function phaseAt(outputLength:number,total:number):AnswerPhase {
   return outputLength===0?"analyze":outputLength>=total*.86?"review":"compose";
@@ -194,11 +199,13 @@ function createTeamAnswer(job:AgentJob):FakeAnswer {
  if(analysis.issues.length)return createFakeAnswer({...job,team:false});
  const compact=(text:string,max:number)=>text.length>max?text.slice(0,max-1).trimEnd()+'…':text;
  const stages:TeamAnswer['stages']=[],items:string[]=[];
+ const decision:AnswerDecision={status:'ready',reasons:[]};
  let text='5명 협업 결과\n'+job.prompt.slice(0,180)+'\n\n',previous:{id:TeamId;summary:string;answer:FakeAnswer}|null=null;
  for(const [i,person] of TEAM.entries()){
   const answer=createFakeAnswer({...job,team:false,agentId:person.id,prompt:job.prompt+'\n역할별 계획을 3개 항목으로 작성해줘.',...(previous?{context:{runId:job.runId,version:1,agentId:previous.id,prompt:job.prompt,output:previous.answer.text,body:previous.answer.body,mode:'handoff' as const}}:{})});
   const received=previous?'받은 내용 · '+TEAM_NAMES[previous.id]+': '+compact(previous.summary,120)+'\n':'공통 목표와 조건을 정리합니다.\n';
-  const rows=answer.items.slice(0,3).map(s=>compact(s,170));
+  if(answer.decision?.status==='needs_input'){decision.status='needs_input';decision.reasons.push(...answer.decision.reasons);}
+  const rows=(answer.decision?.status==='needs_input'?[answer.body]:answer.items.length?answer.items:[answer.body]).slice(0,3).map(s=>compact(s,170));
   const section=(i+1)+'. '+person.name+' · '+person.role+'\n'+received+rows.map(s=>'• '+s).join('\n')+'\n\n';
   const start=text.length;text+=section;
   stages.push({agentId:person.id,title:person.role,start,end:text.length,...(previous?{from:previous.id}:{})});
@@ -206,5 +213,6 @@ function createTeamAnswer(job:AgentJob):FakeAnswer {
   previous={id:person.id,summary:rows[0]??answer.body.slice(0,120),answer};
  }
  text+='공통 검토: 역할별 제안을 실제 구현·검증으로 확정해야 합니다.\nFake AI 협업 시뮬레이션 · 하나의 실행에 5개 역할의 규칙 기반 결과를 저장합니다. 외부 AI를 호출하지 않습니다.';
- return {version:FAKE_ENGINE_VERSION,analysis,text,body:text,items,checks:['5개 역할 산출물','앞 단계 전달 요약','외부 호출 없음'],team:{members:TEAM.map(p=>p.id),stages,total:text.length}};
+ decision.reasons=[...new Set(decision.reasons)];
+ return {version:FAKE_ENGINE_VERSION,analysis,text,body:text,items,decision,checks:['5개 역할 산출물','앞 단계 전달 요약','외부 호출 없음'],team:{members:TEAM.map(p=>p.id),stages,total:text.length}};
 }

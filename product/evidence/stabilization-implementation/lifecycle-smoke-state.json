@@ -1,0 +1,9 @@
+{
+  "status": "aborted",
+  "startedAt": "2026-10-21T05:37:54.285Z",
+  "endedAt": "2026-10-21T05:37:54.888Z",
+  "signal": "SIGTERM",
+  "rows": [],
+  "logoutRows": [],
+  "errors": []
+}

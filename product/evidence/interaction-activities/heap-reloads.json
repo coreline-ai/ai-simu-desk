@@ -1,0 +1,176 @@
+{
+  "kind": "Chrome CDP JS heap after forced GC; not GPU memory or a long-run leak proof",
+  "warmupReloads": 3,
+  "measuredReloads": 10,
+  "rows": [
+    {
+      "reload": 0,
+      "heap": {
+        "usedSize": 17946336,
+        "totalSize": 19218432,
+        "embedderHeapUsedSize": 2592888,
+        "backingStorageSize": 14424292
+      },
+      "textures": 48,
+      "geometries": 213,
+      "canvas": 1
+    },
+    {
+      "reload": 1,
+      "heap": {
+        "usedSize": 18493140,
+        "totalSize": 19742720,
+        "embedderHeapUsedSize": 2632032,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 2,
+      "heap": {
+        "usedSize": 18742592,
+        "totalSize": 20791296,
+        "embedderHeapUsedSize": 2520056,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 3,
+      "heap": {
+        "usedSize": 19091216,
+        "totalSize": 20791296,
+        "embedderHeapUsedSize": 2413992,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 4,
+      "heap": {
+        "usedSize": 19307736,
+        "totalSize": 20791296,
+        "embedderHeapUsedSize": 2557008,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 5,
+      "heap": {
+        "usedSize": 19587192,
+        "totalSize": 21315584,
+        "embedderHeapUsedSize": 2449720,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 6,
+      "heap": {
+        "usedSize": 19713400,
+        "totalSize": 21577728,
+        "embedderHeapUsedSize": 2419200,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 7,
+      "heap": {
+        "usedSize": 19988768,
+        "totalSize": 21839872,
+        "embedderHeapUsedSize": 2460944,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 8,
+      "heap": {
+        "usedSize": 20409532,
+        "totalSize": 22364160,
+        "embedderHeapUsedSize": 2578288,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 9,
+      "heap": {
+        "usedSize": 20486156,
+        "totalSize": 21839872,
+        "embedderHeapUsedSize": 2541296,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 10,
+      "heap": {
+        "usedSize": 20657028,
+        "totalSize": 22626304,
+        "embedderHeapUsedSize": 2696696,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 11,
+      "heap": {
+        "usedSize": 20935192,
+        "totalSize": 22626304,
+        "embedderHeapUsedSize": 2714352,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 12,
+      "heap": {
+        "usedSize": 21069600,
+        "totalSize": 23412736,
+        "embedderHeapUsedSize": 2653432,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    },
+    {
+      "reload": 13,
+      "heap": {
+        "usedSize": 21385112,
+        "totalSize": 23937024,
+        "embedderHeapUsedSize": 2676968,
+        "backingStorageSize": 14424310
+      },
+      "textures": 48,
+      "geometries": 216,
+      "canvas": 1
+    }
+  ],
+  "errors": []
+}

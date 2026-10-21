@@ -1,0 +1,488 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "id": "nara",
+      "action": "role",
+      "hands": {
+        "R": {
+          "blend": 1,
+          "padError": 3.469446951953614e-18,
+          "maxReach": 0.035693136660902944,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "기획 메모",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "use",
+        "time": 1.7831999999999997,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 4.710277376051325e-16,
+        "tipError": 9.945640348601413e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "cup": {
+        "state": "idle",
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "nara",
+      "action": "cup",
+      "hands": {
+        "R": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 1,
+          "padError": 4.9065389333867974e-18,
+          "maxReach": 0.06397655820689252,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "기획 메모",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0.8165999999999999,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 1,
+        "events": 2,
+        "handError": 2.220446049250313e-16,
+        "tipError": 2.482534153247273e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use",
+          "replace",
+          "release",
+          "retract"
+        ]
+      },
+      "cup": {
+        "state": "sip",
+        "time": 1.017,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 4.440892098500626e-16,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "sora",
+      "action": "role",
+      "hands": {
+        "R": {
+          "blend": 1,
+          "padError": 5.275955480050203e-18,
+          "maxReach": 0.03629049450807274,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "태블릿 스케치",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "use",
+        "time": 2.4332000000000025,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 2.2887833992611187e-16,
+        "tipError": 1.9229626863835638e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "cup": {
+        "state": "idle",
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "sora",
+      "action": "cup",
+      "hands": {
+        "R": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 1,
+          "padError": 7.757919228897728e-18,
+          "maxReach": 0.06397655820689335,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "태블릿 스케치",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0.8166000000000018,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 1,
+        "events": 2,
+        "handError": 5.551115123125783e-17,
+        "tipError": 1.9229626863835638e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use",
+          "replace",
+          "release",
+          "retract"
+        ]
+      },
+      "cup": {
+        "state": "sip",
+        "time": 1.4,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 2.2473876566261383e-16,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "jun",
+      "action": "role",
+      "hands": {
+        "R": {
+          "blend": 1,
+          "padError": 0,
+          "maxReach": 0.068425141578224,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "코드 화면 설명",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "use",
+        "time": 2.4833000000000034,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 1.1102230246251565e-16,
+        "tipError": 0,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "cup": {
+        "state": "idle",
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "jun",
+      "action": "cup",
+      "hands": {
+        "R": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 1,
+          "padError": 3.469446951953614e-18,
+          "maxReach": 0.06397655820689246,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "코드 화면 설명",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0.8167000000000042,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 1,
+        "events": 0,
+        "handError": 4.577566798522237e-16,
+        "tipError": 0,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use",
+          "retract"
+        ]
+      },
+      "cup": {
+        "state": "sip",
+        "time": 1.317,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "min",
+      "action": "role",
+      "hands": {
+        "R": {
+          "blend": 1,
+          "padError": 1.734723475976807e-18,
+          "maxReach": 0.035693136660902666,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "체크리스트 확인",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "use",
+        "time": 2.249900000000001,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 1.1102230246251565e-16,
+        "tipError": 2.482534153247273e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "cup": {
+        "state": "idle",
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "min",
+      "action": "cup",
+      "hands": {
+        "R": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 1,
+          "padError": 3.469446951953614e-18,
+          "maxReach": 0.06397655820689224,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "체크리스트 확인",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0.8166999999999968,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 1,
+        "events": 2,
+        "handError": 0,
+        "tipError": 3.8459253727671276e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use",
+          "replace",
+          "release",
+          "retract"
+        ]
+      },
+      "cup": {
+        "state": "sip",
+        "time": 1.483,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 3.8459253727671276e-16,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "leo",
+      "action": "role",
+      "hands": {
+        "R": {
+          "blend": 1,
+          "padError": 4.9065389333867974e-18,
+          "maxReach": 0.03929991607858623,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "문서 정리",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "use",
+        "time": 2.483199999999996,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 1.1102230246251565e-16,
+        "tipError": 0,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "cup": {
+        "state": "idle",
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      }
+    },
+    {
+      "id": "leo",
+      "action": "cup",
+      "hands": {
+        "R": {
+          "blend": 0,
+          "padError": 0,
+          "maxReach": 0.06412487816752559,
+          "fingers": 5
+        },
+        "L": {
+          "blend": 1,
+          "padError": 3.469446951953614e-18,
+          "maxReach": 0.06397655820689349,
+          "fingers": 5
+        }
+      },
+      "role": {
+        "label": "문서 정리",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0.8167000000000042,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 1,
+        "events": 2,
+        "handError": 2.482534153247273e-16,
+        "tipError": 0,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use",
+          "replace",
+          "release",
+          "retract"
+        ]
+      },
+      "cup": {
+        "state": "sip",
+        "time": 1.45,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 3.1401849173675503e-16,
+        "cupCount": 1
+      }
+    }
+  ]
+}

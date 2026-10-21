@@ -20,3 +20,13 @@ export class CorridorReservations extends Reservations{
  diagnostics(){return{policy:'atomic-corridors',capacity:2,radius:.5,grid:.4,active:[0,1].map(i=>this.owners.get('walkway-'+i)).filter(Boolean),peak:this.peak,simultaneousGrants:this.simultaneous,grants:this.grants,maxWait:this.maxWait,waiting:this.waiting.map(q=>({owner:q.actor,seconds:this.clock-(this.since.get(q.actor)??this.clock)}))};}
  clear(){super.clear();this.paths.clear();this.since.clear();}
 }
+// Visitors remain physical obstacles while the walking slot is free. Keep the
+// side approach blocked until the same owner has acquired its return journey.
+export class VisitCorridors extends CorridorReservations{
+ constructor(){super();this.spots=new Map();}
+ holdSpot(owner,point){const radius=.5+.4*Math.SQRT2/2,cells=new Set();for(let x=Math.floor((point[0]-radius)/.4);x<=Math.ceil((point[0]+radius)/.4);x++)for(let z=Math.floor((point[2]-radius)/.4);z<=Math.ceil((point[2]+radius)/.4);z++)if(Math.hypot(x*.4-point[0],z*.4-point[2])<=radius)cells.add('corridor:'+x+':'+z);this.spots.set(owner,cells);}
+ resources(owner,keys){const expanded=super.resources(owner,keys);return expanded&&[...this.spots].every(([other,cells])=>other===owner||!expanded.some(k=>cells.has(k)))?expanded:null;}
+ release(owner){super.release(owner);this.spots.delete(owner);}
+ diagnostics(){return{...super.diagnostics(),stationary:[...this.spots.keys()]};}
+ clear(){super.clear();this.spots.clear();}
+}

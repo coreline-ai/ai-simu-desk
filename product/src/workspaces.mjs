@@ -1,12 +1,14 @@
 import { presencePresentation } from "./presence.mjs";
 import { ROLE_NAMES } from "./workspace-state.mjs";
 const $ = id => document.getElementById(id);
-export function createWorkspacePanel({ request,onSelect,onBusy,onError,refreshSnapshot }) {
+export function createWorkspacePanel({ request,onSelect,onBusy,onError,refreshSnapshot,isGuest=()=>false }) {
   let generation=0,spaces=[],snapshot=null,key="",pendingCreation=null,issuedRevision=0,externalBusy=false,operating=false,switching=false,presence=null,presenceKey="";
   function clearCode() { $("issued-invite").value=""; $("issued-invite").type="password"; $("invite-result").hidden=true; issuedRevision=0; $("show-invite").textContent="코드 보기"; }
   function lock() {
     const disabled=externalBusy||operating||switching;
     for(const node of $("workspace-tools").querySelectorAll("button,input,select")) node.disabled=disabled;
+    $('create-space-details').hidden=isGuest();
+    for(const node of $('create-workspace').querySelectorAll('button,input'))node.disabled=disabled||isGuest();
   }
   function clearPresence() {presence=null;presenceKey="";$("presence-summary").hidden=true;$("presence-activity").hidden=true;$("presence-events").replaceChildren();}
   function text(id,value) {if($(id).textContent!==value)$(id).textContent=value;}

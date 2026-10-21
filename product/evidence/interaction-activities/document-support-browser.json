@@ -1,0 +1,89 @@
+{
+  "errors": [],
+  "transfer": {
+    "active": false,
+    "stage": "idle",
+    "owner": null,
+    "time": 0.8166999999999971,
+    "cancelled": true,
+    "complete": false,
+    "events": 3,
+    "transfers": 1,
+    "handError": 1.2755491433176288e-15,
+    "supports": {
+      "nara": {
+        "L": 0.7400000008940695,
+        "R": 0.7720000000521541
+      },
+      "sora": {
+        "L": 0.7400000008940697,
+        "R": 0.7645000151728325
+      },
+      "jun": {
+        "L": 0.7400000008940697,
+        "R": 0.7400000008940697
+      },
+      "min": {
+        "L": 0.7400000008940697,
+        "R": 0.7570000001899898
+      },
+      "leo": {
+        "L": 0.7400000008940697,
+        "R": 0.7400000008940697
+      }
+    },
+    "history": [
+      "pickup",
+      "grasp",
+      "present",
+      "receive",
+      "accept",
+      "read",
+      "carry",
+      "dock",
+      "release"
+    ],
+    "pages": [
+      {
+        "id": "nara",
+        "owner": "desk:nara",
+        "desk": "nara",
+        "side": "L",
+        "supportTop": 0.7400000008940695,
+        "supportGap": 0.0004999999999999449
+      },
+      {
+        "id": "sora",
+        "owner": "desk:sora",
+        "desk": "sora",
+        "side": "L",
+        "supportTop": 0.7400000008940697,
+        "supportGap": 0.0004999999999999449
+      },
+      {
+        "id": "jun",
+        "owner": "desk:nara",
+        "desk": "nara",
+        "side": "R",
+        "supportTop": 0.7720000000521541,
+        "supportGap": 0.0004999999999999449
+      },
+      {
+        "id": "min",
+        "owner": "desk:min",
+        "desk": "min",
+        "side": "L",
+        "supportTop": 0.7400000008940697,
+        "supportGap": 0.0004999999999999449
+      },
+      {
+        "id": "leo",
+        "owner": "desk:leo",
+        "desk": "leo",
+        "side": "R",
+        "supportTop": 0.7400000008940697,
+        "supportGap": 0.0004999999999999449
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "compiled-smoke-failure",
+  "startedAt": "2026-10-21T05:26:22.203Z",
+  "failedAt": "2026-10-21T05:27:24.297Z",
+  "checks": [
+    "locked dependencies installed: lockfile-only registry download for uncached dependencies",
+    "new local settings private and preserved",
+    "full build in fresh local source/dependency path matches candidate JS and GLBs",
+    "compiled release starts in clean local path",
+    "14 public routes and private path denial",
+    "five real browsers, shared presence and viewer UI",
+    "template/project, member five-role task and owner approval, identical saved result",
+    "shared comments render text and viewer cannot write",
+    "previous result revision and comparison"
+  ],
+  "error": "TimeoutError: page.uncheck: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#require-approval')\u001b[22m\n\u001b[2m    - locator resolved to <input disabled type=\"checkbox\" id=\"require-approval\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "errors": [],
+  "logTail": [
+    "AI Simu Desk Local ready: http://127.0.0.1:59582 (persistent login/DB, Fake AI)\n"
+  ]
+}

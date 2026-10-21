@@ -5,11 +5,9 @@ import {randomUUID,randomBytes} from 'node:crypto';
 import type { StudioDatabase } from '../db/types.js';
 import { user,session as sessions } from '../db/schema.js';
 
-export const GUEST_ID = 'simu-desk-public-guest'; // Legacy account: retained, never allocated.
+import {GUEST_PREFIX,GUEST_LIMIT,GUEST_TTL_MS,isGuestId} from '../domain/guest.js';
+export {GUEST_ID,GUEST_PREFIX,GUEST_LIMIT,GUEST_TTL_MS,isGuestId} from '../domain/guest.js';
 export const GUEST_EMAIL = 'guest@ai-simu-desk.invalid';
-export const GUEST_PREFIX='simu-desk-guest-';
-export const GUEST_LIMIT=5,GUEST_TTL_MS=2*60*60*1000;
-export const isGuestId=(id:string)=>id===GUEST_ID||id.startsWith(GUEST_PREFIX);
 const safePaths = new Set(['/sign-in/guest','/sign-in/email','/sign-up/email','/sign-out','/get-session']);
 
 export function guestAuth(database: StudioDatabase) {

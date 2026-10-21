@@ -1,3 +1,4 @@
+import{assertMutableOutput}from'./build-output-guard.mjs';
 import {build} from 'esbuild';
 import {mkdir,readFile,writeFile,readdir,copyFile} from 'node:fs/promises';
 
@@ -5,7 +6,7 @@ const output='product/dist';
 const escape=text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const page=(title,content)=>'<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(title)+' · AI Simu Desk</title><link rel="stylesheet" href="/assets/start.css"></head><body><header class="site-header"><a class="brand" href="/start">▥ &nbsp;simu<span>desk</span></a><nav><a href="/">내 스튜디오 ↗</a></nav></header><main class="library">'+content+'</main><footer>AI SIMU DESK · DEVELOPMENT LIBRARY</footer></body></html>';
 
-export async function buildLibrary(remote=false){
+export async function buildLibrary(remote=false){await assertMutableOutput();
   let hub=await readFile('product/public/start.html','utf8');
   if(remote)hub=hub.replace('현재는 이 컴퓨터의 로컬 웹으로 실행 중입니다. 외부 기기에서 접속하는 공개 HTTPS 주소는 Vercel 프로젝트와 PostgreSQL 연결 후 제공할 수 있어요.','이 서버에 연결된 제품과 시각 데모를 둘러볼 수 있어요. 원격 실행 환경과 배포 설정은 아래 안내에서 확인하세요.');
   await writeFile(output+'/start.html',hub);

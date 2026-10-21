@@ -200,6 +200,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
     setQuality(value) { quality = value; resize(); },
     measure() { if (!ready || lost || disposed || document.hidden) return false; sample = { start: performance.now(), frames: 0 }; lastMetrics.measurementInterrupted = false; syncLoop(); emitStats(); return true; },
     loseContext() { if (!disposed && ready) renderer.forceContextLoss(); },
+    restoreContext() { if (!disposed && ready && lost) renderer.forceContextRestore(); },
     diagnostics: getStats,
     dispose() {
       if (disposed) return null;

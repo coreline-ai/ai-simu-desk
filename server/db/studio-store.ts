@@ -1,6 +1,6 @@
 import {createFakeAnswer,type SourceContext,type FakeAnswer} from "../domain/fake-answer.js";
 import { simulationFrame } from "../application/simulation.js";
-import { and, asc, desc, eq, gt, inArray, max } from "drizzle-orm";
+import { and, asc, desc, eq, gt, inArray, max, isNull } from "drizzle-orm";
 import { randomUUID, createHash } from "node:crypto";
 import type { StudioDatabase as Database } from "./types.js";
 import { members, workspaces, tasks, runs, approvals, runEvents, user } from "./schema.js";
@@ -8,11 +8,11 @@ import { AppError, AgentFailure, ACTIVE, TERMINAL, parseInput, validRequestKey, 
 import type { StudioPort } from "../domain/studio-port.js";
 import type { AgentJob } from "../domain/contracts.js";
 import { canStartRun, canControlRun } from "../domain/collaboration.js";
-import { workspaceMember as member, type Tx, type Store } from "./workspace-access.js";
+import { workspaceMember as member, expiredGuestWorkspace, type Tx, type Store } from "./workspace-access.js";
 import { createWorkspaceStore } from "./workspace-store.js";
 import { notifyRun } from "./notifications.js";
 import { runView } from "./run-view.js";
-import { createWorkspaceTools } from "./workspace-tools.js";
+import { createWorkspaceTools, toolsEvent } from "./workspace-tools.js";
 
 type Run = typeof runs.$inferSelect;
 type Task = typeof tasks.$inferSelect;
@@ -80,6 +80,17 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
     return answer;
   }
   async function advance(tx:Tx,workspaceId:string) {
+    if(await expiredGuestWorkspace(tx,workspaceId)){
+      const [closed]=await tx.select({id:runEvents.id}).from(runEvents).where(and(eq(runEvents.workspaceId,workspaceId),isNull(runEvents.runId),eq(runEvents.kind,'guest_space_expired'))).limit(1);
+      if(!closed)await toolsEvent(tx,workspaceId,'guest_space_expired');
+      const active=await tx.select().from(runs).where(and(eq(runs.workspaceId,workspaceId),inArray(runs.status,[...ACTIVE])));
+      for(let run of active){
+        if(run.status==='running')run=await change(tx,run,'cancel_requested','cancel_requested',{note:'체험 공간의 소유자 세션이 종료되었습니다.'});
+        await tx.update(approvals).set({status:'declined',decidedAt:new Date()}).where(and(eq(approvals.runId,run.id),eq(approvals.status,'pending')));
+        await change(tx,run,'cancelled','cancelled',{stage:'체험 공간 종료',note:'소유자 세션이 종료되어 업무를 정리했습니다. 기존 결과는 보존됩니다.'});
+      }
+      return;
+    }
     if(!simulation)return;
     const now=simulation.now?.()??Date.now();
     const [run]=await tx.select().from(runs).where(and(eq(runs.workspaceId,workspaceId),inArray(runs.status,["queued","running","cancel_requested"]))).limit(1);
@@ -99,7 +110,7 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
       const rows = await tx.select({ run: runs, task: tasks, requestedByName:user.name }).from(runs).innerJoin(tasks, eq(runs.taskId, tasks.id)).innerJoin(user,eq(runs.requestedBy,user.id)).where(eq(runs.workspaceId, workspaceId)).orderBy(desc(runs.createdAt), desc(runs.id)).limit(20);
       const [latest] = await tx.select({ cursor: max(runEvents.cursor) }).from(runEvents).where(eq(runEvents.workspaceId, workspaceId));
       const people = await tx.select({ userId:members.userId,name:user.name,role:members.role }).from(members).innerJoin(user,eq(members.userId,user.id)).where(eq(members.workspaceId,workspaceId)).orderBy(asc(user.name),asc(user.id));
-      return { workspace, role:access.role, members:people, runs: rows.map(({run,task,requestedByName})=>runView(run,task,requestedByName)), cursor: latest.cursor ?? 0 };
+      return { workspace:{...workspace,readOnlyReason:access.readOnlyReason}, role:access.role, members:people, runs: rows.map(({run,task,requestedByName})=>runView(run,task,requestedByName)), cursor: latest.cursor ?? 0 };
     });
   }
   async function presenceMembers(userId: string, workspaceId: string) {
@@ -149,6 +160,7 @@ export function createStudio(database: Database, simulation?: {answer:(job:Agent
     return db.transaction(async tx => {
       const [run] = await tx.select().from(runs).where(eq(runs.status, "queued")).orderBy(asc(runs.createdAt)).limit(1);
       if (!run) return null;
+      if(await expiredGuestWorkspace(tx,run.workspaceId)){await advance(tx,run.workspaceId);return null;}
       const [task] = await tx.select().from(tasks).where(eq(tasks.id, run.taskId));
       const answer=await frozenAnswer(tx,run,task);if(!answer)return null;
       await change(tx, run, "running", "started", { stage: "요청 분석", phase:"analyze", externalRef: `fake:${run.id}` });

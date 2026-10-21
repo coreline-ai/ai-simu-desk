@@ -1,0 +1,19 @@
+{
+  "kind": "actual-DOM-with-controlled-local-network-delays",
+  "baseline": false,
+  "latestSelectionPreserved": true,
+  "directSelectionPreserved": true,
+  "inboxReadPreserved": true,
+  "newCommentPreserved": true,
+  "project": {
+    "initiallyLocked": true,
+    "lockedAfterRender": true,
+    "staleProjectPreserved": true
+  },
+  "motion": {
+    "disabled": true,
+    "text": "동작 줄이기 적용 중",
+    "consistent": true
+  },
+  "errors": []
+}

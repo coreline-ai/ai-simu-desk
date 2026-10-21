@@ -1,0 +1,3 @@
+import{readdir}from'node:fs/promises';import{spawnSync}from'node:child_process';
+const files=['scripts/build-release.mjs','scripts/build-output-guard.mjs'];for(const dir of['product/src','scripts/qa'])for(const name of await readdir(dir))if(name.endsWith('.mjs'))files.push(dir+'/'+name);
+for(const file of files){const result=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});if(result.status!==0)throw new Error(file+'\n'+result.stderr);}console.log('Local stabilization syntax OK: '+files.length+' modules');

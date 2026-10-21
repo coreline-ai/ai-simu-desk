@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "method": "isolated runtime binding failures and aborted model loads; production source restored-context API",
+  "rows": [
+    {
+      "target": "activity5",
+      "model": 6,
+      "runtime": 5,
+      "canvas": 1,
+      "restored": false,
+      "entryVersioned": true,
+      "errors": []
+    },
+    {
+      "target": "activity4",
+      "model": 6,
+      "runtime": 4,
+      "canvas": 1,
+      "restored": false,
+      "entryVersioned": true,
+      "errors": []
+    },
+    {
+      "target": "activity3",
+      "model": 6,
+      "runtime": 3,
+      "canvas": 1,
+      "restored": false,
+      "entryVersioned": true,
+      "errors": []
+    },
+    {
+      "target": "activity2",
+      "model": 6,
+      "runtime": 2,
+      "canvas": 1,
+      "restored": false,
+      "entryVersioned": true,
+      "errors": []
+    },
+    {
+      "target": "model6",
+      "model": 6,
+      "runtime": null,
+      "canvas": 1,
+      "restored": false,
+      "entryVersioned": true,
+      "errors": []
+    },
+    {
+      "target": "model5",
+      "model": 5,
+      "runtime": null,
+      "canvas": 1,
+      "restored": false,
+      "entryVersioned": true,
+      "errors": []
+    },
+    {
+      "target": "model4",
+      "model": 4,
+      "runtime": null,
+      "canvas": 1,
+      "restored": true,
+      "entryVersioned": true,
+      "errors": []
+    }
+  ]
+}

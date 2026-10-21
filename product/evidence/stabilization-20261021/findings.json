@@ -1,0 +1,96 @@
+{
+  "reviewedAt": "2026-10-21T04:00:15.038682+00:00",
+  "method": "Root independently reran saved read-only review harnesses; memory or disposable temp DBs only. No product DB/server/browser mutations.",
+  "motion": {
+    "success": {
+      "visitStageAtCue": "out",
+      "pendingAfterCue": 0,
+      "cueEverShown": false,
+      "visitAfterReturn": null,
+      "finalAction": "idle"
+    },
+    "sending": {
+      "visitStageAtCue": "out",
+      "pendingAfterCue": 0,
+      "cueEverShown": false,
+      "visitAfterReturn": null,
+      "finalAction": "idle"
+    },
+    "receiving": {
+      "visitStageAtCue": "out",
+      "pendingAfterCue": 0,
+      "cueEverShown": false,
+      "visitAfterReturn": null,
+      "finalAction": "idle"
+    },
+    "soakGate": {
+      "passed": true,
+      "visits": 1,
+      "visitStatus": "cancelled",
+      "handRows": 0,
+      "transferCompleted": false,
+      "errors": []
+    }
+  },
+  "client": {
+    "reviewedAt": "2026-10-21T03:56:58.015Z",
+    "method": "Controlled deferred promises and minimal DOM mocks; no real DB/server writes.",
+    "results": [
+      {
+        "id": "CLIENT-01",
+        "latestClick": "latest-click",
+        "afterLatestResponse": "latest-click",
+        "afterOlderResponse": "older-click",
+        "issueReproduced": true
+      },
+      {
+        "id": "CLIENT-02",
+        "lockedBeforeSync": true,
+        "lockedAfterSync": false,
+        "afterSaved": "new draft",
+        "afterStaleReload": "original",
+        "issueReproduced": true,
+        "scope": "Client state regresses; server version conflict still protects stored data."
+      },
+      {
+        "id": "CLIENT-03",
+        "reducedMotion": true,
+        "buttonText": "움직임 멈추기",
+        "actualPaused": true,
+        "issueReproduced": true,
+        "scope": "Reduced-motion override is intentional; the button text is inconsistent."
+      }
+    ]
+  },
+  "server": [
+    {
+      "case": "excluded-items",
+      "soloBlocked": true,
+      "teamExcludedTask": true,
+      "excludedTerms": [
+        "로그인"
+      ]
+    },
+    {
+      "case": "guest-owner-expiry",
+      "guestOwnerMe": 401,
+      "memberCanStillRead": "member",
+      "memberCancelStatus": 403,
+      "memberStartStatus": 409,
+      "runStatus": "awaiting_approval"
+    }
+  ],
+  "backup": {
+    "case": "backup-opener-migrates-source",
+    "migrationsBefore": 2,
+    "migrationsBeforeDump": 11,
+    "backupBytes": 4877265
+  },
+  "staticContract": {
+    "id": "S-08",
+    "status": "confirmed API mismatch; browser reproduction not performed",
+    "caller": "pilot-3d/sample/production-view.mjs:20",
+    "callee": "pilot-3d/src/scene.mjs:198-211",
+    "missingMethod": "restoreContext"
+  }
+}

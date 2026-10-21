@@ -1,0 +1,29 @@
+{
+  "status": "aborted",
+  "startedAt": "2026-10-21T05:28:32.117Z",
+  "finishedAt": "2026-10-21T05:31:40.318Z",
+  "error": "page.waitForTimeout: Target page, context or browser has been closed",
+  "rows": [
+    {
+      "index": 0,
+      "wallSeconds": 0,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 19015104,
+        "totalSize": 21643264,
+        "embedderHeapUsedSize": 2391104,
+        "backingStorageSize": 14467133
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 104,
+        "Nodes": 942
+      },
+      "canvas": 1
+    }
+  ],
+  "logoutRows": [],
+  "errors": [],
+  "reportedStatus": "failed",
+  "reason": "Runner referenced logout instead of signout; intentionally stopped before first scheduled logout. Closed-browser error is from interruption, not a completed measurement."
+}

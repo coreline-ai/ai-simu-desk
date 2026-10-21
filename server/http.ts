@@ -1,3 +1,4 @@
+import {requestDiagnostics,requestId,type DiagnosticSink} from "./diagnostics.js";
 import { Hono } from "hono";
 import type { Context } from "hono";
 import { bodyLimit } from "hono/body-limit";
@@ -13,8 +14,9 @@ import { AppError } from "./domain/contracts.js";
 
 const publicRun=(run:Run)=>{const {generatedAnswer,...safe}=run as Run&{generatedAnswer?:unknown};return safe;};
 
-export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel: (id: string) => void = () => {}, presence: Presence | undefined = studio ? createPresence(studio.presenceMembers) : undefined) {
+export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel: (id: string) => void = () => {}, presence: Presence | undefined = studio ? createPresence(studio.presenceMembers) : undefined, diagnostics?: DiagnosticSink) {
   const app = new Hono();
+  app.use("/api/*",requestDiagnostics(diagnostics));
   app.use("*", secureHeaders({ contentSecurityPolicy: { defaultSrc: ["'self'"], scriptSrc: ["'self'"], styleSrc: ["'self'"], imgSrc: ["'self'", "data:", "blob:"], connectSrc: ["'self'"], objectSrc: ["'none'"], baseUri: ["'none'"], frameAncestors: ["'none'"] } }));
   app.use("/api/*", async (c, next) => {
     c.header("Cache-Control", "no-store");
@@ -97,6 +99,6 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
     });
     app.post("/api/runs/:id/retry", async c => c.json(publicRun(await studio.retry(await who(c), c.req.param("id"), c.req.header("idempotency-key"))), 201));
   }
-  app.onError((error, c) => error instanceof AppError ? c.json({ error: error.message, code: error.code }, error.status) : c.json({ error: "요청을 처리하지 못했습니다.", code: "INTERNAL_ERROR" }, 500));
+  app.onError((error, c) => error instanceof AppError ? c.json({ error: error.message, code: error.code }, error.status) : c.json({ error: "요청을 처리하지 못했습니다.", code: "INTERNAL_ERROR", requestId:requestId(c) }, 500));
   return app;
 }

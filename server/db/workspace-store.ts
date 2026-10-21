@@ -2,7 +2,8 @@ import { and, asc, count, eq, isNull } from "drizzle-orm";
 import { randomUUID, randomBytes, createHash } from "node:crypto";
 import type { StudioDatabase as Database } from "./types.js";
 import { members, workspaces, workspaceInvites, runEvents } from "./schema.js";
-import { workspaceMember, type Tx } from "./workspace-access.js";
+import { workspaceMember, expiredGuestWorkspace, EXPIRED_GUEST_SPACE, type Tx } from "./workspace-access.js";
+import {isGuestId} from '../domain/guest.js';
 import { AppError, validRequestKey } from "../domain/contracts.js";
 import { inviteRole, workspaceName, workspaceVersion } from "../domain/collaboration.js";
 import type { WorkspacePort } from "../domain/workspace-port.js";
@@ -43,6 +44,7 @@ export function createWorkspaceStore(database: Database): WorkspacePort {
     return db.transaction(async tx => {
       const [old] = await tx.select().from(workspaces).where(and(eq(workspaces.ownerId,userId),eq(workspaces.creationKey,key)));
       if (old) { if (old.name !== name) throw new AppError(409,"같은 요청 키에 다른 공간 이름을 보낼 수 없습니다.","KEY_CONFLICT"); return old; }
+      if(isGuestId(userId))throw new AppError(403,'공동 공간은 일반 계정으로 만들어 주세요. 게스트는 초대 코드로 참여할 수 있어요.','GUEST_OWNER_FORBIDDEN');
       const [total] = await tx.select({ n: count() }).from(workspaces).where(and(eq(workspaces.ownerId,userId),eq(workspaces.kind,"shared")));
       if (total.n >= 5) throw new AppError(409,"공동 공간은 소유자당 5개까지 만들 수 있습니다.","SPACE_LIMIT");
       const [space] = await tx.insert(workspaces).values({ id: randomUUID(), ownerId:userId, kind:"shared",name,creationKey:key }).returning();
@@ -72,6 +74,7 @@ export function createWorkspaceStore(database: Database): WorkspacePort {
       if (!invite) throw invalid();
       const [membership] = await tx.select().from(members).where(and(eq(members.workspaceId,invite.workspaceId),eq(members.userId,userId)));
       const [space] = await tx.select().from(workspaces).where(eq(workspaces.id,invite.workspaceId));
+      if(await expiredGuestWorkspace(tx,space.id))throw new AppError(403,EXPIRED_GUEST_SPACE,'SPACE_EXPIRED');
       if (invite.usedBy === userId && membership) return space;
       if (invite.usedAt || invite.revokedAt || invite.expiresAt.getTime() <= Date.now() || space.kind !== "shared") throw invalid();
       if (membership) return space; // An invite never upgrades an existing member.

@@ -1,0 +1,16 @@
+{
+  "kind": "actual-DOM-with-controlled-local-network-delays",
+  "baseline": true,
+  "latestSelectionPreserved": false,
+  "project": {
+    "initiallyLocked": true,
+    "lockedAfterRender": false,
+    "staleProjectPreserved": false
+  },
+  "motion": {
+    "disabled": false,
+    "text": "움직임 멈추기",
+    "consistent": false
+  },
+  "errors": []
+}

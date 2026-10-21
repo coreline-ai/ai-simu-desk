@@ -1,0 +1,68 @@
+{
+  "reviewedAt": "2026-10-21T04:00:15.038682+00:00",
+  "baselineCommit": "2f5a98c6ed97643aeff4892a4f387c8bb8b3d5b7",
+  "includesUncommittedActivityV6": true,
+  "scope": "local-only pre-review and stabilization plan, no application implementation",
+  "parallelReviewers": 3,
+  "rootIndependentReproductions": 4,
+  "findings": {
+    "P1": 4,
+    "P2": 5,
+    "P0": "none identified within review scope",
+    "note": "S-08 is confirmed static API mismatch; browser reproduction remains."
+  },
+  "staticChecks": {
+    "typecheck": "passed",
+    "check:boundaries": "passed",
+    "check": "passed",
+    "check:product": "passed",
+    "visualSyntaxModules": 73
+  },
+  "automated": {
+    "command": "npm test",
+    "status": "passed",
+    "tests": 213,
+    "pass": 213,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "durationMs": 416106.918084
+  },
+  "historicalOnly": {
+    "build": "Prior activity-v6 build evidence; not rerun in this read-only audit",
+    "wallClock": "Prior 10/30-minute evidence; not rerun in this audit"
+  },
+  "notPerformed": [
+    "physical mobile",
+    "20-user load",
+    "live product DB fault injection",
+    "GPU memory measurement",
+    "cloud or external services"
+  ],
+  "sourcesSha256": {
+    "server/domain/fake-answer.ts": "f1e67905f91dcb4cde844a3dffe99156f2cacf80b82a7b09cb7baa1d157fa6fc",
+    "server/adapters/guest-auth.ts": "584c94a09b1026ed5f0d40df5c65919aec6cd9aa52a13ec17c27d1cebc3dee64",
+    "server/db/workspace-store.ts": "020748463dfec19e860d7965bbc20cb547737f0e4510af0e6ceba92ee3af1311",
+    "server/db/studio-store.ts": "7f69c66daaabc54e7fb8eec79027350ff047c51147427f7c157742a813bdf648",
+    "server/db/database.ts": "a25a3a5e804cc16ba842f4e55288cc04d0cb87f993d12510f8b35529fe9d44cc",
+    "scripts/backup-db.ts": "98a22ee73e583715708d4a57d88fecb542a3465940a2e33ea68936d2df32360d",
+    "product/src/app.mjs": "69004a1ee93e5b4cf816ec9e9f1323d8608932c18e901cf92acf3d2e2babaa00",
+    "product/src/work-tools.mjs": "bea62c9b15ef17b2c8f4e4d46c748d01a87e7e163954caf1f10471455346ca26",
+    "product/src/scene-state.mjs": "7a35b9467e4656fd47d8cd2bc9aaca5fbc33a408c5432e04e92889d48a59ece3",
+    "pilot-3d/activities/expressive-scheduler.mjs": "eb6ca17245925d409283b40533e5f111ece1997e6270129a0c4321214ce4e7b7",
+    "pilot-3d/activities/interaction-scheduler.mjs": "a9b907fdd1d7ee0f34855fe08eba38d97d1101bb2aafb81e429ef8de5c9840f1",
+    "pilot-3d/activities/team-soak.mjs": "d5f8fe2deb415d21a4fa9747dfd1fcbb81d615c384e49edf7367f9f983543c08",
+    "pilot-3d/sample/production-view.mjs": "f79505dfa113a9280f87d532a0d4273309d488d58992252b007dfeff262104d5",
+    "pilot-3d/src/scene.mjs": "c4060de49b19867b1a365f184cf323a55f385d5f0a8c9043f0702da7608fb8dd",
+    "scripts/build-client.mjs": "3de4f4a28c8993314b2be62b950c71a377b0030b5f6edd761c836f119b83114d",
+    "package.json": "6c27521b2d63480cc2695f9c635d2e3dbaac5dd94efcaa376f8610903e020567"
+  },
+  "completedAt": "2026-10-21T04:00:58.027412+00:00",
+  "documentationChecks": {
+    "localLinks": "passed",
+    "phaseOrder": "passed: 1..7",
+    "implementationTasks": "all unchecked",
+    "reviewedSourceHashes": "unchanged",
+    "git diff --check": "passed"
+  }
+}

@@ -1,3 +1,4 @@
+import{assertMutableOutput}from'./build-output-guard.mjs';
 import {buildActivities,buildTeamActivities} from './build-activities.mjs';
 import {buildRoomQuality,buildRoomPage} from './build-room-quality.mjs';
 import{buildOfficeV5}from'./build-office-v5.mjs';
@@ -6,7 +7,7 @@ import {build,transform} from 'esbuild';
 import {buildSamplePage} from './build-sample-page.mjs';
 import {buildLibrary} from './build-library.mjs';
 import {mkdir,copyFile,readFile,writeFile,rm} from 'node:fs/promises';
-export async function buildClient(remote=false) {
+export async function buildClient(remote=false) {await assertMutableOutput();
   await import('./build-team.mjs');
   await rm('product/dist',{recursive:true,force:true});await mkdir('product/dist/assets',{recursive:true});
   await build({entryPoints:['product/src/app.mjs'],outfile:'product/dist/assets/app.js',bundle:true,format:'esm',minify:true,target:['es2022'],legalComments:'linked'});

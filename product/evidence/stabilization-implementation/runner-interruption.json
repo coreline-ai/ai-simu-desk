@@ -1,0 +1,19 @@
+{
+  "kind": "intentional-runner-interruption-never-counts-as-pass",
+  "at": "2026-10-21T05:37:54.916Z",
+  "exit": {
+    "code": 130,
+    "signal": null
+  },
+  "state": {
+    "status": "aborted",
+    "startedAt": "2026-10-21T05:37:54.285Z",
+    "endedAt": "2026-10-21T05:37:54.888Z",
+    "signal": "SIGTERM",
+    "rows": [],
+    "logoutRows": [],
+    "errors": []
+  },
+  "reportExists": false,
+  "passed": true
+}

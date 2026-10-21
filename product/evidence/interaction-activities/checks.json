@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-21T03:48:41.119093+00:00",
+  "status": "complete",
+  "baselineCommit": "2f5a98c6ed97643aeff4892a4f387c8bb8b3d5b7",
+  "automated": {
+    "command": "npm test",
+    "passed": 213,
+    "failed": 0,
+    "newCandidateTests": 12
+  },
+  "staticChecks": {
+    "typecheck": "passed",
+    "boundaries": "passed",
+    "syntaxModules": 73
+  },
+  "runtimeSourceHashesUnchanged": true,
+  "wallClock": {
+    "continuous": {
+      "passed": true,
+      "elapsedSeconds": 600,
+      "activeSeconds": 599,
+      "trafficPeak": 2,
+      "coverage": true,
+      "visits": 1,
+      "started": "2026-10-21T03:13:08.871Z",
+      "cleanup": "passed"
+    },
+    "mixed": {
+      "passed": true,
+      "elapsedSeconds": 1801,
+      "activeSeconds": 1799,
+      "trafficPeak": 2,
+      "coverage": true,
+      "visits": 7,
+      "started": "2026-10-21T03:13:03.481Z",
+      "cleanup": "passed"
+    }
+  },
+  "performance": {
+    "old": {
+      "calls": 1016,
+      "triangles": 808240
+    },
+    "candidate": {
+      "calls": 991,
+      "triangles": 798300
+    },
+    "gates": {
+      "frames": true,
+      "calls": true,
+      "triangles": true
+    }
+  },
+  "localDefaultRuntime": 6,
+  "physicalMobile": "not measured",
+  "actualOSBackground": "not measured; software visibility branch tested",
+  "gpuMemory": "not measured",
+  "jsHeap": "short forced-GC reload comparison observed; not long-run leak proof",
+  "defaultApplication": "passed: no injected settings, five work roles, four handoffs, saved/reloaded, spaces and document receipt logout",
+  "initialProductAssetMiB": 10.396105766296387,
+  "cleanup": "passed: both real runs, all five at desk, five papers on valid supports, no claims/stationary spots/sessions",
+  "build": "passed: npm run build:product",
+  "cameraComparison": {
+    "method": "separate browser validation of actor/hand orthographic bounds after long-run core validation",
+    "evidence": "camera-compare.json",
+    "sourceSha256": "729db1cf8039da62bcdbb079c471c21cb728922b025985da6e55002b49ab7fe5"
+  },
+  "productSourceSha256": "69004a1ee93e5b4cf816ec9e9f1323d8608932c18e901cf92acf3d2e2babaa00"
+}

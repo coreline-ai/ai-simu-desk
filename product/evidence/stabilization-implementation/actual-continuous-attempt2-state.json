@@ -1,0 +1,10 @@
+{
+  "status": "aborted",
+  "complete": false,
+  "started": 1792558499843,
+  "failedAt": "2026-10-21T04:58:48.372Z",
+  "error": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+  "errors": [],
+  "reason": "Runtime revised before acceptance: protect old rest/window/role coverage while reserving visit opportunity.",
+  "stoppedAt": "2026-10-21T04:58:48.478847+00:00"
+}

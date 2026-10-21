@@ -1,0 +1,90 @@
+{
+  "at": "2026-10-21T06:39:31.127Z",
+  "stage": "complete",
+  "release": "1792564659022-0407d1b7-d6fa-4766-8c2e-fb717b640574",
+  "previousNormal": "legacy-LEezsr",
+  "appHash": "e2e60d3166ec60932f8e5849039938cbbe6ac77d9732035e722497fab3832ff2",
+  "serverHash": "280379dc8a877006980cd7a9a91ce303fd7e65acbbe6c58649a65dd89046470d",
+  "appMatchesActualHour": true,
+  "serverMatchesColdWorkflow": true,
+  "actualRollbackTreeMatches": true,
+  "freshPrivateBackupVerified": {
+    "publicTables": 20,
+    "schemaAndRowsMatch": true
+  },
+  "generatedDistIgnored": true,
+  "publicRoutes": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/library/",
+      "status": 200
+    },
+    {
+      "path": "/demos/demo/",
+      "status": 200
+    },
+    {
+      "path": "/demos/pilot-3d/",
+      "status": 200
+    },
+    {
+      "path": "/demos/visual-upgrade/",
+      "status": 200
+    },
+    {
+      "path": "/demos/studio-v5/",
+      "status": 200
+    },
+    {
+      "path": "/demos/room-quality/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/team/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/natural/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/roles/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/expressive/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/interaction/",
+      "status": 200
+    }
+  ],
+  "versionedEntries": 26,
+  "localHealth": {
+    "status": "ok",
+    "edition": "local",
+    "database": "pglite",
+    "aiProvider": "fake"
+  },
+  "anonymousBoundary": true,
+  "privatePathsDenied": true,
+  "liveSmokePassed": true,
+  "firstVerifiedRelease": "1792564472171-61663d26-d2fc-496f-84d6-85b78286da4e",
+  "documentationOnlyBuild": true,
+  "finalLiveSmokePassed": true,
+  "finalDocumentationCurrent": true,
+  "publicURLCount": 14,
+  "passed": true
+}

@@ -1,0 +1,22 @@
+{
+  "errors": [],
+  "role": {
+    "label": "기획 메모",
+    "variant": 0,
+    "variantsSeen": [],
+    "stage": "use",
+    "time": 2.2998999999999974,
+    "owner": "hand",
+    "done": 0,
+    "interruptions": 0,
+    "events": 1,
+    "handError": 2.482534153247273e-16,
+    "tipError": 0,
+    "returning": false,
+    "history": [
+      "reach",
+      "grasp",
+      "use"
+    ]
+  }
+}

@@ -1,0 +1,473 @@
+[
+  {
+    "target": "activity5",
+    "model": 6,
+    "runtime": 5,
+    "canvas": 1,
+    "fault": {
+      "active": true,
+      "stage": "read",
+      "owner": "hand:nara",
+      "time": 0,
+      "cancelled": false,
+      "complete": false,
+      "events": 2,
+      "transfers": 1,
+      "handError": 1.6011864169946884e-15,
+      "supports": {
+        "nara": {
+          "L": 0.7400000008940695,
+          "R": 0.7720000000521541
+        },
+        "sora": {
+          "L": 0.7400000008940697,
+          "R": 0.7645000151728325
+        },
+        "jun": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        },
+        "min": {
+          "L": 0.7400000008940697,
+          "R": 0.7570000001899898
+        },
+        "leo": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        }
+      },
+      "history": [
+        "pickup",
+        "grasp",
+        "present",
+        "receive",
+        "accept",
+        "read"
+      ],
+      "pages": [
+        {
+          "id": "nara",
+          "owner": "desk:nara",
+          "desk": "nara",
+          "side": "L",
+          "supportTop": 0.7400000008940695,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "sora",
+          "owner": "desk:sora",
+          "desk": "sora",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "jun",
+          "owner": "hand:nara",
+          "desk": "jun",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": null
+        },
+        {
+          "id": "min",
+          "owner": "desk:min",
+          "desk": "min",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "leo",
+          "owner": "desk:leo",
+          "desk": "leo",
+          "side": "R",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        }
+      ]
+    },
+    "claims": {},
+    "errors": []
+  },
+  {
+    "target": "activity4",
+    "model": 6,
+    "runtime": 4,
+    "canvas": 1,
+    "fault": {
+      "active": true,
+      "stage": "read",
+      "owner": "hand:nara",
+      "time": 0,
+      "cancelled": false,
+      "complete": false,
+      "events": 2,
+      "transfers": 1,
+      "handError": 2.3208707134311084e-15,
+      "supports": {
+        "nara": {
+          "L": 0.7400000008940695,
+          "R": 0.7720000000521541
+        },
+        "sora": {
+          "L": 0.7400000008940697,
+          "R": 0.7645000151728325
+        },
+        "jun": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        },
+        "min": {
+          "L": 0.7400000008940697,
+          "R": 0.7570000001899898
+        },
+        "leo": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        }
+      },
+      "history": [
+        "pickup",
+        "grasp",
+        "present",
+        "receive",
+        "accept",
+        "read"
+      ],
+      "pages": [
+        {
+          "id": "nara",
+          "owner": "desk:nara",
+          "desk": "nara",
+          "side": "L",
+          "supportTop": 0.7400000008940695,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "sora",
+          "owner": "desk:sora",
+          "desk": "sora",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "jun",
+          "owner": "hand:nara",
+          "desk": "jun",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": null
+        },
+        {
+          "id": "min",
+          "owner": "desk:min",
+          "desk": "min",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "leo",
+          "owner": "desk:leo",
+          "desk": "leo",
+          "side": "R",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        }
+      ]
+    },
+    "claims": {},
+    "errors": []
+  },
+  {
+    "target": "activity3",
+    "model": 6,
+    "runtime": 3,
+    "canvas": 1,
+    "fault": {
+      "active": true,
+      "stage": "read",
+      "owner": "hand:nara",
+      "time": 0,
+      "cancelled": false,
+      "complete": false,
+      "events": 2,
+      "transfers": 1,
+      "handError": 1.4602703977091186e-15,
+      "supports": {
+        "nara": {
+          "L": 0.7400000008940695,
+          "R": 0.7720000000521541
+        },
+        "sora": {
+          "L": 0.7400000008940697,
+          "R": 0.7645000151728325
+        },
+        "jun": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        },
+        "min": {
+          "L": 0.7400000008940697,
+          "R": 0.7570000001899898
+        },
+        "leo": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        }
+      },
+      "history": [
+        "pickup",
+        "grasp",
+        "present",
+        "receive",
+        "accept",
+        "read"
+      ],
+      "pages": [
+        {
+          "id": "nara",
+          "owner": "desk:nara",
+          "desk": "nara",
+          "side": "L",
+          "supportTop": 0.7400000008940695,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "sora",
+          "owner": "desk:sora",
+          "desk": "sora",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "jun",
+          "owner": "hand:nara",
+          "desk": "jun",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": null
+        },
+        {
+          "id": "min",
+          "owner": "desk:min",
+          "desk": "min",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "leo",
+          "owner": "desk:leo",
+          "desk": "leo",
+          "side": "R",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        }
+      ]
+    },
+    "claims": {},
+    "errors": []
+  },
+  {
+    "target": "activity2",
+    "model": 6,
+    "runtime": 2,
+    "canvas": 1,
+    "fault": {
+      "active": true,
+      "stage": "read",
+      "owner": "hand:nara",
+      "time": 0,
+      "cancelled": false,
+      "complete": false,
+      "events": 2,
+      "transfers": 1,
+      "handError": 5.31169495672476e-15,
+      "supports": {
+        "nara": {
+          "L": 0.7400000008940695,
+          "R": 0.7720000000521541
+        },
+        "sora": {
+          "L": 0.7400000008940697,
+          "R": 0.7645000151728325
+        },
+        "jun": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        },
+        "min": {
+          "L": 0.7400000008940697,
+          "R": 0.7570000001899898
+        },
+        "leo": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        }
+      },
+      "history": [
+        "pickup",
+        "grasp",
+        "present",
+        "receive",
+        "accept",
+        "read"
+      ],
+      "pages": [
+        {
+          "id": "nara",
+          "owner": "desk:nara",
+          "desk": "nara",
+          "side": "L",
+          "supportTop": 0.7400000008940695,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "sora",
+          "owner": "desk:sora",
+          "desk": "sora",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "jun",
+          "owner": "hand:nara",
+          "desk": "jun",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": null
+        },
+        {
+          "id": "min",
+          "owner": "desk:min",
+          "desk": "min",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "leo",
+          "owner": "desk:leo",
+          "desk": "leo",
+          "side": "R",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        }
+      ]
+    },
+    "claims": {},
+    "errors": []
+  },
+  {
+    "target": "model6",
+    "model": 6,
+    "runtime": null,
+    "canvas": 1,
+    "fault": {
+      "active": true,
+      "stage": "read",
+      "owner": "hand:nara",
+      "time": 0,
+      "cancelled": false,
+      "complete": false,
+      "events": 2,
+      "transfers": 1,
+      "handError": 1.4602703977091186e-15,
+      "supports": {
+        "nara": {
+          "L": 0.7400000008940695,
+          "R": 0.7720000000521541
+        },
+        "sora": {
+          "L": 0.7400000008940697,
+          "R": 0.7645000151728325
+        },
+        "jun": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        },
+        "min": {
+          "L": 0.7400000008940697,
+          "R": 0.7570000001899898
+        },
+        "leo": {
+          "L": 0.7400000008940697,
+          "R": 0.7400000008940697
+        }
+      },
+      "history": [
+        "pickup",
+        "grasp",
+        "present",
+        "receive",
+        "accept",
+        "read"
+      ],
+      "pages": [
+        {
+          "id": "nara",
+          "owner": "desk:nara",
+          "desk": "nara",
+          "side": "L",
+          "supportTop": 0.7400000008940695,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "sora",
+          "owner": "desk:sora",
+          "desk": "sora",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "jun",
+          "owner": "hand:nara",
+          "desk": "jun",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": null
+        },
+        {
+          "id": "min",
+          "owner": "desk:min",
+          "desk": "min",
+          "side": "L",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        },
+        {
+          "id": "leo",
+          "owner": "desk:leo",
+          "desk": "leo",
+          "side": "R",
+          "supportTop": 0.7400000008940697,
+          "supportGap": 0.0004999999999999449
+        }
+      ]
+    },
+    "claims": null,
+    "errors": []
+  },
+  {
+    "target": "model5",
+    "model": 5,
+    "runtime": null,
+    "canvas": 1,
+    "claims": null,
+    "errors": []
+  },
+  {
+    "target": "model4",
+    "model": 4,
+    "runtime": null,
+    "canvas": 1,
+    "claims": null,
+    "errors": []
+  }
+]

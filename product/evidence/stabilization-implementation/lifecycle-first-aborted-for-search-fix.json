@@ -1,0 +1,63 @@
+{
+  "status": "aborted",
+  "startedAt": "2026-10-21T05:15:38.083Z",
+  "durationSeconds": 3600,
+  "wallSeconds": 605,
+  "rows": [
+    {
+      "index": 0,
+      "wallSeconds": 0,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 18952468,
+        "totalSize": 21905408,
+        "embedderHeapUsedSize": 2488432,
+        "backingStorageSize": 14466767
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 104,
+        "Nodes": 942
+      },
+      "canvas": 1
+    },
+    {
+      "index": 1,
+      "wallSeconds": 305,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 20216608,
+        "totalSize": 22691840,
+        "embedderHeapUsedSize": 2966664,
+        "backingStorageSize": 14466631
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 106,
+        "Nodes": 987
+      },
+      "canvas": 1
+    },
+    {
+      "index": 2,
+      "wallSeconds": 605,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 20284448,
+        "totalSize": 23216128,
+        "embedderHeapUsedSize": 3047552,
+        "backingStorageSize": 14466801
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 106,
+        "Nodes": 998
+      },
+      "canvas": 1
+    }
+  ],
+  "logoutRows": [],
+  "appHash": "5264a173c94a098ae93f22cb9741282c6c5c7768f6acbe8a549429d7b10873fa",
+  "endedAt": "2026-10-21T05:28:16.652Z",
+  "reason": "final UI search-generation fix; not a completed hour or a passed final candidate"
+}

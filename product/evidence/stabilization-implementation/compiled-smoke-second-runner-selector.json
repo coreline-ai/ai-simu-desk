@@ -1,0 +1,23 @@
+{
+  "kind": "compiled-smoke-failure",
+  "startedAt": "2026-10-21T05:29:31.246Z",
+  "failedAt": "2026-10-21T05:30:41.192Z",
+  "checks": [
+    "locked dependencies installed: offline",
+    "new local settings private and preserved",
+    "full build in fresh local source/dependency path matches candidate JS and GLBs",
+    "compiled release starts in clean local path",
+    "14 public routes and private path denial",
+    "five real browsers, shared presence and viewer UI",
+    "template/project, member five-role task and owner approval, identical saved result",
+    "shared comments render text and viewer cannot write",
+    "previous result revision and comparison",
+    "search archived result and manual handoff",
+    "cancellation, simulated failure and retry"
+  ],
+  "error": "TimeoutError: page.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#logout')\u001b[22m\n",
+  "errors": [],
+  "logTail": [
+    "AI Simu Desk Local ready: http://127.0.0.1:61328 (persistent login/DB, Fake AI)\n"
+  ]
+}

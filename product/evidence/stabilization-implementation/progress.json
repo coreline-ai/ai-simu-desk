@@ -1,0 +1,38 @@
+{
+  "startedAt": "2026-10-21T04:04:05.105585+00:00",
+  "baselineReview": "../stabilization-20261021/checks.json",
+  "phase1": {
+    "status": "passed",
+    "tests": 3,
+    "typecheck": "passed",
+    "realBackup": "private .data/backups; all table fingerprints verified against isolated restore",
+    "sourceChangedByBackup": false
+  },
+  "phase2": {
+    "status": "passed",
+    "serverRegressionTests": 16,
+    "guestOwnershipHttpTests": 2,
+    "browserGuests": 5,
+    "sixthGuestStatus": 429,
+    "actualOwnerTransfer": false
+  },
+  "phase3": {
+    "status": "passed",
+    "tests": 40,
+    "engine": "rules-3.2",
+    "frozenHistoricalAnswers": "preserved"
+  },
+  "phase4": {
+    "status": "real-time validation running",
+    "focusedTests": 3,
+    "previousMotionRegressionTests": 23,
+    "fallbackTargets": 7,
+    "v4ContextRestoration": "passed twice, same typing state, one canvas",
+    "continuousStarted": "2026-10-21T04:13:58.125Z",
+    "mixedStarted": "2026-10-21T04:13:58.692Z",
+    "continuous": "passed 600s/600 active, 1 completed visit+transfer, cleanup passed",
+    "fastSimulations": "600/1800 seconds simulated coverage and cleanup passed; not wall-clock",
+    "workDuringDocument": "passed; source-backed API save/reload, 5 stages/4 stored handoffs, safe return/logout"
+  },
+  "phases5to7": "pending"
+}

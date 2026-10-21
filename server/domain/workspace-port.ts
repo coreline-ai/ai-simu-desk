@@ -1,5 +1,5 @@
 import type { MemberRole } from "./collaboration.js";
-export interface Workspace { id: string; ownerId: string; kind: "personal" | "shared"; name: string; revision: number; creationKey: string | null; createdAt: Date; updatedAt: Date }
+export interface Workspace { id: string; ownerId: string; kind: "personal" | "shared"; name: string; revision: number; creationKey: string | null; createdAt: Date; updatedAt: Date; readOnlyReason?:string }
 export type WorkspaceSummary = Workspace & { role: MemberRole };
 export interface WorkspaceMember { userId: string; name: string; role: MemberRole }
 export interface WorkspacePort {

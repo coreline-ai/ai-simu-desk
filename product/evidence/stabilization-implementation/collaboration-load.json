@@ -1,0 +1,47 @@
+{
+  "kind": "actual-loopback-HTTP-five-independent-sessions-with-second-tab",
+  "startedAt": "2026-10-21T05:17:39.768Z",
+  "finishedAt": "2026-10-21T05:17:54.813Z",
+  "environment": {
+    "node": "v22.22.2",
+    "database": "isolated in-memory PGlite",
+    "records": 1000,
+    "concurrency": 5,
+    "requests": 600,
+    "fakeDelayMs": 65
+  },
+  "sync": {
+    "requests": 300,
+    "p50": 49.08849999999984,
+    "p95": 64.46000000000004,
+    "max": 108.6698750000005
+  },
+  "search": {
+    "requests": 300,
+    "p50": 44.229041999999936,
+    "p95": 58.694375000000036,
+    "max": 108.53733400000056
+  },
+  "failures": [],
+  "gates": {
+    "errors": true,
+    "noInternalErrors": true,
+    "syncP95": true,
+    "searchP95": true
+  },
+  "passed": true,
+  "checks": [
+    "sixth guest rejected",
+    "five-account same result",
+    "second tab counted once",
+    "comment idempotency",
+    "member approval/settings denied",
+    "owner approval succeeds",
+    "member revoked",
+    "expired session denied"
+  ],
+  "diagnosticSummary": {
+    "requests": 682,
+    "internalErrors": 0
+  }
+}

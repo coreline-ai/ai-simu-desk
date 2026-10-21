@@ -1,0 +1,222 @@
+{
+  "kind": "actual-full-client-build-fault-before-publication",
+  "finishedAt": "2026-10-21T05:29:39.060Z",
+  "exitCode": 1,
+  "before": {
+    "client": {
+      "files": 113,
+      "sha256": "7ffce6d4a61877d10440200f7542f2444b5e1d8642c74029f3638009adb82151"
+    },
+    "server": {
+      "files": 3,
+      "sha256": "5b9e82a6fe51cd459f4bc4d16fb5f077c2f431758161547f7047ec6b78451400"
+    },
+    "assets": {
+      "files": 12,
+      "sha256": "ee5d7529ba1600ec98cba9e5890a7e5699410e8daea159604a5802a9711f062a"
+    }
+  },
+  "after": {
+    "client": {
+      "files": 113,
+      "sha256": "7ffce6d4a61877d10440200f7542f2444b5e1d8642c74029f3638009adb82151"
+    },
+    "server": {
+      "files": 3,
+      "sha256": "5b9e82a6fe51cd459f4bc4d16fb5f077c2f431758161547f7047ec6b78451400"
+    },
+    "assets": {
+      "files": 12,
+      "sha256": "ee5d7529ba1600ec98cba9e5890a7e5699410e8daea159604a5802a9711f062a"
+    }
+  },
+  "checks": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "status": 200
+    }
+  ],
+  "gates": {
+    "expectedFailure": true,
+    "unchanged": true,
+    "available": true
+  },
+  "passed": true,
+  "outputTail": "after client');await mkdir('server/dist',{recursive:true});await build({entryPoints:['server/main.ts'],outfile:'server/dist/main.js',bundle:true,packages:'external',platform:'node',format:'esm',target:['node22'],legalComments:'linked'});if(fault==='after-server')throw new Error('Injected build failure after server');\n                                                                                                           ^\n\nError: Injected build failure after client\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/build-product.mjs:5:108\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n\nNode.js v22.22.2\nfile:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/build-product.mjs:20\n   await new Promise((resolveRun,reject)=>{const child=spawn(process.execPath,[join(root,'scripts/build-product.mjs'),'--stage'],{cwd:stage,stdio:'inherit',env:process.env});child.on('error',reject);child.on('exit',code=>code===0?resolveRun():reject(new Error('Staged build failed with exit '+code)));});\n                                                                                                                                                                                                                                                          ^\n\nError: Staged build failed with exit 1\n    at ChildProcess.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/build-product.mjs:20:251)\n    at ChildProcess.emit (node:events:519:28)\n    at ChildProcess._handle.onexit (node:internal/child_process:293:12)\n\nNode.js v22.22.2\n"
+}
