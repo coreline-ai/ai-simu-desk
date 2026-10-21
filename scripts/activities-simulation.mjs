@@ -6,8 +6,8 @@ import {createTeamRuntime} from '../pilot-3d/activities/team-runtime.mjs';
 import {ActivitySoak,activityCleanup,mixedWork,roleMixedWork,interactionMixedWork} from '../pilot-3d/activities/team-soak.mjs';
 import {releaseStudioAsset} from '../pilot-3d/sample/asset-loader.mjs';
 const mode=process.argv[2]==='continuous'?'continuous':'mixed',duration=mode==='continuous'?600:1800;
-const interaction=process.argv.includes('--interaction'),expressive=interaction||process.argv.includes('--expressive'),natural=expressive||process.argv.includes('--natural'),evidence=interaction?'interaction-activities':expressive?'expressive-activities':natural?'natural-activities':'team-activities';
-const {root}=createRoomV6(),runtime=createTeamRuntime(root,root.userData,{natural,enriched:expressive,expressive,interaction}),ids=root.userData.actorIds,recorder=new ActivitySoak(mode,0,{natural,roles:expressive,expressive,interaction});
+const refined=process.argv.includes('--refined'),interaction=refined||process.argv.includes('--interaction'),expressive=interaction||process.argv.includes('--expressive'),natural=expressive||process.argv.includes('--natural'),evidence=refined?'refined-activities':interaction?'interaction-activities':expressive?'expressive-activities':natural?'natural-activities':'team-activities';
+const {root}=createRoomV6(),runtime=createTeamRuntime(root,root.userData,{natural,enriched:expressive,expressive,interaction,refined}),ids=root.userData.actorIds,recorder=new ActivitySoak(mode,0,{natural,roles:expressive,expressive,interaction,refined});
 try{
  runtime.setViewModel({actors:ids.map(agentId=>({agentId,pose:'idle'}))});runtime.startDemo();let signature='';
  for(let i=0;i<duration/.05;i++){

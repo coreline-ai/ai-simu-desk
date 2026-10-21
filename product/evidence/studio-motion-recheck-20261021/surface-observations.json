@@ -1,0 +1,5841 @@
+[
+  {
+    "label": "pilot-start-working",
+    "at": "2026-10-21T07:05:22.675Z",
+    "action": "업무를 확인하고 있어요",
+    "canvasCount": 1,
+    "loadStatus": "장면 1회 로드 · 자체 GLB를 읽어 표시합니다.",
+    "metrics": {
+      "actors": {
+        "nara": "thinking"
+      },
+      "animationTime": 18.59467199999998,
+      "canvas": [
+        839,
+        548
+      ],
+      "clips": [
+        "idle",
+        "typing",
+        "thinking",
+        "waiting",
+        "success",
+        "error",
+        "blink"
+      ],
+      "drawCalls": 295,
+      "geometries": 214,
+      "loadedMs": 336,
+      "measuring": false,
+      "paused": false,
+      "pixelRatio": 1,
+      "pose": "thinking",
+      "textures": 3,
+      "triangles": 90734
+    },
+    "sprites": [],
+    "title": "AI Simu Desk · 3D 스튜디오",
+    "url": "http://127.0.0.1:4180/demos/pilot-3d/"
+  },
+  {
+    "label": "pilot-working-progress",
+    "at": "2026-10-21T07:05:28.183Z",
+    "action": "업무 결과가 준비됐어요",
+    "canvasCount": 1,
+    "loadStatus": "장면 1회 로드 · 자체 GLB를 읽어 표시합니다.",
+    "metrics": {
+      "actors": {
+        "nara": "success"
+      },
+      "animationTime": 23.54257200000024,
+      "canvas": [
+        839,
+        548
+      ],
+      "clips": [
+        "idle",
+        "typing",
+        "thinking",
+        "waiting",
+        "success",
+        "error",
+        "blink"
+      ],
+      "drawCalls": 295,
+      "geometries": 214,
+      "loadedMs": 336,
+      "measuring": false,
+      "paused": false,
+      "pixelRatio": 1,
+      "pose": "success",
+      "textures": 3,
+      "triangles": 90734
+    },
+    "sprites": [],
+    "title": "AI Simu Desk · 3D 스튜디오",
+    "url": "http://127.0.0.1:4180/demos/pilot-3d/"
+  },
+  {
+    "label": "2.5d-working",
+    "at": "2026-10-21T07:06:00.577Z",
+    "action": "업무를 확인하고 있어요",
+    "canvasCount": 4,
+    "metrics": {},
+    "sprites": [
+      {
+        "agent": "nara",
+        "backgroundPosition": "0% 0%",
+        "row": "0"
+      },
+      {
+        "agent": "jun",
+        "backgroundPosition": "0% 0%",
+        "row": "2"
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "row": "0"
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "row": "2"
+      }
+    ],
+    "title": "AI Simu Desk · 오후의 스튜디오",
+    "url": "http://127.0.0.1:4180/demos/demo/"
+  },
+  {
+    "label": "2.5d-result",
+    "at": "2026-10-21T07:06:08.612Z",
+    "action": "업무 결과가 준비됐어요",
+    "canvasCount": 4,
+    "metrics": {},
+    "sprites": [
+      {
+        "agent": "nara",
+        "backgroundPosition": "0% 0%",
+        "row": "0"
+      },
+      {
+        "agent": "jun",
+        "backgroundPosition": "0% 0%",
+        "row": "2"
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "row": "0"
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "row": "2"
+      }
+    ],
+    "title": "AI Simu Desk · 오후의 스튜디오",
+    "url": "http://127.0.0.1:4180/demos/demo/"
+  },
+  {
+    "label": "nara-prototype-walk-contact",
+    "at": "2026-10-21T07:06:21.629Z",
+    "action": "발을 딛고 걷기",
+    "canvasCount": 1,
+    "info": "new · 1149×508 CSS px · DPR 1 · 328 draw calls · 211,800 triangles · texture 14 · 로컬 시연",
+    "loadStatus": "GLB 재수입 완료 · 실제 3D 모델",
+    "metrics": {},
+    "sprites": [],
+    "title": "나라의 새로운 하루 · 3D 에셋 랩",
+    "url": "http://127.0.0.1:4180/demos/visual-upgrade/"
+  },
+  {
+    "label": "studio-v5-demo-start",
+    "at": "2026-10-21T07:06:39.100Z",
+    "action": "나라 · 기획: idle · 소라 · 디자인: idle · 준 · 개발: idle · 민 · QA: idle · 레오 · 정리: idle",
+    "canvasCount": 1,
+    "loadStatus": "v5 GLB 로드 완료 · 전체 환경과 동료를 검수하세요.",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.862100000000002
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.862100000000002
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.862100000000002
+        },
+        "nara": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.862100000000002
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.862100000000002
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_idle",
+        "sora": "sora_idle"
+      },
+      "animationTime": 5.862100000000002,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "drawCalls": 935,
+      "firstRenderMs": 182,
+      "geometries": 158,
+      "lastEmit": 6023.3,
+      "lighting": "day",
+      "loadedMs": 106,
+      "measuring": false,
+      "modelVersion": 5,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "textures": 28,
+      "triangles": 810548
+    },
+    "sprites": [],
+    "title": "다섯 동료의 새로운 스튜디오 · v5",
+    "url": "http://127.0.0.1:4180/demos/studio-v5/"
+  },
+  {
+    "label": "studio-v5-reentry-demo",
+    "at": "2026-10-21T07:07:18.510Z",
+    "action": "나라 · 기획: idle · 소라 · 디자인: idle · 준 · 개발: idle · 민 · QA: idle · 레오 · 정리: idle",
+    "canvasCount": 1,
+    "loadStatus": "v5 GLB 로드 완료 · 전체 환경과 동료를 검수하세요.",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.876400000000004
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.876400000000004
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.876400000000004
+        },
+        "nara": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.876400000000004
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.876400000000004
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_idle",
+        "sora": "sora_idle"
+      },
+      "animationTime": 5.876400000000004,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "drawCalls": 935,
+      "firstRenderMs": 154,
+      "geometries": 158,
+      "lastEmit": 6018.2,
+      "lighting": "day",
+      "loadedMs": 75,
+      "measuring": false,
+      "modelVersion": 5,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "textures": 28,
+      "triangles": 810548
+    },
+    "sprites": [],
+    "title": "다섯 동료의 새로운 스튜디오 · v5",
+    "url": "http://127.0.0.1:4180/demos/studio-v5/"
+  },
+  {
+    "label": "room-v6-demo-start",
+    "at": "2026-10-21T07:07:26.258Z",
+    "action": "나라 · 기획: stretch / 소라 · 디자인: idle / 준 · 개발: idle / 민 · QA: idle / 레오 · 정리: idle",
+    "canvasCount": 1,
+    "loadStatus": "v6 공간 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 6.715799999999997
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 6.715799999999997
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 6.715799999999997
+        },
+        "nara": {
+          "action": "stretch",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 0.7070000000000001
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 6.715799999999997
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_stretch",
+        "sora": "sora_idle"
+      },
+      "animationTime": 6.715799999999997,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 998,
+      "firstRenderMs": 256,
+      "geometries": 190,
+      "lastEmit": 7014.5,
+      "lighting": "day",
+      "loadedMs": 109,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "textures": 48,
+      "triangles": 804344
+    },
+    "sprites": [],
+    "title": "창가에서 시작한 새로운 공간 · v6 비교",
+    "url": "http://127.0.0.1:4180/demos/room-quality/"
+  },
+  {
+    "label": "room-v6-work-return-request",
+    "at": "2026-10-21T07:08:55.147Z",
+    "action": "나라 · 기획: idle / 소라 · 디자인: idle / 준 · 개발: idle / 민 · QA: rest / 레오 · 정리: idle",
+    "canvasCount": 1,
+    "loadStatus": "v6 공간 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 1,
+          "time": 16.806399999999936
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 3,
+          "restCount": 0,
+          "time": 96.00399999999723
+        },
+        "min": {
+          "action": "rest",
+          "basePose": "idle",
+          "cycle": 1,
+          "interruptions": 0,
+          "microCount": 3,
+          "restCount": 0,
+          "returning": false,
+          "time": 12.60509999999996
+        },
+        "nara": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 3,
+          "restCount": 1,
+          "time": 62.8255000000006
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 1,
+          "time": 39.8162000000004
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_rest",
+        "nara": "nara_idle",
+        "sora": "sora_idle"
+      },
+      "animationTime": 96.00399999999723,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 830,
+      "firstRenderMs": 256,
+      "geometries": 190,
+      "lastEmit": 96302.7,
+      "lighting": "day",
+      "loadedMs": 109,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "min",
+      "resetTimes": 0,
+      "textures": 48,
+      "triangles": 678441
+    },
+    "sprites": [],
+    "title": "창가에서 시작한 새로운 공간 · v6 비교",
+    "url": "http://127.0.0.1:4180/demos/room-quality/"
+  },
+  {
+    "label": "sofa-v1-start",
+    "at": "2026-10-21T07:09:12.239Z",
+    "action": "책상에서 대기",
+    "canvasCount": 1,
+    "loadStatus": "v6 + 나라 소파 활동 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 15.599299999999923
+        },
+        "leo": {
+          "action": "shoulder_roll",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 1.5871999999999995
+        },
+        "min": {
+          "action": "stretch",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 3.5880000000000027
+        },
+        "nara": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 15.599299999999923
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 15.599299999999923
+        }
+      },
+      "activityVersion": 1,
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_shoulder_roll",
+        "min": "min_stretch",
+        "nara": "nara_idle",
+        "sora": "sora_idle"
+      },
+      "animationTime": 15.599299999999923,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 998,
+      "firstRenderMs": 350,
+      "geometries": 190,
+      "lastEmit": 16074.8,
+      "lighting": "day",
+      "loadedMs": 183,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "sofa": {
+        "claims": {},
+        "completed": 0,
+        "interruptions": 0,
+        "label": "책상 대기",
+        "position": null,
+        "reason": "",
+        "returning": false,
+        "stage": "idle"
+      },
+      "textures": 48,
+      "triangles": 804344
+    },
+    "sprites": [],
+    "title": "나라의 소파 휴식 · v6 활동 비교",
+    "url": "http://127.0.0.1:4180/demos/activities/"
+  },
+  {
+    "label": "sofa-v1-progress",
+    "at": "2026-10-21T07:09:45.767Z",
+    "action": "소파에서 휴식 · 동작 정지",
+    "canvasCount": 1,
+    "loadStatus": "v6 + 나라 소파 활동 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        },
+        "nara": {
+          "action": "sofa_rest",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 0.7337000000000008
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        }
+      },
+      "activityVersion": 1,
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_sofa_rest",
+        "sora": "sora_idle"
+      },
+      "animationTime": 31.645500000000567,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 998,
+      "firstRenderMs": 350,
+      "geometries": 190,
+      "lastEmit": 50234.6,
+      "lighting": "day",
+      "loadedMs": 183,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": true,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "nara-sofa",
+      "resetTimes": 0,
+      "sofa": {
+        "claims": {
+          "sofa-left": "nara-sofa",
+          "walkway": "nara-sofa"
+        },
+        "completed": 0,
+        "interruptions": 0,
+        "label": "소파에서 휴식",
+        "position": [
+          -0.579999989271164,
+          -2.4299999999999997
+        ],
+        "reason": "",
+        "returning": false,
+        "stage": "rest"
+      },
+      "textures": 48,
+      "triangles": 804344
+    },
+    "sprites": [],
+    "title": "나라의 소파 휴식 · v6 활동 비교",
+    "url": "http://127.0.0.1:4180/demos/activities/"
+  },
+  {
+    "label": "sofa-v1-seated-side",
+    "at": "2026-10-21T07:09:53.960Z",
+    "action": "소파에서 휴식 · 동작 정지",
+    "canvasCount": 1,
+    "loadStatus": "v6 + 나라 소파 활동 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        },
+        "nara": {
+          "action": "sofa_rest",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 0.7337000000000008
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.645500000000567
+        }
+      },
+      "activityVersion": 1,
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_sofa_rest",
+        "sora": "sora_idle"
+      },
+      "animationTime": 31.645500000000567,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 998,
+      "firstRenderMs": 350,
+      "geometries": 190,
+      "lastEmit": 58264.3,
+      "lighting": "day",
+      "loadedMs": 183,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": true,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "nara-sofa",
+      "resetTimes": 0,
+      "sofa": {
+        "claims": {
+          "sofa-left": "nara-sofa",
+          "walkway": "nara-sofa"
+        },
+        "completed": 0,
+        "interruptions": 0,
+        "label": "소파에서 휴식",
+        "position": [
+          -0.579999989271164,
+          -2.4299999999999997
+        ],
+        "reason": "",
+        "returning": false,
+        "stage": "rest"
+      },
+      "textures": 48,
+      "triangles": 804344
+    },
+    "sprites": [],
+    "title": "나라의 소파 휴식 · v6 활동 비교",
+    "url": "http://127.0.0.1:4180/demos/activities/"
+  },
+  {
+    "label": "sofa-v1-work-return",
+    "at": "2026-10-21T07:09:55.647Z",
+    "action": "소파에서 일어서기 · 업무 도착, 복귀 중",
+    "canvasCount": 1,
+    "loadStatus": "v6 + 나라 소파 활동 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.740300000000573
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.740300000000573
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.740300000000573
+        },
+        "nara": {
+          "action": "sofa_rise",
+          "basePose": "typing",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": true,
+          "time": 0.08080000000000291
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 31.740300000000573
+        }
+      },
+      "activityVersion": 1,
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_sofa_rise",
+        "sora": "sora_idle"
+      },
+      "animationTime": 31.740300000000573,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 705,
+      "firstRenderMs": 350,
+      "geometries": 190,
+      "lastEmit": 60278.4,
+      "lighting": "day",
+      "loadedMs": 183,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "nara-sofa",
+      "resetTimes": 0,
+      "sofa": {
+        "claims": {
+          "sofa-left": "nara-sofa",
+          "walkway": "nara-sofa"
+        },
+        "completed": 0,
+        "interruptions": 0,
+        "label": "소파에서 일어서기",
+        "position": [
+          -0.579999989271164,
+          -2.428723215538279
+        ],
+        "reason": "업무 도착",
+        "returning": true,
+        "stage": "rise"
+      },
+      "textures": 48,
+      "triangles": 576009
+    },
+    "sprites": [],
+    "title": "나라의 소파 휴식 · v6 활동 비교",
+    "url": "http://127.0.0.1:4180/demos/activities/"
+  },
+  {
+    "label": "sofa-v1-return-progress",
+    "at": "2026-10-21T07:10:18.112Z",
+    "action": "책상에서 업무 진행",
+    "canvasCount": 1,
+    "loadStatus": "v6 + 나라 소파 활동 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 53.86880000000138
+        },
+        "leo": {
+          "action": "wrist_relax",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 2.8558999999999912
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 53.86880000000138
+        },
+        "nara": {
+          "action": "typing",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 7.602899999999982
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 53.86880000000138
+        }
+      },
+      "activityVersion": 1,
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_wrist_relax",
+        "min": "min_idle",
+        "nara": "nara_typing",
+        "sora": "sora_idle"
+      },
+      "animationTime": 53.86880000000138,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 848,
+      "firstRenderMs": 350,
+      "geometries": 190,
+      "lastEmit": 82406.9,
+      "lighting": "day",
+      "loadedMs": 183,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "sofa": {
+        "claims": {},
+        "completed": 0,
+        "interruptions": 1,
+        "label": "책상 대기",
+        "position": null,
+        "reason": "업무 도착",
+        "returning": false,
+        "stage": "idle"
+      },
+      "textures": 48,
+      "triangles": 700203
+    },
+    "sprites": [],
+    "title": "나라의 소파 휴식 · v6 활동 비교",
+    "url": "http://127.0.0.1:4180/demos/activities/"
+  },
+  {
+    "label": "activities-v2-cup-start",
+    "at": "2026-10-21T07:10:31.695Z",
+    "action": "나라 · 책상 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "다섯 동료의 생활 동작 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "wrist_relax",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 2.6935
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 12.703999999999947
+        },
+        "min": {
+          "action": "stretch",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 0.6930000000000001
+        },
+        "nara": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 12.703999999999947
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 12.703999999999947
+        }
+      },
+      "actors": {
+        "jun": "jun_wrist_relax",
+        "leo": "leo_idle",
+        "min": "min_stretch",
+        "nara": "nara_idle",
+        "sora": "sora_idle"
+      },
+      "animationTime": 12.703999999999947,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 1006,
+      "firstRenderMs": 311,
+      "geometries": 194,
+      "lastEmit": 13084.4,
+      "lighting": "day",
+      "loadedMs": 162,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {},
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "time": 12.703999999999947,
+        "version": 2,
+        "violations": [],
+        "waiting": []
+      },
+      "textures": 48,
+      "triangles": 805240
+    },
+    "sprites": [],
+    "title": "함께 쉬고, 다시 일하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/team/"
+  },
+  {
+    "label": "activities-v2-cup-checkpoint",
+    "at": "2026-10-21T07:10:55.106Z",
+    "action": "나라 · 컵 · 한 모금 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상 · 동작 정지",
+    "canvasCount": 1,
+    "loadStatus": "다섯 동료의 생활 동작 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 16.70609999999993
+        },
+        "leo": {
+          "action": "shoulder_roll",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 2.696100000000002
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 16.70609999999993
+        },
+        "nara": {
+          "action": "waiting",
+          "activity": "cup",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "returning": false,
+          "time": 16.70609999999993
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 16.70609999999993
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_shoulder_roll",
+        "min": "min_idle",
+        "nara": "nara_waiting",
+        "sora": "sora_idle"
+      },
+      "animationTime": 16.70609999999993,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 1000,
+      "firstRenderMs": 311,
+      "geometries": 195,
+      "lastEmit": 36174,
+      "lighting": "day",
+      "loadedMs": 162,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": true,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 2.482534153247273e-16,
+              "owner": "hand",
+              "returning": false,
+              "state": "sip",
+              "time": 1.293
+            },
+            "kind": "cup",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "cup"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {},
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "time": 16.70609999999993,
+        "version": 2,
+        "violations": [],
+        "waiting": []
+      },
+      "textures": 48,
+      "triangles": 803000
+    },
+    "sprites": [],
+    "title": "함께 쉬고, 다시 일하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/team/"
+  },
+  {
+    "label": "activities-v2-cup-interrupt",
+    "at": "2026-10-21T07:10:56.738Z",
+    "action": "나라 · 컵 · 한 모금 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "다섯 동료의 생활 동작 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 16.879499999999933
+        },
+        "leo": {
+          "action": "shoulder_roll",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 2.8695000000000035
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 16.879499999999933
+        },
+        "nara": {
+          "action": "waiting",
+          "activity": "cup",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "returning": false,
+          "time": 16.879499999999933
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 16.879499999999933
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_shoulder_roll",
+        "min": "min_idle",
+        "nara": "nara_waiting",
+        "sora": "sora_idle"
+      },
+      "animationTime": 16.879499999999933,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 823,
+      "firstRenderMs": 311,
+      "geometries": 195,
+      "lastEmit": 38188.1,
+      "lighting": "day",
+      "loadedMs": 162,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 2.482534153247273e-16,
+              "owner": "hand",
+              "returning": false,
+              "state": "sip",
+              "time": 1.467
+            },
+            "kind": "cup",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "cup"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {},
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "time": 16.879499999999933,
+        "version": 2,
+        "violations": [],
+        "waiting": []
+      },
+      "textures": 48,
+      "triangles": 674801
+    },
+    "sprites": [],
+    "title": "함께 쉬고, 다시 일하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/team/"
+  },
+  {
+    "label": "activities-v2-return-complete",
+    "at": "2026-10-21T07:11:19.495Z",
+    "action": "나라 · 업무 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "다섯 동료의 생활 동작 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 39.968100000000355
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 39.968100000000355
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 39.968100000000355
+        },
+        "nara": {
+          "action": "typing",
+          "interruptions": 1,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 21.396199999999908
+        },
+        "sora": {
+          "action": "wrist_relax",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 0.9481999999999966
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_typing",
+        "sora": "sora_wrist_relax"
+      },
+      "animationTime": 39.968100000000355,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 829,
+      "firstRenderMs": 311,
+      "geometries": 195,
+      "lastEmit": 61276.7,
+      "lighting": "day",
+      "loadedMs": 162,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 1,
+              "interruptions": 1,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 1,
+              "events": 2,
+              "handError": 1.1102230246251563e-16,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {},
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "time": 39.968100000000355,
+        "version": 2,
+        "violations": [],
+        "waiting": []
+      },
+      "textures": 48,
+      "triangles": 677041
+    },
+    "sprites": [],
+    "title": "함께 쉬고, 다시 일하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/team/"
+  },
+  {
+    "label": "activities-v3-leo-rest",
+    "at": "2026-10-21T07:11:34.472Z",
+    "action": "나라 · 소파 · 앉기 / 소라 · 소파 · 이동 대기 / 준 · 회의 · 이동 대기 / 민 · 회의 · 이동 대기 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "자연스러운 동작 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "activity": "meeting",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 11.268999999999952,
+          "variant": 0
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 5.840199999999999
+        },
+        "min": {
+          "action": "idle",
+          "activity": "meeting",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 11.268999999999952,
+          "variant": 0
+        },
+        "nara": {
+          "action": "sofa_sit",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 2.4656000000000016,
+          "variant": 0
+        },
+        "sora": {
+          "action": "idle",
+          "activity": "sofa",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 13.783199999999928,
+          "variant": 0
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_sofa_sit",
+        "sora": "sora_idle"
+      },
+      "animationTime": 13.783199999999928,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 994,
+      "firstRenderMs": 243,
+      "geometries": 197,
+      "lastEmit": 14063.7,
+      "lighting": "day",
+      "loadedMs": 115,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "nara-sofa",
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 1.5700924586837752e-16,
+              "owner": "hand",
+              "returning": false,
+              "state": "carry",
+              "time": 0
+            },
+            "kind": "meeting",
+            "restStyle": null,
+            "returning": false,
+            "slot": 0,
+            "stage": "queued"
+          },
+          "leo": {
+            "counts": {
+              "cup": 1,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 1,
+              "events": 2,
+              "handError": 2.482534153247273e-16,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 0,
+              "owner": "hand",
+              "returning": false,
+              "state": "carry",
+              "time": 0
+            },
+            "kind": "meeting",
+            "restStyle": null,
+            "returning": false,
+            "slot": 1,
+            "stage": "queued"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "slot": 0,
+            "stage": "sit"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "slot": 1,
+            "stage": "queued"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "sofa-0": "nara-sofa",
+          "walkway": "nara-sofa"
+        },
+        "meeting": {
+          "ending": false,
+          "ids": [
+            "jun",
+            "min"
+          ],
+          "natural": true,
+          "phase": "arriving",
+          "reason": "",
+          "talk": 0,
+          "time": 13.783199999999928
+        },
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "time": 13.783199999999928,
+        "version": 3,
+        "violations": [],
+        "waiting": [
+          "sora-sofa",
+          "jun-meeting",
+          "min-meeting"
+        ]
+      },
+      "textures": 48,
+      "triangles": 800760
+    },
+    "sprites": [],
+    "title": "더 자연스럽게 움직이는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/natural/?play=1"
+  },
+  {
+    "label": "activities-v3-rest-and-queue",
+    "at": "2026-10-21T07:11:43.410Z",
+    "action": "나라 · 소파 · 휴식 / 소라 · 소파 · 이동 / 준 · 회의 · 이동 대기 / 민 · 회의 · 이동 대기 / 레오 · 전신 휴식",
+    "canvasCount": 1,
+    "loadStatus": "자연스러운 동작 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "activity": "meeting",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 20.301000000000045,
+          "variant": 0
+        },
+        "leo": {
+          "action": "natural_sit",
+          "activity": "micro",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 8.738599999999987,
+          "variant": "shoulder_release"
+        },
+        "min": {
+          "action": "idle",
+          "activity": "meeting",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 20.301000000000045,
+          "variant": 0
+        },
+        "nara": {
+          "action": "sofa_rest",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 8.896699999999987,
+          "variant": 0
+        },
+        "sora": {
+          "action": "walk",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 6.882599999999996,
+          "variant": 0
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_natural_sit",
+        "min": "min_idle",
+        "nara": "nara_sofa_rest",
+        "sora": "sora_walk"
+      },
+      "animationTime": 22.815200000000168,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 903,
+      "firstRenderMs": 243,
+      "geometries": 197,
+      "lastEmit": 23095.7,
+      "lighting": "day",
+      "loadedMs": 115,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "sora-sofa",
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 2.220446049250313e-16,
+              "owner": "hand",
+              "returning": false,
+              "state": "carry",
+              "time": 0
+            },
+            "kind": "meeting",
+            "restStyle": null,
+            "returning": false,
+            "slot": 0,
+            "stage": "queued"
+          },
+          "leo": {
+            "counts": {
+              "cup": 1,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 1,
+              "events": 2,
+              "handError": 2.482534153247273e-16,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "micro",
+            "restStyle": "shoulder_release",
+            "returning": false,
+            "slot": null,
+            "stage": "rest"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 2.482534153247273e-16,
+              "owner": "hand",
+              "returning": false,
+              "state": "carry",
+              "time": 0
+            },
+            "kind": "meeting",
+            "restStyle": null,
+            "returning": false,
+            "slot": 1,
+            "stage": "queued"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "slot": 0,
+            "stage": "rest"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "slot": 1,
+            "stage": "out"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "sofa-0": "nara-sofa",
+          "sofa-1": "sora-sofa",
+          "walkway": "sora-sofa"
+        },
+        "meeting": {
+          "ending": false,
+          "ids": [
+            "jun",
+            "min"
+          ],
+          "natural": true,
+          "phase": "arriving",
+          "reason": "",
+          "talk": 0,
+          "time": 22.815200000000168
+        },
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "time": 22.815200000000168,
+        "version": 3,
+        "violations": [],
+        "waiting": [
+          "jun-meeting",
+          "min-meeting"
+        ]
+      },
+      "textures": 48,
+      "triangles": 737453
+    },
+    "sprites": [],
+    "title": "더 자연스럽게 움직이는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/natural/?play=1"
+  },
+  {
+    "label": "activities-v3-work-interrupt",
+    "at": "2026-10-21T07:11:44.480Z",
+    "action": "나라 · 소파 · 휴식 / 소라 · 소파 · 이동 / 준 · 회의 · 이동 대기 / 민 · 회의 · 이동 대기 / 레오 · 전신 휴식",
+    "canvasCount": 1,
+    "loadStatus": "자연스러운 동작 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "activity": "meeting",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 21.301400000000104,
+          "variant": 0
+        },
+        "leo": {
+          "action": "natural_sit",
+          "activity": "micro",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 9.738999999999976,
+          "variant": "shoulder_release"
+        },
+        "min": {
+          "action": "idle",
+          "activity": "meeting",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 21.301400000000104,
+          "variant": 0
+        },
+        "nara": {
+          "action": "sofa_rest",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 9.897099999999975,
+          "variant": 0
+        },
+        "sora": {
+          "action": "walk",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 7.882999999999991,
+          "variant": 0
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_natural_sit",
+        "min": "min_idle",
+        "nara": "nara_sofa_rest",
+        "sora": "sora_walk"
+      },
+      "animationTime": 23.815600000000227,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 905,
+      "firstRenderMs": 243,
+      "geometries": 197,
+      "lastEmit": 24096.1,
+      "lighting": "day",
+      "loadedMs": 115,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "sora-sofa",
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 2.482534153247273e-16,
+              "owner": "hand",
+              "returning": false,
+              "state": "carry",
+              "time": 0
+            },
+            "kind": "meeting",
+            "restStyle": null,
+            "returning": false,
+            "slot": 0,
+            "stage": "queued"
+          },
+          "leo": {
+            "counts": {
+              "cup": 1,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 1,
+              "events": 2,
+              "handError": 2.482534153247273e-16,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "micro",
+            "restStyle": "shoulder_release",
+            "returning": false,
+            "slot": null,
+            "stage": "rest"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 0,
+              "owner": "hand",
+              "returning": false,
+              "state": "carry",
+              "time": 0
+            },
+            "kind": "meeting",
+            "restStyle": null,
+            "returning": false,
+            "slot": 1,
+            "stage": "queued"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "slot": 0,
+            "stage": "rest"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "rest": 0,
+              "social": 0,
+              "sofa": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "slot": 1,
+            "stage": "out"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "sofa-0": "nara-sofa",
+          "sofa-1": "sora-sofa",
+          "walkway": "sora-sofa"
+        },
+        "meeting": {
+          "ending": false,
+          "ids": [
+            "jun",
+            "min"
+          ],
+          "natural": true,
+          "phase": "arriving",
+          "reason": "",
+          "talk": 0,
+          "time": 23.815600000000227
+        },
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "time": 23.815600000000227,
+        "version": 3,
+        "violations": [],
+        "waiting": [
+          "jun-meeting",
+          "min-meeting"
+        ]
+      },
+      "textures": 48,
+      "triangles": 737765
+    },
+    "sprites": [],
+    "title": "더 자연스럽게 움직이는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/natural/?play=1"
+  },
+  {
+    "label": "activities-v4-role-contact",
+    "at": "2026-10-21T07:12:01.574Z",
+    "action": "나라 · 소파 · 일어서기 / 소라 · 전신 휴식 / 준 · 소파 · 이동 대기 / 민 · 책상 / 레오 · 컵 · 컵 들기",
+    "canvasCount": 1,
+    "loadStatus": "역할과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "activity": "sofa",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 1.6815000000000009,
+          "variant": 0
+        },
+        "leo": {
+          "action": "waiting",
+          "activity": "cup",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 15.684899999999864
+        },
+        "min": {
+          "action": "stretch",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 3.682300000000005
+        },
+        "nara": {
+          "action": "stand_up",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "returning": false,
+          "time": 1.6682000000000017,
+          "variant": 0
+        },
+        "sora": {
+          "action": "natural_rise",
+          "activity": "micro",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "returning": false,
+          "time": 1.6815000000000009,
+          "variant": "back_open"
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_waiting",
+        "min": "min_stretch",
+        "nara": "nara_stand_up",
+        "sora": "sora_natural_rise"
+      },
+      "animationTime": 15.684899999999864,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 1010,
+      "firstRenderMs": 341,
+      "geometries": 200,
+      "lastEmit": 16072.1,
+      "lighting": "day",
+      "loadedMs": 181,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "nara-sofa",
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 0,
+              "handError": 4.577566798522237e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "코드 화면 가리키기",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": 1,
+            "stage": "queued"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 1,
+              "handError": 2.220446049250313e-16,
+              "owner": "hand",
+              "returning": false,
+              "state": "lift",
+              "time": 0.067
+            },
+            "kind": "cup",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 2.482534153247273e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "cup"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 3.1401849173675503e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 2.482534153247273e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 1.6653345369377348e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "노트에 기획 메모",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 4.611102534756203e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": 0,
+            "stage": "stand"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "micro",
+            "restStyle": "back_open",
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 1.1443916996305594e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "rest"
+          }
+        },
+        "auto": true,
+        "cancelledMeetings": 0,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "sofa-1": "jun-sofa",
+          "walkway": "nara-sofa"
+        },
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": {
+          "cue": "sofa-1",
+          "ending": false,
+          "history": [],
+          "ids": [
+            "nara",
+            "jun"
+          ],
+          "phase": "arriving",
+          "presented": {
+            "jun": 0,
+            "nara": 0
+          },
+          "responsePhase": "greet",
+          "status": "active"
+        },
+        "time": 15.684899999999864,
+        "version": 4,
+        "violations": [],
+        "waiting": [
+          "jun-sofa"
+        ],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 806000
+    },
+    "sprites": [],
+    "title": "소품을 쓰고 교감하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/roles/?play=1"
+  },
+  {
+    "label": "activities-v4-cleanup-progress",
+    "at": "2026-10-21T07:12:32.894Z",
+    "action": "나라 · 소파 · 복귀 · 복귀 중 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "역할과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 6.962500000000003
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 25.83629999999981
+        },
+        "min": {
+          "action": "shoulder_roll",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 0.7601999999999969
+        },
+        "nara": {
+          "action": "walk",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "returning": true,
+          "time": 3.548,
+          "variant": 0
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 23.061899999999813
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_shoulder_roll",
+        "nara": "nara_walk",
+        "sora": "sora_idle"
+      },
+      "animationTime": 47.77690000000087,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 965,
+      "firstRenderMs": 341,
+      "geometries": 200,
+      "lastEmit": 48164.1,
+      "lighting": "day",
+      "loadedMs": 181,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": "nara-sofa",
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 0,
+              "handError": 4.577566798522237e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "코드 화면 가리키기",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 1,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 1,
+              "events": 2,
+              "handError": 3.3306690738754696e-16,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 2.482534153247273e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 3.1401849173675503e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 2.482534153247273e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": true,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 1.6653345369377348e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "노트에 기획 메모",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 4.611102534756203e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": 0,
+            "stage": "home"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 1,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 1.1443916996305594e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "walkway": "nara-sofa"
+        },
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": {
+          "cue": "sofa-1",
+          "ending": true,
+          "history": [],
+          "ids": [
+            "nara",
+            "jun"
+          ],
+          "phase": "arriving",
+          "presented": {
+            "jun": 0,
+            "nara": 0
+          },
+          "reason": "활동 정리",
+          "responsePhase": "greet",
+          "status": "cancelled"
+        },
+        "time": 47.77690000000087,
+        "version": 4,
+        "violations": [],
+        "waiting": [],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 786385
+    },
+    "sprites": [],
+    "title": "소품을 쓰고 교감하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/roles/?play=1"
+  },
+  {
+    "label": "activities-v4-sora-role-request",
+    "at": "2026-10-21T07:12:40.059Z",
+    "action": "나라 · 책상 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "역할과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 13.978499999999888
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 32.8522999999998
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 45.67050000000044
+        },
+        "nara": {
+          "action": "shoulder_roll",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 1,
+          "time": 0.05329999999999563
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 30.07789999999978
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_shoulder_roll",
+        "sora": "sora_idle"
+      },
+      "animationTime": 54.792900000001005,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 965,
+      "firstRenderMs": 341,
+      "geometries": 200,
+      "lastEmit": 55180.1,
+      "lighting": "day",
+      "loadedMs": 181,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 0,
+              "handError": 4.577566798522237e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "코드 화면 가리키기",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 1,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 1,
+              "events": 2,
+              "handError": 3.3306690738754696e-16,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 2.482534153247273e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 3.1401849173675503e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 2.482534153247273e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 1,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 1.6653345369377348e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "노트에 기획 메모",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 4.611102534756203e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 1,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 1.1443916996305594e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {},
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [
+          {
+            "cue": "sofa-1",
+            "history": [],
+            "ids": [
+              "nara",
+              "jun"
+            ],
+            "phase": "greet",
+            "presented": {
+              "jun": 0,
+              "nara": 0
+            },
+            "reason": "활동 정리",
+            "status": "cancelled"
+          }
+        ],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": null,
+        "time": 54.792900000001005,
+        "version": 4,
+        "violations": [],
+        "waiting": [],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 786385
+    },
+    "sprites": [],
+    "title": "소품을 쓰고 교감하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/roles/?play=1"
+  },
+  {
+    "label": "activities-v4-sora-use",
+    "at": "2026-10-21T07:12:53.565Z",
+    "action": "나라 · 책상 / 소라 · 태블릿 스케치 · 사용 중 / 준 · 책상 / 민 · 책상 / 레오 · 책상 · 동작 정지",
+    "canvasCount": 1,
+    "loadStatus": "역할과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 17.993399999999852
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 36.86719999999987
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 49.68540000000051
+        },
+        "nara": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 1,
+          "time": 4.068199999999999
+        },
+        "sora": {
+          "action": "role_sora",
+          "activity": "role",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "returning": false,
+          "roleStage": "use",
+          "time": 58.80780000000108
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_idle",
+        "sora": "sora_role_sora"
+      },
+      "animationTime": 58.80780000000108,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 959,
+      "firstRenderMs": 341,
+      "geometries": 200,
+      "lastEmit": 68198.4,
+      "lighting": "day",
+      "loadedMs": 181,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": true,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 0,
+              "handError": 4.577566798522237e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "코드 화면 가리키기",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 1,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 1,
+              "events": 2,
+              "handError": 3.3306690738754696e-16,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 2.482534153247273e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 3.1401849173675503e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 2.482534153247273e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 1,
+              "rest": 0,
+              "role": 1,
+              "social": 0,
+              "sofa": 1,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 2,
+              "handError": 1.6653345369377348e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract"
+              ],
+              "interruptions": 0,
+              "label": "노트에 기획 메모",
+              "owner": "desk",
+              "returning": false,
+              "stage": "idle",
+              "time": 0.8006000000000005,
+              "tipError": 4.611102534756203e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 1,
+              "role": 1,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "role",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 1,
+              "events": 3,
+              "handError": 1.6653345369377348e-16,
+              "history": [
+                "reach",
+                "grasp",
+                "use",
+                "replace",
+                "release",
+                "retract",
+                "reach",
+                "grasp",
+                "use"
+              ],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "hand",
+              "returning": false,
+              "stage": "use",
+              "time": 2.400900000000001,
+              "tipError": 1.5700924586837752e-16,
+              "variant": 0,
+              "variantsSeen": [
+                0
+              ]
+            },
+            "slot": null,
+            "stage": "use"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "claims": {},
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [
+          {
+            "cue": "sofa-1",
+            "history": [],
+            "ids": [
+              "nara",
+              "jun"
+            ],
+            "phase": "greet",
+            "presented": {
+              "jun": 0,
+              "nara": 0
+            },
+            "reason": "활동 정리",
+            "status": "cancelled"
+          }
+        ],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": null,
+        "time": 58.80780000000108,
+        "version": 4,
+        "violations": [],
+        "waiting": [],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 783945
+    },
+    "sprites": [],
+    "title": "소품을 쓰고 교감하는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/roles/?play=1"
+  },
+  {
+    "label": "activities-v5-two-route-start",
+    "at": "2026-10-21T07:13:03.253Z",
+    "action": "나라 · 소파 · 일어서기 / 소라 · 책상 / 준 · 창가 · 일어서기 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "움직임과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "stand_up",
+          "activity": "window",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 0.3067999999999993,
+          "variant": 0
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 8.74329999999999
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 8.74329999999999
+        },
+        "nara": {
+          "action": "stand_up",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 0.3067999999999993,
+          "variant": 0
+        },
+        "sora": {
+          "action": "shoulder_roll",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "time": 0.733699999999999
+        }
+      },
+      "actors": {
+        "jun": "jun_stand_up",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_stand_up",
+        "sora": "sora_shoulder_roll"
+      },
+      "animationTime": 8.74329999999999,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 1016,
+      "firstRenderMs": 255,
+      "geometries": 194,
+      "lastEmit": 9026.3,
+      "lighting": "day",
+      "loadedMs": 116,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "window",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "코드 화면 설명",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "stand"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "기획 메모",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": 0,
+            "stage": "stand"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "choiceHistory": [],
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "walkway-0": "nara-sofa",
+          "walkway-1": "jun-window",
+          "window-0": "jun-window"
+        },
+        "expressiveActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [],
+        "pendingCues": [],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": null,
+        "time": 8.74329999999999,
+        "traffic": {
+          "active": [
+            "nara-sofa",
+            "jun-window"
+          ],
+          "capacity": 2,
+          "grants": 2,
+          "grid": 0.4,
+          "maxWait": 0,
+          "peak": 2,
+          "policy": "atomic-corridors",
+          "radius": 0.5,
+          "simultaneousGrants": 1,
+          "waiting": []
+        },
+        "version": 5,
+        "violations": [],
+        "waiting": [],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 808240
+    },
+    "sprites": [],
+    "title": "움직임이 이어지는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/expressive/"
+  },
+  {
+    "label": "activities-v5-two-route-progress",
+    "at": "2026-10-21T07:13:48.732Z",
+    "action": "나라 · 소파 · 복귀 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "움직임과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 8.043000000000003
+        },
+        "leo": {
+          "action": "wrist_relax",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 2.8009999999999984
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 53.82680000000097
+        },
+        "nara": {
+          "action": "walk",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 7.696200000000009,
+          "variant": 0
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 53.82680000000097
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_wrist_relax",
+        "min": "min_idle",
+        "nara": "nara_walk",
+        "sora": "sora_idle"
+      },
+      "animationTime": 53.82680000000097,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 1016,
+      "firstRenderMs": 255,
+      "geometries": 194,
+      "lastEmit": 54109.8,
+      "lighting": "day",
+      "loadedMs": 116,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 1
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "코드 화면 설명",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "기획 메모",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": 0,
+            "stage": "home"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "choiceHistory": [],
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "walkway-1": "nara-sofa"
+        },
+        "expressiveActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [],
+        "pendingCues": [],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": null,
+        "time": 53.82680000000097,
+        "traffic": {
+          "active": [
+            "nara-sofa"
+          ],
+          "capacity": 2,
+          "grants": 4,
+          "grid": 0.4,
+          "maxWait": 0,
+          "peak": 2,
+          "policy": "atomic-corridors",
+          "radius": 0.5,
+          "simultaneousGrants": 2,
+          "waiting": []
+        },
+        "version": 5,
+        "violations": [],
+        "waiting": [],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 808240
+    },
+    "sprites": [],
+    "title": "움직임이 이어지는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/expressive/"
+  },
+  {
+    "label": "activities-v5-return-request",
+    "at": "2026-10-21T07:13:49.825Z",
+    "action": "나라 · 소파 · 자리 정렬 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "움직임과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 9.043399999999982
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 54.82720000000096
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 54.82720000000096
+        },
+        "nara": {
+          "action": "standing",
+          "activity": "sofa",
+          "basePose": "idle",
+          "interruptions": 0,
+          "microCount": 0,
+          "restCount": 0,
+          "returning": false,
+          "time": 0.5201999999999973,
+          "variant": 0
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 54.82720000000096
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_standing",
+        "sora": "sora_idle"
+      },
+      "animationTime": 54.82720000000096,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 1016,
+      "firstRenderMs": 255,
+      "geometries": 194,
+      "lastEmit": 55110.2,
+      "lighting": "day",
+      "loadedMs": 116,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 1
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "코드 화면 설명",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "sofa",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "기획 메모",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": 0,
+            "stage": "deskTurn"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "choiceHistory": [],
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "walkway-1": "nara-sofa"
+        },
+        "expressiveActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [],
+        "pendingCues": [],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": null,
+        "time": 54.82720000000096,
+        "traffic": {
+          "active": [
+            "nara-sofa"
+          ],
+          "capacity": 2,
+          "grants": 4,
+          "grid": 0.4,
+          "maxWait": 0,
+          "peak": 2,
+          "policy": "atomic-corridors",
+          "radius": 0.5,
+          "simultaneousGrants": 2,
+          "waiting": []
+        },
+        "version": 5,
+        "violations": [],
+        "waiting": [],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 808240
+    },
+    "sprites": [],
+    "title": "움직임이 이어지는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/expressive/"
+  },
+  {
+    "label": "activities-v5-final-cleanup",
+    "at": "2026-10-21T07:14:09.527Z",
+    "action": "나라 · 책상 / 소라 · 책상 / 준 · 책상 / 민 · 책상 / 레오 · 책상",
+    "canvasCount": 1,
+    "loadStatus": "움직임과 교감 준비 완료",
+    "metrics": {
+      "activities": {
+        "jun": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 0,
+          "time": 29.07749999999998
+        },
+        "leo": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 74.8612999999998
+        },
+        "min": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 2,
+          "restCount": 0,
+          "time": 74.8612999999998
+        },
+        "nara": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 1,
+          "restCount": 1,
+          "time": 17.84659999999989
+        },
+        "sora": {
+          "action": "idle",
+          "interruptions": 0,
+          "microCount": 3,
+          "restCount": 0,
+          "time": 74.8612999999998
+        }
+      },
+      "actors": {
+        "jun": "jun_idle",
+        "leo": "leo_idle",
+        "min": "min_idle",
+        "nara": "nara_idle",
+        "sora": "sora_idle"
+      },
+      "animationTime": 74.8612999999998,
+      "canvas": [
+        1149,
+        608
+      ],
+      "cssCanvas": [
+        1149,
+        608
+      ],
+      "cutaway": {
+        "back": false,
+        "left": false
+      },
+      "drawCalls": 1016,
+      "firstRenderMs": 255,
+      "geometries": 194,
+      "lastEmit": 75144.3,
+      "lighting": "day",
+      "loadedMs": 116,
+      "measuring": false,
+      "modelVersion": 6,
+      "paused": false,
+      "pixelRatio": 1,
+      "quality": "auto",
+      "reservation": null,
+      "resetTimes": 0,
+      "teamActivities": {
+        "actors": {
+          "jun": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 1
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "코드 화면 설명",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "leo": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "문서 정리",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "min": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "체크리스트 확인",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "nara": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 1,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "기획 메모",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          },
+          "sora": {
+            "counts": {
+              "cup": 0,
+              "interruptions": 0,
+              "meeting": 0,
+              "pairAttempts": 0,
+              "rest": 0,
+              "role": 0,
+              "social": 0,
+              "sofa": 0,
+              "sofaPair": 0,
+              "window": 0
+            },
+            "cup": {
+              "cupCount": 1,
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "owner": "desk",
+              "returning": false,
+              "state": "idle",
+              "time": 0
+            },
+            "kind": "desk",
+            "restStyle": null,
+            "returning": false,
+            "role": {
+              "done": 0,
+              "events": 0,
+              "handError": 0,
+              "history": [],
+              "interruptions": 0,
+              "label": "태블릿 스케치",
+              "owner": "desk",
+              "stage": "idle",
+              "time": 0,
+              "tipError": 0,
+              "variant": 0,
+              "variantsSeen": []
+            },
+            "slot": null,
+            "stage": "idle"
+          }
+        },
+        "auto": false,
+        "cancelledMeetings": 0,
+        "choiceHistory": [],
+        "claims": {},
+        "expressiveActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "meeting": null,
+        "meetings": 0,
+        "naturalActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pairHistory": [],
+        "pendingCues": [],
+        "roleActors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seed": 17,
+        "social": null,
+        "socialHistory": [],
+        "sofaPair": null,
+        "time": 74.8612999999998,
+        "traffic": {
+          "active": [],
+          "capacity": 2,
+          "grants": 4,
+          "grid": 0.4,
+          "maxWait": 0,
+          "peak": 2,
+          "policy": "atomic-corridors",
+          "radius": 0.5,
+          "simultaneousGrants": 2,
+          "waiting": []
+        },
+        "version": 5,
+        "violations": [],
+        "waiting": [],
+        "window": {
+          "available": true,
+          "issue": null,
+          "position": [
+            0.4,
+            0,
+            -3.1
+          ]
+        }
+      },
+      "textures": 48,
+      "triangles": 808240
+    },
+    "sprites": [],
+    "title": "움직임이 이어지는 다섯 동료",
+    "url": "http://127.0.0.1:4180/demos/activities/expressive/"
+  }
+]

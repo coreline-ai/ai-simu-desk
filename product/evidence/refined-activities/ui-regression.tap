@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: measurement completion never displays a passing JSON before cleanup finishes
+ok 1 - measurement completion never displays a passing JSON before cleanup finishes
+  ---
+  duration_ms: 2.100333
+  type: 'test'
+  ...
+# Subtest: cleanup timeout and errors observed after measurement cannot become a pass
+ok 2 - cleanup timeout and errors observed after measurement cannot become a pass
+  ---
+  duration_ms: 1.230666
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 42.048333

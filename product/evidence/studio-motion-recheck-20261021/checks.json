@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-21T07:18:38.861Z",
+  "commit": "cd7aca4b15d1b25b4b963fe9c0cd29c940933d7a",
+  "scope": "desktop local; fresh motion regression plus focused browser review; previous 10/30/60-minute runs were not repeated",
+  "regression": {
+    "tests": 145,
+    "passed": 145,
+    "failed": 0,
+    "durationMs": 447834.719708,
+    "tapSha256": "940cbe05171d91044a9f1cbed83d6832ca03772274e8f4163a1619b6729fa989"
+  },
+  "browser": {
+    "demoRoutes": [
+      "/demos/pilot-3d/",
+      "/demos/demo/",
+      "/demos/visual-upgrade/",
+      "/demos/studio-v5/",
+      "/demos/room-quality/",
+      "/demos/activities/",
+      "/demos/activities/team/",
+      "/demos/activities/natural/",
+      "/demos/activities/roles/",
+      "/demos/activities/expressive/",
+      "/demos/activities/interaction/"
+    ],
+    "product": "isolated temporary DB at 4191",
+    "appHash": "e2e60d3166ec60932f8e5849039938cbbe6ac77d9732035e722497fab3832ff2",
+    "publishedAppHash": "e2e60d3166ec60932f8e5849039938cbbe6ac77d9732035e722497fab3832ff2",
+    "productAppMatches": true,
+    "errorCounts": {
+      "demo": 0,
+      "interaction": 0,
+      "product": 0
+    },
+    "logout": {
+      "canvasCount": 0,
+      "loginVisible": true,
+      "studioHidden": true
+    },
+    "finalInteractionCleanup": {
+      "passed": true,
+      "issues": []
+    }
+  },
+  "findings": [
+    {
+      "id": "M-01",
+      "severity": "P2",
+      "kind": "host movement caption",
+      "status": "open"
+    },
+    {
+      "id": "M-02",
+      "severity": "P2",
+      "kind": "ring-finger target reach and diagnostic coverage",
+      "status": "open"
+    },
+    {
+      "id": "M-03",
+      "severity": "P3",
+      "kind": "symmetric sofa arm posture",
+      "status": "quality suggestion"
+    }
+  ],
+  "reviewComplete": true
+}

@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: twenty refined sofa seat orders support outer palms and vary one inner hand with continuous transitions
+ok 1 - twenty refined sofa seat orders support outer palms and vary one inner hand with continuous transitions
+  ---
+  duration_ms: 23312.147333
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 23388.150542

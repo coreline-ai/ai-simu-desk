@@ -1,0 +1,194 @@
+{
+  "at": "2026-10-21T08:42:05.176Z",
+  "baseCommit": "cd7aca4",
+  "tests": {
+    "total": 250,
+    "passed": 250,
+    "failed": 0,
+    "tapSha256": "dd854920daa59653c9c12def02268a156ebd3f07383663abdd78c3a33aa6402d"
+  },
+  "contactMaximumMm": [
+    {
+      "version": 6,
+      "max": 5.797962830986273
+    },
+    {
+      "version": 7,
+      "max": 1.7690777709386486e-14
+    }
+  ],
+  "sofaSupportObserved": true,
+  "fastMixed": {
+    "passed": true,
+    "errors": [],
+    "kind": "fast-simulation-not-wall-clock"
+  },
+  "layout": {
+    "layout320": {
+      "body": 320,
+      "canvasCount": 1,
+      "html": 320,
+      "menu": [
+        {
+          "right": 159,
+          "text": "공간 v6 · 기본 동작",
+          "width": 142.203125
+        },
+        {
+          "right": 303.203125,
+          "text": "현행 생활 동작",
+          "width": 142.203125
+        },
+        {
+          "right": 159,
+          "text": "기존 v3 · 자연스러운 동작",
+          "width": 142.203125
+        },
+        {
+          "right": 303.203125,
+          "text": "v4 · 역할과 교감",
+          "width": 142.203125
+        },
+        {
+          "right": 159,
+          "text": "v5 · 움직임과 교감",
+          "width": 142.203125
+        },
+        {
+          "right": 303.203125,
+          "text": "v6 · 손과 협업",
+          "width": 142.203125
+        },
+        {
+          "right": 159,
+          "text": "v7 · 편안한 교감",
+          "width": 142.203125
+        }
+      ],
+      "version": 7,
+      "width": 320
+    },
+    "layout768": {
+      "body": 768,
+      "canvasCount": 1,
+      "html": 768,
+      "width": 768
+    }
+  },
+  "errors": {
+    "candidate": 0,
+    "roles": 0,
+    "product": 0
+  },
+  "product": {
+    "canvasCount": 1,
+    "claims": {},
+    "runStatus": "5명 협업 · 답변 저장 완료",
+    "scene": "실제 3D · 5명 편안한 교감",
+    "teamCaption": "5개 역할의 협업 결과가 저장됐어요. 새 협업을 시작하거나 개별 업무를 맡길 수 있어요.",
+    "version": 7,
+    "violations": []
+  },
+  "logout": {
+    "canvasCount": 0,
+    "loginVisible": true
+  },
+  "published": {
+    "canvas": 1,
+    "caption": "나라 · 책상 / 소라 · 소파 · 복귀 · 복귀 중 / 준 · 책상 / 민 · 소파 · 휴식 · 복귀 중 / 레오 · 책상",
+    "paused": false,
+    "status": "편안한 교감 준비 완료",
+    "url": "http://127.0.0.1:4180/demos/activities/refined/?play=1",
+    "version": 7,
+    "violations": []
+  },
+  "activation": {
+    "at": "2026-10-21T08:38:38.769Z",
+    "routes": [
+      {
+        "path": "/",
+        "status": 200
+      },
+      {
+        "path": "/start",
+        "status": 200
+      },
+      {
+        "path": "/library/",
+        "status": 200
+      },
+      {
+        "path": "/demos/demo/",
+        "status": 200
+      },
+      {
+        "path": "/demos/pilot-3d/",
+        "status": 200
+      },
+      {
+        "path": "/demos/visual-upgrade/",
+        "status": 200
+      },
+      {
+        "path": "/demos/studio-v5/",
+        "status": 200
+      },
+      {
+        "path": "/demos/room-quality/",
+        "status": 200
+      },
+      {
+        "path": "/demos/activities/",
+        "status": 200
+      },
+      {
+        "path": "/demos/activities/team/",
+        "status": 200
+      },
+      {
+        "path": "/demos/activities/natural/",
+        "status": 200
+      },
+      {
+        "path": "/demos/activities/roles/",
+        "status": 200
+      },
+      {
+        "path": "/demos/activities/expressive/",
+        "status": 200
+      },
+      {
+        "path": "/demos/activities/interaction/",
+        "status": 200
+      },
+      {
+        "path": "/demos/activities/refined/",
+        "status": 200
+      }
+    ],
+    "health": {
+      "status": "ok",
+      "edition": "local",
+      "database": "pglite",
+      "aiProvider": "fake"
+    },
+    "appHash": "899f64a0e6a93a7a14a3bd48456693db287fe03887cc179baad81ce2ab616f2a",
+    "matchesQABrowserBundle": true,
+    "passed": true,
+    "finalAt": "2026-10-21T08:40:46.208Z",
+    "finalRelease": "/Volumes/ExternalSSD/projects_10/ai-simu-desk/.data/build-releases/1792571949084-9020dfda-aa6c-4e78-92c9-56569517cb24/client",
+    "versionedEntries": 27,
+    "finalDocumentationCurrent": true
+  },
+  "sourceHashes": {
+    "pilot-3d/activities/visit-presentation.mjs": "6e451c465e1c27e4623026d983ef43e3c1428cf48c7255ee7c902149f106bd82",
+    "pilot-3d/activities/hand-grips.mjs": "f22c4ab0d2f3807c06101e498f010a60bc5b21685d571277b33f889dd30b84f1",
+    "pilot-3d/activities/sofa-support.mjs": "860d8d281d0dbe3ee3fe50866fbf47a695840ce9bc9db003c6ba4b3744248c9c",
+    "pilot-3d/activities/team-runtime.mjs": "0280a4355ee4f56ac13a42ff71adfa7496fad0049649d8af0ef8cb8eb77e7a2c",
+    "pilot-3d/activities/interaction-scheduler.mjs": "773a6bfa59ccd4c115ab394aeda41c3ec3fae22981d7ba65bd2cccc8201e190a",
+    "pilot-3d/activities/team/app.mjs": "8ae25e766357f483181d55cb8afd7beedf561f2b7805e3f361f128a1fd62dc57",
+    "product/src/app.mjs": "810fb74db79bfd365a75caf7de94b2ec579e1d6656485f3aa1270a40b1b3a156"
+  },
+  "scope": "desktop local; target-point and palm support checks; no new actual 30/60-minute, physical mobile or GPU-memory measurements",
+  "passed": true
+}

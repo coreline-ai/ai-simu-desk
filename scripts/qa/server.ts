@@ -1,3 +1,4 @@
+import {activityPage,activityVariants} from '../activity-page.mjs';
 // Isolated source-backed QA host. Never opens the user's product database.
 import {serve} from '@hono/node-server';import{serveStatic}from'@hono/node-server/serve-static';
 import{mkdtemp,readFile,rm}from'node:fs/promises';import{join}from'node:path';import{tmpdir}from'node:os';import{randomBytes}from'node:crypto';import{build}from'esbuild';
@@ -7,6 +8,8 @@ const config=getConfig({PORT:String(port),APP_ORIGIN:`http://127.0.0.1:${port}`,
 await build({entryPoints:['product/src/app.mjs'],outfile:join(dir,'app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 await build({entryPoints:['pilot-3d/activities/team/app.mjs'],outfile:join(dir,'activities/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 const db=await openDatabase(config.dataDir),app=createRuntime(db,config);
+app.get('/demos/activities/:variant/',async c=>{const variant=c.req.param('variant');if(!activityVariants.includes(variant))return c.notFound();return c.html(activityPage(await readFile('pilot-3d/activities/team/index.html','utf8'),variant));});
+app.get('/demos/activities/:variant/styles.css',async c=>{c.header('Content-Type','text/css');return c.body((await Promise.all(['pilot-3d/sample/styles.css','pilot-3d/room-quality/styles.css','pilot-3d/activities/styles.css'].map(p=>readFile(p,'utf8')))).join('\n'));});
 app.get('/assets/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'app.js')));});
 app.get('/demos/activities/:variant/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'activities/app.js')));});
 app.get('/',async c=>c.html(await readFile('product/index.html','utf8')));

@@ -1,0 +1,261 @@
+{
+  "actors": {
+    "jun": {
+      "counts": {
+        "cup": 0,
+        "interruptions": 0,
+        "meeting": 0,
+        "pairAttempts": 0,
+        "rest": 0,
+        "role": 0,
+        "social": 0,
+        "sofa": 0,
+        "sofaPair": 0,
+        "window": 0
+      },
+      "cup": {
+        "cupCount": 1,
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "owner": "desk",
+        "returning": false,
+        "state": "idle",
+        "time": 0
+      },
+      "kind": "visit",
+      "restStyle": null,
+      "returning": false,
+      "role": {
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "history": [],
+        "interruptions": 0,
+        "label": "코드 화면 설명",
+        "owner": "desk",
+        "stage": "idle",
+        "time": 0,
+        "tipError": 0,
+        "variant": 0,
+        "variantsSeen": []
+      },
+      "slot": null,
+      "stage": "hosting",
+      "visitPresentation": {
+        "label": "내 자리에서 함께 화면 검토",
+        "moving": false,
+        "returning": false,
+        "role": "host",
+        "stage": "hosting"
+      }
+    },
+    "leo": {
+      "counts": {
+        "cup": 0,
+        "interruptions": 0,
+        "meeting": 0,
+        "pairAttempts": 0,
+        "rest": 0,
+        "role": 0,
+        "social": 0,
+        "sofa": 0,
+        "sofaPair": 0,
+        "window": 0
+      },
+      "cup": {
+        "cupCount": 1,
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "owner": "desk",
+        "returning": false,
+        "state": "idle",
+        "time": 0
+      },
+      "kind": "desk",
+      "restStyle": null,
+      "returning": false,
+      "role": {
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "history": [],
+        "interruptions": 0,
+        "label": "문서 정리",
+        "owner": "desk",
+        "stage": "idle",
+        "time": 0,
+        "tipError": 0,
+        "variant": 0,
+        "variantsSeen": []
+      },
+      "slot": null,
+      "stage": "idle"
+    },
+    "min": {
+      "counts": {
+        "cup": 0,
+        "interruptions": 0,
+        "meeting": 0,
+        "pairAttempts": 1,
+        "rest": 0,
+        "role": 0,
+        "social": 0,
+        "sofa": 0,
+        "sofaPair": 0,
+        "window": 0
+      },
+      "cup": {
+        "cupCount": 1,
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "owner": "desk",
+        "returning": false,
+        "state": "idle",
+        "time": 0
+      },
+      "kind": "sofa",
+      "restStyle": null,
+      "returning": false,
+      "role": {
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "history": [],
+        "interruptions": 0,
+        "label": "체크리스트 확인",
+        "owner": "desk",
+        "stage": "idle",
+        "time": 0,
+        "tipError": 0,
+        "variant": 0,
+        "variantsSeen": []
+      },
+      "slot": 1,
+      "stage": "queued"
+    },
+    "nara": {
+      "counts": {
+        "cup": 0,
+        "interruptions": 0,
+        "meeting": 0,
+        "pairAttempts": 0,
+        "rest": 0,
+        "role": 0,
+        "social": 0,
+        "sofa": 0,
+        "sofaPair": 0,
+        "window": 0
+      },
+      "cup": {
+        "cupCount": 1,
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "owner": "desk",
+        "returning": false,
+        "state": "idle",
+        "time": 0
+      },
+      "kind": "visit",
+      "restStyle": null,
+      "returning": false,
+      "role": {
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "history": [],
+        "interruptions": 0,
+        "label": "기획 메모",
+        "owner": "desk",
+        "stage": "idle",
+        "time": 0,
+        "tipError": 0,
+        "variant": 0,
+        "variantsSeen": []
+      },
+      "slot": null,
+      "stage": "rest",
+      "visitPresentation": {
+        "label": "동료 자리에서 함께 검토",
+        "moving": false,
+        "returning": false,
+        "role": "visitor",
+        "stage": "rest"
+      }
+    },
+    "sora": {
+      "counts": {
+        "cup": 0,
+        "interruptions": 0,
+        "meeting": 0,
+        "pairAttempts": 1,
+        "rest": 0,
+        "role": 0,
+        "social": 0,
+        "sofa": 0,
+        "sofaPair": 0,
+        "window": 0
+      },
+      "cup": {
+        "cupCount": 1,
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "owner": "desk",
+        "returning": false,
+        "state": "idle",
+        "time": 0
+      },
+      "kind": "sofa",
+      "restStyle": null,
+      "returning": false,
+      "role": {
+        "done": 0,
+        "events": 0,
+        "handError": 0,
+        "history": [],
+        "interruptions": 0,
+        "label": "태블릿 스케치",
+        "owner": "desk",
+        "stage": "idle",
+        "time": 0,
+        "tipError": 0,
+        "variant": 0,
+        "variantsSeen": []
+      },
+      "slot": 0,
+      "stage": "stand"
+    }
+  },
+  "caption": "나라 · 동료 자리에서 함께 검토 / 소라 · 소파 · 일어서기 / 준 · 내 자리에서 함께 화면 검토 / 민 · 소파 · 이동 대기 / 레오 · 책상 · 동작 정지",
+  "paused": true,
+  "version": 7,
+  "violations": [],
+  "visit": {
+    "ending": false,
+    "exchange": {
+      "cue": "visit-1",
+      "history": [],
+      "leader": "jun",
+      "phase": "greet",
+      "presented": {
+        "jun": 0.7203000000000173,
+        "nara": 0.7203000000000173
+      },
+      "speakers": [
+        "jun"
+      ],
+      "status": "active",
+      "variant": 1
+    },
+    "ids": [
+      "nara",
+      "jun"
+    ],
+    "phase": "discussion",
+    "stage": "rest"
+  }
+}

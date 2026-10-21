@@ -1,0 +1,317 @@
+{
+  "kind": "deterministic-source-review-not-browser-or-wall-clock",
+  "at": "2026-10-21T07:15:05.612Z",
+  "rows": [
+    {
+      "id": "nara",
+      "mode": "role-0",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        5.275955480050203e-15,
+        1.0971354589302191e-14,
+        8.673617379884035e-15,
+        5.797962830985272,
+        5.364336092018247e-15
+      ]
+    },
+    {
+      "id": "nara",
+      "mode": "role-1",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        5.3467768432952174e-15,
+        7.806255641895632e-15,
+        8.845388854693243e-15,
+        5.797962830986273,
+        5.275955480050211e-15
+      ]
+    },
+    {
+      "id": "nara",
+      "mode": "role-2",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        5.315908595317247e-15,
+        1.0971354589302191e-14,
+        8.673617379884035e-15,
+        5.797962830985898,
+        5.275955480050203e-15
+      ]
+    },
+    {
+      "id": "nara",
+      "mode": "cup",
+      "samples": 240,
+      "peakFingerTargetDistanceMm": [
+        8.498374721940739e-15,
+        3.878959614448864e-15,
+        7.757919228897728e-15,
+        7.757919228897728e-15,
+        1.2509268882771003e-14
+      ]
+    },
+    {
+      "id": "sora",
+      "mode": "role-0",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        5.222209201006512e-15,
+        6.992893892674702e-15,
+        7.152448122690996e-15,
+        4.077213412023455,
+        4.906538933386797e-15
+      ]
+    },
+    {
+      "id": "sora",
+      "mode": "role-1",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        7.046480070129584e-15,
+        7.757919228897728e-15,
+        6.938893903907228e-15,
+        4.077213412023421,
+        3.576224061345498e-15
+      ]
+    },
+    {
+      "id": "sora",
+      "mode": "role-2",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        6.992893892674702e-15,
+        1.1005586668084918e-14,
+        6.938893903907228e-15,
+        4.077213412023405,
+        5.2044527645875085e-15
+      ]
+    },
+    {
+      "id": "sora",
+      "mode": "cup",
+      "samples": 240,
+      "peakFingerTargetDistanceMm": [
+        9.341771812940338e-15,
+        3.878959614448864e-15,
+        7.757919228897728e-15,
+        8.673617379884035e-15,
+        1.2509268882771003e-14
+      ]
+    },
+    {
+      "id": "jun",
+      "mode": "role-0",
+      "samples": 0,
+      "peakFingerTargetDistanceMm": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "jun",
+      "mode": "role-1",
+      "samples": 0,
+      "peakFingerTargetDistanceMm": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "jun",
+      "mode": "role-2",
+      "samples": 0,
+      "peakFingerTargetDistanceMm": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "jun",
+      "mode": "cup",
+      "samples": 240,
+      "peakFingerTargetDistanceMm": [
+        8.498374721940739e-15,
+        3.878959614448864e-15,
+        7.757919228897728e-15,
+        7.757919228897728e-15,
+        1.2981481815797576e-14
+      ]
+    },
+    {
+      "id": "min",
+      "mode": "role-0",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        5.275955480050203e-15,
+        7.410741937918037e-15,
+        3.831699941510344e-15,
+        5.797962830985716,
+        5.275955480050211e-15
+      ]
+    },
+    {
+      "id": "min",
+      "mode": "role-1",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        5.3467768432952316e-15,
+        7.410741937918037e-15,
+        3.8789596144488855e-15,
+        5.797962830985499,
+        5.204170427930421e-15
+      ]
+    },
+    {
+      "id": "min",
+      "mode": "role-2",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        5.3467768432952316e-15,
+        7.359808400080195e-15,
+        3.878959614448908e-15,
+        5.797962830985092,
+        5.275955480050211e-15
+      ]
+    },
+    {
+      "id": "min",
+      "mode": "cup",
+      "samples": 240,
+      "peakFingerTargetDistanceMm": [
+        8.498374721940739e-15,
+        3.878959614448864e-15,
+        7.757919228897728e-15,
+        7.757919228897728e-15,
+        1.0971354589302191e-14
+      ]
+    },
+    {
+      "id": "leo",
+      "mode": "role-0",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        4.906538933386797e-15,
+        5.204170427930421e-15,
+        6.009258394948637e-15,
+        4.906538933386797e-15,
+        4.906538933386797e-15
+      ]
+    },
+    {
+      "id": "leo",
+      "mode": "role-1",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        4.906538933386797e-15,
+        5.204170427930421e-15,
+        6.009258394948637e-15,
+        4.906538933386797e-15,
+        4.906538933386797e-15
+      ]
+    },
+    {
+      "id": "leo",
+      "mode": "role-2",
+      "samples": 260,
+      "peakFingerTargetDistanceMm": [
+        4.906538933386797e-15,
+        5.204170427930421e-15,
+        6.009258394948637e-15,
+        4.906538933386797e-15,
+        4.906538933386797e-15
+      ]
+    },
+    {
+      "id": "leo",
+      "mode": "cup",
+      "samples": 240,
+      "peakFingerTargetDistanceMm": [
+        8.498374721940739e-15,
+        3.878959614448864e-15,
+        7.757919228897728e-15,
+        7.757919228897728e-15,
+        1.2509268882771003e-14
+      ]
+    }
+  ],
+  "caption": {
+    "tripStage": "out",
+    "hostMovementMm": 0,
+    "hostAction": "idle",
+    "hostDiagnostic": {
+      "kind": "visit",
+      "stage": "out",
+      "returning": false,
+      "slot": null,
+      "cup": {
+        "state": "idle",
+        "time": 0,
+        "owner": "desk",
+        "events": 2,
+        "done": 1,
+        "returning": false,
+        "handError": 2.0014830212433605e-16,
+        "cupCount": 1
+      },
+      "restStyle": null,
+      "counts": {
+        "sofa": 0,
+        "cup": 1,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 0,
+        "social": 0,
+        "role": 3,
+        "sofaPair": 0,
+        "pairAttempts": 0,
+        "window": 0
+      },
+      "role": {
+        "label": "손을 내리고 화면 확인",
+        "variant": 2,
+        "variantsSeen": [
+          0,
+          1,
+          2
+        ],
+        "stage": "idle",
+        "time": 0.8000000000000004,
+        "owner": "desk",
+        "done": 3,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 2.220446049250313e-16,
+        "tipError": 0,
+        "returning": false,
+        "history": [
+          "use",
+          "replace",
+          "release",
+          "retract",
+          "reach",
+          "grasp",
+          "use",
+          "replace",
+          "release",
+          "retract",
+          "reach",
+          "grasp",
+          "use",
+          "replace",
+          "release",
+          "retract"
+        ]
+      }
+    }
+  },
+  "scope": "Finger target-point distances in hand-local metres for all five fingers while holding a prop; does not measure skin penetration or friction."
+}

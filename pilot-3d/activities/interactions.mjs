@@ -5,11 +5,11 @@ import {ease} from '../sample/motion.mjs';
 const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z),DOWN=V(0,-1,0),IDENTITY=new T.Quaternion();
 function worldPose(node){return {position:node.getWorldPosition(V()),quaternion:node.getWorldQuaternion(new T.Quaternion())};}
 function setWorld(node,p,q){node.parent.updateWorldMatrix(true,false);node.position.copy(node.parent.worldToLocal(p.clone()));node.quaternion.copy(node.parent.getWorldQuaternion(new T.Quaternion()).invert()).multiply(q);node.updateWorldMatrix(false,true);}
-export function solveArm(actor,target,worldQuaternion,side='L'){
+export function solveArm(actor,target,worldQuaternion,side='L',bendPole){
  const shoulder=part(actor,'NaraShoulder'+side),elbow=part(actor,'NaraElbow'+side),hand=part(actor,'NaraHand'+side);
  actor.updateWorldMatrix(true,true);const start=shoulder.getWorldPosition(V()),delta=target.clone().sub(start),distance=delta.length(),upper=elbow.position.length(),lower=hand.position.length();
  if(distance>upper+lower-.001||distance<.025)throw Error(`컵 손 도달 범위 오류: ${distance.toFixed(3)}`);
- const axis=delta.clone().normalize(),pole=V(side==='L'?-1:1,.15,.25).applyQuaternion(actor.getWorldQuaternion(new T.Quaternion())),bend=pole.addScaledVector(axis,-pole.dot(axis)).normalize(),along=(upper*upper-lower*lower+distance*distance)/(2*distance),mid=start.clone().addScaledVector(axis,along).addScaledVector(bend,Math.sqrt(Math.max(0,upper*upper-along*along)));
+ const axis=delta.clone().normalize(),pole=bendPole?.clone()??V(side==='L'?-1:1,.15,.25).applyQuaternion(actor.getWorldQuaternion(new T.Quaternion())),bend=pole.addScaledVector(axis,-pole.dot(axis)).normalize(),along=(upper*upper-lower*lower+distance*distance)/(2*distance),mid=start.clone().addScaledVector(axis,along).addScaledVector(bend,Math.sqrt(Math.max(0,upper*upper-along*along)));
  const upperQ=new T.Quaternion().setFromUnitVectors(DOWN,mid.clone().sub(start).normalize());shoulder.quaternion.copy(shoulder.parent.getWorldQuaternion(new T.Quaternion()).invert()).multiply(upperQ);shoulder.updateWorldMatrix(false,true);
  const lowerQ=new T.Quaternion().setFromUnitVectors(hand.position.clone().normalize(),target.clone().sub(mid).normalize());elbow.quaternion.copy(elbow.parent.getWorldQuaternion(new T.Quaternion()).invert()).multiply(lowerQ);elbow.updateWorldMatrix(false,true);
  hand.quaternion.copy(hand.parent.getWorldQuaternion(new T.Quaternion()).invert()).multiply(worldQuaternion);hand.updateWorldMatrix(false,true);

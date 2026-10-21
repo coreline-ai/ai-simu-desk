@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: refined sofa support pauses without drift and yields both arms for all five work returns
+ok 1 - refined sofa support pauses without drift and yields both arms for all five work returns
+  ---
+  duration_ms: 4004.243542
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4099.212542

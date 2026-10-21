@@ -1,0 +1,78 @@
+{
+  "at": "2026-10-21T08:38:38.769Z",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/library/",
+      "status": 200
+    },
+    {
+      "path": "/demos/demo/",
+      "status": 200
+    },
+    {
+      "path": "/demos/pilot-3d/",
+      "status": 200
+    },
+    {
+      "path": "/demos/visual-upgrade/",
+      "status": 200
+    },
+    {
+      "path": "/demos/studio-v5/",
+      "status": 200
+    },
+    {
+      "path": "/demos/room-quality/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/team/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/natural/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/roles/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/expressive/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/interaction/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/refined/",
+      "status": 200
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "edition": "local",
+    "database": "pglite",
+    "aiProvider": "fake"
+  },
+  "appHash": "899f64a0e6a93a7a14a3bd48456693db287fe03887cc179baad81ce2ab616f2a",
+  "matchesQABrowserBundle": true,
+  "passed": true,
+  "finalAt": "2026-10-21T08:40:46.208Z",
+  "finalRelease": "/Volumes/ExternalSSD/projects_10/ai-simu-desk/.data/build-releases/1792571949084-9020dfda-aa6c-4e78-92c9-56569517cb24/client",
+  "versionedEntries": 27,
+  "finalDocumentationCurrent": true
+}
