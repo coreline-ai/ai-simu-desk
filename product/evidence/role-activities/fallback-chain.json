@@ -1,0 +1,74 @@
+[
+  {
+    "target": 3,
+    "version": 6,
+    "runtime": 3,
+    "canvas": 1,
+    "textures": 48,
+    "geometries": 194,
+    "claims": {},
+    "cups": [
+      "desk",
+      "desk",
+      "desk",
+      "desk",
+      "desk"
+    ],
+    "status": "{\"kind\":\"ready\",\"version\":6,\"activity\":true,\"error\":\"intentional mid-prop runtime failure\"}",
+    "errors": []
+  },
+  {
+    "target": 2,
+    "version": 6,
+    "runtime": 2,
+    "canvas": 1,
+    "textures": 48,
+    "geometries": 194,
+    "claims": {},
+    "cups": [
+      "desk",
+      "desk",
+      "desk",
+      "desk",
+      "desk"
+    ],
+    "status": "{\"kind\":\"ready\",\"version\":6,\"activity\":true,\"error\":\"intentional v3 binding failure\"}",
+    "errors": []
+  },
+  {
+    "target": 6,
+    "version": 6,
+    "runtime": null,
+    "canvas": 1,
+    "textures": 48,
+    "geometries": 190,
+    "claims": null,
+    "cups": null,
+    "status": "{\"kind\":\"ready\",\"version\":6,\"activity\":false,\"error\":\"intentional v2 binding failure\"}",
+    "errors": []
+  },
+  {
+    "target": 5,
+    "version": 5,
+    "runtime": null,
+    "canvas": 1,
+    "textures": 28,
+    "geometries": 158,
+    "claims": null,
+    "cups": null,
+    "status": "{\"kind\":\"ready\",\"version\":5,\"activity\":false,\"error\":\"Failed to fetch\"}",
+    "errors": []
+  },
+  {
+    "target": 4,
+    "version": 4,
+    "runtime": null,
+    "canvas": 1,
+    "textures": 3,
+    "geometries": 221,
+    "claims": null,
+    "cups": null,
+    "status": "{\"kind\":\"ready\",\"version\":4,\"activity\":false,\"error\":\"Failed to fetch\"}",
+    "errors": []
+  }
+]

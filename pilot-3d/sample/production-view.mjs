@@ -4,7 +4,7 @@ import {createStudioView} from '../src/scene.mjs';
 export function createProductionView(host,callbacks={},options={}){
  const requested=options.modelVersion??(options.modelUrl?.includes('studio-team-v5')?5:6);
  const targets=requested===6?[
-  ...(options.activityRuntime?[{version:6,activity:true,runtimeFactory:options.runtimeFactory,url:options.modelUrl??'/assets/studio-room-v6.glb'},...(options.fallbackRuntimeFactory?[{version:6,activity:true,recoveredActivity:true,runtimeFactory:options.fallbackRuntimeFactory,url:options.modelUrl??'/assets/studio-room-v6.glb'}]:[])]:[]),
+  ...(options.activityRuntime?[{version:6,activity:true,runtimeFactory:options.runtimeFactory,url:options.modelUrl??'/assets/studio-room-v6.glb'},...[...(options.fallbackRuntimeFactories??[]),...(options.fallbackRuntimeFactory?[options.fallbackRuntimeFactory]:[])].map(runtimeFactory=>({version:6,activity:true,recoveredActivity:true,runtimeFactory,url:options.modelUrl??'/assets/studio-room-v6.glb'}))]:[]),
   {version:6,url:options.modelUrl??'/assets/studio-room-v6.glb'},
   {version:5,url:options.fallbackModelUrl??'/assets/studio-team-v5.glb'},
   {version:4,url:'/assets/studio-team-v4.glb'},

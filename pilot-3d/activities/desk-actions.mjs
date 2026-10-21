@@ -1,0 +1,56 @@
+import * as T from 'three';
+import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+import {part} from '../sample/character-rig.mjs';
+import {ease} from '../sample/motion.mjs';
+import {solveArm} from './interactions.mjs';
+const V=(...a)=>new T.Vector3(...a),Y=V(0,1,0);
+export const ROLE_LABELS={nara:'노트에 기획 메모',sora:'태블릿 스케치',jun:'코드 화면 가리키기',min:'체크리스트 확인',leo:'문서 정리'};
+const LENGTHS={reach:1.2,grasp:.3,use:5.4,replace:1.1,release:.3,retract:.8};
+function world(node){return{p:node.getWorldPosition(V()),q:node.getWorldQuaternion(new T.Quaternion())};}
+function setWorld(node,p,q){node.parent.updateWorldMatrix(true,false);node.position.copy(node.parent.worldToLocal(p.clone()));node.quaternion.copy(node.parent.getWorldQuaternion(new T.Quaternion()).invert()).multiply(q);node.updateWorldMatrix(false,true);}
+function handShape(hand,pointing){const name=pointing?'RolePointGrip':'RoleWritingGrip';let grip=hand.getObjectByName(name);if(grip)return grip;const pieces=[],palm=new T.SphereGeometry(1,12,8);palm.scale(.029,.036,.024);palm.translate(.029,.005,-.01);pieces.push(palm);
+ for(let i=0;i<3;i++){const g=new T.TorusGeometry(.013,.006,5,10,Math.PI*1.7);g.rotateX(Math.PI/2);g.translate(.002,-.016+i*.015,.002);pieces.push(g);}const thumb=new T.CapsuleGeometry(.009,.025,3,8);thumb.rotateZ(.7);thumb.translate(.014,.025,.012);pieces.push(thumb);
+ if(pointing){const finger=new T.CapsuleGeometry(.008,.055,3,8);finger.translate(0,-.045,0);pieces.push(finger);}
+ const gs=pieces.map(g=>g.toNonIndexed());const geometry=mergeGeometries(gs);for(const g of [...pieces,...gs])g.dispose();grip=new T.Mesh(geometry,hand.children.find(n=>n.material).material);grip.name=name;grip.visible=false;grip.castShadow=true;hand.add(grip);return grip;}
+// Expose one existing instanced page for motion, without copying the visible page.
+function existingProp(model,name,extracted){let node=model.getObjectByName(name);if(node)return node;let found;model.traverse(n=>{const index=n.userData.parts?.indexOf(name)??-1;if(n.isInstancedMesh&&index>=0)found={n,index};});if(!found)throw Error('역할 소품 누락: '+name);const {n,index}=found,matrix=new T.Matrix4();n.getMatrixAt(index,matrix);node=new T.Mesh(n.geometry,n.material);node.name=name;matrix.decompose(node.position,node.quaternion,node.scale);node.castShadow=true;node.receiveShadow=true;n.parent.add(node);n.setMatrixAt(index,new T.Matrix4().makeScale(0,0,0));n.instanceMatrix.needsUpdate=true;extracted.push({n,index,matrix,node});return node;}
+export class DeskAction{
+ constructor(model,actor,id){this.actor=actor;this.id=id;this.hand=part(actor,'NaraHandR');this.extracted=[];this.snapshots=[];this.stage='idle';this.owner='desk';this.time=0;this.done=0;this.interruptions=0;this.events=0;this.handError=0;this.tipError=0;this.history=[];this.disposed=false;
+  const prefix=actor.userData.prefix;this.grip=handShape(this.hand,id==='jun');this.otherGrip=handShape(this.hand,id!=='jun');this.open=this.hand.children.filter(n=>n!==this.grip&&n!==this.otherGrip);this.surface=null;
+  const find=s=>existingProp(model,prefix+s,this.extracted),move=(node,point)=>{this.snapshots.push({node,parent:node.parent,p:node.position.clone(),q:node.quaternion.clone(),s:node.scale.clone()});actor.parent.updateWorldMatrix(true,false);node.parent.updateWorldMatrix(true,false);node.position.copy(node.parent.worldToLocal(actor.parent.localToWorld(V(point[0],point[1],point[2]-.6))));return node;};
+  if(id==='nara'){this.surface=move(find('PlanningNotebook'),[.43,.751,.53]);this.prop=find('PlanningPencil');}
+  if(id==='sora'){this.surface=move(find('PenTablet'),[.43,.755,.51]);move(find('TabletScreen'),[.43,.764,.51]);this.prop=find('Stylus');}
+  if(id==='min'){this.surface=move(find('Checklist'),[.43,.753,.49]);for(let i=0;i<4;i++)move(find('Check'+i),[.35,.760,.42+i*.045]);this.prop=find('PlanningPencil');}
+  if(id==='leo'){this.prop=find('DocumentPage4');}
+  if(id==='jun')this.monitor=find('ExternalMonitor');
+  if(this.prop){move(this.prop,id==='leo'?[.41,.772,.51]:[.46,.789,.50]);if(id!=='leo')this.prop.quaternion.copy(this.prop.parent.getWorldQuaternion(new T.Quaternion()).invert()).multiply(actor.parent.getWorldQuaternion(new T.Quaternion())).multiply(new T.Quaternion().setFromUnitVectors(Y,V(0,0,1)));this.homeParent=this.prop.parent;this.home={p:this.prop.position.clone(),q:this.prop.quaternion.clone()};this.prop.geometry.computeBoundingBox();this.half=(this.prop.geometry.boundingBox.max.y-this.prop.geometry.boundingBox.min.y)/2;this.homeOffset=.065-this.half;}
+  this.contactY=id==='nara'?.772:id==='sora'?.768:.761;this.penAxis=V(.35,.93,-.10).normalize();
+ }
+ get busy(){return this.stage!=='idle';}
+ setGrip(value){for(const n of this.open)n.visible=!value;this.grip.visible=value;this.otherGrip.visible=false;}
+ enter(stage){this.stage=stage;this.time=0;this.fromHand=world(this.hand);if(this.prop)this.fromProp=world(this.prop);this.history.push(stage);if(this.history.length>16)this.history.shift();}
+ start({work=false}={}){if(this.disposed||this.busy)return false;this.work=work;this.returning=false;this.used=false;this.enter('reach');return true;}
+ cancel(){if(!this.busy||this.returning)return;this.returning=true;this.interruptions++;this.enter(this.owner==='hand'?'replace':'retract');}
+ tick(dt){if(!this.busy||this.disposed)return;this.time+=dt;if(this.time<LENGTHS[this.stage])return;
+  if(this.stage==='reach')this.enter('grasp');else if(this.stage==='grasp'){if(this.prop){this.hand.attach(this.prop);this.owner='hand';this.events++;}this.setGrip(true);this.enter('use');}
+  else if(this.stage==='use'){this.used=true;this.enter('replace');}else if(this.stage==='replace'){this.release();this.enter('release');}else if(this.stage==='release')this.enter('retract');else{this.setGrip(false);this.stage='idle';if(this.used)this.done++;this.returning=false;}}
+ release(){if(this.prop&&this.owner==='hand'){this.homeParent.attach(this.prop);this.prop.position.copy(this.home.p);this.prop.quaternion.copy(this.home.q);this.owner='desk';this.events++;}this.setGrip(false);}
+ homeWorld(){this.homeParent.updateWorldMatrix(true,false);return{p:this.homeParent.localToWorld(this.home.p.clone()),q:this.homeParent.getWorldQuaternion(new T.Quaternion()).multiply(this.home.q)};}
+ target(){const t=this.time,id=this.id;let local,pen;
+  if(id==='jun'){local=V(-.02,.97,.39);local.x+=Math.sin(t*1.4)*.025;}
+  else if(id==='leo'){local=V(.36,.86,.40);local.x+=Math.sin(t*.85)*.045;local.y+=Math.sin(Math.PI*Math.min(1,t/1.2))*.035;}
+  else{const x=id==='min'?.35:.355,z=(id==='min'?.42:.445)+(id==='min'?Math.floor(t/1.35)%4*.025:Math.sin(t*1.4)*.012);const tip=V(x+Math.sin(t*7)*.024,this.contactY,z);local=tip.clone().addScaledVector(this.penAxis,.065);pen={tip,center:tip.clone().addScaledVector(this.penAxis,this.half),q:new T.Quaternion().setFromUnitVectors(Y,this.penAxis)};}
+  return{local,pen};}
+ apply(){if(!this.busy)return;const actor=this.actor;actor.updateWorldMatrix(true,true);const aq=actor.getWorldQuaternion(new T.Quaternion()),base=world(this.hand),u=ease(this.time/LENGTHS[this.stage]);let target,q=aq.clone(),prop;
+  const {local,pen}=this.target();let desired=actor.localToWorld(local.clone());if(pen){q=aq.clone().multiply(pen.q);prop={p:actor.localToWorld(pen.center.clone()),q};this.gaze=actor.localToWorld(pen.tip.clone());}else{this.gaze=this.monitor?this.monitor.getWorldPosition(V()):desired.clone();q=this.monitor?new T.Quaternion().setFromUnitVectors(V(0,-1,0),this.gaze.clone().sub(desired).normalize()):aq.clone().multiply(new T.Quaternion().setFromAxisAngle(V(1,0,0),-Math.PI/2));}
+  if(['reach','grasp'].includes(this.stage)){if(this.prop){const home=this.homeWorld();desired=this.id==='leo'?home.p.clone().add(V(-.07,.015,-.05).applyQuaternion(aq)):home.p.clone().addScaledVector(Y.clone().applyQuaternion(home.q),this.homeOffset);q=this.id==='leo'?aq.clone().multiply(new T.Quaternion().setFromAxisAngle(V(1,0,0),-Math.PI/2)):home.q;}const blend=this.stage==='grasp'?1:u;target=this.fromHand.p.clone().lerp(desired,blend);q=this.fromHand.q.clone().slerp(q,blend);target.y+=Math.sin(Math.PI*blend)*.045;}
+  else if(this.stage==='use'){const blend=ease(this.time/.85);target=this.fromHand.p.clone().lerp(desired,blend);q=this.fromHand.q.clone().slerp(q,blend);if(this.prop){if(this.id==='leo')prop={p:target.clone().add(V(.07,-.015,.05).applyQuaternion(aq)),q:this.homeWorld().q.clone().multiply(new T.Quaternion().setFromAxisAngle(V(0,1,0),Math.sin(this.time)*.06))};else prop={p:this.fromProp.p.clone().lerp(prop.p,blend),q:this.fromProp.q.clone().slerp(prop.q,blend)};}}
+  else if(this.stage==='replace'){if(this.prop){prop={p:this.fromProp.p.clone().lerp(this.homeWorld().p,u),q:this.fromProp.q.clone().slerp(this.homeWorld().q,u)};const offset=this.id==='leo'?V(-.07,.015,-.05).applyQuaternion(aq):Y.clone().applyQuaternion(prop.q).multiplyScalar(this.homeOffset);target=prop.p.clone().add(offset);q=this.id==='leo'?this.fromHand.q.clone():prop.q.clone();}else{target=this.fromHand.p.clone().lerp(base.p,u);q=this.fromHand.q.clone().slerp(base.q,u);}}
+  else if(this.stage==='release'){target=this.fromHand.p.clone();q=this.fromHand.q.clone();}
+  else{target=this.fromHand.p.clone().lerp(base.p,u);q=this.fromHand.q.clone().slerp(base.q,u);}
+  this.handError=solveArm(actor,target,q,'R');if(this.prop&&this.owner==='hand'&&prop)setWorld(this.prop,prop.p,prop.q);
+  if(pen&&this.stage==='use'&&this.time>.85){const tip=this.prop.localToWorld(V(0,-this.half,0));this.tipError=tip.distanceTo(actor.localToWorld(pen.tip.clone()));}
+ }
+ diagnostics(){return{label:ROLE_LABELS[this.id],stage:this.stage,time:this.time,owner:this.owner,done:this.done,interruptions:this.interruptions,events:this.events,handError:this.handError,tipError:this.tipError,returning:this.returning,history:[...this.history]};}
+ dispose(){if(this.disposed)return;this.disposed=true;this.release();this.setGrip(false);this.stage='idle';for(const {node,parent,p,q,s}of this.snapshots){parent.attach(node);node.position.copy(p);node.quaternion.copy(q);node.scale.copy(s);}for(const {n,index,matrix,node}of this.extracted){n.setMatrixAt(index,matrix);n.instanceMatrix.needsUpdate=true;node.removeFromParent();}}
+}

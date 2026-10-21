@@ -1,0 +1,260 @@
+{
+  "kind": "accelerated-simulation",
+  "simulatedSeconds": 1800,
+  "stepSeconds": 0.06,
+  "teamActivities": {
+    "version": 4,
+    "naturalActors": [
+      "nara"
+    ],
+    "seed": 17,
+    "socialHistory": [],
+    "social": null,
+    "violations": [],
+    "auto": true,
+    "time": 1799.9999999988465,
+    "claims": {
+      "sofa-1": "min-sofa",
+      "walkway": "min-sofa"
+    },
+    "waiting": [],
+    "meeting": null,
+    "meetings": 7,
+    "cancelledMeetings": 0,
+    "actors": {
+      "nara": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 16,
+          "done": 5,
+          "returning": false,
+          "handError": 2.2887833992611187e-16,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 2,
+          "cup": 2,
+          "meeting": 3,
+          "interruptions": 0,
+          "rest": 2,
+          "social": 0,
+          "role": 2,
+          "sofaPair": 0,
+          "pairAttempts": 0,
+          "window": 2
+        },
+        "role": {
+          "label": "노트에 기획 메모",
+          "stage": "idle",
+          "time": 0.8400000000000003,
+          "owner": "desk",
+          "done": 2,
+          "interruptions": 0,
+          "events": 4,
+          "handError": 1.6653345369377348e-16,
+          "tipError": 8.881784197001252e-16,
+          "returning": false,
+          "history": [
+            "reach",
+            "grasp",
+            "use",
+            "replace",
+            "release",
+            "retract",
+            "reach",
+            "grasp",
+            "use",
+            "replace",
+            "release",
+            "retract"
+          ]
+        }
+      },
+      "sora": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 26,
+          "done": 10,
+          "returning": false,
+          "handError": 8.326672684688674e-17,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 3,
+          "cup": 7,
+          "meeting": 3,
+          "interruptions": 0,
+          "rest": 0,
+          "social": 0,
+          "role": 0,
+          "sofaPair": 0,
+          "pairAttempts": 0,
+          "window": 0
+        },
+        "role": {
+          "label": "태블릿 스케치",
+          "stage": "idle",
+          "time": 0,
+          "owner": "desk",
+          "done": 0,
+          "interruptions": 0,
+          "events": 0,
+          "handError": 0,
+          "tipError": 0,
+          "history": []
+        }
+      },
+      "jun": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 30,
+          "done": 12,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 3,
+          "cup": 9,
+          "meeting": 3,
+          "interruptions": 0,
+          "rest": 0,
+          "social": 0,
+          "role": 0,
+          "sofaPair": 0,
+          "pairAttempts": 0,
+          "window": 0
+        },
+        "role": {
+          "label": "코드 화면 가리키기",
+          "stage": "idle",
+          "time": 0,
+          "owner": "desk",
+          "done": 0,
+          "interruptions": 0,
+          "events": 0,
+          "handError": 0,
+          "tipError": 0,
+          "history": []
+        }
+      },
+      "min": {
+        "kind": "sofa",
+        "stage": "forward",
+        "returning": false,
+        "slot": 1,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 20,
+          "done": 7,
+          "returning": false,
+          "handError": 3.1401849173675503e-16,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 3,
+          "cup": 4,
+          "meeting": 3,
+          "interruptions": 0,
+          "rest": 0,
+          "social": 0,
+          "role": 0,
+          "sofaPair": 0,
+          "pairAttempts": 0,
+          "window": 0
+        },
+        "role": {
+          "label": "체크리스트 확인",
+          "stage": "idle",
+          "time": 0,
+          "owner": "desk",
+          "done": 0,
+          "interruptions": 0,
+          "events": 0,
+          "handError": 0,
+          "tipError": 0,
+          "history": []
+        }
+      },
+      "leo": {
+        "kind": "desk",
+        "stage": "idle",
+        "returning": false,
+        "slot": null,
+        "cup": {
+          "state": "idle",
+          "time": 0,
+          "owner": "desk",
+          "events": 20,
+          "done": 8,
+          "returning": false,
+          "handError": 0,
+          "cupCount": 1
+        },
+        "restStyle": null,
+        "counts": {
+          "sofa": 4,
+          "cup": 6,
+          "meeting": 2,
+          "interruptions": 0,
+          "rest": 0,
+          "social": 0,
+          "role": 0,
+          "sofaPair": 0,
+          "pairAttempts": 0,
+          "window": 0
+        },
+        "role": {
+          "label": "문서 정리",
+          "stage": "idle",
+          "time": 0,
+          "owner": "desk",
+          "done": 0,
+          "interruptions": 0,
+          "events": 0,
+          "handError": 0,
+          "tipError": 0,
+          "history": []
+        }
+      }
+    },
+    "roleActors": [
+      "nara"
+    ],
+    "sofaPair": null,
+    "pairHistory": [],
+    "window": {
+      "available": true,
+      "issue": null,
+      "position": [
+        0.4,
+        0,
+        -3.1
+      ]
+    }
+  }
+}

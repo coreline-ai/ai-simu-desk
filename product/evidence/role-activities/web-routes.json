@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/start",
+    "status": 200
+  },
+  {
+    "path": "/demos/activities/roles/?play=1",
+    "status": 200
+  },
+  {
+    "path": "/demos/activities/natural/",
+    "status": 200
+  },
+  {
+    "path": "/library/docs/role-activities-qa.html",
+    "status": 200
+  }
+]

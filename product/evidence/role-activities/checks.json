@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-20T23:41:54.009Z",
+  "baselineCommit": "49c276d69856140ad404429f9bc71d14a590ff9b",
+  "automated": {
+    "command": "npm test",
+    "passed": 190,
+    "failed": 0,
+    "newRoleTests": 9
+  },
+  "staticChecks": {
+    "typecheck": "passed",
+    "boundaries": "passed",
+    "syntax": "62 modules passed"
+  },
+  "build": "passed: npm run build:product",
+  "physicalMobile": "not measured",
+  "gpuHeap": "not measured",
+  "localDefaultRuntime": 4,
+  "productDefaultQA": "passed: five work roles observed, four handoffs, saved/reloaded, workspace switch, logout canvas zero",
+  "initialProductAssetMiB": 10.35,
+  "wallClock": {
+    "continuous": {
+      "passed": true,
+      "elapsed": 601,
+      "active": 599
+    },
+    "mixed": {
+      "passed": true,
+      "elapsed": 1800,
+      "active": 1799
+    }
+  }
+}

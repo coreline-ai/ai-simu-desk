@@ -1,0 +1,19 @@
+import * as T from 'three';
+import {part} from '../sample/character-rig.mjs';
+const V=(...args)=>new T.Vector3(...args),clamp=T.MathUtils.clamp;
+// Eyes and head only; contact solvers always run afterwards.
+export class ActivityGaze{
+ constructor(model,metadata,scheduler){this.model=model;this.metadata=metadata;this.scheduler=scheduler;this.rows=new Map();}
+ target(id,actor,state){const s=this.scheduler,d=s.desks[id],cup=s.cups[id];if(d.busy){const t=d.target();return{key:'prop',point:d.monitor?d.monitor.getWorldPosition(V()):actor.localToWorld((t.pen?.tip??t.local).clone())};}if(cup.state==='sip')return{key:'cup',point:cup.mug.getWorldPosition(V())};if(state.lookAt){const peer=this.model.getObjectByName(this.metadata.bindings[state.lookAt]?.actor);if(peer)return{key:state.lookAt,point:part(peer,'NaraHead').getWorldPosition(V())};}if(state.activity==='window')return{key:'window',point:V(.4,1.7,-6)};return{key:'idle',point:null};}
+ apply(id,actor,state,dt){if(!this.scheduler.enrichedActors.has(id))return;let row=this.rows.get(id);if(!row){const nodes=[];for(const sign of [-1,1])for(const name of ['Iris','EyeGlint','Brow']){const node=part(actor,name+sign);if(node)nodes.push({node,p:node.position.clone()});}const smile=part(actor,'Smile');row={key:'idle',delay:0,yaw:0,pitch:0,eyeX:0,eyeY:0,nodes,smile,smileScale:smile.scale.clone()};this.rows.set(id,row);}
+  const target=this.target(id,actor,state),head=part(actor,'NaraHead'),cup=this.scheduler.cups[id];if(target.key!==row.key){row.key=target.key;row.delay=.10;}row.delay=Math.max(0,row.delay-dt);
+  let yaw=0,pitch=0;if(target.point){actor.updateWorldMatrix(true,true);const local=head.parent.worldToLocal(target.point.clone()).sub(head.position);yaw=clamp(Math.atan2(local.x,local.z),-.30,.30);pitch=clamp(-Math.atan2(local.y,Math.hypot(local.x,local.z)),-.10,.24);}else{yaw=Math.sin(this.scheduler.time*.27+this.scheduler.ids.indexOf(id))*.045;}
+  if(cup.state==='sip'){yaw=clamp(yaw,-.05,.05);pitch=clamp(pitch,-.025,.035);}
+  const eyeAlpha=1-Math.exp(-dt*15),headAlpha=row.delay>0?0:1-Math.exp(-dt*4.5);row.eyeX+=(clamp(yaw-row.yaw,-.25,.25)*.021-row.eyeX)*eyeAlpha;row.eyeY+=(clamp(pitch-row.pitch,-.2,.2)*-.006-row.eyeY)*eyeAlpha;row.yaw+=(yaw-row.yaw)*headAlpha;row.pitch+=(pitch-row.pitch)*headAlpha;
+  head.rotation.y=clamp(head.rotation.y*.35+row.yaw,-.35,.35);head.rotation.x=clamp(head.rotation.x*.5+row.pitch,-.15,.28);const expression=['sofa_agree','social_confirm','meeting_ack'].includes(state.action)?1:state.action==='sofa_listen'?.45:0;
+  for(const {node,p}of row.nodes){node.position.copy(p);if(/Iris|EyeGlint/.test(node.name)){node.position.x+=clamp(row.eyeX,-.0055,.0055);node.position.y+=clamp(row.eyeY,-.0012,.0012);}else node.position.y+=expression*.0015;}
+  row.smile.scale.x=row.smileScale.x*(1+expression*.025);row.smile.scale.y=row.smileScale.y*(1+expression*.015);
+ }
+ diagnostics(){return Object.fromEntries([...this.rows].map(([id,r])=>[id,{target:r.key,eyeX:r.eyeX,eyeY:r.eyeY,yaw:r.yaw,pitch:r.pitch}]));}
+ dispose(){for(const r of this.rows.values()){for(const {node,p}of r.nodes)node.position.copy(p);r.smile.scale.copy(r.smileScale);}this.rows.clear();}
+}

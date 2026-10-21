@@ -1,0 +1,110 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "id": "nara",
+      "role": {
+        "label": "노트에 기획 메모",
+        "stage": "use",
+        "time": 2.0166000000000013,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 2.482534153247273e-16,
+        "tipError": 5.087681048627601e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "id": "sora",
+      "role": {
+        "label": "태블릿 스케치",
+        "stage": "use",
+        "time": 2.0164999999999997,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 5.551115123125783e-17,
+        "tipError": 2.5438405243138006e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "id": "jun",
+      "role": {
+        "label": "코드 화면 가리키기",
+        "stage": "use",
+        "time": 2.016700000000001,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 1.5700924586837752e-16,
+        "tipError": 0,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "id": "min",
+      "role": {
+        "label": "체크리스트 확인",
+        "stage": "use",
+        "time": 2.0164999999999997,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 0,
+        "tipError": 3.3306690738754696e-16,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "id": "leo",
+      "role": {
+        "label": "문서 정리",
+        "stage": "use",
+        "time": 2.0332000000000012,
+        "owner": "hand",
+        "done": 0,
+        "interruptions": 0,
+        "events": 1,
+        "handError": 4.577566798522237e-16,
+        "tipError": 0,
+        "returning": false,
+        "history": [
+          "reach",
+          "grasp",
+          "use"
+        ]
+      },
+      "errors": []
+    }
+  ]
+}
