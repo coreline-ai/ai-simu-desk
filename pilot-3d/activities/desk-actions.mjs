@@ -3,6 +3,7 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {part} from '../sample/character-rig.mjs';
 import {ease} from '../sample/motion.mjs';
 import {solveArm} from './interactions.mjs';
+import {ROLE_VARIANTS,roleVariation} from './role-variations.mjs';
 const V=(...a)=>new T.Vector3(...a),Y=V(0,1,0);
 export const ROLE_LABELS={nara:'노트에 기획 메모',sora:'태블릿 스케치',jun:'코드 화면 가리키기',min:'체크리스트 확인',leo:'문서 정리'};
 const LENGTHS={reach:1.2,grasp:.3,use:5.4,replace:1.1,release:.3,retract:.8};
@@ -15,7 +16,7 @@ function handShape(hand,pointing){const name=pointing?'RolePointGrip':'RoleWriti
 // Expose one existing instanced page for motion, without copying the visible page.
 function existingProp(model,name,extracted){let node=model.getObjectByName(name);if(node)return node;let found;model.traverse(n=>{const index=n.userData.parts?.indexOf(name)??-1;if(n.isInstancedMesh&&index>=0)found={n,index};});if(!found)throw Error('역할 소품 누락: '+name);const {n,index}=found,matrix=new T.Matrix4();n.getMatrixAt(index,matrix);node=new T.Mesh(n.geometry,n.material);node.name=name;matrix.decompose(node.position,node.quaternion,node.scale);node.castShadow=true;node.receiveShadow=true;n.parent.add(node);n.setMatrixAt(index,new T.Matrix4().makeScale(0,0,0));n.instanceMatrix.needsUpdate=true;extracted.push({n,index,matrix,node});return node;}
 export class DeskAction{
- constructor(model,actor,id){this.actor=actor;this.id=id;this.hand=part(actor,'NaraHandR');this.extracted=[];this.snapshots=[];this.stage='idle';this.owner='desk';this.time=0;this.done=0;this.interruptions=0;this.events=0;this.handError=0;this.tipError=0;this.history=[];this.disposed=false;
+ constructor(model,actor,id,{expressive=false}={}){this.expressive=expressive;this.variant=0;this.starts=0;this.variantsSeen=new Set();this.actor=actor;this.id=id;this.hand=part(actor,'NaraHandR');this.extracted=[];this.snapshots=[];this.stage='idle';this.owner='desk';this.time=0;this.done=0;this.interruptions=0;this.events=0;this.handError=0;this.tipError=0;this.history=[];this.disposed=false;
   const prefix=actor.userData.prefix;this.grip=handShape(this.hand,id==='jun');this.otherGrip=handShape(this.hand,id!=='jun');this.open=this.hand.children.filter(n=>n!==this.grip&&n!==this.otherGrip);this.surface=null;
   const find=s=>existingProp(model,prefix+s,this.extracted),move=(node,point)=>{this.snapshots.push({node,parent:node.parent,p:node.position.clone(),q:node.quaternion.clone(),s:node.scale.clone()});actor.parent.updateWorldMatrix(true,false);node.parent.updateWorldMatrix(true,false);node.position.copy(node.parent.worldToLocal(actor.parent.localToWorld(V(point[0],point[1],point[2]-.6))));return node;};
   if(id==='nara'){this.surface=move(find('PlanningNotebook'),[.43,.751,.53]);this.prop=find('PlanningPencil');}
@@ -29,17 +30,18 @@ export class DeskAction{
  get busy(){return this.stage!=='idle';}
  setGrip(value){for(const n of this.open)n.visible=!value;this.grip.visible=value;this.otherGrip.visible=false;}
  enter(stage){this.stage=stage;this.time=0;this.fromHand=world(this.hand);if(this.prop)this.fromProp=world(this.prop);this.history.push(stage);if(this.history.length>16)this.history.shift();}
- start({work=false}={}){if(this.disposed||this.busy)return false;this.work=work;this.returning=false;this.used=false;this.enter('reach');return true;}
+ start({work=false,variant}={}){if(this.disposed||this.busy)return false;this.work=work;this.variant=this.expressive?(variant??this.starts)%3:0;this.starts++;this.returning=false;this.used=false;this.enter('reach');return true;}
  cancel(){if(!this.busy||this.returning)return;this.returning=true;this.interruptions++;this.enter(this.owner==='hand'?'replace':'retract');}
  tick(dt){if(!this.busy||this.disposed)return;this.time+=dt;if(this.time<LENGTHS[this.stage])return;
   if(this.stage==='reach')this.enter('grasp');else if(this.stage==='grasp'){if(this.prop){this.hand.attach(this.prop);this.owner='hand';this.events++;}this.setGrip(true);this.enter('use');}
-  else if(this.stage==='use'){this.used=true;this.enter('replace');}else if(this.stage==='replace'){this.release();this.enter('release');}else if(this.stage==='release')this.enter('retract');else{this.setGrip(false);this.stage='idle';if(this.used)this.done++;this.returning=false;}}
+  else if(this.stage==='use'){this.used=true;this.variantsSeen.add(this.variant);this.enter('replace');}else if(this.stage==='replace'){this.release();this.enter('release');}else if(this.stage==='release')this.enter('retract');else{this.setGrip(false);this.stage='idle';if(this.used)this.done++;this.returning=false;}}
  release(){if(this.prop&&this.owner==='hand'){this.homeParent.attach(this.prop);this.prop.position.copy(this.home.p);this.prop.quaternion.copy(this.home.q);this.owner='desk';this.events++;}this.setGrip(false);}
  homeWorld(){this.homeParent.updateWorldMatrix(true,false);return{p:this.homeParent.localToWorld(this.home.p.clone()),q:this.homeParent.getWorldQuaternion(new T.Quaternion()).multiply(this.home.q)};}
- target(){const t=this.time,id=this.id;let local,pen;
+ target(){const t=this.expressive&&this.stage!=='use'?0:this.time,id=this.id;let local,pen;
   if(id==='jun'){local=V(-.02,.97,.39);local.x+=Math.sin(t*1.4)*.025;}
   else if(id==='leo'){local=V(.36,.86,.40);local.x+=Math.sin(t*.85)*.045;local.y+=Math.sin(Math.PI*Math.min(1,t/1.2))*.035;}
   else{const x=id==='min'?.35:.355,z=(id==='min'?.42:.445)+(id==='min'?Math.floor(t/1.35)%4*.025:Math.sin(t*1.4)*.012);const tip=V(x+Math.sin(t*7)*.024,this.contactY,z);local=tip.clone().addScaledVector(this.penAxis,.065);pen={tip,center:tip.clone().addScaledVector(this.penAxis,this.half),q:new T.Quaternion().setFromUnitVectors(Y,this.penAxis)};}
+  const variation=this.expressive?roleVariation(id,this.variant,t):{};this.reading=!!variation.reading;if(this.variant&&this.expressive){if(pen){pen.tip.x=(id==='min'?.35:.355)+(variation.x??0);pen.tip.z=(id==='min'?.42:.445)+(variation.z??0);pen.tip.y+=variation.lift??0;local=pen.tip.clone().addScaledVector(this.penAxis,.065);pen.center=pen.tip.clone().addScaledVector(this.penAxis,this.half);}else{local.x+=variation.x??0;local.y+=variation.y??0;local.z+=variation.z??0;}}
   return{local,pen};}
  apply(){if(!this.busy)return;const actor=this.actor;actor.updateWorldMatrix(true,true);const aq=actor.getWorldQuaternion(new T.Quaternion()),base=world(this.hand),u=ease(this.time/LENGTHS[this.stage]);let target,q=aq.clone(),prop;
   const {local,pen}=this.target();let desired=actor.localToWorld(local.clone());if(pen){q=aq.clone().multiply(pen.q);prop={p:actor.localToWorld(pen.center.clone()),q};this.gaze=actor.localToWorld(pen.tip.clone());}else{this.gaze=this.monitor?this.monitor.getWorldPosition(V()):desired.clone();q=this.monitor?new T.Quaternion().setFromUnitVectors(V(0,-1,0),this.gaze.clone().sub(desired).normalize()):aq.clone().multiply(new T.Quaternion().setFromAxisAngle(V(1,0,0),-Math.PI/2));}
@@ -51,6 +53,6 @@ export class DeskAction{
   this.handError=solveArm(actor,target,q,'R');if(this.prop&&this.owner==='hand'&&prop)setWorld(this.prop,prop.p,prop.q);
   if(pen&&this.stage==='use'&&this.time>.85){const tip=this.prop.localToWorld(V(0,-this.half,0));this.tipError=tip.distanceTo(actor.localToWorld(pen.tip.clone()));}
  }
- diagnostics(){return{label:ROLE_LABELS[this.id],stage:this.stage,time:this.time,owner:this.owner,done:this.done,interruptions:this.interruptions,events:this.events,handError:this.handError,tipError:this.tipError,returning:this.returning,history:[...this.history]};}
+ diagnostics(){return{label:this.expressive?ROLE_VARIANTS[this.id][this.variant]:ROLE_LABELS[this.id],variant:this.variant,variantsSeen:[...this.variantsSeen],stage:this.stage,time:this.time,owner:this.owner,done:this.done,interruptions:this.interruptions,events:this.events,handError:this.handError,tipError:this.tipError,returning:this.returning,history:[...this.history]};}
  dispose(){if(this.disposed)return;this.disposed=true;this.release();this.setGrip(false);this.stage='idle';for(const {node,parent,p,q,s}of this.snapshots){parent.attach(node);node.position.copy(p);node.quaternion.copy(q);node.scale.copy(s);}for(const {n,index,matrix,node}of this.extracted){n.setMatrixAt(index,matrix);n.instanceMatrix.needsUpdate=true;node.removeFromParent();}}
 }

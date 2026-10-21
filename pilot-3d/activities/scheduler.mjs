@@ -16,11 +16,12 @@ export class SofaScheduler {
  enter(stage){this.stage=stage;this.elapsed=0;if(stage==='rest'&&this.options.sharedTransit){this.book.releaseKeys(this.owner,['walkway']);this.base.owner=null;}}
  requestReturn(reason='회의 종료'){this.returning=true;this.reason=reason;}
  finish(success){this.book.release(this.owner);if(this.base.owner===this.owner)this.base.owner=null;this.base.nextRest=Infinity;this.route=null;this.stage='idle';this.elapsed=0;if(success){if(this.returning)this.interruptions++;else this.completed++;}this.returning=false;}
- beginHome(points,yaw){this.route=new Route(points,yaw,this.options.routeMotion);this.enter('home');}
+ makeRoute(points,yaw){return new (this.options.routeFactory??Route)(points,yaw,this.options.routeMotion);}
+ beginHome(points,yaw){this.route=this.makeRoute(points,yaw);this.enter('home');}
  tick(raw){if(this.disposed||this.paused)return;const dt=Math.max(0,Math.min(.06,raw));this.time+=dt;this.refreshBase();this.base.nextRest=Infinity;this.base.tick(dt);this.elapsed+=dt;const a=this.anchors;
   if(this.stage==='idle')return;
   if(this.stage==='queued'){if(!this.base.owner&&(this.options.sharedTransit?this.book.request(this.owner,['walkway',a.seat]):this.book.acquire(this.owner,['walkway',a.seat]))){this.base.owner=this.owner;this.enter('stand');}else if(this.elapsed>=(this.options.waitLimit??6)){this.reason='좌석·통로 이용 불가 · 책상에서 대기';this.finish(false);}return;}
-  if(this.stage==='stand'&&this.elapsed>=2){if(this.returning)this.beginHome([a.route[0]],0);else{this.route=new Route(a.route,0,this.options.routeMotion);this.enter('out');}return;}
+  if(this.stage==='stand'&&this.elapsed>=2){if(this.returning)this.beginHome([a.route[0]],0);else{this.route=this.makeRoute(a.route,0);this.enter('out');}return;}
   if(this.stage==='out'||this.stage==='home'){
    this.route.tick(dt);
    if(this.stage==='out'&&this.returning){this.settleStart=this.route.state();this.homePoints=this.route.reversePoints();this.enter('settle');return;}

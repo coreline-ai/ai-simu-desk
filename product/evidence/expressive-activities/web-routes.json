@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/",
+    "status": 200
+  },
+  {
+    "path": "/start",
+    "status": 200
+  },
+  {
+    "path": "/demos/activities/expressive/?play=1",
+    "status": 200
+  },
+  {
+    "path": "/demos/activities/roles/",
+    "status": 200
+  },
+  {
+    "path": "/demos/activities/natural/",
+    "status": 200
+  },
+  {
+    "path": "/library/docs/expressive-activities-qa.html",
+    "status": 200
+  },
+  {
+    "path": "/library/dev-plan/implement_20261021_091930.html",
+    "status": 200
+  }
+]

@@ -1,0 +1,266 @@
+{
+  "kind": "fast-integration-not-wall-clock",
+  "rows": [
+    {
+      "pair": [
+        "nara",
+        "sora"
+      ],
+      "frames": 261,
+      "peakError": 8.881784197001252e-16,
+      "status": "complete",
+      "speakers": [
+        "sora",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "sora",
+        "nara"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "sora",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "nara",
+        "jun"
+      ],
+      "frames": 261,
+      "peakError": 9.930136612989092e-16,
+      "status": "complete",
+      "speakers": [
+        "jun",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "jun",
+        "nara"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "jun",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "nara",
+        "min"
+      ],
+      "frames": 261,
+      "peakError": 9.930136612989092e-16,
+      "status": "complete",
+      "speakers": [
+        "min",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "min",
+        "nara"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "min",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "nara",
+        "leo"
+      ],
+      "frames": 261,
+      "peakError": 8.95090418262362e-16,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "leo",
+        "nara"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "nara"
+      ]
+    },
+    {
+      "pair": [
+        "sora",
+        "jun"
+      ],
+      "frames": 261,
+      "peakError": 9.155133597044475e-16,
+      "status": "complete",
+      "speakers": [
+        "jun",
+        "sora"
+      ]
+    },
+    {
+      "pair": [
+        "jun",
+        "sora"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "jun",
+        "sora"
+      ]
+    },
+    {
+      "pair": [
+        "sora",
+        "min"
+      ],
+      "frames": 261,
+      "peakError": 9.930136612989092e-16,
+      "status": "complete",
+      "speakers": [
+        "min",
+        "sora"
+      ]
+    },
+    {
+      "pair": [
+        "min",
+        "sora"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "min",
+        "sora"
+      ]
+    },
+    {
+      "pair": [
+        "sora",
+        "leo"
+      ],
+      "frames": 261,
+      "peakError": 8.95090418262362e-16,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "sora"
+      ]
+    },
+    {
+      "pair": [
+        "leo",
+        "sora"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "sora"
+      ]
+    },
+    {
+      "pair": [
+        "jun",
+        "min"
+      ],
+      "frames": 261,
+      "peakError": 1.2560739669470201e-15,
+      "status": "complete",
+      "speakers": [
+        "min",
+        "jun"
+      ]
+    },
+    {
+      "pair": [
+        "min",
+        "jun"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "min",
+        "jun"
+      ]
+    },
+    {
+      "pair": [
+        "jun",
+        "leo"
+      ],
+      "frames": 261,
+      "peakError": 9.930136612989092e-16,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "jun"
+      ]
+    },
+    {
+      "pair": [
+        "leo",
+        "jun"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "jun"
+      ]
+    },
+    {
+      "pair": [
+        "min",
+        "leo"
+      ],
+      "frames": 261,
+      "peakError": 9.992007221626409e-16,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "min"
+      ]
+    },
+    {
+      "pair": [
+        "leo",
+        "min"
+      ],
+      "frames": 261,
+      "peakError": 1.2609709600486848e-15,
+      "status": "complete",
+      "speakers": [
+        "leo",
+        "min"
+      ]
+    }
+  ],
+  "violations": []
+}

@@ -1,0 +1,734 @@
+{
+  "errors": [],
+  "metrics": {
+    "loadedMs": 117,
+    "firstRenderMs": 295,
+    "lastEmit": 691911.1,
+    "drawCalls": 1016,
+    "triangles": 808240,
+    "textures": 48,
+    "geometries": 204,
+    "animationTime": 661.3936999996731,
+    "paused": false,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "measuring": false,
+    "quality": "balanced",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_wrist_relax",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "wrist_relax",
+        "time": 0.2666999999999534,
+        "restCount": 2,
+        "microCount": 11,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 39.96509999999969,
+        "restCount": 2,
+        "microCount": 9,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 43.13159999999955,
+        "restCount": 1,
+        "microCount": 11,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 73.19720000000058,
+        "restCount": 1,
+        "microCount": 10,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 64.99759999999876,
+        "restCount": 1,
+        "microCount": 12,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "teamActivities": {
+      "version": 5,
+      "naturalActors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "seed": 17,
+      "socialHistory": [
+        {
+          "cue": "responsive-meeting-20",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reply",
+            "reflect",
+            "note",
+            "explain",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "min": 0,
+            "jun": 0
+          },
+          "variant": 2,
+          "leader": "jun",
+          "speakers": [
+            "jun",
+            "min"
+          ]
+        },
+        {
+          "cue": "responsive-social-28",
+          "phase": "greet",
+          "status": "cancelled",
+          "history": [],
+          "presented": {
+            "nara": 0,
+            "jun": 0
+          },
+          "reason": "활동 정리",
+          "variant": 0,
+          "leader": "nara",
+          "speakers": []
+        }
+      ],
+      "social": null,
+      "violations": [],
+      "auto": false,
+      "time": 661.2169999996735,
+      "claims": {},
+      "waiting": [],
+      "meeting": null,
+      "meetings": 1,
+      "cancelledMeetings": 1,
+      "actors": {
+        "nara": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 6,
+            "done": 2,
+            "returning": false,
+            "handError": 2.0014830212433605e-16,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 2,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 1,
+            "social": 0,
+            "role": 3,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 1
+          },
+          "role": {
+            "label": "핵심에 밑줄",
+            "variant": 2,
+            "variantsSeen": [
+              0,
+              1,
+              2
+            ],
+            "stage": "idle",
+            "time": 0.8167000000000697,
+            "owner": "desk",
+            "done": 3,
+            "interruptions": 0,
+            "events": 6,
+            "handError": 1.1102230246251565e-16,
+            "tipError": 1.1102230246251565e-16,
+            "returning": false,
+            "history": [
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "sora": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 4,
+            "done": 2,
+            "returning": false,
+            "handError": 5.551115123125783e-17,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 2,
+            "cup": 2,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 2,
+            "social": 0,
+            "role": 3,
+            "sofaPair": 2,
+            "pairAttempts": 2,
+            "window": 1
+          },
+          "role": {
+            "label": "화면과 스케치 비교",
+            "variant": 2,
+            "variantsSeen": [
+              0,
+              1,
+              2
+            ],
+            "stage": "idle",
+            "time": 0.8164999999999998,
+            "owner": "desk",
+            "done": 3,
+            "interruptions": 0,
+            "events": 6,
+            "handError": 1.1443916996305594e-16,
+            "tipError": 2.5438405243138006e-16,
+            "returning": false,
+            "history": [
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "jun": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 6,
+            "done": 3,
+            "returning": false,
+            "handError": 1.5700924586837752e-16,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 1,
+            "interruptions": 0,
+            "rest": 0,
+            "social": 1,
+            "role": 2,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 1
+          },
+          "role": {
+            "label": "다른 코드 영역 설명",
+            "variant": 1,
+            "variantsSeen": [
+              0,
+              1
+            ],
+            "stage": "idle",
+            "time": 0.8165999999999766,
+            "owner": "desk",
+            "done": 2,
+            "interruptions": 0,
+            "events": 0,
+            "handError": 2.220446049250313e-16,
+            "tipError": 0,
+            "returning": false,
+            "history": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "min": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 6,
+            "done": 2,
+            "returning": false,
+            "handError": 2.482534153247273e-16,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 1,
+            "interruptions": 0,
+            "rest": 1,
+            "social": 1,
+            "role": 2,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 0
+          },
+          "role": {
+            "label": "항목별 체크",
+            "variant": 1,
+            "variantsSeen": [
+              0,
+              1
+            ],
+            "stage": "idle",
+            "time": 0.8165999999999768,
+            "owner": "desk",
+            "done": 2,
+            "interruptions": 0,
+            "events": 4,
+            "handError": 2.482534153247273e-16,
+            "tipError": 3.1401849173675503e-16,
+            "returning": false,
+            "history": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "leo": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 2,
+            "done": 1,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 1,
+            "social": 0,
+            "role": 3,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 1
+          },
+          "role": {
+            "label": "문서 들어 내용 확인",
+            "variant": 2,
+            "variantsSeen": [
+              0,
+              1,
+              2
+            ],
+            "stage": "idle",
+            "time": 0.81670000000007,
+            "owner": "desk",
+            "done": 3,
+            "interruptions": 0,
+            "events": 6,
+            "handError": 2.482534153247273e-16,
+            "tipError": 0,
+            "returning": false,
+            "history": [
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        }
+      },
+      "roleActors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "sofaPair": null,
+      "pairHistory": [
+        {
+          "cue": "responsive-sofa-7",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reply",
+            "reflect",
+            "explain",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "sora": 0,
+            "min": 0
+          },
+          "variant": 2,
+          "leader": "min",
+          "speakers": [
+            "min",
+            "sora"
+          ],
+          "ids": [
+            "sora",
+            "min"
+          ]
+        },
+        {
+          "cue": "responsive-sofa-11",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reply",
+            "reflect",
+            "explain",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "nara": 0,
+            "jun": 0
+          },
+          "variant": 2,
+          "leader": "jun",
+          "speakers": [
+            "jun",
+            "nara"
+          ],
+          "ids": [
+            "nara",
+            "jun"
+          ]
+        },
+        {
+          "cue": "responsive-sofa-15",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reflect",
+            "explain",
+            "reply",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "leo": 0,
+            "sora": 0
+          },
+          "variant": 0,
+          "leader": "leo",
+          "speakers": [
+            "leo",
+            "sora"
+          ],
+          "ids": [
+            "leo",
+            "sora"
+          ]
+        }
+      ],
+      "window": {
+        "available": true,
+        "issue": null,
+        "position": [
+          0.4,
+          0,
+          -3.1
+        ]
+      },
+      "expressiveActors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "traffic": {
+        "policy": "atomic-corridors",
+        "capacity": 2,
+        "radius": 0.5,
+        "grid": 0.4,
+        "active": [],
+        "peak": 2,
+        "simultaneousGrants": 5,
+        "grants": 30,
+        "maxWait": 64.49749999980634,
+        "waiting": []
+      },
+      "choiceHistory": [
+        {
+          "id": "sora",
+          "kind": "sofaPair",
+          "time": 70.11380000000263
+        },
+        {
+          "id": "min",
+          "kind": "sofaPair",
+          "time": 70.11380000000263
+        },
+        {
+          "id": "leo",
+          "kind": "role",
+          "time": 96.16290000000845
+        },
+        {
+          "id": "leo",
+          "kind": "micro",
+          "time": 113.19550000001229
+        },
+        {
+          "id": "nara",
+          "kind": "sofaPair",
+          "time": 159.27690000002139
+        },
+        {
+          "id": "jun",
+          "kind": "sofaPair",
+          "time": 159.27690000002139
+        },
+        {
+          "id": "sora",
+          "kind": "window",
+          "time": 166.293300000023
+        },
+        {
+          "id": "sora",
+          "kind": "sofaPair",
+          "time": 245.43350000004105
+        },
+        {
+          "id": "leo",
+          "kind": "sofaPair",
+          "time": 245.43350000004105
+        },
+        {
+          "id": "min",
+          "kind": "micro",
+          "time": 253.44980000004287
+        },
+        {
+          "id": "nara",
+          "kind": "window",
+          "time": 264.4660000000404
+        },
+        {
+          "id": "jun",
+          "kind": "cup",
+          "time": 288.51510000004595
+        },
+        {
+          "id": "jun",
+          "kind": "meeting",
+          "time": 334.59650000005644
+        },
+        {
+          "id": "min",
+          "kind": "meeting",
+          "time": 334.59650000005644
+        },
+        {
+          "id": "sora",
+          "kind": "role",
+          "time": 385.6945000000681
+        },
+        {
+          "id": "leo",
+          "kind": "window",
+          "time": 393.71090000006996
+        },
+        {
+          "id": "sora",
+          "kind": "cup",
+          "time": 404.7271000000725
+        },
+        {
+          "id": "nara",
+          "kind": "role",
+          "time": 411.74350000007405
+        },
+        {
+          "id": "nara",
+          "kind": "cup",
+          "time": 428.77620000007795
+        },
+        {
+          "id": "sora",
+          "kind": "role",
+          "time": 446.80870000008207
+        },
+        {
+          "id": "sora",
+          "kind": "micro",
+          "time": 463.84140000008597
+        },
+        {
+          "id": "nara",
+          "kind": "micro",
+          "time": 474.8576000000885
+        },
+        {
+          "id": "sora",
+          "kind": "cup",
+          "time": 509.9229000000965
+        },
+        {
+          "id": "nara",
+          "kind": "role",
+          "time": 516.9393000000924
+        },
+        {
+          "id": "jun",
+          "kind": "role",
+          "time": 525.9556000000797
+        },
+        {
+          "id": "nara",
+          "kind": "meeting",
+          "time": 544.9882000000222
+        },
+        {
+          "id": "jun",
+          "kind": "meeting",
+          "time": 544.9882000000222
+        },
+        {
+          "id": "sora",
+          "kind": "window",
+          "time": 552.004600000001
+        },
+        {
+          "id": "min",
+          "kind": "role",
+          "time": 569.0372999999502
+        },
+        {
+          "id": "min",
+          "kind": "cup",
+          "time": 580.0533999999174
+        },
+        {
+          "id": "leo",
+          "kind": "role",
+          "time": 587.0697999998956
+        }
+      ]
+    },
+    "resetTimes": 1,
+    "cutaway": {
+      "left": false,
+      "back": false
+    }
+  }
+}

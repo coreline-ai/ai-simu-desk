@@ -40,7 +40,7 @@ export class RoleActivityScheduler extends TeamActivityScheduler{
   const pairEligible=this.ids.filter(id=>this.enrichedActors.has(id)),needsPair=pairEligible.length>=2&&pairEligible.some(id=>this.pairCounts[id]===0);
   if(needsPair){const pair=free.filter(id=>this.enrichedActors.has(id)).sort((a,b)=>this.pairCounts[a]-this.pairCounts[b]||this.pairAttempts[a]-this.pairAttempts[b]||this.jitter(a)-this.jitter(b));if(pair.length>=2&&this.startSofaPair(pair.slice(0,2)))return true;}
   const count=(id,kind)=>kind==='role'?this.desks[id].done:kind==='sofaPair'?this.pairCounts[id]:kind==='window'?this.windowCounts[id]:kind==='rest'?this.restCounts[id]:this.counts[id][kind];
-  const choices=free.flatMap(id=>types.map((kind,index)=>({id,kind,count:count(id,kind),rank:(index+this.ids.indexOf(id)+this.autoRound)%types.length}))).sort((a,b)=>a.count-b.count||a.rank-b.rank||this.jitter(a.id)-this.jitter(b.id));
+  const choices=free.flatMap(id=>types.map((kind,index)=>({id,kind,count:this.activityScore?.(id,kind,count(id,kind))??count(id,kind),rank:(index+this.ids.indexOf(id)+this.autoRound)%types.length}))).sort((a,b)=>a.count-b.count||a.rank-b.rank||this.jitter(a.id)-this.jitter(b.id));
   for(const {id,kind}of choices){let started=false;
    if(kind==='role'&&this.time>=(this.roleReady.get(id)??0))started=this.startRole(id);
    if(kind==='sofa'&&!needsPair&&[...this.records.values()].filter(r=>r.kind==='sofa').length<2)started=this.startSofa(id);

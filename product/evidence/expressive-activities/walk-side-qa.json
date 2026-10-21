@@ -1,0 +1,95 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "id": "nara",
+      "role": {
+        "label": "기획 메모",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 0,
+        "tipError": 0,
+        "history": []
+      },
+      "errors": []
+    },
+    {
+      "id": "sora",
+      "role": {
+        "label": "태블릿 스케치",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 0,
+        "tipError": 0,
+        "history": []
+      },
+      "errors": []
+    },
+    {
+      "id": "jun",
+      "role": {
+        "label": "코드 화면 설명",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 0,
+        "tipError": 0,
+        "history": []
+      },
+      "errors": []
+    },
+    {
+      "id": "min",
+      "role": {
+        "label": "체크리스트 확인",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 0,
+        "tipError": 0,
+        "history": []
+      },
+      "errors": []
+    },
+    {
+      "id": "leo",
+      "role": {
+        "label": "문서 정리",
+        "variant": 0,
+        "variantsSeen": [],
+        "stage": "idle",
+        "time": 0,
+        "owner": "desk",
+        "done": 0,
+        "interruptions": 0,
+        "events": 0,
+        "handError": 0,
+        "tipError": 0,
+        "history": []
+      },
+      "errors": []
+    }
+  ]
+}

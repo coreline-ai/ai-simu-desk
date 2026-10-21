@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-10-21T01:49:57.433368+00:00",
+  "status": "complete",
+  "baselineCommit": "8899fb97b2a65c75172035a21e8e4cb66a0c7a04",
+  "automated": {
+    "command": "npm test",
+    "passed": 201,
+    "failed": 0,
+    "newCandidateTests": 11
+  },
+  "staticChecks": {
+    "typecheck": "passed",
+    "boundaries": "passed",
+    "syntaxModules": 68
+  },
+  "performance": {
+    "old": {
+      "calls": 1016,
+      "triangles": 808240
+    },
+    "candidate": {
+      "calls": 1016,
+      "triangles": 808240
+    },
+    "gates": {
+      "frames": true,
+      "calls": true,
+      "triangles": true
+    },
+    "p95Max": 16.799999999999272
+  },
+  "wallClock": {
+    "continuous": {
+      "passed": true,
+      "elapsedSeconds": 600,
+      "activeSeconds": 599,
+      "trafficPeak": 2,
+      "coverage": true
+    },
+    "mixed": {
+      "passed": true,
+      "elapsedSeconds": 1801,
+      "activeSeconds": 1799,
+      "trafficPeak": 2,
+      "coverage": true
+    }
+  },
+  "runtimeHashes": {
+    "pilot-3d/activities/expressive-route.mjs": "c8d70bb456eaf2fcac5dc98599a66a62f7a1180e6345eb4ad4d7590369893eec",
+    "pilot-3d/activities/expressive-scheduler.mjs": "eb6ca17245925d409283b40533e5f111ece1997e6270129a0c4321214ce4e7b7",
+    "pilot-3d/activities/expressive-motion.mjs": "1404e3c09d3dbcd57ef709df6dd1efed50e8044998072dcc46d0de30c19581f0",
+    "pilot-3d/activities/traffic.mjs": "06bed8a2dc46ed120c066db7b583b0f38b65f72777f5bd4507c19ac347080049",
+    "pilot-3d/activities/responsive-exchange.mjs": "36e1dfc5f4461d88a3a07f052980c052aa2164dcf3f50ad476cfcd3546c101f3",
+    "pilot-3d/activities/role-variations.mjs": "d343d68ee496a88deb6a748339d37b300260749fd2cec75a95ea8336b3a4b715",
+    "pilot-3d/activities/role-scheduler.mjs": "2c814e0f2c82b2354b3fd39f1e9654c75d7b0275feaeb75eef752144d4832a04",
+    "pilot-3d/activities/team-runtime.mjs": "5c2c883159682e0e8f8973d9db0677bd47e9fc4d4a6d6f7aa575b4db13ece988",
+    "pilot-3d/activities/desk-actions.mjs": "5283192344b4c054c72d82b101a062a8eeac43025b2f9e812576fced57f76f8b",
+    "pilot-3d/activities/gaze.mjs": "2f7cd1f5aeb2fd66c430e4a4e23da02af614d415459346d4c2998ae1f2d5fe77",
+    "pilot-3d/activities/scheduler.mjs": "b61ef928d137076c8bc8b720180f7845246ab19f247945045ae30e1b4494c5c1",
+    "pilot-3d/activities/team-soak.mjs": "a7d6e9661f7df4a0ae5c6febebce11d1348310c01b5e7e260a0d176799b65301",
+    "pilot-3d/sample/character-rig.mjs": "105c742154630867418c35074bdc9b0bdefc854302f551fe4151bd3967d44dc0"
+  },
+  "localDefaultRuntime": 5,
+  "defaultApplication": "passed: no injected settings, five work roles, four handoffs, saved/reloaded, spaces and logout",
+  "physicalMobile": "not measured",
+  "actualOSBackground": "not measured; software visibility branch tested",
+  "gpuMemory": "not measured",
+  "jsHeap": "short forced-GC reload comparison observed; long-run leak proof not performed",
+  "initialProductAssetMiB": 10.370831489562988,
+  "build": "passed: npm run build:product",
+  "cleanup": "passed: both real runs, all five at desk, props desk, no claims or sessions"
+}

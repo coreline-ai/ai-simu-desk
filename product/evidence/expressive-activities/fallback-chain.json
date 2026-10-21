@@ -1,0 +1,126 @@
+[
+  {
+    "target": "activity4",
+    "model": 6,
+    "runtime": 4,
+    "canvas": 1,
+    "fault": {
+      "label": "기획 메모",
+      "variant": 0,
+      "variantsSeen": [],
+      "stage": "use",
+      "time": 1.0000000000000009,
+      "owner": "hand",
+      "done": 0,
+      "interruptions": 0,
+      "events": 1,
+      "handError": 4.871083751574258e-16,
+      "tipError": 4.871083751574258e-16,
+      "returning": false,
+      "history": [
+        "reach",
+        "grasp",
+        "use"
+      ]
+    },
+    "claims": {},
+    "errors": []
+  },
+  {
+    "target": "activity3",
+    "model": 6,
+    "runtime": 3,
+    "canvas": 1,
+    "fault": {
+      "label": "기획 메모",
+      "variant": 0,
+      "variantsSeen": [],
+      "stage": "use",
+      "time": 0.9999000000000005,
+      "owner": "hand",
+      "done": 0,
+      "interruptions": 0,
+      "events": 1,
+      "handError": 5.551115123125783e-17,
+      "tipError": 1.1102230246251565e-16,
+      "returning": false,
+      "history": [
+        "reach",
+        "grasp",
+        "use"
+      ]
+    },
+    "claims": {},
+    "errors": []
+  },
+  {
+    "target": "activity2",
+    "model": 6,
+    "runtime": 2,
+    "canvas": 1,
+    "fault": {
+      "label": "기획 메모",
+      "variant": 0,
+      "variantsSeen": [],
+      "stage": "use",
+      "time": 1.0000000000000004,
+      "owner": "hand",
+      "done": 0,
+      "interruptions": 0,
+      "events": 1,
+      "handError": 4.871083751574258e-16,
+      "tipError": 5.23691153334427e-16,
+      "returning": false,
+      "history": [
+        "reach",
+        "grasp",
+        "use"
+      ]
+    },
+    "claims": {},
+    "errors": []
+  },
+  {
+    "target": "model6",
+    "model": 6,
+    "runtime": null,
+    "canvas": 1,
+    "fault": {
+      "label": "기획 메모",
+      "variant": 0,
+      "variantsSeen": [],
+      "stage": "use",
+      "time": 1.0000000000000004,
+      "owner": "hand",
+      "done": 0,
+      "interruptions": 0,
+      "events": 1,
+      "handError": 4.871083751574258e-16,
+      "tipError": 5.23691153334427e-16,
+      "returning": false,
+      "history": [
+        "reach",
+        "grasp",
+        "use"
+      ]
+    },
+    "claims": null,
+    "errors": []
+  },
+  {
+    "target": "model5",
+    "model": 5,
+    "runtime": null,
+    "canvas": 1,
+    "claims": null,
+    "errors": []
+  },
+  {
+    "target": "model4",
+    "model": 4,
+    "runtime": null,
+    "canvas": 1,
+    "claims": null,
+    "errors": []
+  }
+]

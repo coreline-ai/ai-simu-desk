@@ -82,7 +82,7 @@ export function applyPose(actor,p){
   hip.quaternion.setFromUnitVectors(new T.Vector3(0,-1,0),mid.clone().sub(start).normalize());
   const worldLower=new T.Quaternion().setFromUnitVectors(new T.Vector3(0,-1,0),ankle.clone().sub(mid).normalize());
   knee.quaternion.copy(hip.quaternion).invert().multiply(worldLower);
-  foot.position.copy(ankle);foot.rotation.x=p.feet&&!p.feet[i].planted?-.10:0;
+  foot.position.copy(ankle);if(p.feet?.[i].pitch!==undefined||p.feet?.[i].yaw!==undefined)foot.rotation.set(p.feet[i].pitch??0,p.feet[i].yaw??0,0);else{foot.rotation.x=p.feet&&!p.feet[i].planted?-.10:0;if(actor.userData.expressiveFeet)foot.rotation.y=0;}if(p.feet?.[i].yaw!==undefined)actor.userData.expressiveFeet=true;
   const shoulder=node('NaraShoulder'+side),elbow=node('NaraElbow'+side);
   const walk=p.action==='walk'?Math.sin((p.gaitTime??p.time)*2*Math.PI/1+i*Math.PI)*.30*(p.gaitFade??1):0;
   shoulder.rotation.set(-1.05*(1-p.stand)+walk*p.stand,0,sign*p.arms*2.72);
