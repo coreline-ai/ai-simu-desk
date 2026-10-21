@@ -28,6 +28,7 @@
     "build:sample": "node scripts/build-sample-page.mjs",
     "build:office": "node scripts/build-office-v5.mjs && node scripts/build-office-page.mjs",
     "build:room": "node scripts/build-room-quality.mjs",
+    "db:retention": "node --env-file-if-exists=.env.local --import tsx scripts/retention.ts",
     "db:report": "node --env-file-if-exists=.env.local --import tsx scripts/db-report.ts",
     "qa:server": "node --import tsx scripts/qa/server.ts",
     "qa:ui": "node scripts/qa/ui-races.mjs",

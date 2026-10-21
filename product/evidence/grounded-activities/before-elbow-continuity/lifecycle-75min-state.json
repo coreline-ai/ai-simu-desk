@@ -1,0 +1,181 @@
+{
+  "status": "aborted",
+  "startedAt": "2026-10-21T10:25:02.640Z",
+  "endedAt": "2026-10-21T11:02:55.517Z",
+  "signal": "SIGTERM",
+  "rows": [
+    {
+      "index": 0,
+      "wallSeconds": 0,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 19246940,
+        "totalSize": 21381120,
+        "embedderHeapUsedSize": 2411880,
+        "backingStorageSize": 14484306
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 104,
+        "Nodes": 942
+      },
+      "canvas": 1
+    },
+    {
+      "index": 1,
+      "wallSeconds": 301,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 20587292,
+        "totalSize": 22953984,
+        "embedderHeapUsedSize": 2908032,
+        "backingStorageSize": 14484159
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 106,
+        "Nodes": 987
+      },
+      "canvas": 1
+    },
+    {
+      "index": 2,
+      "wallSeconds": 601,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21290876,
+        "totalSize": 23740416,
+        "embedderHeapUsedSize": 3123800,
+        "backingStorageSize": 14484327
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 106,
+        "Nodes": 998
+      },
+      "canvas": 1
+    },
+    {
+      "index": 3,
+      "wallSeconds": 902,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21334616,
+        "totalSize": 23740416,
+        "embedderHeapUsedSize": 3073456,
+        "backingStorageSize": 14484326
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 106,
+        "Nodes": 1002
+      },
+      "canvas": 1
+    },
+    {
+      "index": 4,
+      "wallSeconds": 1203,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21631412,
+        "totalSize": 24002560,
+        "embedderHeapUsedSize": 3274784,
+        "backingStorageSize": 14484422
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 108,
+        "Nodes": 1034
+      },
+      "canvas": 1
+    },
+    {
+      "index": 5,
+      "wallSeconds": 1503,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21183764,
+        "totalSize": 23740416,
+        "embedderHeapUsedSize": 3197368,
+        "backingStorageSize": 14484455
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 108,
+        "Nodes": 1055
+      },
+      "canvas": 1
+    },
+    {
+      "index": 6,
+      "wallSeconds": 1803,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21828172,
+        "totalSize": 24788992,
+        "embedderHeapUsedSize": 3302256,
+        "backingStorageSize": 14484455
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 108,
+        "Nodes": 1059
+      },
+      "canvas": 1
+    },
+    {
+      "index": 7,
+      "wallSeconds": 2103,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21290000,
+        "totalSize": 24002560,
+        "embedderHeapUsedSize": 3376800,
+        "backingStorageSize": 14484420
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 110,
+        "Nodes": 1057
+      },
+      "canvas": 1
+    }
+  ],
+  "logoutRows": [
+    {
+      "index": 3,
+      "wallSeconds": 902,
+      "loggedOut": true,
+      "heap": {
+        "usedSize": 7123568,
+        "totalSize": 10092544,
+        "embedderHeapUsedSize": 1996216,
+        "backingStorageSize": 925588
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 86,
+        "Nodes": 918
+      },
+      "canvas": 0
+    },
+    {
+      "index": 6,
+      "wallSeconds": 1803,
+      "loggedOut": true,
+      "heap": {
+        "usedSize": 7477064,
+        "totalSize": 10092544,
+        "embedderHeapUsedSize": 1847584,
+        "backingStorageSize": 925624
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 86,
+        "Nodes": 950
+      },
+      "canvas": 0
+    }
+  ],
+  "errors": []
+}

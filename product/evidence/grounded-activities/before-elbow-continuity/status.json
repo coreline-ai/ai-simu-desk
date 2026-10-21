@@ -1,0 +1,14 @@
+{
+  "status": "superseded-before-elbow-continuity-correction",
+  "reason": "25ms extra probe found a 0.2004m elbow jump when desk clearance switched poles. Prior full259/10min/30min/performance passed but the unfinished75min was aborted. None are final corrected-source acceptance.",
+  "probe": [
+    {
+      "version": 7,
+      "maxElbowStepMeters": 0.1698685977884269
+    },
+    {
+      "version": 8,
+      "maxElbowStepMeters": 0.20043698387985337
+    }
+  ]
+}

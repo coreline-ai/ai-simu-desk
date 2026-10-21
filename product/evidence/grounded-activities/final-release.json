@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-21T12:33:31.125Z",
+  "release": "1792585987720-9e8346e2-4d58-42a9-84cd-c5be08e16fd1",
+  "appHash": "b0177274a8ac9ce25f1d3535ab367d193ed21858c0f9d594180b817574b489fa",
+  "serverHash": "d97d0e86aead1c922b3266bfa18d4027a05703290112ef7fd7b303653db74662",
+  "coreMatchesTestedCandidate": true,
+  "newPlan": "dev-plan/implement_20261021_213222.md",
+  "completedDocumentsIncluded": true,
+  "runtimeSourceUnchanged": true
+}

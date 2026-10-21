@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "wallSeconds": 3611.068725875,
+  "jobs": 60,
+  "gates": {
+    "actualDuration": true,
+    "workSaved": true,
+    "originalRecordsUnchanged": true,
+    "counts": true,
+    "errors": true,
+    "notAborted": true
+  }
+}

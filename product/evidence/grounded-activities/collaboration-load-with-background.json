@@ -1,0 +1,53 @@
+{
+  "kind": "actual-loopback-HTTP-twenty-accounts-including-owner-with-second-tab",
+  "startedAt": "2026-10-21T10:24:51.461Z",
+  "finishedAt": "2026-10-21T10:26:01.288Z",
+  "environment": {
+    "node": "v22.22.2",
+    "database": "isolated in-memory PGlite",
+    "records": 1000,
+    "concurrency": 20,
+    "requests": 2400,
+    "fakeDelayMs": 65
+  },
+  "sync": {
+    "requests": 1200,
+    "p50": 392.23591699999815,
+    "p95": 1452.3445829999982,
+    "max": 2812.6113329999935
+  },
+  "search": {
+    "requests": 1200,
+    "p50": 373.33516699999745,
+    "p95": 1126.9902920000022,
+    "max": 2474.6804170000105
+  },
+  "failures": [],
+  "gates": {
+    "errors": true,
+    "noInternalErrors": true,
+    "syncP95": false,
+    "searchP95": false
+  },
+  "passed": false,
+  "checks": [
+    "sixth guest rejected",
+    "five-account same result",
+    "second tab counted once",
+    "comment idempotency",
+    "member approval/settings denied",
+    "owner approval succeeds",
+    "member revoked",
+    "expired session denied"
+  ],
+  "diagnosticSummary": {
+    "requests": 2571,
+    "internalErrors": 0
+  },
+  "measurementContext": {
+    "databaseClarification": "explicit mkdtemp temporary-file PGlite in this run",
+    "background": "full npm test, source build and simultaneous headless 3D QA runs",
+    "accepted": false,
+    "next": "Repeat separately without changing acceptance budget"
+  }
+}

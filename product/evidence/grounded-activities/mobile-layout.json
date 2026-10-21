@@ -1,0 +1,17 @@
+{
+  "kind": "desktop-viewport-not-physical-mobile",
+  "layout320": {
+    "body": 320,
+    "canvas": 1,
+    "html": 320,
+    "width": 320
+  },
+  "layout768": {
+    "body": 768,
+    "canvas": 1,
+    "html": 768,
+    "width": 768
+  },
+  "physicalDevice": "deferred by user; unavailable",
+  "gpuMemory": "not measured"
+}

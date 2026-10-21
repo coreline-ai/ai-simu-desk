@@ -1,0 +1,82 @@
+{
+  "activities": {
+    "jun": {
+      "action": "window_rest",
+      "activity": "window",
+      "basePose": "idle",
+      "interruptions": 0,
+      "microCount": 0,
+      "restCount": 0,
+      "returning": false,
+      "time": 9.416899999999636,
+      "variant": 0
+    },
+    "leo": {
+      "action": "idle",
+      "interruptions": 0,
+      "microCount": 1,
+      "restCount": 0,
+      "time": 21.101299999999963
+    },
+    "min": {
+      "action": "idle",
+      "interruptions": 0,
+      "microCount": 1,
+      "restCount": 0,
+      "time": 21.101299999999963
+    },
+    "nara": {
+      "action": "sofa_rest",
+      "activity": "sofa",
+      "basePose": "idle",
+      "interruptions": 0,
+      "microCount": 0,
+      "restCount": 0,
+      "returning": false,
+      "time": 6.789299999999794,
+      "variant": 0
+    },
+    "sora": {
+      "action": "idle",
+      "interruptions": 0,
+      "microCount": 1,
+      "restCount": 0,
+      "time": 21.101299999999963
+    }
+  },
+  "contacts": {
+    "checkedFurniture": [
+      "SofaBase",
+      "SofaBack",
+      "sofa-armrest-0",
+      "sofa-armrest-1",
+      "MeetingTop",
+      "NaraOakDeskTop",
+      "SoraOakDeskTop",
+      "JunOakDeskTop",
+      "MinOakDeskTop",
+      "LeoOakDeskTop"
+    ],
+    "peakProxyDepth": 0.032,
+    "physicalSkinGuarantee": false,
+    "rows": [],
+    "sampleInterval": 0.05,
+    "samples": 388,
+    "scope": "conservative-arm-capsules-torso-capsules-and-solid-furniture-AABBs"
+  },
+  "paused": true,
+  "traffic": {
+    "active": [],
+    "capacity": 2,
+    "grants": 2,
+    "grid": 0.4,
+    "maxWait": 0,
+    "peak": 2,
+    "policy": "atomic-corridors",
+    "radius": 0.5,
+    "simultaneousGrants": 1,
+    "stationary": [],
+    "waiting": []
+  },
+  "version": 8
+}

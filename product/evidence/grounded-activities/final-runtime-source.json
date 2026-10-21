@@ -1,0 +1,15 @@
+{
+  "frozenAt": "2026-10-21T11:15:52Z",
+  "baseCommit": "da7ac4f",
+  "hashes": {
+    "pilot-3d/activities/body-contact.mjs": "cf211d6fc36e2712e73c96fa941b449954f40bb7d07af62c98a6062f693f9e24",
+    "pilot-3d/activities/grounded-route.mjs": "4790005b08f6346e947f11d630eea274a1460bc4d70a821117a8f68091941dcb",
+    "pilot-3d/activities/meeting-support.mjs": "f54111ffc457814f5a1f80d56a26a7187371134157550c5427436bdb1b77a3fc",
+    "pilot-3d/activities/team-runtime.mjs": "de433ecbd796f8a69185fb922b3b39c41e839f496403f9ee3d05f3fea9895449",
+    "pilot-3d/activities/team-soak.mjs": "da03cbe2ce7b1572d7397c6af120e48701c7eb4acaa8a40eedd6f29f085867e3",
+    "pilot-3d/activities/interaction-scheduler.mjs": "5a9a28cf5c4b91797f186c72cff5aa8c228059ead703fb6db173b26fa5aa5225",
+    "pilot-3d/sample/character-rig.mjs": "8e680ea8c15e20e884c138642f4a940504a83086695a657bd84443f9811cedef",
+    "pilot-3d/sample/runtime.mjs": "01e4b4c99ed99c4e150d8e7688006a16c2a82df81b0a06d872d947aa7d28b767",
+    "product/src/app.mjs": "bb46b375a8b69668d2f46b7226596cb2d5b7474376fc6c6a6dcd8ee9117e73e2"
+  }
+}

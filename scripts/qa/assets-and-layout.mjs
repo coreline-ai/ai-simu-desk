@@ -1,5 +1,6 @@
+import{qaProfile}from'./profile.mjs';
 import{launchBrowser,qaOrigin as origin}from'./browser.mjs';import{writeFile,mkdir}from'node:fs/promises';import{createHash}from'node:crypto';import assert from'node:assert/strict';
-const dir='product/evidence/stabilization-implementation',b=await launchBrowser(),c=await b.newContext({baseURL:origin,viewport:{width:1440,height:1000},deviceScaleFactor:1}),p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
+const dir=qaProfile().out,b=await launchBrowser(),c=await b.newContext({baseURL:origin,viewport:{width:1440,height:1000},deviceScaleFactor:1}),p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
 try{
  await mkdir(dir,{recursive:true});
  const user=await c.request.post('/api/auth/sign-up/email',{headers:{origin},data:{name:'Layout QA',email:`layout-${Date.now()}@qa.test`,password:'synthetic-layout-password-1234'}});assert(user.ok());await p.goto('/');await p.waitForFunction(()=>document.querySelector('#stage').dataset.modelVersion==='6');await p.waitForTimeout(1000);

@@ -1,0 +1,568 @@
+{
+  "kind": "accelerated-proxy-contact-observation-not-skin-physics",
+  "scope": "fixed 50ms samples; conservative capsules/AABBs; positive rows are candidates for visual review, not confirmed mesh penetration",
+  "profiles": [
+    {
+      "version": 7,
+      "simulatedSeconds": 600,
+      "samples": 12000,
+      "overlappingSamples": 11951,
+      "deepSamples": 11950,
+      "totalRows": 67924,
+      "peakProxyDepth": 0.07026026744249109,
+      "worst": [
+        {
+          "actor": "nara",
+          "part": "forearmL",
+          "target": "nara:torso",
+          "gap": -0.07026026744249109,
+          "depth": 0.07026026744249109,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "min",
+          "part": "forearmR",
+          "target": "min:torso",
+          "gap": -0.06450649549662735,
+          "depth": 0.06450649549662735,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmR",
+          "target": "jun:torso",
+          "gap": -0.06435777103471622,
+          "depth": 0.06435777103471622,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmR",
+          "target": "sora:torso",
+          "gap": -0.06401415239595835,
+          "depth": 0.06401415239595835,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmL",
+          "target": "leo:torso",
+          "gap": -0.0584729167008997,
+          "depth": 0.0584729167008997,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmL",
+          "target": "sora:torso",
+          "gap": -0.056783468871695914,
+          "depth": 0.056783468871695914,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "min",
+          "part": "upperR",
+          "target": "MeetingTop",
+          "gap": -0.045,
+          "depth": 0.045,
+          "classification": "deep-proxy-overlap",
+          "activity": "meeting"
+        },
+        {
+          "actor": "jun",
+          "part": "upperL",
+          "target": "MeetingTop",
+          "gap": -0.045,
+          "depth": 0.045,
+          "classification": "deep-proxy-overlap",
+          "activity": "meeting"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmL",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "role"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmL",
+          "target": "SoraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "role"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmL",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "role"
+        },
+        {
+          "actor": "min",
+          "part": "forearmL",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "role"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmL",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "role"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmL",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "stretch"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmL",
+          "target": "SoraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "shoulder_roll"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmL",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "idle"
+        },
+        {
+          "actor": "min",
+          "part": "forearmL",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "idle"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmL",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "idle"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmR",
+          "target": "SoraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "shoulder_roll"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmR",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "idle"
+        },
+        {
+          "actor": "min",
+          "part": "forearmR",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "idle"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmR",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "idle"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmR",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "stretch"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmL",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "wrist_relax"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmR",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "wrist_relax"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmL",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "visit"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmR",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "visit"
+        },
+        {
+          "actor": "min",
+          "part": "forearmL",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "stretch"
+        },
+        {
+          "actor": "min",
+          "part": "forearmR",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "stretch"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmL",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "visit"
+        }
+      ]
+    },
+    {
+      "version": 8,
+      "simulatedSeconds": 600,
+      "samples": 12000,
+      "overlappingSamples": 917,
+      "deepSamples": 549,
+      "totalRows": 2172,
+      "peakProxyDepth": 0.07026026744249109,
+      "worst": [
+        {
+          "actor": "nara",
+          "part": "forearmL",
+          "target": "nara:torso",
+          "gap": -0.07026026744249109,
+          "depth": 0.07026026744249109,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "min",
+          "part": "forearmR",
+          "target": "min:torso",
+          "gap": -0.06450649549662735,
+          "depth": 0.06450649549662735,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmR",
+          "target": "jun:torso",
+          "gap": -0.06435777103471622,
+          "depth": 0.06435777103471622,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmR",
+          "target": "sora:torso",
+          "gap": -0.06401415239595835,
+          "depth": 0.06401415239595835,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmL",
+          "target": "leo:torso",
+          "gap": -0.0584729167008997,
+          "depth": 0.0584729167008997,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmL",
+          "target": "sora:torso",
+          "gap": -0.056783468871695914,
+          "depth": 0.056783468871695914,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "min",
+          "part": "upperR",
+          "target": "MeetingTop",
+          "gap": -0.045,
+          "depth": 0.045,
+          "classification": "deep-proxy-overlap",
+          "activity": "meeting"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmL",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "visit"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmR",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "visit"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmL",
+          "target": "SoraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmR",
+          "target": "SoraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "min",
+          "part": "forearmL",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "min",
+          "part": "forearmR",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmR",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "cup"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmL",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "cup"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmL",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "shoulder_roll"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmR",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "shoulder_roll"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmL",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "nara",
+          "part": "forearmR",
+          "target": "NaraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmL",
+          "target": "SoraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "window"
+        },
+        {
+          "actor": "sora",
+          "part": "forearmR",
+          "target": "SoraOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "window"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmL",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmR",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmL",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "leo",
+          "part": "forearmR",
+          "target": "LeoOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "sofa"
+        },
+        {
+          "actor": "min",
+          "part": "forearmL",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "micro"
+        },
+        {
+          "actor": "min",
+          "part": "forearmR",
+          "target": "MinOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "micro"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmR",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "cup"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmL",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "cup"
+        },
+        {
+          "actor": "jun",
+          "part": "forearmL",
+          "target": "JunOakDeskTop",
+          "gap": -0.032,
+          "depth": 0.032,
+          "classification": "deep-proxy-overlap",
+          "activity": "idle"
+        }
+      ]
+    }
+  ]
+}

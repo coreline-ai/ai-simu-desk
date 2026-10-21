@@ -1,0 +1,32 @@
+{
+  "kind": "desktop-browser-viewport-check-not-physical-mobile",
+  "layout320": {
+    "body": 320,
+    "canvasCount": 1,
+    "html": 320,
+    "metrics": {
+      "canvas": [
+        292,
+        358
+      ],
+      "paused": true,
+      "pixelRatio": 1,
+      "version": 8
+    },
+    "quality": "auto",
+    "width": 320
+  },
+  "layout768": {
+    "body": 768,
+    "canvasCount": 1,
+    "html": 768,
+    "width": 768
+  },
+  "physicalDevice": {
+    "model": "iPhone XS Max",
+    "available": false,
+    "userDecision": "physical verification deferred"
+  },
+  "touchAndThermal": "not measured on physical hardware",
+  "gpuMemory": "not measured"
+}

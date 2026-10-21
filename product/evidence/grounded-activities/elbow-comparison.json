@@ -1,0 +1,15 @@
+{
+  "kind": "25ms-five-actors-role-cup-elbow-continuity",
+  "samples": 9600,
+  "beforeMeters": 0.20043698387985337,
+  "after": {
+    "id": "sora",
+    "action": "cup",
+    "side": "L",
+    "frame": 331,
+    "meters": 0.030495830670604174
+  },
+  "limitMeters": 0.035,
+  "sourceSha256": "cf211d6fc36e2712e73c96fa941b449954f40bb7d07af62c98a6062f693f9e24",
+  "passed": true
+}

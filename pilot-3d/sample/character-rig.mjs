@@ -71,14 +71,14 @@ export function part(actor,name){let cache=bindings.get(actor);if(!cache){cache=
 export function applyPose(actor,p){
  const node=name=>part(actor,name);
  actor.position.set(p.x,0,p.z);actor.rotation.y=p.yaw;
- const pelvis=node('NaraPelvis');pelvis.position.y=p.hip;
+ const pelvis=node('NaraPelvis');pelvis.position.set(p.pelvisX??0,p.hip,p.pelvisZ??0);
  const torso=node('NaraTorso');torso.rotation.x=.035*(1-p.stand);torso.position.z=(1-p.stand)*.10;
  actor.updateMatrixWorld(true);
  for(const [i,side] of ['L','R'].entries()){
   const sign=i===0?-1:1;
   const hip=node('NaraHip'+side),knee=node('NaraKnee'+side),foot=node('NaraFoot'+side);
   const ankle=p.feet?actor.worldToLocal(actor.parent.localToWorld(new T.Vector3(...p.feet[i].position))):new T.Vector3(sign*.10,.085,(1-p.stand)*.40);
-  const start=new T.Vector3(sign*.10,p.hip,0),mid=solveKnee(start,ankle);
+  const start=new T.Vector3(sign*.10+(p.pelvisX??0),p.hip,p.pelvisZ??0),mid=solveKnee(start,ankle);
   hip.quaternion.setFromUnitVectors(new T.Vector3(0,-1,0),mid.clone().sub(start).normalize());
   const worldLower=new T.Quaternion().setFromUnitVectors(new T.Vector3(0,-1,0),ankle.clone().sub(mid).normalize());
   knee.quaternion.copy(hip.quaternion).invert().multiply(worldLower);

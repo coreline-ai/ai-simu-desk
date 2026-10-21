@@ -1,0 +1,49 @@
+{
+  "kind": "actual-loopback-HTTP-twenty-accounts-including-owner-with-second-tab",
+  "startedAt": "2026-10-21T10:43:52.037Z",
+  "finishedAt": "2026-10-21T10:44:32.516Z",
+  "environment": {
+    "node": "v22.22.2",
+    "database": "isolated temporary-file PGlite",
+    "background": "mixed 30-minute and lifecycle 75-minute 3D QA; full regression and performance benchmark completed",
+    "records": 1000,
+    "concurrency": 20,
+    "requests": 2400,
+    "fakeDelayMs": 65
+  },
+  "sync": {
+    "requests": 1200,
+    "p50": 254.1761669999978,
+    "p95": 356.22058399999514,
+    "max": 1097.5925419999985
+  },
+  "search": {
+    "requests": 1200,
+    "p50": 240.9093750000029,
+    "p95": 323.38766699998814,
+    "max": 1020.0253329999978
+  },
+  "failures": [],
+  "gates": {
+    "errors": true,
+    "noInternalErrors": true,
+    "syncP95": true,
+    "searchP95": true
+  },
+  "passed": true,
+  "checks": [
+    "sixth guest rejected",
+    "twenty-account same result",
+    "second tab counted once",
+    "comment idempotency",
+    "member approval/settings denied",
+    "owner approval succeeds",
+    "member revoked",
+    "expired session denied"
+  ],
+  "diagnosticSummary": {
+    "requests": 2571,
+    "internalErrors": 0
+  },
+  "additionalBackground": "A separate low-rate data-growth HTTP runner was starting in parallel; no production database was involved"
+}

@@ -1,0 +1,21 @@
+import * as T from'three';import{part}from'../sample/character-rig.mjs';import{solveArm}from'./interactions.mjs';import{ease}from'../sample/motion.mjs';
+const V=()=>new T.Vector3(),UP=new T.Vector3(0,1,0),DOWN=new T.Vector3(0,-1,0);
+const snap=(actor,side)=>({point:part(actor,'NaraHand'+side).getWorldPosition(V()),q:part(actor,'NaraHand'+side).getWorldQuaternion(new T.Quaternion()),elbow:part(actor,'NaraElbow'+side).getWorldPosition(V())});
+export class MeetingSupport{
+ constructor(model,scheduler){this.table=model.getObjectByName('MeetingTop');this.scheduler=scheduler;this.rows=new Map();this.previous=new Map();this.ray=new T.Raycaster();}
+ surface(actor,side){const center=this.table.getWorldPosition(V()),out=actor.getWorldPosition(V()).sub(center).setY(0).normalize(),right=new T.Vector3(1,0,0).applyQuaternion(actor.getWorldQuaternion(new T.Quaternion())),origin=center.clone().addScaledVector(out,.62).addScaledVector(right,side==='L'?-.085:.085);origin.y+=1;this.ray.set(origin,DOWN);const hit=this.ray.intersectObject(this.table,false)[0];if(!hit)throw Error('회의 지지면 누락');return hit.point.clone();}
+ apply(id,actor,state,dt){const s=this.scheduler,r=s.records.get(id),active=r?.kind==='meeting'&&r.trip.stage==='rest'&&!s.session?.ending;let row=this.rows.get(id);if(!active&&!row)return;
+  if(s.desks[id].busy||s.transfer?.controls(id)){this.rows.delete(id);return;}
+  if(active&&!row){row={time:0,exit:null,hands:{},last:{},age:{L:0,R:0},from:this.previous.get(id)??Object.fromEntries(['L','R'].map(side=>[side,snap(actor,side)])),surfaces:Object.fromEntries(['L','R'].map(side=>[side,this.surface(actor,side)]))};this.rows.set(id,row);}row.time+=dt;
+  if(!active&&row.exit===null){row.exit=0;row.from=Object.fromEntries(['L','R'].map(side=>[side,row.last[side]??snap(actor,side)]));}if(row.exit!==null)row.exit+=dt;
+  const leftFree=['idle','tableRest'].includes(s.cups[id].state),talking=['meeting_talk','social_greet','social_present','social_confirm'].includes(state.action),gesture=leftFree&&talking?(state.gesture??0):0,enter=ease(row.time/.8),leave=row.exit===null?0:ease(row.exit/.9),normal=actor.getWorldQuaternion(new T.Quaternion()).multiply(new T.Quaternion().setFromAxisAngle(new T.Vector3(1,0,0),-Math.PI/2));row.hands={};
+  for(const side of ['L','R']){if(side==='L'&&!leftFree){row.age[side]=0;row.from[side]=snap(actor,side);continue;}if(row.age[side]===0)row.from[side]=this.previous.get(id)?.[side]??snap(actor,side);row.age[side]+=dt;const entering=ease(row.age[side]/.8);const base=snap(actor,side),surface=row.surfaces[side],lift=side==='R'?gesture*(.065+s.ids.indexOf(id)*.004):0;let target=surface.clone().addScaledVector(UP,.0275+lift),q=normal.clone();
+   if(row.exit===null){target=row.from[side].point.clone().lerp(target,entering);q=row.from[side].q.clone().slerp(q,entering);}else{target=row.from[side].point.clone().lerp(base.point,leave).addScaledVector(UP,Math.sin(Math.PI*leave)*.03);q=row.from[side].q.clone().slerp(base.q,leave);}
+   const shoulder=part(actor,'NaraShoulder'+side).getWorldPosition(V()),axis=target.clone().sub(shoulder).normalize(),previous=row.last[side]??row.from[side],from=previous.elbow.clone().sub(shoulder),to=new T.Vector3(side==='L'?-1:1,.5,-.3).applyQuaternion(actor.getWorldQuaternion(new T.Quaternion()));from.addScaledVector(axis,-from.dot(axis)).normalize();to.addScaledVector(axis,-to.dot(axis)).normalize();const angle=Math.atan2(axis.dot(from.clone().cross(to)),from.dot(to)),pole=from.applyAxisAngle(axis,T.MathUtils.clamp(angle,-3.5*dt,3.5*dt)),error=solveArm(actor,target,q,side,pole),actual=part(actor,'NaraHand'+side).getWorldPosition(V()),planted=row.exit===null&&entering>.999&&lift<.0001;row.last[side]=snap(actor,side);row.hands[side]={object:'MeetingTop',planted,lift,error,palmGap:planted?actual.y-.026-surface.y:null,surface:surface.toArray(),hand:actual.toArray()};
+  }
+  if(row.exit!==null&&row.exit>=.9)this.rows.delete(id);
+ }
+ remember(id,actor){this.previous.set(id,Object.fromEntries(['L','R'].map(side=>[side,snap(actor,side)])));}
+ diagnostics(){return Object.fromEntries([...this.rows].map(([id,r])=>[id,{phase:r.exit===null?'supported':'releasing',hands:r.hands}]));}
+ dispose(){this.rows.clear();this.previous.clear();}
+}

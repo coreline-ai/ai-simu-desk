@@ -34,7 +34,8 @@ export async function openDataDirectory(path?: string, restore?: Blob) {
   try {
     // Validate the restore target while holding its exclusive lock.
     if (restore && path && (await readdir(path)).length) throw new Error("Restore target must be a new empty directory");
-    client = new PGlite(path, { ...(restore ? { loadDataDir: restore } : {}) });
+    const options = { ...(restore ? { loadDataDir: restore } : {}) };
+    client = path ? new PGlite(path, options) : new PGlite(options);
   }
   catch (error) { await unlock(); throw error; }
   try {

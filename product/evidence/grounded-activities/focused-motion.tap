@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: conservative contact distances handle intersecting, parallel, separated and degenerate segments
+ok 1 - conservative contact distances handle intersecting, parallel, separated and degenerate segments
+  ---
+  duration_ms: 2.149042
+  type: 'test'
+  ...
+# Subtest: body contact diagnostics inspect actual joints and separate sofa arms instead of filling the seat gap
+ok 2 - body contact diagnostics inspect actual joints and separate sofa arms instead of filling the seat gap
+  ---
+  duration_ms: 814.957375
+  type: 'test'
+  ...
+# Subtest: heel and toe roll retain fixed support points, sole clearance and reachable legs through curves and stops
+ok 3 - heel and toe roll retain fixed support points, sole clearance and reachable legs through curves and stops
+  ---
+  duration_ms: 7.240291
+  type: 'test'
+  ...
+# Subtest: desk clearance and cup/role release keep both elbows continuous while preserving owned wrist targets
+ok 4 - desk clearance and cup/role release keep both elbows continuous while preserving owned wrist targets
+  ---
+  duration_ms: 3562.540625
+  type: 'test'
+  ...
+# Subtest: all five grounded routes preserve actual sole clearance, prop targets and safe work returns
+ok 5 - all five grounded routes preserve actual sole clearance, prop targets and safe work returns
+  ---
+  duration_ms: 3413.130334
+  type: 'test'
+  ...
+# Subtest: twenty meeting seat orders support palms without taking a held cup and fully release support
+ok 6 - twenty meeting seat orders support palms without taking a held cup and fully release support
+  ---
+  duration_ms: 88361.066375
+  type: 'test'
+  ...
+# Subtest: meeting support pauses exactly and yields for every actor work interruption
+ok 7 - meeting support pauses exactly and yields for every actor work interruption
+  ---
+  duration_ms: 12016.953458
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 108410.959417

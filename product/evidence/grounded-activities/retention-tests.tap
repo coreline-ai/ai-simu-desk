@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: manual retention only removes reviewed expired transient rows and preserves guest history
+ok 1 - manual retention only removes reviewed expired transient rows and preserves guest history
+  ---
+  duration_ms: 1970.1795
+  type: 'test'
+  ...
+# Subtest: retention rejects missing backup, stale review, mismatched backup and recent/future cutoff without deleting rows
+ok 2 - retention rejects missing backup, stale review, mismatched backup and recent/future cutoff without deleting rows
+  ---
+  duration_ms: 2673.487541
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5414.6985

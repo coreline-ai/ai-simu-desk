@@ -1,0 +1,2346 @@
+{
+  "kind": "actual-browser-wall-clock",
+  "mode": "continuous",
+  "started": "2026-10-21T10:25:07.488Z",
+  "finished": "2026-10-21T10:36:08.647Z",
+  "wallSeconds": 661.159,
+  "report": {
+    "mode": "continuous",
+    "workload": "ambient",
+    "elapsedSeconds": 600,
+    "activeSeconds": 598,
+    "targetSeconds": 600,
+    "complete": true,
+    "passed": true,
+    "natural": false,
+    "roles": true,
+    "expressive": true,
+    "interaction": true,
+    "visits": 1,
+    "completedTransfers": 1,
+    "visitParticipants": [
+      "nara",
+      "jun"
+    ],
+    "trafficPeak": 2,
+    "coverage": true,
+    "samples": 590,
+    "errors": [],
+    "hiddenEvents": 0,
+    "pausedSamples": 0,
+    "restarts": 0,
+    "peak": {
+      "textures": 48,
+      "geometries": 213
+    },
+    "actors": {
+      "nara": {
+        "actions": [
+          "role_nara",
+          "stretch",
+          "visit_invite",
+          "stand_up",
+          "walk",
+          "turn",
+          "standing",
+          "desk_visit",
+          "desk_transfer",
+          "sit_down",
+          "idle",
+          "shoulder_roll",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_listen",
+          "sofa_talk",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rise",
+          "wrist_relax",
+          "window_rest",
+          "waiting",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "meeting_wait"
+        ],
+        "cupOwners": [
+          "desk",
+          "hand",
+          "meeting"
+        ],
+        "cupStates": [
+          "idle",
+          "reach",
+          "lift",
+          "sip",
+          "lower",
+          "place",
+          "release",
+          "grasp",
+          "carry",
+          "tablePlace",
+          "tableRest"
+        ],
+        "sofa": 1,
+        "cup": 1,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 0,
+        "role": 2,
+        "sofaPair": 1,
+        "window": 1,
+        "deskInterruptions": 0,
+        "styles": [
+          "back_open"
+        ],
+        "variants": [
+          0,
+          1
+        ]
+      },
+      "sora": {
+        "actions": [
+          "role_sora",
+          "shoulder_roll",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_listen",
+          "sofa_talk",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rise",
+          "sit_down",
+          "wrist_relax",
+          "stretch",
+          "window_rest",
+          "personal_rest",
+          "waiting"
+        ],
+        "cupOwners": [
+          "desk",
+          "hand"
+        ],
+        "cupStates": [
+          "idle",
+          "reach",
+          "lift",
+          "sip",
+          "lower",
+          "place",
+          "release",
+          "grasp",
+          "carry"
+        ],
+        "sofa": 2,
+        "cup": 1,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 2,
+        "social": 0,
+        "role": 3,
+        "sofaPair": 2,
+        "window": 1,
+        "deskInterruptions": 0,
+        "styles": [
+          "shoulder_drop",
+          "wrist_release"
+        ],
+        "variants": [
+          0,
+          1,
+          2
+        ]
+      },
+      "jun": {
+        "actions": [
+          "role_jun",
+          "idle",
+          "wrist_relax",
+          "visit_invite",
+          "desk_visit",
+          "desk_transfer",
+          "shoulder_roll",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_talk",
+          "sofa_listen",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "waiting",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "meeting_pause",
+          "social_note",
+          "meeting_ack",
+          "personal_rest"
+        ],
+        "cupOwners": [
+          "desk",
+          "hand",
+          "meeting"
+        ],
+        "cupStates": [
+          "idle",
+          "reach",
+          "grasp",
+          "lift",
+          "sip",
+          "place",
+          "carry",
+          "tablePlace",
+          "tableRest",
+          "tableReach"
+        ],
+        "sofa": 1,
+        "cup": 1,
+        "meeting": 1,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 1,
+        "role": 2,
+        "sofaPair": 1,
+        "window": 0,
+        "deskInterruptions": 0,
+        "styles": [
+          "shoulder_drop"
+        ],
+        "variants": [
+          0,
+          1
+        ]
+      },
+      "min": {
+        "actions": [
+          "role_min",
+          "idle",
+          "stretch",
+          "stand_up",
+          "turn",
+          "walk",
+          "sofa_sit",
+          "sofa_talk",
+          "sofa_listen",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rest",
+          "sofa_rise",
+          "standing",
+          "sit_down",
+          "shoulder_roll",
+          "wrist_relax",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "waiting",
+          "meeting_talk",
+          "meeting_listen",
+          "meeting_pause",
+          "social_note",
+          "meeting_ack"
+        ],
+        "cupOwners": [
+          "desk",
+          "hand"
+        ],
+        "cupStates": [
+          "idle",
+          "reach",
+          "lift",
+          "carry",
+          "place",
+          "release",
+          "sip",
+          "lower"
+        ],
+        "sofa": 1,
+        "cup": 1,
+        "meeting": 1,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 1,
+        "role": 2,
+        "sofaPair": 1,
+        "window": 0,
+        "deskInterruptions": 0,
+        "styles": [
+          "side_stretch"
+        ],
+        "variants": [
+          0,
+          1
+        ]
+      },
+      "leo": {
+        "actions": [
+          "role_leo",
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "waiting",
+          "stand_up",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_talk",
+          "sofa_listen",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rise",
+          "turn",
+          "sit_down",
+          "window_rest",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit"
+        ],
+        "cupOwners": [
+          "desk",
+          "hand"
+        ],
+        "cupStates": [
+          "idle",
+          "reach",
+          "grasp",
+          "sip",
+          "lower",
+          "place",
+          "release"
+        ],
+        "sofa": 1,
+        "cup": 1,
+        "meeting": 0,
+        "interruptions": 0,
+        "rest": 1,
+        "social": 0,
+        "role": 2,
+        "sofaPair": 1,
+        "window": 1,
+        "deskInterruptions": 0,
+        "styles": [
+          "one_arm"
+        ],
+        "variants": [
+          0,
+          1
+        ]
+      }
+    },
+    "history": [
+      {
+        "elapsed": 10,
+        "clock": 10.343000000000005,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {},
+        "meetings": 0
+      },
+      {
+        "elapsed": 20,
+        "clock": 20.49259999999979,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "walkway-0": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 30,
+        "clock": 30.658799999999584,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "walkway-0": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 40,
+        "clock": 40.80840000000009,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa",
+          "walkway-0": "sora-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 51,
+        "clock": 50.97470000000073,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa",
+          "walkway-0": "sora-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 61,
+        "clock": 61.107500000001345,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa",
+          "walkway-0": "min-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 71,
+        "clock": 71.27380000000299,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa",
+          "walkway-0": "min-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 81,
+        "clock": 81.44010000000527,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa",
+          "walkway-0": "nara-visit"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 91,
+        "clock": 91.60640000000748,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "visit-jun": "nara-visit",
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa",
+          "walkway-0": "nara-visit"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 101,
+        "clock": 101.75600000000973,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "sora-sofa",
+          "sofa-1": "min-sofa",
+          "walkway-0": "sora-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 112,
+        "clock": 111.92220000001198,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-1": "min-sofa",
+          "walkway-0": "min-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 122,
+        "clock": 122.08850000001425,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-1": "min-sofa",
+          "walkway-0": "min-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 132,
+        "clock": 132.22140000001528,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-1": "min-sofa",
+          "walkway-0": "min-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 142,
+        "clock": 142.3710000000176,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "sofa-1": "jun-sofa",
+          "walkway-0": "nara-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 152,
+        "clock": 152.52060000001993,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "sofa-1": "jun-sofa",
+          "window-0": "sora-window",
+          "walkway-1": "sora-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 162,
+        "clock": 162.68680000002226,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "sofa-1": "jun-sofa",
+          "window-0": "sora-window",
+          "walkway-0": "jun-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 172,
+        "clock": 172.85310000002457,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "sofa-1": "jun-sofa",
+          "window-0": "sora-window",
+          "walkway-0": "jun-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 183,
+        "clock": 183.01940000002688,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "sofa-1": "jun-sofa",
+          "window-0": "sora-window",
+          "walkway-0": "sora-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 193,
+        "clock": 193.15230000002921,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "nara-sofa",
+          "sofa-1": "jun-sofa",
+          "walkway-1": "nara-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 203,
+        "clock": 203.31850000003152,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-1": "jun-sofa",
+          "walkway-0": "jun-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 213,
+        "clock": 213.46820000003385,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-1": "jun-sofa",
+          "walkway-0": "jun-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 223,
+        "clock": 223.63440000003615,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {},
+        "meetings": 0
+      },
+      {
+        "elapsed": 233,
+        "clock": 233.8007000000385,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "walkway-0": "leo-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 244,
+        "clock": 243.9669000000408,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "walkway-0": "leo-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 254,
+        "clock": 254.13320000004313,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "walkway-0": "sora-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 264,
+        "clock": 264.26620000004095,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "walkway-0": "sora-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 274,
+        "clock": 274.4324000000433,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "window-0": "nara-window",
+          "walkway-0": "nara-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 284,
+        "clock": 284.5987000000456,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "window-0": "nara-window",
+          "walkway-0": "nara-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 294,
+        "clock": 294.76490000004793,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "window-0": "nara-window",
+          "walkway-0": "leo-sofa"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 305,
+        "clock": 304.93110000005026,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "window-0": "nara-window",
+          "walkway-0": "leo-sofa",
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 315,
+        "clock": 315.0974000000526,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-0": "leo-sofa",
+          "sofa-1": "sora-sofa",
+          "window-0": "nara-window",
+          "walkway-0": "leo-sofa",
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 325,
+        "clock": 325.2471000000549,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "sofa-1": "sora-sofa",
+          "window-0": "nara-window",
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "sora-sofa",
+          "walkway-1": "jun-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 335,
+        "clock": 335.4132000000572,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "window-0": "nara-window",
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-1": "jun-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 345,
+        "clock": 345.56280000005955,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "window-0": "nara-window",
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "nara-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 355,
+        "clock": 355.72910000006186,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "window-0": "nara-window",
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "nara-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 365,
+        "clock": 365.87870000006416,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 376,
+        "clock": 376.0284000000665,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 386,
+        "clock": 386.1946000000688,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 396,
+        "clock": 396.36080000007115,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 406,
+        "clock": 406.52710000007346,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 416,
+        "clock": 416.69340000007577,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "leo-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 426,
+        "clock": 426.8429000000781,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "leo-window"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 437,
+        "clock": 437.00930000008043,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 447,
+        "clock": 447.17540000008273,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 457,
+        "clock": 457.34170000008504,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 467,
+        "clock": 467.4913000000874,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "meeting-1": "min-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "min-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 477,
+        "clock": 477.6576000000897,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "jun-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 487,
+        "clock": 487.82380000009204,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "jun-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 498,
+        "clock": 497.99010000009434,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "jun-meeting",
+          "window-0": "leo-window",
+          "walkway-0": "jun-meeting"
+        },
+        "meetings": 0
+      },
+      {
+        "elapsed": 508,
+        "clock": 508.15640000009665,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "window-0": "leo-window",
+          "walkway-0": "leo-window"
+        },
+        "meetings": 1
+      },
+      {
+        "elapsed": 518,
+        "clock": 518.3393000000917,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "window-0": "leo-window",
+          "walkway-0": "leo-window"
+        },
+        "meetings": 1
+      },
+      {
+        "elapsed": 528,
+        "clock": 528.4889000000719,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {},
+        "meetings": 1
+      },
+      {
+        "elapsed": 538,
+        "clock": 538.6552000000413,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {},
+        "meetings": 1
+      },
+      {
+        "elapsed": 548,
+        "clock": 548.804800000011,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "nara-meeting",
+          "meeting-1": "sora-meeting"
+        },
+        "meetings": 1
+      },
+      {
+        "elapsed": 559,
+        "clock": 558.9709999999804,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "nara-meeting",
+          "meeting-1": "sora-meeting",
+          "walkway-0": "nara-meeting"
+        },
+        "meetings": 1
+      },
+      {
+        "elapsed": 569,
+        "clock": 569.1371999999492,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "nara-meeting",
+          "meeting-1": "sora-meeting",
+          "walkway-0": "nara-meeting"
+        },
+        "meetings": 1
+      },
+      {
+        "elapsed": 579,
+        "clock": 579.3035999999183,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "nara-meeting",
+          "meeting-1": "sora-meeting",
+          "walkway-0": "nara-meeting"
+        },
+        "meetings": 1
+      },
+      {
+        "elapsed": 589,
+        "clock": 589.4697999998881,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "nara-meeting",
+          "meeting-1": "sora-meeting",
+          "walkway-0": "sora-meeting"
+        },
+        "meetings": 1
+      },
+      {
+        "elapsed": 599,
+        "clock": 599.6359999998587,
+        "textures": 48,
+        "geometries": 213,
+        "claims": {
+          "meeting-0": "nara-meeting",
+          "meeting-1": "sora-meeting",
+          "walkway-0": "sora-meeting"
+        },
+        "meetings": 1
+      }
+    ],
+    "measurementPassed": true,
+    "cleanup": {
+      "passed": true,
+      "issues": []
+    }
+  },
+  "cleanupMetrics": {
+    "loadedMs": 245,
+    "firstRenderMs": 518,
+    "lastEmit": 661449.9,
+    "drawCalls": 991,
+    "triangles": 798300,
+    "textures": 48,
+    "geometries": 213,
+    "animationTime": 660.4335999996797,
+    "paused": true,
+    "pixelRatio": 1,
+    "modelVersion": 6,
+    "measuring": false,
+    "quality": "balanced",
+    "lighting": "day",
+    "canvas": [
+      1149,
+      608
+    ],
+    "cssCanvas": [
+      1149,
+      608
+    ],
+    "actors": {
+      "nara": "nara_wrist_relax",
+      "sora": "sora_idle",
+      "jun": "jun_idle",
+      "min": "min_idle",
+      "leo": "leo_idle"
+    },
+    "activities": {
+      "nara": {
+        "action": "wrist_relax",
+        "time": 0.8999999999999999,
+        "restCount": 1,
+        "microCount": 11,
+        "interruptions": 0
+      },
+      "sora": {
+        "action": "idle",
+        "time": 43.798199999999476,
+        "restCount": 2,
+        "microCount": 11,
+        "interruptions": 0
+      },
+      "jun": {
+        "action": "idle",
+        "time": 94.31290000000533,
+        "restCount": 1,
+        "microCount": 10,
+        "interruptions": 0
+      },
+      "min": {
+        "action": "idle",
+        "time": 40.61509999999967,
+        "restCount": 1,
+        "microCount": 11,
+        "interruptions": 0
+      },
+      "leo": {
+        "action": "idle",
+        "time": 86.29660000000356,
+        "restCount": 1,
+        "microCount": 12,
+        "interruptions": 0
+      }
+    },
+    "reservation": null,
+    "teamActivities": {
+      "version": 8,
+      "naturalActors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "seed": 17,
+      "socialHistory": [
+        {
+          "cue": "responsive-meeting-17",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reply",
+            "reflect",
+            "note",
+            "explain",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "jun": 0,
+            "min": 0
+          },
+          "variant": 2,
+          "leader": "min",
+          "speakers": [
+            "min",
+            "jun"
+          ]
+        },
+        {
+          "cue": "responsive-social-26",
+          "phase": "greet",
+          "status": "cancelled",
+          "history": [],
+          "presented": {
+            "nara": 0,
+            "sora": 0
+          },
+          "reason": "활동 정리",
+          "variant": 0,
+          "leader": "nara",
+          "speakers": []
+        }
+      ],
+      "social": null,
+      "violations": [],
+      "auto": false,
+      "time": 660.0569999996804,
+      "claims": {},
+      "waiting": [],
+      "meeting": null,
+      "meetings": 1,
+      "cancelledMeetings": 1,
+      "actors": {
+        "nara": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 6,
+            "done": 2,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 1,
+            "social": 0,
+            "role": 2,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 1
+          },
+          "role": {
+            "label": "메모 다시 읽기",
+            "variant": 1,
+            "variantsSeen": [
+              0,
+              1
+            ],
+            "stage": "idle",
+            "time": 0.816699999999953,
+            "owner": "desk",
+            "done": 2,
+            "interruptions": 0,
+            "events": 4,
+            "handError": 1.1102230246251565e-16,
+            "tipError": 1.1102230246251565e-16,
+            "returning": false,
+            "history": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "sora": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 4,
+            "done": 2,
+            "returning": false,
+            "handError": 1.4946834900704541e-16,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 2,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 2,
+            "social": 0,
+            "role": 3,
+            "sofaPair": 2,
+            "pairAttempts": 2,
+            "window": 1
+          },
+          "role": {
+            "label": "화면과 스케치 비교",
+            "variant": 2,
+            "variantsSeen": [
+              0,
+              1,
+              2
+            ],
+            "stage": "idle",
+            "time": 0.8165999999999763,
+            "owner": "desk",
+            "done": 3,
+            "interruptions": 0,
+            "events": 6,
+            "handError": 5.551115123125783e-17,
+            "tipError": 5.551115123125783e-17,
+            "returning": false,
+            "history": [
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "jun": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 6,
+            "done": 2,
+            "returning": false,
+            "handError": 2.9893669801409083e-16,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 1,
+            "interruptions": 0,
+            "rest": 1,
+            "social": 1,
+            "role": 2,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 0
+          },
+          "role": {
+            "label": "다른 코드 영역 설명",
+            "variant": 1,
+            "variantsSeen": [
+              0,
+              1
+            ],
+            "stage": "idle",
+            "time": 0.8166999999999534,
+            "owner": "desk",
+            "done": 2,
+            "interruptions": 0,
+            "events": 0,
+            "handError": 2.0014830212433605e-16,
+            "tipError": 0,
+            "returning": false,
+            "history": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "min": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 4,
+            "done": 2,
+            "returning": false,
+            "handError": 1.1102230246251565e-16,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 1,
+            "interruptions": 0,
+            "rest": 1,
+            "social": 1,
+            "role": 2,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 0
+          },
+          "role": {
+            "label": "항목별 체크",
+            "variant": 1,
+            "variantsSeen": [
+              0,
+              1
+            ],
+            "stage": "idle",
+            "time": 0.8165999999999765,
+            "owner": "desk",
+            "done": 2,
+            "interruptions": 0,
+            "events": 4,
+            "handError": 1.1102230246251565e-16,
+            "tipError": 4.577566798522237e-16,
+            "returning": false,
+            "history": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        },
+        "leo": {
+          "kind": "desk",
+          "stage": "idle",
+          "returning": false,
+          "slot": null,
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 2,
+            "done": 1,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          },
+          "restStyle": null,
+          "counts": {
+            "sofa": 1,
+            "cup": 1,
+            "meeting": 0,
+            "interruptions": 0,
+            "rest": 1,
+            "social": 0,
+            "role": 2,
+            "sofaPair": 1,
+            "pairAttempts": 1,
+            "window": 1
+          },
+          "role": {
+            "label": "문서 모서리 정렬",
+            "variant": 1,
+            "variantsSeen": [
+              0,
+              1
+            ],
+            "stage": "idle",
+            "time": 0.8165999999999763,
+            "owner": "desk",
+            "done": 2,
+            "interruptions": 0,
+            "events": 4,
+            "handError": 1.1102230246251565e-16,
+            "tipError": 0,
+            "returning": false,
+            "history": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract"
+            ]
+          }
+        }
+      },
+      "roleActors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "sofaPair": null,
+      "pairHistory": [
+        {
+          "cue": "responsive-sofa-4",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reply",
+            "reflect",
+            "explain",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "sora": 0,
+            "min": 0
+          },
+          "variant": 2,
+          "leader": "min",
+          "speakers": [
+            "min",
+            "sora"
+          ],
+          "ids": [
+            "sora",
+            "min"
+          ]
+        },
+        {
+          "cue": "responsive-sofa-8",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reply",
+            "reflect",
+            "explain",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "nara": 0,
+            "jun": 0
+          },
+          "variant": 2,
+          "leader": "jun",
+          "speakers": [
+            "jun",
+            "nara"
+          ],
+          "ids": [
+            "nara",
+            "jun"
+          ]
+        },
+        {
+          "cue": "responsive-sofa-12",
+          "phase": "done",
+          "status": "complete",
+          "history": [
+            "greet",
+            "respond",
+            "reflect",
+            "explain",
+            "reply",
+            "confirm",
+            "relax"
+          ],
+          "presented": {
+            "leo": 0,
+            "sora": 0
+          },
+          "variant": 0,
+          "leader": "leo",
+          "speakers": [
+            "leo",
+            "sora"
+          ],
+          "ids": [
+            "leo",
+            "sora"
+          ]
+        }
+      ],
+      "window": {
+        "available": true,
+        "issue": null,
+        "position": [
+          0.4,
+          0,
+          -3.1
+        ]
+      },
+      "expressiveActors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "traffic": {
+        "policy": "atomic-corridors",
+        "capacity": 2,
+        "radius": 0.5,
+        "grid": 0.4,
+        "active": [],
+        "peak": 2,
+        "simultaneousGrants": 3,
+        "grants": 28,
+        "maxWait": 61.247500000013986,
+        "waiting": [],
+        "stationary": []
+      },
+      "choiceHistory": [
+        {
+          "id": "sora",
+          "kind": "sofaPair",
+          "time": 20.032599999999796
+        },
+        {
+          "id": "min",
+          "kind": "sofaPair",
+          "time": 20.032599999999796
+        },
+        {
+          "id": "leo",
+          "kind": "cup",
+          "time": 125.22830000001507
+        },
+        {
+          "id": "nara",
+          "kind": "sofaPair",
+          "time": 134.24470000001608
+        },
+        {
+          "id": "jun",
+          "kind": "sofaPair",
+          "time": 134.24470000001608
+        },
+        {
+          "id": "sora",
+          "kind": "window",
+          "time": 142.2610000000179
+        },
+        {
+          "id": "sora",
+          "kind": "sofaPair",
+          "time": 223.40780000003642
+        },
+        {
+          "id": "leo",
+          "kind": "sofaPair",
+          "time": 223.40780000003642
+        },
+        {
+          "id": "nara",
+          "kind": "window",
+          "time": 230.42420000003804
+        },
+        {
+          "id": "min",
+          "kind": "micro",
+          "time": 239.4405000000401
+        },
+        {
+          "id": "jun",
+          "kind": "cup",
+          "time": 258.473100000042
+        },
+        {
+          "id": "jun",
+          "kind": "meeting",
+          "time": 300.5547000000497
+        },
+        {
+          "id": "min",
+          "kind": "meeting",
+          "time": 300.5547000000497
+        },
+        {
+          "id": "leo",
+          "kind": "role",
+          "time": 363.6688000000641
+        },
+        {
+          "id": "sora",
+          "kind": "micro",
+          "time": 370.6852000000657
+        },
+        {
+          "id": "leo",
+          "kind": "window",
+          "time": 379.70150000006777
+        },
+        {
+          "id": "nara",
+          "kind": "role",
+          "time": 398.7341000000721
+        },
+        {
+          "id": "sora",
+          "kind": "role",
+          "time": 414.76680000007576
+        },
+        {
+          "id": "nara",
+          "kind": "cup",
+          "time": 422.7832000000776
+        },
+        {
+          "id": "sora",
+          "kind": "cup",
+          "time": 433.79940000008014
+        },
+        {
+          "id": "nara",
+          "kind": "micro",
+          "time": 468.86470000008813
+        },
+        {
+          "id": "sora",
+          "kind": "role",
+          "time": 475.8810000000897
+        },
+        {
+          "id": "sora",
+          "kind": "micro",
+          "time": 492.9137000000936
+        },
+        {
+          "id": "min",
+          "kind": "role",
+          "time": 510.9463000000977
+        },
+        {
+          "id": "min",
+          "kind": "cup",
+          "time": 527.978900000073
+        },
+        {
+          "id": "jun",
+          "kind": "role",
+          "time": 538.9952000000397
+        },
+        {
+          "id": "nara",
+          "kind": "meeting",
+          "time": 546.0116000000189
+        },
+        {
+          "id": "sora",
+          "kind": "meeting",
+          "time": 546.0116000000189
+        },
+        {
+          "id": "jun",
+          "kind": "micro",
+          "time": 555.0278999999921
+        },
+        {
+          "id": "leo",
+          "kind": "micro",
+          "time": 563.0442999999676
+        },
+        {
+          "id": "min",
+          "kind": "window",
+          "time": 581.0768999999126
+        }
+      ],
+      "pendingCues": [],
+      "bodyContacts": {
+        "scope": "conservative-arm-capsules-torso-capsules-and-solid-furniture-AABBs",
+        "sampleInterval": 0.05,
+        "samples": 12476,
+        "rows": [],
+        "peakProxyDepth": 0.07373487347267896,
+        "checkedFurniture": [
+          "SofaBase",
+          "SofaBack",
+          "sofa-armrest-0",
+          "sofa-armrest-1",
+          "MeetingTop",
+          "NaraOakDeskTop",
+          "SoraOakDeskTop",
+          "JunOakDeskTop",
+          "MinOakDeskTop",
+          "LeoOakDeskTop"
+        ],
+        "physicalSkinGuarantee": false
+      },
+      "meetingSupport": {},
+      "episodes": {
+        "pending": [],
+        "history": [],
+        "tour": null
+      },
+      "hands": {
+        "nara": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          }
+        },
+        "sora": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          }
+        },
+        "jun": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          }
+        },
+        "min": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          }
+        },
+        "leo": {
+          "R": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          },
+          "L": {
+            "blend": 0,
+            "padError": 0,
+            "maxReach": 0.06412487816752559,
+            "fingers": 5,
+            "contactScope": "five-finger-target-points",
+            "contacts": []
+          }
+        }
+      },
+      "sofaSupport": {},
+      "transfer": {
+        "active": false,
+        "stage": "idle",
+        "owner": null,
+        "time": 0.8165999999999983,
+        "cancelled": false,
+        "complete": true,
+        "events": 4,
+        "transfers": 2,
+        "handError": 2.3337405582995814e-14,
+        "supports": {
+          "nara": {
+            "L": 0.7400000008940695,
+            "R": 0.7720000000521541
+          },
+          "sora": {
+            "L": 0.7400000008940697,
+            "R": 0.7645000151728325
+          },
+          "jun": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          },
+          "min": {
+            "L": 0.7400000008940697,
+            "R": 0.7570000001899898
+          },
+          "leo": {
+            "L": 0.7400000008940697,
+            "R": 0.7400000008940697
+          }
+        },
+        "history": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read",
+          "giveback",
+          "regrasp",
+          "return",
+          "release"
+        ],
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "desk": "nara",
+            "side": "L",
+            "supportTop": 0.7400000008940695,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "desk": "sora",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "desk": "jun",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "desk": "min",
+            "side": "L",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "desk": "leo",
+            "side": "R",
+            "supportTop": 0.7400000008940697,
+            "supportGap": 0.0004999999999999449
+          }
+        ]
+      },
+      "visitRequest": {
+        "visitor": "nara",
+        "host": "jun",
+        "status": "accepted"
+      },
+      "deferred": [],
+      "visits": {
+        "waiting": null,
+        "availability": [
+          {
+            "visitor": "nara",
+            "host": "sora",
+            "available": true,
+            "position": [
+              -1.05,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "nara",
+            "host": "jun",
+            "available": true,
+            "position": [
+              1.45,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "nara",
+            "host": "min",
+            "available": true,
+            "position": [
+              -2.3,
+              0,
+              1.52
+            ]
+          },
+          {
+            "visitor": "nara",
+            "host": "leo",
+            "available": true,
+            "position": [
+              2.3,
+              0,
+              1.52
+            ]
+          },
+          {
+            "visitor": "sora",
+            "host": "nara",
+            "available": true,
+            "position": [
+              -3.55,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "sora",
+            "host": "jun",
+            "available": true,
+            "position": [
+              1.45,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "sora",
+            "host": "min",
+            "available": true,
+            "position": [
+              -2.3,
+              0,
+              1.52
+            ]
+          },
+          {
+            "visitor": "sora",
+            "host": "leo",
+            "available": true,
+            "position": [
+              2.3,
+              0,
+              1.52
+            ]
+          },
+          {
+            "visitor": "jun",
+            "host": "nara",
+            "available": true,
+            "position": [
+              -3.55,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "jun",
+            "host": "sora",
+            "available": true,
+            "position": [
+              -1.05,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "jun",
+            "host": "min",
+            "available": true,
+            "position": [
+              -2.3,
+              0,
+              1.52
+            ]
+          },
+          {
+            "visitor": "jun",
+            "host": "leo",
+            "available": true,
+            "position": [
+              2.3,
+              0,
+              1.52
+            ]
+          },
+          {
+            "visitor": "min",
+            "host": "nara",
+            "available": true,
+            "position": [
+              -3.55,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "min",
+            "host": "sora",
+            "available": true,
+            "position": [
+              -1.05,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "min",
+            "host": "jun",
+            "available": true,
+            "position": [
+              1.45,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "min",
+            "host": "leo",
+            "available": true,
+            "position": [
+              2.3,
+              0,
+              1.52
+            ]
+          },
+          {
+            "visitor": "leo",
+            "host": "nara",
+            "available": true,
+            "position": [
+              -3.55,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "leo",
+            "host": "sora",
+            "available": true,
+            "position": [
+              -1.05,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "leo",
+            "host": "jun",
+            "available": true,
+            "position": [
+              1.45,
+              0,
+              -0.83
+            ]
+          },
+          {
+            "visitor": "leo",
+            "host": "min",
+            "available": true,
+            "position": [
+              -2.3,
+              0,
+              1.52
+            ]
+          }
+        ],
+        "counts": {
+          "nara": 1,
+          "sora": 0,
+          "jun": 1,
+          "min": 0,
+          "leo": 0
+        },
+        "history": [
+          {
+            "ids": [
+              "nara",
+              "jun"
+            ],
+            "cue": "visit-1",
+            "phase": "done",
+            "status": "complete",
+            "history": [
+              "greet",
+              "respond",
+              "note",
+              "explain",
+              "reflect",
+              "reply",
+              "confirm",
+              "relax"
+            ],
+            "presented": {
+              "nara": 0,
+              "jun": 0
+            },
+            "reason": "문서 검토 완료",
+            "variant": 1,
+            "leader": "jun",
+            "speakers": [
+              "jun",
+              "nara"
+            ],
+            "transfer": true,
+            "transferComplete": true,
+            "transferStages": [
+              "pickup",
+              "grasp",
+              "present",
+              "receive",
+              "accept",
+              "read",
+              "giveback",
+              "regrasp",
+              "return",
+              "release"
+            ]
+          }
+        ],
+        "current": null
+      }
+    },
+    "resetTimes": 1,
+    "cutaway": {
+      "left": false,
+      "back": false
+    }
+  },
+  "errors": [],
+  "sourceHashScope": "pilot-3d runtime .mjs including renderer and activity UI; excludes tests/assets",
+  "sourceHashes": {
+    "pilot-3d/activities/anchors.mjs": "9f6f893b47f6cabf4282f0e57fc1169ac2543542495560c46b5985260176f3c9",
+    "pilot-3d/activities/app.mjs": "cfe9e326c45a0a9bcd9484e2904df6bf028b5f8ae48329ef2c578cb1d751cac1",
+    "pilot-3d/activities/body-contact.mjs": "2370f5286a21a8388c7258cfb67f5d818c246cea926f950910ba041331991fee",
+    "pilot-3d/activities/conversation.mjs": "75adbe38a22d2867de8c7225e6358a0eef02b650767b31a966bf95dfe3797d43",
+    "pilot-3d/activities/desk-actions.mjs": "5283192344b4c054c72d82b101a062a8eeac43025b2f9e812576fced57f76f8b",
+    "pilot-3d/activities/desk-visit.mjs": "50246fd5a7517f0535f584a19151d8a1c7145c1e3810b2391607f6ee7a75f1f0",
+    "pilot-3d/activities/destinations.mjs": "986e7f20b9c8614e8d546b5dfa65554e4ec91b23111092007cbe8ee21d7be02c",
+    "pilot-3d/activities/expressive-motion.mjs": "1404e3c09d3dbcd57ef709df6dd1efed50e8044998072dcc46d0de30c19581f0",
+    "pilot-3d/activities/expressive-route.mjs": "c8d70bb456eaf2fcac5dc98599a66a62f7a1180e6345eb4ad4d7590369893eec",
+    "pilot-3d/activities/expressive-scheduler.mjs": "26b41a6d60141cf5e1ae7a1cc6e20e3fd93016c99ec730872d3db659b015c382",
+    "pilot-3d/activities/gaze.mjs": "d5b4fbc7e4d4dfc7929b3bb7f372ef90d3b07983f1d3f14fa0a2a379ef24b015",
+    "pilot-3d/activities/grounded-route.mjs": "4790005b08f6346e947f11d630eea274a1460bc4d70a821117a8f68091941dcb",
+    "pilot-3d/activities/hand-grips.mjs": "f22c4ab0d2f3807c06101e498f010a60bc5b21685d571277b33f889dd30b84f1",
+    "pilot-3d/activities/interaction-scheduler.mjs": "5a9a28cf5c4b91797f186c72cff5aa8c228059ead703fb6db173b26fa5aa5225",
+    "pilot-3d/activities/interactions.mjs": "2d31eca0a03329fd8a99ef6247429f1b58c8eea00ab7ce27dd20b53870eccaf1",
+    "pilot-3d/activities/meeting-support.mjs": "f54111ffc457814f5a1f80d56a26a7187371134157550c5427436bdb1b77a3fc",
+    "pilot-3d/activities/model.mjs": "c788d88ac988a433718cb4bd1c8c68597f85a78141974f4dc40fda56bce209a2",
+    "pilot-3d/activities/natural-motion.mjs": "1e005b4fa8001ab1da0a5ebab665687dc93d0fb51549a9c3872307bdd3653ead",
+    "pilot-3d/activities/natural-rest.mjs": "3141c4969cd841c4c9538b50fdb454f03ab24ce184d0bff19413f247b67c1bc2",
+    "pilot-3d/activities/presentation.mjs": "bdb25e434bd72458ee13fd106210eac4016963665fec356e236791f8dc67c650",
+    "pilot-3d/activities/prop-transfer.mjs": "c41cfa955604ab915bedc474fd812863d081d48d0f5ac4d4b05e9b4c0429f8e4",
+    "pilot-3d/activities/reservations.mjs": "9ef2426f2d33597bfd6a28283edcba5f977ea097393ab2ed69decbf97edb606e",
+    "pilot-3d/activities/responsive-exchange.mjs": "36e1dfc5f4461d88a3a07f052980c052aa2164dcf3f50ad476cfcd3546c101f3",
+    "pilot-3d/activities/role-scheduler.mjs": "2c814e0f2c82b2354b3fd39f1e9654c75d7b0275feaeb75eef752144d4832a04",
+    "pilot-3d/activities/role-variations.mjs": "d343d68ee496a88deb6a748339d37b300260749fd2cec75a95ea8336b3a4b715",
+    "pilot-3d/activities/routes.mjs": "62f504ce989f1658c6e279442988ac3a2b2c2cbf8cc454f15dabcbc08611fedf",
+    "pilot-3d/activities/runtime.mjs": "9c81a60ec74581114dea55eaed234b8cf33077644d9b6e3cba7867b3407c864c",
+    "pilot-3d/activities/scheduler.mjs": "b61ef928d137076c8bc8b720180f7845246ab19f247945045ae30e1b4494c5c1",
+    "pilot-3d/activities/social-interactions.mjs": "feaa42a5be215785d6a0ae52ea25d565a9ea26615867382255a84a4b165dd4a6",
+    "pilot-3d/activities/sofa-support.mjs": "860d8d281d0dbe3ee3fe50866fbf47a695840ce9bc9db003c6ba4b3744248c9c",
+    "pilot-3d/activities/team-runtime.mjs": "958358da7a5af495c5e3b0fa281eed9d7414a8124d4ec452a2d9ea24b8a23a30",
+    "pilot-3d/activities/team-scheduler.mjs": "c3b750cbbe4b85da6a21e43e795a69a6ca00eba769d6f2e31fa5a94a674abaa9",
+    "pilot-3d/activities/team-soak.mjs": "da03cbe2ce7b1572d7397c6af120e48701c7eb4acaa8a40eedd6f29f085867e3",
+    "pilot-3d/activities/team/app.mjs": "8de9bfe0eb4a80e07ec53a58c5c3d68cb83851cbc287c456fc9db061c6edcd7f",
+    "pilot-3d/activities/traffic.mjs": "8c87c7ba6e1100c5999db4666f4977444c4f9cc1e62f9035c5b8776b041b1d12",
+    "pilot-3d/activities/visit-anchors.mjs": "227f749c3a05f18a50913563ab27afcfbb2813d63108dc5f380cd12033356153",
+    "pilot-3d/activities/visit-presentation.mjs": "6e451c465e1c27e4623026d983ef43e3c1428cf48c7255ee7c902149f106bd82",
+    "pilot-3d/activities/window-trip.mjs": "2aa8d2e79c12909e460abf1fd548de37e63361bb46a2e11324fe2efe8865b675",
+    "pilot-3d/room-quality/app.mjs": "058cc675c89a1b5e53d216d368a96eb461f441aa4febd8a16584126c221cd71d",
+    "pilot-3d/room-quality/appearance.mjs": "1705672c5a70d36ea246349da190803fc0682915a5cbd4a0c9a3c86310d70e7c",
+    "pilot-3d/room-quality/asset-contract.mjs": "48518c7a721ec8bead861ec39fa28ab83ea8c330921d5678dd0492f5a31be696",
+    "pilot-3d/room-quality/contact-ao.mjs": "ee4edb648ced5f0ffa911d7596f17de12cf0a253ab649967fcc4bbc685ec3c07",
+    "pilot-3d/room-quality/lighting.mjs": "0299dee4e92a7e618ec5e54ad8a1a003ebfebd73e2f792c5fc0973e813a9cd57",
+    "pilot-3d/room-quality/model.mjs": "8e16684a5605daa5115774133244716dd539e6fb5a1a113d99f4beb8bd1b1639",
+    "pilot-3d/room-quality/outdoors.mjs": "3cfd24eecc75706c675f77547a7ba50cf013890916dda37a72247106b326a66f",
+    "pilot-3d/room-quality/presentation.mjs": "24903fb6f0b9119a0e6deba2a1d17c182186824fd0d42ba4b1c5806a52afedec",
+    "pilot-3d/room-quality/soak.mjs": "56bf83867fe6a799ae8de19e63454253ed64e5a34e2388a09a62e736dc190ac1",
+    "pilot-3d/room-quality/surfaces.mjs": "5d9a4388d3c801a9fe731a66d909548507735b93843fba59b6a4661450596363",
+    "pilot-3d/room-quality/workstations.mjs": "dfdb4d08a56618493d1863922706330c089061992f260e3f4fa9a3901b2d4de5",
+    "pilot-3d/room-quality/zones.mjs": "8f5206ee51ea0b6003059e78ad8c36592439fbbcd3a506b8d93905745be208db",
+    "pilot-3d/sample/ambient-motion.mjs": "7a8ea5355d85ec361d57d882bf99602277d1151eeab5743fadf473ef5abcbe8e",
+    "pilot-3d/sample/app.mjs": "2eebb06e307cef2b1a8f3fbf85de4599e8f7ffd3feb5e89505c531e7cfd6e845",
+    "pilot-3d/sample/asset-contract.mjs": "336fc95b7e4f89331dc6612ea4232ddbed9d26441809ca54a8e2bebaf2978c9b",
+    "pilot-3d/sample/asset-loader.mjs": "e0105887773e3409fea8a70d97be56b8ef22fae0a7e1b0a8cdeaa6e36dfe1464",
+    "pilot-3d/sample/character-rig.mjs": "8e680ea8c15e20e884c138642f4a940504a83086695a657bd84443f9811cedef",
+    "pilot-3d/sample/characters.mjs": "3d513d221f7024cc896c1f56f80a351806e66f0d4f5d8f5c286b774c565e72ba",
+    "pilot-3d/sample/cloth.mjs": "7fcdb1086ccde35cd5d70fe30883a727ab90516d1d04c9f85e834c7673ed6ac3",
+    "pilot-3d/sample/geometry.mjs": "718eaf68be1c238713dfc5cac022fa64e12d900821f6237187aebef08f686ee7",
+    "pilot-3d/sample/lighting.mjs": "bab3817e45ec7aadea80d6aa7a85f39501deb3c465790a8dc1bca84f505953cf",
+    "pilot-3d/sample/materials.mjs": "c5963276138b698dd3b1296007c0cd4646351b278c409728e5543a0b09ad0f2d",
+    "pilot-3d/sample/model.mjs": "15dde5d922e703598dd7e3b18a8d7601d6e8f73b6b8e004d7f083721c30b7cf1",
+    "pilot-3d/sample/motion.mjs": "7c26980ead0548782f2856e5ee75fd999af092a23b2ed1efc52f709ace267f49",
+    "pilot-3d/sample/office-model.mjs": "195f56ddc7f14b7fd730c4ec4209d17b4833f4e5efc2650711741ef359df7c4f",
+    "pilot-3d/sample/office-preview.mjs": "dae5aa902a8764025923eef33755e7bfb7f8503cb5338b30f0efdb24051ca2e0",
+    "pilot-3d/sample/optimize.mjs": "fb94425efc85e8bdd8f0a90ba841fae0d5447594d32c0ad144aadd073161adce",
+    "pilot-3d/sample/poses.mjs": "dd42e0fff97d38821a555077677d347ba774cd8f080ea9c5eea9f5b28e749283",
+    "pilot-3d/sample/production-view.mjs": "f79505dfa113a9280f87d532a0d4273309d488d58992252b007dfeff262104d5",
+    "pilot-3d/sample/quality-view.mjs": "729db1cf8039da62bcdbb079c471c21cb728922b025985da6e55002b49ab7fe5",
+    "pilot-3d/sample/role-kit.mjs": "b345fcdb29fd22f53d0d39b4e05472f926b8f3b995c3c905c1bc368d07b416d3",
+    "pilot-3d/sample/room.mjs": "0e5264a797bee6f43f84da15d02cfb6b86efb676bf91ace06eb0879aeda1c282",
+    "pilot-3d/sample/runtime.mjs": "01e4b4c99ed99c4e150d8e7688006a16c2a82df81b0a06d872d947aa7d28b767",
+    "pilot-3d/sample/workspace.mjs": "12b7d095adc091b80bb34bbb1306780a4075b9c139ab58f8ef88ed23a13e1d6c",
+    "pilot-3d/src/animation.mjs": "47620f4ad575769d3c2d12e5cc53387c5622211fb1f576e65ef59a41e3178c8d",
+    "pilot-3d/src/app.mjs": "4dffcf180a6d5970caf394d89ac71ae0ccdf4f6538808f661d9bfc40fde3b61f",
+    "pilot-3d/src/framing.mjs": "8ae3da8da340908240a6d6ca082ecfe216945f6d9e8cfe88958fce576351a901",
+    "pilot-3d/src/model.mjs": "853ce00bc8a4d8f3421e27eec9e61260e5d33098097a25221be1a81891a5f34c",
+    "pilot-3d/src/scene.mjs": "2644043b3474c375cb87fb02b94d30c9b4346f7e23493c60a58f40583e41a903",
+    "pilot-3d/src/view-model.mjs": "2b947e4a32b57d642fa8e9ed2f93412777b7ca5e4f9da7994662c0f80b7877da"
+  },
+  "sourceUnchanged": true
+}

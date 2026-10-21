@@ -1,0 +1,90 @@
+{
+  "status": "passed-local-only-physical-mobile-incomplete",
+  "checkedAt": "2026-10-21T12:31:20.858Z",
+  "baseCommit": "da7ac4f",
+  "sourceFrozenAt": "2026-10-21T11:15:52Z",
+  "finalSourceUnchanged": true,
+  "automatedTests": {
+    "passed": 260,
+    "failed": 0,
+    "cancelled": 0
+  },
+  "soak": {
+    "actual-continuous": {
+      "measurementSeconds": 600,
+      "wallSeconds": 690.209,
+      "version": 8,
+      "cleanup": true,
+      "sourceUnchanged": true
+    },
+    "actual-mixed": {
+      "measurementSeconds": 1800,
+      "wallSeconds": 1860.324,
+      "version": 8,
+      "cleanup": true,
+      "sourceUnchanged": true
+    }
+  },
+  "lifecycle": {
+    "wallSeconds": 4502,
+    "checkpoint60": true,
+    "gates": {
+      "checkpoint60": true,
+      "actualDuration": true,
+      "sourceUnchanged": true,
+      "errors": true,
+      "canvas": true,
+      "steadyHeap": true,
+      "logoutHeap": true
+    },
+    "baselineMiB": 20.25102996826172,
+    "lateMiB": 20.946613311767578,
+    "logoutGrowthMiB": 0.8254280090332031
+  },
+  "dataGrowth": {
+    "wallSeconds": 3611.068725875,
+    "jobs": 60,
+    "requests": 7482,
+    "originalRecordsUnchanged": true
+  },
+  "contactCandidates": [
+    {
+      "version": 7,
+      "samples": 12000,
+      "overlappingSamples": 11951,
+      "deepSamples": 11950,
+      "peakProxyDepth": 0.07026026744249109
+    },
+    {
+      "version": 8,
+      "samples": 12000,
+      "overlappingSamples": 476,
+      "deepSamples": 166,
+      "peakProxyDepth": 0.06450649549662735
+    }
+  ],
+  "physicalMobile": "deferred by user; unavailable",
+  "gpuMemory": "not measured",
+  "appHash": "b0177274a8ac9ce25f1d3535ab367d193ed21858c0f9d594180b817574b489fa",
+  "serverHash": "d97d0e86aead1c922b3266bfa18d4027a05703290112ef7fd7b303653db74662",
+  "supersededEvidence": "before-elbow-continuity is not final acceptance",
+  "proofs": {
+    "final-runtime-source.json": "94cd279db7a5ab4bd657b4a66a8bd094b675760519f6d6d6649361d71d2503a4",
+    "automated-tests.tap": "4dcf67ce7ec7207cb51b63c8628383887ed899858fc0d1c5311bb75e6cc7f82e",
+    "actual-continuous.json": "1d13f04c32d4787d11acdb59fe26bff263320e9e29e75cb59052bc657b4bd22e",
+    "actual-mixed.json": "e5ca3098113cd58c74542841fdbb924f9e1c3988feb153c555afd119dac6cddf",
+    "lifecycle-75min.json": "6b284a853990b714b36bb7292938377fd6060d659278edd5ab5e3d805296e0d3",
+    "data-growth-60plus.json": "b86f72c4d1c33b49bd2ae5cb752666d3fe7319ba84ab25fc4cef020ae65f392d",
+    "performance.json": "2cfe47d868d23953f6585953d6f4bdbc560ba787be54f5ad05f508d05c2c1298",
+    "fallback.json": "3c26f66170a09fc60230ae93ea90f6140efe4722d0e97216975ce0ac6e4c2daf",
+    "work-interruption.json": "df1db24b394c883375f727b4b7828589a386592053bb202d07c6ef3b9c2ec360",
+    "assets-layout.json": "7dc2b70097afb12ca06f53904fc06306d93ea304cdef21c92583bec66ac68636",
+    "compiled-smoke.json": "ae5aeb702f536d5f45098577482cbdc05617f51fad050e780ddf5dcd4a43935f",
+    "collaboration-load.json": "2ac90c0d8467eca5a7e7cc5fe32f098b3750860fffb2f5810128f3acc2f7c6ef",
+    "retention-smoke.json": "8027022c6a8b1f97e33dfb1ccb7cb58356f4055206a8cc23f1e966a949e57e25",
+    "elbow-comparison.json": "029afc0e5003c4de6f0a9365c5af2a7eaa6224eba9d54d79ed900453909c9060",
+    "prepared.json": "661b268810333eb9c6f47a71ce06b6893954d9a3e110098876af2fc76bc65da1",
+    "contact-coverage.json": "c1c4277b6dea943b74ac063997978ed033cf23e4857d4ede3a0864e56fc85af5",
+    "mobile-layout.json": "8750555c8f32010d78a02425e1417143c5f0f0d466104060bc113b79b61bdd95"
+  }
+}

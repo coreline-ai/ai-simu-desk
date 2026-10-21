@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: QA profiles preserve historical evidence and require explicit new runtime versions
+ok 1 - QA profiles preserve historical evidence and require explicit new runtime versions
+  ---
+  duration_ms: 0.371292
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 45.148125

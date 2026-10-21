@@ -1,0 +1,10 @@
+{
+  "release": ".data/build-releases/1792582457588-b5cf72a5-5a8f-494c-b05a-c1adb204b73e",
+  "appHash": "b0177274a8ac9ce25f1d3535ab367d193ed21858c0f9d594180b817574b489fa",
+  "serverHash": "d97d0e86aead1c922b3266bfa18d4027a05703290112ef7fd7b303653db74662",
+  "roomUnchanged": true,
+  "serverUnchangedSinceInitialQA": true,
+  "matchesFinalQA4191": true,
+  "qaAppHash": "b0177274a8ac9ce25f1d3535ab367d193ed21858c0f9d594180b817574b489fa",
+  "qaHashCheckedAt": "2026-10-21T11:48:01.534Z"
+}
