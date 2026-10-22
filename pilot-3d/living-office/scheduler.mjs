@@ -4,10 +4,12 @@ import {Huddles} from './huddle.mjs';
 import {PeerReactions} from './reactions.mjs';
 import {ScenarioDirector} from './scenarios.mjs';
 import {CupSupport} from './cup-support.mjs';
+import {HUMAN_PROFILES,HUMAN_RESTS} from './human-motion.mjs';
 
 export class LivingScheduler extends EnsembleScheduler{
   constructor(...args){super(...args);this.variants=new Map(this.ids.map((id,i)=>[id,i%3]));this.resume=new ActivityResume(this);this.group.minParticipants=3;this.huddles=new Huddles(this,args[5].model,args[5].metadata);this.reactions=new PeerReactions(this,args[5].model);this.scenario=new ScenarioDirector(this);this.cupSupport=new CupSupport(this);}
   startScenario(name='review'){return this.scenario.start(name);}
+  configure(trip,id){super.configure(trip,id);if(this.humanMotion?.enabled){const p=HUMAN_PROFILES[id];Object.assign(trip.options.routeMotion,{speed:p.speed,period:p.period});}return trip;}
   idle(id){return !this.huddles?.current&&super.idle(id);}
   extraBusy(id){return !!this.huddles?.current?.records.has(id)||super.extraBusy(id);}
   getRecord(id){return this.huddles?.current?.records.get(id)??super.getRecord(id);}
@@ -19,7 +21,7 @@ export class LivingScheduler extends EnsembleScheduler{
   tagVariant(id){const r=this.records.get(id);if(r){r.livingVariant=this.variants.get(id)??0;this.variants.set(id,(r.livingVariant+1)%3);}return true;}
   startSofa(id=this.vm.selectedAgent??'nara'){return super.startSofa(id)&&this.tagVariant(id);}
   startWindow(id=this.vm.selectedAgent??'nara'){return super.startWindow(id)&&this.tagVariant(id);}
-  startRest(id=this.vm.selectedAgent??'nara'){return super.startRest(id)&&this.tagVariant(id);}
+  startRest(id=this.vm.selectedAgent??'nara'){if(!super.startRest(id))return false;if(this.humanMotion?.enabled){const r=this.records.get(id),styles=HUMAN_RESTS[id];r.style=styles[this.restCounts[id]%styles.length];r.seated=['wrist_release','shoulder_drop'].includes(r.style);if(r.seated)r.flowWindow=false;}return this.tagVariant(id);}
   setViewModel(vm){this.resume?.capture(vm);super.setViewModel(vm);if(this.huddles?.current?.ids.some(id=>(vm.actors&&!vm.actors.some(a=>a.agentId===id))||this.rawIncoming(id).pose!=='idle'))this.huddles.end('업무 도착/참가자 종료 중단');}
   setAuto(value){if(!value)this.resume?.clear();return super.setAuto(value);}
   cancelAll(){this.scenario?.cancel();this.resume?.clear();this.reactions?.clear();this.huddles?.end('활동 중단');super.cancelAll();}

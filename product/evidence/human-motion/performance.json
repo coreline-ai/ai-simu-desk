@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "scenario": "same v9/v11 room, idle presentation",
+  "viewport": [
+    1280,
+    900
+  ],
+  "dpr": 1,
+  "quality": "balanced",
+  "secondsPerSample": 5,
+  "results": [
+    {
+      "motion": "original",
+      "samples": [
+        {
+          "p95": 16.700000000000728,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "ms": 5011
+        },
+        {
+          "p95": 16.799999999999272,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "ms": 5007
+        },
+        {
+          "p95": 16.799999999999272,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "ms": 5009
+        }
+      ],
+      "medianP95": 16.799999999999272
+    },
+    {
+      "motion": "enhanced",
+      "samples": [
+        {
+          "p95": 16.700000000000728,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "ms": 5007
+        },
+        {
+          "p95": 16.799999999999272,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "ms": 5008
+        },
+        {
+          "p95": 16.700000000000728,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "ms": 5008
+        }
+      ],
+      "medianP95": 16.700000000000728
+    }
+  ]
+}

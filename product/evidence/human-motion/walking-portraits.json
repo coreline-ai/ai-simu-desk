@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "cameraNote": "Camera backed away along the same orthographic direction so foreground colleagues are in front of the near plane.",
+  "rows": [
+    {
+      "camera": {
+        "modelVersion": 9,
+        "position": [
+          10.221649387748284,
+          5.5,
+          0.516237040811212
+        ],
+        "target": [
+          -2.9783506122517163,
+          0.9999999999999999,
+          -1.883762959188787
+        ],
+        "zoom": 1.2,
+        "focus": "sora",
+        "frustum": [
+          -2.8095122388845626,
+          2.8095122388845626,
+          1.5502221726271583,
+          -1.5502221726271583
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "camera": {
+        "modelVersion": 9,
+        "position": [
+          10.193408376416546,
+          5.499999999999998,
+          0.4950562823124074
+        ],
+        "target": [
+          -3.0065916235834544,
+          1,
+          -1.9049437176875907
+        ],
+        "zoom": 1.2,
+        "focus": "sora",
+        "frustum": [
+          -2.8095122388845626,
+          2.8095122388845626,
+          1.5502221726271583,
+          -1.5502221726271583
+        ]
+      },
+      "enabled": false
+    }
+  ]
+}

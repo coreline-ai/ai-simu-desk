@@ -43,6 +43,8 @@ npm start
 
 [개발 계획](dev-plan/implement_20261022_141958.md) · [에셋과 공유 계약](docs/living-assets-catalog.md) · [검수 기록](docs/living-activities-qa.md).
 
+v11 보행 보강: 빈손은 편하게 내린 반대쪽 팔 흔들림·몸 쪽 손바닥·이완 손가락을 사용하고, 5명의 걸음·대화·휴식 습관을 구분했습니다. [5명 보행과 기존 v11 비교](http://127.0.0.1:4180/demos/activities/living/?play=1&activity=walk) · [보정 검수](docs/human-motion-qa.md).
+
 ## 기존 배포 준비 코드 (현재 작업은 로컬 전용)
 
 사용자 결정에 따라 외부 제공 DB를 연결하지 않습니다. 현재 Vercel 자체 Postgres 신규 제공은 종료되었으므로 ‘Vercel 직접 제공 PostgreSQL’ 연결 완료를 주장하지 않습니다. 아래는 기존에 준비한 배포 경로이며 이번 작업에서 생성·연결·배포하지 않았습니다. [공식 제공 방식](https://vercel.com/docs/postgres).

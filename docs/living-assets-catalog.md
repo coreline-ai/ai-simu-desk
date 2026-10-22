@@ -37,3 +37,7 @@
 - `server/db/migrations/012_scene_rooms.sql`: 기존 자료를 보존하는 추가 테이블.
 
 관련 문서: [개발 계획](../dev-plan/implement_20261022_141958.md), [v10 에셋](ensemble-assets-catalog.md).
+
+## v11 보행·손 에셋 후속 보정
+
+기존 GLB/105클립을 유지하고 연속 손 메시의 이완 자세, 손바닥 회내·손목 후행과 5명별 보행·경청·설명·휴식 프로파일을 런타임에 보강했다. 컵/문서/마커와 지지면 소유권은 우선한다. 같은 공간의 원래 v11 동작은 웹의 비교 버튼으로 볼 수 있다. 담당은 `living-office/human-motion.mjs`이며 [검수와 근거](human-motion-qa.md)에 범위와 한계를 기록한다.

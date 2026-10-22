@@ -75,7 +75,8 @@ class HandGrip{
     for(const {node}of this.original)node.visible=false;this.root.visible=true;
     const targets=this.contacts(prop,kind);this.error=0;this.maxReach=0;this.contactRows=[];
     this.fingers.forEach((f,i)=>{
-      const target=f.end.clone().lerp(targets[i],this.blend),axis=target.clone().sub(f.base),raw=axis.length(),[a,b]=f.lengths,d=T.MathUtils.clamp(raw,.009,a+b-.0001);axis.normalize();
+      const relaxed=f.end.clone();if(this.relaxation){const curl=this.relaxation.curl;if(i===0){relaxed.x*=1-.18*curl;relaxed.z+=.014*curl;}else{relaxed.y+=.014+.018*curl+(i===4?.005:0);relaxed.z+=.012+.020*curl;}}
+      const target=relaxed.lerp(targets[i],this.blend),axis=target.clone().sub(f.base),raw=axis.length(),[a,b]=f.lengths,d=T.MathUtils.clamp(raw,.009,a+b-.0001);axis.normalize();
       const end=f.base.clone().addScaledVector(axis,d),pole=V(0,0,1),bend=pole.addScaledVector(axis,-pole.dot(axis)).normalize(),along=(a*a-b*b+d*d)/(2*d),mid=f.base.clone().addScaledVector(axis,along).addScaledVector(bend,Math.sqrt(Math.max(0,a*a-along*along)));
       for(const [j,p,q]of [[0,f.base,mid],[1,mid,end]]){const link=f.links[j];link.position.copy(p).add(q).multiplyScalar(.5);link.quaternion.setFromUnitVectors(Y,q.clone().sub(p).normalize());link.updateMatrix();this.batch.setMatrixAt(i*2+j,link.matrix);}
       f.pad.position.copy(end);this.maxReach=Math.max(this.maxReach,raw);
@@ -88,6 +89,7 @@ class HandGrip{
 }
 export class HandGrips{
   constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,{R:new HandGrip(part(actors[id],'NaraHandR'),'R',{...options,enhanced:!!actors[id].userData.ensembleAsset}),L:new HandGrip(part(actors[id],'NaraHandL'),'L',{...options,enhanced:!!actors[id].userData.ensembleAsset})}]));}
+  setRelaxation(id,profile){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].relaxation=profile?.free?.[side]?{curl:profile.curl}:null;}
   apply(id,dt,override){const row=this.rows.get(id);if(!row)return;const d=this.desks[id],c=this.cups[id];row.R.apply(dt,override?.R?.blend??amount(d.stage,d.time),override?.R?.prop??d.prop,override?.R?.kind??(id==='leo'?'page':'pen'));row.L.apply(dt,override?.L?.blend??amount(c.state,c.time,true),override?.L?.prop??c.mug,override?.L?.kind??'cup');}
   diagnostics(){return Object.fromEntries([...this.rows].map(([id,row])=>[id,Object.fromEntries(Object.entries(row).map(([side,hand])=>[side,hand.diagnostics()]))]));}
   dispose(){for(const row of this.rows.values())for(const hand of Object.values(row))hand.dispose();this.rows.clear();}

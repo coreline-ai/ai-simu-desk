@@ -1,0 +1,262 @@
+TAP version 13
+# Subtest: five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+ok 1 - five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+  ---
+  duration_ms: 3395.163625
+  type: 'test'
+  ...
+# Subtest: relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+ok 2 - relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+  ---
+  duration_ms: 1688.300458
+  type: 'test'
+  ...
+# Subtest: a cup arm and both support hands retain contact authority while a free walking arm is released
+ok 3 - a cup arm and both support hands retain contact authority while a free walking arm is released
+  ---
+  duration_ms: 1150.200709
+  type: 'test'
+  ...
+# Subtest: individual standing gestures differ and preserve fixed joints and owned marker precedence
+ok 4 - individual standing gestures differ and preserve fixed joints and owned marker precedence
+  ---
+  duration_ms: 1676.791542
+  type: 'test'
+  ...
+# Subtest: pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+ok 5 - pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+  ---
+  duration_ms: 4005.552542
+  type: 'test'
+  ...
+# Subtest: all five have different initial rest habits and support-safe seated/standing transitions
+ok 6 - all five have different initial rest habits and support-safe seated/standing transitions
+  ---
+  duration_ms: 1452.534958
+  type: 'test'
+  ...
+# Subtest: walking with a cup keeps only the occupied arm bent and preserves handle contact
+ok 7 - walking with a cup keeps only the occupied arm bent and preserves handle contact
+  ---
+  duration_ms: 1499.693833
+  type: 'test'
+  ...
+# Subtest: nara supports raised cup with both hands, keeps one owner and returns safely
+ok 8 - nara supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 2659.504125
+  type: 'test'
+  ...
+# Subtest: sora supports raised cup with both hands, keeps one owner and returns safely
+ok 9 - sora supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1198.028166
+  type: 'test'
+  ...
+# Subtest: jun supports raised cup with both hands, keeps one owner and returns safely
+ok 10 - jun supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1847.139625
+  type: 'test'
+  ...
+# Subtest: min supports raised cup with both hands, keeps one owner and returns safely
+ok 11 - min supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1228.448416
+  type: 'test'
+  ...
+# Subtest: leo supports raised cup with both hands, keeps one owner and returns safely
+ok 12 - leo supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1173.804375
+  type: 'test'
+  ...
+# Subtest: two-hand cup releases the support safely when actual work preempts drinking
+ok 13 - two-hand cup releases the support safely when actual work preempts drinking
+  ---
+  duration_ms: 1063.840542
+  type: 'test'
+  ...
+# Subtest: complete pose frames share body, finger matrices and attached props without independent scheduling
+ok 14 - complete pose frames share body, finger matrices and attached props without independent scheduling
+  ---
+  duration_ms: 4684.297459
+  type: 'test'
+  ...
+# Subtest: 3 seated participants all speak, write, clean and return
+ok 15 - 3 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 7659.972875
+  type: 'test'
+  ...
+# Subtest: 4 seated participants all speak, write, clean and return
+ok 16 - 4 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 9117.369625
+  type: 'test'
+  ...
+# Subtest: 2 standing participants arrive before turns and return without overlap
+ok 17 - 2 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3237.15875
+  type: 'test'
+  ...
+# Subtest: 3 standing participants arrive before turns and return without overlap
+ok 18 - 3 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3834.657584
+  type: 'test'
+  ...
+# Subtest: 4 standing participants arrive before turns and return without overlap
+ok 19 - 4 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 2968.498375
+  type: 'test'
+  ...
+# Subtest: 5 standing participants arrive before turns and return without overlap
+ok 20 - 5 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3011.129417
+  type: 'test'
+  ...
+# Subtest: standing meeting rejects malformed participants and cleans on work interruption
+ok 21 - standing meeting rejects malformed participants and cleans on work interruption
+  ---
+  duration_ms: 2874.63725
+  type: 'test'
+  ...
+# Subtest: passing greetings are bounded and never replace prop hands or routes
+ok 22 - passing greetings are bounded and never replace prop hands or routes
+  ---
+  duration_ms: 5328.328166
+  type: 'test'
+  ...
+# Subtest: nara safely resumes interrupted sofa/window/rest/coffee after real work
+ok 23 - nara safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 5643.313083
+  type: 'test'
+  ...
+# Subtest: sora safely resumes interrupted sofa/window/rest/coffee after real work
+ok 24 - sora safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4666.393541
+  type: 'test'
+  ...
+# Subtest: jun safely resumes interrupted sofa/window/rest/coffee after real work
+ok 25 - jun safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4686.065083
+  type: 'test'
+  ...
+# Subtest: min safely resumes interrupted sofa/window/rest/coffee after real work
+ok 26 - min safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4780.811167
+  type: 'test'
+  ...
+# Subtest: leo safely resumes interrupted sofa/window/rest/coffee after real work
+ok 27 - leo safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 5807.656625
+  type: 'test'
+  ...
+# Subtest: explicit cancellation and participant removal discard resume intent
+ok 28 - explicit cancellation and participant removal discard resume intent
+  ---
+  duration_ms: 1288.191625
+  type: 'test'
+  ...
+# Subtest: all five approach the shared board, grip one marker, point, replace and return
+not ok 29 - all five approach the shared board, grip one marker, point, replace and return
+  ---
+  duration_ms: 4326.065458
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-review.test.mjs:3:1'
+  failureType: 'testCodeFailure'
+  error: '컵 손 도달 범위 오류: 0.486'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    solveArm (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/activities/interactions.mjs:11:52)
+    BoardPointer.apply (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/living-office/review.mjs:23:42)
+    ReviewSequence.apply (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/living-office/review.mjs:34:47)
+    Huddles.apply (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/living-office/huddle.mjs:47:76)
+    LivingScheduler.applyCustom (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/living-office/scheduler.mjs:32:76)
+    Object.afterPose (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/activities/team-runtime.mjs:51:277)
+    Object.update (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/sample/runtime.mjs:11:23)
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:115)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-review.test.mjs:3:161)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+  ...
+# Subtest: board review safely cancels during approach
+ok 30 - board review safely cancels during approach
+  ---
+  duration_ms: 3055.246667
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during use
+ok 31 - board review safely cancels during use
+  ---
+  duration_ms: 3112.782709
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during replace
+ok 32 - board review safely cancels during replace
+  ---
+  duration_ms: 3123.610917
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during back
+ok 33 - board review safely cancels during back
+  ---
+  duration_ms: 2976.534417
+  type: 'test'
+  ...
+# Subtest: focus scenario completes all four phases and safely returns
+ok 34 - focus scenario completes all four phases and safely returns
+  ---
+  duration_ms: 8552.977542
+  type: 'test'
+  ...
+# Subtest: review scenario completes all four phases and safely returns
+ok 35 - review scenario completes all four phases and safely returns
+  ---
+  duration_ms: 13926.117792
+  type: 'test'
+  ...
+# Subtest: break scenario completes all four phases and safely returns
+not ok 36 - break scenario completes all four phases and safely returns
+  ---
+  duration_ms: 2683.062792
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-scenarios.test.mjs:2:45'
+  failureType: 'testCodeFailure'
+  error: '컵 손 도달 범위 오류: 0.485'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    solveArm (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/activities/interactions.mjs:11:52)
+    CupInteraction.apply (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/activities/interactions.mjs:72:19)
+    Object.afterPose (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/activities/team-runtime.mjs:51:210)
+    Object.update (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/sample/runtime.mjs:11:23)
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:115)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-scenarios.test.mjs:2:204)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+  ...
+# Subtest: scenario respects work, pause and explicit cancellation; camera identifies group events
+ok 37 - scenario respects work, pause and explicit cancellation; camera identifies group events
+  ---
+  duration_ms: 1924.682125
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 35
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 138829.769042

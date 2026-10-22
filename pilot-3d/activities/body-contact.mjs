@@ -26,6 +26,12 @@ export class BodyContacts{
   for(const side of ['L','R']){
    const shoulder=part(actor,'NaraShoulder'+side).getWorldPosition(V()),elbow=part(actor,'NaraElbow'+side).getWorldPosition(V()),hand=part(actor,'NaraHand'+side),key=id+'/'+side,q=hand.getWorldQuaternion(new T.Quaternion());let point=hand.getWorldPosition(V());
    const s=this.scheduler,controlled=s.handControl?.(id,side)||side==='R'&&s.desks[id].busy||side==='L'&&!['idle','tableRest'].includes(s.cups[id].state)||s.transfer?.controls(id)?.side===side||s.sofaSupport?.rows.get(id)?.diagnostic[side]||s.meetingSupport?.rows.get(id)?.hands[side],previous=this.hands.get(key);
+   // Away from solid furniture a free v11 arm keeps its authored swing/twist.
+   // Re-solving every free frame forced all five elbows to the same reach angle.
+   if(!controlled&&s.humanMotion?.ownsFreeArm(id,side)){
+    const nearby=this.furniture.some(item=>item.box.distanceToPoint(shoulder)<.65&&(segmentBoxDistance(shoulder,elbow,item.box)<.11||segmentBoxDistance(elbow,point,item.box)<.09));
+    if(!nearby){this.elbows.delete(key);this.hands.delete(key);continue;}
+   }
    if(!controlled){if(point.x>desk.box.min.x-.04&&point.x<desk.box.max.x+.04&&point.z>desk.box.min.z-.04&&point.z<desk.box.max.z+.04)point.y=Math.max(point.y,desk.box.max.y+.055);if(previous){const frame=actor.getWorldQuaternion(new T.Quaternion()),local=actor.worldToLocal(point.clone()),delta=local.clone().sub(previous.point),distance=delta.length();if(distance>dt)local.copy(previous.point).addScaledVector(delta,dt/distance);point=actor.localToWorld(local);const localQ=frame.clone().invert().multiply(q),angle=previous.q.angleTo(localQ);if(angle>0)localQ.copy(previous.q).slerp(frame.clone().invert().multiply(q),Math.min(1,dt*6/angle));q.copy(frame).multiply(localQ);}}
    // Free hands may ease within reach; never project an owned prop/surface target.
    if(!controlled){const delta=point.clone().sub(shoulder),length=delta.length(),reach=part(actor,'NaraElbow'+side).position.length()+hand.position.length()-.003;point=shoulder.clone().addScaledVector(delta,T.MathUtils.clamp(length,.03,reach)/(length||1));}

@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+ok 1 - five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+  ---
+  duration_ms: 3327.091292
+  type: 'test'
+  ...
+# Subtest: relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+ok 2 - relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+  ---
+  duration_ms: 1834.816708
+  type: 'test'
+  ...
+# Subtest: a cup arm and both support hands retain contact authority while a free walking arm is released
+ok 3 - a cup arm and both support hands retain contact authority while a free walking arm is released
+  ---
+  duration_ms: 1224.78
+  type: 'test'
+  ...
+# Subtest: individual standing gestures differ and preserve fixed joints and owned marker precedence
+ok 4 - individual standing gestures differ and preserve fixed joints and owned marker precedence
+  ---
+  duration_ms: 2050.506583
+  type: 'test'
+  ...
+# Subtest: pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+ok 5 - pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+  ---
+  duration_ms: 4000.337
+  type: 'test'
+  ...
+# Subtest: all five have different initial rest habits and support-safe seated/standing transitions
+ok 6 - all five have different initial rest habits and support-safe seated/standing transitions
+  ---
+  duration_ms: 1195.103459
+  type: 'test'
+  ...
+# Subtest: walking with a cup keeps only the occupied arm bent and preserves handle contact
+ok 7 - walking with a cup keeps only the occupied arm bent and preserves handle contact
+  ---
+  duration_ms: 1275.587334
+  type: 'test'
+  ...
+# Subtest: all five approach the shared board, grip one marker, point, replace and return
+ok 8 - all five approach the shared board, grip one marker, point, replace and return
+  ---
+  duration_ms: 7951.288708
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during approach
+ok 9 - board review safely cancels during approach
+  ---
+  duration_ms: 2794.429458
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during use
+ok 10 - board review safely cancels during use
+  ---
+  duration_ms: 3510.591583
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during replace
+ok 11 - board review safely cancels during replace
+  ---
+  duration_ms: 3897.821875
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during back
+ok 12 - board review safely cancels during back
+  ---
+  duration_ms: 3346.874959
+  type: 'test'
+  ...
+# Subtest: focus scenario completes all four phases and safely returns
+ok 13 - focus scenario completes all four phases and safely returns
+  ---
+  duration_ms: 8712.230834
+  type: 'test'
+  ...
+# Subtest: review scenario completes all four phases and safely returns
+ok 14 - review scenario completes all four phases and safely returns
+  ---
+  duration_ms: 13895.498125
+  type: 'test'
+  ...
+# Subtest: break scenario completes all four phases and safely returns
+ok 15 - break scenario completes all four phases and safely returns
+  ---
+  duration_ms: 14106.13275
+  type: 'test'
+  ...
+# Subtest: scenario respects work, pause and explicit cancellation; camera identifies group events
+ok 16 - scenario respects work, pause and explicit cancellation; camera identifies group events
+  ---
+  duration_ms: 1934.598125
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 75683.623792

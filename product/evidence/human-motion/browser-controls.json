@@ -1,0 +1,249 @@
+{
+  "passed": true,
+  "origin": "http://127.0.0.1:4193",
+  "checks": [
+    "new five-person demo and relaxed visible walking hands",
+    "pause freezes motion",
+    "same-space original v11 comparison, actor camera, speed and one canvas",
+    "all five walk in the browser",
+    "all five discuss and return",
+    "x1 x1.5 x2 x3",
+    "320–1440px, no horizontal overflow",
+    "OS reduced motion",
+    "v10 preserved and v11 restored"
+  ],
+  "before": {
+    "camera": {
+      "position": [
+        -7.361024373854414,
+        2.6999999999999997,
+        -1.4799999999999995
+      ],
+      "target": [
+        -3.3610243738544137,
+        0.9999999999999999,
+        -3.48
+      ],
+      "zoom": 1.05,
+      "focus": "sora"
+    },
+    "humanMotion": {
+      "enabled": false,
+      "profiles": {
+        "nara": {
+          "label": "차분한 보행 · 짧은 손짓",
+          "speed": 0.56,
+          "period": 0.92,
+          "swing": 0.27,
+          "elbow": 0.24,
+          "splay": 0.085,
+          "twist": 0.035,
+          "phase": 0.2,
+          "breath": 1.15,
+          "curl": 0.38,
+          "gesture": 0.52,
+          "habit": "small-nod"
+        },
+        "sora": {
+          "label": "경쾌한 보행 · 열린 손짓",
+          "speed": 0.6,
+          "period": 0.84,
+          "swing": 0.35,
+          "elbow": 0.28,
+          "splay": 0.12,
+          "twist": 0.05,
+          "phase": 1.7,
+          "breath": 1.3,
+          "curl": 0.24,
+          "gesture": 0.78,
+          "habit": "open-palms"
+        },
+        "jun": {
+          "label": "느긋한 보행 · 절제된 반응",
+          "speed": 0.53,
+          "period": 1,
+          "swing": 0.21,
+          "elbow": 0.22,
+          "splay": 0.07,
+          "twist": 0.025,
+          "phase": 3.1,
+          "breath": 0.95,
+          "curl": 0.45,
+          "gesture": 0.38,
+          "habit": "brief-glance"
+        },
+        "min": {
+          "label": "곧은 보행 · 확인하는 끄덕임",
+          "speed": 0.57,
+          "period": 0.88,
+          "swing": 0.25,
+          "elbow": 0.26,
+          "splay": 0.095,
+          "twist": 0.03,
+          "phase": 4.6,
+          "breath": 1.05,
+          "curl": 0.32,
+          "gesture": 0.46,
+          "habit": "double-nod"
+        },
+        "leo": {
+          "label": "여유로운 보행 · 넓은 설명",
+          "speed": 0.54,
+          "period": 0.98,
+          "swing": 0.32,
+          "elbow": 0.25,
+          "splay": 0.11,
+          "twist": 0.045,
+          "phase": 6.2,
+          "breath": 0.88,
+          "curl": 0.29,
+          "gesture": 0.68,
+          "habit": "gentle-tilt"
+        }
+      }
+    },
+    "actors": {
+      "nara": "nara_coffee_wait",
+      "sora": "sora_walk",
+      "jun": "jun_coffee_wait",
+      "min": "min_coffee_wait",
+      "leo": "leo_turn"
+    },
+    "violations": []
+  },
+  "after": {
+    "camera": {
+      "position": [
+        -7.4275864450105455,
+        2.7,
+        -1.4799999999999995
+      ],
+      "target": [
+        -3.4275864450105455,
+        1,
+        -3.48
+      ],
+      "zoom": 1.05,
+      "focus": "sora"
+    },
+    "humanMotion": {
+      "enabled": true,
+      "profiles": {
+        "nara": {
+          "label": "차분한 보행 · 짧은 손짓",
+          "speed": 0.56,
+          "period": 0.92,
+          "swing": 0.27,
+          "elbow": 0.24,
+          "splay": 0.085,
+          "twist": 0.035,
+          "phase": 0.2,
+          "breath": 1.15,
+          "curl": 0.38,
+          "gesture": 0.52,
+          "habit": "small-nod",
+          "style": "차분한 보행 · 짧은 손짓",
+          "mode": "coffee_wait",
+          "stride": 0,
+          "free": {
+            "L": true,
+            "R": true
+          }
+        },
+        "sora": {
+          "label": "경쾌한 보행 · 열린 손짓",
+          "speed": 0.6,
+          "period": 0.84,
+          "swing": 0.35,
+          "elbow": 0.28,
+          "splay": 0.12,
+          "twist": 0.05,
+          "phase": 1.7,
+          "breath": 1.3,
+          "curl": 0.24,
+          "gesture": 0.78,
+          "habit": "open-palms",
+          "style": "경쾌한 보행 · 열린 손짓",
+          "mode": "walk",
+          "stride": 0.08036578367692086,
+          "free": {
+            "L": true,
+            "R": true
+          }
+        },
+        "jun": {
+          "label": "느긋한 보행 · 절제된 반응",
+          "speed": 0.53,
+          "period": 1,
+          "swing": 0.21,
+          "elbow": 0.22,
+          "splay": 0.07,
+          "twist": 0.025,
+          "phase": 3.1,
+          "breath": 0.95,
+          "curl": 0.45,
+          "gesture": 0.38,
+          "habit": "brief-glance",
+          "style": "느긋한 보행 · 절제된 반응",
+          "mode": "coffee_wait",
+          "stride": 0,
+          "free": {
+            "L": true,
+            "R": true
+          }
+        },
+        "min": {
+          "label": "곧은 보행 · 확인하는 끄덕임",
+          "speed": 0.57,
+          "period": 0.88,
+          "swing": 0.25,
+          "elbow": 0.26,
+          "splay": 0.095,
+          "twist": 0.03,
+          "phase": 4.6,
+          "breath": 1.05,
+          "curl": 0.32,
+          "gesture": 0.46,
+          "habit": "double-nod",
+          "style": "곧은 보행 · 확인하는 끄덕임",
+          "mode": "coffee_wait",
+          "stride": 0,
+          "free": {
+            "L": true,
+            "R": true
+          }
+        },
+        "leo": {
+          "label": "여유로운 보행 · 넓은 설명",
+          "speed": 0.54,
+          "period": 0.98,
+          "swing": 0.32,
+          "elbow": 0.25,
+          "splay": 0.11,
+          "twist": 0.045,
+          "phase": 6.2,
+          "breath": 0.88,
+          "curl": 0.29,
+          "gesture": 0.68,
+          "habit": "gentle-tilt",
+          "style": "여유로운 보행 · 넓은 설명",
+          "mode": "turn",
+          "stride": 0,
+          "free": {
+            "L": true,
+            "R": true
+          }
+        }
+      }
+    },
+    "actors": {
+      "nara": "nara_coffee_wait",
+      "sora": "sora_walk",
+      "jun": "jun_coffee_wait",
+      "min": "min_coffee_wait",
+      "leo": "leo_turn"
+    },
+    "violations": []
+  },
+  "errors": []
+}

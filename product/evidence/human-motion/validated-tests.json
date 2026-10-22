@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "uniqueTests": 37,
+  "latestFailures": [],
+  "note": "37-case relevant regression run followed by 16 corrected/affected cases; initial two contact-transition failures retained in history."
+}
