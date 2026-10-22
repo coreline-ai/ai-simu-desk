@@ -1,0 +1,9 @@
+export const FINAL_IDS=Object.freeze(['nara','sora','jun','min','leo']);
+export const FINAL_STATIONS=Object.freeze(Object.fromEntries(FINAL_IDS.map((id,i)=>[id,[-4.8+i*2.4,0,-3]])));
+export function finalLayout(){
+ const cupCenterY=.7795,center=[-3.45,0,2.6],chairs=[{position:[-3.45,0,1.51],facing:0},{position:[-3.45,0,3.69],facing:Math.PI},...[-.82,.82].flatMap(dx=>[{position:[center[0]+dx,0,1.51],facing:0},{position:[center[0]+dx,0,3.69],facing:Math.PI}])];
+ const meeting={center,radii:[1.3,.65],chairs,slots:chairs.slice(0,2).map((row,i)=>({...row,cup:[center[0]+(i?.19:-.19),cupCenterY,center[2]+(i?.59:-.59)]}))};
+ const sofa={position:[3.55,0,1.4],slots:[{x:2.73,z:1.64},{x:4.37,z:1.64}],armrests:[[-1.32,2,.23],[1.32,2,.23]],rug:{shape:'rect',x:3.55,z:2.55,rx:2.05,rz:1.4,top:.02}};
+ const colliders=[{id:'sofa',min:[2.10,.95],max:[5,1.82]},{id:'meeting',min:[center[0]-1.3,center[2]-.65],max:[center[0]+1.3,center[2]+.65]},{id:'left-storage',min:[-6.51,.15],max:[-6.09,3.25]},{id:'divider',min:[.63,1.25],max:[1.07,4.05]},{id:'coffee',min:[5.8,-1.0],max:[6.5,1.1]},{id:'storage',min:[6.1,-2.15],max:[6.5,-1.3]},{id:'coffee-table',center:[3.55,3.4],radius:.52},{id:'lounge-chair',min:[5.15,2.8],max:[5.95,3.6]},...[[0,[-6.18,-4.75]],[1,[.1,-4.75]],[2,[5.7,1.55]]].map(([i,center])=>({id:'plant-'+i,center,radius:.28})),...chairs.map((c,i)=>({id:'meeting-chair-'+i,min:[c.position[0]-.21,c.position[2]-.21],max:[c.position[0]+.21,c.position[2]+.21]})),...Object.entries(FINAL_STATIONS).flatMap(([id,[x,,z]])=>[{id:id+'-desk',min:[x-.7,z-.25],max:[x+.7,z+.45]},{id:id+'-chair-parked',min:[x-.28,z-1.67],max:[x+.28,z-1.03]}])];
+ return{version:1,deskCupCenterY:cupCenterY,width:13.2,depth:10.2,bounds:[[-6.6,-.18,-5.1],[6.6,3.1,5.1]],stations:FINAL_STATIONS,meeting,sofa,window:{point:[-6,0,-3.9],lookAt:[-6,1.7,-7]},colliders};
+}

@@ -1,0 +1,130 @@
+{
+  "kind": "source-measured-final-office-geometry-and-routing-contract",
+  "at": "2026-10-22T00:10:06.298Z",
+  "modelVersion": 7,
+  "activityVersion": 9,
+  "dimensions": [
+    13.2,
+    3.1,
+    10.2
+  ],
+  "clips": 105,
+  "cost": {
+    "meshes": 533,
+    "triangles": 381192
+  },
+  "bytes": 7735284,
+  "sha256": "bc7058b568dd333caeb933d77824a835853834c5abd1902090a93c562d13dd89",
+  "destinations": 25,
+  "directedVisits": 20,
+  "furniture": [
+    {
+      "name": "LinenSofa",
+      "insideFloor": true
+    },
+    {
+      "name": "MeetingCorner",
+      "insideFloor": true
+    },
+    {
+      "name": "ActivityFurniture",
+      "insideFloor": true
+    },
+    {
+      "name": "LowDivider",
+      "insideFloor": true
+    },
+    {
+      "name": "CoffeeBar",
+      "insideFloor": true
+    },
+    {
+      "name": "LeftStorage",
+      "insideFloor": true
+    },
+    {
+      "name": "BackStorage",
+      "insideFloor": true
+    },
+    {
+      "name": "NaraWorkspace",
+      "insideFloor": true
+    },
+    {
+      "name": "SoraWorkspace",
+      "insideFloor": true
+    },
+    {
+      "name": "JunWorkspace",
+      "insideFloor": true
+    },
+    {
+      "name": "MinWorkspace",
+      "insideFloor": true
+    },
+    {
+      "name": "LeoWorkspace",
+      "insideFloor": true
+    }
+  ],
+  "window": {
+    "metadata": [
+      -6,
+      0,
+      -3.9
+    ],
+    "diagnostics": [
+      -6,
+      0,
+      -3.9
+    ]
+  },
+  "cups": [
+    {
+      "id": "nara",
+      "deskGap": 0.001999997615814153,
+      "meetingGaps": [
+        0.001999997615814153,
+        0.001999997615814153
+      ]
+    },
+    {
+      "id": "sora",
+      "deskGap": 0.001999997615814153,
+      "meetingGaps": [
+        0.001999997615814153,
+        0.001999997615814153
+      ]
+    },
+    {
+      "id": "jun",
+      "deskGap": 0.001999997615814153,
+      "meetingGaps": [
+        0.001999997615814153,
+        0.001999997615814153
+      ]
+    },
+    {
+      "id": "min",
+      "deskGap": 0.001999997615814153,
+      "meetingGaps": [
+        0.001999997615814153,
+        0.001999997615814153
+      ]
+    },
+    {
+      "id": "leo",
+      "deskGap": 0.001999997615814153,
+      "meetingGaps": [
+        0.001999997615814153,
+        0.001999997615814153
+      ]
+    }
+  ],
+  "allCupGaps2mm": true,
+  "capacity": {
+    "movement": 2,
+    "meetingDrops": 2,
+    "meetingFurniture": 6
+  }
+}

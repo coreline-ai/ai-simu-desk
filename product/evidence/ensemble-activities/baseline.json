@@ -1,0 +1,18 @@
+{
+  "createdAt": "2026-10-22T02:00:55.751225+00:00",
+  "sourceSnapshot": "/Volumes/ExternalSSD/projects_10/ai-simu-desk/.data/ensemble-baseline-20261022T020055Z",
+  "head": "ea13047dfb2cc6803b2812348114fd2e8ad1a288",
+  "activeRelease": "build-releases/1792632516707-cda2e00f-8aca-47a1-b86e-73d1e3378dba",
+  "assetHashes": {
+    "product/assets/studio-room-v6.glb": "7d6addce4b58447bdc8d45c4c725fefb26df4986a96759e14c75cb1bb7dd1aab",
+    "product/assets/studio-room-v7.glb": "bc7058b568dd333caeb933d77824a835853834c5abd1902090a93c562d13dd89"
+  },
+  "excluded": [
+    "actual DB",
+    "env files",
+    "git",
+    "build output",
+    "node_modules"
+  ],
+  "previousWorkPreserved": true
+}

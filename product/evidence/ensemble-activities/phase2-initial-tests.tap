@@ -1,0 +1,91 @@
+TAP version 13
+# Subtest: exported Nara GLB reloads with all original bindings and usable enhanced parts
+ok 1 - exported Nara GLB reloads with all original bindings and usable enhanced parts
+  ---
+  duration_ms: 1226.1905
+  type: 'test'
+  ...
+# Subtest: Nara asset prototype preserves five rigs and the original motion contract while adding real notebook and pencil geometry
+ok 2 - Nara asset prototype preserves five rigs and the original motion contract while adding real notebook and pencil geometry
+  ---
+  duration_ms: 638.828833
+  type: 'test'
+  ...
+# Subtest: Nara writing and page reading keep pencil and five-finger contacts continuous and return the animated page
+ok 3 - Nara writing and page reading keep pencil and five-finger contacts continuous and return the animated page
+  ---
+  duration_ms: 1674.266333
+  type: 'test'
+  ...
+# Subtest: Nara enhanced props recover from interruption at every role stage without surface duplicates
+ok 4 - Nara enhanced props recover from interruption at every role stage without surface duplicates
+  ---
+  duration_ms: 4526.265
+  type: 'test'
+  ...
+# Subtest: all five enhanced characters have stable anatomy, garment details and original sole height
+ok 5 - all five enhanced characters have stable anatomy, garment details and original sole height
+  ---
+  duration_ms: 586.221083
+  type: 'test'
+  ...
+# Subtest: new route has first-step, cruise, arrival and foot-led pivot with continuous endpoints
+not ok 6 - new route has first-step, cruise, arrival and foot-led pivot with continuous endpoints
+  ---
+  duration_ms: 3.974167
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-assets.test.mjs:43:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        'arrival',
+        'cruise',
+        'first_step',
+    -   'pivot'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'arrival'
+    1: 'cruise'
+    2: 'first_step'
+    3: 'pivot'
+  actual:
+    0: 'arrival'
+    1: 'cruise'
+    2: 'first_step'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-assets.test.mjs:43:547)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: five actors walk, sit, return for work and release their seats safely at all four visual rates
+ok 7 - five actors walk, sit, return for work and release their seats safely at all four visual rates
+  ---
+  duration_ms: 100587.734042
+  type: 'test'
+  ...
+# Subtest: v9 baseline keeps its route and hand surface when enhanced profile is absent
+ok 8 - v9 baseline keeps its route and hand surface when enhanced profile is absent
+  ---
+  duration_ms: 484.39575
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 7
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 109893.984542

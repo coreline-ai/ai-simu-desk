@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-22T01:29:15.450Z",
+  "release": "build-releases/1792632516707-cda2e00f-8aca-47a1-b86e-73d1e3378dba",
+  "rows": [
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/final/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/grounded/",
+      "status": 200
+    },
+    {
+      "path": "/library/docs/final-office-qa.html",
+      "status": 200
+    },
+    {
+      "path": "/library/dev-plan/implement_20261022_082727.html",
+      "status": 200
+    }
+  ],
+  "privateDenied": 3,
+  "assets": [
+    {
+      "path": "assets/app.js",
+      "sha256": "6c5e76eeab7b275269b977e992d3b51323cbc888855684cab7bd196402c27ba1"
+    },
+    {
+      "path": "demos/activities/final/app.js",
+      "sha256": "06221ecd53c2ddd63ee803eb18a5c806a8656f8987be2f59356a6b136776b551"
+    },
+    {
+      "path": "assets/studio-room-v6.glb",
+      "sha256": "7d6addce4b58447bdc8d45c4c725fefb26df4986a96759e14c75cb1bb7dd1aab"
+    },
+    {
+      "path": "assets/studio-room-v7.glb",
+      "sha256": "bc7058b568dd333caeb933d77824a835853834c5abd1902090a93c562d13dd89"
+    }
+  ],
+  "serverRestartNeeded": false,
+  "reason": "verified all server files and every non-library client file byte-identical to tested preview release",
+  "passed": true
+}

@@ -21,7 +21,8 @@ export function sofaAnchors(model, metadata, seatBox) {
     colliders: metadata.colliders, stationOrigin:station.getWorldPosition(new T.Vector3()).toArray(), clearance:CLEARANCE};
 }
 export function pointClear(point, colliders, radius=CLEARANCE) {
-  return !colliders.some(({min,max,center,radius:circle}) => {
+  return !colliders.some(({min,max,center,radius:circle,radii}) => {
+    if(center&&radii){const x=Math.abs(point[0]-center[0]),z=Math.abs(point[2]-center[1]),[a,b]=radii;if((x/a)**2+(z/b)**2<=1)return true;let lo=0,hi=Math.max(a*x,b*z,1);for(let n=0;n<40;n++){const t=(lo+hi)/2,v=(a*x/(t+a*a))**2+(b*z/(t+b*b))**2;if(v>1)lo=t;else hi=t;}const qx=a*a*x/(hi+a*a),qz=b*b*z/(hi+b*b);return Math.hypot(x-qx,z-qz)<radius-1e-6;}
     if(center)return Math.hypot(point[0]-center[0],point[2]-center[1])<circle+radius-1e-6;
     const x=Math.max(min[0],Math.min(max[0],point[0])), z=Math.max(min[1],Math.min(max[1],point[2]));
     return Math.hypot(point[0]-x,point[2]-z) < radius-1e-6;

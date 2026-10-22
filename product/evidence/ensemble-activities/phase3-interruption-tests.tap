@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: new cup and paper surfaces survive staged work interruption and release the same objects
+ok 1 - new cup and paper surfaces survive staged work interruption and release the same objects
+  ---
+  duration_ms: 58021.79675
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 58173.940375

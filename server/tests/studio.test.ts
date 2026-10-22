@@ -65,7 +65,7 @@ test("disk reopen, exclusive process lock, interrupted run recovery, migrations 
     const restored = await openDatabase(join(root, "restored"), backup);
     try {
       const restoredSnapshot = await createStudio(restored).snapshot("a", a.id); assert.equal(restoredSnapshot.runs[0].output, "중간 결과");
-      const migrations = await restored.client.query("SELECT name FROM studio_migrations ORDER BY name"); assert.equal(migrations.rows.length, 11);
+      const migrations = await restored.client.query<{name:string}>("SELECT name FROM studio_migrations ORDER BY name"); assert.equal(migrations.rows.length, 12);assert.equal(migrations.rows.at(-1)?.name,"012_scene_rooms.sql");
       await assert.rejects(() => openDatabase(join(root, "restored"), backup), /new empty directory/);
     } finally { await restored.close(); }
   } finally { await d.close(); await rm(root, { recursive: true, force: true }); }

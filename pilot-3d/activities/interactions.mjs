@@ -26,7 +26,8 @@ function gripMesh(hand){
 }
 export class CupInteraction {
  constructor(model,actor,id){this.actor=actor;this.id=id;this.hand=part(actor,'NaraHandL');this.mug=model.getObjectByName(actor.userData.prefix+'CeramicMug');if(!this.mug)throw Error('컵 소품 누락: '+id);
-  this.homeParent=this.mug.parent;this.mug.position.set(-.30,.785,-.20);this.home=this.mug.position.clone();this.grip=gripMesh(this.hand);this.open=this.hand.children.filter(n=>n!==this.grip);this.state='idle';this.time=0;this.total=0;this.owner='desk';this.events=0;this.done=0;this.reachError=0;this.returning=false;this.carryOnly=false;this.disposed=false;}
+  this.handGrip=this.mug.userData.handGrip;this.offset=this.handGrip?V(...this.handGrip.offset):V(.057,0,0);this.gripQ=new T.Quaternion().setFromAxisAngle(V(0,1,0),this.handGrip?.yaw??0);
+  this.homeParent=this.mug.parent;this.mug.position.set(-.30,model.getObjectByName('AfternoonStudio')?.userData.finalOffice?.deskCupCenterY??.785,-.20);this.home=this.mug.position.clone();this.grip=gripMesh(this.hand);this.open=this.hand.children.filter(n=>n!==this.grip);this.state='idle';this.time=0;this.total=0;this.owner='desk';this.events=0;this.done=0;this.reachError=0;this.returning=false;this.carryOnly=false;this.disposed=false;}
  get busy(){return this.state!=='idle'&&this.state!=='carry';}
  start({carry=false}={}){if(this.disposed||this.state!=='idle'||this.owner!=='desk')return false;this.carryOnly=carry;this.returning=false;this.enter('reach');return true;}
  enter(state){this.state=state;this.time=0;this.from=worldPose(this.mug);this.handFrom=worldPose(this.hand);}
@@ -54,8 +55,9 @@ export class CupInteraction {
  finishCarry(){if(this.state==='carry')this.enter('place');}
  setDownAt(drop){if(this.state!=='carry')return false;this.drop=drop;this.retrieve=false;this.enter('tablePlace');return true;}
  returnToHand(){this.retrieve=true;if(this.state==='tableRest')this.enter('tableReach');}
- apply(){if(this.state==='idle'||this.state==='tableRest')return;const actor=this.actor;actor.updateWorldMatrix(true,true);const t=this.time,head=part(actor,'NaraHead'),yaw=actor.getWorldQuaternion(new T.Quaternion()),offset=V(.057,0,0),home=this.homePose();let cup=worldPose(this.mug),handTarget,handQ=yaw.clone();
-  if(['reach','grasp','tableReach','tableGrasp'].includes(this.state)){const at=this.state.startsWith('table')?worldPose(this.drop):home,target=at.position.clone().add(offset.clone().applyQuaternion(at.quaternion)),u=this.state.endsWith('Grasp')||this.state==='grasp'?1:ease(t/(this.state==='tableReach'?1.2:1.35));handTarget=this.handFrom.position.clone().lerp(target,u);handQ=this.handFrom.quaternion.clone().slerp(at.quaternion,u);}
+ apply(){if(this.state==='idle'||this.state==='tableRest')return;const actor=this.actor;actor.updateWorldMatrix(true,true);const t=this.time,head=part(actor,'NaraHead'),yaw=actor.getWorldQuaternion(new T.Quaternion()),offset=this.offset,home=this.homePose();let cup=worldPose(this.mug),handTarget,handQ=yaw.clone();
+  if(['reach','grasp','tableReach','tableGrasp'].includes(this.state)){const at=this.state.startsWith('table')?worldPose(this.drop):home,target=at.position.clone().add(offset.clone().applyQuaternion(at.quaternion)),u=this.state.endsWith('Grasp')||this.state==='grasp'?1:ease(t/(this.state==='tableReach'?1.2:1.35));handTarget=this.handFrom.position.clone().lerp(target,u);handQ=this.handFrom.quaternion.clone().slerp(at.quaternion.clone().multiply(this.gripQ),u);}
+  else if(this.handGrip&&this.state==='release'){const u=ease(t/.35);handTarget=this.handFrom.position.clone().add(V(.06*u,.025*Math.sin(Math.PI*u),0).applyQuaternion(home.quaternion));handQ=this.handFrom.quaternion.clone();}
   else if(['release','retract'].includes(this.state)){const target=this.hand.getWorldPosition(V());handTarget=this.handFrom.position.clone().lerp(target,ease(t/(this.state==='release'?.35:.45)));handQ=this.handFrom.quaternion.clone().slerp(this.hand.getWorldQuaternion(new T.Quaternion()),ease(t/.45));}
   else {
    const hold=this.holdPoint();let target=hold,q=yaw.clone();
@@ -65,7 +67,7 @@ export class CupInteraction {
    else if(this.state==='place')cup={position:this.from.position.clone().lerp(home.position,ease(t/1.2)),quaternion:this.from.quaternion.clone().slerp(home.quaternion,ease(t/1.2))};
    else if(this.state==='lower')cup={position:this.from.position.clone().lerp(hold,ease(t/.85)),quaternion:this.from.quaternion.clone().slerp(q,ease(t/.85))};
    else cup={position:target,quaternion:q};
-   handTarget=cup.position.clone().add(offset.clone().applyQuaternion(cup.quaternion));handQ=cup.quaternion;
+   handTarget=cup.position.clone().add(offset.clone().applyQuaternion(cup.quaternion));handQ=cup.quaternion.clone().multiply(this.gripQ);
   }
   this.reachError=solveArm(actor,handTarget,handQ);
   if(this.owner==='hand')setWorld(this.mug,cup.position,cup.quaternion);

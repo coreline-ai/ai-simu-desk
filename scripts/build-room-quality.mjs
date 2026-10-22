@@ -10,10 +10,10 @@ import {embedTextures,rgbaPNG} from './sample-textures.mjs';
 import {releaseStudioAsset} from '../pilot-3d/sample/asset-loader.mjs';
 import {build} from 'esbuild';
 globalThis.FileReader??=class{readAsArrayBuffer(blob){blob.arrayBuffer().then(result=>{this.result=result;this.onloadend?.();}).catch(e=>this.onerror?.(e));}};
-export function roomTextures(binary){
+export function roomTextures(binary,{width=9.6,depth=7.6,aoSample=contactAO}={}){
  const jl=binary.readUInt32LE(12),json=JSON.parse(binary.subarray(20,20+jl).toString()),bl=binary.readUInt32LE(20+jl);let bin=Buffer.from(binary.subarray(28+jl,28+jl+bl));
  function appendTexture(name,png,sampler=0){json.bufferViews.push({buffer:0,byteOffset:bin.length,byteLength:png.length});json.images.push({bufferView:json.bufferViews.length-1,mimeType:'image/png',name});json.textures.push({source:json.images.length-1,sampler});const index=json.textures.length-1;bin=Buffer.concat([bin,png,Buffer.alloc((4-png.length%4)%4)]);return index;}
- const size=512,pixels=new Uint8Array(size*size*4);for(let y=0;y<size;y++)for(let x=0;x<size;x++){const v=Math.round(contactAO(x/(size-1)*9.6-4.8,y/(size-1)*7.6-3.8)*255),i=(y*size+x)*4;pixels.set([v,v,v,255],i);}
+ const size=512,pixels=new Uint8Array(size*size*4);for(let y=0;y<size;y++)for(let x=0;x<size;x++){const v=Math.round(aoSample(x/(size-1)*width-width/2,y/(size-1)*depth-depth/2)*255),i=(y*size+x)*4;pixels.set([v,v,v,255],i);}
  json.samplers.push({magFilter:9729,minFilter:9987,wrapS:33071,wrapT:33071});const aoIndex=appendTexture('StaticFurnitureAO',rgbaPNG(size,size,pixels),json.samplers.length-1);
  const used=new Set(json.materials.map(m=>m.extras?.roomSurface).filter(Boolean)),maps={};for(const kind of used){maps[kind]={};for(const type of ['color','normal','orm']){const data=surfacePixels(kind,type);maps[kind][type]=appendTexture(kind+'_'+type,rgbaPNG(data.size,data.size,data.bytes));}}
  const screenMaps={};for(const mat of json.materials){const role=mat.extras?.roomScreen;if(role&&!screenMaps[role]){const data=screenPixels(role);screenMaps[role]=appendTexture('Screen_'+role,rgbaPNG(data.width,data.height,data.pixels),json.samplers.length-1);}}

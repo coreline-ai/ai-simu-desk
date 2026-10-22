@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: new route has first-step, cruise, arrival and foot-led pivot with continuous endpoints
+ok 1 - new route has first-step, cruise, arrival and foot-led pivot with continuous endpoints
+  ---
+  duration_ms: 6.28325
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 195.97

@@ -11,10 +11,11 @@ import type { StudioPort as Studio } from "./domain/studio-port.js";
 import { createPresence } from "./application/presence.js";
 import type { PresencePort as Presence } from "./domain/presence.js";
 import { AppError } from "./domain/contracts.js";
+import type {ScenePort} from './domain/scene.js';
 
 const publicRun=(run:Run)=>{const {generatedAnswer,...safe}=run as Run&{generatedAnswer?:unknown};return safe;};
 
-export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel: (id: string) => void = () => {}, presence: Presence | undefined = studio ? createPresence(studio.presenceMembers) : undefined, diagnostics?: DiagnosticSink) {
+export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel: (id: string) => void = () => {}, presence: Presence | undefined = studio ? createPresence(studio.presenceMembers) : undefined, diagnostics?: DiagnosticSink, scenes?:ScenePort) {
   const app = new Hono();
   app.use("/api/*",requestDiagnostics(diagnostics));
   app.use("*", secureHeaders({ contentSecurityPolicy: { defaultSrc: ["'self'"], scriptSrc: ["'self'"], styleSrc: ["'self'"], imgSrc: ["'self'", "data:", "blob:"], connectSrc: ["'self'"], objectSrc: ["'none'"], baseUri: ["'none'"], frameAncestors: ["'none'"] } }));
@@ -24,11 +25,11 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
     if (!["GET", "HEAD", "OPTIONS"].includes(c.req.method) && c.req.header("origin") !== config.origin) return c.json({ error: "허용되지 않은 요청 출처입니다.", code: "ORIGIN_REJECTED" }, 403);
     await next();
   });
-  app.use("/api/*", bodyLimit({ maxSize: 16 * 1024, onError: c => c.json({ error: "요청이 너무 큽니다." }, 413) }));
+  app.use('/api/*',async(c,next)=>bodyLimit({maxSize:/^\/api\/workspaces\/[^/]+\/scene\/frame$/.test(c.req.path)?384*1024:16*1024,onError:c=>c.json({error:'요청이 너무 큽니다.'},413)})(c,next));
   app.all("/api/auth/*", async c => {
     const leaving = c.req.path === "/api/auth/sign-out" && c.req.method === "POST" ? await auth.api.getSession({headers:c.req.raw.headers}) : null;
     const response=await auth.handler(c.req.raw);
-    if(leaving && response.ok) await presence?.leaveSession(leaving.session.id);
+    if(leaving && response.ok){await presence?.leaveSession(leaving.session.id);await scenes?.leaveSession(leaving.session.id);}
     return response;
   });
   app.get("/api/health", c => c.json({ status: "ok", edition: config.deployment??"local", database: config.databaseUrl?"postgresql":"pglite", aiProvider: "fake" }));
@@ -45,6 +46,10 @@ export function createHttp(auth: Auth, config: Config, studio?: Studio, onCancel
       return identity.user.id;
     };
     const json = async (c: Context) => { try { const value = await c.req.json(); if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(); return value; } catch { throw new AppError(400, "JSON 요청을 확인해 주세요."); } };
+    if(scenes){const sceneIdentity=async(c:Context)=>{const s=await auth.api.getSession({headers:c.req.raw.headers});if(!s)throw new AppError(401,'로그인이 필요합니다.');return{userId:s.user.id,sessionId:s.session.id,expiresAt:s.session.expiresAt};};
+      app.get('/api/workspaces/:workspaceId/scene',async c=>c.json(await scenes.read(await sceneIdentity(c),c.req.param('workspaceId'))));
+      for(const[action,method]of[['claim','claim'],['frame','publish'],['release','release']]as const)app.post('/api/workspaces/:workspaceId/scene/'+action,async c=>c.json(await scenes[method](await sceneIdentity(c),c.req.param('workspaceId')!,await json(c))));
+    }
     if(presence) for(const action of ["touch","leave"] as const) app.post(`/api/workspaces/:workspaceId/presence${action==="leave" ? "/leave" : ""}`,async c=>{
       const session=await auth.api.getSession({headers:c.req.raw.headers});
       if(!session) throw new AppError(401,"로그인이 필요합니다.","UNAUTHORIZED");

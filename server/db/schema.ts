@@ -3,8 +3,12 @@ import { sql } from "drizzle-orm";
 import type {FakeAnswer,AnswerPhase,SourceContext} from "../domain/fake-answer.js";
 import type { AgentId, RunStatus } from "../domain/contracts.js";
 import type { InviteRole, MemberRole } from "../domain/collaboration.js";
+import type {ScenePacket} from '../domain/scene.js';
 
 const dates = () => ({ createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(), updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow() });
+export const sceneRooms=pgTable('scene_rooms',{
+ workspaceId:text('workspace_id').primaryKey().references(()=>workspaces.id,{onDelete:'cascade'}),epoch:integer('epoch').notNull().default(0),seq:integer('seq').notNull().default(0),controllerUserId:text('controller_user_id'),controllerSessionId:text('controller_session_id'),clientId:text('client_id'),tokenHash:text('token_hash'),leaseUntil:timestamp('lease_until',{withTimezone:true}),packet:jsonb('packet').$type<ScenePacket>(),updatedAt:timestamp('updated_at',{withTimezone:true}).notNull().defaultNow()
+});
 export const user = pgTable("auth_user", {
   id: text("id").primaryKey(), name: text("name").notNull(), email: text("email").notNull().unique(),
   emailVerified: boolean("email_verified").notNull().default(false), image: text("image"), ...dates(),

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "existingTablesCompared": 19,
+  "existingRowsAndContentUnchanged": true,
+  "migrationsBefore": 11,
+  "migrationsAfter": 12,
+  "addedTables": [
+    "scene_rooms"
+  ],
+  "sceneRows": 0,
+  "backupMode": "0600",
+  "at": "2026-10-22T06:28:58.451Z"
+}

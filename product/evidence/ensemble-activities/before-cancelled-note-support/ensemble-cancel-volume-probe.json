@@ -1,0 +1,61 @@
+{
+  "penetrations": [
+    {
+      "n": 2442,
+      "depth": 0.04158573473561211,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    },
+    {
+      "n": 2442,
+      "depth": 0.04158573473561211,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    },
+    {
+      "n": 2442,
+      "depth": 0.038929650373202396,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    },
+    {
+      "n": 2442,
+      "depth": 0.038301995310710546,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    },
+    {
+      "n": 2442,
+      "depth": 0.038301995310710546,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    },
+    {
+      "n": 2441,
+      "depth": 0.03180328321620984,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    },
+    {
+      "n": 2441,
+      "depth": 0.030733233274530036,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    },
+    {
+      "n": 2442,
+      "depth": 0.030447556775330176,
+      "stage": "idle",
+      "trip": "rest",
+      "row": false
+    }
+  ],
+  "total": 71
+}

@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: nara safely resumes interrupted sofa/window/rest/coffee after real work
+ok 1 - nara safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 5391.096584
+  type: 'test'
+  ...
+# Subtest: sora safely resumes interrupted sofa/window/rest/coffee after real work
+ok 2 - sora safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4413.840709
+  type: 'test'
+  ...
+# Subtest: jun safely resumes interrupted sofa/window/rest/coffee after real work
+ok 3 - jun safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4108.564833
+  type: 'test'
+  ...
+# Subtest: min safely resumes interrupted sofa/window/rest/coffee after real work
+ok 4 - min safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4835.972417
+  type: 'test'
+  ...
+# Subtest: leo safely resumes interrupted sofa/window/rest/coffee after real work
+ok 5 - leo safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4899.830375
+  type: 'test'
+  ...
+# Subtest: explicit cancellation and participant removal discard resume intent
+ok 6 - explicit cancellation and participant removal discard resume intent
+  ---
+  duration_ms: 935.599083
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 24683.324792

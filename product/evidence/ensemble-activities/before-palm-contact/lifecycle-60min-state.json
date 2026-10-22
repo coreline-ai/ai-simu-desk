@@ -1,0 +1,61 @@
+{
+  "status": "aborted",
+  "startedAt": "2026-10-22T03:12:13.536Z",
+  "endedAt": "2026-10-22T03:26:00.483Z",
+  "signal": "SIGTERM",
+  "rows": [
+    {
+      "index": 0,
+      "wallSeconds": 0,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 20919656,
+        "totalSize": 24788992,
+        "embedderHeapUsedSize": 2527256,
+        "backingStorageSize": 16083479
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 109,
+        "Nodes": 985
+      },
+      "canvas": 1
+    },
+    {
+      "index": 1,
+      "wallSeconds": 301,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 23357260,
+        "totalSize": 26624000,
+        "embedderHeapUsedSize": 3155224,
+        "backingStorageSize": 16083377
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 111,
+        "Nodes": 1030
+      },
+      "canvas": 1
+    },
+    {
+      "index": 2,
+      "wallSeconds": 601,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 22438140,
+        "totalSize": 25313280,
+        "embedderHeapUsedSize": 3128416,
+        "backingStorageSize": 16083392
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 111,
+        "Nodes": 1041
+      },
+      "canvas": 1
+    }
+  ],
+  "logoutRows": [],
+  "errors": []
+}

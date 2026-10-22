@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: nara: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 1 - nara: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 6999.273083
+  type: 'test'
+  ...
+# Subtest: nara: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 2 - nara: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5978.4105
+  type: 'test'
+  ...
+# Subtest: nara: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 3 - nara: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5889.740583
+  type: 'test'
+  ...
+# Subtest: nara: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 4 - nara: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 6176.224334
+  type: 'test'
+  ...
+# Subtest: sora: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 5 - sora: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5168.147458
+  type: 'test'
+  ...
+# Subtest: sora: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 6 - sora: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4896.902083
+  type: 'test'
+  ...
+# Subtest: sora: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 7 - sora: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5138.76425
+  type: 'test'
+  ...
+# Subtest: sora: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 8 - sora: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5923.426791
+  type: 'test'
+  ...
+# Subtest: jun: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 9 - jun: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5105.690458
+  type: 'test'
+  ...
+# Subtest: jun: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 10 - jun: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4897.259334
+  type: 'test'
+  ...
+# Subtest: jun: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 11 - jun: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5147.803417
+  type: 'test'
+  ...
+# Subtest: jun: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 12 - jun: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4874.737375
+  type: 'test'
+  ...
+# Subtest: min: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 13 - min: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5277.178291
+  type: 'test'
+  ...
+# Subtest: min: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 14 - min: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4653.345208
+  type: 'test'
+  ...
+# Subtest: min: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 15 - min: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4833.1505
+  type: 'test'
+  ...
+# Subtest: min: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 16 - min: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 9685.459834
+  type: 'test'
+  ...
+# Subtest: leo: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 17 - leo: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 13397.1545
+  type: 'test'
+  ...
+# Subtest: leo: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 18 - leo: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 16503.534791
+  type: 'test'
+  ...
+# Subtest: leo: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 19 - leo: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 22289.344
+  type: 'test'
+  ...
+# Subtest: leo: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 20 - leo: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 22610.019667
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 165655.402

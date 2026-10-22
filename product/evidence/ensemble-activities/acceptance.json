@@ -1,0 +1,45 @@
+{
+  "status": "local-implementation-validation-and-primary-application-complete",
+  "actors": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "model": 8,
+  "activity": 10,
+  "assetRevision": 2,
+  "unitTests": 313,
+  "cancelMeshTests": 20,
+  "seedRateCases": 8,
+  "actual10": true,
+  "actual30": true,
+  "actual60": true,
+  "memory": {
+    "baselineBytes": 22940592,
+    "lateBytes": 23476896,
+    "growthBytes": 536304,
+    "logoutGrowthBytes": 725600,
+    "gates": {
+      "checkpoint60": true,
+      "actualDuration": true,
+      "sourceUnchanged": true,
+      "errors": true,
+      "canvas": true,
+      "steadyHeap": true,
+      "logoutHeap": true
+    }
+  },
+  "performance": {
+    "oldP95": 16.799999999999272,
+    "candidateP95": 16.700000000004366,
+    "passed": true
+  },
+  "compiled": true,
+  "browserControls": true,
+  "sourceFreezeSha256": "d35ee4a5d7ede56277b6a282e02c5842536562efa28b880f8e76a60f3b85708a",
+  "oldAssetsPreserved": true,
+  "physicalDevice": "not tested: user confirmed iPhone XS Max unavailable",
+  "gpuMemoryAndThermals": "not measured"
+}

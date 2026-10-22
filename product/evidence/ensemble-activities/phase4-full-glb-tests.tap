@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: full five-person exported asset reloads its wardrobes, expressions, role props and cup supports
+ok 1 - full five-person exported asset reloads its wardrobes, expressions, role props and cup supports
+  ---
+  duration_ms: 1058.277833
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1212.743458

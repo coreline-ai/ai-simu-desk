@@ -7,9 +7,16 @@ const dir=await mkdtemp(join(tmpdir(),'studio-qa-')),port=Number(process.env.STU
 const config=getConfig({PORT:String(port),APP_ORIGIN:`http://127.0.0.1:${port}`,BETTER_AUTH_SECRET:randomBytes(48).toString('hex'),STUDIO_DATA_DIR:join(dir,'db'),FAKE_AI_DELAY_MS:process.env.STUDIO_QA_FAKE_DELAY_MS??'65'});
 await build({entryPoints:['product/src/app.mjs'],outfile:join(dir,'app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 await build({entryPoints:['pilot-3d/activities/team/app.mjs'],outfile:join(dir,'activities/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
+await build({entryPoints:['pilot-3d/living-office/app.mjs'],outfile:join(dir,'living/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 const db=await openDatabase(config.dataDir),app=createRuntime(db,config);
+app.get('/demos/activities/living/',async c=>c.html(await readFile('pilot-3d/living-office/index.html','utf8')));
+app.get('/demos/activities/living/styles.css',async c=>{c.header('Content-Type','text/css');return c.body(await readFile('pilot-3d/living-office/styles.css'));});
+app.get('/demos/activities/living/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'living/app.js')));});
+app.get('/assets/studio-room-v9.glb',async c=>{c.header('Content-Type','model/gltf-binary');return c.body(await readFile('product/assets/studio-room-v9.glb'));});
 app.get('/demos/activities/:variant/',async c=>{const variant=c.req.param('variant');if(!activityVariants.includes(variant))return c.notFound();return c.html(activityPage(await readFile('pilot-3d/activities/team/index.html','utf8'),variant));});
 app.get('/demos/activities/:variant/styles.css',async c=>{c.header('Content-Type','text/css');return c.body((await Promise.all(['pilot-3d/sample/styles.css','pilot-3d/room-quality/styles.css','pilot-3d/activities/styles.css'].map(p=>readFile(p,'utf8')))).join('\n'));});
+app.get('/assets/studio-room-v8.glb',async c=>{c.header('Content-Type','model/gltf-binary');return c.body(await readFile('product/assets/studio-room-v8.glb'));});
+app.get('/assets/studio-room-v7.glb',async c=>{c.header('Content-Type','model/gltf-binary');return c.body(await readFile('product/assets/studio-room-v7.glb'));});
 app.get('/assets/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'app.js')));});
 app.get('/demos/activities/:variant/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'activities/app.js')));});
 app.get('/',async c=>c.html(await readFile('product/index.html','utf8')));

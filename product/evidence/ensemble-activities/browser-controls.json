@@ -1,0 +1,224 @@
+{
+  "kind": "actual-browser-local-controls-not-physical-device",
+  "passed": true,
+  "rows": [
+    {
+      "rate": 1,
+      "wall": 3.05,
+      "simulation": 3.049999999999994,
+      "ratio": 0.9999999999999981
+    },
+    {
+      "rate": 1.5,
+      "wall": 3.0498999999999996,
+      "simulation": 4.583333333333372,
+      "ratio": 1.5027815119621537
+    },
+    {
+      "rate": 2,
+      "wall": 3.033299999999999,
+      "simulation": 6.06666666666686,
+      "ratio": 2.0000219782635615
+    },
+    {
+      "rate": 3,
+      "wall": 3.0498999999999996,
+      "simulation": 9.14999999999948,
+      "ratio": 3.0000983638806127
+    }
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "canvas": 1
+    },
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "canvas": 1
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "canvas": 1
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "canvas": 1
+    },
+    {
+      "width": 414,
+      "scrollWidth": 414,
+      "canvas": 1
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "canvas": 1
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "canvas": 1
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "canvas": 1
+    }
+  ],
+  "coffee": {
+    "counts": {
+      "nara": 1,
+      "sora": 1,
+      "jun": 1,
+      "min": 1,
+      "leo": 1
+    },
+    "presses": 5,
+    "handError": 1.2560739669470201e-15,
+    "active": [],
+    "history": [
+      {
+        "id": "nara",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 78.43333333333017
+      },
+      {
+        "id": "sora",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 140.83333333333755
+      },
+      {
+        "id": "jun",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 194.08333333337993
+      },
+      {
+        "id": "min",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 241.83333333341793
+      },
+      {
+        "id": "leo",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 277.13333333340995
+      }
+    ],
+    "flow": false
+  },
+  "group": {
+    "counts": {
+      "nara": 1,
+      "sora": 1,
+      "jun": 1,
+      "min": 1,
+      "leo": 1
+    },
+    "history": [
+      {
+        "ids": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "status": "complete",
+        "reason": "5인 회의 완료",
+        "spoke": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "noted": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seconds": 273.86666666674626
+      }
+    ],
+    "current": null
+  },
+  "checks": [
+    "4 real-time visual rates",
+    "one lazy audio context",
+    "sound mute/pause/dispose",
+    "OS reduced motion",
+    "room8/activity10 comparison and fallback room7/activity9",
+    "WebGL restore",
+    "responsive 320–1440",
+    "all five coffee uses",
+    "all five seated before discussion",
+    "all five speak/write/return",
+    "group work interruption"
+  ],
+  "errors": []
+}

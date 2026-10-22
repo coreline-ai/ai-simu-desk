@@ -1,0 +1,105 @@
+{
+  "kind": "local-preview-published-readonly-check",
+  "checkedAt": "2026-10-22T00:59:31.550Z",
+  "release": "build-releases/1792630649388-94deb058-38e0-486f-a1fd-1bcd68e1c1b6",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/library/",
+      "status": 200
+    },
+    {
+      "path": "/demos/demo/",
+      "status": 200
+    },
+    {
+      "path": "/demos/pilot-3d/",
+      "status": 200
+    },
+    {
+      "path": "/demos/visual-upgrade/",
+      "status": 200
+    },
+    {
+      "path": "/demos/studio-v5/",
+      "status": 200
+    },
+    {
+      "path": "/demos/room-quality/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/team/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/natural/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/roles/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/expressive/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/interaction/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/refined/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/grounded/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/final/",
+      "status": 200
+    }
+  ],
+  "privateRows": [
+    {
+      "path": "/.env.local",
+      "status": 404
+    },
+    {
+      "path": "/.data/studio/PG_VERSION",
+      "status": 404
+    },
+    {
+      "path": "/server/main.ts",
+      "status": 404
+    }
+  ],
+  "assets": [
+    {
+      "path": "/assets/app.js",
+      "sha256": "6c5e76eeab7b275269b977e992d3b51323cbc888855684cab7bd196402c27ba1"
+    },
+    {
+      "path": "/assets/studio-room-v6.glb",
+      "sha256": "7d6addce4b58447bdc8d45c4c725fefb26df4986a96759e14c75cb1bb7dd1aab"
+    },
+    {
+      "path": "/assets/studio-room-v7.glb",
+      "sha256": "bc7058b568dd333caeb933d77824a835853834c5abd1902090a93c562d13dd89"
+    }
+  ],
+  "realTimeMixedValidation": "still running; not certified complete yet",
+  "passed": true
+}

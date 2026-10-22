@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: shared scene follows, claims once, publishes monotonically, releases and cleans timers
+ok 1 - shared scene follows, claims once, publishes monotonically, releases and cleans timers
+  ---
+  duration_ms: 2.130083
+  type: 'test'
+  ...
+# Subtest: late entry receives the last scene and switching away ignores an old response
+ok 2 - late entry receives the last scene and switching away ignores an old response
+  ---
+  duration_ms: 0.440542
+  type: 'test'
+  ...
+# Subtest: renderer fallback releases controller ownership instead of reporting a frozen sender as live
+ok 3 - renderer fallback releases controller ownership instead of reporting a frozen sender as live
+  ---
+  duration_ms: 0.280791
+  type: 'test'
+  ...
+# Subtest: controller start waits for an in-flight poll and never silently drops a click
+ok 4 - controller start waits for an in-flight poll and never silently drops a click
+  ---
+  duration_ms: 0.886084
+  type: 'test'
+  ...
+# Subtest: switching spaces cancels a controller request waiting behind a poll
+ok 5 - switching spaces cancels a controller request waiting behind a poll
+  ---
+  duration_ms: 0.316167
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36.312333

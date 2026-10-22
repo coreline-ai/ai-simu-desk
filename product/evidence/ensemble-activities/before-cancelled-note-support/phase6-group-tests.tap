@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: 25 seat approaches and 120 actor orders have unique reachable supports without walking through their chairs
+ok 1 - 25 seat approaches and 120 actor orders have unique reachable supports without walking through their chairs
+  ---
+  duration_ms: 1907.282541
+  type: 'test'
+  ...
+# Subtest: all five sit before presentation, speak and write with one pencil owner, then safely return at four speeds
+ok 2 - all five sit before presentation, speak and write with one pencil owner, then safely return at four speeds
+  ---
+  duration_ms: 66019.676625
+  type: 'test'
+  ...
+# Subtest: three independent destinations admit three actual movers without lowering body or corridor radii
+ok 3 - three independent destinations admit three actual movers without lowering body or corridor radii
+  ---
+  duration_ms: 5323.087208
+  type: 'test'
+  ...
+# Subtest: group interruption at gathering, talking and every note stage cancels presentation and returns all five
+ok 4 - group interruption at gathering, talking and every note stage cancels presentation and returns all five
+  ---
+  duration_ms: 79456.630667
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 153022.585458

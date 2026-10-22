@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-22 KST",
+  "generator": "built-in imagegen",
+  "status": "approved-by-user-attachment-local-implementation",
+  "files": [
+    {
+      "id": "A",
+      "style": "modern",
+      "name": "웜 모던 스튜디오",
+      "file": "modern-a-warm-studio.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "621ba2ab670dfa4b64df2b0ec5cd6c447e5d80dcd8d59a7a2d02a733f90cad94"
+    },
+    {
+      "id": "B",
+      "style": "modern",
+      "name": "쿨 모던 오피스",
+      "file": "modern-b-cool-office.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "baec609c3aa576a0c725023fb313615c5818796373b97a50efd08d3e78c659ff"
+    },
+    {
+      "id": "C",
+      "style": "modern",
+      "name": "미니멀 라운지 스튜디오",
+      "file": "modern-c-minimal-lounge.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2602cfbb7a545677fca19c4f2ee4da4b6ff21fe76bb5f72e9dc449222f785fce"
+    },
+    {
+      "id": "A",
+      "style": "previous-realistic",
+      "name": "이전 실사 방향 A",
+      "file": "previous-realistic-a.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f61e92db928be40d999f20019812421430f97c9faeebe47966f3d4b6c5951e7b"
+    },
+    {
+      "id": "B",
+      "style": "previous-realistic",
+      "name": "이전 실사 방향 B",
+      "file": "previous-realistic-b.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "5443faa4cdf3a9c1c03581be1f72adb42675e91155210de5f1ce18dbded88084"
+    },
+    {
+      "id": "C",
+      "style": "previous-realistic",
+      "name": "이전 실사 방향 C",
+      "file": "previous-realistic-c.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "066754fb5fca542f6334d63a525ffd3322b95220e304106e96f64824ca9cabc0"
+    },
+    {
+      "id": "B-layout-A-palette-front-facing-v2",
+      "style": "modern",
+      "name": "웜 모던 · 전면 방향 수정",
+      "file": "modern-warm-front-facing-v2.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "253110488c5044b9c4b68dfcb75297d3fc6383a5916bcac5449b0dc719179264"
+    }
+  ],
+  "latestPreview": "modern-warm-front-facing-v2.png",
+  "approvedReference": "approved-reference.png",
+  "approvedReferenceSha256": "fae900caffa89cfe10b03032736b8e641027e46a6d93f77784b7bb0ee393e9ef"
+}

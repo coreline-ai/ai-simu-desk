@@ -1,0 +1,130 @@
+{
+  "status": "applied-visual-confirmed",
+  "primaryOrigin": "http://127.0.0.1:4180",
+  "release": "1792645833012-f6df4d44-99f2-42b7-86ea-c0f638460cee",
+  "previousRelease": "1792632516707-cda2e00f-8aca-47a1-b86e-73d1e3378dba",
+  "health": {
+    "status": "ok",
+    "edition": "local",
+    "database": "pglite",
+    "aiProvider": "fake"
+  },
+  "routes": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/start",
+      "status": 200
+    },
+    {
+      "path": "/library/",
+      "status": 200
+    },
+    {
+      "path": "/demos/demo/",
+      "status": 200
+    },
+    {
+      "path": "/demos/pilot-3d/",
+      "status": 200
+    },
+    {
+      "path": "/demos/visual-upgrade/",
+      "status": 200
+    },
+    {
+      "path": "/demos/studio-v5/",
+      "status": 200
+    },
+    {
+      "path": "/demos/room-quality/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/team/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/natural/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/roles/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/expressive/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/interaction/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/refined/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/grounded/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/final/",
+      "status": 200
+    },
+    {
+      "path": "/demos/activities/ensemble/",
+      "status": 200
+    }
+  ],
+  "privatePaths": [
+    {
+      "path": "/.env.local",
+      "status": 404
+    },
+    {
+      "path": "/.data/studio/PG_VERSION",
+      "status": 404
+    },
+    {
+      "path": "/server/main.ts",
+      "status": 404
+    }
+  ],
+  "appHash": "09138f62e9102fb8e7a9e20e55577a632d94ee0db47bbb5e847d09d288d1af77",
+  "glbHash": "c47a518fdc91b13dfda688e39efbeea1bec17fdee1a6c784e7b4c8341fc6ae16",
+  "backupCreated": true,
+  "backupMode": "0600",
+  "userDatabase": ".data/studio",
+  "serverCodeUnchanged": true,
+  "modelVersion": 8,
+  "activityVersion": 10,
+  "primaryTab": 56,
+  "live": true,
+  "speed": 1.5,
+  "autonomousActivities": true,
+  "visualChecks": [
+    "all five seated with unique names",
+    "room and close meeting view",
+    "motion resumed at x1.5",
+    "automatic activities enabled"
+  ],
+  "screenshots": [
+    "delivery.png",
+    "delivery-group-close.png"
+  ],
+  "runningCodeRelease": "1792645444494-b7607cc5-2d2d-418d-919c-d430189b3bbd",
+  "documentationOnlyFinalization": true,
+  "clockAdvancedOnPrimary": true,
+  "clockObserved": [
+    317.0500000000403,
+    422.4666666666111
+  ],
+  "finishedAt": "2026-10-22T05:11:52.381581+00:00"
+}

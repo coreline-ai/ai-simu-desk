@@ -1,0 +1,306 @@
+{
+  "passed": true,
+  "kind": "actual-palm-mesh-desk-slab-and-cup-wall-five-actors",
+  "rows": {
+    "nara:role:reach": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "nara:role:grasp": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "nara:role:use": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "nara:role:replace": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "nara:role:release": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "nara:role:retract": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "nara:role:idle": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "sora:role:reach": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "sora:role:grasp": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "sora:role:use": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "sora:role:replace": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "sora:role:release": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "sora:role:retract": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "sora:role:idle": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "jun:role:reach": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "jun:role:grasp": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "jun:role:use": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "jun:role:replace": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "jun:role:release": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "jun:role:retract": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "jun:role:idle": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "min:role:reach": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "min:role:grasp": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "min:role:use": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "min:role:replace": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "min:role:release": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "min:role:retract": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "min:role:idle": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "leo:role:reach": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "leo:role:grasp": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "leo:role:use": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "leo:role:replace": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "leo:role:release": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "leo:role:retract": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "leo:role:idle": {
+      "penetration": 0,
+      "minCupGap": 1
+    },
+    "nara:cup:reach": {
+      "penetration": 0,
+      "minCupGap": 0.054002741669198044
+    },
+    "nara:cup:grasp": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355808
+    },
+    "nara:cup:lift": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463556304
+    },
+    "nara:cup:sip": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463556304
+    },
+    "nara:cup:lower": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463556304
+    },
+    "nara:cup:place": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463556304
+    },
+    "nara:cup:release": {
+      "penetration": 0,
+      "minCupGap": 0.05409175541406525
+    },
+    "nara:cup:idle": {
+      "penetration": 0,
+      "minCupGap": 0.10560036252921656
+    },
+    "sora:cup:reach": {
+      "penetration": 0,
+      "minCupGap": 0.054002741280922396
+    },
+    "sora:cup:grasp": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355764
+    },
+    "sora:cup:lift": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355719
+    },
+    "sora:cup:sip": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355675
+    },
+    "sora:cup:lower": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355719
+    },
+    "sora:cup:place": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355719
+    },
+    "sora:cup:release": {
+      "penetration": 0,
+      "minCupGap": 0.05409175541406614
+    },
+    "sora:cup:idle": {
+      "penetration": 0,
+      "minCupGap": 0.10557679028045547
+    },
+    "jun:cup:reach": {
+      "penetration": 0,
+      "minCupGap": 0.054002741637733824
+    },
+    "jun:cup:grasp": {
+      "penetration": 0,
+      "minCupGap": 0.0539999994635578
+    },
+    "jun:cup:lift": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463557914
+    },
+    "jun:cup:sip": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355808
+    },
+    "jun:cup:lower": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355811
+    },
+    "jun:cup:place": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463557886
+    },
+    "jun:cup:release": {
+      "penetration": 0,
+      "minCupGap": 0.05409175541406706
+    },
+    "jun:cup:idle": {
+      "penetration": 0,
+      "minCupGap": 0.10563602403118039
+    },
+    "min:cup:reach": {
+      "penetration": 0,
+      "minCupGap": 0.05400274160041992
+    },
+    "min:cup:grasp": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355808
+    },
+    "min:cup:lift": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355675
+    },
+    "min:cup:sip": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355675
+    },
+    "min:cup:lower": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355719
+    },
+    "min:cup:place": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355719
+    },
+    "min:cup:release": {
+      "penetration": 0,
+      "minCupGap": 0.054091755414066585
+    },
+    "min:cup:idle": {
+      "penetration": 0,
+      "minCupGap": 0.10564289246710262
+    },
+    "leo:cup:reach": {
+      "penetration": 0,
+      "minCupGap": 0.054002741566275166
+    },
+    "leo:cup:grasp": {
+      "penetration": 0,
+      "minCupGap": 0.05399999946355808
+    },
+    "leo:cup:lift": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463556304
+    },
+    "leo:cup:sip": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463555416
+    },
+    "leo:cup:lower": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463556304
+    },
+    "leo:cup:place": {
+      "penetration": 0,
+      "minCupGap": 0.053999999463556304
+    },
+    "leo:cup:release": {
+      "penetration": 0,
+      "minCupGap": 0.05409175541406525
+    },
+    "leo:cup:idle": {
+      "penetration": 0,
+      "minCupGap": 0.10558499507416932
+    }
+  }
+}

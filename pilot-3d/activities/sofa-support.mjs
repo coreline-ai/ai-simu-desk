@@ -12,7 +12,7 @@ const snapshot=(actor,side)=>({...world(part(actor,'NaraHand'+side)),elbow:part(
 // posed trouser mesh; no new reservation, furniture, prop, or work state.
 export class SofaSupport {
   constructor(model,scheduler){this.model=model;this.scheduler=scheduler;this.rows=new Map();this.previous=new Map();this.ray=new T.Raycaster();this.armrests=[-1,1].map(sign=>{
-    const sofa=model.getObjectByName('LinenSofa'),point=sofa.localToWorld(V(sign*.98,2,.23));this.ray.set(point,DOWN);const hit=this.ray.intersectObject(sofa,true)[0];if(!hit)throw Error('소파 팔걸이 지지면 누락');return{point:hit.point.clone(),object:hit.object.name};
+    const sofa=model.getObjectByName('LinenSofa'),point=sofa.localToWorld(model.getObjectByName('AfternoonStudio')?.userData.finalOffice?V(...model.getObjectByName('AfternoonStudio').userData.finalOffice.sofa.armrests[sign<0?0:1]):V(sign*.98,2,.23));this.ray.set(point,DOWN);const hit=this.ray.intersectObject(sofa,true)[0];if(!hit)throw Error('소파 팔걸이 지지면 누락');return{point:hit.point.clone(),object:hit.object.name};
   });}
   lap(actor,side,id){
     actor.updateWorldMatrix(true,true);const mesh=part(actor,'ContinuousTrousers'+side),hip=part(actor,'NaraPelvis').position.y,point=actor.localToWorld(V(side==='L'?-.10:.10,hip+.30,PROFILES[id].lap));

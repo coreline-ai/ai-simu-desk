@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "kind": "actual-browser-controls-and-clock-not-physical-device",
+  "rows": [
+    {
+      "rate": 1,
+      "wall": 4.0665000000000004,
+      "simulation": 4.066666666666657,
+      "ratio": 1.0000409852862797
+    },
+    {
+      "rate": 1.5,
+      "wall": 4.066500000000001,
+      "simulation": 6.100000000000178,
+      "ratio": 1.5000614779294668
+    },
+    {
+      "rate": 2,
+      "wall": 4.0665,
+      "simulation": 8.133333333333113,
+      "ratio": 2.0000819705725106
+    },
+    {
+      "rate": 3,
+      "wall": 4.0499,
+      "simulation": 12.149999999999313,
+      "ratio": 3.000074075902939
+    }
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "scrollWidth": 305,
+      "labels": 5
+    },
+    {
+      "width": 360,
+      "scrollWidth": 345,
+      "labels": 5
+    },
+    {
+      "width": 390,
+      "scrollWidth": 375,
+      "labels": 5
+    },
+    {
+      "width": 414,
+      "scrollWidth": 399,
+      "labels": 5
+    },
+    {
+      "width": 768,
+      "scrollWidth": 753,
+      "labels": 5
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1009,
+      "labels": 5
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1425,
+      "labels": 5
+    }
+  ],
+  "checks": [
+    "pause",
+    "reduced motion priority after manual play",
+    "rate persistence",
+    "comparison paired versions",
+    "binding fallback room6/activity8",
+    "WebGL restore",
+    "one canvas"
+  ],
+  "errors": []
+}

@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: living v9 preserves five rigs, all clips and immutable v8 baseline
+ok 1 - living v9 preserves five rigs, all clips and immutable v8 baseline
+  ---
+  duration_ms: 1741.502542
+  type: 'test'
+  ...
+# Subtest: nara three living variants keep body support and fixed limb lengths
+ok 2 - nara three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 7756.260458
+  type: 'test'
+  ...
+# Subtest: sora three living variants keep body support and fixed limb lengths
+ok 3 - sora three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4887.623542
+  type: 'test'
+  ...
+# Subtest: jun three living variants keep body support and fixed limb lengths
+ok 4 - jun three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4538.930584
+  type: 'test'
+  ...
+# Subtest: min three living variants keep body support and fixed limb lengths
+ok 5 - min three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 3910.384125
+  type: 'test'
+  ...
+# Subtest: leo three living variants keep body support and fixed limb lengths
+ok 6 - leo three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4707.147459
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 27639.558208

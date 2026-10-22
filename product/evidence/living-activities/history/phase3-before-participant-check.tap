@@ -1,0 +1,68 @@
+TAP version 13
+# Subtest: 3 seated participants all speak, write, clean and return
+ok 1 - 3 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 7401.477875
+  type: 'test'
+  ...
+# Subtest: 4 seated participants all speak, write, clean and return
+ok 2 - 4 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 8982.474291
+  type: 'test'
+  ...
+# Subtest: 2 standing participants arrive before turns and return without overlap
+ok 3 - 2 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3677.887375
+  type: 'test'
+  ...
+# Subtest: 3 standing participants arrive before turns and return without overlap
+ok 4 - 3 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 5056.212041
+  type: 'test'
+  ...
+# Subtest: 4 standing participants arrive before turns and return without overlap
+ok 5 - 4 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3631.7515
+  type: 'test'
+  ...
+# Subtest: 5 standing participants arrive before turns and return without overlap
+ok 6 - 5 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3444.091666
+  type: 'test'
+  ...
+# Subtest: standing meeting rejects malformed participants and cleans on work interruption
+not ok 7 - standing meeting rejects malformed participants and cleans on work interruption
+  ---
+  duration_ms: 1381.099667
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-meetings.test.mjs:5:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'stationOrigin')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    VisitCorridors.register (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/activities/traffic.mjs:6:47)
+    LivingScheduler.configure (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/activities/expressive-scheduler.mjs:15:31)
+    file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/living-office/huddle.mjs:27:254
+    Array.forEach (<anonymous>)
+    Huddles.start (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/living-office/huddle.mjs:27:9)
+    LivingScheduler.startHuddle (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/pilot-3d/living-office/scheduler.mjs:11:57)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-meetings.test.mjs:5:169)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 6
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 33683.535458

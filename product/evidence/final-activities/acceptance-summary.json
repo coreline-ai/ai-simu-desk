@@ -1,0 +1,68 @@
+{
+  "verifiedAt": "2026-10-22T01:28:36.415Z",
+  "codeRelease": "1792630649388-94deb058-38e0-486f-a1fd-1bcd68e1c1b6",
+  "results": {
+    "actual-continuous": {
+      "elapsed": 601,
+      "active": 599,
+      "runnerSeconds": 630.27,
+      "passed": true,
+      "cleanup": {
+        "passed": true,
+        "issues": []
+      },
+      "transfers": 1,
+      "participants": [
+        "nara",
+        "jun"
+      ],
+      "workload": "ambient",
+      "finished": "2026-10-22T01:06:35.983Z"
+    },
+    "actual-mixed": {
+      "elapsed": 1801,
+      "active": 1799,
+      "runnerSeconds": 1890.73,
+      "passed": true,
+      "cleanup": {
+        "passed": true,
+        "issues": []
+      },
+      "transfers": 6,
+      "participants": [
+        "nara",
+        "jun",
+        "min",
+        "leo",
+        "sora"
+      ],
+      "workload": "final-office-240s-cycle-190s-typing",
+      "finished": "2026-10-22T01:27:33.763Z"
+    }
+  },
+  "regression": {
+    "earlierFullSuite": 264,
+    "finalOfficeSuite": 10,
+    "countsAreSeparateRuns": true
+  },
+  "performance": {
+    "passed": true,
+    "p95MedianMs": 16.7,
+    "drawCalls": 1026,
+    "renderedTriangles": 743846
+  },
+  "compiled": {
+    "passed": true,
+    "checks": 14,
+    "routes": 17,
+    "restoredTables": 20
+  },
+  "limits": {
+    "physicalIPhone": "unavailable, not tested",
+    "longProductLifecycle60Minutes": "not yet tested for new space",
+    "maxMovers": 2,
+    "meetingParticipants": 2,
+    "meetingFurnitureSeats": 6
+  },
+  "passed": true
+}

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "uniqueTestNames": 359,
+  "latestFailures": [],
+  "runs": [
+    {
+      "file": "living-full-tests.tap",
+      "reported": 348,
+      "failures": 3
+    },
+    {
+      "file": "living-final-focused.tap",
+      "reported": 42,
+      "failures": 0
+    },
+    {
+      "file": "living-final-boundaries.tap",
+      "reported": 13,
+      "failures": 0
+    },
+    {
+      "file": "living-final-presentation.tap",
+      "reported": 18,
+      "failures": 0
+    },
+    {
+      "file": "living-sharing-captions.tap",
+      "reported": 4,
+      "failures": 0
+    },
+    {
+      "file": "living-scenario-boundaries.tap",
+      "reported": 1,
+      "failures": 0
+    },
+    {
+      "file": "living-migration-retest.tap",
+      "reported": 7,
+      "failures": 0
+    },
+    {
+      "file": "living-sharing-race-final.tap",
+      "reported": 5,
+      "failures": 0
+    }
+  ],
+  "note": "Full 348-case run plus additions. Three migration expectations corrected for version 12; affected seven DB tests rerun. Shared captions, fallback, concurrent control, poll/click ordering and workspace-switch regressions included."
+}

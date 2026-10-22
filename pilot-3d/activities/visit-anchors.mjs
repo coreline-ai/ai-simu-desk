@@ -3,6 +3,7 @@ import {validateDestinationRoute} from './destinations.mjs';
 // Authored aisles already used by v5. A visitor occupies a side approach, never
 // the host's chair or the gap between the host and the screen.
 export function prepareVisits(model,meta,destinations){
+  if(destinations.visitAnchors)return destinations.visitAnchors();
   const result=new Map(),availability=[];
   const approach=id=>{const [x,,z]=meta.workspaces[id],side=id==='leo'?1:-1,edge=x+side*1.05,start=[x,0,z-.48],port=[edge,0,z-.48];return id==='min'||id==='leo'?[start,port,[side*3.55,0,z-.48],[side*3.55,0,-2.30]]:[start,port,[edge,0,-2.30]];};
   for(const visitor of meta.actorIds)for(const host of meta.actorIds){if(visitor===host)continue;

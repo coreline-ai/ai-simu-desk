@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: minimal shared activity summaries render every caption without private scheduler details
+ok 1 - minimal shared activity summaries render every caption without private scheduler details
+  ---
+  duration_ms: 0.489
+  type: 'test'
+  ...
+# Subtest: all five approach the shared board, grip one marker, point, replace and return
+ok 2 - all five approach the shared board, grip one marker, point, replace and return
+  ---
+  duration_ms: 6127.947583
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during approach
+ok 3 - board review safely cancels during approach
+  ---
+  duration_ms: 2501.4535
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during use
+ok 4 - board review safely cancels during use
+  ---
+  duration_ms: 2966.662791
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during replace
+ok 5 - board review safely cancels during replace
+  ---
+  duration_ms: 2880.865917
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during back
+ok 6 - board review safely cancels during back
+  ---
+  duration_ms: 2897.402042
+  type: 'test'
+  ...
+# Subtest: focus scenario completes all four phases and safely returns
+ok 7 - focus scenario completes all four phases and safely returns
+  ---
+  duration_ms: 9059.001625
+  type: 'test'
+  ...
+# Subtest: review scenario completes all four phases and safely returns
+ok 8 - review scenario completes all four phases and safely returns
+  ---
+  duration_ms: 12213.541541
+  type: 'test'
+  ...
+# Subtest: break scenario completes all four phases and safely returns
+ok 9 - break scenario completes all four phases and safely returns
+  ---
+  duration_ms: 12442.455708
+  type: 'test'
+  ...
+# Subtest: scenario respects work, pause and explicit cancellation; camera identifies group events
+ok 10 - scenario respects work, pause and explicit cancellation; camera identifies group events
+  ---
+  duration_ms: 1716.62975
+  type: 'test'
+  ...
+# Subtest: visit captions distinguish a seated host from travelling and returning visitors in every phase
+ok 11 - visit captions distinguish a seated host from travelling and returning visitors in every phase
+  ---
+  duration_ms: 0.667
+  type: 'test'
+  ...
+# Subtest: twenty refined paper visits keep host coordinates and captions consistent through handover and cleanup
+ok 12 - twenty refined paper visits keep host coordinates and captions consistent through handover and cleanup
+  ---
+  duration_ms: 9637.744583
+  type: 'test'
+  ...
+# Subtest: all five refined fingers reach real pen shaft, cup and page supports without changing wrist, tip or finger lengths
+ok 13 - all five refined fingers reach real pen shaft, cup and page supports without changing wrist, tip or finger lengths
+  ---
+  duration_ms: 4051.027041
+  type: 'test'
+  ...
+# Subtest: refined diagnostics report unreachable supports honestly and preserve original v6 pen targets
+ok 14 - refined diagnostics report unreachable supports honestly and preserve original v6 pen targets
+  ---
+  duration_ms: 956.359125
+  type: 'test'
+  ...
+# Subtest: refined captions release hosts immediately for new work and preserve the old v6 comparison profile
+ok 15 - refined captions release hosts immediately for new work and preserve the old v6 comparison profile
+  ---
+  duration_ms: 670.519
+  type: 'test'
+  ...
+# Subtest: twenty refined sofa seat orders support outer palms and vary one inner hand with continuous transitions
+ok 16 - twenty refined sofa seat orders support outer palms and vary one inner hand with continuous transitions
+  ---
+  duration_ms: 24505.045209
+  type: 'test'
+  ...
+# Subtest: refined sofa support pauses without drift and yields both arms for all five work returns
+ok 17 - refined sofa support pauses without drift and yields both arms for all five work returns
+  ---
+  duration_ms: 4291.461625
+  type: 'test'
+  ...
+# Subtest: v7 soak gates require the requested version, five-finger diagnostics and complete sofa support release
+ok 18 - v7 soak gates require the requested version, five-finger diagnostics and complete sofa support release
+  ---
+  duration_ms: 274.287083
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 97708.639792

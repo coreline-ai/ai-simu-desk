@@ -1,0 +1,138 @@
+[
+  {
+    "distance": 0.035426142640182866,
+    "previous": {
+      "n": 5111,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5112,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  },
+  {
+    "distance": 0.035349571068587375,
+    "previous": {
+      "n": 5571,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5572,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  },
+  {
+    "distance": 0.03534497468141866,
+    "previous": {
+      "n": 5306,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5307,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  },
+  {
+    "distance": 0.035344974681361524,
+    "previous": {
+      "n": 5470,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5471,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  },
+  {
+    "distance": 0.03533572906797241,
+    "previous": {
+      "n": 5339,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5340,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  },
+  {
+    "distance": 0.03532775157423983,
+    "previous": {
+      "n": 5604,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5605,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  },
+  {
+    "distance": 0.035322302107013155,
+    "previous": {
+      "n": 5273,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5274,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  },
+  {
+    "distance": 0.035322301596125996,
+    "previous": {
+      "n": 5437,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    },
+    "state": {
+      "n": 5438,
+      "cancel": true,
+      "trip": "home",
+      "note": "idle",
+      "row": false
+    }
+  }
+]

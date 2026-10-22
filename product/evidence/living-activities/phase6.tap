@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: focus scenario completes all four phases and safely returns
+ok 1 - focus scenario completes all four phases and safely returns
+  ---
+  duration_ms: 9292.502167
+  type: 'test'
+  ...
+# Subtest: review scenario completes all four phases and safely returns
+ok 2 - review scenario completes all four phases and safely returns
+  ---
+  duration_ms: 13268.619125
+  type: 'test'
+  ...
+# Subtest: break scenario completes all four phases and safely returns
+ok 3 - break scenario completes all four phases and safely returns
+  ---
+  duration_ms: 13402.532333
+  type: 'test'
+  ...
+# Subtest: scenario respects work, pause and explicit cancellation; camera identifies group events
+ok 4 - scenario respects work, pause and explicit cancellation; camera identifies group events
+  ---
+  duration_ms: 1726.837291
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 37789.022917

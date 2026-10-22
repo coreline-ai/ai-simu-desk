@@ -1,0 +1,7 @@
+{
+  "status": "aborted",
+  "started": "2026-10-22T03:05:33.033Z",
+  "endedAt": "2026-10-22T03:09:44.920Z",
+  "signal": "SIGTERM",
+  "errors": []
+}

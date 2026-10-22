@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: all five approach the shared board, grip one marker, point, replace and return
+ok 1 - all five approach the shared board, grip one marker, point, replace and return
+  ---
+  duration_ms: 6124.257
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during approach
+ok 2 - board review safely cancels during approach
+  ---
+  duration_ms: 2485.523625
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during use
+ok 3 - board review safely cancels during use
+  ---
+  duration_ms: 2790.722667
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during replace
+ok 4 - board review safely cancels during replace
+  ---
+  duration_ms: 2861.679084
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during back
+ok 5 - board review safely cancels during back
+  ---
+  duration_ms: 2886.363209
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17237.620333

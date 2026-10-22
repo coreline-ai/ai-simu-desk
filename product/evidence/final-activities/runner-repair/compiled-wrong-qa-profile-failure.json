@@ -1,0 +1,17 @@
+{
+  "kind": "compiled-smoke-failure",
+  "startedAt": "2026-10-22T00:34:14.157Z",
+  "failedAt": "2026-10-22T00:34:55.068Z",
+  "checks": [
+    "locked dependencies installed: offline",
+    "new local settings private and preserved",
+    "full build in fresh local source/dependency path matches candidate JS and GLBs",
+    "compiled release starts in clean local path",
+    "17 public routes, versioned entry assets, revalidation and private path denial"
+  ],
+  "error": "TimeoutError: page.waitForFunction: Timeout 30000ms exceeded.",
+  "errors": [],
+  "logTail": [
+    "AI Simu Desk Local ready: http://127.0.0.1:60863 (persistent login/DB, Fake AI)\n"
+  ]
+}

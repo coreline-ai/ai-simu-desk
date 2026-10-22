@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "health": {
+    "status": "ok",
+    "edition": "local",
+    "database": "pglite",
+    "aiProvider": "fake"
+  },
+  "appHash": "60785e8846148b41d94c90d69b99c0c1962732ba6f789363e993d31c4f504a47",
+  "verifiedRelease": "1792650167974-874c84f0-0467-43ec-99ff-c0dcf9cff0bb",
+  "at": "2026-10-22T06:29:16.204Z"
+}

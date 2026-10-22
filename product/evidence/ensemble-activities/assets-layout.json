@@ -1,0 +1,97 @@
+{
+  "kind": "desktop-headless-viewport-and-keyboard-not-physical-mobile",
+  "at": "2026-10-22T03:38:55.354Z",
+  "browser": "155.0.8059.85",
+  "appHash": "5ba2ab2cf6e6a90794b556331ca28f03309b5afd2ae86d868cf6a626a40095f2",
+  "resources": [
+    {
+      "path": "/assets/styles.css",
+      "transferBytes": 27366,
+      "encodedBodyBytes": 27066,
+      "decodedBodyBytes": 27066
+    },
+    {
+      "path": "/assets/office-background-v1.png",
+      "transferBytes": 2255208,
+      "encodedBodyBytes": 2254908,
+      "decodedBodyBytes": 2254908
+    },
+    {
+      "path": "/assets/app.js",
+      "transferBytes": 948879,
+      "encodedBodyBytes": 948579,
+      "decodedBodyBytes": 948579
+    },
+    {
+      "path": "/assets/studio-room-v8.glb",
+      "transferBytes": 8517144,
+      "encodedBodyBytes": 8516844,
+      "decodedBodyBytes": 8516844
+    },
+    {
+      "path": "/favicon.ico",
+      "transferBytes": 313,
+      "encodedBodyBytes": 13,
+      "decodedBodyBytes": 13
+    }
+  ],
+  "initialAssetDecodedBytes": 11747410,
+  "initialAssetEncodedBytes": 11747410,
+  "layouts": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "headerHeight": 108,
+      "canvasCount": 1
+    },
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "headerHeight": 108,
+      "canvasCount": 1
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "headerHeight": 108,
+      "canvasCount": 1
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "headerHeight": 108,
+      "canvasCount": 1
+    },
+    {
+      "width": 414,
+      "scrollWidth": 414,
+      "headerHeight": 108,
+      "canvasCount": 1
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "headerHeight": 90,
+      "canvasCount": 1
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "headerHeight": 90,
+      "canvasCount": 1
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headerHeight": 90,
+      "canvasCount": 1
+    }
+  ],
+  "checks": [
+    "keyboard workspace selector to refresh",
+    "space toggles actual motion aria",
+    "OS reduced motion takes priority"
+  ],
+  "errors": [],
+  "passed": true
+}

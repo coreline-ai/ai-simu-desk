@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: scenario respects work, pause and explicit cancellation; camera identifies group events
+ok 1 - scenario respects work, pause and explicit cancellation; camera identifies group events
+  ---
+  duration_ms: 2794.987125
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3072.692625

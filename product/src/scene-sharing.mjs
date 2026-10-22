@@ -1,0 +1,23 @@
+// One authenticated controller sends the complete visual pose. Followers do not
+// run a competing scheduler. Camera, quality and local motion preferences stay local.
+export function createSceneSharing({request,getView,onChange=()=>{},onController=()=>{},beacon=()=>{},hidden=()=>document.hidden,newId=()=>crypto.randomUUID(),schedule=setTimeout,cancel=clearTimeout}){
+ let visit=null,timer=null;
+ function notify(v,error){if(v&&error!==undefined)v.error=error;onChange(v?{shared:true,controller:v.controller,active:v.active,canControl:v.canControl,busy:v.busy,controlPending:!!v.controlBusy,name:v.name,epoch:v.epoch,seq:v.seq,sourcePaused:!!v.sourcePaused,error:v.error??''}:null);}
+ function unlock(v){v.busy=false;v.controlBusy=false;for(const done of v.waiters.splice(0))done();if(visit===v)notify(v);}
+ async function acquire(v){while(visit===v&&v.busy)await new Promise(done=>v.waiters.push(done));if(visit!==v)return false;v.busy=true;v.controlBusy=true;notify(v);return true;}
+ function later(v){if(visit===v)timer=schedule(()=>void tick(v),hidden()?2000:250);}
+ function stop(){const old=visit;visit=null;if(old)for(const done of old.waiters.splice(0))done();cancel(timer);timer=null;if(old?.controller)beacon(`/api/workspaces/${old.id}/scene/release`,{clientId:old.clientId,token:old.token,epoch:old.epoch});getView()?.setSceneRemote(false);notify(null);}
+ function start(id,shared){if(visit?.id===id&&shared)return;stop();if(!shared)return;const v=visit={id,clientId:newId(),token:newId(),epoch:0,seq:0,controller:false,active:false,canControl:false,name:null,busy:false,waiters:[],applied:null,appliedView:null};getView()?.setSceneRemote(true);notify(v);void tick(v);}
+ async function tick(v){if(visit!==v)return;if(v.busy||hidden()){later(v);return;}v.busy=true;notify(v);const view=getView();try{
+   view?.setSceneRemote(!v.controller);
+   if(v.controller){const packet=view?.captureScene();if(!packet&&view?.diagnostics().teamActivities){beacon(`/api/workspaces/${v.id}/scene/release`,{clientId:v.clientId,token:v.token,epoch:v.epoch});v.controller=false;v.active=false;view.setSceneRemote(true);throw Error('복구 화면은 공동 생활 장면을 지원하지 않습니다. 3D 다시 불러오기를 눌러 주세요.');}if(packet){const result=await request(`/api/workspaces/${v.id}/scene/frame`,{clientId:v.clientId,token:v.token,epoch:v.epoch,seq:++v.seq,packet});if(visit!==v)return;v.active=result.active;v.name=result.controllerName;v.sourcePaused=packet.summary.paused;}}
+   else{const result=await request(`/api/workspaces/${v.id}/scene`);if(visit!==v||v.controller)return;v.epoch=result.epoch;v.seq=result.seq;v.active=result.active;v.canControl=result.canControl;v.name=result.controllerName;v.sourcePaused=!!result.packet?.summary.paused;const key=result.epoch+':'+result.seq;
+     if(result.packet&&view?.diagnostics().teamActivities&&!view.diagnostics().sceneSchema)throw Error('복구 화면은 공동 생활 장면을 지원하지 않습니다. 3D 다시 불러오기를 눌러 주세요.');
+     if(result.packet&&view?.diagnostics().sceneSchema&&(v.applied!==key||v.appliedView!==view)){if(!view.followScene(result.packet))throw Error('현재 화면은 공동 생활 장면을 지원하지 않습니다.');v.applied=key;v.appliedView=view;}}
+   if(visit===v)notify(v,'');
+  }catch(e){if(visit!==v)return;if(['SCENE_LEASE','SCENE_SEQUENCE','ROLE_FORBIDDEN'].includes(e.code)||[401,403,404].includes(e.status)){v.controller=false;v.active=false;view?.setSceneRemote(true);}notify(v,e.message??'장면 연결을 기다리고 있어요.');}finally{unlock(v);if(visit===v)later(v);}
+ }
+ async function claim(){const v=visit;if(!v||!await acquire(v))return false;if(v.controller){unlock(v);return true;}const view=getView();if(!v.canControl||!view?.diagnostics().sceneSchema){unlock(v);return false;}try{const r=await request(`/api/workspaces/${v.id}/scene/claim`,{clientId:v.clientId,token:v.token,epoch:v.epoch});if(visit!==v)return false;v.epoch=r.epoch;v.seq=0;v.controller=true;v.active=true;v.name=r.controllerName;view.setSceneRemote(false);view.resetActivity();onController();notify(v);return true;}catch(e){if(visit===v)notify(v,e.message);return false;}finally{unlock(v);}}
+ async function release(){const v=visit;if(!v||!await acquire(v))return false;if(!v.controller){unlock(v);return false;}try{await request(`/api/workspaces/${v.id}/scene/release`,{clientId:v.clientId,token:v.token,epoch:v.epoch});if(visit!==v)return false;v.controller=false;v.active=false;v.applied=null;getView()?.setSceneRemote(true);notify(v);return true;}catch(e){if(visit===v)notify(v,e.message);return false;}finally{unlock(v);}}
+ return{start,stop,claim,release,get shared(){return!!visit;},get controller(){return!!visit?.controller;},get state(){return visit?{epoch:visit.epoch,seq:visit.seq,controller:visit.controller}:null;}};
+}

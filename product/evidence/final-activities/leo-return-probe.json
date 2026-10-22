@@ -1,0 +1,1350 @@
+{
+  "kind": "simulated-old-workload-not-wall-clock",
+  "rows": [
+    {
+      "t": 820,
+      "raw": "idle",
+      "action": "walk",
+      "record": "meeting",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 831,
+      "raw": "idle",
+      "action": "standing",
+      "record": "meeting",
+      "stage": "align",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 831.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "meeting",
+      "stage": "back",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 832.5,
+      "raw": "idle",
+      "action": "sofa_sit",
+      "record": "meeting",
+      "stage": "sit",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 835,
+      "raw": "idle",
+      "action": "meeting_wait",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 841.5,
+      "raw": "idle",
+      "action": "meeting_listen",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 842.5,
+      "raw": "idle",
+      "action": "meeting_talk",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 844,
+      "raw": "idle",
+      "action": "social_note",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 845.5,
+      "raw": "idle",
+      "action": "meeting_listen",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 848,
+      "raw": "idle",
+      "action": "meeting_pause",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 849,
+      "raw": "idle",
+      "action": "meeting_talk",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 851.5,
+      "raw": "idle",
+      "action": "meeting_ack",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 852.5,
+      "raw": "idle",
+      "action": "meeting_listen",
+      "record": "meeting",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 857,
+      "raw": "idle",
+      "action": "sofa_rise",
+      "record": "meeting",
+      "stage": "rise",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 859.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "meeting",
+      "stage": "forward",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 860,
+      "raw": "typing",
+      "action": "walk",
+      "record": "meeting",
+      "stage": "forward",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 860.5,
+      "raw": "typing",
+      "action": "turn",
+      "record": "meeting",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 861,
+      "raw": "typing",
+      "action": "walk",
+      "record": "meeting",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 879.5,
+      "raw": "typing",
+      "action": "turn",
+      "record": "meeting",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 880,
+      "raw": "typing",
+      "action": "walk",
+      "record": "meeting",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 882.5,
+      "raw": "typing",
+      "action": "turn",
+      "record": "meeting",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 883.5,
+      "raw": "typing",
+      "action": "walk",
+      "record": "meeting",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 885.5,
+      "raw": "typing",
+      "action": "standing",
+      "record": "meeting",
+      "stage": "deskTurn",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 886,
+      "raw": "typing",
+      "action": "sit_down",
+      "record": "meeting",
+      "stage": "deskSit",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 888,
+      "raw": "typing",
+      "action": "waiting",
+      "record": "meeting",
+      "stage": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 889.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 891,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 896.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 898,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 899,
+      "raw": "typing",
+      "action": "typing",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 908,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 909,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "grasp"
+    },
+    {
+      "t": 909.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 914.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 916,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 917,
+      "raw": "typing",
+      "action": "typing",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 925,
+      "raw": "success",
+      "action": "success",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 926.5,
+      "raw": "success",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 927,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 931.5,
+      "raw": "idle",
+      "action": "shoulder_roll",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 936,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 942,
+      "raw": "idle",
+      "action": "visit_invite",
+      "visit": "inviting",
+      "role": "idle"
+    },
+    {
+      "t": 944.5,
+      "raw": "idle",
+      "action": "stand_up",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 946.5,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 947,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 949,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 950,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 952.5,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 953,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 965.5,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 966,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 969,
+      "raw": "idle",
+      "action": "standing",
+      "visit": "arriving",
+      "role": "idle"
+    },
+    {
+      "t": 969.5,
+      "raw": "idle",
+      "action": "desk_visit",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 982.5,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 983.5,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 986,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 986.5,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 999,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 999.5,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 1002.5,
+      "raw": "idle",
+      "action": "turn",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 1003,
+      "raw": "idle",
+      "action": "walk",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 1005,
+      "raw": "idle",
+      "action": "standing",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 1006,
+      "raw": "idle",
+      "action": "sit_down",
+      "visit": "discussion",
+      "role": "idle"
+    },
+    {
+      "t": 1008,
+      "raw": "idle",
+      "action": "stretch",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1009,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1038.5,
+      "raw": "idle",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 1040,
+      "raw": "idle",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 1045.5,
+      "raw": "idle",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 1047,
+      "raw": "idle",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 1048,
+      "raw": "idle",
+      "action": "shoulder_roll",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1052,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1056,
+      "raw": "idle",
+      "action": "waiting",
+      "record": "cup",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1064,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1105,
+      "raw": "idle",
+      "action": "wrist_relax",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1108,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1109,
+      "raw": "idle",
+      "action": "idle",
+      "record": "window",
+      "stage": "queued",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1126,
+      "raw": "idle",
+      "action": "stand_up",
+      "record": "window",
+      "stage": "stand",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1128,
+      "raw": "idle",
+      "action": "turn",
+      "record": "window",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1129,
+      "raw": "idle",
+      "action": "walk",
+      "record": "window",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1131,
+      "raw": "idle",
+      "action": "turn",
+      "record": "window",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1131.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "window",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1134,
+      "raw": "idle",
+      "action": "turn",
+      "record": "window",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1135,
+      "raw": "idle",
+      "action": "walk",
+      "record": "window",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1158.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "window",
+      "stage": "align",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1159.5,
+      "raw": "idle",
+      "action": "window_rest",
+      "record": "window",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1246,
+      "raw": "idle",
+      "action": "turn",
+      "record": "window",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1247,
+      "raw": "idle",
+      "action": "walk",
+      "record": "window",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1270.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "window",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1271.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "window",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1274,
+      "raw": "idle",
+      "action": "turn",
+      "record": "window",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1274.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "window",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1276.5,
+      "raw": "idle",
+      "action": "standing",
+      "record": "window",
+      "stage": "deskTurn",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1277.5,
+      "raw": "idle",
+      "action": "sit_down",
+      "record": "window",
+      "stage": "deskSit",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1279.5,
+      "raw": "idle",
+      "action": "stretch",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1283.5,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1316.5,
+      "raw": "idle",
+      "action": "shoulder_roll",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1320.5,
+      "raw": "idle",
+      "action": "idle",
+      "record": "sofa",
+      "stage": "queued",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1344.5,
+      "raw": "idle",
+      "action": "stand_up",
+      "record": "sofa",
+      "stage": "stand",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1346.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1347,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1349.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1350,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1352.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1353,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1362.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1363,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1365.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1366.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "out",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1371,
+      "raw": "idle",
+      "action": "standing",
+      "record": "sofa",
+      "stage": "align",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1372,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "back",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1372.5,
+      "raw": "idle",
+      "action": "sofa_sit",
+      "record": "sofa",
+      "stage": "sit",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1375.5,
+      "raw": "idle",
+      "action": "sofa_talk",
+      "record": "sofa",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1376.5,
+      "raw": "idle",
+      "action": "sofa_listen",
+      "record": "sofa",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1377.5,
+      "raw": "idle",
+      "action": "sofa_talk",
+      "record": "sofa",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1380.5,
+      "raw": "idle",
+      "action": "sofa_listen",
+      "record": "sofa",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1383.5,
+      "raw": "idle",
+      "action": "sofa_agree",
+      "record": "sofa",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1385,
+      "raw": "idle",
+      "action": "sofa_relax",
+      "record": "sofa",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1386.5,
+      "raw": "idle",
+      "action": "sofa_rest",
+      "record": "sofa",
+      "stage": "rest",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1410.5,
+      "raw": "idle",
+      "action": "sofa_rise",
+      "record": "sofa",
+      "stage": "rise",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1413.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "forward",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1414,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1415,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1419.5,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1420.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1423,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1424,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1433,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1433.5,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1436,
+      "raw": "idle",
+      "action": "turn",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1437,
+      "raw": "idle",
+      "action": "walk",
+      "record": "sofa",
+      "stage": "home",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1439,
+      "raw": "idle",
+      "action": "standing",
+      "record": "sofa",
+      "stage": "deskTurn",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1439.5,
+      "raw": "idle",
+      "action": "sit_down",
+      "record": "sofa",
+      "stage": "deskSit",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1440,
+      "raw": "preparing",
+      "action": "sit_down",
+      "record": "sofa",
+      "stage": "deskSit",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1441.5,
+      "raw": "preparing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 1443,
+      "raw": "preparing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 1448.5,
+      "raw": "preparing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 1449.5,
+      "raw": "preparing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "release"
+    },
+    {
+      "t": 1450,
+      "raw": "preparing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 1451,
+      "raw": "preparing",
+      "action": "preparing",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1459.5,
+      "raw": "preparing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 1460,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 1461,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 1466.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 1468,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 1469,
+      "raw": "typing",
+      "action": "typing",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1478,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 1479,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "grasp"
+    },
+    {
+      "t": 1479.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 1484.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 1486,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 1487,
+      "raw": "typing",
+      "action": "typing",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1496,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 1497,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "grasp"
+    },
+    {
+      "t": 1497.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 1503,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 1504,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 1505,
+      "raw": "typing",
+      "action": "typing",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1514,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "reach"
+    },
+    {
+      "t": 1515,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "grasp"
+    },
+    {
+      "t": 1515.5,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "use"
+    },
+    {
+      "t": 1521,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "replace"
+    },
+    {
+      "t": 1522,
+      "raw": "typing",
+      "action": "role_leo",
+      "visit": null,
+      "role": "retract"
+    },
+    {
+      "t": 1523,
+      "raw": "typing",
+      "action": "typing",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1525,
+      "raw": "success",
+      "action": "success",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1526.5,
+      "raw": "success",
+      "action": "shoulder_roll",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1527,
+      "raw": "idle",
+      "action": "shoulder_roll",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1530.5,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1531.5,
+      "raw": "idle",
+      "action": "personal_rest",
+      "record": "micro",
+      "visit": null,
+      "role": "idle"
+    },
+    {
+      "t": 1542,
+      "raw": "idle",
+      "action": "idle",
+      "visit": null,
+      "role": "idle"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "aborted",
+  "startedAt": "2026-10-22T03:05:28.808Z",
+  "endedAt": "2026-10-22T03:09:44.920Z",
+  "signal": "SIGTERM",
+  "rows": [
+    {
+      "index": 0,
+      "wallSeconds": 0,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21501516,
+        "totalSize": 24526848,
+        "embedderHeapUsedSize": 2506432,
+        "backingStorageSize": 16083210
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 109,
+        "Nodes": 985
+      },
+      "canvas": 1
+    }
+  ],
+  "logoutRows": [],
+  "errors": []
+}

@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: shared members observe the same durable state while role, actor, invitation and revocation boundaries hold
+ok 1 - shared members observe the same durable state while role, actor, invitation and revocation boundaries hold
+  ---
+  duration_ms: 1899.440083
+  type: 'test'
+  ...
+# Subtest: invite expiry, replacement, revocation, owner guards and space/member limits are enforced
+ok 2 - invite expiry, replacement, revocation, owner guards and space/member limits are enforced
+  ---
+  duration_ms: 1146.389416
+  type: 'test'
+  ...
+# Subtest: v2 disk DB upgrades in place without changing existing personal workspace, result, session or idempotency
+ok 3 - v2 disk DB upgrades in place without changing existing personal workspace, result, session or idempotency
+  ---
+  duration_ms: 2530.06175
+  type: 'test'
+  ...
+# Subtest: DB authorization, idempotency, body conflicts, one active run, approval, cancellation and retry
+ok 4 - DB authorization, idempotency, body conflicts, one active run, approval, cancellation and retry
+  ---
+  duration_ms: 1240.949541
+  type: 'test'
+  ...
+# Subtest: disk reopen, exclusive process lock, interrupted run recovery, migrations and gzip backup restore
+ok 5 - disk reopen, exclusive process lock, interrupted run recovery, migrations and gzip backup restore
+  ---
+  duration_ms: 2298.461667
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10579.493667

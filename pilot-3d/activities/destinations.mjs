@@ -1,3 +1,4 @@
+import{prepareFinalDestinations}from'../final-office/destinations.mjs';
 import * as T from 'three';
 import {prepareSofa} from './model.mjs';
 import {SofaScheduler} from './scheduler.mjs';
@@ -6,6 +7,7 @@ import {pointClear} from './anchors.mjs';
 const W=(x,z)=>[x,0,z],angle=(a,b,u)=>a+Math.atan2(Math.sin(b-a),Math.cos(b-a))*u;
 export const MEETING_SLOTS=[{position:W(2.50,2.95),cup:[2.96,.7425,2.74]},{position:W(4.45,3.03),cup:[4.05,.7425,2.72]}];
 export function prepareDestinations(model,meta){
+ if(meta.finalOffice)return prepareFinalDestinations(model,meta);
  const {seatBox}=prepareSofa(model);const sofa=model.getObjectByName('LinenSofa');
  // Both seats are usable; ornaments live on the outer arms instead of either lap.
  for(const [name,x] of [['LooseCushion',.98],['OchreLooseCushion',-.98]]){const n=model.getObjectByName(name);if(n){n.position.x=x;n.position.y=.76;n.scale.multiplyScalar(n.userData.activityScaled?1:.72);n.userData.activityScaled=true;}}

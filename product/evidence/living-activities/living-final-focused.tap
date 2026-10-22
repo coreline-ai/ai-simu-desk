@@ -1,0 +1,262 @@
+TAP version 13
+# Subtest: living v9 preserves five rigs, all clips and immutable v8 baseline
+ok 1 - living v9 preserves five rigs, all clips and immutable v8 baseline
+  ---
+  duration_ms: 2042.800291
+  type: 'test'
+  ...
+# Subtest: nara three living variants keep body support and fixed limb lengths
+ok 2 - nara three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 6052.313542
+  type: 'test'
+  ...
+# Subtest: sora three living variants keep body support and fixed limb lengths
+ok 3 - sora three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 5195.541709
+  type: 'test'
+  ...
+# Subtest: jun three living variants keep body support and fixed limb lengths
+ok 4 - jun three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4734.2315
+  type: 'test'
+  ...
+# Subtest: min three living variants keep body support and fixed limb lengths
+ok 5 - min three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4041.482125
+  type: 'test'
+  ...
+# Subtest: leo three living variants keep body support and fixed limb lengths
+ok 6 - leo three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4914.850208
+  type: 'test'
+  ...
+# Subtest: exported living GLB reloads five support grips and 105 clips; every actor can use both hands
+ok 7 - exported living GLB reloads five support grips and 105 clips; every actor can use both hands
+  ---
+  duration_ms: 2399.144917
+  type: 'test'
+  ...
+# Subtest: nara supports raised cup with both hands, keeps one owner and returns safely
+ok 8 - nara supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 2122.229542
+  type: 'test'
+  ...
+# Subtest: sora supports raised cup with both hands, keeps one owner and returns safely
+ok 9 - sora supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1101.71125
+  type: 'test'
+  ...
+# Subtest: jun supports raised cup with both hands, keeps one owner and returns safely
+ok 10 - jun supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1091.656958
+  type: 'test'
+  ...
+# Subtest: min supports raised cup with both hands, keeps one owner and returns safely
+ok 11 - min supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1096.734333
+  type: 'test'
+  ...
+# Subtest: leo supports raised cup with both hands, keeps one owner and returns safely
+ok 12 - leo supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1087.4255
+  type: 'test'
+  ...
+# Subtest: two-hand cup releases the support safely when actual work preempts drinking
+ok 13 - two-hand cup releases the support safely when actual work preempts drinking
+  ---
+  duration_ms: 994.010042
+  type: 'test'
+  ...
+# Subtest: complete pose frames share body, finger matrices and attached props without independent scheduling
+ok 14 - complete pose frames share body, finger matrices and attached props without independent scheduling
+  ---
+  duration_ms: 4208.926875
+  type: 'test'
+  ...
+# Subtest: 3 seated participants all speak, write, clean and return
+ok 15 - 3 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 7203.486333
+  type: 'test'
+  ...
+# Subtest: 4 seated participants all speak, write, clean and return
+ok 16 - 4 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 8414.829917
+  type: 'test'
+  ...
+# Subtest: 2 standing participants arrive before turns and return without overlap
+ok 17 - 2 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3266.4745
+  type: 'test'
+  ...
+# Subtest: 3 standing participants arrive before turns and return without overlap
+ok 18 - 3 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3859.046458
+  type: 'test'
+  ...
+# Subtest: 4 standing participants arrive before turns and return without overlap
+ok 19 - 4 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3122.903791
+  type: 'test'
+  ...
+# Subtest: 5 standing participants arrive before turns and return without overlap
+ok 20 - 5 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3045.793208
+  type: 'test'
+  ...
+# Subtest: standing meeting rejects malformed participants and cleans on work interruption
+ok 21 - standing meeting rejects malformed participants and cleans on work interruption
+  ---
+  duration_ms: 2713.979291
+  type: 'test'
+  ...
+# Subtest: passing greetings are bounded and never replace prop hands or routes
+ok 22 - passing greetings are bounded and never replace prop hands or routes
+  ---
+  duration_ms: 6114.437416
+  type: 'test'
+  ...
+# Subtest: nara safely resumes interrupted sofa/window/rest/coffee after real work
+ok 23 - nara safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 7404.381167
+  type: 'test'
+  ...
+# Subtest: sora safely resumes interrupted sofa/window/rest/coffee after real work
+ok 24 - sora safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 5854.702458
+  type: 'test'
+  ...
+# Subtest: jun safely resumes interrupted sofa/window/rest/coffee after real work
+ok 25 - jun safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 6581.386416
+  type: 'test'
+  ...
+# Subtest: min safely resumes interrupted sofa/window/rest/coffee after real work
+ok 26 - min safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 9325.139042
+  type: 'test'
+  ...
+# Subtest: leo safely resumes interrupted sofa/window/rest/coffee after real work
+ok 27 - leo safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 6905.734166
+  type: 'test'
+  ...
+# Subtest: explicit cancellation and participant removal discard resume intent
+ok 28 - explicit cancellation and participant removal discard resume intent
+  ---
+  duration_ms: 1370.35325
+  type: 'test'
+  ...
+# Subtest: all five approach the shared board, grip one marker, point, replace and return
+ok 29 - all five approach the shared board, grip one marker, point, replace and return
+  ---
+  duration_ms: 8068.742292
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during approach
+ok 30 - board review safely cancels during approach
+  ---
+  duration_ms: 3076.585833
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during use
+ok 31 - board review safely cancels during use
+  ---
+  duration_ms: 3342.332542
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during replace
+ok 32 - board review safely cancels during replace
+  ---
+  duration_ms: 3862.2795
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during back
+ok 33 - board review safely cancels during back
+  ---
+  duration_ms: 3992.364458
+  type: 'test'
+  ...
+# Subtest: focus scenario completes all four phases and safely returns
+ok 34 - focus scenario completes all four phases and safely returns
+  ---
+  duration_ms: 10680.071667
+  type: 'test'
+  ...
+# Subtest: review scenario completes all four phases and safely returns
+ok 35 - review scenario completes all four phases and safely returns
+  ---
+  duration_ms: 13942.501375
+  type: 'test'
+  ...
+# Subtest: break scenario completes all four phases and safely returns
+ok 36 - break scenario completes all four phases and safely returns
+  ---
+  duration_ms: 13851.584417
+  type: 'test'
+  ...
+# Subtest: scenario respects work, pause and explicit cancellation; camera identifies group events
+ok 37 - scenario respects work, pause and explicit cancellation; camera identifies group events
+  ---
+  duration_ms: 1886.098125
+  type: 'test'
+  ...
+# Subtest: shared scene follows, claims once, publishes monotonically, releases and cleans timers
+ok 38 - shared scene follows, claims once, publishes monotonically, releases and cleans timers
+  ---
+  duration_ms: 1.40625
+  type: 'test'
+  ...
+# Subtest: late entry receives the last scene and switching away ignores an old response
+ok 39 - late entry receives the last scene and switching away ignores an old response
+  ---
+  duration_ms: 0.454959
+  type: 'test'
+  ...
+# Subtest: scene packet rejects malformed bytes, cycles, NaN, oversized nodes and duplicate actors
+ok 40 - scene packet rejects malformed bytes, cycles, NaN, oversized nodes and duplicate actors
+  ---
+  duration_ms: 1.345375
+  type: 'test'
+  ...
+# Subtest: local DB scene leases isolate rooms, permissions, race winners, replay, revocation and persistence
+ok 41 - local DB scene leases isolate rooms, permissions, race winners, replay, revocation and persistence
+  ---
+  duration_ms: 1244.401
+  type: 'test'
+  ...
+# Subtest: real scene HTTP requires login, same origin, role access and preserves the normal body limit
+ok 42 - real scene HTTP requires login, same origin, role access and preserves the normal body limit
+  ---
+  duration_ms: 818.414291
+  type: 'test'
+  ...
+1..42
+# tests 42
+# suites 0
+# pass 42
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 183541.83125

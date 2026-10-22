@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: nara: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+not ok 1 - nara: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5098.23725
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:9:58'
+  failureType: 'testCodeFailure'
+  error: '{"id":"nara","stage":"use","phase":"replace","trip":"rest","maxPenetration":0.004302274409233919}'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:20:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: nara: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 2 - nara: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 6792.352542
+  type: 'test'
+  ...
+# Subtest: sora: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+not ok 3 - sora: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 3052.196083
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:9:58'
+  failureType: 'testCodeFailure'
+  error: '{"id":"sora","stage":"use","phase":"replace","trip":"rest","maxPenetration":0.00430227440923403}'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:20:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: sora: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 4 - sora: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4943.284041
+  type: 'test'
+  ...
+# Subtest: jun: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+not ok 5 - jun: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 3004.164083
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:9:58'
+  failureType: 'testCodeFailure'
+  error: '{"id":"jun","stage":"use","phase":"replace","trip":"rest","maxPenetration":0.004302274409234252}'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:20:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: jun: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 6 - jun: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4940.836625
+  type: 'test'
+  ...
+# Subtest: min: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+not ok 7 - min: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 2863.643542
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:9:58'
+  failureType: 'testCodeFailure'
+  error: '{"id":"min","stage":"use","phase":"replace","trip":"rest","maxPenetration":0.004302274409233808}'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:20:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: min: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 8 - min: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 4681.959542
+  type: 'test'
+  ...
+# Subtest: leo: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+not ok 9 - leo: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 3032.934583
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:9:58'
+  failureType: 'testCodeFailure'
+  error: '{"id":"leo","stage":"use","phase":"replace","trip":"rest","maxPenetration":0.004302274409234141}'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/ensemble-cancel-contact.test.mjs:20:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: leo: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 10 - leo: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5027.100833
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 5
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 43585.31425

@@ -1,0 +1,1535 @@
+{
+  "schemaVersion": 5,
+  "modelVersion": 8,
+  "naturalMotion": true,
+  "fullBody": true,
+  "units": "metres",
+  "up": "+Y",
+  "floorY": 0,
+  "actorIds": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "workspaces": {
+    "nara": [
+      -4.8,
+      0,
+      -3
+    ],
+    "sora": [
+      -2.4,
+      0,
+      -3
+    ],
+    "jun": [
+      0,
+      0,
+      -3
+    ],
+    "min": [
+      2.3999999999999995,
+      0,
+      -3
+    ],
+    "leo": [
+      4.8,
+      0,
+      -3
+    ]
+  },
+  "room": [
+    13.2,
+    3.1,
+    10.2
+  ],
+  "colliders": [
+    {
+      "id": "sofa",
+      "min": [
+        2.1,
+        0.95
+      ],
+      "max": [
+        5,
+        1.82
+      ]
+    },
+    {
+      "id": "left-storage",
+      "min": [
+        -6.51,
+        0.15
+      ],
+      "max": [
+        -6.09,
+        3.25
+      ]
+    },
+    {
+      "id": "divider",
+      "min": [
+        0.63,
+        1.25
+      ],
+      "max": [
+        1.07,
+        4.05
+      ]
+    },
+    {
+      "id": "coffee",
+      "min": [
+        5.8,
+        -1
+      ],
+      "max": [
+        6.5,
+        1.1
+      ]
+    },
+    {
+      "id": "storage",
+      "min": [
+        6.1,
+        -2.15
+      ],
+      "max": [
+        6.5,
+        -1.3
+      ]
+    },
+    {
+      "id": "coffee-table",
+      "center": [
+        3.55,
+        3.4
+      ],
+      "radius": 0.52
+    },
+    {
+      "id": "lounge-chair",
+      "min": [
+        5.15,
+        2.8
+      ],
+      "max": [
+        5.95,
+        3.6
+      ]
+    },
+    {
+      "id": "plant-0",
+      "center": [
+        -6.18,
+        -4.75
+      ],
+      "radius": 0.28
+    },
+    {
+      "id": "plant-1",
+      "center": [
+        0.1,
+        -4.75
+      ],
+      "radius": 0.28
+    },
+    {
+      "id": "plant-2",
+      "center": [
+        5.7,
+        1.55
+      ],
+      "radius": 0.28
+    },
+    {
+      "id": "nara-desk",
+      "min": [
+        -5.5,
+        -3.25
+      ],
+      "max": [
+        -4.1,
+        -2.55
+      ]
+    },
+    {
+      "id": "nara-chair-parked",
+      "min": [
+        -5.08,
+        -4.67
+      ],
+      "max": [
+        -4.52,
+        -4.03
+      ]
+    },
+    {
+      "id": "sora-desk",
+      "min": [
+        -3.0999999999999996,
+        -3.25
+      ],
+      "max": [
+        -1.7,
+        -2.55
+      ]
+    },
+    {
+      "id": "sora-chair-parked",
+      "min": [
+        -2.6799999999999997,
+        -4.67
+      ],
+      "max": [
+        -2.12,
+        -4.03
+      ]
+    },
+    {
+      "id": "jun-desk",
+      "min": [
+        -0.7,
+        -3.25
+      ],
+      "max": [
+        0.7,
+        -2.55
+      ]
+    },
+    {
+      "id": "jun-chair-parked",
+      "min": [
+        -0.28,
+        -4.67
+      ],
+      "max": [
+        0.28,
+        -4.03
+      ]
+    },
+    {
+      "id": "min-desk",
+      "min": [
+        1.6999999999999995,
+        -3.25
+      ],
+      "max": [
+        3.0999999999999996,
+        -2.55
+      ]
+    },
+    {
+      "id": "min-chair-parked",
+      "min": [
+        2.119999999999999,
+        -4.67
+      ],
+      "max": [
+        2.6799999999999997,
+        -4.03
+      ]
+    },
+    {
+      "id": "leo-desk",
+      "min": [
+        4.1,
+        -3.25
+      ],
+      "max": [
+        5.5,
+        -2.55
+      ]
+    },
+    {
+      "id": "leo-chair-parked",
+      "min": [
+        4.52,
+        -4.67
+      ],
+      "max": [
+        5.08,
+        -4.03
+      ]
+    },
+    {
+      "id": "meeting",
+      "center": [
+        -3.45,
+        2.6
+      ],
+      "radii": [
+        1.7,
+        0.75
+      ]
+    },
+    {
+      "id": "meeting-chair-0",
+      "min": [
+        -3.685,
+        1.105
+      ],
+      "max": [
+        -3.2150000000000003,
+        1.5750000000000002
+      ]
+    },
+    {
+      "id": "meeting-chair-1",
+      "min": [
+        -3.685,
+        3.6250000000000004
+      ],
+      "max": [
+        -3.2150000000000003,
+        4.095000000000001
+      ]
+    },
+    {
+      "id": "meeting-chair-2",
+      "min": [
+        -4.6850000000000005,
+        1.248482628608786
+      ],
+      "max": [
+        -4.215,
+        1.7184826286087858
+      ]
+    },
+    {
+      "id": "meeting-chair-3",
+      "min": [
+        -4.6850000000000005,
+        3.4815173713912144
+      ],
+      "max": [
+        -4.215,
+        3.951517371391214
+      ]
+    },
+    {
+      "id": "meeting-chair-4",
+      "min": [
+        -2.685,
+        1.248482628608786
+      ],
+      "max": [
+        -2.2150000000000003,
+        1.7184826286087858
+      ]
+    },
+    {
+      "id": "meeting-chair-5",
+      "min": [
+        -2.685,
+        3.4815173713912144
+      ],
+      "max": [
+        -2.2150000000000003,
+        3.951517371391214
+      ]
+    }
+  ],
+  "bodyRadius": 0.22,
+  "route": [
+    [
+      0,
+      -0.48
+    ],
+    [
+      -1.35,
+      -0.48
+    ]
+  ],
+  "dimensions": {
+    "desk": [
+      1.4,
+      0.74,
+      0.7
+    ],
+    "chairSeat": 0.45
+  },
+  "actorBounds": {
+    "standing": [
+      [
+        -0.3,
+        0,
+        -0.3
+      ],
+      [
+        0.3,
+        1.75,
+        0.3
+      ]
+    ],
+    "stretch": [
+      [
+        -0.75,
+        0,
+        -0.65
+      ],
+      [
+        0.75,
+        2.25,
+        0.65
+      ]
+    ]
+  },
+  "source": "Original local five-person ensemble assets; v9 baseline preserved",
+  "bindings": {
+    "nara": {
+      "actor": "NaraActorRoot",
+      "head": "NaraHead",
+      "feet": [
+        "NaraFootL",
+        "NaraFootR"
+      ],
+      "seat": "NaraSeatAnchor"
+    },
+    "sora": {
+      "actor": "SoraActorRoot",
+      "head": "SoraHead",
+      "feet": [
+        "SoraFootL",
+        "SoraFootR"
+      ],
+      "seat": "SoraSeatAnchor"
+    },
+    "jun": {
+      "actor": "JunActorRoot",
+      "head": "JunHead",
+      "feet": [
+        "JunFootL",
+        "JunFootR"
+      ],
+      "seat": "JunSeatAnchor"
+    },
+    "min": {
+      "actor": "MinActorRoot",
+      "head": "MinHead",
+      "feet": [
+        "MinFootL",
+        "MinFootR"
+      ],
+      "seat": "MinSeatAnchor"
+    },
+    "leo": {
+      "actor": "LeoActorRoot",
+      "head": "LeoHead",
+      "feet": [
+        "LeoFootL",
+        "LeoFootR"
+      ],
+      "seat": "LeoSeatAnchor"
+    }
+  },
+  "cost": {
+    "meshes": 600,
+    "triangles": 412804
+  },
+  "exteriorLayers": [
+    "sky-hills",
+    "mid-trees",
+    "near-shrubs"
+  ],
+  "environmentVersion": 8,
+  "qualityStage": 8,
+  "finalOffice": {
+    "version": 1,
+    "deskCupCenterY": 0.7795,
+    "width": 13.2,
+    "depth": 10.2,
+    "bounds": [
+      [
+        -6.6,
+        -0.18,
+        -5.1
+      ],
+      [
+        6.6,
+        3.1,
+        5.1
+      ]
+    ],
+    "stations": {
+      "nara": [
+        -4.8,
+        0,
+        -3
+      ],
+      "sora": [
+        -2.4,
+        0,
+        -3
+      ],
+      "jun": [
+        0,
+        0,
+        -3
+      ],
+      "min": [
+        2.3999999999999995,
+        0,
+        -3
+      ],
+      "leo": [
+        4.8,
+        0,
+        -3
+      ]
+    },
+    "meeting": {
+      "center": [
+        -3.45,
+        0,
+        2.6
+      ],
+      "radii": [
+        1.7,
+        0.75
+      ],
+      "chairs": [
+        {
+          "position": [
+            -3.45,
+            0,
+            1.34
+          ],
+          "facing": 0
+        },
+        {
+          "position": [
+            -3.45,
+            0,
+            3.8600000000000003
+          ],
+          "facing": 3.141592653589793
+        },
+        {
+          "position": [
+            -4.45,
+            0,
+            1.4834826286087859
+          ],
+          "facing": 0
+        },
+        {
+          "position": [
+            -4.45,
+            0,
+            3.7165173713912143
+          ],
+          "facing": 3.141592653589793
+        },
+        {
+          "position": [
+            -2.45,
+            0,
+            1.4834826286087859
+          ],
+          "facing": 0
+        },
+        {
+          "position": [
+            -2.45,
+            0,
+            3.7165173713912143
+          ],
+          "facing": 3.141592653589793
+        }
+      ],
+      "slots": [
+        {
+          "position": [
+            -3.45,
+            0,
+            1.34
+          ],
+          "facing": 0,
+          "cup": [
+            -3.5700000000000003,
+            0.7795,
+            1.906870845485948
+          ],
+          "drop": "EnsembleGroupCupDrop0",
+          "note": 0
+        },
+        {
+          "position": [
+            -3.45,
+            0,
+            3.8600000000000003
+          ],
+          "facing": 3.141592653589793,
+          "cup": [
+            -3.33,
+            0.7795,
+            3.2931291545140517
+          ],
+          "drop": "EnsembleGroupCupDrop1",
+          "note": 1
+        }
+      ]
+    },
+    "sofa": {
+      "position": [
+        3.55,
+        0,
+        1.4
+      ],
+      "slots": [
+        {
+          "x": 2.73,
+          "z": 1.64
+        },
+        {
+          "x": 4.37,
+          "z": 1.64
+        }
+      ],
+      "armrests": [
+        [
+          -1.32,
+          2,
+          0.23
+        ],
+        [
+          1.32,
+          2,
+          0.23
+        ]
+      ],
+      "rug": {
+        "shape": "rect",
+        "x": 3.55,
+        "z": 2.55,
+        "rx": 2.05,
+        "rz": 1.4,
+        "top": 0.02
+      }
+    },
+    "window": {
+      "point": [
+        -6,
+        0,
+        -3.9
+      ],
+      "lookAt": [
+        -6,
+        1.7,
+        -7
+      ]
+    },
+    "colliders": [
+      {
+        "id": "sofa",
+        "min": [
+          2.1,
+          0.95
+        ],
+        "max": [
+          5,
+          1.82
+        ]
+      },
+      {
+        "id": "left-storage",
+        "min": [
+          -6.51,
+          0.15
+        ],
+        "max": [
+          -6.09,
+          3.25
+        ]
+      },
+      {
+        "id": "divider",
+        "min": [
+          0.63,
+          1.25
+        ],
+        "max": [
+          1.07,
+          4.05
+        ]
+      },
+      {
+        "id": "coffee",
+        "min": [
+          5.8,
+          -1
+        ],
+        "max": [
+          6.5,
+          1.1
+        ]
+      },
+      {
+        "id": "storage",
+        "min": [
+          6.1,
+          -2.15
+        ],
+        "max": [
+          6.5,
+          -1.3
+        ]
+      },
+      {
+        "id": "coffee-table",
+        "center": [
+          3.55,
+          3.4
+        ],
+        "radius": 0.52
+      },
+      {
+        "id": "lounge-chair",
+        "min": [
+          5.15,
+          2.8
+        ],
+        "max": [
+          5.95,
+          3.6
+        ]
+      },
+      {
+        "id": "plant-0",
+        "center": [
+          -6.18,
+          -4.75
+        ],
+        "radius": 0.28
+      },
+      {
+        "id": "plant-1",
+        "center": [
+          0.1,
+          -4.75
+        ],
+        "radius": 0.28
+      },
+      {
+        "id": "plant-2",
+        "center": [
+          5.7,
+          1.55
+        ],
+        "radius": 0.28
+      },
+      {
+        "id": "nara-desk",
+        "min": [
+          -5.5,
+          -3.25
+        ],
+        "max": [
+          -4.1,
+          -2.55
+        ]
+      },
+      {
+        "id": "nara-chair-parked",
+        "min": [
+          -5.08,
+          -4.67
+        ],
+        "max": [
+          -4.52,
+          -4.03
+        ]
+      },
+      {
+        "id": "sora-desk",
+        "min": [
+          -3.0999999999999996,
+          -3.25
+        ],
+        "max": [
+          -1.7,
+          -2.55
+        ]
+      },
+      {
+        "id": "sora-chair-parked",
+        "min": [
+          -2.6799999999999997,
+          -4.67
+        ],
+        "max": [
+          -2.12,
+          -4.03
+        ]
+      },
+      {
+        "id": "jun-desk",
+        "min": [
+          -0.7,
+          -3.25
+        ],
+        "max": [
+          0.7,
+          -2.55
+        ]
+      },
+      {
+        "id": "jun-chair-parked",
+        "min": [
+          -0.28,
+          -4.67
+        ],
+        "max": [
+          0.28,
+          -4.03
+        ]
+      },
+      {
+        "id": "min-desk",
+        "min": [
+          1.6999999999999995,
+          -3.25
+        ],
+        "max": [
+          3.0999999999999996,
+          -2.55
+        ]
+      },
+      {
+        "id": "min-chair-parked",
+        "min": [
+          2.119999999999999,
+          -4.67
+        ],
+        "max": [
+          2.6799999999999997,
+          -4.03
+        ]
+      },
+      {
+        "id": "leo-desk",
+        "min": [
+          4.1,
+          -3.25
+        ],
+        "max": [
+          5.5,
+          -2.55
+        ]
+      },
+      {
+        "id": "leo-chair-parked",
+        "min": [
+          4.52,
+          -4.67
+        ],
+        "max": [
+          5.08,
+          -4.03
+        ]
+      },
+      {
+        "id": "meeting",
+        "center": [
+          -3.45,
+          2.6
+        ],
+        "radii": [
+          1.7,
+          0.75
+        ]
+      },
+      {
+        "id": "meeting-chair-0",
+        "min": [
+          -3.685,
+          1.105
+        ],
+        "max": [
+          -3.2150000000000003,
+          1.5750000000000002
+        ]
+      },
+      {
+        "id": "meeting-chair-1",
+        "min": [
+          -3.685,
+          3.6250000000000004
+        ],
+        "max": [
+          -3.2150000000000003,
+          4.095000000000001
+        ]
+      },
+      {
+        "id": "meeting-chair-2",
+        "min": [
+          -4.6850000000000005,
+          1.248482628608786
+        ],
+        "max": [
+          -4.215,
+          1.7184826286087858
+        ]
+      },
+      {
+        "id": "meeting-chair-3",
+        "min": [
+          -4.6850000000000005,
+          3.4815173713912144
+        ],
+        "max": [
+          -4.215,
+          3.951517371391214
+        ]
+      },
+      {
+        "id": "meeting-chair-4",
+        "min": [
+          -2.685,
+          1.248482628608786
+        ],
+        "max": [
+          -2.2150000000000003,
+          1.7184826286087858
+        ]
+      },
+      {
+        "id": "meeting-chair-5",
+        "min": [
+          -2.685,
+          3.4815173713912144
+        ],
+        "max": [
+          -2.2150000000000003,
+          3.951517371391214
+        ]
+      }
+    ]
+  },
+  "ensembleOffice": {
+    "version": 2,
+    "enhancedActors": [
+      "nara",
+      "sora",
+      "jun",
+      "min",
+      "leo"
+    ],
+    "roles": {
+      "nara": {
+        "contactY": 0.774,
+        "notebook": "NaraPlanningNotebook",
+        "pageHinge": "NaraPageHinge",
+        "ink": "NaraWrittenStrokes",
+        "pencil": "NaraPlanningPencil",
+        "penHomeY": 0.78
+      },
+      "sora": {
+        "contactY": 0.766,
+        "ink": "SoraSketchStrokes",
+        "pencil": "SoraStylus",
+        "penHomeY": 0.772
+      },
+      "jun": {
+        "mouse": "JunPrecisionMouse"
+      },
+      "min": {
+        "contactY": 0.762,
+        "checks": [
+          "MinChecked0",
+          "MinChecked1",
+          "MinChecked2",
+          "MinChecked3"
+        ],
+        "penHomeY": 0.768
+      },
+      "leo": {
+        "page": "LeoDocumentPage4",
+        "dock": "LeoPaperDock",
+        "pageHomeY": 0.755,
+        "supportTop": 0.753,
+        "folderTab": "LeoFolderTab"
+      }
+    },
+    "bodies": {
+      "nara": {
+        "folds": [
+          "NaraElbowSoftFoldL",
+          "NaraKneeSoftFoldL",
+          "NaraElbowSoftFoldR",
+          "NaraKneeSoftFoldR"
+        ],
+        "shoes": [
+          "NaraShoeStitchL",
+          "NaraShoeStitchR"
+        ],
+        "source": "original local joint-following garment detail",
+        "expressions": "NaraExpressionMouths"
+      },
+      "sora": {
+        "folds": [
+          "SoraElbowSoftFoldL",
+          "SoraKneeSoftFoldL",
+          "SoraElbowSoftFoldR",
+          "SoraKneeSoftFoldR"
+        ],
+        "shoes": [
+          "SoraShoeStitchL",
+          "SoraShoeStitchR"
+        ],
+        "source": "original local joint-following garment detail",
+        "expressions": "SoraExpressionMouths"
+      },
+      "jun": {
+        "folds": [
+          "JunElbowSoftFoldL",
+          "JunKneeSoftFoldL",
+          "JunElbowSoftFoldR",
+          "JunKneeSoftFoldR"
+        ],
+        "shoes": [
+          "JunShoeStitchL",
+          "JunShoeStitchR"
+        ],
+        "source": "original local joint-following garment detail",
+        "expressions": "JunExpressionMouths"
+      },
+      "min": {
+        "folds": [
+          "MinElbowSoftFoldL",
+          "MinKneeSoftFoldL",
+          "MinElbowSoftFoldR",
+          "MinKneeSoftFoldR"
+        ],
+        "shoes": [
+          "MinShoeStitchL",
+          "MinShoeStitchR"
+        ],
+        "source": "original local joint-following garment detail",
+        "expressions": "MinExpressionMouths"
+      },
+      "leo": {
+        "folds": [
+          "LeoElbowSoftFoldL",
+          "LeoKneeSoftFoldL",
+          "LeoElbowSoftFoldR",
+          "LeoKneeSoftFoldR"
+        ],
+        "shoes": [
+          "LeoShoeStitchL",
+          "LeoShoeStitchR"
+        ],
+        "source": "original local joint-following garment detail",
+        "expressions": "LeoExpressionMouths"
+      }
+    },
+    "cups": {
+      "nara": {
+        "cup": "NaraCeramicMug",
+        "body": "NaraMugBody",
+        "liquid": "NaraCoffee",
+        "coaster": "NaraLinenCoaster",
+        "deskTop": 0.74,
+        "coasterTop": 0.7415,
+        "baseGap": 0.0005
+      },
+      "sora": {
+        "cup": "SoraCeramicMug",
+        "body": "SoraMugBody",
+        "liquid": "SoraCoffee",
+        "coaster": "SoraLinenCoaster",
+        "deskTop": 0.74,
+        "coasterTop": 0.7415,
+        "baseGap": 0.0005
+      },
+      "jun": {
+        "cup": "JunCeramicMug",
+        "body": "JunMugBody",
+        "liquid": "JunCoffee",
+        "coaster": "JunLinenCoaster",
+        "deskTop": 0.74,
+        "coasterTop": 0.7415,
+        "baseGap": 0.0005
+      },
+      "min": {
+        "cup": "MinCeramicMug",
+        "body": "MinMugBody",
+        "liquid": "MinCoffee",
+        "coaster": "MinLinenCoaster",
+        "deskTop": 0.74,
+        "coasterTop": 0.7415,
+        "baseGap": 0.0005
+      },
+      "leo": {
+        "cup": "LeoCeramicMug",
+        "body": "LeoMugBody",
+        "liquid": "LeoCoffee",
+        "coaster": "LeoLinenCoaster",
+        "deskTop": 0.74,
+        "coasterTop": 0.7415,
+        "baseGap": 0.0005
+      }
+    },
+    "roomDetails": {
+      "cushions": [
+        "EnsembleLooseCushion0",
+        "EnsembleLooseCushion1"
+      ],
+      "closeDetails": [
+        "SofaSeatPiping0",
+        "SofaSeatPiping1",
+        "SofaSeatPiping2",
+        "WindowHandle0",
+        "WindowHandle2",
+        "WindowHandle4"
+      ],
+      "contactPolicy": "seat surfaces and support heights unchanged"
+    },
+    "coffee": {
+      "point": [
+        5.48,
+        0,
+        -0.4
+      ],
+      "facing": 1.5707963267948966,
+      "drop": "EnsembleCoffeeCupDrop",
+      "button": "EnsembleCoffeeButton",
+      "flow": "EnsembleCoffeeFlow",
+      "coasterTop": 0.861,
+      "baseGap": 0.0005,
+      "restLimit": 12,
+      "source": "local original coffee station geometry"
+    },
+    "group": {
+      "slots": [
+        {
+          "position": [
+            -3.45,
+            0,
+            1.34
+          ],
+          "facing": 0,
+          "cup": [
+            -3.5700000000000003,
+            0.7795,
+            1.906870845485948
+          ],
+          "drop": "EnsembleGroupCupDrop0",
+          "note": 0
+        },
+        {
+          "position": [
+            -3.45,
+            0,
+            3.8600000000000003
+          ],
+          "facing": 3.141592653589793,
+          "cup": [
+            -3.33,
+            0.7795,
+            3.2931291545140517
+          ],
+          "drop": "EnsembleGroupCupDrop1",
+          "note": 1
+        },
+        {
+          "position": [
+            -4.45,
+            0,
+            1.4834826286087859
+          ],
+          "facing": 0,
+          "cup": [
+            -4.57,
+            0.7795,
+            2.090776860750065
+          ],
+          "drop": "EnsembleGroupCupDrop2",
+          "note": 2
+        },
+        {
+          "position": [
+            -4.45,
+            0,
+            3.7165173713912143
+          ],
+          "facing": 3.141592653589793,
+          "cup": [
+            -4.33,
+            0.7795,
+            3.1866956883144724
+          ],
+          "drop": "EnsembleGroupCupDrop3",
+          "note": 3
+        },
+        {
+          "position": [
+            -2.45,
+            0,
+            1.4834826286087859
+          ],
+          "facing": 0,
+          "cup": [
+            -2.5700000000000003,
+            0.7795,
+            2.013304311685528
+          ],
+          "drop": "EnsembleGroupCupDrop4",
+          "note": 4
+        }
+      ],
+      "notes": [
+        {
+          "parent": "GroupNoteDock0",
+          "page": "GroupNotePage0",
+          "pen": "GroupPencil0",
+          "ink": "GroupWritten0",
+          "contactY": 0.7545
+        },
+        {
+          "parent": "GroupNoteDock1",
+          "page": "GroupNotePage1",
+          "pen": "GroupPencil1",
+          "ink": "GroupWritten1",
+          "contactY": 0.7545
+        },
+        {
+          "parent": "GroupNoteDock2",
+          "page": "GroupNotePage2",
+          "pen": "GroupPencil2",
+          "ink": "GroupWritten2",
+          "contactY": 0.7545
+        },
+        {
+          "parent": "GroupNoteDock3",
+          "page": "GroupNotePage3",
+          "pen": "GroupPencil3",
+          "ink": "GroupWritten3",
+          "contactY": 0.7545
+        },
+        {
+          "parent": "GroupNoteDock4",
+          "page": "GroupNotePage4",
+          "pen": "GroupPencil4",
+          "ink": "GroupWritten4",
+          "contactY": 0.7545
+        }
+      ],
+      "standOffset": 0.25,
+      "torsoForward": 0.16,
+      "torsoLean": 0.18,
+      "chairs": 6,
+      "participants": 5,
+      "source": "original local 5-seat meeting set; sixth chair remains free"
+    },
+    "motionProfiles": {
+      "nara": {
+        "period": 0.82,
+        "arm": 0.018
+      },
+      "sora": {
+        "period": 0.8,
+        "arm": 0.025
+      },
+      "jun": {
+        "period": 0.78,
+        "arm": 0.016
+      },
+      "min": {
+        "period": 0.84,
+        "arm": 0.012
+      },
+      "leo": {
+        "period": 0.86,
+        "arm": 0.022
+      }
+    },
+    "catalog": [
+      {
+        "id": "hands",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "procedural local source",
+        "version": 1
+      },
+      {
+        "id": "body-clothing-shoes",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "cups-coasters",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "paper-surfaces",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "five-role-props",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "four-expressions",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "sofa-window-details",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "coffee-machine",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "five-person-meeting-notes",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      },
+      {
+        "id": "local-synthesized-audio",
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "source": "original local procedural geometry",
+        "version": 1
+      }
+    ],
+    "maxMovers": 3,
+    "meetingParticipants": 5
+  },
+  "optimization": {
+    "before": {
+      "meshes": 1193,
+      "triangles": 412804
+    },
+    "after": {
+      "meshes": 600,
+      "triangles": 412804
+    },
+    "instancedParts": 717
+  },
+  "file": "studio-room-v8.glb",
+  "prototype": false,
+  "bytes": 8516844,
+  "sha256": "c47a518fdc91b13dfda688e39efbeea1bec17fdee1a6c784e7b4c8341fc6ae16",
+  "clips": 105,
+  "textureBudget": {
+    "images": [
+      {
+        "name": "oak",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "stone",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "fabric",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "linen",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "roughness",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "StaticFurnitureAO",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "oak_color",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "oak_normal",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "oak_orm",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "linen_color",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "linen_normal",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "linen_orm",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "fabric_color",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "fabric_normal",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "fabric_orm",
+        "width": 256,
+        "height": 256,
+        "rgbaMipEstimate": 349526
+      },
+      {
+        "name": "stone_color",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "stone_normal",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "stone_orm",
+        "width": 512,
+        "height": 512,
+        "rgbaMipEstimate": 1398102
+      },
+      {
+        "name": "Screen_nara",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_sora",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_jun",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_min",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      },
+      {
+        "name": "Screen_leo",
+        "width": 256,
+        "height": 160,
+        "rgbaMipEstimate": 218454
+      }
+    ],
+    "rgbaMipEstimate": 14723770
+  }
+}

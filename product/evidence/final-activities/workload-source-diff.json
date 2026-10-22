@@ -1,0 +1,16 @@
+{
+  "changed": [
+    {
+      "path": "pilot-3d/activities/team-soak.mjs",
+      "before": "bd1850cec043e7df7f3b89d390564ea826fba040bee62a56f2a8abf22a54977a",
+      "after": "0cc71d30b8c0eb173b854a1997361d2ecac18b7f786bdaa3efc1156e92f50cbb"
+    },
+    {
+      "path": "pilot-3d/activities/team/app.mjs",
+      "before": "5d3ae97938a36cdde11e3a8e7653abb13bef3dcc8a42083279b8c96475dde775",
+      "after": "7f43624024239ed3cd3bb580a60ea6aad4fc22b0a624f7a17ce2a55ec56e5a9c"
+    }
+  ],
+  "scope": "pilot-3d runtime .mjs including renderer and activity UI; excludes tests/assets",
+  "note": "QA workload selection only; production motion/layout/asset unchanged"
+}

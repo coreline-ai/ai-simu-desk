@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: all five coffee paths clear measured furniture and the cup rests on the actual drip tray
+ok 1 - all five coffee paths clear measured furniture and the cup rests on the actual drip tray
+  ---
+  duration_ms: 561.3125
+  type: 'test'
+  ...
+# Subtest: five actors queue fairly, place cups, press the button, brew, retrieve and return without shared ownership
+ok 2 - five actors queue fairly, place cups, press the button, brew, retrieve and return without shared ownership
+  ---
+  duration_ms: 12173.582125
+  type: 'test'
+  ...
+# Subtest: coffee work interruption during every stage returns the same cup and releases station, path and spot
+ok 3 - coffee work interruption during every stage returns the same cup and releases station, path and spot
+  ---
+  duration_ms: 23174.08525
+  type: 'test'
+  ...
+# Subtest: local synthesized effects are gesture enabled, bounded, muted, paused and disposed with one context
+ok 4 - local synthesized effects are gesture enabled, bounded, muted, paused and disposed with one context
+  ---
+  duration_ms: 0.495833
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36054.797708

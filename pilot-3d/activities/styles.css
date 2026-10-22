@@ -4,3 +4,15 @@
 
 .motion-buttons select{min-width:0;max-width:100%;min-height:44px;font:inherit;border:1px solid #d0d8c5;border-radius:8px;background:#fff;padding:8px}@media(max-width:700px){.motion-buttons select{width:100%}}
 .toolbar .segmented{flex-wrap:wrap;max-width:100%;min-width:0}
+
+body[data-default-mode="final"] .segmented button:not(#final):not(#grounded){display:none}
+body[data-default-mode="final"] .toolbar{flex-wrap:wrap}
+body[data-default-mode="final"] .camera-tools{flex-wrap:wrap}
+.camera-tools label{display:flex;align-items:center;gap:5px;white-space:nowrap;font-size:11px}
+#speed-status{font-size:11px;white-space:nowrap;min-width:45px}
+body[data-default-mode="final"] main{padding-top:24px}
+body[data-default-mode="final"] .intro{margin-bottom:18px}
+body[data-default-mode="final"] .office-stage{height:clamp(400px,calc(100vh - 285px),610px)}
+@media(max-width:700px){body[data-default-mode="final"] .office-stage{height:360px}}
+
+.ensemble-only[hidden],.segmented button[hidden]{display:none}.ensemble-only{white-space:nowrap}

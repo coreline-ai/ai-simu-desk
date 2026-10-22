@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: orthographic sofa close view hides the near right wall even with camera centre inside the room
+ok 1 - orthographic sofa close view hides the near right wall even with camera centre inside the room
+  ---
+  duration_ms: 1791.728417
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1989.135875

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "independentGuests": 5,
+  "regularOwner": true,
+  "guestCreationHidden": true,
+  "guestParticipation": true,
+  "sixthGuestStatus": 429,
+  "viewports": [
+    390,
+    1280
+  ],
+  "errors": []
+}

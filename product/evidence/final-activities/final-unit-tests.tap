@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: final GLB reload preserves 5 rigs,105 clips,screen maps and approved layout contract
+ok 1 - final GLB reload preserves 5 rigs,105 clips,screen maps and approved layout contract
+  ---
+  duration_ms: 155.869792
+  type: 'test'
+  ...
+# Subtest: all 25 destinations and 20 directed visits clear final furniture and remain inside the enlarged floor
+ok 2 - all 25 destinations and 20 directed visits clear final furniture and remain inside the enlarged floor
+  ---
+  duration_ms: 729.895917
+  type: 'test'
+  ...
+# Subtest: visual clock keeps exact rates at 30/60/120fps, bounded deltas, pause and storage failures
+ok 3 - visual clock keeps exact rates at 30/60/120fps, bounded deltas, pause and storage failures
+  ---
+  duration_ms: 1.326792
+  type: 'test'
+  ...
+# Subtest: five final-office actors use sofa,meeting,window and props, then return safely at each rate
+ok 4 - five final-office actors use sofa,meeting,window and props, then return safely at each rate
+  ---
+  duration_ms: 145379.984583
+  type: 'test'
+  ...
+# Subtest: 20 final-office paper handovers keep contact and return ownership at the new station positions
+ok 5 - 20 final-office paper handovers keep contact and return ownership at the new station positions
+  ---
+  duration_ms: 40808.773375
+  type: 'test'
+  ...
+# Subtest: final sofa and meeting furniture legs physically touch the original floor
+ok 6 - final sofa and meeting furniture legs physically touch the original floor
+  ---
+  duration_ms: 323.286041
+  type: 'test'
+  ...
+# Subtest: final cup centres support actual bases above desks and meeting surface instead of sinking into the top
+ok 7 - final cup centres support actual bases above desks and meeting surface instead of sinking into the top
+  ---
+  duration_ms: 556.580333
+  type: 'test'
+  ...
+# Subtest: orthographic sofa close view hides the near right wall even with camera centre inside the room
+ok 8 - orthographic sofa close view hides the near right wall even with camera centre inside the room
+  ---
+  duration_ms: 304.0235
+  type: 'test'
+  ...
+# Subtest: two seeded visual rates replay identical real-time work arrivals and recover safely at all four speeds
+ok 9 - two seeded visual rates replay identical real-time work arrivals and recover safely at all four speeds
+  ---
+  duration_ms: 105781.1995
+  type: 'test'
+  ...
+# Subtest: expanded-office mixed workload holds each actor through return and desk work while preserving old short-job workload
+ok 10 - expanded-office mixed workload holds each actor through return and desk work while preserving old short-job workload
+  ---
+  duration_ms: 3750.410459
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 297975.295625

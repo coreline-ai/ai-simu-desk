@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "origin": "http://127.0.0.1:4180",
+  "at": "2026-10-22T06:30:08.898Z",
+  "application": {
+    "passed": true,
+    "health": {
+      "status": "ok",
+      "edition": "local",
+      "database": "pglite",
+      "aiProvider": "fake"
+    },
+    "appHash": "60785e8846148b41d94c90d69b99c0c1962732ba6f789363e993d31c4f504a47",
+    "verifiedRelease": "1792650167974-874c84f0-0467-43ec-99ff-c0dcf9cff0bb",
+    "at": "2026-10-22T06:29:16.204Z"
+  },
+  "modelVersion": 9,
+  "activityVersion": 11,
+  "rate": 1.5,
+  "animationAdvanced": true,
+  "scenario": {
+    "current": {
+      "name": "review",
+      "index": 0,
+      "stage": "역할별 초안",
+      "since": 0.016666666666666666,
+      "interrupted": false,
+      "retries": 0,
+      "started": true,
+      "total": 4,
+      "label": "함께 검토하는 하루"
+    },
+    "last": null
+  },
+  "canvas": 1,
+  "errors": [],
+  "finalRelease": "1792650649566-c21a6fb4-16aa-466d-8053-6c5d4761840f",
+  "finalVerification": {
+    "health": {
+      "status": "ok",
+      "edition": "local",
+      "database": "pglite",
+      "aiProvider": "fake"
+    },
+    "appHash": "60785e8846148b41d94c90d69b99c0c1962732ba6f789363e993d31c4f504a47",
+    "identicalToVerifiedRuntime": true,
+    "at": "2026-10-22T06:34:14.647Z"
+  }
+}

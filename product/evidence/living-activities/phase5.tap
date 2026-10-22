@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: passing greetings are bounded and never replace prop hands or routes
+ok 1 - passing greetings are bounded and never replace prop hands or routes
+  ---
+  duration_ms: 4827.322292
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4915.279125

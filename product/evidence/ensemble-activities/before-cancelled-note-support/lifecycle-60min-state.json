@@ -1,0 +1,113 @@
+{
+  "status": "aborted",
+  "startedAt": "2026-10-22T03:35:00.980Z",
+  "endedAt": "2026-10-22T03:56:50.147Z",
+  "signal": "SIGTERM",
+  "rows": [
+    {
+      "index": 0,
+      "wallSeconds": 0,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 21623780,
+        "totalSize": 24002560,
+        "embedderHeapUsedSize": 2560336,
+        "backingStorageSize": 16085948
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 109,
+        "Nodes": 985
+      },
+      "canvas": 1
+    },
+    {
+      "index": 1,
+      "wallSeconds": 301,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 22309780,
+        "totalSize": 25575424,
+        "embedderHeapUsedSize": 3112968,
+        "backingStorageSize": 16085847
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 111,
+        "Nodes": 1030
+      },
+      "canvas": 1
+    },
+    {
+      "index": 2,
+      "wallSeconds": 601,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 22960960,
+        "totalSize": 25575424,
+        "embedderHeapUsedSize": 3221888,
+        "backingStorageSize": 16085986
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 111,
+        "Nodes": 1041
+      },
+      "canvas": 1
+    },
+    {
+      "index": 3,
+      "wallSeconds": 902,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 22458500,
+        "totalSize": 25313280,
+        "embedderHeapUsedSize": 3190576,
+        "backingStorageSize": 16085986
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 111,
+        "Nodes": 1045
+      },
+      "canvas": 1
+    },
+    {
+      "index": 4,
+      "wallSeconds": 1204,
+      "loggedOut": false,
+      "heap": {
+        "usedSize": 22727116,
+        "totalSize": 25051136,
+        "embedderHeapUsedSize": 3325240,
+        "backingStorageSize": 16085892
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 113,
+        "Nodes": 1077
+      },
+      "canvas": 1
+    }
+  ],
+  "logoutRows": [
+    {
+      "index": 3,
+      "wallSeconds": 903,
+      "loggedOut": true,
+      "heap": {
+        "usedSize": 7627640,
+        "totalSize": 9568256,
+        "embedderHeapUsedSize": 1600360,
+        "backingStorageSize": 983431
+      },
+      "dom": {
+        "Documents": 1,
+        "JSEventListeners": 91,
+        "Nodes": 964
+      },
+      "canvas": 0
+    }
+  ],
+  "errors": []
+}

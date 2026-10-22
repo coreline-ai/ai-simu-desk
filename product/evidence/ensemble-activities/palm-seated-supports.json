@@ -1,0 +1,228 @@
+{
+  "kind": "actual-rendered-palm-mesh-table-volume-25-actor-seat-pairs",
+  "rows": [
+    {
+      "rotation": 0,
+      "order": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "samples": [
+        {
+          "id": "nara",
+          "stage": "reach",
+          "slot": 0,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "nara",
+          "stage": "grasp",
+          "slot": 0,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "nara",
+          "stage": "use",
+          "slot": 0,
+          "samples": 78,
+          "tablePenetration": 0
+        },
+        {
+          "id": "nara",
+          "stage": "replace",
+          "slot": 0,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "nara",
+          "stage": "release",
+          "slot": 0,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "nara",
+          "stage": "retract",
+          "slot": 0,
+          "samples": 16,
+          "tablePenetration": 0
+        },
+        {
+          "id": "sora",
+          "stage": "reach",
+          "slot": 1,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "sora",
+          "stage": "grasp",
+          "slot": 1,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "sora",
+          "stage": "use",
+          "slot": 1,
+          "samples": 79,
+          "tablePenetration": 0
+        },
+        {
+          "id": "sora",
+          "stage": "replace",
+          "slot": 1,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "sora",
+          "stage": "release",
+          "slot": 1,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "sora",
+          "stage": "retract",
+          "slot": 1,
+          "samples": 15,
+          "tablePenetration": 0
+        },
+        {
+          "id": "jun",
+          "stage": "reach",
+          "slot": 2,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "jun",
+          "stage": "grasp",
+          "slot": 2,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "jun",
+          "stage": "use",
+          "slot": 2,
+          "samples": 78,
+          "tablePenetration": 0
+        },
+        {
+          "id": "jun",
+          "stage": "replace",
+          "slot": 2,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "jun",
+          "stage": "release",
+          "slot": 2,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "jun",
+          "stage": "retract",
+          "slot": 2,
+          "samples": 16,
+          "tablePenetration": 0
+        },
+        {
+          "id": "min",
+          "stage": "reach",
+          "slot": 3,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "min",
+          "stage": "grasp",
+          "slot": 3,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "min",
+          "stage": "use",
+          "slot": 3,
+          "samples": 79,
+          "tablePenetration": 0
+        },
+        {
+          "id": "min",
+          "stage": "replace",
+          "slot": 3,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "min",
+          "stage": "release",
+          "slot": 3,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "min",
+          "stage": "retract",
+          "slot": 3,
+          "samples": 15,
+          "tablePenetration": 0
+        },
+        {
+          "id": "leo",
+          "stage": "reach",
+          "slot": 4,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "leo",
+          "stage": "grasp",
+          "slot": 4,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "leo",
+          "stage": "use",
+          "slot": 4,
+          "samples": 78,
+          "tablePenetration": 0
+        },
+        {
+          "id": "leo",
+          "stage": "replace",
+          "slot": 4,
+          "samples": 24,
+          "tablePenetration": 0
+        },
+        {
+          "id": "leo",
+          "stage": "release",
+          "slot": 4,
+          "samples": 9,
+          "tablePenetration": 0
+        },
+        {
+          "id": "leo",
+          "stage": "retract",
+          "slot": 4,
+          "samples": 16,
+          "tablePenetration": 0
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

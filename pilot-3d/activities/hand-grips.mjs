@@ -1,3 +1,5 @@
+import {paperBendAt} from '../ensemble-office/props.mjs';
+import {HandSurface} from '../ensemble-office/hand-surface.mjs';
 import * as T from 'three';
 import {part} from '../sample/character-rig.mjs';
 import {ease} from '../sample/motion.mjs';
@@ -12,8 +14,8 @@ function amount(stage,time,cup=false){
 // Two phalanges per controlled finger. Only their joints move; their lengths stay
 // fixed. The existing wrist solver and prop owner remain the contact authority.
 class HandGrip{
-  constructor(hand,side,{refined=false}={}){
-    this.refined=refined;this.contactRows=[];
+  constructor(hand,side,{refined=false,enhanced=false}={}){
+    this.refined=refined;this.enhanced=enhanced;this.contactRows=[];
     this.hand=hand;this.side=side;this.original=hand.children.map(node=>({node,visible:node.visible}));
     const material=hand.children.find(n=>n.material)?.material;
     this.root=new T.Group();this.root.name='ContinuousHand'+side;hand.add(this.root);
@@ -30,6 +32,7 @@ class HandGrip{
       const pad=new T.Object3D();pad.name='GripPad'+i;this.root.add(pad);
       this.fingers.push({base,end,lengths,links,pad});
     }
+    this.surface=enhanced?new HandSurface(this.root,material,side):null;
   }
   shaftContact(prop,point,index,local){
     // Slide the support along the real shaft, never shorten a far-away target
@@ -52,12 +55,16 @@ class HandGrip{
     prop.updateWorldMatrix(true,true);this.hand.updateWorldMatrix(true,false);
     const transform=this.refined?this.hand.matrixWorld.clone().invert().multiply(prop.matrixWorld):null;
     const local=p=>transform?p.applyMatrix4(transform):this.hand.worldToLocal(prop.localToWorld(p));
+    if(kind==='button')return this.fingers.map((f,i)=>i===1?local(V(0,.0065,0)):f.end.clone());
+    if(kind==='cup'&&prop.userData.handGrip)return prop.userData.handGrip.contacts.map(p=>local(V(...p)));
+    if(kind==='cup-support'&&prop.userData.supportGrip)return prop.userData.supportGrip.contacts.map(p=>local(V(...p)));
     if(kind==='cup')return [local(V(.051,.019,.019)),local(V(.044,-.019,.026)),local(V(.044,.004,.034)),local(V(.044,.025,.012)),local(V(.044,.020,-.020))];
     prop.geometry.computeBoundingBox();const b=prop.geometry.boundingBox;
     if(kind==='page'){
       const h=prop.worldToLocal(this.hand.getWorldPosition(V())),x=T.MathUtils.clamp(h.x,b.min.x+.006,b.max.x-.006),z=T.MathUtils.clamp(h.z,b.min.z+.006,b.max.z-.006);
       const fingerX=d=>T.MathUtils.clamp(x+d,b.min.x+.001,b.max.x-.001);
-      return [local(V(x,b.max.y+.001,z)),local(V(fingerX(-.014),b.min.y-.001,z)),local(V(fingerX(.012),b.min.y-.001,z)),local(V(fingerX(.020),b.min.y-.001,z)),local(V(fingerX(.025),b.min.y-.001,z))];
+      const surface=(x,top)=>{const data=prop.userData.pageBend;return local(V(x,(data?(top?data.top:data.bottom):top?b.max.y:b.min.y)+(top?.001:-.001)+paperBendAt(data,x,z),z));};
+      return [surface(x,true),...[-.014,.012,.020,.025].map(d=>surface(fingerX(d),false))];
     }
     const h=prop.worldToLocal(this.hand.getWorldPosition(V())),level=T.MathUtils.clamp(h.y,b.min.y+.012,b.max.y-.012),r=Math.max(Math.abs(b.min.x),Math.abs(b.max.x))+.001;
     const points=[V(r,level,0),V(-r,level+.006,0),V(0,level-.010,r),V(r,level-.022,0),V(r,level-.030,0)];
@@ -74,13 +81,13 @@ class HandGrip{
       f.pad.position.copy(end);this.maxReach=Math.max(this.maxReach,raw);
       if(prop&&this.blend>.995){const error=end.distanceTo(targets[i]);if(this.refined||i<3)this.error=Math.max(this.error,error);if(this.refined)this.contactRows.push({finger:['thumb','index','middle','ring','little'][i],role:i<3?'grip':'support',error,reachable:raw<=a+b-.0001&&raw>=.009,target:targets[i].toArray(),actual:end.toArray()});}
     });
-    this.batch.instanceMatrix.needsUpdate=true;this.hand.updateWorldMatrix(false,true);
+    this.surface?.update(this.fingers);this.batch.instanceMatrix.needsUpdate=true;this.hand.updateWorldMatrix(false,true);
   }
-  dispose(){for(const {node,visible}of this.original)node.visible=visible;this.root.removeFromParent();this.batch.dispose();for(const g of this.geometries)g.dispose();}
-  diagnostics(){return{blend:this.blend,padError:this.error,maxReach:this.maxReach,fingers:this.fingers.length,...(this.refined?{contactScope:'five-finger-target-points',contacts:this.contactRows}: {})};}
+  dispose(){this.surface?.dispose();for(const {node,visible}of this.original)node.visible=visible;this.root.removeFromParent();this.batch.dispose();for(const g of this.geometries)g.dispose();}
+  diagnostics(){return{surfaceVersion:this.enhanced?2:1,blend:this.blend,padError:this.error,maxReach:this.maxReach,fingers:this.fingers.length,...(this.refined?{contactScope:'five-finger-target-points',contacts:this.contactRows}: {})};}
 }
 export class HandGrips{
-  constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,{R:new HandGrip(part(actors[id],'NaraHandR'),'R',options),L:new HandGrip(part(actors[id],'NaraHandL'),'L',options)}]));}
+  constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,{R:new HandGrip(part(actors[id],'NaraHandR'),'R',{...options,enhanced:!!actors[id].userData.ensembleAsset}),L:new HandGrip(part(actors[id],'NaraHandL'),'L',{...options,enhanced:!!actors[id].userData.ensembleAsset})}]));}
   apply(id,dt,override){const row=this.rows.get(id);if(!row)return;const d=this.desks[id],c=this.cups[id];row.R.apply(dt,override?.R?.blend??amount(d.stage,d.time),override?.R?.prop??d.prop,override?.R?.kind??(id==='leo'?'page':'pen'));row.L.apply(dt,override?.L?.blend??amount(c.state,c.time,true),override?.L?.prop??c.mug,override?.L?.kind??'cup');}
   diagnostics(){return Object.fromEntries([...this.rows].map(([id,row])=>[id,Object.fromEntries(Object.entries(row).map(([side,hand])=>[side,hand.diagnostics()]))]));}
   dispose(){for(const row of this.rows.values())for(const hand of Object.values(row))hand.dispose();this.rows.clear();}

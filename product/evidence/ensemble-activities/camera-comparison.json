@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "checks": [
+    "room8/activity10 and room7/activity9 keep identical camera",
+    "room8 binding fallback preserves modern camera",
+    "unsupported fallback controls disabled",
+    "room6 uses its own framing",
+    "one canvas"
+  ],
+  "rows": [
+    {
+      "version": 10,
+      "camera": {
+        "position": [
+          0.5499999999999989,
+          4.8,
+          8.6
+        ],
+        "target": [
+          -3.45,
+          0.8,
+          2.6
+        ],
+        "zoom": 2.5,
+        "focus": "team"
+      }
+    },
+    {
+      "version": 9,
+      "camera": {
+        "position": [
+          0.5499999999999989,
+          4.8,
+          8.6
+        ],
+        "target": [
+          -3.45,
+          0.8,
+          2.6
+        ],
+        "zoom": 2.5,
+        "focus": "team"
+      }
+    },
+    {
+      "version": 8,
+      "camera": {
+        "position": [
+          7,
+          8.799999999999999,
+          12.000000000000002
+        ],
+        "target": [
+          0,
+          0.8,
+          0
+        ],
+        "zoom": 1,
+        "focus": "team"
+      }
+    }
+  ],
+  "errors": []
+}

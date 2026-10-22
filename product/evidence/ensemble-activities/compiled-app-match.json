@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "kind": "QA-host-and-clean-compiled-candidate-identical-product-JS",
+  "sha256": "09138f62e9102fb8e7a9e20e55577a632d94ee0db47bbb5e847d09d288d1af77",
+  "candidate": "1792641731807-30515ad2-8706-4db0-84ea-ec5b274e3dc3",
+  "sourceFreezeSha256": "d35ee4a5d7ede56277b6a282e02c5842536562efa28b880f8e76a60f3b85708a",
+  "serverBundleUnchangedFromActive": true,
+  "serverSha256": "d97d0e86aead1c922b3266bfa18d4027a05703290112ef7fd7b303653db74662"
+}

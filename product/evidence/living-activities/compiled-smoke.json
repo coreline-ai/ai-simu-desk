@@ -1,0 +1,31 @@
+{
+  "kind": "clean-local-offline-install-and-compiled-release-five-browser-workflow",
+  "startedAt": "2026-10-22T06:25:42.088Z",
+  "finishedAt": "2026-10-22T06:26:31.468Z",
+  "appHash": "60785e8846148b41d94c90d69b99c0c1962732ba6f789363e993d31c4f504a47",
+  "serverHash": "bbbcd7f95c98a5af7b41a1c2e760ddfbb5fd6c073a6de6e64e7d63be40e60dab",
+  "checks": [
+    "locked dependencies installed: offline",
+    "new local settings private and preserved",
+    "full build in fresh local source/dependency path matches candidate JS and GLBs",
+    "compiled release starts in clean local path",
+    "18 public routes, versioned entry assets, revalidation and private path denial",
+    "compiled living v11 / original v10 comparison",
+    "five real browsers, shared presence and viewer UI",
+    "template/project, member five-role task and owner approval, identical saved result",
+    "shared comments render text and viewer cannot write",
+    "previous result revision and comparison",
+    "search archived result and manual handoff",
+    "cancellation, simulated failure and retry",
+    "notifications stay read, revocation and logout cleanup",
+    "raw restore table counts, restart existing cookie, answer/comments preserved"
+  ],
+  "errors": [],
+  "passed": true,
+  "install": {
+    "mode": "offline",
+    "summary": "added 49 packages in 1s"
+  },
+  "routes": 18,
+  "restoredTableCount": 21
+}

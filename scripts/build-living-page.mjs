@@ -1,0 +1,2 @@
+import{mkdir,copyFile}from'node:fs/promises';import{build}from'esbuild';import{assertMutableOutput}from'./build-output-guard.mjs';
+export async function buildLivingPage(){await assertMutableOutput();const dir='product/dist/demos/activities/living';await mkdir(dir,{recursive:true});for(const name of['index.html','styles.css'])await copyFile('pilot-3d/living-office/'+name,dir+'/'+name);await build({entryPoints:['pilot-3d/living-office/app.mjs'],outfile:dir+'/app.js',bundle:true,format:'esm',minify:true,target:['es2022'],legalComments:'linked'});}

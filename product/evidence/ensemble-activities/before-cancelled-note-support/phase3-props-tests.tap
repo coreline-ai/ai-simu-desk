@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: all five hollow cups have a physical rim, lower liquid and a supported coaster, and sip safely
+ok 1 - all five hollow cups have a physical rim, lower liquid and a supported coaster, and sip safely
+  ---
+  duration_ms: 2189.284583
+  type: 'test'
+  ...
+# Subtest: paper flex pins the grip, keeps thickness and restores each page after all twenty directed transfers
+ok 2 - paper flex pins the grip, keeps thickness and restores each page after all twenty directed transfers
+  ---
+  duration_ms: 57841.283541
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 60178.186042

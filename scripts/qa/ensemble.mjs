@@ -1,0 +1,128 @@
+import { launchBrowser, qaOrigin } from "./browser.mjs";
+import { mkdir, writeFile } from "node:fs/promises";
+import assert from "node:assert/strict";
+const out = "product/evidence/ensemble-activities", b = await launchBrowser(), p = await b.newPage({ viewport: { width: 1280, height: 1e3 }, deviceScaleFactor: 1 }), errors = [], rows = [], layouts = [];
+p.on("pageerror", (e) => errors.push(e.message));
+const get = async () => JSON.parse(await p.locator("#metrics").textContent()), waitVersion = (version) => p.waitForFunction((v) => JSON.parse(document.querySelector("#metrics").textContent || "{}").teamActivities?.version === v, version), clean = () => p.waitForFunction(() => {
+  const t = JSON.parse(document.querySelector("#metrics").textContent || "{}").teamActivities;
+  return t && !t.group?.current && !t.coffee?.active.length && !t.visits?.current && !t.sofaPair && !t.meeting && !Object.keys(t.claims).length && Object.values(t.actors).every((a) => a.kind === "desk" && a.role.stage === "idle" && a.cup.owner === "desk" && a.cup.state === "idle");
+}, null, { timeout: 15e4 });
+try {
+  await mkdir(out, { recursive: true });
+  await p.goto(qaOrigin + "/demos/activities/ensemble/");
+  await waitVersion(10);
+  assert.equal((await get()).modelVersion, 8);
+  assert.equal((await get()).audio.contexts, 0);
+  assert(await p.locator("#natural-roster").isDisabled());
+  for (const rate of [1, 1.5, 2, 3]) {
+    await p.selectOption("#motion-speed", String(rate));
+    await p.waitForFunction((rate2) => JSON.parse(document.querySelector("#metrics").textContent || "{}").motionSpeed === rate2, rate);
+    const a = await get();
+    await p.waitForTimeout(3200);
+    const z = await get(), wall = (z.lastEmit - a.lastEmit) / 1e3, simulation = z.animationTime - a.animationTime;
+    assert(Math.abs(simulation / wall - rate) < 0.15);
+    rows.push({ rate, wall, simulation, ratio: simulation / wall });
+  }
+  await p.click("#sound");
+  await p.waitForFunction(() => JSON.parse(document.querySelector("#metrics").textContent || "{}").audio.enabled);
+  assert.equal((await get()).audio.contexts, 1);
+  await p.click("#role");
+  await p.waitForFunction(() => JSON.parse(document.querySelector("#metrics").textContent || "{}").teamActivities.actors.nara.role.stage === "use");
+  await p.click("#pause");
+  await p.waitForFunction(() => JSON.parse(document.querySelector("#metrics").textContent || "{}").paused);
+  const paused = await get();
+  await p.waitForTimeout(1500);
+  assert.equal((await get()).animationTime, paused.animationTime);
+  assert.equal((await get()).audio.voices, 0);
+  assert((await get()).audio.paused);
+  await p.click("#pause");
+  await clean();
+  await p.emulateMedia({ reducedMotion: "reduce" });
+  await p.waitForFunction(() => JSON.parse(document.querySelector("#metrics").textContent || "{}").paused);
+  assert(await p.locator("#pause").isDisabled());
+  const reduced = await get();
+  await p.waitForTimeout(1200);
+  assert.equal((await get()).animationTime, reduced.animationTime);
+  await p.emulateMedia({ reducedMotion: "no-preference" });
+  await p.click("#sound");
+  await p.waitForFunction(() => !JSON.parse(document.querySelector("#metrics").textContent || "{}").audio.enabled);
+  assert.equal((await get()).audio.voices, 0);
+  await p.click("#meeting-close");
+  await p.waitForTimeout(1100);
+  const comparisonCamera = (await get()).camera;
+  await p.click("#final");
+  await waitVersion(9);
+  const restoredCamera = (await get()).camera;
+  assert.equal(restoredCamera.focus, comparisonCamera.focus);
+  assert(Math.abs(restoredCamera.zoom - comparisonCamera.zoom) < 1e-7);
+  for (const key of ["position", "target"]) comparisonCamera[key].forEach((v, i) => assert(Math.abs(v - restoredCamera[key][i]) < 1e-7));
+  assert.equal((await get()).modelVersion, 7);
+  assert.equal((await get()).motionSpeed, 3);
+  await p.click("#ensemble");
+  await waitVersion(10);
+  await p.locator(".diagnostics summary").click();
+  await p.click("#recover");
+  await waitVersion(9);
+  assert.equal((await get()).modelVersion, 7);
+  await p.click("#ensemble");
+  await waitVersion(10);
+  await p.click("#loss");
+  await p.waitForFunction(() => document.querySelector("#status").textContent.includes("\uD654\uBA74 \uBCF5\uAD6C"));
+  await p.waitForFunction(() => document.querySelector("#status").textContent.includes("\uC900\uBE44 \uC644\uB8CC"));
+  assert.equal((await get()).teamActivities.version, 10);
+  assert.equal(await p.locator("canvas").count(), 1);
+  for (const width of [320, 360, 375, 390, 414, 768, 1024, 1440]) {
+    await p.setViewportSize({ width, height: 900 });
+    await p.waitForTimeout(120);
+    const row = await p.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth, canvas: document.querySelectorAll("canvas").length }));
+    assert(row.scrollWidth <= width, String(width));
+    assert.equal(row.canvas, 1);
+    layouts.push(row);
+  }
+  await p.setViewportSize({ width: 1280, height: 1e3 });
+  await p.click("#coffee-tour");
+  await p.waitForFunction(() => {
+    const t = JSON.parse(document.querySelector("#metrics").textContent || "{}").teamActivities;
+    return Object.values(t.coffee.counts).every((n) => n > 0) && t.coffee.active.length === 0;
+  }, null, { timeout: 2e5 });
+  await clean();
+  const coffee = (await get()).teamActivities.coffee;
+  assert.equal(coffee.presses, 5);
+  assert(coffee.handError < 1e-3);
+  await p.selectOption("#inspect", "group");
+  await p.click("#group-meeting");
+  await p.waitForFunction(() => JSON.parse(document.querySelector("#metrics").textContent || "{}").paused, null, { timeout: 15e4 });
+  const arrived = await get();
+  assert.equal(arrived.teamActivities.group.current.actors.length, 5);
+  assert(arrived.teamActivities.group.current.actors.every((a) => a.stage === "rest"));
+  assert(Object.values(arrived.teamActivities.actors).every((a) => a.cup.owner === "meeting"));
+  await p.click("#meeting-close");
+  await p.locator("#viewport").screenshot({ path: out + "/group-seated.png" });
+  await p.selectOption("#inspect", "none");
+  await p.click("#pause");
+  await p.waitForFunction(() => {
+    const g = JSON.parse(document.querySelector("#metrics").textContent || "{}").teamActivities.group;
+    return !g.current && Object.values(g.counts).every((n) => n === 1);
+  }, null, { timeout: 15e4 });
+  await clean();
+  const group = (await get()).teamActivities.group;
+  await p.click("#group-meeting");
+  await p.waitForFunction(() => {
+    const g = JSON.parse(document.querySelector("#metrics").textContent || "{}").teamActivities.group.current;
+    return g?.phase === "note";
+  }, null, { timeout: 15e4 });
+  await p.click("#work");
+  await p.click("#idle");
+  await p.click("#cancel");
+  await clean();
+  assert.equal((await get()).teamActivities.group.history.at(-1).status, "cancelled");
+  await p.click("#room");
+  await p.selectOption("#motion-speed", "1");
+  await p.click("#demo");
+  await p.locator("#viewport").screenshot({ path: out + "/candidate.png" });
+  assert.equal(errors.length, 0);
+  await writeFile(out + "/browser-controls.json", JSON.stringify({ kind: "actual-browser-local-controls-not-physical-device", passed: true, rows, layouts, coffee, group, checks: ["4 real-time visual rates", "one lazy audio context", "sound mute/pause/dispose", "OS reduced motion", "room8/activity10 comparison and fallback room7/activity9", "WebGL restore", "responsive 320\u20131440", "all five coffee uses", "all five seated before discussion", "all five speak/write/return", "group work interruption"], errors }, null, 2));
+  console.log(JSON.stringify({ passed: true, rows, layouts, coffee: coffee.counts, group: group.counts, errors }));
+} finally {
+  await b.close();
+}

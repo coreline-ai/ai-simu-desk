@@ -1,0 +1,21 @@
+{
+  "kind": "compiled-smoke-failure",
+  "startedAt": "2026-10-22T00:31:58.972Z",
+  "failedAt": "2026-10-22T00:32:27.987Z",
+  "checks": [
+    "locked dependencies installed: offline",
+    "new local settings private and preserved",
+    "full build in fresh local source/dependency path matches candidate JS and GLBs",
+    "compiled release starts in clean local path",
+    "17 public routes, versioned entry assets, revalidation and private path denial",
+    "five real browsers, shared presence and viewer UI",
+    "template/project, member five-role task and owner approval, identical saved result",
+    "shared comments render text and viewer cannot write",
+    "previous result revision and comparison"
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'undefined'\n- 'string'\n",
+  "errors": [],
+  "logTail": [
+    "AI Simu Desk Local ready: http://127.0.0.1:51646 (persistent login/DB, Fake AI)\n"
+  ]
+}

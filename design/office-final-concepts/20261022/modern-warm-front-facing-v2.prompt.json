@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-22 KST",
+  "generator": "built-in imagegen",
+  "status": "updated-concept-awaiting-review",
+  "file": "modern-warm-front-facing-v2.png",
+  "layoutReference": "modern-b-cool-office.png",
+  "paletteReference": "modern-a-warm-studio.png",
+  "direction": "Chairs on window side; seated people face toward lower edge of image; monitor backs face foreground",
+  "prompt": "Use case: precise-object-edit. Input Image 1 is the EDIT TARGET and defines the room layout, camera, scale and furniture placement. Input Image 2 is a COLOR AND MATERIAL PALETTE REFERENCE ONLY; do not copy its room layout. Create a single updated modern stylized 3D office image. CHANGE 1: recolor Image 1 using Image 2's warm ivory/cream, pale natural oak, soft sage green and light warm beige. Replace all powder-blue task chairs, meeting chairs, lounge chair and blue accessories with muted sage or warm beige. Recolor cool grey floor/walls into warm cream/light limestone. Retain the same refined softly rounded 3D visual language and soft warm daylight. CHANGE 2 IS CRITICAL: rotate ALL FIVE COMPLETE WORKSTATIONS 180 degrees, while retaining their positions across the rear window working zone. Each of the five task chairs must now be on the WINDOW SIDE / UPPER SIDE of its desk, with the chair back closest to the window. A person sitting in any of the five chairs would face toward the LOWER EDGE OF THE IMAGE / OPEN FRONT of the office / viewer, with their back to the window. Accordingly, the FRONT OPEN-AISLE SIDE of each desk faces toward the lower image edge. From this camera we should see the BACK CASINGS of the five computer monitors, NOT the glowing front screens; the screens point back toward the chairs/window. Keyboards are on the chair/window side of the monitors. The order from rear window toward foreground is: window -> chair back -> chair seat -> keyboard -> monitor screen -> monitor back -> front desk edge -> central aisle. Make this orientation unmistakable. Exactly five individual desk workstations, exactly five task chairs (one behind each desk, never duplicated), exactly five monitors. Preserve Image 1's separate front-left meeting area, front-right sofa lounge, low middle storage divider, coffee counter on right wall, rear windows, complete office footprint and elevated isometric camera. Keep wide rear clearance so chairs are not pressed against glass. No people, no labels/text/logos/watermarks, no collage. Produce ONE polished updated image.",
+  "width": 1536,
+  "height": 1024,
+  "sha256": "253110488c5044b9c4b68dfcb75297d3fc6383a5916bcac5449b0dc719179264"
+}

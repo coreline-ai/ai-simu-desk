@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-22T06:52:16.873Z",
+  "passed": true,
+  "runtimeSourceFingerprint": {
+    "checked": 230,
+    "matchesPriorVerifiedRelease": true
+  },
+  "assetFingerprints": {
+    "versions": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "matchesPriorVerifiedRelease": true
+  },
+  "checks": {
+    "typecheck": true,
+    "dependencyBoundaries": true,
+    "visualSyntaxModules": 114,
+    "stabilizationSyntaxModules": 48,
+    "relatedDBTests": {
+      "tests": 5,
+      "passed": 5,
+      "failed": 0
+    }
+  },
+  "fix": "Added explicit result-row types to two migration assertions; no runtime behavior changes.",
+  "fullRepeat": {
+    "status": "intentionally-stopped",
+    "reason": "Identical runtime and asset fingerprints to prior 359-case final validation; duplicate full run took approximately 26 minutes previously. This partial repeat is not counted as passing.",
+    "evidence": "history/precommit-full-repeat-stopped.tap"
+  },
+  "previousValidation": "validated-tests.json",
+  "rawLogWhitespace": "Historical TAP logs preserve their original whitespace; source diff whitespace check passes."
+}
