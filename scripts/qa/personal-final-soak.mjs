@@ -1,0 +1,38 @@
+import {launchBrowser,qaOrigin} from './browser.mjs';
+import {writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const out='product/evidence/personal-final',duration=Number(process.env.STUDIO_SOAK_SECONDS??7200);assert(duration>=7200,'two actual hours, never simulated');await mkdir(out,{recursive:true});
+const browser=await launchBrowser(),page=await browser.newPage({viewport:{width:1280,height:900},deviceScaleFactor:1}),errors=[],rows=[],checks=[],started=Date.now();page.on('pageerror',e=>errors.push(e.message));
+const d=()=>page.evaluate(()=>window.__personalStudio.diagnostics()),save=async(file,value)=>writeFile(out+'/'+file,JSON.stringify(value,null,2));
+async function gpuDump(cdp,label){
+ try{
+  await cdp.send('Tracing.start',{traceConfig:{includedCategories:['disabled-by-default-memory-infra'],memoryDumpConfig:{}},transferMode:'ReturnAsStream'});
+  const dump=await cdp.send('Tracing.requestMemoryDump',{deterministic:true,levelOfDetail:'detailed'}),done=new Promise(r=>cdp.once('Tracing.tracingComplete',r));await cdp.send('Tracing.end');const {stream}=await done;let raw='',chunk;
+  do{chunk=await cdp.send('IO.read',{handle:stream});raw+=chunk.base64Encoded?Buffer.from(chunk.data,'base64').toString():chunk.data;}while(!chunk.eof);await cdp.send('IO.close',{handle:stream});
+  const trace=JSON.parse(raw),processes=Object.fromEntries(trace.traceEvents.filter(e=>e.name==='process_name').map(e=>[e.pid,e.args.name])),allocators=[];
+  for(const e of trace.traceEvents)for(const [path,value]of Object.entries(e.args?.dumps?.allocators??{}))if(/gpu|gl\/|metal|dawn|skia/i.test(path))allocators.push({process:processes[e.pid]??String(e.pid),pid:e.pid,path,attrs:value.attrs});
+  // Keep allocator rows separate: parent/child sizes overlap and must not be summed as VRAM.
+  const result={label,dump,scope:'Chrome memory-infra named allocators, not total physical VRAM; no inclusive-size sum',allocators};await save('gpu-'+label+'.json',result);return result;
+ }catch(error){const result={label,available:false,error:error.message,scope:'direct GPU allocation unsupported in this environment; JS heap is not VRAM'};await save('gpu-'+label+'.json',result);return result;}
+}
+try{
+ const response=await page.goto(qaOrigin+'/demos/activities/personal/');assert(response.ok());await page.waitForFunction(()=>window.__personalStudio?.engine?.personalMotion?.glasses?.available);await page.selectOption('#speed','3');
+ const bundle=await(await page.request.get(qaOrigin+'/demos/activities/personal/app.js')).body(),bundleHash=createHash('sha256').update(bundle).digest('hex'),cdp=await page.context().newCDPSession(page),system=await browser.newBrowserCDPSession();await cdp.send('HeapProfiler.enable');
+ const gpuInfo=await system.send('SystemInfo.getInfo');await save('gpu-device.json',{devices:gpuInfo.gpu.devices,renderer:gpuInfo.gpu.auxAttributes.glRenderer,scope:'Apple unified memory device identity, not a memory allocation measurement'});
+ await page.evaluate(()=>{window.__retentionProof=[];});const track=()=>page.evaluate(()=>window.__retentionProof.push({actor:new WeakRef(window.__personalStudio.engine.desks.jun.actor),scheduler:new WeakRef(window.__personalStudio.engine),view:new WeakRef(window.__personalStudio.view)}));
+ const gc=async()=>{await cdp.send('HeapProfiler.collectGarbage');return(await cdp.send('Runtime.getHeapUsage')).usedSize;};
+ for(const scenario of ['focus','review','break']){await page.selectOption('#scenario',scenario);await track();await page.click('#scenario-demo');await page.waitForFunction(()=>window.__personalStudio.engine?.scenario.last?.status==='complete',null,{timeout:360000});const x=await d();assert.deepEqual(x.teamActivities.violations,[]);checks.push({scenario,wallSeconds:(Date.now()-started)/1000,status:x.teamActivities.living.scenario.last});console.log('PASS scenario '+scenario);}
+ await track();await page.click('#daily-demo');await page.waitForFunction(()=>!!window.__personalStudio.engine?.auto);await page.waitForTimeout(5000);const baselineHeap=await gc(),gpuBefore=await gpuDump(system,'start');let nextReload=600,nextMeasure=0,reloads=0;
+ while(Date.now()-started<duration*1000){
+  await page.waitForTimeout(20000);let elapsed=(Date.now()-started)/1000;
+  if(elapsed>=nextReload){await track();await page.click('#baseline');await page.waitForFunction(()=>!!window.__personalStudio.engine&&!window.__personalStudio.engine.personalMotion);await track();await page.click('#personal');await page.waitForFunction(()=>!!window.__personalStudio.engine?.personalMotion);reloads+=2;await track();await page.click('#daily-demo');await page.waitForFunction(()=>!!window.__personalStudio.engine?.auto);nextReload+=600;}
+  if(elapsed>=nextMeasure){const previous=(await d()).measurementCompletedAt??0;assert(await page.evaluate(()=>window.__personalStudio.view.measure(5000)));await page.waitForFunction(v=>(window.__personalStudio.diagnostics().measurementCompletedAt??0)>v,previous,{timeout:20000});nextMeasure=elapsed+60;}
+  const x=await d(),heap=await gc(),retained=await page.evaluate(()=>({views:window.__retentionProof.filter(r=>r.view.deref()).length,actors:window.__retentionProof.filter(r=>r.actor.deref()).length,schedulers:window.__retentionProof.filter(r=>r.scheduler.deref()).length}));assert.deepEqual(errors,[]);assert.deepEqual(x.teamActivities.violations,[]);assert.equal(await page.locator('canvas').count(),1);assert.deepEqual(retained,{views:0,actors:0,schedulers:0},'disposed graphs must be collected');
+  rows.push({wallSeconds:(Date.now()-started)/1000,heap,retained,geometries:x.geometries,textures:x.textures,p50:x.frameP50,p95:x.frameP95,drawCalls:x.drawCalls,triangles:x.triangles,reloads,periodicRebuilds:reloads/2*3,glasses:x.teamActivities.living.personalMotion.glasses,counts:Object.fromEntries(Object.entries(x.teamActivities.actors).map(([id,a])=>[id,a.counts]))});
+  await save('soak-progress.json',{kind:'actual-wall-clock-2-hour',startedAt:new Date(started).toISOString(),duration,origin:qaOrigin,bundleHash,checks,rows,errors});console.log(JSON.stringify({seconds:Math.round(rows.at(-1).wallSeconds),heapMiB:+(heap/1024**2).toFixed(2),geometries:x.geometries,textures:x.textures,p95:x.frameP95,reloads}));
+ }
+ const gpuAfter=await gpuDump(system,'end');await page.click('#cancel');await page.waitForFunction(()=>window.__personalStudio.engine.ids.every(id=>window.__personalStudio.engine.idle(id))&&!window.__personalStudio.engine.personalMotion.glasses.active,null,{timeout:180000});
+ const final=await d(),finalHeap=await gc();assert.deepEqual(final.teamActivities.claims,{});assert(finalHeap-baselineHeap<=Math.max(8*1024**2,baselineHeap*.2),'bounded retained JS heap');assert.equal(await page.locator('canvas').count(),1);assert.deepEqual(errors,[]);await page.locator('.studio').screenshot({path:out+'/soak-final.png'});
+ await save('soak.json',{passed:true,kind:'actual-wall-clock-browser-two-hours; repeated scene rebuilds and five-person automatic activities',startedAt:new Date(started).toISOString(),wallSeconds:(Date.now()-started)/1000,origin:qaOrigin,bundleHash,viewport:[1280,900],dpr:1,rate:3,quality:'balanced',baselineHeap,finalHeap,reloads,checks,rows,errors,gpu:{before:gpuBefore,after:gpuAfter},final,limits:['not physical mobile or thermal sensor measurement','concurrent CPU tests during part of run; frame trend is not an isolated benchmark','named GPU allocator rows are not total VRAM']});console.log('PASS actual two-hour soak');
+}catch(error){await save('soak-failure.json',{error:error.stack,checks,rows,errors,wallSeconds:(Date.now()-started)/1000,d:await d().catch(()=>null)});throw error;}finally{await browser.close();}

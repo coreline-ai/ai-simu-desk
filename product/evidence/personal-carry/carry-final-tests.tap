@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: ordinary 2-person meeting leaves all mugs at desks throughout travel, discussion and return
+ok 1 - ordinary 2-person meeting leaves all mugs at desks throughout travel, discussion and return
+  ---
+  duration_ms: 20024.866459
+  type: 'test'
+  ...
+# Subtest: ordinary 5-person meeting leaves all mugs at desks throughout travel, discussion and return
+ok 2 - ordinary 5-person meeting leaves all mugs at desks throughout travel, discussion and return
+  ---
+  duration_ms: 26136.251083
+  type: 'test'
+  ...
+# Subtest: purposeful coffee carry: all five keep upright mugs ahead of wrists, real finger contacts and one free arm on both routes
+ok 3 - purposeful coffee carry: all five keep upright mugs ahead of wrists, real finger contacts and one free arm on both routes
+  ---
+  duration_ms: 31562.492292
+  type: 'test'
+  ...
+# Subtest: v11 comparison keeps its previous cup pickup policy
+ok 4 - v11 comparison keeps its previous cup pickup policy
+  ---
+  duration_ms: 3686.953542
+  type: 'test'
+  ...
+# Subtest: purposeful carrying yields to work at pickup, outbound, machine, retrieval and return without losing mugs
+ok 5 - purposeful carrying yields to work at pickup, outbound, machine, retrieval and return without losing mugs
+  ---
+  duration_ms: 25005.198
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 106826.7455

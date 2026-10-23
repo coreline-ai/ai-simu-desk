@@ -70,17 +70,17 @@ class HandGrip{
     const points=[V(r,level,0),V(-r,level+.006,0),V(0,level-.010,r),V(r,level-.022,0),V(r,level-.030,0)];
     return points.map((point,index)=>this.refined&&this.blend>.001?this.shaftContact(prop,point,index,local):local(point));
   }
-  apply(dt,desired,prop,kind){
+  apply(dt,desired,prop,kind,points){
     this.blend+=T.MathUtils.clamp(desired-this.blend,-dt*5,dt*5);
     for(const {node}of this.original)node.visible=false;this.root.visible=true;
-    const targets=this.contacts(prop,kind);this.error=0;this.maxReach=0;this.contactRows=[];
+    const targets=points?this.fingers.map((f,i)=>points[i]?this.hand.worldToLocal(V(...points[i])):kind==='glasses'?(i===0?V(.042,-.020,.026):V(f.end.x,-.040+(i===4?.006:0),.035)):f.end.clone()):this.contacts(prop,kind);this.error=0;this.maxReach=0;this.contactRows=[];
     this.fingers.forEach((f,i)=>{
-      const relaxed=f.end.clone();if(this.relaxation){const curl=this.relaxation.curl;if(i===0){relaxed.x*=1-.18*curl;relaxed.z+=.014*curl;}else{relaxed.y+=.014+.018*curl+(i===4?.005:0);relaxed.z+=.012+.020*curl;}}
+      const relaxed=f.end.clone();if(this.relaxation){const curl=this.relaxation.curl;if(i===0){relaxed.x*=1-.18*curl;relaxed.z+=.014*curl;}else{relaxed.x+=(i-2.5)*(this.relaxation.spread??0);relaxed.y+=.014+.018*curl+(i===4?.005:0);relaxed.z+=.012+.020*curl;}}
       const target=relaxed.lerp(targets[i],this.blend),axis=target.clone().sub(f.base),raw=axis.length(),[a,b]=f.lengths,d=T.MathUtils.clamp(raw,.009,a+b-.0001);axis.normalize();
       const end=f.base.clone().addScaledVector(axis,d),pole=V(0,0,1),bend=pole.addScaledVector(axis,-pole.dot(axis)).normalize(),along=(a*a-b*b+d*d)/(2*d),mid=f.base.clone().addScaledVector(axis,along).addScaledVector(bend,Math.sqrt(Math.max(0,a*a-along*along)));
       for(const [j,p,q]of [[0,f.base,mid],[1,mid,end]]){const link=f.links[j];link.position.copy(p).add(q).multiplyScalar(.5);link.quaternion.setFromUnitVectors(Y,q.clone().sub(p).normalize());link.updateMatrix();this.batch.setMatrixAt(i*2+j,link.matrix);}
       f.pad.position.copy(end);this.maxReach=Math.max(this.maxReach,raw);
-      if(prop&&this.blend>.995){const error=end.distanceTo(targets[i]);if(this.refined||i<3)this.error=Math.max(this.error,error);if(this.refined)this.contactRows.push({finger:['thumb','index','middle','ring','little'][i],role:i<3?'grip':'support',error,reachable:raw<=a+b-.0001&&raw>=.009,target:targets[i].toArray(),actual:end.toArray()});}
+      if(prop&&this.blend>.995&&(!points||points[i])){const error=end.distanceTo(targets[i]);if(this.refined||i<3)this.error=Math.max(this.error,error);if(this.refined)this.contactRows.push({finger:['thumb','index','middle','ring','little'][i],role:kind==='glasses'?'rim-contact':i<3?'grip':'support',error,reachable:raw<=a+b-.0001&&raw>=.009,target:targets[i].toArray(),actual:end.toArray()});}
     });
     this.surface?.update(this.fingers);this.batch.instanceMatrix.needsUpdate=true;this.hand.updateWorldMatrix(false,true);
   }
@@ -89,8 +89,8 @@ class HandGrip{
 }
 export class HandGrips{
   constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,{R:new HandGrip(part(actors[id],'NaraHandR'),'R',{...options,enhanced:!!actors[id].userData.ensembleAsset}),L:new HandGrip(part(actors[id],'NaraHandL'),'L',{...options,enhanced:!!actors[id].userData.ensembleAsset})}]));}
-  setRelaxation(id,profile){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].relaxation=profile?.free?.[side]?{curl:profile.curl}:null;}
-  apply(id,dt,override){const row=this.rows.get(id);if(!row)return;const d=this.desks[id],c=this.cups[id];row.R.apply(dt,override?.R?.blend??amount(d.stage,d.time),override?.R?.prop??d.prop,override?.R?.kind??(id==='leo'?'page':'pen'));row.L.apply(dt,override?.L?.blend??amount(c.state,c.time,true),override?.L?.prop??c.mug,override?.L?.kind??'cup');}
+  setRelaxation(id,profile){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].relaxation=profile?.free?.[side]?{curl:profile.curl,spread:profile.spread??0}:null;}
+  apply(id,dt,override){const row=this.rows.get(id);if(!row)return;const d=this.desks[id],c=this.cups[id];row.R.apply(dt,override?.R?.blend??(d.personal&&id==='jun'?0:amount(d.stage,d.time)),override?.R?.prop??d.prop,override?.R?.kind??(id==='leo'?'page':'pen'),override?.R?.points);row.L.apply(dt,override?.L?.blend??(c.personal&&c.state==='release'?1-ease(c.time/c.duration()):amount(c.state,c.time,true)),override?.L?.prop??c.mug,override?.L?.kind??'cup',override?.L?.points);}
   diagnostics(){return Object.fromEntries([...this.rows].map(([id,row])=>[id,Object.fromEntries(Object.entries(row).map(([side,hand])=>[side,hand.diagnostics()]))]));}
   dispose(){for(const row of this.rows.values())for(const hand of Object.values(row))hand.dispose();this.rows.clear();}
 }

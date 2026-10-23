@@ -1,0 +1,18 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(await fallback.locator('#personal').isDisabled())
+
+    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-complete-browser.mjs:19:254 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.22.2

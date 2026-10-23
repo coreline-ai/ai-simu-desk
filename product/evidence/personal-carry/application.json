@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-23T03:57:20.860Z",
+  "release": "1792727781413-3bad296d-b718-415a-88e8-8ebd5987ae30",
+  "priorRelease": "1792713140832-900c381d-d83b-4532-a085-153033c68fda",
+  "serverSame": true,
+  "envMetadataSame": true,
+  "GLBSame": true,
+  "privateBackup": true,
+  "localDatabase": "pglite",
+  "provider": "fake",
+  "sourceChecks": true
+}

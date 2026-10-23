@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-22T23:53:41.411Z",
+  "release": "1792713140832-900c381d-d83b-4532-a085-153033c68fda",
+  "interim": "1792711769919-c4f84597-7123-4017-8e57-447c24b54547",
+  "previous": "1792658643560-42e29006-01df-4f53-a8cc-0c01920862ec",
+  "active": "build-releases/1792713140832-900c381d-d83b-4532-a085-153033c68fda",
+  "serverUnchanged": true,
+  "database": "existing local PGlite and .env.local preserved; no external connection",
+  "backup": {
+    "file": "studio-2026-10-22T23-52-53-887Z.tar.gz",
+    "mode": "600"
+  },
+  "verification": "delivery.json checks actual HTTP assets against final release manifest and v12/5 actors"
+}

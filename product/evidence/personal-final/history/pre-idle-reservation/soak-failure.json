@@ -1,0 +1,8 @@
+{
+  "error": "page.waitForFunction: Target page, context or browser has been closed\n    at /Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-final-soak.mjs:24:144",
+  "checks": [],
+  "rows": [],
+  "errors": [],
+  "wallSeconds": 36.054,
+  "d": null
+}

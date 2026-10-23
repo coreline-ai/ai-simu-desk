@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: ordinary 2-person meeting leaves all mugs at desks throughout travel, discussion and return
+ok 1 - ordinary 2-person meeting leaves all mugs at desks throughout travel, discussion and return
+  ---
+  duration_ms: 5764.138375
+  type: 'test'
+  ...
+# Subtest: ordinary 5-person meeting leaves all mugs at desks throughout travel, discussion and return
+ok 2 - ordinary 5-person meeting leaves all mugs at desks throughout travel, discussion and return
+  ---
+  duration_ms: 11978.996
+  type: 'test'
+  ...
+# Subtest: purposeful coffee carry: all five keep upright mugs ahead of wrists, real finger contacts and one free arm on both routes
+not ok 3 - purposeful coffee carry: all five keep upright mugs ahead of wrists, real finger contacts and one free arm on both routes
+  ---
+  duration_ms: 1578.637334
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-carry.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: 'no cup teleport during gait'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-carry.test.mjs:14:88
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:128)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-carry.test.mjs:12:137)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: v11 comparison keeps its previous cup pickup policy
+ok 4 - v11 comparison keeps its previous cup pickup policy
+  ---
+  duration_ms: 1378.598292
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 3
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20825.821916

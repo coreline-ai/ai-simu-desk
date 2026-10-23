@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "at": "2026-10-22T08:48:07.210Z",
+  "origin": "http://127.0.0.1:4180",
+  "release": "1792658643560-42e29006-01df-4f53-a8cc-0c01920862ec",
+  "hashes": {
+    "assets/app.js": "0a8fad8ae35974795f0625650fafd051534e94d7e0fb13dffc557a2f87234e36",
+    "demos/activities/personal/app.js": "2912a08f4cd94e610b144e80759965517c3a7f97025ba1f983c4b7522eabf028",
+    "assets/studio-room-v9.glb": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e"
+  },
+  "health": {
+    "status": "ok",
+    "database": "pglite"
+  },
+  "worker": {
+    "provider": "fake"
+  },
+  "model": 9,
+  "activities": 12,
+  "personalActors": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "rate": 1.5,
+  "motionAdvanced": true,
+  "canvas": 1,
+  "errors": [],
+  "uiStatusVerified": {
+    "browser": "visible IAB tab 60",
+    "pickup": "All five show 컵 챙기기 after a paused restart",
+    "moving": "Nara 목적지로 이동; other actors 좌석·통로 확인",
+    "seated": "Five active cards; 경청·확인 and 의견 나누기",
+    "screenshot": "iab-deliverable.png",
+    "delivered": true
+  },
+  "motionRuntimeUnchanged": true
+}

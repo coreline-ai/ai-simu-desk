@@ -32,7 +32,7 @@ export class EnsembleDetails {
     if (!row || dt <= 0) return;
     if (row.mouse) {
       row.mouseX ??= row.mouse.position.x;
-      row.mouse.position.x = 0.27 + (this.scheduler.desks[id].stage === "use" && this.scheduler.desks[id].variant === 2 ? Math.sin(this.scheduler.desks[id].time * 1.8) * 4e-3 : 0);
+      row.mouse.position.x = 0.27 + (this.scheduler.desks[id].stage === "use" && this.scheduler.desks[id].variant === 2 ? Math.sin((this.scheduler.desks[id].recipe()?.sample ?? this.scheduler.desks[id].time) * 1.8) * 4e-3 : 0);
     }
     const p = state.pose, record = this.scheduler.getRecord?.(id) ?? this.scheduler.records.get(id), torso = part(actor, "NaraTorso");
     row.motionPhase = p?.ensemblePhase ?? record?.trip?.stage ?? state.action;
@@ -53,7 +53,7 @@ export class EnsembleDetails {
   apply(id, _actor, _state, dt) {
     const row = this.rows.get(id);
     if (!row || dt <= 0) return;
-    const d = this.scheduler.desks[id], active = d?.stage === "use", phase = (d?.time ?? 0) % 2.4;
+    const d = this.scheduler.desks[id], active = d?.stage === "use", phase = (d?.recipe()?.sample ?? d?.time ?? 0) % 2.4;
     let angle = 0;
     if (active && id === "nara" && d.variant === 1) angle = 0.4 * ease((phase - 1.4) / 0.3) * (1 - ease((phase - 2) / 0.35));
     if (row.hinge) row.hinge.rotation.z = angle;
@@ -71,7 +71,7 @@ export class EnsembleDetails {
       row.checks.forEach((g, i) => g.children.forEach((n) => n.visible = i < row.written));
     }
     if (row.ink) {
-      if (active && d.variant !== 1) row.written = Math.max(row.written, Math.floor(d.time * 1.5));
+      if (active && (!d.personal || !d.reading) && d.variant !== 1) row.written = Math.max(row.written, Math.floor(d.time * 1.5));
       row.ink.children.forEach((n, i) => {
         n.visible = i < row.written;
       });

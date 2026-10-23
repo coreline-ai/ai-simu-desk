@@ -1,0 +1,289 @@
+{
+  "passed": true,
+  "at": "2026-10-22T08:23:50.475Z",
+  "origin": "http://127.0.0.1:4193",
+  "checks": [
+    "v12 solo rise closeup",
+    "same-space v11 rise comparison preserves speed, pause and camera",
+    "all five arrive; Nara visibly listens after her speaking turn",
+    "pause freezes; actual work cancels meeting and all five return with cups",
+    "x1/x1.5/x2/x3",
+    "320/390/768/1440px no overflow and one canvas",
+    "OS reduced motion",
+    "rapid comparison switches release prior scene",
+    "existing v11 and v10 pages preserved",
+    "room-v9 loading failure falls back honestly to v10"
+  ],
+  "errors": [],
+  "listening": {
+    "personal": {
+      "enabled": true,
+      "actors": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "order": [
+        "base",
+        "gait",
+        "activity intent",
+        "gaze",
+        "support",
+        "prop",
+        "fingers",
+        "clearance"
+      ],
+      "states": {
+        "nara": {
+          "phase": "listen",
+          "stage": "rest",
+          "progress": 0,
+          "active": true,
+          "pitch": 0.058190778623577286,
+          "torsoPitch": 0.214982483886463,
+          "headRoll": 0.011993994582798713,
+          "weight": 0
+        },
+        "sora": {
+          "phase": "speak",
+          "stage": "rest",
+          "progress": 0,
+          "active": true,
+          "pitch": 0,
+          "torsoPitch": 0.18001000908713835,
+          "headRoll": 0.000008326605272736846,
+          "weight": 0
+        },
+        "jun": {
+          "phase": "listen",
+          "stage": "rest",
+          "progress": 0,
+          "active": true,
+          "pitch": 0,
+          "torsoPitch": 0.16199999999999992,
+          "headRoll": 0.009999999999999997,
+          "weight": 0
+        },
+        "min": {
+          "phase": "listen",
+          "stage": "rest",
+          "progress": 0,
+          "active": true,
+          "pitch": 0.036962721217947164,
+          "torsoPitch": 0.2250000000000001,
+          "headRoll": 0.005999999999999998,
+          "weight": 0
+        },
+        "leo": {
+          "phase": "listen",
+          "stage": "rest",
+          "progress": 0,
+          "active": true,
+          "pitch": 0.01151464749180084,
+          "torsoPitch": 0.188,
+          "headRoll": 0.03499999999999999,
+          "weight": 0
+        }
+      }
+    },
+    "contacts": {
+      "nara": {
+        "phase": "supported",
+        "hands": {
+          "L": {
+            "object": "MeetingTop",
+            "planted": true,
+            "lift": 0,
+            "error": 2.220446049250313e-16,
+            "palmGap": 0.0015000000000001679,
+            "surface": [
+              -3.4250000000000003,
+              0.7400000008940699,
+              1.9050811030010484
+            ],
+            "hand": [
+              -3.4250000000000003,
+              0.7675000008940701,
+              1.9050811030010484
+            ]
+          },
+          "R": {
+            "object": "GroupNotePage0",
+            "planted": false,
+            "lift": 0,
+            "error": 2.482534153247273e-16,
+            "palmGap": null,
+            "surface": [
+              -3.27,
+              0.7540000002160668,
+              1.90921600203122
+            ],
+            "hand": [
+              -3.27,
+              0.8093896757803027,
+              1.9092160020312203
+            ]
+          }
+        }
+      },
+      "sora": {
+        "phase": "supported",
+        "hands": {
+          "L": {
+            "object": "MeetingTop",
+            "planted": true,
+            "lift": 0,
+            "error": 4.577566798522237e-16,
+            "palmGap": 0.0015000000000000568,
+            "surface": [
+              -3.475,
+              0.7400000008940697,
+              3.2949188969989516
+            ],
+            "hand": [
+              -3.4750000000000005,
+              0.7675000008940698,
+              3.2949188969989516
+            ]
+          },
+          "R": {
+            "object": "GroupNotePage1",
+            "planted": false,
+            "lift": 0.0650278943491691,
+            "error": 1.1102230246251565e-16,
+            "palmGap": null,
+            "surface": [
+              -3.6300000000000003,
+              0.7540000002160668,
+              3.29078399796878
+            ],
+            "hand": [
+              -3.6300000000000003,
+              0.846527894565236,
+              3.29078399796878
+            ]
+          }
+        }
+      },
+      "leo": {
+        "phase": "supported",
+        "hands": {
+          "L": {
+            "object": "MeetingTop",
+            "planted": true,
+            "lift": 0,
+            "error": 1.1102230246251565e-16,
+            "palmGap": 0.0015000000000000568,
+            "surface": [
+              -2.4250000000000007,
+              0.7400000008940697,
+              2.056660765146227
+            ],
+            "hand": [
+              -2.4250000000000007,
+              0.7675000008940698,
+              2.056660765146227
+            ]
+          },
+          "R": {
+            "object": "GroupNotePage4",
+            "planted": true,
+            "lift": 0,
+            "error": 0,
+            "palmGap": 0.0014999999999999458,
+            "surface": [
+              -2.27,
+              0.7540000002160668,
+              2.115103816207823
+            ],
+            "hand": [
+              -2.27,
+              0.7815000002160668,
+              2.115103816207823
+            ]
+          }
+        }
+      },
+      "jun": {
+        "phase": "supported",
+        "hands": {
+          "L": {
+            "object": "MeetingTop",
+            "planted": true,
+            "lift": 0,
+            "error": 1.1102230246251565e-16,
+            "palmGap": 0.0014999999999998348,
+            "surface": [
+              -4.425000000000001,
+              0.7400000008940697,
+              2.0406112730644654
+            ],
+            "hand": [
+              -4.425000000000001,
+              0.7675000008940696,
+              2.0406112730644654
+            ]
+          },
+          "R": {
+            "object": "GroupNotePage2",
+            "planted": true,
+            "lift": 0,
+            "error": 4.440892098500626e-16,
+            "palmGap": 0.0014999999999999458,
+            "surface": [
+              -4.2700000000000005,
+              0.7540000002160668,
+              1.99801727756519
+            ],
+            "hand": [
+              -4.2700000000000005,
+              0.7815000002160668,
+              1.9980172775651897
+            ]
+          }
+        }
+      },
+      "min": {
+        "phase": "supported",
+        "hands": {
+          "L": {
+            "object": "MeetingTop",
+            "planted": true,
+            "lift": 0,
+            "error": 4.440892098500626e-16,
+            "palmGap": 0.0014999999999999458,
+            "surface": [
+              -4.475000000000001,
+              0.7400000008940697,
+              3.1433392348537725
+            ],
+            "hand": [
+              -4.475000000000001,
+              0.7675000008940697,
+              3.143339234853772
+            ]
+          },
+          "R": {
+            "object": "GroupNotePage3",
+            "planted": true,
+            "lift": 0,
+            "error": 4.965068306494546e-16,
+            "palmGap": 0.0014999999999997238,
+            "surface": [
+              -4.63,
+              0.7540000002160668,
+              3.084896183792177
+            ],
+            "hand": [
+              -4.63,
+              0.7815000002160666,
+              3.0848961837921767
+            ]
+          }
+        }
+      }
+    }
+  }
+}

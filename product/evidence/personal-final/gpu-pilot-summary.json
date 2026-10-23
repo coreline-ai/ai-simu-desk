@@ -1,0 +1,124 @@
+{
+  "scope": "pilot, partial dump success=false; named allocator rows only, not total physical VRAM",
+  "allocators": [
+    {
+      "pid": 1137,
+      "process": "Browser",
+      "path": "gpu",
+      "attrs": {
+        "effective_size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "10ffc0"
+        },
+        "size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "10ffc0"
+        }
+      }
+    },
+    {
+      "pid": 1143,
+      "process": "GPU Process",
+      "path": "gpu",
+      "attrs": {
+        "effective_size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "ad86cd1"
+        },
+        "size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "f5d67d1"
+        }
+      }
+    },
+    {
+      "pid": 1143,
+      "process": "GPU Process",
+      "path": "gpu/angle",
+      "attrs": {
+        "effective_size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "9030000"
+        },
+        "size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "9030000"
+        }
+      }
+    },
+    {
+      "pid": 1143,
+      "process": "GPU Process",
+      "path": "gpu/angle/metal",
+      "attrs": {
+        "effective_size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "9030000"
+        },
+        "size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "9030000"
+        }
+      }
+    },
+    {
+      "pid": 1143,
+      "process": "GPU Process",
+      "path": "gpu/dawn",
+      "attrs": {
+        "effective_size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "f9a23c"
+        },
+        "size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "f9a23c"
+        }
+      }
+    },
+    {
+      "pid": 1147,
+      "process": "WebUI Top Renderer",
+      "path": "gpu",
+      "attrs": {
+        "effective_size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "25ff40"
+        },
+        "size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "25ff40"
+        }
+      }
+    },
+    {
+      "pid": 1148,
+      "process": "Renderer",
+      "path": "gpu",
+      "attrs": {
+        "effective_size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "93ff40"
+        },
+        "size": {
+          "type": "scalar",
+          "units": "bytes",
+          "value": "93ff40"
+        }
+      }
+    }
+  ]
+}

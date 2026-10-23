@@ -1,0 +1,5 @@
+
+> ai-simu-desk-visual-demo@0.1.0 check:boundaries
+> node scripts/check-boundaries.mjs
+
+Domain/application dependency boundaries: OK

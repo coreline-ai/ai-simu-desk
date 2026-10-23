@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: cup pickup/sip/place has a single owner, reachable hand and no duplicate mug
+ok 1 - cup pickup/sip/place has a single owner, reachable hand and no duplicate mug
+  ---
+  duration_ms: 511.136416
+  type: 'test'
+  ...
+# Subtest: work arriving in every cup phase cleans up once and large dt never skips ownership
+ok 2 - work arriving in every cup phase cleans up once and large dt never skips ownership
+  ---
+  duration_ms: 3051.81775
+  type: 'test'
+  ...
+# Subtest: coffee brew and retrieve each start a fresh personal attention beat without changing machine durations
+ok 3 - coffee brew and retrieve each start a fresh personal attention beat without changing machine durations
+  ---
+  duration_ms: 7628.986833
+  type: 'test'
+  ...
+# Subtest: v11 board comparison retains its original fixed gaze target while v12 follows its personal marker
+ok 4 - v11 board comparison retains its original fixed gaze target while v12 follows its personal marker
+  ---
+  duration_ms: 5923.590708
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17364.260667

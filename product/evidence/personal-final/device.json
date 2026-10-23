@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-23T00:40:27.006314+00:00",
+  "tool": "xcrun xctrace list devices",
+  "physicalDevice": {
+    "name": "iPhone app",
+    "os": "18.7.9",
+    "state": "offline"
+  },
+  "physicalTestsCompleted": false,
+  "unavailable": [
+    "touch on actual device",
+    "physical battery and thermal behavior",
+    "actual iOS background return"
+  ],
+  "note": "Desktop viewport and simulated touch are recorded separately; no public tunnel or physical-completion claim.",
+  "recheckedAt": "2026-10-23T02:47:55.308Z"
+}

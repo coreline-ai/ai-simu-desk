@@ -14,7 +14,7 @@ export class PeerReactions{
   }
  }
  state(id,state){const r=this.active.get(id);if(!r||state.lookAt||!this.free(id)||!['walk','idle','waiting','turn','standing'].includes(state.action))return state;const t=this.s.time-r.start;return{...state,lookAt:r.peer,greeting:ease(t/.35)*ease((1.7-t)/.45),greetingPeer:r.peer};}
- apply(id,actor,state){if(!state.greeting||!this.free(id))return;part(actor,'NaraShoulderR').rotation.x-=.20*state.greeting;part(actor,'NaraShoulderR').rotation.z-=.16*state.greeting;part(actor,'NaraElbowR').rotation.x-=.22*state.greeting;part(actor,'NaraHead').rotation.x+=.025*Math.sin((this.s.time-this.active.get(id).start)*4)*state.greeting;}
+ apply(id,actor,state){if(!state.greeting||!this.free(id))return;const profile=this.s.personalMotion?.has(id)?this.s.humanMotion.rows.get(id):null,amount=state.greeting*(profile?this.s.personalMotion.greeting(id):1);part(actor,'NaraShoulderR').rotation.x-=.20*amount;part(actor,'NaraShoulderR').rotation.z-=.16*amount;part(actor,'NaraElbowR').rotation.x-=.22*amount;part(actor,'NaraHead').rotation.x+=.025*Math.sin((this.s.time-this.active.get(id).start)*4)*state.greeting;}
  diagnostics(){return{active:[...this.active].map(([id,r])=>({id,...r})),history:[...this.history]};}
  clear(){this.active.clear();this.ready.clear();}
 }

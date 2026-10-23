@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "at": "2026-10-22T08:45:09.131Z",
+  "verifiedMotionRelease": "1792657873655-98c3b12f-7f06-4626-af8e-7acbff9d8c09",
+  "finalRelease": "1792658643560-42e29006-01df-4f53-a8cc-0c01920862ec",
+  "allMotionSourcesEqual": true,
+  "serverEqual": true,
+  "allAssetsEqual": true,
+  "currentSourceMatches": true,
+  "onlyClientChanges": [
+    "demos/activities/personal/app.js",
+    "demos/activities/personal/index.html",
+    "library/dev-plan/implement_20261022_165655.html",
+    "library/docs/character-motion-review.html",
+    "library/docs/personal-motion-qa.html"
+  ],
+  "uiChange": "Correct pickup, waiting and active stage labels; visible IAB validation recorded in delivery.json"
+}

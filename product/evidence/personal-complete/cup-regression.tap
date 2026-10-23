@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: personal drink and support use the same normalized phase and settle before return
+ok 1 - personal drink and support use the same normalized phase and settle before return
+  ---
+  duration_ms: 0.829834
+  type: 'test'
+  ...
+# Subtest: five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+ok 2 - five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+  ---
+  duration_ms: 10841.097083
+  type: 'test'
+  ...
+# Subtest: personal carry and table drinking keep machine duration and fair queue policy
+ok 3 - personal carry and table drinking keep machine duration and fair queue policy
+  ---
+  duration_ms: 18713.026417
+  type: 'test'
+  ...
+# Subtest: v12 window variant reaches final free arms while v11 comparison retains its original result
+ok 4 - v12 window variant reaches final free arms while v11 comparison retains its original result
+  ---
+  duration_ms: 8012.587209
+  type: 'test'
+  ...
+# Subtest: all five board approaches and returns use the same personal gait policy as other routes
+ok 5 - all five board approaches and returns use the same personal gait policy as other routes
+  ---
+  duration_ms: 3361.038917
+  type: 'test'
+  ...
+# Subtest: v12 composition preserves cup ownership and both support contacts for all five
+ok 6 - v12 composition preserves cup ownership and both support contacts for all five
+  ---
+  duration_ms: 2427.835834
+  type: 'test'
+  ...
+# Subtest: v12 board marker contact and safe returns survive all five personal approach speeds
+ok 7 - v12 board marker contact and safe returns survive all five personal approach speeds
+  ---
+  duration_ms: 5607.587875
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 49179.708667

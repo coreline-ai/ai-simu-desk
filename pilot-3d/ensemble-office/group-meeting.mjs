@@ -21,17 +21,18 @@ export class GroupMeetings {
     if (this.current || ids.length < this.minParticipants || ids.length > this.maxParticipants || new Set(ids).size !== ids.length || ids.some((id) => !this.s.idle(id)) || this.s.session || this.s.sofaPair) return false;
     const owner = "group-meeting-" + ++this.s.serial, keys = ids.map((_, i) => "meeting-" + i);
     if (!this.s.book.acquire(owner, keys)) return false;
-    const g = { ids: [...ids], records: /* @__PURE__ */ new Map(), completeReason: ids.length + "인 회의 완료", phase: "arriving", time: 0, round: 0, ending: false, presented: /* @__PURE__ */ new Map(), spoke: /* @__PURE__ */ new Set(), noted: /* @__PURE__ */ new Set(), reason: "", started: this.s.time };
+    const g = { withCups: !ids.every(id => this.s.personalMotion?.has(id)), ids: [...ids], records: /* @__PURE__ */ new Map(), completeReason: ids.length + "인 회의 완료", phase: "arriving", time: 0, round: 0, ending: false, presented: /* @__PURE__ */ new Map(), spoke: /* @__PURE__ */ new Set(), noted: /* @__PURE__ */ new Set(), reason: "", started: this.s.time };
     this.current = g;
     ids.forEach((id, slot) => {
-      const cup = this.s.cups[id], trip = new DestinationTrip([id], this.anchors.get(id + ":" + slot), { actorId: id, owner: id + "-group", book: this.s.book, sharedTransit: true, waitLimit: 240, restDuration: Infinity, routeMotion: { speed: 0.56, period: 0.8 }, canDepart: () => cup.state === "carry" && !this.notes[slot]?.busy });
+      const cup = this.s.cups[id], trip = new DestinationTrip([id], this.anchors.get(id + ":" + slot), { actorId: id, owner: id + "-group", book: this.s.book, sharedTransit: true, waitLimit: 240, restDuration: Infinity, routeMotion: { speed: 0.56, period: 0.8 }, canDepart: () => (!g.withCups || cup.state === "carry") && !this.notes[slot]?.busy });
       trip.setViewModel(this.s.vm);
       this.s.configure(trip, id);
       this.s.book.transfer(owner, trip.owner, ["meeting-" + slot]);
-      cup.start({ carry: true });
+      if (g.withCups) cup.start({ carry: true });
       const note = new GroupNote(this.model, this.s.desks[id].actor, this.meta.ensembleOffice.group.notes[slot], this.s);
       this.notes[slot] = note;
-      g.records.set(id, { id, slot, kind: "group", trip, phase: "pickup", placed: false, note });
+      g.records.set(id, { id, slot, kind: "group", trip, phase: g.withCups ? "pickup" : "trip", placed: false, note });
+      if (!g.withCups) trip.startSofa();
     });
     return true;
   }
@@ -43,7 +44,7 @@ export class GroupMeetings {
     for (const r of g.records.values()) {
       r.note.cancel();
       r.trip.requestReturn(reason);
-      this.s.cups[r.id].returnToHand();
+      if (g.withCups) this.s.cups[r.id].returnToHand();
     }
   }
   finishRecord(r) {
@@ -74,7 +75,7 @@ export class GroupMeetings {
       r.trip.setViewModel(this.s.vm);
       if (g.ending) {
         r.trip.requestReturn(g.reason);
-        cup.returnToHand();
+        if (g.withCups) cup.returnToHand();
       }
       r.trip.tick(dt);
       if (r.trip.stage === "rest" && !g.ending && !r.placed && cup.state === "carry") {
@@ -105,7 +106,7 @@ export class GroupMeetings {
     }
     if (g.ending) return;
     if (g.phase === "arriving") {
-      if (g.ids.every((id) => g.records.get(id)?.trip.stage === "rest" && this.s.cups[id].state === "tableRest")) {
+      if (g.ids.every((id) => g.records.get(id)?.trip.stage === "rest" && (!g.withCups || this.s.cups[id].state === "tableRest"))) {
         g.phase = "talk";
         g.presented = new Map(g.ids.map((id) => [id, 0]));
       } else if (g.time > 240) this.end("\uD68C\uC758 \uB3C4\uCC29 \uB300\uAE30 \uC885\uB8CC");
@@ -142,7 +143,7 @@ export class GroupMeetings {
   }
   present(id, state, dt) {
     const g = this.current;
-    if (g && !g.ending && g.phase === state.groupPhase && g.round === state.groupRound && g.ids.every((id2) => g.records.get(id2)?.trip.stage === "rest" && this.s.cups[id2].state === "tableRest")) g.presented.set(id, (g.presented.get(id) ?? 0) + dt);
+    if (g && !g.ending && g.phase === state.groupPhase && g.round === state.groupRound && g.ids.every((id2) => g.records.get(id2)?.trip.stage === "rest" && (!g.withCups || this.s.cups[id2].state === "tableRest"))) g.presented.set(id, (g.presented.get(id) ?? 0) + dt);
   }
   apply(id) {
     this.record(id)?.note.apply();
@@ -155,7 +156,7 @@ export class GroupMeetings {
   }
   diagnostics() {
     const g = this.current;
-    return { counts: { ...this.counts }, history: [...this.history], current: g ? { ids: [...g.ids], phase: g.phase, round: g.round, ending: g.ending, spoke: [...g.spoke], noted: [...g.noted], time: g.time, actors: [...g.records.values()].map((r) => ({ id: r.id, slot: r.slot, stage: r.trip.stage, phase: r.phase, note: r.note.diagnostics() })) } : null };
+    return { counts: { ...this.counts }, history: [...this.history], current: g ? { ids: [...g.ids], withCups: g.withCups, phase: g.phase, round: g.round, ending: g.ending, spoke: [...g.spoke], noted: [...g.noted], time: g.time, actors: [...g.records.values()].map((r) => ({ id: r.id, slot: r.slot, stage: r.trip.stage, phase: r.phase, note: r.note.diagnostics() })) } : null };
   }
   dispose() {
     for (const r of this.current?.records.values() ?? []) {

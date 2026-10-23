@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: coffee brew and retrieve each start a fresh personal attention beat without changing machine durations
+ok 1 - coffee brew and retrieve each start a fresh personal attention beat without changing machine durations
+  ---
+  duration_ms: 7680.098125
+  type: 'test'
+  ...
+# Subtest: v11 board comparison retains its original fixed gaze target while v12 follows its personal marker
+ok 2 - v11 board comparison retains its original fixed gaze target while v12 follows its personal marker
+  ---
+  duration_ms: 6370.836292
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14201.403042

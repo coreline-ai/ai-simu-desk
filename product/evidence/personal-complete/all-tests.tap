@@ -1,0 +1,2425 @@
+
+> ai-simu-desk-visual-demo@0.1.0 test
+> node --import tsx --test --test-concurrency=1 demo/tests/*.test.mjs pilot-3d/tests/*.test.mjs product/tests/*.test.mjs server/tests/*.test.ts
+
+TAP version 13
+# Subtest: normal work completes with a result without mutating the initial state
+ok 1 - normal work completes with a result without mutating the initial state
+  ---
+  duration_ms: 0.533667
+  type: 'test'
+  ...
+# Subtest: approval cannot be bypassed by ticks; approval resumes the same run
+ok 2 - approval cannot be bypassed by ticks; approval resumes the same run
+  ---
+  duration_ms: 0.167625
+  type: 'test'
+  ...
+# Subtest: cancellation and declined approval reject late ticks and approval
+ok 3 - cancellation and declined approval reject late ticks and approval
+  ---
+  duration_ms: 0.059834
+  type: 'test'
+  ...
+# Subtest: a duplicate request, run ID, or active second run cannot execute twice
+ok 4 - a duplicate request, run ID, or active second run cannot execute twice
+  ---
+  duration_ms: 0.050583
+  type: 'test'
+  ...
+# Subtest: a duplicated stage and a callback from another run cannot move progress
+ok 5 - a duplicated stage and a callback from another run cannot move progress
+  ---
+  duration_ms: 0.092208
+  type: 'test'
+  ...
+# Subtest: failure can retry with a new run while old callbacks stay ineffective
+ok 6 - failure can retry with a new run while old callbacks stay ineffective
+  ---
+  duration_ms: 0.121292
+  type: 'test'
+  ...
+# Subtest: invalid and boundary input does not create work
+ok 7 - invalid and boundary input does not create work
+  ---
+  duration_ms: 0.116666
+  type: 'test'
+  ...
+# Subtest: selection does not transfer execution ownership; unknown employees are ignored
+ok 8 - selection does not transfer execution ownership; unknown employees are ignored
+  ---
+  duration_ms: 0.114958
+  type: 'test'
+  ...
+# Subtest: history is bounded to ten terminal runs
+ok 9 - history is bounded to ten terminal runs
+  ---
+  duration_ms: 0.18975
+  type: 'test'
+  ...
+# Subtest: evicting visible history does not forget an earlier idempotency key
+ok 10 - evicting visible history does not forget an earlier idempotency key
+  ---
+  duration_ms: 0.283875
+  type: 'test'
+  ...
+# Subtest: measured frames fit the original image and preserve opaque bounds on the shared canvas
+ok 11 - measured frames fit the original image and preserve opaque bounds on the shared canvas
+  ---
+  duration_ms: 3.843833
+  type: 'test'
+  ...
+# Subtest: loading, a pose change at frame zero, reduced motion, and disposal keep rendering isolated
+ok 12 - loading, a pose change at frame zero, reduced motion, and disposal keep rendering isolated
+  ---
+  duration_ms: 1.034834
+  type: 'test'
+  ...
+# Subtest: an atlas error exposes the existing readable fallback
+ok 13 - an atlas error exposes the existing readable fallback
+  ---
+  duration_ms: 0.469
+  type: 'test'
+  ...
+# Subtest: exported idle and typing visibly move hands while keeping them above the desk
+ok 14 - exported idle and typing visibly move hands while keeping them above the desk
+  ---
+  duration_ms: 98.1805
+  type: 'test'
+  ...
+# Subtest: repeated state updates and pause/resume preserve animation phase, including crossfades
+ok 15 - repeated state updates and pause/resume preserve animation phase, including crossfades
+  ---
+  duration_ms: 42.637334
+  type: 'test'
+  ...
+# Subtest: completion is played once per observed transition; loading history produces no cue
+ok 16 - completion is played once per observed transition; loading history produces no cue
+  ---
+  duration_ms: 31.914958
+  type: 'test'
+  ...
+# Subtest: blink closes both eyes without altering the seated rig
+ok 17 - blink closes both eyes without altering the seated rig
+  ---
+  duration_ms: 13.732292
+  type: 'test'
+  ...
+# Subtest: the actual GLB roundtrip contains metre-scale geometry and both named animations
+ok 18 - the actual GLB roundtrip contains metre-scale geometry and both named animations
+  ---
+  duration_ms: 1.345584
+  type: 'test'
+  ...
+# Subtest: every tagged foot is on the floor and within the floor boundary after GLB import
+ok 19 - every tagged foot is on the floor and within the floor boundary after GLB import
+  ---
+  duration_ms: 0.239667
+  type: 'test'
+  ...
+# Subtest: animation loops close, move typing hands, and never move grounded shoes or furniture
+ok 20 - animation loops close, move typing hands, and never move grounded shoes or furniture
+  ---
+  duration_ms: 7.698875
+  type: 'test'
+  ...
+# Subtest: 3D pose follows the run owner and running state; pausing changes no business state
+ok 21 - 3D pose follows the run owner and running state; pausing changes no business state
+  ---
+  duration_ms: 0.54975
+  type: 'test'
+  ...
+# Subtest: scene disposal releases shared geometry, material arrays and textures once
+ok 22 - scene disposal releases shared geometry, material arrays and textures once
+  ---
+  duration_ms: 1.077125
+  type: 'test'
+  ...
+# Subtest: activity claims are atomic, fair to released callers and fully disposable
+ok 23 - activity claims are atomic, fair to released callers and fully disposable
+  ---
+  duration_ms: 0.719625
+  type: 'test'
+  ...
+# Subtest: Nara destination route clears v6 furniture and reversed route stays continuous
+ok 24 - Nara destination route clears v6 furniture and reversed route stays continuous
+  ---
+  duration_ms: 278.296
+  type: 'test'
+  ...
+# Subtest: route large dt cannot skip a corner or produce non-finite poses
+ok 25 - route large dt cannot skip a corner or produce non-finite poses
+  ---
+  duration_ms: 1.039542
+  type: 'test'
+  ...
+# Subtest: prepared sofa retains legs, frees left seat and has stable real surface bindings
+ok 26 - prepared sofa retains legs, frees left seat and has stable real surface bindings
+  ---
+  duration_ms: 264.064625
+  type: 'test'
+  ...
+# Subtest: Nara completes a supported sofa round trip without discontinuities or over-reach
+ok 27 - Nara completes a supported sofa round trip without discontinuities or over-reach
+  ---
+  duration_ms: 291.218125
+  type: 'test'
+  ...
+# Subtest: work interrupts every sofa segment, returns through safe path and preserves actual work pose
+ok 28 - work interrupts every sofa segment, returns through safe path and preserves actual work pose
+  ---
+  duration_ms: 3083.820458
+  type: 'test'
+  ...
+# Subtest: blocked seat times out atomically, paused motion preserves claims, disposal releases all
+ok 29 - blocked seat times out atomically, paused motion preserves claims, disposal releases all
+  ---
+  duration_ms: 264.438458
+  type: 'test'
+  ...
+# Subtest: runtime reload and long repeated sofa use stay finite without accumulating anchors
+ok 30 - runtime reload and long repeated sofa use stay finite without accumulating anchors
+  ---
+  duration_ms: 890.300583
+  type: 'test'
+  ...
+# Subtest: twenty sofa round trips reclaim all resources and stay deterministic across pauses
+ok 31 - twenty sofa round trips reclaim all resources and stay deterministic across pauses
+  ---
+  duration_ms: 258.918083
+  type: 'test'
+  ...
+# Subtest: sofa seat supports the hip and both soles contact the floor in rendered geometry
+ok 32 - sofa seat supports the hip and both soles contact the floor in rendered geometry
+  ---
+  duration_ms: 334.997375
+  type: 'test'
+  ...
+# Subtest: work arriving mid-stride settles feet continuously before reversing
+ok 33 - work arriving mid-stride settles feet continuously before reversing
+  ---
+  duration_ms: 251.125208
+  type: 'test'
+  ...
+# Subtest: complete and streaming tables retain headers, rows and surrounding source prose
+ok 34 - complete and streaming tables retain headers, rows and surrounding source prose
+  ---
+  duration_ms: 0.912542
+  type: 'test'
+  ...
+# Subtest: HTML and unsafe source strings remain plain cell data
+ok 35 - HTML and unsafe source strings remain plain cell data
+  ---
+  duration_ms: 0.34275
+  type: 'test'
+  ...
+# Subtest: conservative contact distances handle intersecting, parallel, separated and degenerate segments
+ok 36 - conservative contact distances handle intersecting, parallel, separated and degenerate segments
+  ---
+  duration_ms: 0.576417
+  type: 'test'
+  ...
+# Subtest: body contact diagnostics inspect actual joints and separate sofa arms instead of filling the seat gap
+ok 37 - body contact diagnostics inspect actual joints and separate sofa arms instead of filling the seat gap
+  ---
+  duration_ms: 632.727125
+  type: 'test'
+  ...
+# Subtest: validation and publication failures preserve the live files; one pointer switches both paths and rollback restores them
+ok 38 - validation and publication failures preserve the live files; one pointer switches both paths and rollback restores them
+  ---
+  duration_ms: 44.12325
+  type: 'test'
+  ...
+# Subtest: build lock rejects overlapping builds and is released after failure; GLB/private file validation rejects invalid candidates
+ok 39 - build lock rejects overlapping builds and is released after failure; GLB/private file validation rejects invalid candidates
+  ---
+  duration_ms: 16.108208
+  type: 'test'
+  ...
+# Subtest: standalone writers reject immutable managed output paths
+ok 40 - standalone writers reject immutable managed output paths
+  ---
+  duration_ms: 0.833375
+  type: 'test'
+  ...
+# Subtest: entry assets use content versions, remain idempotent and ignore escaped documentation/external links
+ok 41 - entry assets use content versions, remain idempotent and ignore escaped documentation/external links
+  ---
+  duration_ms: 2.354917
+  type: 'test'
+  ...
+# Subtest: a missing or escaping entry asset blocks release preparation
+ok 42 - a missing or escaping entry asset blocks release preparation
+  ---
+  duration_ms: 0.974583
+  type: 'test'
+  ...
+# Subtest: comparison preserves repeated lines and identifies insertions/deletions
+ok 43 - comparison preserves repeated lines and identifies insertions/deletions
+  ---
+  duration_ms: 0.612458
+  type: 'test'
+  ...
+# Subtest: project conditions have explicit labels and skip empty fields
+ok 44 - project conditions have explicit labels and skip empty fields
+  ---
+  duration_ms: 0.077083
+  type: 'test'
+  ...
+# Subtest: cup pickup/sip/place has a single owner, reachable hand and no duplicate mug
+ok 45 - cup pickup/sip/place has a single owner, reachable hand and no duplicate mug
+  ---
+  duration_ms: 329.635375
+  type: 'test'
+  ...
+# Subtest: work arriving in every cup phase cleans up once and large dt never skips ownership
+ok 46 - work arriving in every cup phase cleans up once and large dt never skips ownership
+  ---
+  duration_ms: 1970.905584
+  type: 'test'
+  ...
+# Subtest: all five actors have collision-checked sofa and meeting routes for both slots
+ok 47 - all five actors have collision-checked sofa and meeting routes for both slots
+  ---
+  duration_ms: 265.241334
+  type: 'test'
+  ...
+# Subtest: resource queues skip blocked seats, prioritize exits, and never keep abandoned claims
+ok 48 - resource queues skip blocked seats, prioritize exits, and never keep abandoned claims
+  ---
+  duration_ms: 0.457375
+  type: 'test'
+  ...
+# Subtest: changed walking speed keeps consecutive segments contiguous and reaches corners without hidden waits
+ok 49 - changed walking speed keeps consecutive segments contiguous and reaches corners without hidden waits
+  ---
+  duration_ms: 0.280333
+  type: 'test'
+  ...
+# Subtest: sync predating read/post cannot undo the read state or newly fetched comments
+ok 50 - sync predating read/post cannot undo the read state or newly fetched comments
+  ---
+  duration_ms: 23.839625
+  type: 'test'
+  ...
+# Subtest: A to B to A and reset reject old GET and sync results; immutable comments merge without duplicates
+ok 51 - A to B to A and reset reject old GET and sync results; immutable comments merge without duplicates
+  ---
+  duration_ms: 1.20425
+  type: 'test'
+  ...
+# Subtest: exported Nara GLB reloads with all original bindings and usable enhanced parts
+ok 52 - exported Nara GLB reloads with all original bindings and usable enhanced parts
+  ---
+  duration_ms: 2215.951833
+  type: 'test'
+  ...
+# Subtest: Nara asset prototype preserves five rigs and the original motion contract while adding real notebook and pencil geometry
+ok 53 - Nara asset prototype preserves five rigs and the original motion contract while adding real notebook and pencil geometry
+  ---
+  duration_ms: 778.642375
+  type: 'test'
+  ...
+# Subtest: Nara writing and page reading keep pencil and five-finger contacts continuous and return the animated page
+ok 54 - Nara writing and page reading keep pencil and five-finger contacts continuous and return the animated page
+  ---
+  duration_ms: 1748.068209
+  type: 'test'
+  ...
+# Subtest: Nara enhanced props recover from interruption at every role stage without surface duplicates
+ok 55 - Nara enhanced props recover from interruption at every role stage without surface duplicates
+  ---
+  duration_ms: 5538.532583
+  type: 'test'
+  ...
+# Subtest: all five enhanced characters have stable anatomy, garment details and original sole height
+ok 56 - all five enhanced characters have stable anatomy, garment details and original sole height
+  ---
+  duration_ms: 763.938208
+  type: 'test'
+  ...
+# Subtest: new route has first-step, cruise, arrival and foot-led pivot with continuous endpoints
+ok 57 - new route has first-step, cruise, arrival and foot-led pivot with continuous endpoints
+  ---
+  duration_ms: 3.351959
+  type: 'test'
+  ...
+# Subtest: five actors walk, sit, return for work and release their seats safely at all four visual rates
+ok 58 - five actors walk, sit, return for work and release their seats safely at all four visual rates
+  ---
+  duration_ms: 156171.987208
+  type: 'test'
+  ...
+# Subtest: v9 baseline keeps its route and hand surface when enhanced profile is absent
+ok 59 - v9 baseline keeps its route and hand surface when enhanced profile is absent
+  ---
+  duration_ms: 1300.86725
+  type: 'test'
+  ...
+# Subtest: all five hollow cups have a physical rim, lower liquid and a supported coaster, and sip safely
+ok 60 - all five hollow cups have a physical rim, lower liquid and a supported coaster, and sip safely
+  ---
+  duration_ms: 8173.426584
+  type: 'test'
+  ...
+# Subtest: paper flex pins the grip, keeps thickness and restores each page after all twenty directed transfers
+ok 61 - paper flex pins the grip, keeps thickness and restores each page after all twenty directed transfers
+  ---
+  duration_ms: 99908.200042
+  type: 'test'
+  ...
+# Subtest: new cup and paper surfaces survive staged work interruption and release the same objects
+ok 62 - new cup and paper surfaces survive staged work interruption and release the same objects
+  ---
+  duration_ms: 99859.385375
+  type: 'test'
+  ...
+# Subtest: all five role assets complete three variants with physical support and restored device positions
+ok 63 - all five role assets complete three variants with physical support and restored device positions
+  ---
+  duration_ms: 7922.310459
+  type: 'test'
+  ...
+# Subtest: five expressions and close detail LOD restore without moving contact geometry or accumulating transforms
+ok 64 - five expressions and close detail LOD restore without moving contact geometry or accumulating transforms
+  ---
+  duration_ms: 2322.881541
+  type: 'test'
+  ...
+# Subtest: full five-person exported asset reloads its wardrobes, expressions, role props and cup supports
+ok 65 - full five-person exported asset reloads its wardrobes, expressions, role props and cup supports
+  ---
+  duration_ms: 1449.157375
+  type: 'test'
+  ...
+# Subtest: nara: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 66 - nara: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 7118.349541
+  type: 'test'
+  ...
+# Subtest: nara: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 67 - nara: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 13154.217375
+  type: 'test'
+  ...
+# Subtest: nara: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 68 - nara: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 31537.5865
+  type: 'test'
+  ...
+# Subtest: nara: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 69 - nara: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 9813.19725
+  type: 'test'
+  ...
+# Subtest: sora: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 70 - sora: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 8513.199459
+  type: 'test'
+  ...
+# Subtest: sora: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 71 - sora: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 7807.038792
+  type: 'test'
+  ...
+# Subtest: sora: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 72 - sora: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 8477.059792
+  type: 'test'
+  ...
+# Subtest: sora: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 73 - sora: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 10831.293083
+  type: 'test'
+  ...
+# Subtest: jun: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 74 - jun: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 9631.17975
+  type: 'test'
+  ...
+# Subtest: jun: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 75 - jun: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 8499.878917
+  type: 'test'
+  ...
+# Subtest: jun: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 76 - jun: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 10097.703375
+  type: 'test'
+  ...
+# Subtest: jun: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 77 - jun: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 7927.634417
+  type: 'test'
+  ...
+# Subtest: min: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 78 - min: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 6590.428
+  type: 'test'
+  ...
+# Subtest: min: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 79 - min: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 8034.301583
+  type: 'test'
+  ...
+# Subtest: min: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 80 - min: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 9534.690208
+  type: 'test'
+  ...
+# Subtest: min: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 81 - min: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 6423.74525
+  type: 'test'
+  ...
+# Subtest: leo: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 82 - leo: use-early interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5700.334667
+  type: 'test'
+  ...
+# Subtest: leo: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 83 - leo: use interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 5735.758708
+  type: 'test'
+  ...
+# Subtest: leo: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 84 - leo: use-late interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 6215.862125
+  type: 'test'
+  ...
+# Subtest: leo: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+ok 85 - leo: replace interruption retains support until the actual pencil owner releases, with no palm/table overlap
+  ---
+  duration_ms: 6725.156834
+  type: 'test'
+  ...
+# Subtest: all five coffee paths clear measured furniture and the cup rests on the actual drip tray
+ok 86 - all five coffee paths clear measured furniture and the cup rests on the actual drip tray
+  ---
+  duration_ms: 2150.541667
+  type: 'test'
+  ...
+# Subtest: five actors queue fairly, place cups, press the button, brew, retrieve and return without shared ownership
+ok 87 - five actors queue fairly, place cups, press the button, brew, retrieve and return without shared ownership
+  ---
+  duration_ms: 77680.7895
+  type: 'test'
+  ...
+# Subtest: coffee work interruption during every stage returns the same cup and releases station, path and spot
+ok 88 - coffee work interruption during every stage returns the same cup and releases station, path and spot
+  ---
+  duration_ms: 151448.471583
+  type: 'test'
+  ...
+# Subtest: local synthesized effects are gesture enabled, bounded, muted, paused and disposed with one context
+ok 89 - local synthesized effects are gesture enabled, bounded, muted, paused and disposed with one context
+  ---
+  duration_ms: 1.04875
+  type: 'test'
+  ...
+# Subtest: 25 seat approaches and 120 actor orders have unique reachable supports without walking through their chairs
+ok 90 - 25 seat approaches and 120 actor orders have unique reachable supports without walking through their chairs
+  ---
+  duration_ms: 3896.646542
+  type: 'test'
+  ...
+# Subtest: all five sit before presentation, speak and write with one pencil owner, then safely return at four speeds
+ok 91 - all five sit before presentation, speak and write with one pencil owner, then safely return at four speeds
+  ---
+  duration_ms: 126247.644791
+  type: 'test'
+  ...
+# Subtest: three independent destinations admit three actual movers without lowering body or corridor radii
+ok 92 - three independent destinations admit three actual movers without lowering body or corridor radii
+  ---
+  duration_ms: 8450.072291
+  type: 'test'
+  ...
+# Subtest: group interruption at gathering, talking and every note stage cancels presentation and returns all five
+ok 93 - group interruption at gathering, talking and every note stage cancels presentation and returns all five
+  ---
+  duration_ms: 111068.793208
+  type: 'test'
+  ...
+# Subtest: expressive walking joins straight segments, preserves stance positions and sole heading, and clears safe corners
+ok 94 - expressive walking joins straight segments, preserves stance positions and sole heading, and clears safe corners
+  ---
+  duration_ms: 4.233708
+  type: 'test'
+  ...
+# Subtest: interrupting inside a curved corner retraces its measured curve without a turn at every sample
+ok 95 - interrupting inside a curved corner retraces its measured curve without a turn at every sample
+  ---
+  duration_ms: 3.04875
+  type: 'test'
+  ...
+# Subtest: Nara pilot and all five expressive routes preserve knee reach, surface contact and cleanup for every destination
+ok 96 - Nara pilot and all five expressive routes preserve knee reach, surface contact and cleanup for every destination
+  ---
+  duration_ms: 18424.758542
+  type: 'test'
+  ...
+# Subtest: two independent corridors admit Nara and Jun, overlapping approaches wait safely and work cancels cleanly
+ok 97 - two independent corridors admit Nara and Jun, overlapping approaches wait safely and work cancels cleanly
+  ---
+  duration_ms: 3532.444125
+  type: 'test'
+  ...
+# Subtest: Nara pilot then five roles present all fifteen variations with contact and exact prop cleanup
+ok 98 - Nara pilot then five roles present all fifteen variations with contact and exact prop cleanup
+  ---
+  duration_ms: 5122.094708
+  type: 'test'
+  ...
+# Subtest: responsive exchanges alternate speakers only after both present, vary sequences and cancel missing responses
+ok 99 - responsive exchanges alternate speakers only after both present, vary sequences and cancel missing responses
+  ---
+  duration_ms: 4.511375
+  type: 'test'
+  ...
+# Subtest: all ten sofa pairs in both seat orders respond, keep seats and feet, and release both sessions
+ok 100 - all ten sofa pairs in both seat orders respond, keep seats and feet, and release both sessions
+  ---
+  duration_ms: 9461.436084
+  type: 'test'
+  ...
+# Subtest: five personal rest profiles keep props clear and restore pose on work, pause and disposal
+ok 101 - five personal rest profiles keep props clear and restore pose on work, pause and disposal
+  ---
+  duration_ms: 3393.266958
+  type: 'test'
+  ...
+# Subtest: seeded selection is repeatable, differs by seed and covers all five during mixed work
+ok 102 - seeded selection is repeatable, differs by seed and covers all five during mixed work
+  ---
+  duration_ms: 39190.942541
+  type: 'test'
+  ...
+# Subtest: short completion cues survive safe prop cleanup while newer work and removal take precedence
+ok 103 - short completion cues survive safe prop cleanup while newer work and removal take precedence
+  ---
+  duration_ms: 467.840916
+  type: 'test'
+  ...
+# Subtest: an available unserved actor gets the next sofa pair before completed pairs repeat
+ok 104 - an available unserved actor gets the next sofa pair before completed pairs repeat
+  ---
+  duration_ms: 6064.574125
+  type: 'test'
+  ...
+# Subtest: final GLB reload preserves 5 rigs,105 clips,screen maps and approved layout contract
+ok 105 - final GLB reload preserves 5 rigs,105 clips,screen maps and approved layout contract
+  ---
+  duration_ms: 285.930542
+  type: 'test'
+  ...
+# Subtest: all 25 destinations and 20 directed visits clear final furniture and remain inside the enlarged floor
+ok 106 - all 25 destinations and 20 directed visits clear final furniture and remain inside the enlarged floor
+  ---
+  duration_ms: 964.946958
+  type: 'test'
+  ...
+# Subtest: visual clock keeps exact rates at 30/60/120fps, bounded deltas, pause and storage failures
+ok 107 - visual clock keeps exact rates at 30/60/120fps, bounded deltas, pause and storage failures
+  ---
+  duration_ms: 2.177833
+  type: 'test'
+  ...
+# Subtest: five final-office actors use sofa,meeting,window and props, then return safely at each rate
+ok 108 - five final-office actors use sofa,meeting,window and props, then return safely at each rate
+  ---
+  duration_ms: 93500.395458
+  type: 'test'
+  ...
+# Subtest: 20 final-office paper handovers keep contact and return ownership at the new station positions
+ok 109 - 20 final-office paper handovers keep contact and return ownership at the new station positions
+  ---
+  duration_ms: 22779.202416
+  type: 'test'
+  ...
+# Subtest: final sofa and meeting furniture legs physically touch the original floor
+ok 110 - final sofa and meeting furniture legs physically touch the original floor
+  ---
+  duration_ms: 255.769458
+  type: 'test'
+  ...
+# Subtest: final cup centres support actual bases above desks and meeting surface instead of sinking into the top
+ok 111 - final cup centres support actual bases above desks and meeting surface instead of sinking into the top
+  ---
+  duration_ms: 541.933917
+  type: 'test'
+  ...
+# Subtest: orthographic sofa close view hides the near right wall even with camera centre inside the room
+ok 112 - orthographic sofa close view hides the near right wall even with camera centre inside the room
+  ---
+  duration_ms: 274.058625
+  type: 'test'
+  ...
+# Subtest: two seeded visual rates replay identical real-time work arrivals and recover safely at all four speeds
+ok 113 - two seeded visual rates replay identical real-time work arrivals and recover safely at all four speeds
+  ---
+  duration_ms: 85253.170375
+  type: 'test'
+  ...
+# Subtest: expanded-office mixed workload holds each actor through return and desk work while preserving old short-job workload
+ok 114 - expanded-office mixed workload holds each actor through return and desk work while preserving old short-job workload
+  ---
+  duration_ms: 3085.724166
+  type: 'test'
+  ...
+# Subtest: followup explicitly selects a completed source and handoff changes colleague with approval
+ok 115 - followup explicitly selects a completed source and handoff changes colleague with approval
+  ---
+  duration_ms: 0.385416
+  type: 'test'
+  ...
+# Subtest: heel and toe roll retain fixed support points, sole clearance and reachable legs through curves and stops
+ok 116 - heel and toe roll retain fixed support points, sole clearance and reachable legs through curves and stops
+  ---
+  duration_ms: 7.990125
+  type: 'test'
+  ...
+# Subtest: desk clearance and cup/role release keep both elbows continuous while preserving owned wrist targets
+ok 117 - desk clearance and cup/role release keep both elbows continuous while preserving owned wrist targets
+  ---
+  duration_ms: 3710.198875
+  type: 'test'
+  ...
+# Subtest: all five grounded routes preserve actual sole clearance, prop targets and safe work returns
+ok 118 - all five grounded routes preserve actual sole clearance, prop targets and safe work returns
+  ---
+  duration_ms: 4022.518916
+  type: 'test'
+  ...
+# Subtest: twenty meeting seat orders support palms without taking a held cup and fully release support
+ok 119 - twenty meeting seat orders support palms without taking a held cup and fully release support
+  ---
+  duration_ms: 123231.915167
+  type: 'test'
+  ...
+# Subtest: meeting support pauses exactly and yields for every actor work interruption
+ok 120 - meeting support pauses exactly and yields for every actor work interruption
+  ---
+  duration_ms: 19163.464291
+  type: 'test'
+  ...
+# Subtest: five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+ok 121 - five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+  ---
+  duration_ms: 2802.062833
+  type: 'test'
+  ...
+# Subtest: relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+ok 122 - relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+  ---
+  duration_ms: 2207.010917
+  type: 'test'
+  ...
+# Subtest: a cup arm and both support hands retain contact authority while a free walking arm is released
+ok 123 - a cup arm and both support hands retain contact authority while a free walking arm is released
+  ---
+  duration_ms: 1357.988416
+  type: 'test'
+  ...
+# Subtest: individual standing gestures differ and preserve fixed joints and owned marker precedence
+ok 124 - individual standing gestures differ and preserve fixed joints and owned marker precedence
+  ---
+  duration_ms: 2191.359458
+  type: 'test'
+  ...
+# Subtest: pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+ok 125 - pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+  ---
+  duration_ms: 5244.101334
+  type: 'test'
+  ...
+# Subtest: all five have different initial rest habits and support-safe seated/standing transitions
+ok 126 - all five have different initial rest habits and support-safe seated/standing transitions
+  ---
+  duration_ms: 1459.692916
+  type: 'test'
+  ...
+# Subtest: walking with a cup keeps only the occupied arm bent and preserves handle contact
+ok 127 - walking with a cup keeps only the occupied arm bent and preserves handle contact
+  ---
+  duration_ms: 1360.722292
+  type: 'test'
+  ...
+# Subtest: Nara pilot then all five hands close continuously around pens, page and cups without moving wrist contacts
+ok 128 - Nara pilot then all five hands close continuously around pens, page and cups without moving wrist contacts
+  ---
+  duration_ms: 5571.284166
+  type: 'test'
+  ...
+# Subtest: articulated hands survive every pen interruption stage, pause and repeated use without new geometry
+ok 129 - articulated hands survive every pen interruption stage, pause and repeated use without new geometry
+  ---
+  duration_ms: 6399.503208
+  type: 'test'
+  ...
+# Subtest: Nara-Jun pilot then twenty directed desk visits keep the stationary approach occupied and release every resource
+ok 130 - Nara-Jun pilot then twenty directed desk visits keep the stationary approach occupied and release every resource
+  ---
+  duration_ms: 28576.595917
+  type: 'test'
+  ...
+# Subtest: desk visits cancel on either persons work, pause, arrival removal and competing requests without hiding host work
+ok 131 - desk visits cancel on either persons work, pause, arrival removal and competing requests without hiding host work
+  ---
+  duration_ms: 43936.713792
+  type: 'test'
+  ...
+# Subtest: twenty directed paper handovers preserve one owner, continuous world pose, hand contact and exact return
+ok 132 - twenty directed paper handovers preserve one owner, continuous world pose, hand contact and exact return
+  ---
+  duration_ms: 29644.319875
+  type: 'test'
+  ...
+# Subtest: paper cancellation before and after ownership commit places or carries the same object safely to a desk
+ok 133 - paper cancellation before and after ownership commit places or carries the same object safely to a desk
+  ---
+  duration_ms: 27763.920917
+  type: 'test'
+  ...
+# Subtest: invites require both actual responses and busy hosts defer without acquiring any space or delaying work
+ok 134 - invites require both actual responses and busy hosts defer without acquiring any space or delaying work
+  ---
+  duration_ms: 2328.210042
+  type: 'test'
+  ...
+# Subtest: five-person visit showcase covers all roles and a standing rest can continue directly into the window route
+ok 135 - five-person visit showcase covers all roles and a standing rest can continue directly into the window route
+  ---
+  duration_ms: 5922.568209
+  type: 'test'
+  ...
+# Subtest: interaction selection preserves old coverage, visits, bounded histories and seed repeatability under mixed work
+ok 136 - interaction selection preserves old coverage, visits, bounded histories and seed repeatability under mixed work
+  ---
+  duration_ms: 55868.222458
+  type: 'test'
+  ...
+# Subtest: actual work during paper receipt waits for arm cleanup without sharing that arm with a role prop
+ok 137 - actual work during paper receipt waits for arm cleanup without sharing that arm with a role prop
+  ---
+  duration_ms: 5671.106791
+  type: 'test'
+  ...
+# Subtest: a cancelled received page stays at its new desk while replay remains finite, and work clears queued tours
+ok 138 - a cancelled received page stays at its new desk while replay remains finite, and work clears queued tours
+  ---
+  duration_ms: 4196.129042
+  type: 'test'
+  ...
+# Subtest: review pages rest on measured desk/notebook surfaces and receipt cancellation preserves support contact
+ok 139 - review pages rest on measured desk/notebook surfaces and receipt cancellation preserves support contact
+  ---
+  duration_ms: 7796.8755
+  type: 'test'
+  ...
+# Subtest: living v9 preserves five rigs, all clips and immutable v8 baseline
+ok 140 - living v9 preserves five rigs, all clips and immutable v8 baseline
+  ---
+  duration_ms: 2067.760333
+  type: 'test'
+  ...
+# Subtest: nara three living variants keep body support and fixed limb lengths
+ok 141 - nara three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 5891.073458
+  type: 'test'
+  ...
+# Subtest: sora three living variants keep body support and fixed limb lengths
+ok 142 - sora three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 5198.178208
+  type: 'test'
+  ...
+# Subtest: jun three living variants keep body support and fixed limb lengths
+ok 143 - jun three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4862.881792
+  type: 'test'
+  ...
+# Subtest: min three living variants keep body support and fixed limb lengths
+ok 144 - min three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 4027.126709
+  type: 'test'
+  ...
+# Subtest: leo three living variants keep body support and fixed limb lengths
+ok 145 - leo three living variants keep body support and fixed limb lengths
+  ---
+  duration_ms: 5136.182042
+  type: 'test'
+  ...
+# Subtest: exported living GLB reloads five support grips and 105 clips; every actor can use both hands
+ok 146 - exported living GLB reloads five support grips and 105 clips; every actor can use both hands
+  ---
+  duration_ms: 2459.56675
+  type: 'test'
+  ...
+# Subtest: nara supports raised cup with both hands, keeps one owner and returns safely
+ok 147 - nara supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 2203.032291
+  type: 'test'
+  ...
+# Subtest: sora supports raised cup with both hands, keeps one owner and returns safely
+ok 148 - sora supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1167.996875
+  type: 'test'
+  ...
+# Subtest: jun supports raised cup with both hands, keeps one owner and returns safely
+ok 149 - jun supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1161.082667
+  type: 'test'
+  ...
+# Subtest: min supports raised cup with both hands, keeps one owner and returns safely
+ok 150 - min supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1142.066958
+  type: 'test'
+  ...
+# Subtest: leo supports raised cup with both hands, keeps one owner and returns safely
+ok 151 - leo supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1157.177375
+  type: 'test'
+  ...
+# Subtest: two-hand cup releases the support safely when actual work preempts drinking
+ok 152 - two-hand cup releases the support safely when actual work preempts drinking
+  ---
+  duration_ms: 1069.801083
+  type: 'test'
+  ...
+# Subtest: complete pose frames share body, finger matrices and attached props without independent scheduling
+ok 153 - complete pose frames share body, finger matrices and attached props without independent scheduling
+  ---
+  duration_ms: 4420.368417
+  type: 'test'
+  ...
+# Subtest: 3 seated participants all speak, write, clean and return
+ok 154 - 3 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 7255.506958
+  type: 'test'
+  ...
+# Subtest: 4 seated participants all speak, write, clean and return
+ok 155 - 4 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 8814.315417
+  type: 'test'
+  ...
+# Subtest: 2 standing participants arrive before turns and return without overlap
+ok 156 - 2 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3286.208375
+  type: 'test'
+  ...
+# Subtest: 3 standing participants arrive before turns and return without overlap
+ok 157 - 3 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3857.399875
+  type: 'test'
+  ...
+# Subtest: 4 standing participants arrive before turns and return without overlap
+ok 158 - 4 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 2862.2185
+  type: 'test'
+  ...
+# Subtest: 5 standing participants arrive before turns and return without overlap
+ok 159 - 5 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 2953.369875
+  type: 'test'
+  ...
+# Subtest: standing meeting rejects malformed participants and cleans on work interruption
+ok 160 - standing meeting rejects malformed participants and cleans on work interruption
+  ---
+  duration_ms: 2563.368833
+  type: 'test'
+  ...
+# Subtest: minimal shared activity summaries render every caption without private scheduler details
+ok 161 - minimal shared activity summaries render every caption without private scheduler details
+  ---
+  duration_ms: 0.511542
+  type: 'test'
+  ...
+# Subtest: passing greetings are bounded and never replace prop hands or routes
+ok 162 - passing greetings are bounded and never replace prop hands or routes
+  ---
+  duration_ms: 5002.168625
+  type: 'test'
+  ...
+# Subtest: nara safely resumes interrupted sofa/window/rest/coffee after real work
+ok 163 - nara safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 6017.84575
+  type: 'test'
+  ...
+# Subtest: sora safely resumes interrupted sofa/window/rest/coffee after real work
+ok 164 - sora safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 6522.464916
+  type: 'test'
+  ...
+# Subtest: jun safely resumes interrupted sofa/window/rest/coffee after real work
+ok 165 - jun safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 5326.231167
+  type: 'test'
+  ...
+# Subtest: min safely resumes interrupted sofa/window/rest/coffee after real work
+ok 166 - min safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 5175.024375
+  type: 'test'
+  ...
+# Subtest: leo safely resumes interrupted sofa/window/rest/coffee after real work
+ok 167 - leo safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 8996.605541
+  type: 'test'
+  ...
+# Subtest: explicit cancellation and participant removal discard resume intent
+ok 168 - explicit cancellation and participant removal discard resume intent
+  ---
+  duration_ms: 1720.81025
+  type: 'test'
+  ...
+# Subtest: all five approach the shared board, grip one marker, point, replace and return
+ok 169 - all five approach the shared board, grip one marker, point, replace and return
+  ---
+  duration_ms: 8714.468375
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during approach
+ok 170 - board review safely cancels during approach
+  ---
+  duration_ms: 3318.045708
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during use
+ok 171 - board review safely cancels during use
+  ---
+  duration_ms: 3516.169375
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during replace
+ok 172 - board review safely cancels during replace
+  ---
+  duration_ms: 5445.590083
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during back
+ok 173 - board review safely cancels during back
+  ---
+  duration_ms: 6677.24225
+  type: 'test'
+  ...
+# Subtest: focus scenario completes all four phases and safely returns
+ok 174 - focus scenario completes all four phases and safely returns
+  ---
+  duration_ms: 15501.696625
+  type: 'test'
+  ...
+# Subtest: review scenario completes all four phases and safely returns
+ok 175 - review scenario completes all four phases and safely returns
+  ---
+  duration_ms: 16677.156
+  type: 'test'
+  ...
+# Subtest: break scenario completes all four phases and safely returns
+ok 176 - break scenario completes all four phases and safely returns
+  ---
+  duration_ms: 14112.999625
+  type: 'test'
+  ...
+# Subtest: scenario respects work, pause and explicit cancellation; camera identifies group events
+ok 177 - scenario respects work, pause and explicit cancellation; camera identifies group events
+  ---
+  duration_ms: 1838.207334
+  type: 'test'
+  ...
+# Subtest: sample embeds valid PNG buffer views with proper color/data texture assignments; v4 is unchanged
+ok 178 - sample embeds valid PNG buffer views with proper color/data texture assignments; v4 is unchanged
+  ---
+  duration_ms: 1.97
+  type: 'test'
+  ...
+# Subtest: actual GLB reload preserves rig, clips, anchors and texture bindings (PNG pixels checked in browser)
+ok 179 - actual GLB reload preserves rig, clips, anchors and texture bindings (PNG pixels checked in browser)
+  ---
+  duration_ms: 43.265625
+  type: 'test'
+  ...
+# Subtest: full cycle keeps exact leg lengths, foot clearance and walk-body clearance at 30/60Hz
+ok 180 - full cycle keeps exact leg lengths, foot clearance and walk-body clearance at 30/60Hz
+  ---
+  duration_ms: 90.656292
+  type: 'test'
+  ...
+# Subtest: planted walk feet stay world-fixed within 2cm; swing is not counted as planted
+ok 181 - planted walk feet stay world-fixed within 2cm; swing is not counted as planted
+  ---
+  duration_ms: 0.424208
+  type: 'test'
+  ...
+# Subtest: pause freezes world and pose clock; new work cannot start typing away from seat
+ok 182 - pause freezes world and pose clock; new work cannot start typing away from seat
+  ---
+  duration_ms: 0.47375
+  type: 'test'
+  ...
+# Subtest: all five existing stations have the same unobstructed lateral exit in the greybox
+ok 183 - all five existing stations have the same unobstructed lateral exit in the greybox
+  ---
+  duration_ms: 1.865
+  type: 'test'
+  ...
+# Subtest: interrupted return preserves position and reaches a seated pose with no unreachable leg targets
+ok 184 - interrupted return preserves position and reaches a seated pose with no unreachable leg targets
+  ---
+  duration_ms: 204.402875
+  type: 'test'
+  ...
+# Subtest: detailed workspace keeps the seat/desk dimensions and typing hands above the solid desktop
+ok 185 - detailed workspace keeps the seat/desk dimensions and typing hands above the solid desktop
+  ---
+  duration_ms: 34.0635
+  type: 'test'
+  ...
+# Subtest: pose changes stay continuous across stand/walk/turn/sit boundaries
+ok 186 - pose changes stay continuous across stand/walk/turn/sit boundaries
+  ---
+  duration_ms: 72.435959
+  type: 'test'
+  ...
+# Subtest: cloth deformation survives export and stays finite at all principal poses
+ok 187 - cloth deformation survives export and stays finite at all principal poses
+  ---
+  duration_ms: 20.662291
+  type: 'test'
+  ...
+# Subtest: natural route accelerates and settles while planted feet stay fixed
+ok 188 - natural route accelerates and settles while planted feet stay fixed
+  ---
+  duration_ms: 3.671458
+  type: 'test'
+  ...
+# Subtest: Nara natural transition preserves cup reach, pause and continuous eye phase
+ok 189 - Nara natural transition preserves cup reach, pause and continuous eye phase
+  ---
+  duration_ms: 740.403541
+  type: 'test'
+  ...
+# Subtest: five roles perform distinct full-body rests and safely interrupt back to work
+ok 190 - five roles perform distinct full-body rests and safely interrupt back to work
+  ---
+  duration_ms: 1405.314709
+  type: 'test'
+  ...
+# Subtest: natural meetings vary held/table cups, sip with each participant and return without abandonment
+ok 191 - natural meetings vary held/table cups, sip with each participant and return without abandonment
+  ---
+  duration_ms: 5899.74
+  type: 'test'
+  ...
+# Subtest: new held sip and table transitions finish safely when meeting work arrives
+ok 192 - new held sip and table transitions finish safely when meeting work arrives
+  ---
+  duration_ms: 6171.594416
+  type: 'test'
+  ...
+# Subtest: social exchange waits for both presented responses and times out if a peer never responds
+ok 193 - social exchange waits for both presented responses and times out if a peer never responds
+  ---
+  duration_ms: 0.423625
+  type: 'test'
+  ...
+# Subtest: paired greeting and note confirmation complete once; missing peer and work clear both participants
+ok 194 - paired greeting and note confirmation complete once; missing peer and work clear both participants
+  ---
+  duration_ms: 2671.859667
+  type: 'test'
+  ...
+# Subtest: all five roles can pair for shared confirmation without overlapping activity ownership
+ok 195 - all five roles can pair for shared confirmation without overlapping activity ownership
+  ---
+  duration_ms: 20472.442042
+  type: 'test'
+  ...
+# Subtest: seeded activity choices reproduce and paused social responses do not advance
+ok 196 - seeded activity choices reproduce and paused social responses do not advance
+  ---
+  duration_ms: 5128.538875
+  type: 'test'
+  ...
+# Subtest: meeting participants cannot be reassigned while the other participant is returning
+ok 197 - meeting participants cannot be reassigned while the other participant is returning
+  ---
+  duration_ms: 1954.385125
+  type: 'test'
+  ...
+# Subtest: Nara-only candidate keeps baseline partners eligible for repeated meetings
+ok 198 - Nara-only candidate keeps baseline partners eligible for repeated meetings
+  ---
+  duration_ms: 8732.070209
+  type: 'test'
+  ...
+# Subtest: Nara returns continuously when work arrives during acceleration, braking, turning or seating
+ok 199 - Nara returns continuously when work arrives during acceleration, braking, turning or seating
+  ---
+  duration_ms: 3390.181041
+  type: 'test'
+  ...
+# Subtest: v4 has independent preparation/review/send/receive rigs and safe sampled hands, fixed contacts and gaze limits
+ok 200 - v4 has independent preparation/review/send/receive rigs and safe sampled hands, fixed contacts and gaze limits
+  ---
+  duration_ms: 42.96925
+  type: 'test'
+  ...
+# Subtest: one-off reaction returns to current work; pause preserves clip time, profiles differ and cancellation interrupts
+ok 201 - one-off reaction returns to current work; pause preserves clip time, profiles differ and cancellation interrupts
+  ---
+  duration_ms: 1.1565
+  type: 'test'
+  ...
+# Subtest: personal drink and support use the same normalized phase and settle before return
+ok 202 - personal drink and support use the same normalized phase and settle before return
+  ---
+  duration_ms: 1.033833
+  type: 'test'
+  ...
+# Subtest: five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+ok 203 - five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+  ---
+  duration_ms: 13114.091584
+  type: 'test'
+  ...
+# Subtest: personal carry and table drinking keep machine duration and fair queue policy
+ok 204 - personal carry and table drinking keep machine duration and fair queue policy
+  ---
+  duration_ms: 14112.461125
+  type: 'test'
+  ...
+# Subtest: v12 window variant reaches final free arms while v11 comparison retains its original result
+ok 205 - v12 window variant reaches final free arms while v11 comparison retains its original result
+  ---
+  duration_ms: 7165.048125
+  type: 'test'
+  ...
+# Subtest: all five board approaches and returns use the same personal gait policy as other routes
+ok 206 - all five board approaches and returns use the same personal gait policy as other routes
+  ---
+  duration_ms: 2565.778459
+  type: 'test'
+  ...
+# Subtest: v12 composition preserves cup ownership and both support contacts for all five
+not ok 207 - v12 composition preserves cup ownership and both support contacts for all five
+  ---
+  duration_ms: 1721.200292
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-foundation.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: 'activity settles within 15s'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:137)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-foundation.test.mjs:11:184)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: v12 board marker contact and safe returns survive all five personal approach speeds
+ok 208 - v12 board marker contact and safe returns survive all five personal approach speeds
+  ---
+  duration_ms: 5957.975584
+  type: 'test'
+  ...
+# Subtest: v12 posture and personal grips use the unchanged v11 scene schema and survive a full frame round trip
+ok 209 - v12 posture and personal grips use the unchanged v11 scene schema and survive a full frame round trip
+  ---
+  duration_ms: 7113.218542
+  type: 'test'
+  ...
+# Subtest: Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+ok 210 - Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+  ---
+  duration_ms: 4869.471041
+  type: 'test'
+  ...
+# Subtest: Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+ok 211 - Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+  ---
+  duration_ms: 3498.55225
+  type: 'test'
+  ...
+# Subtest: Nara pilot: work interruption during seating releases support and returns without stale claims
+ok 212 - Nara pilot: work interruption during seating releases support and returns without stale claims
+  ---
+  duration_ms: 3814.254709
+  type: 'test'
+  ...
+# Subtest: personal conversation prepares, takes turns and settles without changing acknowledgement lengths
+ok 213 - personal conversation prepares, takes turns and settles without changing acknowledgement lengths
+  ---
+  duration_ms: 10.673875
+  type: 'test'
+  ...
+# Subtest: all 20 ordered sofa pairs keep armrest/lap support, personal gestures and return
+ok 214 - all 20 ordered sofa pairs keep armrest/lap support, personal gestures and return
+  ---
+  duration_ms: 66651.280666
+  type: 'test'
+  ...
+# Subtest: personal visit invitation completes each role, cancels for work and never greets with an occupied prop hand
+ok 215 - personal visit invitation completes each role, cancels for work and never greets with an occupied prop hand
+  ---
+  duration_ms: 10281.710708
+  type: 'test'
+  ...
+# Subtest: personal two-person meetings serialize during pickup, discussion and return without retaining the scheduler
+ok 216 - personal two-person meetings serialize during pickup, discussion and return without retaining the scheduler
+  ---
+  duration_ms: 3149.502417
+  type: 'test'
+  ...
+# Subtest: all five personal board explanations pause on reachable points and return the single marker
+ok 217 - all five personal board explanations pause on reachable points and return the single marker
+  ---
+  duration_ms: 5941.08425
+  type: 'test'
+  ...
+# Subtest: five receiver styles and every document interruption keep one owner, fixed contact and final support
+ok 218 - five receiver styles and every document interruption keep one owner, fixed contact and final support
+  ---
+  duration_ms: 23219.506
+  type: 'test'
+  ...
+# Subtest: rapid work result cues stay restrained and do not accumulate queued presentation or change business input
+ok 219 - rapid work result cues stay restrained and do not accumulate queued presentation or change business input
+  ---
+  duration_ms: 1184.595416
+  type: 'test'
+  ...
+# Subtest: nara completes all seat transitions with original foot targets and fixed rig lengths
+ok 220 - nara completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 4798.076792
+  type: 'test'
+  ...
+# Subtest: sora completes all seat transitions with original foot targets and fixed rig lengths
+ok 221 - sora completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3239.611084
+  type: 'test'
+  ...
+# Subtest: jun completes all seat transitions with original foot targets and fixed rig lengths
+ok 222 - jun completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3201.640333
+  type: 'test'
+  ...
+# Subtest: min completes all seat transitions with original foot targets and fixed rig lengths
+ok 223 - min completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 2662.95325
+  type: 'test'
+  ...
+# Subtest: leo completes all seat transitions with original foot targets and fixed rig lengths
+ok 224 - leo completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3209.852
+  type: 'test'
+  ...
+# Subtest: 2 seated colleagues use personal listening and safe support gestures, then return
+ok 225 - 2 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 4671.399208
+  type: 'test'
+  ...
+# Subtest: 3 seated colleagues use personal listening and safe support gestures, then return
+ok 226 - 3 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 7777.371458
+  type: 'test'
+  ...
+# Subtest: 4 seated colleagues use personal listening and safe support gestures, then return
+ok 227 - 4 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 11607.261708
+  type: 'test'
+  ...
+# Subtest: 5 seated colleagues use personal listening and safe support gestures, then return
+ok 228 - 5 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 11648.494333
+  type: 'test'
+  ...
+# Subtest: five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+ok 229 - five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+  ---
+  duration_ms: 9270.209542
+  type: 'test'
+  ...
+# Subtest: all five transition interruptions preserve return/cancel cleanup at different phases
+ok 230 - all five transition interruptions preserve return/cancel cleanup at different phases
+  ---
+  duration_ms: 13238.421167
+  type: 'test'
+  ...
+# Subtest: single-actor pilot does not enable posture for the other four, and repeated reset releases state
+ok 231 - single-actor pilot does not enable posture for the other four, and repeated reset releases state
+  ---
+  duration_ms: 4371.338334
+  type: 'test'
+  ...
+# Subtest: 15 personal work recipes have observe, act, pause, check and truly held trajectories
+ok 232 - 15 personal work recipes have observe, act, pause, check and truly held trajectories
+  ---
+  duration_ms: 2.104
+  type: 'test'
+  ...
+# Subtest: all 15 recipes preserve pen/hand contact, ownership, return and all-stage cancellation
+ok 233 - all 15 recipes preserve pen/hand contact, ownership, return and all-stage cancellation
+  ---
+  duration_ms: 18717.797958
+  type: 'test'
+  ...
+# Subtest: real work cancels manual recipe, absence cancels real recipe, pause holds the recipe
+ok 234 - real work cancels manual recipe, absence cancels real recipe, pause holds the recipe
+  ---
+  duration_ms: 1394.510625
+  type: 'test'
+  ...
+# Subtest: workspace visits send a best-effort leave and reject late responses across A→B→A
+ok 235 - workspace visits send a best-effort leave and reject late responses across A→B→A
+  ---
+  duration_ms: 0.685208
+  type: 'test'
+  ...
+# Subtest: failed connections clear confirmed presence, closed visits rotate once, stale failures cannot clear a new visit
+ok 236 - failed connections clear confirmed presence, closed visits rotate once, stale failures cannot clear a new visit
+  ---
+  duration_ms: 0.217833
+  type: 'test'
+  ...
+# Subtest: presence presentation distinguishes offline from unknown and counts members only
+ok 237 - presence presentation distinguishes offline from unknown and counts members only
+  ---
+  duration_ms: 0.216083
+  type: 'test'
+  ...
+# Subtest: combined remote sync carries the visit identity and exposes presence separately from task snapshots
+ok 238 - combined remote sync carries the visit identity and exposes presence separately from task snapshots
+  ---
+  duration_ms: 0.094
+  type: 'test'
+  ...
+# Subtest: project save locks survive renders, prevent duplicate writes/reloads and use the latest saved version
+ok 239 - project save locks survive renders, prevent duplicate writes/reloads and use the latest saved version
+  ---
+  duration_ms: 1.581959
+  type: 'test'
+  ...
+# Subtest: old space results and logout responses cannot restore project fields even with a larger version
+ok 240 - old space results and logout responses cannot restore project fields even with a larger version
+  ---
+  duration_ms: 0.4265
+  type: 'test'
+  ...
+# Subtest: conflicts preserve the draft and a role downgrade cannot unlock a pending save
+ok 241 - conflicts preserve the draft and a role downgrade cannot unlock a pending save
+  ---
+  duration_ms: 0.326708
+  type: 'test'
+  ...
+# Subtest: QA profiles preserve historical evidence and require explicit new runtime versions
+ok 242 - QA profiles preserve historical evidence and require explicit new runtime versions
+  ---
+  duration_ms: 0.456958
+  type: 'test'
+  ...
+# Subtest: ensemble QA pairs room8/activity10 with the preserved room7/activity9 comparison
+ok 243 - ensemble QA pairs room8/activity10 with the preserved room7/activity9 comparison
+  ---
+  duration_ms: 0.056292
+  type: 'test'
+  ...
+# Subtest: visit captions distinguish a seated host from travelling and returning visitors in every phase
+ok 244 - visit captions distinguish a seated host from travelling and returning visitors in every phase
+  ---
+  duration_ms: 0.770458
+  type: 'test'
+  ...
+# Subtest: twenty refined paper visits keep host coordinates and captions consistent through handover and cleanup
+ok 245 - twenty refined paper visits keep host coordinates and captions consistent through handover and cleanup
+  ---
+  duration_ms: 13508.860167
+  type: 'test'
+  ...
+# Subtest: all five refined fingers reach real pen shaft, cup and page supports without changing wrist, tip or finger lengths
+ok 246 - all five refined fingers reach real pen shaft, cup and page supports without changing wrist, tip or finger lengths
+  ---
+  duration_ms: 4261.893459
+  type: 'test'
+  ...
+# Subtest: refined diagnostics report unreachable supports honestly and preserve original v6 pen targets
+ok 247 - refined diagnostics report unreachable supports honestly and preserve original v6 pen targets
+  ---
+  duration_ms: 1041.336625
+  type: 'test'
+  ...
+# Subtest: refined captions release hosts immediately for new work and preserve the old v6 comparison profile
+ok 248 - refined captions release hosts immediately for new work and preserve the old v6 comparison profile
+  ---
+  duration_ms: 1176.781375
+  type: 'test'
+  ...
+# Subtest: twenty refined sofa seat orders support outer palms and vary one inner hand with continuous transitions
+ok 249 - twenty refined sofa seat orders support outer palms and vary one inner hand with continuous transitions
+  ---
+  duration_ms: 28683.707833
+  type: 'test'
+  ...
+# Subtest: refined sofa support pauses without drift and yields both arms for all five work returns
+ok 250 - refined sofa support pauses without drift and yields both arms for all five work returns
+  ---
+  duration_ms: 5630.282709
+  type: 'test'
+  ...
+# Subtest: v7 soak gates require the requested version, five-finger diagnostics and complete sofa support release
+ok 251 - v7 soak gates require the requested version, five-finger diagnostics and complete sofa support release
+  ---
+  duration_ms: 344.968916
+  type: 'test'
+  ...
+# Subtest: sofa pairs share presented responses for all ten combinations and both seat orders without seat/foot drift
+ok 252 - sofa pairs share presented responses for all ten combinations and both seat orders without seat/foot drift
+  ---
+  duration_ms: 15773.208541
+  type: 'test'
+  ...
+# Subtest: late or removed sofa peer, work while paused and early return cannot leak/reuse the paired participant
+ok 253 - late or removed sofa peer, work while paused and early return cannot leak/reuse the paired participant
+  ---
+  duration_ms: 4831.795042
+  type: 'test'
+  ...
+# Subtest: Nara writes with one pencil, reachable hand, fixed grip and paper contact before all five roles expand
+ok 254 - Nara writes with one pencil, reachable hand, fixed grip and paper contact before all five roles expand
+  ---
+  duration_ms: 2367.609
+  type: 'test'
+  ...
+# Subtest: every desk stage cancels safely for work, pause holds ownership and dispose restores original props
+ok 255 - every desk stage cancels safely for work, pause holds ownership and dispose restores original props
+  ---
+  duration_ms: 4536.615125
+  type: 'test'
+  ...
+# Subtest: gaze follows props before peers, stays inside eye bounds and restores faces after disposal
+ok 256 - gaze follows props before peers, stays inside eye bounds and restores faces after disposal
+  ---
+  duration_ms: 656.090333
+  type: 'test'
+  ...
+# Subtest: the single window destination validates all routes, turn footprint and interruption/return ownership
+ok 257 - the single window destination validates all routes, turn footprint and interruption/return ownership
+  ---
+  duration_ms: 6129.795583
+  type: 'test'
+  ...
+# Subtest: actual work starts role props with ambient motion disabled and retains latest handoff/completion state
+ok 258 - actual work starts role props with ambient motion disabled and retains latest handoff/completion state
+  ---
+  duration_ms: 553.259125
+  type: 'test'
+  ...
+# Subtest: recreating a runtime while an actor is away preserves canonical desk props and one visible document
+ok 259 - recreating a runtime while an actor is away preserves canonical desk props and one visible document
+  ---
+  duration_ms: 623.818375
+  type: 'test'
+  ...
+# Subtest: one seeded selector covers old and new actions, waits for partners and cleans up after mixed work
+ok 260 - one seeded selector covers old and new actions, waits for partners and cleans up after mixed work
+  ---
+  duration_ms: 10976.65875
+  type: 'test'
+  ...
+# Subtest: room contact bake contains immutable furniture only and leaves actor/chair routes unpainted
+ok 261 - room contact bake contains immutable furniture only and leaves actor/chair routes unpainted
+  ---
+  duration_ms: 0.640792
+  type: 'test'
+  ...
+# Subtest: window sample preserves all five actors and 105 bindings while adding separate normalized floor AO UVs
+ok 262 - window sample preserves all five actors and 105 bindings while adding separate normalized floor AO UVs
+  ---
+  duration_ms: 265.31025
+  type: 'test'
+  ...
+# Subtest: room lighting uses one shadow light and repeated day-quality changes own no extra lights
+ok 263 - room lighting uses one shadow light and repeated day-quality changes own no extra lights
+  ---
+  duration_ms: 0.452084
+  type: 'test'
+  ...
+# Subtest: room surface maps are deterministic, seamless and use glTF ORM channel meanings
+ok 264 - room surface maps are deterministic, seamless and use glTF ORM channel meanings
+  ---
+  duration_ms: 41.619541
+  type: 'test'
+  ...
+# Subtest: surface expansion retains rig/triangle contract and stays below the proposed texture budget
+ok 265 - surface expansion retains rig/triangle contract and stays below the proposed texture budget
+  ---
+  duration_ms: 206.660958
+  type: 'test'
+  ...
+# Subtest: new room zones preserve every lateral route and stay within geometry budget
+ok 266 - new room zones preserve every lateral route and stay within geometry budget
+  ---
+  duration_ms: 195.68625
+  type: 'test'
+  ...
+# Subtest: layered exterior and reading lamp change together without reallocating sky attributes or lights
+ok 267 - layered exterior and reading lamp change together without reallocating sky attributes or lights
+  ---
+  duration_ms: 207.858
+  type: 'test'
+  ...
+# Subtest: role screens differ and room cutaway/status presentation never moves actors or changes task data
+ok 268 - role screens differ and room cutaway/status presentation never moves actors or changes task data
+  ---
+  duration_ms: 217.103125
+  type: 'test'
+  ...
+# Subtest: small-screen label placement keeps the selected actor and avoids overlapping rectangles
+ok 269 - small-screen label placement keeps the selected actor and avoids overlapping rectangles
+  ---
+  duration_ms: 6.897167
+  type: 'test'
+  ...
+# Subtest: soak validation rejects pauses, hidden/restarted clocks and multiple movers without inventing a pass
+ok 270 - soak validation rejects pauses, hidden/restarted clocks and multiple movers without inventing a pass
+  ---
+  duration_ms: 1.332
+  type: 'test'
+  ...
+# Subtest: actual v6 GLB preserves surface color spaces, screen emission, AO channel and portal contracts
+ok 271 - actual v6 GLB preserves surface color spaces, screen emission, AO channel and portal contracts
+  ---
+  duration_ms: 166.092083
+  type: 'test'
+  ...
+# Subtest: mixed soak cannot pass with idle-only activity even when time and rest counters look valid
+ok 272 - mixed soak cannot pass with idle-only activity even when time and rest counters look valid
+  ---
+  duration_ms: 0.208584
+  type: 'test'
+  ...
+# Subtest: shared scene follows, claims once, publishes monotonically, releases and cleans timers
+ok 273 - shared scene follows, claims once, publishes monotonically, releases and cleans timers
+  ---
+  duration_ms: 1.73475
+  type: 'test'
+  ...
+# Subtest: late entry receives the last scene and switching away ignores an old response
+ok 274 - late entry receives the last scene and switching away ignores an old response
+  ---
+  duration_ms: 0.438041
+  type: 'test'
+  ...
+# Subtest: renderer fallback releases controller ownership instead of reporting a frozen sender as live
+ok 275 - renderer fallback releases controller ownership instead of reporting a frozen sender as live
+  ---
+  duration_ms: 0.477791
+  type: 'test'
+  ...
+# Subtest: controller start waits for an in-flight poll and never silently drops a click
+ok 276 - controller start waits for an in-flight poll and never silently drops a click
+  ---
+  duration_ms: 0.501125
+  type: 'test'
+  ...
+# Subtest: switching spaces cancels a controller request waiting behind a poll
+ok 277 - switching spaces cancels a controller request waiting behind a poll
+  ---
+  duration_ms: 0.234042
+  type: 'test'
+  ...
+# Subtest: server run owner controls each actor independently of selected colleague and old history
+ok 278 - server run owner controls each actor independently of selected colleague and old history
+  ---
+  duration_ms: 1.111208
+  type: 'test'
+  ...
+# Subtest: approval, queued, cancel request and terminal states do not type; reduced motion changes no run
+ok 279 - approval, queued, cancel request and terminal states do not type; reduced motion changes no run
+  ---
+  duration_ms: 0.270458
+  type: 'test'
+  ...
+# Subtest: analysis and review phases think, composition types, and a terminal cue belongs to its actor
+ok 280 - analysis and review phases think, composition types, and a terminal cue belongs to its actor
+  ---
+  duration_ms: 0.079375
+  type: 'test'
+  ...
+# Subtest: team composition shows five independent tasks; handoff completion moves the current writer and fans out completion cues
+ok 281 - team composition shows five independent tasks; handoff completion moves the current writer and fans out completion cues
+  ---
+  duration_ms: 1.942209
+  type: 'test'
+  ...
+# Subtest: an old search failure cannot replace the latest search state and logout unlocks the next session
+ok 282 - an old search failure cannot replace the latest search state and logout unlocks the next session
+  ---
+  duration_ms: 1.511541
+  type: 'test'
+  ...
+# Subtest: measurement completion never displays a passing JSON before cleanup finishes
+ok 283 - measurement completion never displays a passing JSON before cleanup finishes
+  ---
+  duration_ms: 0.88475
+  type: 'test'
+  ...
+# Subtest: cleanup timeout and errors observed after measurement cannot become a pass
+ok 284 - cleanup timeout and errors observed after measurement cannot become a pass
+  ---
+  duration_ms: 0.633584
+  type: 'test'
+  ...
+# Subtest: visits preserve valid completion/error/handoff cues after cleanup for both actors and all five colleagues
+ok 285 - visits preserve valid completion/error/handoff cues after cleanup for both actors and all five colleagues
+  ---
+  duration_ms: 13694.315334
+  type: 'test'
+  ...
+# Subtest: new work, actor removal and pause do not replay or age stale visit cues
+ok 286 - new work, actor removal and pause do not replay or age stale visit cues
+  ---
+  duration_ms: 399.365458
+  type: 'test'
+  ...
+# Subtest: a free unserved colleague keeps its desk opportunity until a visit partner becomes available
+ok 287 - a free unserved colleague keeps its desk opportunity until a visit partner becomes available
+  ---
+  duration_ms: 311.7725
+  type: 'test'
+  ...
+# Subtest: the unserved visit intent survives another ongoing visit and releases immediately for real work
+ok 288 - the unserved visit intent survives another ongoing visit and releases immediately for real work
+  ---
+  duration_ms: 313.718542
+  type: 'test'
+  ...
+# Subtest: soak gate rejects cancelled-only visits, missing diagnostics, partial transfer and forged sparse clocks
+ok 289 - soak gate rejects cancelled-only visits, missing diagnostics, partial transfer and forged sparse clocks
+  ---
+  duration_ms: 358.009542
+  type: 'test'
+  ...
+# Subtest: two-person meeting arrives, puts cups down, talks, retrieves and returns home
+ok 290 - two-person meeting arrives, puts cups down, talks, retrieves and returns home
+  ---
+  duration_ms: 1902.551792
+  type: 'test'
+  ...
+# Subtest: meeting work interruption reclaims cups and releases every participant without changing VM
+ok 291 - meeting work interruption reclaims cups and releases every participant without changing VM
+  ---
+  duration_ms: 1599.089666
+  type: 'test'
+  ...
+# Subtest: five-person showcase respects capacity, keeps bodies apart and completes for every role
+ok 292 - five-person showcase respects capacity, keeps bodies apart and completes for every role
+  ---
+  duration_ms: 2717.308875
+  type: 'test'
+  ...
+# Subtest: every role can use either sofa and can sip with its own hand without range errors
+ok 293 - every role can use either sofa and can sip with its own hand without range errors
+  ---
+  duration_ms: 3101.261333
+  type: 'test'
+  ...
+# Subtest: work during meeting arrival, seated cup and paused state returns to actual work and clears claims
+ok 294 - work during meeting arrival, seated cup and paused state returns to actual work and clears claims
+  ---
+  duration_ms: 2266.773459
+  type: 'test'
+  ...
+# Subtest: autonomous activities retry work interruptions and give every role sofa, cup and meeting time
+ok 295 - autonomous activities retry work interruptions and give every role sofa, cup and meeting time
+  ---
+  duration_ms: 9007.459417
+  type: 'test'
+  ...
+# Subtest: five-person GLB: separate same-scale stations, floor contacts, room and clear aisles
+ok 296 - five-person GLB: separate same-scale stations, floor contacts, room and clear aisles
+  ---
+  duration_ms: 7.172167
+  type: 'test'
+  ...
+# Subtest: all five rigs animate independently while all furniture stays fixed
+ok 297 - all five rigs animate independently while all furniture stays fixed
+  ---
+  duration_ms: 4.126291
+  type: 'test'
+  ...
+# Subtest: five-person framing keeps all room corners in view for desktop and narrow layouts
+ok 298 - five-person framing keeps all room corners in view for desktop and narrow layouts
+  ---
+  duration_ms: 0.822416
+  type: 'test'
+  ...
+# Subtest: only observed public boundaries emit once; skipped stages collapse to newest and stale responses cannot rewind
+ok 299 - only observed public boundaries emit once; skipped stages collapse to newest and stale responses cannot rewind
+  ---
+  duration_ms: 0.600125
+  type: 'test'
+  ...
+# Subtest: initial history, resume, pause, cancellation, retry and workspace switching do not replay old handoffs
+ok 300 - initial history, resume, pause, cancellation, retry and workspace switching do not replay old handoffs
+  ---
+  duration_ms: 0.061792
+  type: 'test'
+  ...
+# Subtest: preparation, writing, reviewing and missing team metadata have truthful distinct poses and labels
+ok 301 - preparation, writing, reviewing and missing team metadata have truthful distinct poses and labels
+  ---
+  duration_ms: 0.315583
+  type: 'test'
+  ...
+# Subtest: summary uses only fully public previous section and never metadata or future text
+ok 302 - summary uses only fully public previous section and never metadata or future text
+  ---
+  duration_ms: 0.0615
+  type: 'test'
+  ...
+# Subtest: reduced motion overrides play; hidden tabs suppress reactions and stay compatible with manual pause
+ok 303 - reduced motion overrides play; hidden tabs suppress reactions and stay compatible with manual pause
+  ---
+  duration_ms: 0.109417
+  type: 'test'
+  ...
+# Subtest: team GLB has two distinct selectable colleagues, same-scale stations and a matching manifest
+ok 304 - team GLB has two distinct selectable colleagues, same-scale stations and a matching manifest
+  ---
+  duration_ms: 3.1135
+  type: 'test'
+  ...
+# Subtest: all team support points stay on the floor and inside room bounds
+ok 305 - all team support points stay on the floor and inside room bounds
+  ---
+  duration_ms: 0.230458
+  type: 'test'
+  ...
+# Subtest: independent typing does not alter the other colleague's idle motion or grounded furniture
+ok 306 - independent typing does not alter the other colleague's idle motion or grounded furniture
+  ---
+  duration_ms: 5.623708
+  type: 'test'
+  ...
+# Subtest: rigid instancing reduces draw objects without deleting surfaces, bounds or character joints
+ok 307 - rigid instancing reduces draw objects without deleting surfaces, bounds or character joints
+  ---
+  duration_ms: 84.681333
+  type: 'test'
+  ...
+# Subtest: seven material families and three lighting-quality budgets are explicit and reversible
+ok 308 - seven material families and three lighting-quality budgets are explicit and reversible
+  ---
+  duration_ms: 0.659666
+  type: 'test'
+  ...
+# Subtest: five role workspaces have distinct kits and lateral routes clear of real room furniture
+ok 309 - five role workspaces have distinct kits and lateral routes clear of real room furniture
+  ---
+  duration_ms: 228.25525
+  type: 'test'
+  ...
+# Subtest: five independent full-body rigs have distinct silhouettes, 105 meaningful bindings and valid contacts
+ok 310 - five independent full-body rigs have distinct silhouettes, 105 meaningful bindings and valid contacts
+  ---
+  duration_ms: 198.895959
+  type: 'test'
+  ...
+# Subtest: actual v5 GLB round-trip retains independent skins, metadata and every clip binding within budget
+ok 311 - actual v5 GLB round-trip retains independent skins, metadata and every clip binding within budget
+  ---
+  duration_ms: 153.55025
+  type: 'test'
+  ...
+# Subtest: ten simulated minutes give all five micro-activities and rest trips with exactly one route owner
+ok 312 - ten simulated minutes give all five micro-activities and rest trips with exactly one route owner
+  ---
+  duration_ms: 14.728209
+  type: 'test'
+  ...
+# Subtest: pause, repeated snapshots, work interruption and consumed cue handling preserve the motion clock
+ok 313 - pause, repeated snapshots, work interruption and consumed cue handling preserve the motion clock
+  ---
+  duration_ms: 1.015791
+  type: 'test'
+  ...
+# Subtest: runtime keeps world feet on translated stations, freezes during pause and seats before resuming work
+ok 314 - runtime keeps world feet on translated stations, freezes during pause and seats before resuming work
+  ---
+  duration_ms: 347.843416
+  type: 'test'
+  ...
+# Subtest: an expired completion cue never replays after a full ambient rest round-trip
+ok 315 - an expired completion cue never replays after a full ambient rest round-trip
+  ---
+  duration_ms: 0.690667
+  type: 'test'
+  ...
+# Subtest: broken actor units, anchors or required clips reject v5 instead of silently substituting idle
+ok 316 - broken actor units, anchors or required clips reject v5 instead of silently substituting idle
+  ---
+  duration_ms: 260.26425
+  type: 'test'
+  ...
+# Subtest: rigid instance buffers are explicitly disposed with their owning asset
+ok 317 - rigid instance buffers are explicitly disposed with their owning asset
+  ---
+  duration_ms: 13.655375
+  type: 'test'
+  ...
+# Subtest: shared viewer follows another user's live run without command capabilities
+ok 318 - shared viewer follows another user's live run without command capabilities
+  ---
+  duration_ms: 0.358667
+  type: 'test'
+  ...
+# Subtest: member controls own attempts only, owner manages approvals, and a downgrade removes controls
+ok 319 - member controls own attempts only, owner manages approvals, and a downgrade removes controls
+  ---
+  duration_ms: 0.101541
+  type: 'test'
+  ...
+# Subtest: late A and B responses cannot overwrite a new A visit, even with a larger old cursor
+ok 320 - late A and B responses cannot overwrite a new A visit, even with a larger old cursor
+  ---
+  duration_ms: 0.298958
+  type: 'test'
+  ...
+# Subtest: excluded tasks cannot reappear through items, five-role handoff summaries or inherited revisions
+ok 321 - excluded tasks cannot reappear through items, five-role handoff summaries or inherited revisions
+  ---
+  duration_ms: 2.777125
+  type: 'test'
+  ...
+# Subtest: stored rules-3.1 answers without decision metadata survive rules-3.2 restart and retry unchanged
+ok 322 - stored rules-3.1 answers without decision metadata survive rules-3.2 restart and retry unchanged
+  ---
+  duration_ms: 2667.307542
+  type: 'test'
+  ...
+# Subtest: conflicts do not publish action items while ordinary free, time and people conditions remain valid
+ok 323 - conflicts do not publish action items while ordinary free, time and people conditions remain valid
+  ---
+  duration_ms: 2.000042
+  type: 'test'
+  ...
+# Subtest: real auth: signup, password hash, invalid login, session, origin, expiry, logout and no secret response
+ok 324 - real auth: signup, password hash, invalid login, session, origin, expiry, logout and no secret response
+  ---
+  duration_ms: 2160.323
+  type: 'test'
+  ...
+# Subtest: raw backup preserves old schema and data even when a future migration fails; restore is separate from upgrade
+ok 325 - raw backup preserves old schema and data even when a future migration fails; restore is separate from upgrade
+  ---
+  duration_ms: 3757.752959
+  type: 'test'
+  ...
+# Subtest: real authenticated sessions share state with enforced HTTP roles, management versions and immediate revoked reads
+ok 326 - real authenticated sessions share state with enforced HTTP roles, management versions and immediate revoked reads
+  ---
+  duration_ms: 1357.235333
+  type: 'test'
+  ...
+# Subtest: shared members observe the same durable state while role, actor, invitation and revocation boundaries hold
+ok 327 - shared members observe the same durable state while role, actor, invitation and revocation boundaries hold
+  ---
+  duration_ms: 1244.427334
+  type: 'test'
+  ...
+# Subtest: invite expiry, replacement, revocation, owner guards and space/member limits are enforced
+ok 328 - invite expiry, replacement, revocation, owner guards and space/member limits are enforced
+  ---
+  duration_ms: 723.083667
+  type: 'test'
+  ...
+# Subtest: v2 disk DB upgrades in place without changing existing personal workspace, result, session or idempotency
+ok 329 - v2 disk DB upgrades in place without changing existing personal workspace, result, session or idempotency
+  ---
+  duration_ms: 1749.230375
+  type: 'test'
+  ...
+# Subtest: aggregate reports work on raw old databases and disclose no row contents
+ok 330 - aggregate reports work on raw old databases and disclose no row contents
+  ---
+  duration_ms: 1074.597292
+  type: 'test'
+  ...
+# Subtest: current DB reports aggregate guest lifecycle without mutation
+ok 331 - current DB reports aggregate guest lifecycle without mutation
+  ---
+  duration_ms: 852.737666
+  type: 'test'
+  ...
+# Subtest: diagnostics correlate errors using safe registered routes and ignore logger failures
+ok 332 - diagnostics correlate errors using safe registered routes and ignore logger failures
+  ---
+  duration_ms: 10.662792
+  type: 'test'
+  ...
+# Subtest: Fake AI varies by task and role, streams exact text, and performs no network request
+ok 333 - Fake AI varies by task and role, streams exact text, and performs no network request
+  ---
+  duration_ms: 830.784333
+  type: 'test'
+  ...
+# Subtest: persistent worker: approval gate, streamed result, failure retry, cancellation and late-response protection
+ok 334 - persistent worker: approval gate, streamed result, failure retry, cancellation and late-response protection
+  ---
+  duration_ms: 3816.921125
+  type: 'test'
+  ...
+# Subtest: worker timeout and oversized output fail with bounded, persisted results
+ok 335 - worker timeout and oversized output fail with bounded, persisted results
+  ---
+  duration_ms: 1306.232958
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: engineering plan
+ok 336 - v2 evaluation: engineering plan
+  ---
+  duration_ms: 1.605125
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: product plan
+ok 337 - v2 evaluation: product plan
+  ---
+  duration_ms: 0.139125
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: copy draft
+ok 338 - v2 evaluation: copy draft
+  ---
+  duration_ms: 0.095542
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: source summary
+ok 339 - v2 evaluation: source summary
+  ---
+  duration_ms: 0.27825
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: comparison
+ok 340 - v2 evaluation: comparison
+  ---
+  duration_ms: 0.458458
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: checklist
+ok 341 - v2 evaluation: checklist
+  ---
+  duration_ms: 0.119666
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: days
+ok 342 - v2 evaluation: days
+  ---
+  duration_ms: 0.070125
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: hours
+ok 343 - v2 evaluation: hours
+  ---
+  duration_ms: 0.105959
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: team
+ok 344 - v2 evaluation: team
+  ---
+  duration_ms: 0.168625
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: budget
+ok 345 - v2 evaluation: budget
+  ---
+  duration_ms: 0.250958
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: zero budget
+ok 346 - v2 evaluation: zero budget
+  ---
+  duration_ms: 0.055125
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: paid forbidden
+ok 347 - v2 evaluation: paid forbidden
+  ---
+  duration_ms: 0.099833
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: table summary
+ok 348 - v2 evaluation: table summary
+  ---
+  duration_ms: 0.055833
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: six items
+ok 349 - v2 evaluation: six items
+  ---
+  duration_ms: 0.036417
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: audience
+ok 350 - v2 evaluation: audience
+  ---
+  duration_ms: 0.035542
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: motion
+ok 351 - v2 evaluation: motion
+  ---
+  duration_ms: 0.03075
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: missing source
+ok 352 - v2 evaluation: missing source
+  ---
+  duration_ms: 0.034666
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: conflicting deadlines
+ok 353 - v2 evaluation: conflicting deadlines
+  ---
+  duration_ms: 0.030833
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: free budget conflict
+ok 354 - v2 evaluation: free budget conflict
+  ---
+  duration_ms: 0.031208
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: zero people
+ok 355 - v2 evaluation: zero people
+  ---
+  duration_ms: 0.026375
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: too many items
+ok 356 - v2 evaluation: too many items
+  ---
+  duration_ms: 0.027708
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: unsupported
+ok 357 - v2 evaluation: unsupported
+  ---
+  duration_ms: 0.027042
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: database exclusion
+ok 358 - v2 evaluation: database exclusion
+  ---
+  duration_ms: 0.052417
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: short source
+ok 359 - v2 evaluation: short source
+  ---
+  duration_ms: 0.039625
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: source is data
+ok 360 - v2 evaluation: source is data
+  ---
+  duration_ms: 0.032542
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: bounded output
+ok 361 - v2 evaluation: bounded output
+  ---
+  duration_ms: 0.060292
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: role changes the concrete work, not only the heading
+ok 362 - v2 evaluation: role changes the concrete work, not only the heading
+  ---
+  duration_ms: 0.053708
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: generator performs zero network calls
+ok 363 - v2 evaluation: generator performs zero network calls
+  ---
+  duration_ms: 0.040042
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: a new app's changed generator cannot rewrite a persisted stream
+ok 364 - v2 evaluation: a new app's changed generator cannot rewrite a persisted stream
+  ---
+  duration_ms: 960.935792
+  type: 'test'
+  ...
+# Subtest: v2 evaluation: pending approval APIs never expose the precomputed answer
+ok 365 - v2 evaluation: pending approval APIs never expose the precomputed answer
+  ---
+  duration_ms: 889.100708
+  type: 'test'
+  ...
+# Subtest: project lines do not turn the preceding technology into an exclusion; punctuation keeps people count
+ok 366 - project lines do not turn the preceding technology into an exclusion; punctuation keeps people count
+  ---
+  duration_ms: 0.531458
+  type: 'test'
+  ...
+# Subtest: source revisions are explicit, remain in one authorized workspace, and handoff requires approval
+ok 367 - source revisions are explicit, remain in one authorized workspace, and handoff requires approval
+  ---
+  duration_ms: 1040.256209
+  type: 'test'
+  ...
+# Subtest: revision obeys line/table format, preserves facts and rejects unsupported rewriting
+ok 368 - revision obeys line/table format, preserves facts and rejects unsupported rewriting
+  ---
+  duration_ms: 0.732208
+  type: 'test'
+  ...
+# Subtest: local worker consumes the exact frozen followup result
+ok 369 - local worker consumes the exact frozen followup result
+  ---
+  duration_ms: 1468.273292
+  type: 'test'
+  ...
+# Subtest: five concurrent guest sessions have independent identities; sixth is rejected and logout/expiry return seats
+ok 370 - five concurrent guest sessions have independent identities; sixth is rejected and logout/expiry return seats
+  ---
+  duration_ms: 1081.337042
+  type: 'test'
+  ...
+# Subtest: remote guest cookies remain Secure and database rate limit applies to repeated existing-session calls
+ok 371 - remote guest cookies remain Secure and database rate limit applies to repeated existing-session calls
+  ---
+  duration_ms: 754.072541
+  type: 'test'
+  ...
+# Subtest: new guests join regular-owned spaces; legacy guest owner expiry becomes preserved read-only and cancels waiting work once
+ok 372 - new guests join regular-owned spaces; legacy guest owner expiry becomes preserved read-only and cancels waiting work once
+  ---
+  duration_ms: 1032.941041
+  type: 'test'
+  ...
+# Subtest: five independent authenticated guests collaborate in a regular-owned space; sixth guest is rejected
+ok 373 - five independent authenticated guests collaborate in a regular-owned space; sixth guest is rejected
+  ---
+  duration_ms: 906.809792
+  type: 'test'
+  ...
+# Subtest: expired legacy guest work cannot be claimed or revived by the preserved worker path
+ok 374 - expired legacy guest work cannot be claimed or revived by the preserved worker path
+  ---
+  duration_ms: 793.064959
+  type: 'test'
+  ...
+# Subtest: even an empty expired guest space emits one durable sync event so member UI learns it is read-only
+ok 375 - even an empty expired guest space emits one durable sync event so member UI learns it is read-only
+  ---
+  duration_ms: 763.772667
+  type: 'test'
+  ...
+# Subtest: authenticated HTTP workspace boundaries, revocation, origin, body and event validation
+ok 376 - authenticated HTTP workspace boundaries, revocation, origin, body and event validation
+  ---
+  duration_ms: 1261.643417
+  type: 'test'
+  ...
+# Subtest: presence aggregates tabs and independent sessions; leave is idempotent and cannot revive a closed tab
+ok 377 - presence aggregates tabs and independent sessions; leave is idempotent and cannot revive a closed tab
+  ---
+  duration_ms: 2.505541
+  type: 'test'
+  ...
+# Subtest: logout rejects an already-authorized in-flight first heartbeat
+ok 378 - logout rejects an already-authorized in-flight first heartbeat
+  ---
+  duration_ms: 0.222541
+  type: 'test'
+  ...
+# Subtest: last heartbeat expires at the exact TTL, supports reconnect, session expiry and a fresh server instance
+ok 379 - last heartbeat expires at the exact TTL, supports reconnect, session expiry and a fresh server instance
+  ---
+  duration_ms: 0.305292
+  type: 'test'
+  ...
+# Subtest: presence revocation, workspace isolation, bounded history and tab limits hold without leaking identifiers
+ok 380 - presence revocation, workspace isolation, bounded history and tab limits hold without leaking identifiers
+  ---
+  duration_ms: 0.70775
+  type: 'test'
+  ...
+# Subtest: room and process limits are bounded and idle rooms can be reclaimed
+ok 381 - room and process limits are bounded and idle rooms can be reclaimed
+  ---
+  duration_ms: 27.738416
+  type: 'test'
+  ...
+# Subtest: real HTTP presence authenticates every request, protects sessions and members, leaves on logout and preserves durable revisions
+ok 382 - real HTTP presence authenticates every request, protects sessions and members, leaves on logout and preserves durable revisions
+  ---
+  duration_ms: 2316.463291
+  type: 'test'
+  ...
+# Subtest: local remains loopback-only and Vercel requires HTTPS, secret, PostgreSQL and verified remote TLS
+ok 383 - local remains loopback-only and Vercel requires HTTPS, secret, PostgreSQL and verified remote TLS
+  ---
+  duration_ms: 2.256375
+  type: 'test'
+  ...
+# Subtest: HTTPS auth sets Secure HttpOnly cookies and rejects foreign Host/Origin without trusting forwarded origin
+ok 384 - HTTPS auth sets Secure HttpOnly cookies and rejects foreign Host/Origin without trusting forwarded origin
+  ---
+  duration_ms: 1951.933958
+  type: 'test'
+  ...
+# Subtest: manual retention only removes reviewed expired transient rows and preserves guest history
+ok 385 - manual retention only removes reviewed expired transient rows and preserves guest history
+  ---
+  duration_ms: 2084.692875
+  type: 'test'
+  ...
+# Subtest: retention rejects missing backup, stale review, mismatched backup and recent/future cutoff without deleting rows
+ok 386 - retention rejects missing backup, stale review, mismatched backup and recent/future cutoff without deleting rows
+  ---
+  duration_ms: 3855.05825
+  type: 'test'
+  ...
+# Subtest: local PostgreSQL selection is independent of hosting and common runtime is request-driven
+ok 387 - local PostgreSQL selection is independent of hosting and common runtime is request-driven
+  ---
+  duration_ms: 1411.66625
+  type: 'test'
+  ...
+# Subtest: scene packet rejects malformed bytes, cycles, NaN, oversized nodes and duplicate actors
+ok 388 - scene packet rejects malformed bytes, cycles, NaN, oversized nodes and duplicate actors
+  ---
+  duration_ms: 1.862708
+  type: 'test'
+  ...
+# Subtest: local DB scene leases isolate rooms, permissions, race winners, replay, revocation and persistence
+ok 389 - local DB scene leases isolate rooms, permissions, race winners, replay, revocation and persistence
+  ---
+  duration_ms: 1413.528375
+  type: 'test'
+  ...
+# Subtest: real scene HTTP requires login, same origin, role access and preserves the normal body limit
+ok 390 - real scene HTTP requires login, same origin, role access and preserves the normal body limit
+  ---
+  duration_ms: 967.675333
+  type: 'test'
+  ...
+# Subtest: finite simulation returns exact output, partial failure and bounds without background execution
+ok 391 - finite simulation returns exact output, partial failure and bounds without background execution
+  ---
+  duration_ms: 0.388917
+  type: 'test'
+  ...
+# Subtest: request-driven Fake AI survives a new app instance, preserves approval and handles failure/retry/cancel
+ok 392 - request-driven Fake AI survives a new app instance, preserves approval and handles failure/retry/cancel
+  ---
+  duration_ms: 1081.199042
+  type: 'test'
+  ...
+# Subtest: DB authorization, idempotency, body conflicts, one active run, approval, cancellation and retry
+ok 393 - DB authorization, idempotency, body conflicts, one active run, approval, cancellation and retry
+  ---
+  duration_ms: 1100.782792
+  type: 'test'
+  ...
+# Subtest: disk reopen, exclusive process lock, interrupted run recovery, migrations and gzip backup restore
+ok 394 - disk reopen, exclusive process lock, interrupted run recovery, migrations and gzip backup restore
+  ---
+  duration_ms: 2095.756334
+  type: 'test'
+  ...
+# Subtest: five roles produce separate outputs with ordered handoffs and frozen segment boundaries
+ok 395 - five roles produce separate outputs with ordered handoffs and frozen segment boundaries
+  ---
+  duration_ms: 4.015417
+  type: 'test'
+  ...
+# Subtest: team run persists, respects approval and access; retry keeps its five-role frozen answer
+ok 396 - team run persists, respects approval and access; retry keeps its five-role frozen answer
+  ---
+  duration_ms: 1180.441
+  type: 'test'
+  ...
+# Subtest: project settings persist, protect owner/version and isolate workspaces
+ok 397 - project settings persist, protect owner/version and isolate workspaces
+  ---
+  duration_ms: 1242.487459
+  type: 'test'
+  ...
+# Subtest: literal search paginates tied timestamps, hides generated text and compares frozen source
+ok 398 - literal search paginates tied timestamps, hides generated text and compares frozen source
+  ---
+  duration_ms: 847.001875
+  type: 'test'
+  ...
+# Subtest: comments are idempotent, role scoped; inbox isolates readers and records approval/completion
+ok 399 - comments are idempotent, role scoped; inbox isolates readers and records approval/completion
+  ---
+  duration_ms: 693.895208
+  type: 'test'
+  ...
+1..399
+# tests 399
+# suites 0
+# pass 398
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2487079.72925

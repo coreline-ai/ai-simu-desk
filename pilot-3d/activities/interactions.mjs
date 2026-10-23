@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {cupDuration,drinkRecipe} from '../personal-office/recipes.mjs';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {part} from '../sample/character-rig.mjs';
 import {ease} from '../sample/motion.mjs';
@@ -28,17 +29,23 @@ export class CupInteraction {
  constructor(model,actor,id){this.actor=actor;this.id=id;this.hand=part(actor,'NaraHandL');this.mug=model.getObjectByName(actor.userData.prefix+'CeramicMug');if(!this.mug)throw Error('컵 소품 누락: '+id);
   this.handGrip=this.mug.userData.handGrip;this.offset=this.handGrip?V(...this.handGrip.offset):V(.057,0,0);this.gripQ=new T.Quaternion().setFromAxisAngle(V(0,1,0),this.handGrip?.yaw??0);
   this.homeParent=this.mug.parent;this.mug.position.set(-.30,model.getObjectByName('AfternoonStudio')?.userData.finalOffice?.deskCupCenterY??.785,-.20);this.home=this.mug.position.clone();this.grip=gripMesh(this.hand);this.open=this.hand.children.filter(n=>n!==this.grip);this.state='idle';this.time=0;this.total=0;this.owner='desk';this.events=0;this.done=0;this.reachError=0;this.returning=false;this.carryOnly=false;this.disposed=false;}
+ duration(state=this.state){return cupDuration(this.id,state,this.personal);}
+ drink(){return this.personal?drinkRecipe(this.id,this.time/this.duration('sip')):null;}
  get busy(){return this.state!=='idle'&&this.state!=='carry';}
  start({carry=false}={}){if(this.disposed||this.state!=='idle'||this.owner!=='desk')return false;this.carryOnly=carry;this.returning=false;this.enter('reach');return true;}
  enter(state){this.state=state;this.time=0;this.from=worldPose(this.mug);this.handFrom=worldPose(this.hand);}
  requestWork(){if(this.state==='idle')return;this.returning=true;if(['reach','grasp'].includes(this.state)&&this.owner==='desk')this.enter('retract');else if(['lift','sip','lower'].includes(this.state))this.enter('place');}
- holdPoint(){const pelvis=part(this.actor,'NaraPelvis');return this.actor.localToWorld(V(-.14,pelvis.position.y+.26,.29));}
+ // Carry the mug ahead of the left wrist, upright with its handle toward the palm.
+ // Drinking retains its separate mouth/support recipe. The wrist is level with
+ // the handle rather than hovering above the rim; finger targets stay on the mesh.
+ gripOffset(){return this.personal&&this.carryOnly&&this.handGrip?this.offset.clone().add(V(0,-.018,0)):this.offset;}
+ holdPoint(){const pelvis=part(this.actor,'NaraPelvis');return this.actor.localToWorld(this.personal&&this.carryOnly?V(-.22,pelvis.position.y+.29,.40):V(-.14,pelvis.position.y+.26,.29));}
  homePose(){this.homeParent.updateWorldMatrix(true,false);return {position:this.homeParent.localToWorld(this.home.clone()),quaternion:this.homeParent.getWorldQuaternion(new T.Quaternion())};}
  releaseToDesk(){this.homeParent.attach(this.mug);this.mug.position.copy(this.home);this.mug.quaternion.identity();this.owner='desk';this.events++;this.setGrip(false);}
  setGrip(value){for(const node of this.open)node.visible=!value;this.grip.visible=value;}
  tick(dt){if(this.disposed)return;dt=Math.max(0,Math.min(.06,dt));this.total+=dt;if(this.state==='idle'||this.state==='carry')return;this.time+=dt;
   if(this.state==='tableRest'){if(this.retrieve)this.enter('tableReach');return;}
-  const duration={tablePlace:1.1,tableReach:1.2,tableGrasp:.25,reach:1.35,grasp:.25,lift:.9,sip:3,lower:.85,place:1.2,release:.35,retract:.45}[this.state];
+  const duration=this.duration();
   if(this.time<duration)return;
   if(this.state==='tablePlace'){this.drop.attach(this.mug);this.mug.position.set(0,0,0);this.mug.quaternion.identity();this.owner='meeting';this.events++;this.setGrip(false);this.enter('tableRest');}
   else if(this.state==='tableReach')this.enter('tableGrasp');
@@ -55,23 +62,23 @@ export class CupInteraction {
  finishCarry(){if(this.state==='carry')this.enter('place');}
  setDownAt(drop){if(this.state!=='carry')return false;this.drop=drop;this.retrieve=false;this.enter('tablePlace');return true;}
  returnToHand(){this.retrieve=true;if(this.state==='tableRest')this.enter('tableReach');}
- apply(){if(this.state==='idle'||this.state==='tableRest')return;const actor=this.actor;actor.updateWorldMatrix(true,true);const t=this.time,head=part(actor,'NaraHead'),yaw=actor.getWorldQuaternion(new T.Quaternion()),offset=this.offset,home=this.homePose();let cup=worldPose(this.mug),handTarget,handQ=yaw.clone();
-  if(['reach','grasp','tableReach','tableGrasp'].includes(this.state)){const at=this.state.startsWith('table')?worldPose(this.drop):home,target=at.position.clone().add(offset.clone().applyQuaternion(at.quaternion)),u=this.state.endsWith('Grasp')||this.state==='grasp'?1:ease(t/(this.state==='tableReach'?1.2:1.35));handTarget=this.handFrom.position.clone().lerp(target,u);handQ=this.handFrom.quaternion.clone().slerp(at.quaternion.clone().multiply(this.gripQ),u);}
-  else if(this.handGrip&&this.state==='release'){const u=ease(t/.35);handTarget=this.handFrom.position.clone().add(V(.06*u,.025*Math.sin(Math.PI*u),0).applyQuaternion(home.quaternion));handQ=this.handFrom.quaternion.clone();}
-  else if(['release','retract'].includes(this.state)){const target=this.hand.getWorldPosition(V());handTarget=this.handFrom.position.clone().lerp(target,ease(t/(this.state==='release'?.35:.45)));handQ=this.handFrom.quaternion.clone().slerp(this.hand.getWorldQuaternion(new T.Quaternion()),ease(t/.45));}
+ apply(){if(this.state==='idle'||this.state==='tableRest')return;const actor=this.actor;actor.updateWorldMatrix(true,true);const t=this.time,head=part(actor,'NaraHead'),yaw=actor.getWorldQuaternion(new T.Quaternion()),offset=this.gripOffset(),home=this.homePose();let cup=worldPose(this.mug),handTarget,handQ=yaw.clone();
+  if(['reach','grasp','tableReach','tableGrasp'].includes(this.state)){const at=this.state.startsWith('table')?worldPose(this.drop):home,target=at.position.clone().add(offset.clone().applyQuaternion(at.quaternion)),u=this.state.endsWith('Grasp')||this.state==='grasp'?1:ease(t/this.duration());handTarget=this.handFrom.position.clone().lerp(target,u);handQ=this.handFrom.quaternion.clone().slerp(at.quaternion.clone().multiply(this.gripQ),u);}
+  else if(this.handGrip&&this.state==='release'){const u=ease(t/this.duration());handTarget=this.handFrom.position.clone().add(V(.06*u,.025*Math.sin(Math.PI*u),0).applyQuaternion(home.quaternion));handQ=this.handFrom.quaternion.clone();}
+  else if(['release','retract'].includes(this.state)){const target=this.hand.getWorldPosition(V());handTarget=this.handFrom.position.clone().lerp(target,ease(t/this.duration()));handQ=this.handFrom.quaternion.clone().slerp(this.hand.getWorldQuaternion(new T.Quaternion()),ease(t/(this.personal?this.duration():.45)));}
   else {
-   const hold=this.holdPoint();let target=hold,q=yaw.clone();
-   if(this.state==='sip'){const mouth=head.localToWorld(V(-.035,-.105,.195));const u=t<.7?ease(t/.7):t<=2.3?1:1-ease((t-2.3)/.7);target=hold.clone().lerp(mouth,u);q.multiply(new T.Quaternion().setFromAxisAngle(V(1,0,0),u*.25));}
-   if(this.state==='lift')cup={position:this.from.position.clone().lerp(hold,ease(t/.9)),quaternion:this.from.quaternion.clone().slerp(q,ease(t/.9))};
-   else if(this.state==='tablePlace'){const at=worldPose(this.drop);cup={position:this.from.position.clone().lerp(at.position,ease(t/1.1)),quaternion:this.from.quaternion.clone().slerp(at.quaternion,ease(t/1.1))};}
-   else if(this.state==='place')cup={position:this.from.position.clone().lerp(home.position,ease(t/1.2)),quaternion:this.from.quaternion.clone().slerp(home.quaternion,ease(t/1.2))};
-   else if(this.state==='lower')cup={position:this.from.position.clone().lerp(hold,ease(t/.85)),quaternion:this.from.quaternion.clone().slerp(q,ease(t/.85))};
+   const hold=this.holdPoint();let target=hold,q=yaw.clone();if(this.personal&&this.carryOnly)q.multiply(new T.Quaternion().setFromAxisAngle(V(0,1,0),Math.PI/2));
+   if(this.state==='sip'){const mouth=head.localToWorld(V(-.035,-.105,.195));const u=this.drink()?.amount??(t<.7?ease(t/.7):t<=2.3?1:1-ease((t-2.3)/.7));target=hold.clone().lerp(mouth,u);q.multiply(new T.Quaternion().setFromAxisAngle(V(1,0,0),u*.25));}
+   if(this.state==='lift')cup={position:this.from.position.clone().lerp(hold,ease(t/this.duration())),quaternion:this.from.quaternion.clone().slerp(q,ease(t/this.duration()))};
+   else if(this.state==='tablePlace'){const at=worldPose(this.drop);cup={position:this.from.position.clone().lerp(at.position,ease(t/this.duration())),quaternion:this.from.quaternion.clone().slerp(at.quaternion,ease(t/this.duration()))};}
+   else if(this.state==='place')cup={position:this.from.position.clone().lerp(home.position,ease(t/this.duration())),quaternion:this.from.quaternion.clone().slerp(home.quaternion,ease(t/this.duration()))};
+   else if(this.state==='lower')cup={position:this.from.position.clone().lerp(hold,ease(t/this.duration())),quaternion:this.from.quaternion.clone().slerp(q,ease(t/this.duration()))};
    else cup={position:target,quaternion:q};
    handTarget=cup.position.clone().add(offset.clone().applyQuaternion(cup.quaternion));handQ=cup.quaternion.clone().multiply(this.gripQ);
   }
   this.reachError=solveArm(actor,handTarget,handQ);
   if(this.owner==='hand')setWorld(this.mug,cup.position,cup.quaternion);
  }
- diagnostics(){return {state:this.state,time:+this.time.toFixed(3),owner:this.owner,events:this.events,done:this.done,returning:this.returning,handError:this.reachError,cupCount:1};}
+ diagnostics(){return {state:this.state,recipe:this.state==='sip'?this.drink():null,duration:this.duration()??null,time:+this.time.toFixed(3),owner:this.owner,events:this.events,done:this.done,returning:this.returning,handError:this.reachError,cupCount:1};}
  dispose(){if(this.disposed)return;this.disposed=true;if(this.owner!=='desk')this.releaseToDesk();this.setGrip(false);this.state='idle';}
 }

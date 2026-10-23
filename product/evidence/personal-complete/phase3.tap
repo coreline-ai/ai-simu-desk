@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: 15 personal work recipes have observe, act, pause, check and truly held trajectories
+ok 1 - 15 personal work recipes have observe, act, pause, check and truly held trajectories
+  ---
+  duration_ms: 1.551666
+  type: 'test'
+  ...
+# Subtest: all 15 recipes preserve pen/hand contact, ownership, return and all-stage cancellation
+ok 2 - all 15 recipes preserve pen/hand contact, ownership, return and all-stage cancellation
+  ---
+  duration_ms: 18006.091708
+  type: 'test'
+  ...
+# Subtest: real work cancels manual recipe, absence cancels real recipe, pause holds the recipe
+ok 3 - real work cancels manual recipe, absence cancels real recipe, pause holds the recipe
+  ---
+  duration_ms: 1297.50575
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 19402.647083

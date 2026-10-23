@@ -1,0 +1,16 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: TypeError: Cannot read properties of null (reading 'scenario')
+    at eval (eval at predicate (eval at evaluate (:311:30)), <anonymous>:1:36)
+    at predicate (eval at evaluate (:311:30), <anonymous>:7:27)
+    at next (eval at evaluate (:311:30), <anonymous>:29:33)
+    at eval (eval at evaluate (:311:30), <anonymous>:42:13)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at /Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-complete-soak.mjs:7:135 {
+  log: []
+}
+
+Node.js v22.22.2

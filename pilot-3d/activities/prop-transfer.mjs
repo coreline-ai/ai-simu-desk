@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {readRecipe} from '../personal-office/recipes.mjs';
 import {part} from '../sample/character-rig.mjs';
 import {solveArm} from './interactions.mjs';
 import {ease} from '../sample/motion.mjs';
@@ -36,7 +37,7 @@ export class PropTransfers{
     else if(['return','cancelPlace','dock'].includes(this.stage)){this.place(this.owner);this.enter('release');}
     else{this.active=false;this.complete=!this.cancelled;this.stage='idle';}
   }
-  pose(){const u=ease(this.time/(LENGTH[this.stage]??.8));if(this.stage==='carry'){const actor=this.actors[this.owner],target={p:actor.localToWorld(V(this.sides[this.owner]==='L'?-.14:.14,part(actor,'NaraPelvis').position.y+.27,.26)),q:actor.getWorldQuaternion(new T.Quaternion())};return{p:this.from.p.clone().lerp(target.p,ease(this.time/.8)),q:this.from.q.clone().slerp(target.q,ease(this.time/.8))};}
+  pose(){if(this.stage==='read'&&this.personal?.has(this.visitor)){const r=readRecipe(this.visitor,this.time);return{p:this.center.p.clone().add(V(0,r.height,0)),q:this.center.q.clone().multiply(new T.Quaternion().setFromAxisAngle(Y,r.turn))};}const u=ease(this.time/(LENGTH[this.stage]??.8));if(this.stage==='carry'){const actor=this.actors[this.owner],target={p:actor.localToWorld(V(this.sides[this.owner]==='L'?-.14:.14,part(actor,'NaraPelvis').position.y+.27,.26)),q:actor.getWorldQuaternion(new T.Quaternion())};return{p:this.from.p.clone().lerp(target.p,ease(this.time/.8)),q:this.from.q.clone().slerp(target.q,ease(this.time/.8))};}
     const target=['return','cancelPlace','dock'].includes(this.stage)?this.home(this.owner,this.sides[this.owner]):this.center;
     if(['present','return','cancelPlace','dock'].includes(this.stage))return{p:this.from.p.clone().lerp(target.p,u),q:this.from.q.clone().slerp(target.q,u)};
     return ['pickup','grasp','release'].includes(this.stage)?world(this.page.mesh):this.center;

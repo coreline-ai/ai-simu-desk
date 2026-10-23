@@ -1,0 +1,9 @@
+{
+  "passed": null,
+  "kind": "headless reports both tabs visible; hidden condition covered by clock unit tests, not a real hidden-tab result",
+  "state": {
+    "hidden": false,
+    "visibility": "visible",
+    "time": 0.8833333333333344
+  }
+}

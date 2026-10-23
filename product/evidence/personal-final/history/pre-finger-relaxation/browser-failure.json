@@ -1,0 +1,68 @@
+{
+  "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at /Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-final-browser.mjs:13:152",
+  "checks": [
+    {
+      "kind": "actual rim contact and paused index",
+      "sample": {
+        "available": true,
+        "stage": "adjust",
+        "time": 0.03333333333333333,
+        "done": 0,
+        "interruptions": 0,
+        "reason": null,
+        "next": 45,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+        "u": 0.05128205128205128,
+        "handError": 2.482534153247273e-16,
+        "contact": [
+          0.1014349797133454,
+          1.184088942906065,
+          -3.3216307682215724
+        ],
+        "pad": [
+          0.10169644603957989,
+          1.1838551099053587,
+          -3.313638462078285
+        ],
+        "surface": [
+          0.09599999999999999,
+          0.02206432944756609,
+          0.16786152074083605
+        ],
+        "wrist": [
+          0.12974983256217368,
+          1.1123687909260618,
+          -3.283944797713573
+        ],
+        "indexBlend": 1,
+        "padError": 2.237726045655905e-16,
+        "actualWrist": [
+          0.12974983256217382,
+          1.112368790926062,
+          -3.283944797713573
+        ]
+      }
+    },
+    {
+      "kind": "rate",
+      "rate": "1",
+      "done": 2
+    },
+    {
+      "kind": "rate",
+      "rate": "1.5",
+      "done": 3
+    }
+  ],
+  "errors": [],
+  "sample": {
+    "available": true,
+    "stage": "idle",
+    "time": 0,
+    "done": 3,
+    "interruptions": 1,
+    "reason": "higher-priority activity",
+    "next": 115.00000000000007,
+    "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+  }
+}

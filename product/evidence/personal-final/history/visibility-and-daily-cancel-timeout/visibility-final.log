@@ -1,0 +1,14 @@
+PASS actual inactive tab
+PASS actual minimized window
+PASS actual paused during inactive tab
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 120000ms exceeded.
+    at /Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-final-visibility.mjs:30:41 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v22.22.2

@@ -1,0 +1,164 @@
+{
+  "passed": true,
+  "at": "2026-10-23T03:51:39.282Z",
+  "origin": "http://127.0.0.1:4193",
+  "checks": [
+    "v11 previous carrying posture captured",
+    "5-person empty-hand departure, pause, four rates, full talk/note rounds and return",
+    "2-person empty-hand discussion and real work preemption",
+    "purposeful coffee: real 5-pad contact, raised upright mug, free right arm and desk return",
+    "reduced motion and 320–1440 viewport; not physical mobile"
+  ],
+  "moving": [
+    {
+      "id": "nara",
+      "cup": "idle",
+      "owner": "desk",
+      "events": 0,
+      "action": "walk"
+    },
+    {
+      "id": "sora",
+      "cup": "idle",
+      "owner": "desk",
+      "events": 0,
+      "action": "idle"
+    },
+    {
+      "id": "jun",
+      "cup": "idle",
+      "owner": "desk",
+      "events": 0,
+      "action": "idle"
+    },
+    {
+      "id": "min",
+      "cup": "idle",
+      "owner": "desk",
+      "events": 0,
+      "action": "idle"
+    },
+    {
+      "id": "leo",
+      "cup": "idle",
+      "owner": "desk",
+      "events": 0,
+      "action": "idle"
+    }
+  ],
+  "contact": {
+    "wrist": [
+      -0.21999999999999975,
+      1.084,
+      0.27800000000000047
+    ],
+    "mug": [
+      -0.21999999999999886,
+      1.0899999999999999,
+      0.40000000000000036
+    ],
+    "cup": {
+      "state": "carry",
+      "recipe": null,
+      "duration": null,
+      "time": 0,
+      "owner": "hand",
+      "events": 1,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    },
+    "hand": {
+      "surfaceVersion": 2,
+      "blend": 1,
+      "padError": 1.3877787807814457e-17,
+      "maxReach": 0.07206247289678604,
+      "fingers": 5,
+      "contactScope": "five-finger-target-points",
+      "contacts": [
+        {
+          "finger": "thumb",
+          "role": "grip",
+          "error": 3.469446951953614e-18,
+          "reachable": true,
+          "target": [
+            -0.005000000000001798,
+            0.01199999999999956,
+            -0.03299999999999985
+          ],
+          "actual": [
+            -0.005000000000001798,
+            0.011999999999999563,
+            -0.03299999999999985
+          ]
+        },
+        {
+          "finger": "index",
+          "role": "grip",
+          "error": 6.992893892674703e-18,
+          "reachable": true,
+          "target": [
+            -0.006000000000001791,
+            -0.015000000000000437,
+            -0.04599999999999986
+          ],
+          "actual": [
+            -0.006000000000001792,
+            -0.015000000000000437,
+            -0.04599999999999987
+          ]
+        },
+        {
+          "finger": "middle",
+          "role": "grip",
+          "error": 1.0444418402013024e-17,
+          "reachable": true,
+          "target": [
+            0.005999999999998207,
+            -4.371503159461554e-16,
+            -0.03599999999999985
+          ],
+          "actual": [
+            0.005999999999998206,
+            -4.475586568020162e-16,
+            -0.03599999999999985
+          ]
+        },
+        {
+          "finger": "ring",
+          "role": "support",
+          "error": 6.938893903907228e-18,
+          "reachable": true,
+          "target": [
+            -0.005000000000001798,
+            0.023999999999999556,
+            -0.04199999999999984
+          ],
+          "actual": [
+            -0.005000000000001798,
+            0.023999999999999556,
+            -0.04199999999999985
+          ]
+        },
+        {
+          "finger": "little",
+          "role": "support",
+          "error": 1.3877787807814457e-17,
+          "reachable": true,
+          "target": [
+            0.004999999999998204,
+            0.024999999999999557,
+            -0.042999999999999844
+          ],
+          "actual": [
+            0.004999999999998204,
+            0.02499999999999957,
+            -0.042999999999999844
+          ]
+        }
+      ]
+    }
+  },
+  "errors": []
+}

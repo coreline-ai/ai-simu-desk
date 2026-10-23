@@ -1,0 +1,14 @@
+{
+  "devices": [
+    {
+      "vendorId": 4203,
+      "deviceId": 0,
+      "vendorString": "Google Inc. (Apple)",
+      "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Version 26.5.2 (Build 25F84))",
+      "driverVendor": "Apple",
+      "driverVersion": "26.5.2"
+    }
+  ],
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Version 26.5.2 (Build 25F84))",
+  "scope": "Apple unified memory device identity, not a memory allocation measurement"
+}

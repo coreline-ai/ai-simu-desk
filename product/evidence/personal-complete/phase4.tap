@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: personal drink and support use the same normalized phase and settle before return
+ok 1 - personal drink and support use the same normalized phase and settle before return
+  ---
+  duration_ms: 1.407041
+  type: 'test'
+  ...
+# Subtest: five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+ok 2 - five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+  ---
+  duration_ms: 18591.566333
+  type: 'test'
+  ...
+# Subtest: personal carry and table drinking keep machine duration and fair queue policy
+ok 3 - personal carry and table drinking keep machine duration and fair queue policy
+  ---
+  duration_ms: 17719.532416
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36531.75325

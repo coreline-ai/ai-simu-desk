@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-23T01:31:20.632Z",
+  "passed": true,
+  "command": "npm test",
+  "tests": 406,
+  "pass": 406,
+  "fail": 0,
+  "skipped": 0,
+  "exit": 0,
+  "durationMs": 3087175.203042,
+  "sourceAndTestsUnchanged": true,
+  "scope": "single full final-source run; prior cancelled QA/preflight runs remain in history",
+  "preparedRelease": "1792718974925-befd610b-6a48-4b31-89ca-f5a5a97e37e3",
+  "activeRelease": "build-releases/1792713140832-900c381d-d83b-4532-a085-153033c68fda",
+  "serverUnchanged": true
+}

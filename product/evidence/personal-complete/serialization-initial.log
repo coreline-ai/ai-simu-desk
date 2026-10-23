@@ -1,0 +1,19 @@
+file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/[eval1]:1
+import {fixture} from './product/tests/living-fixture.mjs';const f=fixture({personalMotion:true});try{f.s.startMeeting(['nara','jun']);JSON.stringify(f.runtime.diagnostics());console.log('PASS');}finally{f.close();}
+                                                                                                                                            ^
+
+TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'ResponsiveExchange'
+    |     property 'personal' -> object with constructor 'PersonalMotion'
+    |     property 's' -> object with constructor 'LivingScheduler'
+    |     property 'session' -> object with constructor 'Object'
+    --- property 'exchange' closes the circle
+    at JSON.stringify (<anonymous>)
+    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/[eval1]:1:141
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:272:26)
+    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:268:20)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.22.2

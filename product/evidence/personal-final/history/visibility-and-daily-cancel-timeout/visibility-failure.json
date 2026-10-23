@@ -1,0 +1,429 @@
+{
+  "error": "page.waitForFunction: Timeout 120000ms exceeded.\n    at /Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-final-visibility.mjs:30:41",
+  "checks": [
+    {
+      "label": "inactive tab",
+      "before": {
+        "hidden": true,
+        "time": 0.3,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          }
+        ],
+        "canvas": 1
+      },
+      "after": {
+        "hidden": true,
+        "time": 0.3,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          }
+        ],
+        "canvas": 1
+      },
+      "returned": {
+        "hidden": false,
+        "time": 0.5833333333333335,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          }
+        ],
+        "canvas": 1
+      },
+      "resumed": {
+        "hidden": false,
+        "time": 1.5166666666666662,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          }
+        ],
+        "canvas": 1
+      }
+    },
+    {
+      "label": "minimized window",
+      "before": {
+        "hidden": true,
+        "time": 1.9333333333333313,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          }
+        ],
+        "canvas": 1
+      },
+      "after": {
+        "hidden": true,
+        "time": 1.9333333333333313,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          }
+        ],
+        "canvas": 1
+      },
+      "returned": {
+        "hidden": false,
+        "time": 2.1333333333333306,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 14910.299999713898,
+            "hidden": false,
+            "time": 1.9333333333333313
+          }
+        ],
+        "canvas": 1
+      },
+      "resumed": {
+        "hidden": false,
+        "time": 3.049999999999994,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 14910.299999713898,
+            "hidden": false,
+            "time": 1.9333333333333313
+          }
+        ],
+        "canvas": 1
+      }
+    },
+    {
+      "label": "paused during inactive tab",
+      "before": {
+        "hidden": true,
+        "time": 3.183333333333327,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 14910.299999713898,
+            "hidden": false,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 15759.5,
+            "hidden": true,
+            "time": 3.183333333333327
+          }
+        ],
+        "canvas": 1
+      },
+      "after": {
+        "hidden": true,
+        "time": 3.183333333333327,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 14910.299999713898,
+            "hidden": false,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 15759.5,
+            "hidden": true,
+            "time": 3.183333333333327
+          }
+        ],
+        "canvas": 1
+      },
+      "returned": {
+        "hidden": false,
+        "time": 3.21666666666666,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 14910.299999713898,
+            "hidden": false,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 15759.5,
+            "hidden": true,
+            "time": 3.183333333333327
+          },
+          {
+            "at": 20787.5,
+            "hidden": false,
+            "time": 3.183333333333327
+          }
+        ],
+        "canvas": 1
+      },
+      "resumed": {
+        "hidden": false,
+        "time": 3.3666666666666596,
+        "events": [
+          {
+            "at": 3233,
+            "hidden": true,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3385.699999809265,
+            "hidden": false,
+            "time": 0.18333333333333332
+          },
+          {
+            "at": 3481.0999999046326,
+            "hidden": true,
+            "time": 0.3
+          },
+          {
+            "at": 8535.799999713898,
+            "hidden": false,
+            "time": 0.3
+          },
+          {
+            "at": 9640.799999713898,
+            "hidden": true,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 14910.299999713898,
+            "hidden": false,
+            "time": 1.9333333333333313
+          },
+          {
+            "at": 15759.5,
+            "hidden": true,
+            "time": 3.183333333333327
+          },
+          {
+            "at": 20787.5,
+            "hidden": false,
+            "time": 3.183333333333327
+          }
+        ],
+        "canvas": 1
+      }
+    }
+  ],
+  "errors": []
+}

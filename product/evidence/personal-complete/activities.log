@@ -1,0 +1,23 @@
+PASS 21 basic poses × 5 characters: finite transforms 0s simulated 
+PASS 15 role prop recipes: all five × variants 0/1/2 28s simulated 
+PASS 5 personal cups: grip, sip, support and replace 10s simulated 
+PASS 15 micro rests: all five × 3 profile rotations 75s simulated 
+PASS 5 single sofa round trips 398s simulated 
+PASS 5 window rest round trips 283s simulated 
+PASS 5 coffee queue turns: no shared cup or machine leaks 278s simulated 
+PASS 5 sofa conversation pairs: each character speaks and listens 657s simulated 
+PASS 2 seated meeting participants 128s simulated 
+PASS 3 seated meeting participants 193s simulated 
+PASS 4 seated meeting participants 267s simulated 
+PASS 5 seated meeting participants 275s simulated 
+PASS 5 standing huddle turns 77s simulated 
+PASS 5 shared board turns: one marker owner 162s simulated 
+PASS desk visit and document transfer 0 48s simulated 
+PASS desk visit and document transfer 1 47s simulated 
+PASS desk visit and document transfer 2 49s simulated 
+PASS desk visit and document transfer 3 68s simulated 
+PASS desk visit and document transfer 4 96s simulated 
+PASS scenario focus 223s simulated 
+PASS scenario review 433s simulated 
+PASS scenario break 440s simulated 
+{"passed":22,"failed":0,"wallSeconds":217.42502825}

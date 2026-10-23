@@ -29,7 +29,7 @@ export class SofaSupport {
     const entering=ease(row.time/.8),leaving=row.exit===null?0:ease(row.exit/1.2),gesture=active&&state.speaking?state.gesture??0:0;
     const normal=actor.getWorldQuaternion(new T.Quaternion()).multiply(new T.Quaternion().setFromAxisAngle(V(1,0,0),-Math.PI/2));
     for(const side of ['L','R']){
-      const hand=part(actor,'NaraHand'+side),base=snapshot(actor,side),surface=row.supports[side],rest=surface.point.clone().addScaledVector(UP,PALM),lift=side===row.inner?gesture*PROFILES[id].lift:0;
+      const hand=part(actor,'NaraHand'+side),base=snapshot(actor,side),surface=row.supports[side],rest=surface.point.clone().addScaledVector(UP,PALM),lift=side===row.inner?(s.personalMotion?.has(id)?s.personalMotion.talkLift(id,gesture):gesture*PROFILES[id].lift):0;
       let target=rest.clone().addScaledVector(UP,lift),q=normal.clone();
       if(row.exit===null){target=row.from[side].point.clone().lerp(target,entering);q=row.from[side].quaternion.clone().slerp(q,entering);}
       else{target=row.from[side].point.clone().lerp(base.point,leaving).addScaledVector(UP,Math.sin(Math.PI*leaving)*.035);q=row.from[side].quaternion.clone().slerp(base.quaternion,leaving);}

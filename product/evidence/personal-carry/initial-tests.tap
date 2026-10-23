@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: personal drink and support use the same normalized phase and settle before return
+ok 1 - personal drink and support use the same normalized phase and settle before return
+  ---
+  duration_ms: 1.303959
+  type: 'test'
+  ...
+# Subtest: five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+ok 2 - five cup recipes preserve two hand contact, timings and ownership; cancel each stage
+  ---
+  duration_ms: 13593.238458
+  type: 'test'
+  ...
+# Subtest: personal carry and table drinking keep machine duration and fair queue policy
+ok 3 - personal carry and table drinking keep machine duration and fair queue policy
+  ---
+  duration_ms: 10194.210166
+  type: 'test'
+  ...
+# Subtest: nara completes all seat transitions with original foot targets and fixed rig lengths
+ok 4 - nara completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 4751.975375
+  type: 'test'
+  ...
+# Subtest: sora completes all seat transitions with original foot targets and fixed rig lengths
+ok 5 - sora completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3024.385292
+  type: 'test'
+  ...
+# Subtest: jun completes all seat transitions with original foot targets and fixed rig lengths
+ok 6 - jun completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3052.46825
+  type: 'test'
+  ...
+# Subtest: min completes all seat transitions with original foot targets and fixed rig lengths
+ok 7 - min completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 2586.580458
+  type: 'test'
+  ...
+# Subtest: leo completes all seat transitions with original foot targets and fixed rig lengths
+ok 8 - leo completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3530.903042
+  type: 'test'
+  ...
+# Subtest: 2 seated colleagues use personal listening and safe support gestures, then return
+ok 9 - 2 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 6000.777958
+  type: 'test'
+  ...
+# Subtest: 3 seated colleagues use personal listening and safe support gestures, then return
+ok 10 - 3 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 6601.359708
+  type: 'test'
+  ...
+# Subtest: 4 seated colleagues use personal listening and safe support gestures, then return
+ok 11 - 4 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 11992.712958
+  type: 'test'
+  ...
+# Subtest: 5 seated colleagues use personal listening and safe support gestures, then return
+ok 12 - 5 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 13126.800708
+  type: 'test'
+  ...
+# Subtest: five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+ok 13 - five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+  ---
+  duration_ms: 10029.226833
+  type: 'test'
+  ...
+# Subtest: all five transition interruptions preserve return/cancel cleanup at different phases
+ok 14 - all five transition interruptions preserve return/cancel cleanup at different phases
+  ---
+  duration_ms: 18180.052417
+  type: 'test'
+  ...
+# Subtest: single-actor pilot does not enable posture for the other four, and repeated reset releases state
+ok 15 - single-actor pilot does not enable posture for the other four, and repeated reset releases state
+  ---
+  duration_ms: 4437.54275
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 111318.820333

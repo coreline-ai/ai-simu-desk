@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "at": "2026-10-23T03:57:40.152Z",
+  "origin": "http://127.0.0.1:4180",
+  "release": "1792727781413-3bad296d-b718-415a-88e8-8ebd5987ae30",
+  "hashes": {
+    "assets/app.js": "22b1950d5752d463631fe5df97242aa03eadcfb0c4cfff39be0e111bdfe26ec2",
+    "demos/activities/personal/app.js": "16244cef218b1bf773627d4732f004bcc19921d3fd33c706799b68593d9602d1",
+    "assets/studio-room-v9.glb": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e"
+  },
+  "health": {
+    "status": "ok",
+    "database": "pglite"
+  },
+  "worker": {
+    "provider": "fake"
+  },
+  "model": 9,
+  "activities": 12,
+  "actors": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "contact": {
+    "available": true,
+    "stage": "adjust",
+    "time": 0.03333333333333333,
+    "done": 0,
+    "interruptions": 0,
+    "reason": null,
+    "next": 45,
+    "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+    "u": 0.05128205128205128,
+    "handError": 0,
+    "contact": [
+      0.10152778122091052,
+      1.1840519544452428,
+      -3.321647770218918
+    ],
+    "pad": [
+      0.10179375534247985,
+      1.1838174381051707,
+      -3.3136556328419147
+    ],
+    "surface": [
+      0.09599999999999999,
+      0.02206432944756609,
+      0.16786152074083605
+    ],
+    "wrist": [
+      0.12986504960425202,
+      1.1123290284296343,
+      -3.2839839338590173
+    ],
+    "indexBlend": 1,
+    "padError": 2.482534153247273e-16,
+    "actualWrist": [
+      0.12986504960425213,
+      1.1123290284296343,
+      -3.2839839338590173
+    ]
+  },
+  "motionAdvanced": true,
+  "rate": 1.5,
+  "canvas": 1,
+  "errors": []
+}

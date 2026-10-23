@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-23T02:33:46.162Z",
+  "release": "1792713140832-900c381d-d83b-4532-a085-153033c68fda",
+  "serverHashes": {
+    "main.js": "bbbcd7f95c98a5af7b41a1c2e760ddfbb5fd6c073a6de6e64e7d63be40e60dab"
+  },
+  "envMetadata": {
+    "exists": true,
+    "size": 193,
+    "mtimeMs": 1792401283265.955,
+    "mode": 384
+  },
+  "scope": "metadata only; no credentials or user DB content copied into evidence"
+}

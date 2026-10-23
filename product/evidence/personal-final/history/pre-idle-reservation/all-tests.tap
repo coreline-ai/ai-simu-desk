@@ -1,0 +1,317 @@
+
+> ai-simu-desk-visual-demo@0.1.0 test
+> node --import tsx --test --test-concurrency=1 demo/tests/*.test.mjs pilot-3d/tests/*.test.mjs product/tests/*.test.mjs server/tests/*.test.ts
+
+TAP version 13
+# Subtest: normal work completes with a result without mutating the initial state
+ok 1 - normal work completes with a result without mutating the initial state
+  ---
+  duration_ms: 0.582125
+  type: 'test'
+  ...
+# Subtest: approval cannot be bypassed by ticks; approval resumes the same run
+ok 2 - approval cannot be bypassed by ticks; approval resumes the same run
+  ---
+  duration_ms: 0.170625
+  type: 'test'
+  ...
+# Subtest: cancellation and declined approval reject late ticks and approval
+ok 3 - cancellation and declined approval reject late ticks and approval
+  ---
+  duration_ms: 0.062959
+  type: 'test'
+  ...
+# Subtest: a duplicate request, run ID, or active second run cannot execute twice
+ok 4 - a duplicate request, run ID, or active second run cannot execute twice
+  ---
+  duration_ms: 0.047292
+  type: 'test'
+  ...
+# Subtest: a duplicated stage and a callback from another run cannot move progress
+ok 5 - a duplicated stage and a callback from another run cannot move progress
+  ---
+  duration_ms: 0.088666
+  type: 'test'
+  ...
+# Subtest: failure can retry with a new run while old callbacks stay ineffective
+ok 6 - failure can retry with a new run while old callbacks stay ineffective
+  ---
+  duration_ms: 0.046167
+  type: 'test'
+  ...
+# Subtest: invalid and boundary input does not create work
+ok 7 - invalid and boundary input does not create work
+  ---
+  duration_ms: 0.091
+  type: 'test'
+  ...
+# Subtest: selection does not transfer execution ownership; unknown employees are ignored
+ok 8 - selection does not transfer execution ownership; unknown employees are ignored
+  ---
+  duration_ms: 0.1
+  type: 'test'
+  ...
+# Subtest: history is bounded to ten terminal runs
+ok 9 - history is bounded to ten terminal runs
+  ---
+  duration_ms: 0.179292
+  type: 'test'
+  ...
+# Subtest: evicting visible history does not forget an earlier idempotency key
+ok 10 - evicting visible history does not forget an earlier idempotency key
+  ---
+  duration_ms: 0.274791
+  type: 'test'
+  ...
+# Subtest: measured frames fit the original image and preserve opaque bounds on the shared canvas
+ok 11 - measured frames fit the original image and preserve opaque bounds on the shared canvas
+  ---
+  duration_ms: 3.534875
+  type: 'test'
+  ...
+# Subtest: loading, a pose change at frame zero, reduced motion, and disposal keep rendering isolated
+ok 12 - loading, a pose change at frame zero, reduced motion, and disposal keep rendering isolated
+  ---
+  duration_ms: 0.938792
+  type: 'test'
+  ...
+# Subtest: an atlas error exposes the existing readable fallback
+ok 13 - an atlas error exposes the existing readable fallback
+  ---
+  duration_ms: 0.30675
+  type: 'test'
+  ...
+# Subtest: exported idle and typing visibly move hands while keeping them above the desk
+ok 14 - exported idle and typing visibly move hands while keeping them above the desk
+  ---
+  duration_ms: 48.39775
+  type: 'test'
+  ...
+# Subtest: repeated state updates and pause/resume preserve animation phase, including crossfades
+ok 15 - repeated state updates and pause/resume preserve animation phase, including crossfades
+  ---
+  duration_ms: 14.080667
+  type: 'test'
+  ...
+# Subtest: completion is played once per observed transition; loading history produces no cue
+ok 16 - completion is played once per observed transition; loading history produces no cue
+  ---
+  duration_ms: 12.30875
+  type: 'test'
+  ...
+# Subtest: blink closes both eyes without altering the seated rig
+ok 17 - blink closes both eyes without altering the seated rig
+  ---
+  duration_ms: 13.025334
+  type: 'test'
+  ...
+# Subtest: the actual GLB roundtrip contains metre-scale geometry and both named animations
+ok 18 - the actual GLB roundtrip contains metre-scale geometry and both named animations
+  ---
+  duration_ms: 1.428542
+  type: 'test'
+  ...
+# Subtest: every tagged foot is on the floor and within the floor boundary after GLB import
+ok 19 - every tagged foot is on the floor and within the floor boundary after GLB import
+  ---
+  duration_ms: 0.250042
+  type: 'test'
+  ...
+# Subtest: animation loops close, move typing hands, and never move grounded shoes or furniture
+ok 20 - animation loops close, move typing hands, and never move grounded shoes or furniture
+  ---
+  duration_ms: 6.457584
+  type: 'test'
+  ...
+# Subtest: 3D pose follows the run owner and running state; pausing changes no business state
+ok 21 - 3D pose follows the run owner and running state; pausing changes no business state
+  ---
+  duration_ms: 0.519
+  type: 'test'
+  ...
+# Subtest: scene disposal releases shared geometry, material arrays and textures once
+ok 22 - scene disposal releases shared geometry, material arrays and textures once
+  ---
+  duration_ms: 0.815833
+  type: 'test'
+  ...
+# Subtest: activity claims are atomic, fair to released callers and fully disposable
+ok 23 - activity claims are atomic, fair to released callers and fully disposable
+  ---
+  duration_ms: 0.632708
+  type: 'test'
+  ...
+# Subtest: Nara destination route clears v6 furniture and reversed route stays continuous
+ok 24 - Nara destination route clears v6 furniture and reversed route stays continuous
+  ---
+  duration_ms: 283.2495
+  type: 'test'
+  ...
+# Subtest: route large dt cannot skip a corner or produce non-finite poses
+ok 25 - route large dt cannot skip a corner or produce non-finite poses
+  ---
+  duration_ms: 1.004875
+  type: 'test'
+  ...
+# Subtest: prepared sofa retains legs, frees left seat and has stable real surface bindings
+ok 26 - prepared sofa retains legs, frees left seat and has stable real surface bindings
+  ---
+  duration_ms: 266.10525
+  type: 'test'
+  ...
+# Subtest: Nara completes a supported sofa round trip without discontinuities or over-reach
+ok 27 - Nara completes a supported sofa round trip without discontinuities or over-reach
+  ---
+  duration_ms: 290.514333
+  type: 'test'
+  ...
+# Subtest: work interrupts every sofa segment, returns through safe path and preserves actual work pose
+ok 28 - work interrupts every sofa segment, returns through safe path and preserves actual work pose
+  ---
+  duration_ms: 3554.469
+  type: 'test'
+  ...
+# Subtest: blocked seat times out atomically, paused motion preserves claims, disposal releases all
+ok 29 - blocked seat times out atomically, paused motion preserves claims, disposal releases all
+  ---
+  duration_ms: 285.739333
+  type: 'test'
+  ...
+# Subtest: runtime reload and long repeated sofa use stay finite without accumulating anchors
+ok 30 - runtime reload and long repeated sofa use stay finite without accumulating anchors
+  ---
+  duration_ms: 1100.845292
+  type: 'test'
+  ...
+# Subtest: twenty sofa round trips reclaim all resources and stay deterministic across pauses
+ok 31 - twenty sofa round trips reclaim all resources and stay deterministic across pauses
+  ---
+  duration_ms: 322.763375
+  type: 'test'
+  ...
+# Subtest: sofa seat supports the hip and both soles contact the floor in rendered geometry
+ok 32 - sofa seat supports the hip and both soles contact the floor in rendered geometry
+  ---
+  duration_ms: 388.553917
+  type: 'test'
+  ...
+# Subtest: work arriving mid-stride settles feet continuously before reversing
+ok 33 - work arriving mid-stride settles feet continuously before reversing
+  ---
+  duration_ms: 270.710917
+  type: 'test'
+  ...
+# Subtest: complete and streaming tables retain headers, rows and surrounding source prose
+ok 34 - complete and streaming tables retain headers, rows and surrounding source prose
+  ---
+  duration_ms: 0.572167
+  type: 'test'
+  ...
+# Subtest: HTML and unsafe source strings remain plain cell data
+ok 35 - HTML and unsafe source strings remain plain cell data
+  ---
+  duration_ms: 0.295208
+  type: 'test'
+  ...
+# Subtest: conservative contact distances handle intersecting, parallel, separated and degenerate segments
+ok 36 - conservative contact distances handle intersecting, parallel, separated and degenerate segments
+  ---
+  duration_ms: 0.628333
+  type: 'test'
+  ...
+# Subtest: body contact diagnostics inspect actual joints and separate sofa arms instead of filling the seat gap
+ok 37 - body contact diagnostics inspect actual joints and separate sofa arms instead of filling the seat gap
+  ---
+  duration_ms: 660.814042
+  type: 'test'
+  ...
+# Subtest: validation and publication failures preserve the live files; one pointer switches both paths and rollback restores them
+ok 38 - validation and publication failures preserve the live files; one pointer switches both paths and rollback restores them
+  ---
+  duration_ms: 58.988459
+  type: 'test'
+  ...
+# Subtest: build lock rejects overlapping builds and is released after failure; GLB/private file validation rejects invalid candidates
+ok 39 - build lock rejects overlapping builds and is released after failure; GLB/private file validation rejects invalid candidates
+  ---
+  duration_ms: 17.197292
+  type: 'test'
+  ...
+# Subtest: standalone writers reject immutable managed output paths
+ok 40 - standalone writers reject immutable managed output paths
+  ---
+  duration_ms: 1.274208
+  type: 'test'
+  ...
+# Subtest: entry assets use content versions, remain idempotent and ignore escaped documentation/external links
+ok 41 - entry assets use content versions, remain idempotent and ignore escaped documentation/external links
+  ---
+  duration_ms: 2.617875
+  type: 'test'
+  ...
+# Subtest: a missing or escaping entry asset blocks release preparation
+ok 42 - a missing or escaping entry asset blocks release preparation
+  ---
+  duration_ms: 1.1045
+  type: 'test'
+  ...
+# Subtest: comparison preserves repeated lines and identifies insertions/deletions
+ok 43 - comparison preserves repeated lines and identifies insertions/deletions
+  ---
+  duration_ms: 0.570958
+  type: 'test'
+  ...
+# Subtest: project conditions have explicit labels and skip empty fields
+ok 44 - project conditions have explicit labels and skip empty fields
+  ---
+  duration_ms: 0.0715
+  type: 'test'
+  ...
+# Subtest: cup pickup/sip/place has a single owner, reachable hand and no duplicate mug
+ok 45 - cup pickup/sip/place has a single owner, reachable hand and no duplicate mug
+  ---
+  duration_ms: 359.847375
+  type: 'test'
+  ...
+# Subtest: work arriving in every cup phase cleans up once and large dt never skips ownership
+ok 46 - work arriving in every cup phase cleans up once and large dt never skips ownership
+  ---
+  duration_ms: 2268.824291
+  type: 'test'
+  ...
+# Subtest: all five actors have collision-checked sofa and meeting routes for both slots
+ok 47 - all five actors have collision-checked sofa and meeting routes for both slots
+  ---
+  duration_ms: 301.624583
+  type: 'test'
+  ...
+# Subtest: resource queues skip blocked seats, prioritize exits, and never keep abandoned claims
+ok 48 - resource queues skip blocked seats, prioritize exits, and never keep abandoned claims
+  ---
+  duration_ms: 0.49
+  type: 'test'
+  ...
+# Subtest: changed walking speed keeps consecutive segments contiguous and reaches corners without hidden waits
+ok 49 - changed walking speed keeps consecutive segments contiguous and reaches corners without hidden waits
+  ---
+  duration_ms: 0.39925
+  type: 'test'
+  ...
+# Subtest: sync predating read/post cannot undo the read state or newly fetched comments
+ok 50 - sync predating read/post cannot undo the read state or newly fetched comments
+  ---
+  duration_ms: 12.253542
+  type: 'test'
+  ...
+# Subtest: A to B to A and reset reject old GET and sync results; immutable comments merge without duplicates
+ok 51 - A to B to A and reset reject old GET and sync results; immutable comments merge without duplicates
+  ---
+  duration_ms: 1.142
+  type: 'test'
+  ...
+# Subtest: exported Nara GLB reloads with all original bindings and usable enhanced parts
+ok 52 - exported Nara GLB reloads with all original bindings and usable enhanced parts
+  ---
+  duration_ms: 2536.097625
+  type: 'test'
+  ...

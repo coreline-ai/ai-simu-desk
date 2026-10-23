@@ -1,0 +1,15 @@
+
+> ai-simu-desk-visual-demo@0.1.0 check:product
+> node --check product/src/app.mjs && node --check product/src/followups.mjs && node --check product/src/answer-view.mjs && node --check product/src/scene-state.mjs && node --check product/src/workspace-state.mjs && node --check product/src/workspaces.mjs && node --check product/src/presence.mjs && node --check scripts/build-product.mjs && node --check scripts/build-team.mjs && node --check scripts/serve-demos.mjs && node --check scripts/setup-local.mjs && node --check scripts/collaboration-smoke.mjs && node --check scripts/presence-smoke.mjs && node --check scripts/build-client.mjs && node --check scripts/build-vercel.mjs && node --check scripts/build-library.mjs && node --check product/src/team-handoff.mjs && node --check scripts/build-motion-qa.mjs && node --check product/src/work-tools.mjs && node --check product/src/discussion.mjs && node --check product/src/project.mjs && node --check product/src/comparison.mjs && node --check pilot-3d/sample/app.mjs && node --check pilot-3d/sample/motion.mjs && node --check pilot-3d/sample/character-rig.mjs && node --check pilot-3d/sample/model.mjs && node --check pilot-3d/sample/workspace.mjs && node --check scripts/sample-textures.mjs && node --check scripts/build-visual-sample.mjs && node --check scripts/build-sample-page.mjs && node --check pilot-3d/sample/geometry.mjs && node --check pilot-3d/sample/cloth.mjs && node scripts/check-visual-upgrade.mjs && node scripts/check-stabilization.mjs
+
+Visual upgrade syntax OK: 119 modules
+Local stabilization syntax OK: 64 modules
+
+> ai-simu-desk-visual-demo@0.1.0 typecheck
+> tsc --noEmit
+
+
+> ai-simu-desk-visual-demo@0.1.0 check:boundaries
+> node scripts/check-boundaries.mjs
+
+Domain/application dependency boundaries: OK

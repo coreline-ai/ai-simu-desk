@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-22T23:31:48.730Z",
+  "release": "1792711769919-c4f84597-7123-4017-8e57-447c24b54547",
+  "previous": "1792658643560-42e29006-01df-4f53-a8cc-0c01920862ec",
+  "active": "build-releases/1792711769919-c4f84597-7123-4017-8e57-447c24b54547",
+  "serverUnchanged": true,
+  "database": "existing local PGlite preserved; stale prior process lock handled by backup utility",
+  "backup": {
+    "file": "studio-2026-10-22T23-29-56-920Z.tar.gz",
+    "mode": "600"
+  },
+  "checks": "delivery.json verifies loopback HTTP assets against release manifest and runtime v12/5 actors"
+}

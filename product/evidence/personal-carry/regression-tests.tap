@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: 3 seated participants all speak, write, clean and return
+ok 1 - 3 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 15249.785375
+  type: 'test'
+  ...
+# Subtest: 4 seated participants all speak, write, clean and return
+ok 2 - 4 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 15395.192792
+  type: 'test'
+  ...
+# Subtest: 2 standing participants arrive before turns and return without overlap
+ok 3 - 2 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3398.486834
+  type: 'test'
+  ...
+# Subtest: 3 standing participants arrive before turns and return without overlap
+ok 4 - 3 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 4887.503041
+  type: 'test'
+  ...
+# Subtest: 4 standing participants arrive before turns and return without overlap
+ok 5 - 4 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 4560.062041
+  type: 'test'
+  ...
+# Subtest: 5 standing participants arrive before turns and return without overlap
+ok 6 - 5 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3727.234
+  type: 'test'
+  ...
+# Subtest: standing meeting rejects malformed participants and cleans on work interruption
+ok 7 - standing meeting rejects malformed participants and cleans on work interruption
+  ---
+  duration_ms: 4070.530333
+  type: 'test'
+  ...
+# Subtest: v12 posture and personal grips use the unchanged v11 scene schema and survive a full frame round trip
+ok 8 - v12 posture and personal grips use the unchanged v11 scene schema and survive a full frame round trip
+  ---
+  duration_ms: 8470.858
+  type: 'test'
+  ...
+# Subtest: Jun glasses touch the actual rim, leave the face clear and preserve limb lengths and feet through a continuous cycle
+ok 9 - Jun glasses touch the actual rim, leave the face clear and preserve limb lengths and feet through a continuous cycle
+  ---
+  duration_ms: 2739.96175
+  type: 'test'
+  ...
+# Subtest: every glasses phase yields immediately to actual work, cups, walking and participant removal; manual cancel retracts
+ok 10 - every glasses phase yields immediately to actual work, cups, walking and participant removal; manual cancel retracts
+  ---
+  duration_ms: 4629.189292
+  type: 'test'
+  ...
+# Subtest: glasses are optional, sparse, frozen when paused and serialize with the unchanged five-person scene schema
+ok 11 - glasses are optional, sparse, frozen when paused and serialize with the unchanged five-person scene schema
+  ---
+  duration_ms: 2351.3075
+  type: 'test'
+  ...
+# Subtest: exported v9 GLB supports the same actual-rim gesture without adding nodes or clips
+ok 12 - exported v9 GLB supports the same actual-rim gesture without adding nodes or clips
+  ---
+  duration_ms: 1161.958959
+  type: 'test'
+  ...
+# Subtest: an impending ambient stretch waits for the short glasses cycle while business work still preempts it
+ok 13 - an impending ambient stretch waits for the short glasses cycle while business work still preempts it
+  ---
+  duration_ms: 3573.480625
+  type: 'test'
+  ...
+# Subtest: Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+ok 14 - Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+  ---
+  duration_ms: 8796.125542
+  type: 'test'
+  ...
+# Subtest: Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+ok 15 - Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+  ---
+  duration_ms: 8510.944
+  type: 'test'
+  ...
+# Subtest: Nara pilot: work interruption during seating releases support and returns without stale claims
+ok 16 - Nara pilot: work interruption during seating releases support and returns without stale claims
+  ---
+  duration_ms: 6913.831333
+  type: 'test'
+  ...
+# Subtest: personal conversation prepares, takes turns and settles without changing acknowledgement lengths
+ok 17 - personal conversation prepares, takes turns and settles without changing acknowledgement lengths
+  ---
+  duration_ms: 11.306875
+  type: 'test'
+  ...
+# Subtest: all 20 ordered sofa pairs keep armrest/lap support, personal gestures and return
+ok 18 - all 20 ordered sofa pairs keep armrest/lap support, personal gestures and return
+  ---
+  duration_ms: 212617.453958
+  type: 'test'
+  ...
+# Subtest: personal visit invitation completes each role, cancels for work and never greets with an occupied prop hand
+ok 19 - personal visit invitation completes each role, cancels for work and never greets with an occupied prop hand
+  ---
+  duration_ms: 32206.165125
+  type: 'test'
+  ...
+# Subtest: personal two-person meetings serialize during pickup, discussion and return without retaining the scheduler
+ok 20 - personal two-person meetings serialize during pickup, discussion and return without retaining the scheduler
+  ---
+  duration_ms: 7590.2435
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 351732.029375

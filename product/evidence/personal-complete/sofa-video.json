@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scope": "actual Nara close camera, Nara/Sora sofa travel/conversation/return at x3",
+  "seconds": 49.6,
+  "errors": [],
+  "actors": [
+    "nara",
+    "sora"
+  ]
+}

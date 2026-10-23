@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-23T01:14:42.601Z",
+  "kind": "rapid identical-space rebuilds, double forced GC and WeakRef retention of disposed scene objects; not total GPU memory",
+  "rows": [
+    {
+      "reloads": 0,
+      "heap": 20708872,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 1,
+      "heap": 21509612,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 2,
+      "heap": 23022936,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 3,
+      "heap": 22939080,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 4,
+      "heap": 23700520,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 5,
+      "heap": 23583648,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 6,
+      "heap": 24234428,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 7,
+      "heap": 24433308,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 8,
+      "heap": 24628712,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 9,
+      "heap": 25252436,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 10,
+      "heap": 25540140,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 11,
+      "heap": 25361284,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 12,
+      "heap": 25962148,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 13,
+      "heap": 26154896,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 14,
+      "heap": 26359744,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 15,
+      "heap": 26173740,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    },
+    {
+      "reloads": 16,
+      "heap": 26768080,
+      "oldViews": 0,
+      "oldActors": 0,
+      "oldSchedulers": 0,
+      "canvas": 1
+    }
+  ]
+}

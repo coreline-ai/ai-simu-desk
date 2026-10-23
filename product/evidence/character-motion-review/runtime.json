@@ -1,0 +1,1942 @@
+{
+  "generatedAt": "2026-10-22T07:53:43.704Z",
+  "commit": "6b6055166b0e2c00415f44509b54cda2c37986f6",
+  "node": "v22.22.2",
+  "scope": "Current v11 in-memory activity completion and ownership; not full visual/mobile certification",
+  "cases": [
+    {
+      "label": "21 basic poses × 5 characters: finite transforms",
+      "status": "pass",
+      "actions": {},
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "poseStates": [
+        "idle",
+        "typing",
+        "thinking",
+        "waiting",
+        "success",
+        "error",
+        "blink",
+        "preparing",
+        "reviewing",
+        "sending",
+        "receiving",
+        "acknowledge",
+        "stretch",
+        "shoulder_roll",
+        "wrist_relax",
+        "stand_up",
+        "standing",
+        "walk",
+        "turn",
+        "sit_down",
+        "rest"
+      ],
+      "poseSamples": 2950,
+      "simulatedSeconds": 0,
+      "wallSeconds": 0.0943190830000001
+    },
+    {
+      "label": "15 role prop recipes: all five × variants 0/1/2",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "role_nara",
+          "stretch"
+        ],
+        "sora": [
+          "role_sora",
+          "shoulder_roll"
+        ],
+        "jun": [
+          "role_jun",
+          "idle",
+          "wrist_relax"
+        ],
+        "min": [
+          "role_min",
+          "idle",
+          "stretch"
+        ],
+        "leo": [
+          "role_leo",
+          "idle",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 1.2994827337208943e-15,
+      "maxDeskTipError": 2.7822109252321576e-15,
+      "maxCupHandError": 0,
+      "variants": {
+        "nara": [
+          0,
+          1,
+          2
+        ],
+        "sora": [
+          0,
+          1,
+          2
+        ],
+        "jun": [
+          0,
+          1,
+          2
+        ],
+        "min": [
+          0,
+          1,
+          2
+        ],
+        "leo": [
+          0,
+          1,
+          2
+        ]
+      },
+      "simulatedSeconds": 27.5,
+      "wallSeconds": 0.8562228749999999
+    },
+    {
+      "label": "5 personal cups: grip, sip, support and replace",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "waiting",
+          "stretch"
+        ],
+        "sora": [
+          "waiting",
+          "shoulder_roll"
+        ],
+        "jun": [
+          "waiting",
+          "idle"
+        ],
+        "min": [
+          "waiting",
+          "idle"
+        ],
+        "leo": [
+          "waiting",
+          "idle"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 1.2560739669470201e-15,
+      "supportCounts": {
+        "nara": 1,
+        "sora": 1,
+        "jun": 1,
+        "min": 1,
+        "leo": 1
+      },
+      "simulatedSeconds": 8.033333333333333,
+      "wallSeconds": 0.2718421669999998
+    },
+    {
+      "label": "15 micro rests: all five × 3 profile rotations",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "stretch",
+          "idle",
+          "personal_rest"
+        ],
+        "sora": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "shoulder_roll",
+          "idle",
+          "turn",
+          "walk",
+          "window_rest",
+          "standing",
+          "sit_down"
+        ],
+        "jun": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "wrist_relax",
+          "personal_rest",
+          "idle"
+        ],
+        "min": [
+          "personal_rest",
+          "idle",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "stretch"
+        ],
+        "leo": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "idle",
+          "personal_rest",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "styles": {
+        "nara": [
+          "one_arm",
+          "back_open",
+          "wrist_release"
+        ],
+        "sora": [
+          "side_stretch",
+          "back_open",
+          "shoulder_release"
+        ],
+        "jun": [
+          "shoulder_release",
+          "wrist_release",
+          "one_arm"
+        ],
+        "min": [
+          "wrist_release",
+          "side_stretch",
+          "shoulder_release"
+        ],
+        "leo": [
+          "back_open",
+          "shoulder_drop",
+          "side_stretch"
+        ]
+      },
+      "simulatedSeconds": 74.8,
+      "wallSeconds": 1.8709662500000004
+    },
+    {
+      "label": "5 single sofa round trips",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "idle",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "sora": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "jun": [
+          "idle",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "min": [
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "simulatedSeconds": 397.53333333333336,
+      "wallSeconds": 9.326766833
+    },
+    {
+      "label": "5 window rest round trips",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "stand_up",
+          "turn",
+          "walk",
+          "window_rest",
+          "standing",
+          "sit_down",
+          "stretch",
+          "idle",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "sora": [
+          "idle",
+          "shoulder_roll",
+          "stand_up",
+          "turn",
+          "walk",
+          "window_rest",
+          "standing",
+          "sit_down",
+          "wrist_relax",
+          "stretch"
+        ],
+        "jun": [
+          "idle",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll",
+          "stand_up",
+          "turn",
+          "walk",
+          "window_rest",
+          "standing",
+          "sit_down"
+        ],
+        "min": [
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax",
+          "stand_up",
+          "turn",
+          "walk",
+          "window_rest",
+          "standing",
+          "sit_down"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "stand_up",
+          "turn",
+          "walk",
+          "window_rest",
+          "standing",
+          "sit_down"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "simulatedSeconds": 283.43333333333334,
+      "wallSeconds": 6.394159791999998
+    },
+    {
+      "label": "5 coffee queue turns: no shared cup or machine leaks",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "sora": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch"
+        ],
+        "jun": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "min": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "leo": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 1.4390135079995448e-15,
+      "counts": {
+        "nara": 1,
+        "sora": 1,
+        "jun": 1,
+        "min": 1,
+        "leo": 1
+      },
+      "simulatedSeconds": 275.73333333333335,
+      "wallSeconds": 6.681732625
+    },
+    {
+      "label": "5 sofa conversation pairs: each character speaks and listens",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_listen",
+          "sofa_talk",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "idle",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "sora": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_talk",
+          "sofa_listen",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch"
+        ],
+        "jun": [
+          "idle",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_listen",
+          "sofa_talk",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "min": [
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_listen",
+          "sofa_talk",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "sofa_listen",
+          "sofa_talk",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rest",
+          "sofa_rise",
+          "sit_down"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "pairs": [
+        {
+          "ids": [
+            "nara",
+            "sora"
+          ],
+          "status": "complete",
+          "speakers": [
+            "sora",
+            "nara"
+          ]
+        },
+        {
+          "ids": [
+            "sora",
+            "jun"
+          ],
+          "status": "complete",
+          "speakers": [
+            "sora",
+            "jun"
+          ]
+        },
+        {
+          "ids": [
+            "jun",
+            "min"
+          ],
+          "status": "complete",
+          "speakers": [
+            "jun",
+            "min"
+          ]
+        },
+        {
+          "ids": [
+            "min",
+            "leo"
+          ],
+          "status": "complete",
+          "speakers": [
+            "min",
+            "leo"
+          ]
+        },
+        {
+          "ids": [
+            "leo",
+            "nara"
+          ],
+          "status": "complete",
+          "speakers": [
+            "nara",
+            "leo"
+          ]
+        }
+      ],
+      "simulatedSeconds": 656.9,
+      "wallSeconds": 16.343953457999998
+    },
+    {
+      "label": "2 seated meeting participants",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "meeting_pause",
+          "social_note",
+          "meeting_ack",
+          "sofa_rise",
+          "sit_down",
+          "stretch"
+        ],
+        "sora": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_talk",
+          "meeting_listen",
+          "meeting_pause",
+          "social_note",
+          "meeting_ack",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll"
+        ],
+        "jun": [
+          "idle",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "min": [
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 1.4390135079995448e-15,
+      "completed": 1,
+      "simulatedSeconds": 127.06666666666666,
+      "wallSeconds": 3.525714165999998
+    },
+    {
+      "label": "3 seated meeting participants",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_talk",
+          "group_note",
+          "meeting_listen",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "sora": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll"
+        ],
+        "jun": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "min": [
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 1.4390135079995448e-15,
+      "completed": {
+        "ids": [
+          "nara",
+          "sora",
+          "jun"
+        ],
+        "status": "complete",
+        "reason": "3인 회의 완료",
+        "spoke": [
+          "nara",
+          "sora",
+          "jun"
+        ],
+        "noted": [
+          "nara",
+          "sora",
+          "jun"
+        ],
+        "seconds": 193.2999999999916
+      },
+      "simulatedSeconds": 193.3,
+      "wallSeconds": 5.164254625000002
+    },
+    {
+      "label": "4 seated meeting participants",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_talk",
+          "group_note",
+          "meeting_listen",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "sora": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "jun": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "wrist_relax",
+          "stretch"
+        ],
+        "min": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 1.4390135079995448e-15,
+      "completed": {
+        "ids": [
+          "nara",
+          "sora",
+          "jun",
+          "min"
+        ],
+        "status": "complete",
+        "reason": "4인 회의 완료",
+        "spoke": [
+          "nara",
+          "sora",
+          "jun",
+          "min"
+        ],
+        "noted": [
+          "nara",
+          "sora",
+          "jun",
+          "min"
+        ],
+        "seconds": 266.5333333333297
+      },
+      "simulatedSeconds": 266.53333333333336,
+      "wallSeconds": 7.326370999999999
+    },
+    {
+      "label": "5 seated meeting participants",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_talk",
+          "group_note",
+          "meeting_listen",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "sora": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "jun": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "wrist_relax",
+          "stretch"
+        ],
+        "min": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down"
+        ],
+        "leo": [
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll",
+          "wrist_relax"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 1.4390135079995448e-15,
+      "completed": {
+        "ids": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "status": "complete",
+        "reason": "5인 회의 완료",
+        "spoke": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "noted": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seconds": 275.1666666666699
+      },
+      "simulatedSeconds": 275.1666666666667,
+      "wallSeconds": 7.839876667000004
+    },
+    {
+      "label": "5 standing huddle turns",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "idle"
+        ],
+        "sora": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting"
+        ],
+        "jun": [
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "wrist_relax",
+          "idle"
+        ],
+        "min": [
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "idle"
+        ],
+        "leo": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "completed": {
+        "ids": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "review": false,
+        "status": "complete",
+        "spoke": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seconds": 76.59999999999822
+      },
+      "simulatedSeconds": 76.6,
+      "wallSeconds": 1.638788625000001
+    },
+    {
+      "label": "5 shared board turns: one marker owner",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "idle"
+        ],
+        "sora": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting"
+        ],
+        "jun": [
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "wrist_relax",
+          "idle"
+        ],
+        "min": [
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "idle"
+        ],
+        "leo": [
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "completed": {
+        "ids": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "review": true,
+        "status": "complete",
+        "spoke": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "seconds": 169.39999999999296
+      },
+      "simulatedSeconds": 169.4,
+      "wallSeconds": 4.227220000000001
+    },
+    {
+      "label": "desk visit and document transfer 0",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "visit_invite",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "desk_visit",
+          "desk_transfer",
+          "sit_down",
+          "idle"
+        ],
+        "sora": [
+          "visit_invite",
+          "idle",
+          "desk_visit",
+          "desk_transfer",
+          "wrist_relax"
+        ],
+        "jun": [
+          "idle",
+          "wrist_relax",
+          "stretch"
+        ],
+        "min": [
+          "idle",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "visit": {
+        "ids": [
+          "nara",
+          "sora"
+        ],
+        "cue": "visit-1",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "note",
+          "explain",
+          "reflect",
+          "reply",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "nara": 0,
+          "sora": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 1,
+        "leader": "sora",
+        "speakers": [
+          "sora",
+          "nara"
+        ],
+        "transfer": true,
+        "transferComplete": true,
+        "transferStages": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read",
+          "giveback",
+          "regrasp",
+          "return",
+          "release"
+        ]
+      },
+      "transferHandError": 1.9389211565826713e-15,
+      "simulatedSeconds": 47.9,
+      "wallSeconds": 1.5327417500000011
+    },
+    {
+      "label": "desk visit and document transfer 1",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "idle",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "sora": [
+          "visit_invite",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "desk_visit",
+          "desk_transfer",
+          "sit_down",
+          "idle"
+        ],
+        "jun": [
+          "visit_invite",
+          "idle",
+          "desk_visit",
+          "desk_transfer",
+          "stretch"
+        ],
+        "min": [
+          "idle",
+          "stretch"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "visit": {
+        "ids": [
+          "sora",
+          "jun"
+        ],
+        "cue": "visit-1",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "note",
+          "explain",
+          "reflect",
+          "reply",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "sora": 0,
+          "jun": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 1,
+        "leader": "jun",
+        "speakers": [
+          "jun",
+          "sora"
+        ],
+        "transfer": true,
+        "transferComplete": true,
+        "transferStages": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read",
+          "giveback",
+          "regrasp",
+          "return",
+          "release"
+        ]
+      },
+      "transferHandError": 2.4850154473731614e-15,
+      "simulatedSeconds": 47.06666666666667,
+      "wallSeconds": 1.320857999999993
+    },
+    {
+      "label": "desk visit and document transfer 2",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "idle",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "sora": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "jun": [
+          "visit_invite",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "desk_visit",
+          "desk_transfer",
+          "sit_down",
+          "idle"
+        ],
+        "min": [
+          "visit_invite",
+          "idle",
+          "desk_visit",
+          "desk_transfer",
+          "shoulder_roll"
+        ],
+        "leo": [
+          "idle",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "visit": {
+        "ids": [
+          "jun",
+          "min"
+        ],
+        "cue": "visit-1",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "note",
+          "explain",
+          "reflect",
+          "reply",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "jun": 0,
+          "min": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 1,
+        "leader": "min",
+        "speakers": [
+          "min",
+          "jun"
+        ],
+        "transfer": true,
+        "transferComplete": true,
+        "transferStages": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read",
+          "giveback",
+          "regrasp",
+          "return",
+          "release"
+        ]
+      },
+      "transferHandError": 3.227294399221455e-15,
+      "simulatedSeconds": 48.63333333333333,
+      "wallSeconds": 1.1641780829999917
+    },
+    {
+      "label": "desk visit and document transfer 3",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "sora": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "jun": [
+          "idle",
+          "wrist_relax",
+          "stretch"
+        ],
+        "min": [
+          "visit_invite",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "desk_visit",
+          "desk_transfer",
+          "sit_down",
+          "idle"
+        ],
+        "leo": [
+          "visit_invite",
+          "idle",
+          "desk_visit",
+          "desk_transfer",
+          "wrist_relax"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "visit": {
+        "ids": [
+          "min",
+          "leo"
+        ],
+        "cue": "visit-1",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "note",
+          "explain",
+          "reflect",
+          "reply",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "min": 0,
+          "leo": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 1,
+        "leader": "leo",
+        "speakers": [
+          "leo",
+          "min"
+        ],
+        "transfer": true,
+        "transferComplete": true,
+        "transferStages": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read",
+          "giveback",
+          "regrasp",
+          "return",
+          "release"
+        ]
+      },
+      "transferHandError": 5.670838371828306e-15,
+      "simulatedSeconds": 68,
+      "wallSeconds": 1.7512546659999935
+    },
+    {
+      "label": "desk visit and document transfer 4",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "visit_invite",
+          "idle",
+          "desk_visit",
+          "desk_transfer",
+          "wrist_relax",
+          "stretch"
+        ],
+        "sora": [
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch"
+        ],
+        "jun": [
+          "idle",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll"
+        ],
+        "min": [
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax"
+        ],
+        "leo": [
+          "visit_invite",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "desk_visit",
+          "desk_transfer",
+          "sit_down",
+          "idle"
+        ]
+      },
+      "maxDeskHandError": 0,
+      "maxDeskTipError": 0,
+      "maxCupHandError": 0,
+      "visit": {
+        "ids": [
+          "leo",
+          "nara"
+        ],
+        "cue": "visit-1",
+        "phase": "done",
+        "status": "complete",
+        "history": [
+          "greet",
+          "respond",
+          "note",
+          "explain",
+          "reflect",
+          "reply",
+          "confirm",
+          "relax"
+        ],
+        "presented": {
+          "leo": 0,
+          "nara": 0
+        },
+        "reason": "문서 검토 완료",
+        "variant": 1,
+        "leader": "nara",
+        "speakers": [
+          "nara",
+          "leo"
+        ],
+        "transfer": true,
+        "transferComplete": true,
+        "transferStages": [
+          "pickup",
+          "grasp",
+          "present",
+          "receive",
+          "accept",
+          "read",
+          "giveback",
+          "regrasp",
+          "return",
+          "release"
+        ]
+      },
+      "transferHandError": 1.4217791915866692e-15,
+      "simulatedSeconds": 96.26666666666667,
+      "wallSeconds": 2.2706753339999994
+    },
+    {
+      "label": "scenario focus",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "role_nara",
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_talk",
+          "group_note",
+          "meeting_listen",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "shoulder_roll",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit"
+        ],
+        "sora": [
+          "role_sora",
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit"
+        ],
+        "jun": [
+          "role_jun",
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit"
+        ],
+        "min": [
+          "role_min",
+          "idle",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax",
+          "personal_rest"
+        ],
+        "leo": [
+          "role_leo",
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit"
+        ]
+      },
+      "maxDeskHandError": 1.2755491433176288e-15,
+      "maxDeskTipError": 2.8108601893111292e-15,
+      "maxCupHandError": 1.4390135079995448e-15,
+      "scenario": {
+        "name": "focus",
+        "status": "complete",
+        "steps": 4
+      },
+      "simulatedSeconds": 222.4,
+      "wallSeconds": 5.987806249999994
+    },
+    {
+      "label": "scenario review",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "role_nara",
+          "stretch",
+          "idle",
+          "shoulder_roll",
+          "wrist_relax",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "standing",
+          "sit_down",
+          "waiting"
+        ],
+        "sora": [
+          "role_sora",
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_talk",
+          "group_note",
+          "meeting_listen",
+          "sofa_rise",
+          "sit_down",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "coffee_wait"
+        ],
+        "jun": [
+          "role_jun",
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll",
+          "coffee_wait"
+        ],
+        "min": [
+          "role_min",
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "stretch",
+          "shoulder_roll",
+          "coffee_wait",
+          "wrist_relax"
+        ],
+        "leo": [
+          "role_leo",
+          "waiting",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "standing",
+          "sofa_sit",
+          "meeting_wait",
+          "meeting_listen",
+          "meeting_talk",
+          "group_note",
+          "sofa_rise",
+          "sit_down",
+          "coffee_wait",
+          "shoulder_roll"
+        ]
+      },
+      "maxDeskHandError": 1.2755491433176288e-15,
+      "maxDeskTipError": 2.8108601893111292e-15,
+      "maxCupHandError": 1.2755491433176288e-15,
+      "scenario": {
+        "name": "review",
+        "status": "complete",
+        "steps": 4
+      },
+      "simulatedSeconds": 439.96666666666664,
+      "wallSeconds": 14.038754207999999
+    },
+    {
+      "label": "scenario break",
+      "status": "pass",
+      "actions": {
+        "nara": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "shoulder_roll",
+          "wrist_relax",
+          "sofa_sit",
+          "sofa_rest",
+          "sofa_listen",
+          "sofa_talk",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rise",
+          "role_nara"
+        ],
+        "sora": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "window_rest",
+          "role_sora"
+        ],
+        "jun": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "wrist_relax",
+          "stretch",
+          "shoulder_roll",
+          "sofa_sit",
+          "sofa_talk",
+          "sofa_listen",
+          "sofa_agree",
+          "sofa_relax",
+          "sofa_rest",
+          "sofa_rise",
+          "role_jun"
+        ],
+        "min": [
+          "personal_rest",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "waiting",
+          "stretch",
+          "shoulder_roll",
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "wrist_relax",
+          "role_min"
+        ],
+        "leo": [
+          "natural_rise",
+          "natural_rest",
+          "natural_sit",
+          "idle",
+          "stand_up",
+          "turn",
+          "walk",
+          "coffee_wait",
+          "coffee_press",
+          "standing",
+          "sit_down",
+          "personal_rest",
+          "shoulder_roll",
+          "wrist_relax",
+          "stretch",
+          "role_leo"
+        ]
+      },
+      "maxDeskHandError": 1.2755491433176288e-15,
+      "maxDeskTipError": 2.808666774861361e-15,
+      "maxCupHandError": 1.4390135079995448e-15,
+      "scenario": {
+        "name": "break",
+        "status": "complete",
+        "steps": 4
+      },
+      "simulatedSeconds": 438,
+      "wallSeconds": 11.272927790999995
+    }
+  ],
+  "wallSeconds": 137.65228525,
+  "passed": 22,
+  "failed": 0
+}

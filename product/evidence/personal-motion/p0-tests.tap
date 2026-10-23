@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: v12 window variant reaches final free arms while v11 comparison retains its original result
+ok 1 - v12 window variant reaches final free arms while v11 comparison retains its original result
+  ---
+  duration_ms: 6565.444166
+  type: 'test'
+  ...
+# Subtest: all five board approaches and returns use the same personal gait policy as other routes
+ok 2 - all five board approaches and returns use the same personal gait policy as other routes
+  ---
+  duration_ms: 2590.116084
+  type: 'test'
+  ...
+# Subtest: v12 composition preserves cup ownership and both support contacts for all five
+ok 3 - v12 composition preserves cup ownership and both support contacts for all five
+  ---
+  duration_ms: 1401.484333
+  type: 'test'
+  ...
+# Subtest: v12 board marker contact and safe returns survive all five personal approach speeds
+ok 4 - v12 board marker contact and safe returns survive all five personal approach speeds
+  ---
+  duration_ms: 5081.281417
+  type: 'test'
+  ...
+# Subtest: Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+ok 5 - Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+  ---
+  duration_ms: 4455.402166
+  type: 'test'
+  ...
+# Subtest: Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+ok 6 - Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+  ---
+  duration_ms: 3132.006292
+  type: 'test'
+  ...
+# Subtest: Nara pilot: work interruption during seating releases support and returns without stale claims
+ok 7 - Nara pilot: work interruption during seating releases support and returns without stale claims
+  ---
+  duration_ms: 3201.029959
+  type: 'test'
+  ...
+# Subtest: nara completes all seat transitions with original foot targets and fixed rig lengths
+ok 8 - nara completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 4215.792166
+  type: 'test'
+  ...
+# Subtest: sora completes all seat transitions with original foot targets and fixed rig lengths
+ok 9 - sora completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 2909.3045
+  type: 'test'
+  ...
+# Subtest: jun completes all seat transitions with original foot targets and fixed rig lengths
+ok 10 - jun completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 2775.935334
+  type: 'test'
+  ...
+# Subtest: min completes all seat transitions with original foot targets and fixed rig lengths
+ok 11 - min completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 2319.033917
+  type: 'test'
+  ...
+# Subtest: leo completes all seat transitions with original foot targets and fixed rig lengths
+ok 12 - leo completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 2877.123333
+  type: 'test'
+  ...
+# Subtest: 2 seated colleagues use personal listening and safe support gestures, then return
+ok 13 - 2 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 4281.323834
+  type: 'test'
+  ...
+# Subtest: 3 seated colleagues use personal listening and safe support gestures, then return
+ok 14 - 3 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 6720.841792
+  type: 'test'
+  ...
+# Subtest: 4 seated colleagues use personal listening and safe support gestures, then return
+ok 15 - 4 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 9326.396958
+  type: 'test'
+  ...
+# Subtest: 5 seated colleagues use personal listening and safe support gestures, then return
+ok 16 - 5 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 11700.09625
+  type: 'test'
+  ...
+# Subtest: five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+ok 17 - five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+  ---
+  duration_ms: 9910.047166
+  type: 'test'
+  ...
+# Subtest: all five transition interruptions preserve return/cancel cleanup at different phases
+ok 18 - all five transition interruptions preserve return/cancel cleanup at different phases
+  ---
+  duration_ms: 14716.896917
+  type: 'test'
+  ...
+# Subtest: single-actor pilot does not enable posture for the other four, and repeated reset releases state
+ok 19 - single-actor pilot does not enable posture for the other four, and repeated reset releases state
+  ---
+  duration_ms: 4702.4005
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 103197.760042

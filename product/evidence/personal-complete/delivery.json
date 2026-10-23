@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "at": "2026-10-22T23:53:28.708Z",
+  "origin": "http://127.0.0.1:4180",
+  "release": "1792713140832-900c381d-d83b-4532-a085-153033c68fda",
+  "hashes": {
+    "assets/app.js": "435f43823a85af19e159596195e3ce2a637acfdea397041e2fd2978ef05d2e1b",
+    "demos/activities/personal/app.js": "3768f374084c77253a7205c32b73d2efaaee64abe2fbe7c9da3d3640254882dc",
+    "assets/studio-room-v9.glb": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e"
+  },
+  "health": {
+    "status": "ok",
+    "database": "pglite"
+  },
+  "worker": {
+    "provider": "fake"
+  },
+  "model": 9,
+  "activities": 12,
+  "personalActors": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "rate": 1.5,
+  "motionAdvanced": true,
+  "canvas": 1,
+  "errors": []
+}

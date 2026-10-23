@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: v12 posture and personal grips use the unchanged v11 scene schema and survive a full frame round trip
+ok 1 - v12 posture and personal grips use the unchanged v11 scene schema and survive a full frame round trip
+  ---
+  duration_ms: 5408.03575
+  type: 'test'
+  ...
+# Subtest: 15 personal work recipes have observe, act, pause, check and truly held trajectories
+ok 2 - 15 personal work recipes have observe, act, pause, check and truly held trajectories
+  ---
+  duration_ms: 1.499042
+  type: 'test'
+  ...
+# Subtest: all 15 recipes preserve pen/hand contact, ownership, return and all-stage cancellation
+ok 3 - all 15 recipes preserve pen/hand contact, ownership, return and all-stage cancellation
+  ---
+  duration_ms: 17295.44925
+  type: 'test'
+  ...
+# Subtest: real work cancels manual recipe, absence cancels real recipe, pause holds the recipe
+ok 4 - real work cancels manual recipe, absence cancels real recipe, pause holds the recipe
+  ---
+  duration_ms: 1285.298459
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 24169.030417

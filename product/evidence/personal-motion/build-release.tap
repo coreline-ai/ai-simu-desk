@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: validation and publication failures preserve the live files; one pointer switches both paths and rollback restores them
+ok 1 - validation and publication failures preserve the live files; one pointer switches both paths and rollback restores them
+  ---
+  duration_ms: 41.524708
+  type: 'test'
+  ...
+# Subtest: build lock rejects overlapping builds and is released after failure; GLB/private file validation rejects invalid candidates
+ok 2 - build lock rejects overlapping builds and is released after failure; GLB/private file validation rejects invalid candidates
+  ---
+  duration_ms: 13.620334
+  type: 'test'
+  ...
+# Subtest: standalone writers reject immutable managed output paths
+ok 3 - standalone writers reject immutable managed output paths
+  ---
+  duration_ms: 0.815166
+  type: 'test'
+  ...
+# Subtest: entry assets use content versions, remain idempotent and ignore escaped documentation/external links
+ok 4 - entry assets use content versions, remain idempotent and ignore escaped documentation/external links
+  ---
+  duration_ms: 2.222167
+  type: 'test'
+  ...
+# Subtest: a missing or escaping entry asset blocks release preparation
+ok 5 - a missing or escaping entry asset blocks release preparation
+  ---
+  duration_ms: 0.816834
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 95.52525

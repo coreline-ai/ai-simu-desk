@@ -1,0 +1,65 @@
+TAP version 13
+# Subtest: Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+not ok 1 - Nara pilot: complete sofa transition keeps authored feet, fixed limbs and smooth pelvis/torso
+  ---
+  duration_ms: 1893.83125
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-posture.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: 'nara no floor penetration'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    verifyBody (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-posture.test.mjs:9:321)
+    file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-posture.test.mjs:12:346
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:128)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-posture.test.mjs:12:218)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+not ok 2 - Nara pilot: seated listening has a brief response and still interval while table contacts stay authoritative
+  ---
+  duration_ms: 3124.191
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-posture.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert(maxNod>.04)
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/personal-posture.test.mjs:13:722)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: Nara pilot: work interruption during seating releases support and returns without stale claims
+ok 3 - Nara pilot: work interruption during seating releases support and returns without stale claims
+  ---
+  duration_ms: 3303.799667
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 1
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8476.630208

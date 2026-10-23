@@ -1,0 +1,32 @@
+{"reloads":0,"heap":21122496,"oldViews":0,"oldActors":0,"oldSchedulers":0,"canvas":1}
+{"reloads":1,"heap":24835776,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":2,"heap":25323212,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":3,"heap":25228520,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":4,"heap":25664188,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":5,"heap":25860416,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":6,"heap":26456704,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":7,"heap":26290664,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":8,"heap":27267608,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":9,"heap":27511016,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":10,"heap":27406884,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":11,"heap":27989540,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":12,"heap":27849380,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":13,"heap":28348648,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":14,"heap":28370588,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":15,"heap":28358520,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+{"reloads":16,"heap":29350552,"oldViews":0,"oldActors":1,"oldSchedulers":1,"canvas":1}
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: disposed actor graphs must be collected
+    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-final-memory.mjs:12:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.22.2

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "release": "1792657873655-98c3b12f-7f06-4626-af8e-7acbff9d8c09",
+  "at": "2026-10-22T08:32:58.190Z",
+  "checks": [
+    "packaged relative scripts and combined CSS",
+    "v12/v11/v12 switches",
+    "camera and pause survive",
+    "single canvas"
+  ],
+  "errors": []
+}

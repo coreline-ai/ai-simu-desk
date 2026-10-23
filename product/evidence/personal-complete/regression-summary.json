@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-22T23:51:38.054Z",
+  "fullRun": {
+    "file": "all-tests.tap",
+    "tests": 399,
+    "passed": 398,
+    "failed": 1,
+    "exitCode": 1
+  },
+  "resolved": [
+    {
+      "case": 207,
+      "name": "v12 composition preserves cup ownership and both support contacts for all five",
+      "reason": "P0 assumed all five reached full support simultaneously; independent P1 drink timings deliberately have no common full-support frame",
+      "repair": "same ownership/free-arm/contact thresholds checked at each actor’s own full-support phase",
+      "rerun": "cup-regression.tap",
+      "rerunPassed": 7,
+      "rerunFailed": 0
+    }
+  ],
+  "additionalContext": {
+    "file": "legacy-isolation.tap",
+    "extraCases": 2
+  },
+  "unresolvedFailures": 0,
+  "coverage": "399 full-run cases confirmed after affected rerun, plus 2 additional context cases; not a second full-suite exit-0 run"
+}

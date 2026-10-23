@@ -1,0 +1,209 @@
+{
+  "passed": true,
+  "scope": "actual compiled localhost4180: five close role cycles at x1; sofa lifecycle was validated off-camera, close visual capture is sofa-video.json",
+  "wallSeconds": 96.437,
+  "shots": [
+    {
+      "id": "nara",
+      "wallSeconds": 4.345,
+      "file": "product/evidence/personal-complete/motion-nara-0.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 0.12974710891318791,
+        "reading": false,
+        "progress": 0.11282357296798949,
+        "period": 2.8,
+        "variant": 0
+      }
+    },
+    {
+      "id": "nara",
+      "wallSeconds": 5.127,
+      "file": "product/evidence/personal-complete/motion-nara-1.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 1.0989754307889312,
+        "reading": false,
+        "progress": 0.9556308093816793,
+        "period": 2.8,
+        "variant": 0
+      }
+    },
+    {
+      "id": "nara",
+      "wallSeconds": 5.905,
+      "file": "product/evidence/personal-complete/motion-nara-2.png",
+      "recipe": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.8,
+        "variant": 0
+      }
+    },
+    {
+      "id": "sora",
+      "wallSeconds": 13.565,
+      "file": "product/evidence/personal-complete/motion-sora-0.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 0.3864883401920449,
+        "reading": false,
+        "progress": 0.33607681755829993,
+        "period": 2.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "sora",
+      "wallSeconds": 14.344,
+      "file": "product/evidence/personal-complete/motion-sora-1.png",
+      "recipe": {
+        "phase": "pause",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "sora",
+      "wallSeconds": 15.123,
+      "file": "product/evidence/personal-complete/motion-sora-2.png",
+      "recipe": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "jun",
+      "wallSeconds": 22.762,
+      "file": "product/evidence/personal-complete/motion-jun-0.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 0.0394375857338824,
+        "reading": false,
+        "progress": 0.03429355281207166,
+        "period": 3.1,
+        "variant": 0
+      }
+    },
+    {
+      "id": "jun",
+      "wallSeconds": 23.543,
+      "file": "product/evidence/personal-complete/motion-jun-1.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 0.9081576352366634,
+        "reading": false,
+        "progress": 0.7897022915101422,
+        "period": 3.1,
+        "variant": 0
+      }
+    },
+    {
+      "id": "jun",
+      "wallSeconds": 24.326,
+      "file": "product/evidence/personal-complete/motion-jun-2.png",
+      "recipe": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 3.1,
+        "variant": 0
+      }
+    },
+    {
+      "id": "min",
+      "wallSeconds": 32.026,
+      "file": "product/evidence/personal-complete/motion-min-0.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 0.3327648834019218,
+        "reading": false,
+        "progress": 0.2893607681755842,
+        "period": 2.7,
+        "variant": 0
+      }
+    },
+    {
+      "id": "min",
+      "wallSeconds": 32.821,
+      "file": "product/evidence/personal-complete/motion-min-1.png",
+      "recipe": {
+        "phase": "pause",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.7,
+        "variant": 0
+      }
+    },
+    {
+      "id": "min",
+      "wallSeconds": 33.607,
+      "file": "product/evidence/personal-complete/motion-min-2.png",
+      "recipe": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.7,
+        "variant": 0
+      }
+    },
+    {
+      "id": "leo",
+      "wallSeconds": 41.172,
+      "file": "product/evidence/personal-complete/motion-leo-0.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 0.030625877037711684,
+        "reading": false,
+        "progress": 0.026631197424097117,
+        "period": 3.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "leo",
+      "wallSeconds": 41.937,
+      "file": "product/evidence/personal-complete/motion-leo-1.png",
+      "recipe": {
+        "phase": "act",
+        "sample": 0.8828010991419268,
+        "reading": false,
+        "progress": 0.7676531296886321,
+        "period": 3.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "leo",
+      "wallSeconds": 42.715,
+      "file": "product/evidence/personal-complete/motion-leo-2.png",
+      "recipe": {
+        "phase": "pause",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 3.4,
+        "variant": 0
+      }
+    }
+  ],
+  "errors": [],
+  "inspectionClip": {
+    "file": "motion-inspection.mp4",
+    "seconds": 50,
+    "scope": "five close role cycles, trimmed before off-camera sofa section"
+  },
+  "sofaVisual": "sofa-video.json"
+}

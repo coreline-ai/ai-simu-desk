@@ -1,0 +1,202 @@
+TAP version 13
+# Subtest: five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+ok 1 - five actual arrivals use individual cadence, relaxed elbows and arm swing opposite the planted legs
+  ---
+  duration_ms: 2815.054
+  type: 'test'
+  ...
+# Subtest: relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+ok 2 - relaxed five-finger meshes keep original phalanx lengths and clear profiles when activity owns a hand
+  ---
+  duration_ms: 1869.250959
+  type: 'test'
+  ...
+# Subtest: a cup arm and both support hands retain contact authority while a free walking arm is released
+ok 3 - a cup arm and both support hands retain contact authority while a free walking arm is released
+  ---
+  duration_ms: 1489.733833
+  type: 'test'
+  ...
+# Subtest: individual standing gestures differ and preserve fixed joints and owned marker precedence
+ok 4 - individual standing gestures differ and preserve fixed joints and owned marker precedence
+  ---
+  duration_ms: 1810.428584
+  type: 'test'
+  ...
+# Subtest: pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+ok 5 - pause, reset, original v11 comparison and old v10 runtimes preserve lifecycle boundaries
+  ---
+  duration_ms: 3346.123542
+  type: 'test'
+  ...
+# Subtest: all five have different initial rest habits and support-safe seated/standing transitions
+ok 6 - all five have different initial rest habits and support-safe seated/standing transitions
+  ---
+  duration_ms: 1148.309041
+  type: 'test'
+  ...
+# Subtest: walking with a cup keeps only the occupied arm bent and preserves handle contact
+ok 7 - walking with a cup keeps only the occupied arm bent and preserves handle contact
+  ---
+  duration_ms: 1210.607458
+  type: 'test'
+  ...
+# Subtest: exported living GLB reloads five support grips and 105 clips; every actor can use both hands
+ok 8 - exported living GLB reloads five support grips and 105 clips; every actor can use both hands
+  ---
+  duration_ms: 2412.401041
+  type: 'test'
+  ...
+# Subtest: nara supports raised cup with both hands, keeps one owner and returns safely
+ok 9 - nara supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 2168.505125
+  type: 'test'
+  ...
+# Subtest: sora supports raised cup with both hands, keeps one owner and returns safely
+ok 10 - sora supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1131.378042
+  type: 'test'
+  ...
+# Subtest: jun supports raised cup with both hands, keeps one owner and returns safely
+ok 11 - jun supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1107.232167
+  type: 'test'
+  ...
+# Subtest: min supports raised cup with both hands, keeps one owner and returns safely
+ok 12 - min supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1112.744458
+  type: 'test'
+  ...
+# Subtest: leo supports raised cup with both hands, keeps one owner and returns safely
+ok 13 - leo supports raised cup with both hands, keeps one owner and returns safely
+  ---
+  duration_ms: 1116.505791
+  type: 'test'
+  ...
+# Subtest: two-hand cup releases the support safely when actual work preempts drinking
+ok 14 - two-hand cup releases the support safely when actual work preempts drinking
+  ---
+  duration_ms: 1027.281667
+  type: 'test'
+  ...
+# Subtest: 3 seated participants all speak, write, clean and return
+ok 15 - 3 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 7522.157083
+  type: 'test'
+  ...
+# Subtest: 4 seated participants all speak, write, clean and return
+ok 16 - 4 seated participants all speak, write, clean and return
+  ---
+  duration_ms: 8465.910417
+  type: 'test'
+  ...
+# Subtest: 2 standing participants arrive before turns and return without overlap
+ok 17 - 2 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3084.444667
+  type: 'test'
+  ...
+# Subtest: 3 standing participants arrive before turns and return without overlap
+ok 18 - 3 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 3769.649958
+  type: 'test'
+  ...
+# Subtest: 4 standing participants arrive before turns and return without overlap
+ok 19 - 4 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 2988.37425
+  type: 'test'
+  ...
+# Subtest: 5 standing participants arrive before turns and return without overlap
+ok 20 - 5 standing participants arrive before turns and return without overlap
+  ---
+  duration_ms: 2894.007791
+  type: 'test'
+  ...
+# Subtest: standing meeting rejects malformed participants and cleans on work interruption
+ok 21 - standing meeting rejects malformed participants and cleans on work interruption
+  ---
+  duration_ms: 3020.929917
+  type: 'test'
+  ...
+# Subtest: nara safely resumes interrupted sofa/window/rest/coffee after real work
+ok 22 - nara safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 7343.735042
+  type: 'test'
+  ...
+# Subtest: sora safely resumes interrupted sofa/window/rest/coffee after real work
+ok 23 - sora safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 5426.178708
+  type: 'test'
+  ...
+# Subtest: jun safely resumes interrupted sofa/window/rest/coffee after real work
+ok 24 - jun safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4908.920666
+  type: 'test'
+  ...
+# Subtest: min safely resumes interrupted sofa/window/rest/coffee after real work
+ok 25 - min safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 4531.955667
+  type: 'test'
+  ...
+# Subtest: leo safely resumes interrupted sofa/window/rest/coffee after real work
+ok 26 - leo safely resumes interrupted sofa/window/rest/coffee after real work
+  ---
+  duration_ms: 7696.389584
+  type: 'test'
+  ...
+# Subtest: explicit cancellation and participant removal discard resume intent
+ok 27 - explicit cancellation and participant removal discard resume intent
+  ---
+  duration_ms: 1221.453917
+  type: 'test'
+  ...
+# Subtest: all five approach the shared board, grip one marker, point, replace and return
+ok 28 - all five approach the shared board, grip one marker, point, replace and return
+  ---
+  duration_ms: 6622.439459
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during approach
+ok 29 - board review safely cancels during approach
+  ---
+  duration_ms: 2982.143333
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during use
+ok 30 - board review safely cancels during use
+  ---
+  duration_ms: 3618.33375
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during replace
+ok 31 - board review safely cancels during replace
+  ---
+  duration_ms: 3046.519292
+  type: 'test'
+  ...
+# Subtest: board review safely cancels during back
+ok 32 - board review safely cancels during back
+  ---
+  duration_ms: 2906.69125
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 106357.457084

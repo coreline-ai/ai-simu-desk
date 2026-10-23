@@ -1,0 +1,66 @@
+
+> ai-simu-desk-visual-demo@0.1.0 build:prepare
+> node --env-file-if-exists=.env.local scripts/build-product.mjs --prepare
+
+Team GLB built: 3912 KiB, 270 meshes, 86980 triangles
+Five-person GLB: 4039 KiB, 436 meshes, 142128 triangles
+Natural-motion GLB: 4087 KiB, 60 clips
+Office v5: 6758 KiB { meshes: 471, triangles: 406450 }
+Room v6 stage 6 7568 KiB { meshes: 510, triangles: 407519 }
+Final office v7 7554 KiB { meshes: 533, triangles: 381192 }
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+{"file":"studio-room-v8.glb","prototype":false,"bytes":8516844,"clips":105,"cost":{"meshes":600,"triangles":412804}}
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+GLTFExporter: Use MeshStandardMaterial or MeshBasicMaterial for best results.
+{"file":"studio-room-v9.glb","bytes":8768140,"clips":105}
+Nara sample 2376 KiB; 164 meshes; 105900 triangles
+Prepared release 1792657873655-98c3b12f-7f06-4626-af8e-7acbff9d8c09

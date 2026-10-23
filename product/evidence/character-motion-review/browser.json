@@ -1,0 +1,208 @@
+{
+  "passed": true,
+  "at": "2026-10-22T07:57:10.587Z",
+  "origin": "http://127.0.0.1:4180",
+  "scope": "4 visual spot checks; not all actions or devices",
+  "errors": [],
+  "shots": [
+    {
+      "label": "nara-note",
+      "model": 9,
+      "activities": 11,
+      "actors": {
+        "nara": {
+          "state": "role_nara",
+          "desk": {
+            "label": "기획 메모",
+            "variant": 0,
+            "variantsSeen": [],
+            "stage": "use",
+            "time": 1.0000000000000013,
+            "owner": "hand",
+            "done": 0,
+            "interruptions": 0,
+            "events": 1,
+            "handError": 0,
+            "tipError": 8.881784197001252e-16,
+            "returning": false,
+            "history": [
+              "reach",
+              "grasp",
+              "use"
+            ]
+          },
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          }
+        }
+      },
+      "violations": []
+    },
+    {
+      "label": "nara-cup",
+      "model": 9,
+      "activities": 11,
+      "actors": {
+        "nara": {
+          "state": "waiting",
+          "desk": {
+            "label": "기획 메모",
+            "variant": 0,
+            "variantsSeen": [],
+            "stage": "idle",
+            "time": 0,
+            "owner": "desk",
+            "done": 0,
+            "interruptions": 0,
+            "events": 0,
+            "handError": 0,
+            "tipError": 0,
+            "history": []
+          },
+          "cup": {
+            "state": "sip",
+            "time": 0.983,
+            "owner": "hand",
+            "events": 1,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          }
+        }
+      },
+      "violations": []
+    },
+    {
+      "label": "sofa-conversation",
+      "model": 9,
+      "activities": 11,
+      "actors": {
+        "nara": {
+          "state": "sofa_talk",
+          "desk": {
+            "label": "기획 메모",
+            "variant": 0,
+            "variantsSeen": [],
+            "stage": "idle",
+            "time": 0,
+            "owner": "desk",
+            "done": 0,
+            "interruptions": 0,
+            "events": 0,
+            "handError": 0,
+            "tipError": 0,
+            "history": []
+          },
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          }
+        },
+        "jun": {
+          "state": "sofa_listen",
+          "desk": {
+            "label": "코드 화면 설명",
+            "variant": 0,
+            "variantsSeen": [],
+            "stage": "idle",
+            "time": 0,
+            "owner": "desk",
+            "done": 0,
+            "interruptions": 0,
+            "events": 0,
+            "handError": 0,
+            "tipError": 0,
+            "history": []
+          },
+          "cup": {
+            "state": "idle",
+            "time": 0,
+            "owner": "desk",
+            "events": 0,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          }
+        }
+      },
+      "violations": []
+    },
+    {
+      "label": "seated-meeting",
+      "model": 9,
+      "activities": 11,
+      "actors": {
+        "nara": {
+          "state": "meeting_talk",
+          "desk": {
+            "label": "기획 메모",
+            "variant": 0,
+            "variantsSeen": [],
+            "stage": "idle",
+            "time": 0,
+            "owner": "desk",
+            "done": 0,
+            "interruptions": 0,
+            "events": 0,
+            "handError": 0,
+            "tipError": 0,
+            "history": []
+          },
+          "cup": {
+            "state": "tableRest",
+            "time": 12.217,
+            "owner": "meeting",
+            "events": 2,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          }
+        },
+        "jun": {
+          "state": "meeting_listen",
+          "desk": {
+            "label": "코드 화면 설명",
+            "variant": 0,
+            "variantsSeen": [],
+            "stage": "idle",
+            "time": 0,
+            "owner": "desk",
+            "done": 0,
+            "interruptions": 0,
+            "events": 0,
+            "handError": 0,
+            "tipError": 0,
+            "history": []
+          },
+          "cup": {
+            "state": "carry",
+            "time": 0,
+            "owner": "hand",
+            "events": 1,
+            "done": 0,
+            "returning": false,
+            "handError": 0,
+            "cupCount": 1
+          }
+        }
+      },
+      "violations": []
+    }
+  ]
+}

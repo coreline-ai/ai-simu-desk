@@ -8,7 +8,11 @@ const config=getConfig({PORT:String(port),APP_ORIGIN:`http://127.0.0.1:${port}`,
 await build({entryPoints:['product/src/app.mjs'],outfile:join(dir,'app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 await build({entryPoints:['pilot-3d/activities/team/app.mjs'],outfile:join(dir,'activities/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 await build({entryPoints:['pilot-3d/living-office/app.mjs'],outfile:join(dir,'living/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
+await build({entryPoints:['pilot-3d/personal-office/app.mjs'],outfile:join(dir,'personal/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 const db=await openDatabase(config.dataDir),app=createRuntime(db,config);
+app.get('/demos/activities/personal/',async c=>c.html(await readFile('pilot-3d/personal-office/index.html','utf8')));
+app.get('/demos/activities/personal/styles.css',async c=>{c.header('Content-Type','text/css');return c.body((await Promise.all(['pilot-3d/living-office/styles.css','pilot-3d/personal-office/styles.css'].map(p=>readFile(p,'utf8')))).join('\n'));});
+app.get('/demos/activities/personal/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'personal/app.js')));});
 app.get('/demos/activities/living/',async c=>c.html(await readFile('pilot-3d/living-office/index.html','utf8')));
 app.get('/demos/activities/living/styles.css',async c=>{c.header('Content-Type','text/css');return c.body(await readFile('pilot-3d/living-office/styles.css'));});
 app.get('/demos/activities/living/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'living/app.js')));});

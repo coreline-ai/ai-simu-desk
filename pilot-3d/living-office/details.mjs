@@ -18,7 +18,7 @@ export class LivingDetails{
     if(state.action==='window_rest'){
       const u=ease(t/.9)*ease((14-t)/1.1);this.seen[id].add(v);torso.rotation.z+=p.side*.6*u*Math.sin(t*.4+p.phase);
       // Hands stay free; no prop owner or support is displaced.
-      if(v===2)for(const side of['L','R']){part(actor,'NaraShoulder'+side).rotation.z+=(side==='L'?1:-1)*.10*u;part(actor,'NaraElbow'+side).rotation.x-=.08*u;}
+      if(v===2)for(const side of['L','R']){if(this.s.personalMotion?.has(id)&&!this.s.humanMotion.free(id,side))continue;part(actor,'NaraShoulder'+side).rotation.z+=(side==='L'?1:-1)*.10*u;part(actor,'NaraElbow'+side).rotation.x-=.08*u;}
     }
     if(state.activity==='micro'){this.seen[id].add(v);torso.rotation.y+=.025*Math.sin(t*.55+p.phase)*(state.pose?.restEnvelope??state.restEnvelope??0);}
   }

@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "at": "2026-10-23T03:55:51.113Z",
+  "origin": "http://127.0.0.1:4180",
+  "release": "1792727508857-220bfbf6-8872-4a7a-ba3e-089cdbe255e1",
+  "hashes": {
+    "assets/app.js": "22b1950d5752d463631fe5df97242aa03eadcfb0c4cfff39be0e111bdfe26ec2",
+    "demos/activities/personal/app.js": "dac3d682101e6468752b3f0e88bb8dfb3af1d35607ee8134755a2a6844d78aec",
+    "assets/studio-room-v9.glb": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e"
+  },
+  "emptyHand": [
+    {
+      "id": "nara",
+      "state": "idle",
+      "owner": "desk",
+      "events": 0
+    },
+    {
+      "id": "sora",
+      "state": "idle",
+      "owner": "desk",
+      "events": 0
+    },
+    {
+      "id": "jun",
+      "state": "idle",
+      "owner": "desk",
+      "events": 0
+    },
+    {
+      "id": "min",
+      "state": "idle",
+      "owner": "desk",
+      "events": 0
+    },
+    {
+      "id": "leo",
+      "state": "idle",
+      "owner": "desk",
+      "events": 0
+    }
+  ],
+  "carrying": {
+    "cup": {
+      "state": "carry",
+      "recipe": null,
+      "duration": null,
+      "time": 0,
+      "owner": "hand",
+      "events": 1,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    },
+    "hand": {
+      "surfaceVersion": 2,
+      "blend": 1,
+      "padError": 1.4539632184201917e-17,
+      "maxReach": 0.0720624728967855,
+      "fingers": 5,
+      "contactScope": "five-finger-target-points",
+      "contacts": [
+        {
+          "finger": "thumb",
+          "role": "grip",
+          "error": 3.576224061345498e-18,
+          "reachable": true,
+          "target": [
+            -0.005000000000000019,
+            0.011999999999999575,
+            -0.03299999999999985
+          ],
+          "actual": [
+            -0.005000000000000018,
+            0.011999999999999579,
+            -0.03299999999999985
+          ]
+        },
+        {
+          "finger": "index",
+          "role": "grip",
+          "error": 7.806255641895632e-18,
+          "reachable": true,
+          "target": [
+            -0.006000000000000025,
+            -0.01500000000000042,
+            -0.04599999999999986
+          ],
+          "actual": [
+            -0.006000000000000026,
+            -0.015000000000000416,
+            -0.04599999999999987
+          ]
+        },
+        {
+          "finger": "middle",
+          "role": "grip",
+          "error": 5.485677294651096e-18,
+          "reachable": true,
+          "target": [
+            0.005999999999999981,
+            -4.2500725161431774e-16,
+            -0.03599999999999985
+          ],
+          "actual": [
+            0.005999999999999983,
+            -4.3021142204224816e-16,
+            -0.03599999999999985
+          ]
+        },
+        {
+          "finger": "ring",
+          "role": "support",
+          "error": 9.965227682168975e-18,
+          "reachable": true,
+          "target": [
+            -0.005000000000000013,
+            0.02399999999999957,
+            -0.04199999999999984
+          ],
+          "actual": [
+            -0.005000000000000011,
+            0.023999999999999577,
+            -0.041999999999999836
+          ]
+        },
+        {
+          "finger": "little",
+          "role": "support",
+          "error": 1.4539632184201917e-17,
+          "reachable": true,
+          "target": [
+            0.00499999999999999,
+            0.02499999999999957,
+            -0.042999999999999844
+          ],
+          "actual": [
+            0.004999999999999994,
+            0.024999999999999557,
+            -0.042999999999999844
+          ]
+        }
+      ]
+    }
+  },
+  "errors": []
+}

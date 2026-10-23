@@ -1,0 +1,36 @@
+PASS actual scenario focus
+PASS actual scenario review
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/var/folders/n8/5wf23rwx1cx7cftb2z34jlqc0000gn/T/playwright_chromiumdev_profile-VaKwNm --remote-debugging-pipe --no-startup-window
+<launched> pid=96845
+[pid=96845][err] Trying to load the allocator multiple times. This is *not* supported.
+[pid=96845][err] [96850:183664360:1023/081036.504794:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664426:1023/081036.506627:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664360:1023/081036.511920:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664426:1023/081036.512019:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664360:1023/081036.513557:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664426:1023/081036.513592:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664360:1023/081036.514059:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664426:1023/081036.514121:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664360:1023/081036.514282:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96850:183664426:1023/081036.514332:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[pid=96845][err] [96845:183664343:1023/081038.986220:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=96845][err] [96845:183664343:1023/081059.947306:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=96845][err] [96845:183664343:1023/081141.900981:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=96845][err] [96845:183664343:1023/081321.487739:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=96845][err] Trying to load the allocator multiple times. This is *not* supported.
+[pid=96845][err] WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+[pid=96845][err] I0000 00:00:1792710816.139884 183676557 environment.cc:526] Selected adapter: Apple M4, arch=metal-3, vendor=apple, backend=Metal, adapterType=Integrated GPU
+[pid=96845][err] I0000 00:00:1792710816.142673 183676565 environment.cc:526] Selected adapter: Apple M4, arch=metal-3, vendor=apple, backend=Metal, adapterType=Integrated GPU
+[pid=96845] <gracefully close start>
+    at /Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/personal-complete-soak.mjs:7:135 {
+  log: []
+}
+
+Node.js v22.22.2

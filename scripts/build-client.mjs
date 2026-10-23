@@ -1,3 +1,4 @@
+import {buildPersonalPage} from './build-personal-page.mjs';
 import {buildLivingOffice} from './build-living-office.mjs';
 import {buildLivingPage} from './build-living-page.mjs';
 import {buildEnsembleOffice} from './build-ensemble-office.mjs';
@@ -29,7 +30,7 @@ export async function buildClient(remote=false) {await assertMutableOutput();
   await copyFile('product/assets/studio-room-v7.glb','product/dist/assets/studio-room-v7.glb');
   await buildEnsembleOffice();
   await copyFile('product/assets/studio-room-v8.glb','product/dist/assets/studio-room-v8.glb');
-  await buildLivingOffice();await copyFile('product/assets/studio-room-v9.glb','product/dist/assets/studio-room-v9.glb');await buildLivingPage();
+  await buildLivingOffice();await copyFile('product/assets/studio-room-v9.glb','product/dist/assets/studio-room-v9.glb');await buildLivingPage();await buildPersonalPage();
   await buildActivities();
   await buildTeamActivities();
   await buildSamplePage();

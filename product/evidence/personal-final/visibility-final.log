@@ -1,0 +1,3 @@
+PASS actual inactive tab
+PASS actual minimized window
+PASS actual paused during inactive tab

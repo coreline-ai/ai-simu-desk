@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "checks": [
+    "two authenticated viewers",
+    "shared role and cup captions",
+    "two-hand cup and five poses match",
+    "late join",
+    "viewer forbidden",
+    "controller release/takeover",
+    "role downgrade",
+    "logout stops lease",
+    "single canvas per page"
+  ],
+  "errors": [],
+  "last": {
+    "shared": true,
+    "controller": false,
+    "active": false,
+    "canControl": false,
+    "busy": false,
+    "controlPending": false,
+    "name": null,
+    "epoch": 3,
+    "seq": 2,
+    "sourcePaused": false,
+    "error": ""
+  },
+  "positions": {
+    "actors": {
+      "nara": [
+        -4.800000190734863,
+        0,
+        -3.600000023841858
+      ],
+      "sora": [
+        -2.4000000953674316,
+        0,
+        -3.600000023841858
+      ],
+      "jun": [
+        0,
+        0,
+        -3.600000023841858
+      ],
+      "min": [
+        2.4000000953674316,
+        0,
+        -3.600000023841858
+      ],
+      "leo": [
+        4.800000190734863,
+        0,
+        -3.600000023841858
+      ]
+    },
+    "props": {
+      "NaraCeramicMug": {
+        "position": [
+          -5.100000202655792,
+          0.7795000076293945,
+          -3.2000000029802322
+        ],
+        "parent": "NaraSampleDesk"
+      },
+      "LivingReviewMarker": {
+        "position": [
+          0.25,
+          1.2009999472647905,
+          0.5699999779462814
+        ],
+        "parent": "LivingMarkerTray"
+      }
+    }
+  }
+}
