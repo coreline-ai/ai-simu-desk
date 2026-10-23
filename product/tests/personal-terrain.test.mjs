@@ -1,0 +1,12 @@
+import test from 'node:test';import assert from 'node:assert/strict';import * as T from 'three';
+import {fixture} from './living-fixture.mjs';import {part} from '../../pilot-3d/sample/character-rig.mjs';
+test('v12 rounded-sole terrain solver follows actual rug triangles at the edge and releases its caches',()=>{
+ const f=fixture({personalMotion:true});try{const terrain=f.s.personalMotion.terrain,actor=f.s.desks.nara.actor,station=actor.parent;assert.equal(f.s.personalMotion.has('nara'),true);const mesh=f.root.getObjectByName('MeetingWovenRug'),box=new T.Box3().setFromObject(mesh),ray=new T.Raycaster(new T.Vector3(),new T.Vector3(0,-1,0));let checked=0;
+ for(const x of [box.min.x-.05,box.min.x+.01,box.min.x+.07,box.min.x+.13])for(const yaw of [0,.7,1.5,2.8]){const p=station.worldToLocal(new T.Vector3(x,0,box.getCenter(new T.Vector3()).z)),pose={x:p.x,z:p.z,yaw,hip:.84,stand:1,arms:0,feet:[-.1,.1].map(dx=>({position:[p.x+dx,.085,p.z],planted:true,pitch:.14,yaw:.2}))},result=terrain.correct('nara',pose),repeat=terrain.correct('nara',pose);assert.deepEqual(repeat,result,'cached evaluation deterministic');
+  for(const [i,side]of ['L','R'].entries()){const foot=part(actor,'NaraFoot'+side),sole=part(actor,'Sole'+side),local=foot.matrixWorld.clone().invert().multiply(sole.matrixWorld),q=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),yaw).multiply(new T.Quaternion().setFromEuler(new T.Euler(.14,.2,0,'YXZ')));let min=Infinity;
+   for(let n=0;n<sole.geometry.attributes.position.count;n++){const v=new T.Vector3().fromBufferAttribute(sole.geometry.attributes.position,n).applyMatrix4(local).applyQuaternion(q).add(new T.Vector3(...result.feet[i].position)).applyMatrix4(station.matrixWorld);ray.set(new T.Vector3(v.x,3,v.z),new T.Vector3(0,-1,0));const hit=ray.intersectObjects(['RoomFloor','WovenRug','MeetingWovenRug'].map(name=>f.root.getObjectByName(name)),false)[0];assert(hit);min=Math.min(min,v.y-hit.point.y);}assert(Math.abs(min-.001)<1e-6,'real sole/terrain 1mm clearance: '+min);checked++;
+  }
+ }assert.equal(checked,32);terrain.dispose();assert.equal(terrain.cells.size,0);assert.equal(terrain.actors.size,0);
+ }finally{f.close();}
+});
+test('v11 does not construct or apply the personal terrain solver',()=>{const f=fixture({personalMotion:false});try{assert.equal(f.s.personalMotion,null);f.s.startSofa('nara');assert.equal(f.s.records.get('nara').trip.options.groundContact,undefined);}finally{f.close();}});

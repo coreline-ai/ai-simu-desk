@@ -1,0 +1,342 @@
+{
+  "scope": "Retained module-shared Three DataTexture identified from strong WebGL retainer path; snapshot v12 rebuild30",
+  "retainedObject": {
+    "object": {
+      "index": 122844,
+      "id": 116109,
+      "type": "object",
+      "name": "Lr",
+      "self": 164
+    },
+    "props": [
+      {
+        "edge": "internal:1 / part of key (Lr @116109) -> value (Object @2721819) pair in WeakMap (table @2721715)",
+        "index": 128630,
+        "id": 2721819,
+        "type": "object",
+        "name": "Object",
+        "self": 28
+      },
+      {
+        "edge": "property:isTexture",
+        "index": 33,
+        "id": 67,
+        "type": "native",
+        "name": "true",
+        "self": 0
+      },
+      {
+        "edge": "property:id",
+        "index": 66982,
+        "id": 2605331,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:uuid",
+        "index": 618219,
+        "id": 1207033,
+        "type": "string",
+        "name": "88e5e604-2a41-4485-8fd3-ef4dc6d285cf",
+        "self": 48
+      },
+      {
+        "edge": "property:name",
+        "index": 24634,
+        "id": 48951,
+        "type": "string",
+        "name": "DFG_LUT",
+        "self": 20
+      },
+      {
+        "edge": "property:source",
+        "index": 77270,
+        "id": 1084117,
+        "type": "object",
+        "name": "Ar",
+        "self": 36
+      },
+      {
+        "edge": "property:mipmaps",
+        "index": 618220,
+        "id": 1207035,
+        "type": "object",
+        "name": "Array",
+        "self": 16
+      },
+      {
+        "edge": "property:mapping",
+        "index": 105076,
+        "id": 2676913,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:channel",
+        "index": 53094,
+        "id": 2577727,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:wrapS",
+        "index": 105078,
+        "id": 2676917,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:wrapT",
+        "index": 105078,
+        "id": 2676917,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:magFilter",
+        "index": 136722,
+        "id": 2737479,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:minFilter",
+        "index": 136722,
+        "id": 2737479,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:anisotropy",
+        "index": 53085,
+        "id": 2577709,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:format",
+        "index": 283665,
+        "id": 2970265,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:internalFormat",
+        "index": 32,
+        "id": 65,
+        "type": "native",
+        "name": "null",
+        "self": 0
+      },
+      {
+        "edge": "property:type",
+        "index": 290476,
+        "id": 2983851,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:offset",
+        "index": 618221,
+        "id": 1207037,
+        "type": "object",
+        "name": "r",
+        "self": 20
+      },
+      {
+        "edge": "property:repeat",
+        "index": 618222,
+        "id": 1207039,
+        "type": "object",
+        "name": "r",
+        "self": 20
+      },
+      {
+        "edge": "property:center",
+        "index": 618223,
+        "id": 1207041,
+        "type": "object",
+        "name": "r",
+        "self": 20
+      },
+      {
+        "edge": "property:rotation",
+        "index": 53094,
+        "id": 2577727,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:matrixAutoUpdate",
+        "index": 33,
+        "id": 67,
+        "type": "native",
+        "name": "true",
+        "self": 0
+      },
+      {
+        "edge": "property:matrix",
+        "index": 618224,
+        "id": 1207043,
+        "type": "object",
+        "name": "r",
+        "self": 16
+      },
+      {
+        "edge": "property:generateMipmaps",
+        "index": 34,
+        "id": 69,
+        "type": "native",
+        "name": "false",
+        "self": 0
+      },
+      {
+        "edge": "property:premultiplyAlpha",
+        "index": 34,
+        "id": 69,
+        "type": "native",
+        "name": "false",
+        "self": 0
+      },
+      {
+        "edge": "property:flipY",
+        "index": 34,
+        "id": 69,
+        "type": "native",
+        "name": "false",
+        "self": 0
+      },
+      {
+        "edge": "property:unpackAlignment",
+        "index": 53085,
+        "id": 2577709,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:colorSpace",
+        "index": 35,
+        "id": 71,
+        "type": "string",
+        "name": "",
+        "self": 0
+      },
+      {
+        "edge": "property:userData",
+        "index": 618225,
+        "id": 1207045,
+        "type": "object",
+        "name": "Object",
+        "self": 28
+      },
+      {
+        "edge": "property:updateRanges",
+        "index": 618226,
+        "id": 1207047,
+        "type": "object",
+        "name": "Array",
+        "self": 16
+      },
+      {
+        "edge": "property:version",
+        "index": 53085,
+        "id": 2577709,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:onUpdate",
+        "index": 32,
+        "id": 65,
+        "type": "native",
+        "name": "null",
+        "self": 0
+      },
+      {
+        "edge": "property:renderTarget",
+        "index": 32,
+        "id": 65,
+        "type": "native",
+        "name": "null",
+        "self": 0
+      },
+      {
+        "edge": "property:isRenderTargetTexture",
+        "index": 34,
+        "id": 69,
+        "type": "native",
+        "name": "false",
+        "self": 0
+      },
+      {
+        "edge": "property:isArrayTexture",
+        "index": 34,
+        "id": 69,
+        "type": "native",
+        "name": "false",
+        "self": 0
+      },
+      {
+        "edge": "property:pmremVersion",
+        "index": 53094,
+        "id": 2577727,
+        "type": "number",
+        "name": "smi number",
+        "self": 0
+      },
+      {
+        "edge": "property:normalized",
+        "index": 34,
+        "id": 69,
+        "type": "native",
+        "name": "false",
+        "self": 0
+      },
+      {
+        "edge": "property:isDataTexture",
+        "index": 33,
+        "id": 67,
+        "type": "native",
+        "name": "true",
+        "self": 0
+      },
+      {
+        "edge": "property:_listeners",
+        "index": 618227,
+        "id": 1207049,
+        "type": "object",
+        "name": "Object",
+        "self": 28
+      },
+      {
+        "edge": "property:__proto__",
+        "index": 105091,
+        "id": 1077229,
+        "type": "object",
+        "name": "r",
+        "self": 12
+      },
+      {
+        "edge": "internal:map",
+        "index": 105092,
+        "id": 1042769,
+        "type": "object shape",
+        "name": "system / Map",
+        "self": 40
+      }
+    ]
+  }
+}

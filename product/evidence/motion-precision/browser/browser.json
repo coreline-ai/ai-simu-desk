@@ -1,0 +1,660 @@
+{
+  "passed": true,
+  "at": "2026-10-23T06:47:39.293Z",
+  "origin": "http://127.0.0.1:4193",
+  "checks": [
+    {
+      "kind": "actual rim contact and paused index",
+      "sample": {
+        "available": true,
+        "stage": "adjust",
+        "time": 0.03333333333333333,
+        "done": 0,
+        "interruptions": 0,
+        "reason": null,
+        "next": 45,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+        "u": 0.05128205128205128,
+        "handError": 1.3877787807814457e-16,
+        "contact": [
+          0.10086543504074694,
+          1.1844577851846483,
+          -3.321397509458028
+        ],
+        "pad": [
+          0.1010992683720212,
+          1.1842259148467216,
+          -3.3134042899489957
+        ],
+        "surface": [
+          0.09599999999999999,
+          0.02206432944756609,
+          0.16786152074083605
+        ],
+        "wrist": [
+          0.1290426919942799,
+          1.1127441765233077,
+          -3.2835961339756725
+        ],
+        "indexBlend": 1,
+        "padError": 2.2887833992611187e-16,
+        "actualWrist": [
+          0.12904269199428012,
+          1.1127441765233077,
+          -3.2835961339756725
+        ]
+      }
+    },
+    {
+      "kind": "rate",
+      "rate": "1",
+      "done": 2
+    },
+    {
+      "kind": "rate",
+      "rate": "1.5",
+      "done": 3
+    },
+    {
+      "kind": "rate",
+      "rate": "2",
+      "done": 4
+    },
+    {
+      "kind": "rate",
+      "rate": "3",
+      "done": 5
+    },
+    {
+      "kind": "real work preemption"
+    },
+    {
+      "kind": "manual cancel retreats and returns"
+    },
+    {
+      "kind": "OS reduced motion freezes optional gesture"
+    },
+    {
+      "kind": "v11 remains opt-out and scene reload disposes gesture"
+    },
+    {
+      "kind": "320/390/768/1440 viewport, single canvas; not a physical device"
+    }
+  ],
+  "clickAttempts": [
+    {
+      "label": "first contact",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 0,
+        "interruptions": 0,
+        "reason": null,
+        "next": 45,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0.06666666666666667,
+          "done": 0,
+          "interruptions": 0,
+          "reason": null,
+          "next": 45,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+          "u": 0.2777777777777778,
+          "handError": 5.3533015581491455e-16,
+          "contact": [
+            0.10332381851765926,
+            1.1854570511622897,
+            -3.320123592603976
+          ],
+          "pad": [
+            0.10367732854365792,
+            1.1851773054477455,
+            -3.312136304391027
+          ],
+          "surface": [
+            0.09599999999999999,
+            0.02200000000000002,
+            0.16786152074083605
+          ],
+          "wrist": [
+            0.17199999999999988,
+            0.7950000008940697,
+            -3.0650940880509556
+          ],
+          "indexBlend": 0,
+          "padError": 0.47371578593305624,
+          "actualWrist": [
+            0.17199999999999954,
+            0.7950000008940697,
+            -3.065094088050955
+          ]
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 0.5333333333333333,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 0
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    },
+    {
+      "label": "rate 1",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 1,
+        "interruptions": 0,
+        "reason": "complete",
+        "next": 108.63333333333333,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0.03333333333333333,
+          "done": 1,
+          "interruptions": 0,
+          "reason": null,
+          "next": 108.63333333333333,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+          "u": 0.1388888888888889,
+          "handError": 1.2412670766236366e-16,
+          "contact": [
+            0.09500461316076708,
+            1.1868653242504392,
+            -3.3125161229072106
+          ],
+          "pad": [
+            0.09495725485193972,
+            1.186539968081473,
+            -3.3045228819779067
+          ],
+          "surface": [
+            0.09599999999999999,
+            0.02200000000000002,
+            0.16786152074083605
+          ],
+          "wrist": [
+            0.17199999999999988,
+            0.7950000008940697,
+            -3.064515775181825
+          ],
+          "indexBlend": 0,
+          "padError": 0.4715403672680787,
+          "actualWrist": [
+            0.17199999999999968,
+            0.7950000008940696,
+            -3.0645157751818246
+          ]
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 3.6999999999999917,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 1
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    },
+    {
+      "label": "rate 1.5",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 2,
+        "interruptions": 0,
+        "reason": "complete",
+        "next": 111.79999999999998,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0.05,
+          "done": 2,
+          "interruptions": 0,
+          "reason": null,
+          "next": 111.79999999999998,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+          "u": 0.20833333333333334,
+          "handError": 2.7755575615628914e-17,
+          "contact": [
+            0.09068820509194539,
+            1.1893055641407018,
+            -3.3142270926874176
+          ],
+          "pad": [
+            0.09043730447203396,
+            1.1890502621540737,
+            -3.3062351048386684
+          ],
+          "surface": [
+            0.09599999999999999,
+            0.02200000000000002,
+            0.16786152074083605
+          ],
+          "wrist": [
+            0.17200000000000007,
+            0.7990150131710241,
+            -3.065290913940866
+          ],
+          "indexBlend": 0,
+          "padError": 0.4707336123842465,
+          "actualWrist": [
+            0.172,
+            0.7990150131710241,
+            -3.065290913940866
+          ]
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 6.899999999999981,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 2
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    },
+    {
+      "label": "rate 2",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 3,
+        "interruptions": 0,
+        "reason": "complete",
+        "next": 115.00000000000007,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0.06666666666666667,
+          "done": 3,
+          "interruptions": 0,
+          "reason": null,
+          "next": 115.00000000000007,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+          "u": 0.2777777777777778,
+          "handError": 2.220446049250313e-16,
+          "contact": [
+            0.09106244865459598,
+            1.1885704467929226,
+            -3.3150525116544927
+          ],
+          "pad": [
+            0.09082908024380912,
+            1.1883258594384316,
+            -3.3070596575828315
+          ],
+          "surface": [
+            0.09599999999999999,
+            0.02200000000000002,
+            0.16786152074083605
+          ],
+          "wrist": [
+            0.17199999999999993,
+            0.797906075572781,
+            -3.0653136122622433
+          ],
+          "indexBlend": 0,
+          "padError": 0.47147845132996435,
+          "actualWrist": [
+            0.1719999999999996,
+            0.797906075572781,
+            -3.0653136122622433
+          ]
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 10.100000000000081,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 3
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    },
+    {
+      "label": "rate 3",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 4,
+        "interruptions": 0,
+        "reason": "complete",
+        "next": 118.20000000000023,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "idle",
+          "time": 0,
+          "done": 4,
+          "interruptions": 0,
+          "reason": "complete",
+          "next": 118.20000000000023,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+        },
+        "active": false,
+        "eligible": false,
+        "action": "wrist_relax",
+        "notice": "진행 중인 활동을 정리한 뒤 다시 시작해 주세요.",
+        "events": [
+          {
+            "time": 13.800000000000265,
+            "eligible": false,
+            "action": "wrist_relax",
+            "stage": "idle",
+            "done": 4
+          }
+        ]
+      },
+      "accepted": false,
+      "rejected": true,
+      "cause": "eligibility changed before native click"
+    },
+    {
+      "label": "rate 3",
+      "attempt": 2,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 4,
+        "interruptions": 0,
+        "reason": "complete",
+        "next": 118.20000000000023,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0.09999999999999999,
+          "done": 4,
+          "interruptions": 0,
+          "reason": null,
+          "next": 118.20000000000023,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+          "u": 0.41666666666666663,
+          "handError": 8.326672684688674e-17,
+          "contact": [
+            0.09928476797563492,
+            1.1882875199787526,
+            -3.316319641059675
+          ],
+          "pad": [
+            0.09944220053949974,
+            1.1879848774940578,
+            -3.3083269179621135
+          ],
+          "surface": [
+            0.09599999999999999,
+            0.02200000000000002,
+            0.16786152074083605
+          ],
+          "wrist": [
+            0.17200015774879185,
+            0.7950000008940697,
+            -3.0643253556258867
+          ],
+          "indexBlend": 0,
+          "padError": 0.4749885319341289,
+          "actualWrist": [
+            0.17200015774879165,
+            0.7950000008940697,
+            -3.0643253556258867
+          ]
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 18.100000000000254,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 4
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    },
+    {
+      "label": "real work preemption",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 5,
+        "interruptions": 0,
+        "reason": "complete",
+        "next": 126.20000000000007,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0.05,
+          "done": 5,
+          "interruptions": 0,
+          "reason": null,
+          "next": 126.20000000000007,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+          "u": 0.20833333333333334,
+          "handError": 2.7755575615628914e-17,
+          "contact": [
+            0.10598244025482935,
+            1.187987509810002,
+            -3.319095303160198
+          ],
+          "pad": [
+            0.1064665721373278,
+            1.187661064686625,
+            -3.3111166409977946
+          ],
+          "surface": [
+            0.09599999999999999,
+            0.02200000000000002,
+            0.16786152074083605
+          ],
+          "wrist": [
+            0.17199999999999968,
+            0.7974350255721565,
+            -3.0650147187408985
+          ],
+          "indexBlend": 0,
+          "padError": 0.4729731144596288,
+          "actualWrist": [
+            0.1719999999999997,
+            0.7974350255721565,
+            -3.0650147187408985
+          ]
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 21.73333333333338,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 5
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    },
+    {
+      "label": "manual cancel",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 5,
+        "interruptions": 1,
+        "reason": "higher-priority activity",
+        "next": 127.94999999999997,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0.06666666666666667,
+          "done": 5,
+          "interruptions": 1,
+          "reason": null,
+          "next": 127.94999999999997,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+          "u": 0.2777777777777778,
+          "handError": 1.2412670766236366e-16,
+          "contact": [
+            0.09485734336050472,
+            1.1600298350923213,
+            -3.317346077650352
+          ],
+          "pad": [
+            0.09480197932708544,
+            1.158491135325467,
+            -3.3094956421305044
+          ],
+          "surface": [
+            0.09599999999999999,
+            0.02200000000000002,
+            0.16786152074083605
+          ],
+          "wrist": [
+            0.21318718858950764,
+            0.8363200622598488,
+            -3.039016492104922
+          ],
+          "indexBlend": 0,
+          "padError": 0.4604526580347719,
+          "actualWrist": [
+            0.21318718858950753,
+            0.836320062259849,
+            -3.039016492104922
+          ]
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 24.016666666666584,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 5
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    },
+    {
+      "label": "OS reduced motion",
+      "attempt": 1,
+      "before": {
+        "available": true,
+        "stage": "idle",
+        "time": 0,
+        "done": 5,
+        "interruptions": 2,
+        "reason": "cancel",
+        "next": 131.58333333333312,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+      },
+      "after": {
+        "sample": {
+          "available": true,
+          "stage": "prepare",
+          "time": 0,
+          "done": 5,
+          "interruptions": 2,
+          "reason": null,
+          "next": 131.58333333333312,
+          "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+        },
+        "active": true,
+        "eligible": true,
+        "action": "idle",
+        "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+        "events": [
+          {
+            "time": 26.966666666666416,
+            "eligible": true,
+            "action": "idle",
+            "stage": "idle",
+            "done": 5
+          }
+        ]
+      },
+      "accepted": true,
+      "rejected": false
+    }
+  ],
+  "errors": []
+}

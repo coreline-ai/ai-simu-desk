@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: nara precision: sofa and window transitions, walking, turns and all three rest variants
+ok 1 - nara precision: sofa and window transitions, walking, turns and all three rest variants
+  ---
+  duration_ms: 47037.239375
+  type: 'test'
+  ...
+# Subtest: sora precision: sofa and window transitions, walking, turns and all three rest variants
+ok 2 - sora precision: sofa and window transitions, walking, turns and all three rest variants
+  ---
+  duration_ms: 54101.596583
+  type: 'test'
+  ...
+# Subtest: nara precision: three personal rest styles and every sofa transition interruption return safely
+ok 3 - nara precision: three personal rest styles and every sofa transition interruption return safely
+  ---
+  duration_ms: 36160.464917
+  type: 'test'
+  ...
+# Subtest: sora precision: three personal rest styles and every sofa transition interruption return safely
+ok 4 - sora precision: three personal rest styles and every sofa transition interruption return safely
+  ---
+  duration_ms: 24313.470208
+  type: 'test'
+  ...
+# Subtest: nara precision: three role prop recipes contact visible pen and recover every stage
+ok 5 - nara precision: three role prop recipes contact visible pen and recover every stage
+  ---
+  duration_ms: 5078.906042
+  type: 'test'
+  ...
+# Subtest: sora precision: three role prop recipes contact visible pen and recover every stage
+ok 6 - sora precision: three role prop recipes contact visible pen and recover every stage
+  ---
+  duration_ms: 4599.1295
+  type: 'test'
+  ...
+# Subtest: nara precision: cup has five real handle pads and safely yields during all drink stages
+ok 7 - nara precision: cup has five real handle pads and safely yields during all drink stages
+  ---
+  duration_ms: 4410.065666
+  type: 'test'
+  ...
+# Subtest: sora precision: cup has five real handle pads and safely yields during all drink stages
+ok 8 - sora precision: cup has five real handle pads and safely yields during all drink stages
+  ---
+  duration_ms: 3689.839416
+  type: 'test'
+  ...
+# Subtest: nara precision: purposeful coffee outbound, turn, machine, return and every interruption
+ok 9 - nara precision: purposeful coffee outbound, turn, machine, return and every interruption
+  ---
+  duration_ms: 19326.353292
+  type: 'test'
+  ...
+# Subtest: sora precision: purposeful coffee outbound, turn, machine, return and every interruption
+ok 10 - sora precision: purposeful coffee outbound, turn, machine, return and every interruption
+  ---
+  duration_ms: 27207.953875
+  type: 'test'
+  ...
+# Subtest: Nara and Sora precision: both seat orders keep meetings empty handed, speak/listen and release support
+ok 11 - Nara and Sora precision: both seat orders keep meetings empty handed, speak/listen and release support
+  ---
+  duration_ms: 109630.320542
+  type: 'test'
+  ...
+# Subtest: Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+ok 12 - Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+  ---
+  duration_ms: 93192.495208
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 428960.560709

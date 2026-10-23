@@ -1,0 +1,693 @@
+{
+  "at": "2026-10-23T06:33:06.359Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "two concurrent loaded views",
+      "passed": true
+    },
+    {
+      "name": "three context loss/restore epochs keep two live listeners and meaningful pixels",
+      "passed": true
+    },
+    {
+      "name": "shared LUT disposal leaves survivor drawable and old context collectible",
+      "passed": true
+    },
+    {
+      "name": "three PMREM post-render exceptions release constructor context, LUT listener and canvas",
+      "passed": true
+    },
+    {
+      "name": "three early-loading cancellations settle false and release their contexts",
+      "passed": true
+    },
+    {
+      "name": "30 rebuilds release all old contexts and retain one live LUT listener",
+      "passed": true
+    },
+    {
+      "name": "all views disposed leaves zero contexts, views, canvases, LUT listeners",
+      "passed": true
+    }
+  ],
+  "sourceUnchanged": true,
+  "bundleHash": "688104194cf821f2ad0ca30759fbc5be481a9183a9fe3dc6d77605bb7e6053de",
+  "heap": {
+    "baselineMiB": 20.218505859375,
+    "endMiB": 21.527637481689453,
+    "deltaMiB": 1.3091316223144531,
+    "over8MiB": false
+  },
+  "restorePixels": [
+    {
+      "cycle": 1,
+      "left": {
+        "lost": false,
+        "error": 0,
+        "compared": true,
+        "meanAbsoluteDifference": 0,
+        "changedPixelFraction": 0,
+        "maxDifference": 0,
+        "width": 600,
+        "height": 440
+      },
+      "right": {
+        "lost": false,
+        "error": 0,
+        "compared": true,
+        "meanAbsoluteDifference": 0,
+        "changedPixelFraction": 0,
+        "maxDifference": 0,
+        "width": 600,
+        "height": 440
+      }
+    },
+    {
+      "cycle": 2,
+      "left": {
+        "lost": false,
+        "error": 0,
+        "compared": true,
+        "meanAbsoluteDifference": 0,
+        "changedPixelFraction": 0,
+        "maxDifference": 0,
+        "width": 600,
+        "height": 440
+      },
+      "right": {
+        "lost": false,
+        "error": 0,
+        "compared": true,
+        "meanAbsoluteDifference": 0,
+        "changedPixelFraction": 0,
+        "maxDifference": 0,
+        "width": 600,
+        "height": 440
+      }
+    },
+    {
+      "cycle": 3,
+      "left": {
+        "lost": false,
+        "error": 0,
+        "compared": true,
+        "meanAbsoluteDifference": 0,
+        "changedPixelFraction": 0,
+        "maxDifference": 0,
+        "width": 600,
+        "height": 440
+      },
+      "right": {
+        "lost": false,
+        "error": 0,
+        "compared": true,
+        "meanAbsoluteDifference": 0,
+        "changedPixelFraction": 0,
+        "maxDifference": 0,
+        "width": 600,
+        "height": 440
+      }
+    }
+  ],
+  "resourceBaseline": {
+    "left": {
+      "geometry": {
+        "objects": 380,
+        "disposeListeners": 303,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "",
+            "count": 1
+          },
+          {
+            "name": "",
+            "count": 1
+          },
+          {
+            "name": "",
+            "count": 1
+          }
+        ]
+      },
+      "material": {
+        "objects": 183,
+        "disposeListeners": 160,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "FinalPaleOak_RoomSurface",
+            "count": 1
+          },
+          {
+            "name": "Natural_Oak_RoomSurface",
+            "count": 1
+          },
+          {
+            "name": "Brushed_Brass",
+            "count": 1
+          }
+        ]
+      },
+      "texture": {
+        "objects": 41,
+        "disposeListeners": 41,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "oak_color",
+            "count": 1
+          },
+          {
+            "name": "oak_normal",
+            "count": 1
+          },
+          {
+            "name": "oak_orm",
+            "count": 1
+          }
+        ]
+      },
+      "instancedMesh": {
+        "objects": 159,
+        "disposeListeners": 128,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "NaraPlanningNotebook_Instances_10",
+            "count": 1
+          },
+          {
+            "name": "NaraPlanningNotebook_Instances_18",
+            "count": 1
+          },
+          {
+            "name": "NaraPlanningNotebook_Instances_26",
+            "count": 1
+          }
+        ]
+      },
+      "skeleton": {
+        "objects": 20,
+        "disposeListeners": 0,
+        "maxDisposeListeners": 0,
+        "examples": []
+      }
+    },
+    "right": {
+      "geometry": {
+        "objects": 380,
+        "disposeListeners": 303,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "",
+            "count": 1
+          },
+          {
+            "name": "",
+            "count": 1
+          },
+          {
+            "name": "",
+            "count": 1
+          }
+        ]
+      },
+      "material": {
+        "objects": 183,
+        "disposeListeners": 160,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "FinalPaleOak_RoomSurface",
+            "count": 1
+          },
+          {
+            "name": "Natural_Oak_RoomSurface",
+            "count": 1
+          },
+          {
+            "name": "Brushed_Brass",
+            "count": 1
+          }
+        ]
+      },
+      "texture": {
+        "objects": 41,
+        "disposeListeners": 41,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "oak_color",
+            "count": 1
+          },
+          {
+            "name": "oak_normal",
+            "count": 1
+          },
+          {
+            "name": "oak_orm",
+            "count": 1
+          }
+        ]
+      },
+      "instancedMesh": {
+        "objects": 159,
+        "disposeListeners": 128,
+        "maxDisposeListeners": 1,
+        "examples": [
+          {
+            "name": "NaraPlanningNotebook_Instances_10",
+            "count": 1
+          },
+          {
+            "name": "NaraPlanningNotebook_Instances_18",
+            "count": 1
+          },
+          {
+            "name": "NaraPlanningNotebook_Instances_26",
+            "count": 1
+          }
+        ]
+      },
+      "skeleton": {
+        "objects": 20,
+        "disposeListeners": 0,
+        "maxDisposeListeners": 0,
+        "examples": []
+      }
+    }
+  },
+  "final": {
+    "canvas": 0,
+    "lutListeners": 0,
+    "oldViews": 0,
+    "oldContexts": 0,
+    "rollbackContexts": 0,
+    "trackedDisposed": 35,
+    "heapMiB": 7.234729766845703
+  },
+  "rows": [
+    {
+      "stage": "two-live-views",
+      "heapMiB": 31.28183364868164,
+      "canvas": 2,
+      "lutListeners": 2,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "context-restore-1",
+      "heapMiB": 31.602401733398438,
+      "canvas": 2,
+      "lutListeners": 2,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "context-restore-2",
+      "heapMiB": 31.75870132446289,
+      "canvas": 2,
+      "lutListeners": 2,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "context-restore-3",
+      "heapMiB": 31.899333953857422,
+      "canvas": 2,
+      "lutListeners": 2,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "survivor-after-peer-disposal",
+      "heapMiB": 19.91645050048828,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "pmrem-throw-rollback-1",
+      "heapMiB": 19.832416534423828,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "pmrem-throw-rollback-2",
+      "heapMiB": 19.856651306152344,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "pmrem-throw-rollback-3",
+      "heapMiB": 19.865161895751953,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "early-loading-cancel-1",
+      "heapMiB": 20.11888885498047,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "early-loading-cancel-2",
+      "heapMiB": 20.2108154296875,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "early-loading-cancel-3",
+      "heapMiB": 20.218505859375,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-1",
+      "heapMiB": 20.39391326904297,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-2",
+      "heapMiB": 20.460411071777344,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-3",
+      "heapMiB": 20.61119842529297,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-4",
+      "heapMiB": 20.716495513916016,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-5",
+      "heapMiB": 20.806217193603516,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-6",
+      "heapMiB": 20.86867904663086,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-7",
+      "heapMiB": 21.032020568847656,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-8",
+      "heapMiB": 21.05221939086914,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-9",
+      "heapMiB": 21.07077407836914,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-10",
+      "heapMiB": 21.126419067382812,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-11",
+      "heapMiB": 21.155216217041016,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-12",
+      "heapMiB": 21.30896759033203,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-13",
+      "heapMiB": 21.314800262451172,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-14",
+      "heapMiB": 21.324111938476562,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-15",
+      "heapMiB": 21.339675903320312,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-16",
+      "heapMiB": 21.36255645751953,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-17",
+      "heapMiB": 21.37167739868164,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-18",
+      "heapMiB": 21.395877838134766,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-19",
+      "heapMiB": 21.44898223876953,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-20",
+      "heapMiB": 21.480567932128906,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-21",
+      "heapMiB": 21.483097076416016,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-22",
+      "heapMiB": 21.491119384765625,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-23",
+      "heapMiB": 21.513797760009766,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-24",
+      "heapMiB": 21.521873474121094,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-25",
+      "heapMiB": 21.5433349609375,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-26",
+      "heapMiB": 21.55078887939453,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-27",
+      "heapMiB": 21.549365997314453,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-28",
+      "heapMiB": 21.549152374267578,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-29",
+      "heapMiB": 21.521286010742188,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "rebuild-30",
+      "heapMiB": 21.527637481689453,
+      "canvas": 1,
+      "lutListeners": 1,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    },
+    {
+      "stage": "all-disposed",
+      "heapMiB": 7.234729766845703,
+      "canvas": 0,
+      "lutListeners": 0,
+      "oldViews": 0,
+      "oldContexts": 0,
+      "rollbackContexts": 0
+    }
+  ],
+  "sourceBefore": {
+    "pilot-3d/sample/renderer-resources.mjs": "b094ab02a0335e6a056ad28485e25910be203121e20a39371b8aff654a0052d1",
+    "pilot-3d/sample/quality-view.mjs": "d551d547c3fd5be2bf98451efd2304d44163cce1acad2f895d6ffa6a0a0f8d61",
+    "pilot-3d/room-quality/lighting.mjs": "53b27fff1c441d78b38b0b7dcbb7e999c165e2ef5b02503fc500b8d23815c16c",
+    "pilot-3d/sample/lighting.mjs": "1ab53df1c2ae3096f88858caca1e1a8882f2941bc7b6e48a922d4975716f8986",
+    "pilot-3d/sample/app.mjs": "34ff0e1fbc1583c08876abe48c66e8088d099cff6e6322a49c65696f38582d52",
+    "pilot-3d/src/scene.mjs": "3ae53d793c3d1011403d49e363bb444abac0baea132378ace56190857ae4e9e4",
+    "scripts/qa/renderer-fixture.mjs": "c11bf77b3e381ba153ad08e00cbe3658082b79238a59fffcbaab2ea21b28f32c",
+    "scripts/qa/renderer-lifecycle.mjs": "dd15b4c3d21f4220d2657fa8d401cbb97de15f7415a0afe1499fcfeca6b3793e"
+  },
+  "sourceAfter": {
+    "pilot-3d/sample/renderer-resources.mjs": "b094ab02a0335e6a056ad28485e25910be203121e20a39371b8aff654a0052d1",
+    "pilot-3d/sample/quality-view.mjs": "d551d547c3fd5be2bf98451efd2304d44163cce1acad2f895d6ffa6a0a0f8d61",
+    "pilot-3d/room-quality/lighting.mjs": "53b27fff1c441d78b38b0b7dcbb7e999c165e2ef5b02503fc500b8d23815c16c",
+    "pilot-3d/sample/lighting.mjs": "1ab53df1c2ae3096f88858caca1e1a8882f2941bc7b6e48a922d4975716f8986",
+    "pilot-3d/sample/app.mjs": "34ff0e1fbc1583c08876abe48c66e8088d099cff6e6322a49c65696f38582d52",
+    "pilot-3d/src/scene.mjs": "3ae53d793c3d1011403d49e363bb444abac0baea132378ace56190857ae4e9e4",
+    "scripts/qa/renderer-fixture.mjs": "c11bf77b3e381ba153ad08e00cbe3658082b79238a59fffcbaab2ea21b28f32c",
+    "scripts/qa/renderer-lifecycle.mjs": "dd15b4c3d21f4220d2657fa8d401cbb97de15f7415a0afe1499fcfeca6b3793e"
+  },
+  "errors": []
+}

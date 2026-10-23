@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "at": "2026-10-23T05:07:32.900Z",
+  "origin": "http://127.0.0.1:4193",
+  "checks": [
+    {
+      "kind": "actual rim contact and paused index",
+      "sample": {
+        "available": true,
+        "stage": "adjust",
+        "time": 0.03333333333333333,
+        "done": 0,
+        "interruptions": 0,
+        "reason": null,
+        "next": 45,
+        "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+        "u": 0.05128205128205128,
+        "handError": 4.652682298944613e-16,
+        "contact": [
+          0.10105745804248938,
+          1.1843080407350781,
+          -3.3215004476825265
+        ],
+        "pad": [
+          0.10130060167098143,
+          1.1840759292525302,
+          -3.3135075129626883
+        ],
+        "surface": [
+          0.09599999999999999,
+          0.02206432944756609,
+          0.16786152074083605
+        ],
+        "wrist": [
+          0.1292811107789261,
+          1.1125942066556265,
+          -3.2837341281258996
+        ],
+        "indexBlend": 1,
+        "padError": 2.2887833992611187e-16,
+        "actualWrist": [
+          0.129281110778926,
+          1.1125942066556258,
+          -3.2837341281258996
+        ]
+      }
+    },
+    {
+      "kind": "rate",
+      "rate": "1",
+      "done": 2
+    },
+    {
+      "kind": "rate",
+      "rate": "1.5",
+      "done": 3
+    },
+    {
+      "kind": "rate",
+      "rate": "2",
+      "done": 4
+    },
+    {
+      "kind": "rate",
+      "rate": "3",
+      "done": 5
+    },
+    {
+      "kind": "real work preemption"
+    },
+    {
+      "kind": "manual cancel retreats and returns"
+    },
+    {
+      "kind": "OS reduced motion freezes optional gesture"
+    },
+    {
+      "kind": "v11 remains opt-out and scene reload disposes gesture"
+    },
+    {
+      "kind": "320/390/768/1440 viewport, single canvas; not a physical device"
+    }
+  ],
+  "errors": []
+}

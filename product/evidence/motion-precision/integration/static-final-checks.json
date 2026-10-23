@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "typecheck",
+      "command": "npm run typecheck",
+      "start": "2026-10-23T08:17:31.710Z",
+      "end": "2026-10-23T08:17:32.809Z",
+      "exit": 0
+    },
+    {
+      "name": "boundaries",
+      "command": "npm run check:boundaries",
+      "start": "2026-10-23T08:17:31.713Z",
+      "end": "2026-10-23T08:17:32.057Z",
+      "exit": 0
+    },
+    {
+      "name": "product",
+      "command": "npm run check:product",
+      "start": "2026-10-23T08:17:31.713Z",
+      "end": "2026-10-23T08:17:41.753Z",
+      "exit": 0
+    }
+  ]
+}

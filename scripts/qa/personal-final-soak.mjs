@@ -2,7 +2,7 @@ import {launchBrowser,qaOrigin} from './browser.mjs';
 import {writeFile,mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
-const out='product/evidence/personal-final',duration=Number(process.env.STUDIO_SOAK_SECONDS??7200);assert(duration>=7200,'two actual hours, never simulated');await mkdir(out,{recursive:true});
+const out=process.env.STUDIO_QA_OUT??'product/evidence/personal-final',duration=Number(process.env.STUDIO_SOAK_SECONDS??7200);assert(duration>=7200,'two actual hours, never simulated');await mkdir(out,{recursive:true});
 const browser=await launchBrowser(),page=await browser.newPage({viewport:{width:1280,height:900},deviceScaleFactor:1}),errors=[],rows=[],checks=[],started=Date.now();page.on('pageerror',e=>errors.push(e.message));
 const d=()=>page.evaluate(()=>window.__personalStudio.diagnostics()),save=async(file,value)=>writeFile(out+'/'+file,JSON.stringify(value,null,2));
 async function gpuDump(cdp,label){

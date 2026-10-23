@@ -1,13 +1,16 @@
+import {RendererResources} from '../sample/renderer-resources.mjs';
 import * as T from "three";
 import {fitOrthographic} from "./framing.mjs";
 import { POSES, EXTRA_POSES, applyActorPoses, finishActorAction } from "./animation.mjs";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-export function releaseModel(root) {
+export function releaseModel(root, { contextLost = false } = {}) {
   const geometries = new Set(), materials = new Set(), textures = new Set();
   root?.traverse(node => {
-    if(node.isInstancedMesh)node.dispose();
+    // A context epoch only releases GPU handles; keep instance morph data.
+    if(node.isInstancedMesh){if(contextLost)node.dispatchEvent({type:"dispose"});else node.dispose();}
+    if(contextLost && node.isSkinnedMesh)node.skeleton.dispose();
     if (node.geometry) geometries.add(node.geometry);
     for (const mat of [node.material].flat().filter(Boolean)) {
       materials.add(mat);
@@ -24,6 +27,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   const actorIds = options.actors ?? ["nara"];
   const started = performance.now(),five=actorIds.length>2;
   const renderer = new T.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "low-power" });
+  const resources = new RendererResources(renderer);
   renderer.setClearColor(0xf8f6ee, 0);
   renderer.outputColorSpace = T.SRGBColorSpace;
   renderer.toneMapping = T.ACESFilmicToneMapping;
@@ -75,7 +79,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
   const getStats = () => ({ ...lastMetrics, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, drawCalls: renderer.info.render.calls, triangles: renderer.info.render.triangles, pose: currentVM.pose, animationTime: mixer?.time ?? 0, actors: Object.fromEntries(actorIds.map(id => [id, currentActions[id]?.getClip().name ?? null])), paused, measuring: Boolean(sample), pixelRatio: renderer.getPixelRatio(), canvas: [renderer.domElement.width, renderer.domElement.height] });
   function emitStats() { lastMetrics = getStats(); callbacks.onMetrics?.(lastMetrics); }
   function draw() { if (!disposed && ready && !lost) {
-    renderer.render(scene, camera);
+    renderer.render(scene, camera); resources.capture(scene);
     for(const [id,label] of Object.entries(actorLabels)){
       const origin=model?.userData.workspaces?.[id];if(!origin)continue;
       const full=options.actorLabels?.[id]??id,name=host.clientWidth<500?full.split(' · ')[0]:full;if(label.textContent!==name)label.textContent=name;
@@ -163,7 +167,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
       while (node && node !== model) { if (node.userData.selectable) { callbacks.onSelect?.(node.userData.agentId); return; } node = node.parent; }
     }
   }, { signal: events.signal });
-  renderer.domElement.addEventListener("webglcontextlost", e => { e.preventDefault(); lost = true; renderer.setAnimationLoop(null); callbacks.onStatus?.("lost"); }, { signal: events.signal });
+  renderer.domElement.addEventListener("webglcontextlost", e => { e.preventDefault(); resources.release(); releaseModel(scene,{contextLost:true}); sun.shadow.dispose(); sun.shadow.map=null; sun.shadow.mapPass=null; lost = true; renderer.setAnimationLoop(null); callbacks.onStatus?.("lost"); }, { signal: events.signal });
   renderer.domElement.addEventListener("webglcontextrestored", () => { if (disposed) return; lost = false; callbacks.onStatus?.("ready"); resize(); syncLoop(); }, { signal: events.signal });
   resetCamera();
   const loading = new GLTFLoader().loadAsync(options.modelUrl ?? new URL("../assets/afternoon-studio-v1.glb", import.meta.url).href).then(gltf => {
@@ -206,6 +210,7 @@ export function createStudioView(host, callbacks = {}, options = {}) {
       if (disposed) return null;
       disposed = true; renderer.setAnimationLoop(null); observer.disconnect(); events.abort(); controls.dispose();
       mixer?.stopAllAction(); if (model) mixer?.uncacheRoot(model);
+      resources.dispose();
       const released = releaseModel(scene); sun.shadow.dispose();
       renderer.renderLists.dispose(); renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();for(const label of Object.values(actorLabels))label.remove();
       return { released, remaining: { ...renderer.info.memory }, contextLost: renderer.getContext().isContextLost() };

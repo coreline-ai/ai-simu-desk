@@ -1,0 +1,11 @@
+{"id":"loop-start","mode":"native-keyboard-enter","delivered":[{"id":"loop-start","button":"loop-start"}]}
+{"id":"pause","mode":"native-keyboard-enter","delivered":[{"id":"pause","button":"pause"}]}
+{"id":"pause","mode":"native-keyboard-enter","delivered":[{"id":"pause","button":"pause"}]}
+{"id":"work","mode":"native-keyboard-enter","delivered":[{"id":"work","button":"work"}]}
+{"id":"done","mode":"native-keyboard-enter","delivered":[{"id":"done","button":"done"}]}
+{"id":"pause","mode":"native-keyboard-enter","delivered":[{"id":"pause","button":"pause"}]}
+{"id":"close","mode":"native-keyboard-enter","delivered":[{"id":"close","button":"close"}]}
+{"id":"cancel","mode":"native-keyboard-enter","delivered":[{"id":"cancel","button":"cancel"}]}
+{"id":"glasses","mode":"native-keyboard-enter","delivered":[{"id":"glasses","button":"glasses"}]}
+{"id":"pause","mode":"native-keyboard-enter","delivered":[{"id":"pause","button":"pause"}]}
+{"passed":true,"checks":["actual Safari: six rates and five-person exported GLB","range replay, actual contacts, pause and work priority","real Safari cup contact and render","five-person empty-hand arrival, cancellation and return","Jun actual rim/index contact in Safari"]}

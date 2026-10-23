@@ -1,0 +1,897 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-23T04:49:40.741Z",
+  "scope": "v12 procedural runtime; mathematical and ownership QA; no rendered appearance claim",
+  "results": [
+    {
+      "id": "leo-role-three",
+      "title": "Leo completes all three document recipes, fixed limbs and one page owner",
+      "metrics": {
+        "variants": [
+          {
+            "variant": 0,
+            "gripSamples": 163,
+            "surfacePhases": {
+              "observe": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010004181522088311,
+                0.0010006969213453725
+              ],
+              "act": [
+                0.001000000000000112,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ],
+              "pause": [
+                0.001000000000000112,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ],
+              "check": [
+                0.001000000000000223,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ]
+            },
+            "phases": [
+              "observe",
+              "act",
+              "pause",
+              "check"
+            ],
+            "stages": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "idle"
+            ]
+          },
+          {
+            "variant": 1,
+            "gripSamples": 163,
+            "surfacePhases": {
+              "observe": [
+                0.0009999999999998899,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.0009999251902741775,
+                0.0009998753847685283
+              ],
+              "act": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009
+              ],
+              "pause": [
+                0.001000000000000112,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ],
+              "check": [
+                0.0009999999999998899,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112
+              ]
+            },
+            "phases": [
+              "observe",
+              "act",
+              "pause",
+              "check"
+            ],
+            "stages": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "idle"
+            ]
+          },
+          {
+            "variant": 2,
+            "gripSamples": 163,
+            "surfacePhases": {
+              "observe": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.000999637101116733,
+                0.0009993967394782493
+              ],
+              "act": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009
+              ],
+              "pause": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009
+              ],
+              "check": [
+                0.0009999999999998899,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112
+              ]
+            },
+            "phases": [
+              "observe",
+              "act",
+              "pause",
+              "check"
+            ],
+            "stages": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "idle"
+            ]
+          }
+        ],
+        "handSamples": 489,
+        "maxHandError": 1.2609709600486848e-15,
+        "maxPadError": 1.7690777709386487e-17
+      },
+      "elapsedMs": 12338.689875,
+      "status": "passed"
+    },
+    {
+      "id": "leo-sofa-window",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: leo actual planted sole to ground-mesh gap 0.020999996423720434 at home\n    at soleContact (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:74:5)\n    at monotonicMotion (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:53:3)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:168:11\n    at run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:15:5)\n    at Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:164:9)\n    at runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:453:47)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:459:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)"
+    },
+    {
+      "id": "leo-three-rests",
+      "title": "Leo completes all three personal rest styles, with actual arm movement and return",
+      "metrics": [
+        {
+          "style": "back_open",
+          "restSamples": 321,
+          "armMovement": 0.5643168192478599,
+          "pelvisStep": 0.011078689472902595,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.00099999549984843,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 560,
+              "surfaceSamples": 2240,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "style": "shoulder_drop",
+          "restSamples": 321,
+          "armMovement": 0.41961238001590295,
+          "pelvisStep": 0.006705914306950889,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            }
+          }
+        },
+        {
+          "style": "side_stretch",
+          "restSamples": 321,
+          "armMovement": 0.8549215313661862,
+          "pelvisStep": 0.011078689472902595,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.00099999549984843,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 560,
+              "surfaceSamples": 2240,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        }
+      ],
+      "elapsedMs": 8066.290833000003,
+      "status": "passed"
+    },
+    {
+      "id": "leo-cup-coffee",
+      "title": "Leo completes full drink and purposeful coffee with outbound/return coverage",
+      "metrics": {
+        "states": [
+          "reach",
+          "grasp",
+          "lift",
+          "sip",
+          "lower",
+          "place",
+          "release",
+          "idle"
+        ],
+        "phases": [
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "directions": [
+          "out",
+          "home"
+        ],
+        "cupContactSamples": 229,
+        "maxHandError": 1.2755491433176288e-15,
+        "maxPadError": 1.2777036254241406e-17,
+        "minCupUp": 1,
+        "maxCarryStep": 0.05604161416586421,
+        "sipSurfaceGaps": [
+          0.000383508074432916,
+          0.0006573955118653885,
+          0.0006573955118658326,
+          0.0016573955118657224,
+          0.0016573955118657224
+        ],
+        "carryContactSamples": {
+          "out": 255,
+          "home": 255
+        },
+        "carrySurfaceGaps": {
+          "out": [
+            0.00038350807443380327,
+            0.0006573955118662766,
+            0.0006573955118649444,
+            0.0016573955118661665,
+            0.0016573955118652783
+          ],
+          "home": [
+            0.0003835080744322224,
+            0.0006573955118644471,
+            0.0006573955118671191,
+            0.0016573955118650487,
+            0.0016573955118668654
+          ]
+        }
+      },
+      "elapsedMs": 10510.712332999996,
+      "status": "passed"
+    },
+    {
+      "id": "seated-two-five",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: nara actual planted sole to ground-mesh gap -0.018702564739851206 at out\n    at soleContact (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:74:5)\n    at support (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:78:23)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:277:11\n    at run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:15:5)\n    at Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:276:25)\n    at runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:453:47)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:459:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)"
+    },
+    {
+      "id": "standing-two-five",
+      "title": "2–5 standing participants including Leo all arrive and answer before return",
+      "metrics": [
+        {
+          "size": 2,
+          "ids": [
+            "leo",
+            "min"
+          ],
+          "spoke": [
+            "leo",
+            "min"
+          ],
+          "talkSamples": 212,
+          "speakingMovement": {
+            "leo": 0.4474743030511028,
+            "min": 0.3384740024814541
+          },
+          "soles": {
+            "nara": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "sora": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "jun": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "min": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222166,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 2730,
+              "surfaceSamples": 10356,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222166,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 2802,
+              "surfaceSamples": 9578,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "size": 3,
+          "ids": [
+            "leo",
+            "min",
+            "jun"
+          ],
+          "spoke": [
+            "leo",
+            "min",
+            "jun"
+          ],
+          "talkSamples": 318,
+          "speakingMovement": {
+            "leo": 0.4478001992122511,
+            "min": 0.3382036543818172,
+            "jun": 0.2998331243703865
+          },
+          "soles": {
+            "nara": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "sora": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "jun": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222096,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 4017,
+              "surfaceSamples": 15204,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "min": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222062,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 3977,
+              "surfaceSamples": 15306,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222166,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 4074,
+              "surfaceSamples": 14666,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "size": 4,
+          "ids": [
+            "leo",
+            "min",
+            "jun",
+            "sora"
+          ],
+          "spoke": [
+            "leo",
+            "min",
+            "jun",
+            "sora"
+          ],
+          "talkSamples": 424,
+          "speakingMovement": {
+            "leo": 0.4472131688444601,
+            "min": 0.3380420718729048,
+            "jun": 0.2985743088565725,
+            "sora": 0.48632989038768576
+          },
+          "soles": {
+            "nara": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "sora": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222166,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 5917,
+              "surfaceSamples": 22306,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "jun": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222096,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 5883,
+              "surfaceSamples": 22668,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "min": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222062,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 5870,
+              "surfaceSamples": 22684,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.00099999642372222,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 5990,
+              "surfaceSamples": 22052,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "size": 5,
+          "ids": [
+            "leo",
+            "min",
+            "jun",
+            "sora",
+            "nara"
+          ],
+          "spoke": [
+            "leo",
+            "min",
+            "jun",
+            "sora",
+            "nara"
+          ],
+          "talkSamples": 530,
+          "speakingMovement": {
+            "leo": 0.4480972344588389,
+            "min": 0.3392016474023446,
+            "jun": 0.29753192384877175,
+            "sora": 0.4837184561730143,
+            "nara": 0.37093857858444385
+          },
+          "soles": {
+            "nara": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.000999996423722213,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 7566,
+              "surfaceSamples": 28408,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "sora": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222062,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 7469,
+              "surfaceSamples": 28780,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "jun": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222096,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 7427,
+              "surfaceSamples": 29052,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "min": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237222062,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 7442,
+              "surfaceSamples": 28972,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.00099999642372222,
+              "minPlantedGap": 0.00099999549984843,
+              "plantedSamples": 7562,
+              "surfaceSamples": 28340,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        }
+      ],
+      "elapsedMs": 258869.356333,
+      "status": "passed"
+    },
+    {
+      "id": "leo-document-both-directions",
+      "title": "Leo sends and receives actual documents through all ten stages and returns",
+      "metrics": [
+        {
+          "visitor": "leo",
+          "host": "nara",
+          "stages": [
+            "pickup",
+            "grasp",
+            "present",
+            "receive",
+            "accept",
+            "read",
+            "giveback",
+            "regrasp",
+            "return",
+            "release"
+          ],
+          "owners": [
+            "desk:nara",
+            "hand:nara",
+            "hand:leo"
+          ]
+        },
+        {
+          "visitor": "min",
+          "host": "leo",
+          "stages": [
+            "pickup",
+            "grasp",
+            "present",
+            "receive",
+            "accept",
+            "read",
+            "giveback",
+            "regrasp",
+            "return",
+            "release"
+          ],
+          "owners": [
+            "desk:leo",
+            "hand:leo",
+            "hand:min"
+          ]
+        }
+      ],
+      "elapsedMs": 6051.95520799997,
+      "status": "passed"
+    },
+    {
+      "id": "team-work-remove-cancel",
+      "title": "Work, participant removal and manual cancellation release all group phases and props",
+      "metrics": [
+        {
+          "phase": "arriving",
+          "kind": "work",
+          "returnSeconds": 19.633333333333475,
+          "status": "cancelled"
+        },
+        {
+          "phase": "arriving",
+          "kind": "remove",
+          "returnSeconds": 18.8000000000001,
+          "status": "cancelled"
+        },
+        {
+          "phase": "arriving",
+          "kind": "cancel",
+          "returnSeconds": 18.8000000000001,
+          "status": "cancelled"
+        },
+        {
+          "phase": "talk",
+          "kind": "work",
+          "returnSeconds": 114.43333333332684,
+          "status": "cancelled"
+        },
+        {
+          "phase": "talk",
+          "kind": "remove",
+          "returnSeconds": 112.19999999999364,
+          "status": "cancelled"
+        },
+        {
+          "phase": "talk",
+          "kind": "cancel",
+          "returnSeconds": 112.19999999999364,
+          "status": "cancelled"
+        },
+        {
+          "phase": "note",
+          "kind": "work",
+          "returnSeconds": 113.06666666666025,
+          "status": "cancelled"
+        },
+        {
+          "phase": "note",
+          "kind": "remove",
+          "returnSeconds": 112.23333333332697,
+          "status": "cancelled"
+        },
+        {
+          "phase": "note",
+          "kind": "cancel",
+          "returnSeconds": 112.23333333332697,
+          "status": "cancelled"
+        }
+      ],
+      "elapsedMs": 85266.29908300005,
+      "status": "passed"
+    },
+    {
+      "id": "leo-prop-work-boundaries",
+      "title": "Leo work interrupts every drink and coffee phase without losing owned props",
+      "metrics": [
+        {
+          "kind": "cup",
+          "phase": "reach",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "grasp",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "lift",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "sip",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "lower",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "place",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "release",
+          "owner": "desk"
+        },
+        {
+          "kind": "coffee",
+          "phase": "pickup",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "out",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "place",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "press",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "brew",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "retrieve",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "home",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "putback",
+          "status": "cancelled"
+        }
+      ],
+      "elapsedMs": 21047.453959000006,
+      "status": "passed"
+    },
+    {
+      "id": "invalid-membership-atomic",
+      "title": "Invalid group membership never partially reserves or changes props",
+      "metrics": [
+        {
+          "method": "startMeeting",
+          "ids": [
+            "leo",
+            "leo"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "leo",
+            "leo"
+          ]
+        },
+        {
+          "method": "startMeeting",
+          "ids": [
+            "leo",
+            "unknown"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "leo",
+            "unknown"
+          ]
+        },
+        {
+          "method": "startMeeting",
+          "ids": [
+            "leo"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "leo"
+          ]
+        },
+        {
+          "method": "startMeeting",
+          "ids": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo",
+            "unknown"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo",
+            "unknown"
+          ]
+        }
+      ],
+      "elapsedMs": 2365.571750000003,
+      "status": "passed"
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,45 @@
+TAP version 13
+# Subtest: nara precision: three personal rest styles and every sofa transition interruption return safely
+ok 1 - nara precision: three personal rest styles and every sofa transition interruption return safely
+  ---
+  duration_ms: 58116.296917
+  type: 'test'
+  ...
+# Subtest: sora precision: three personal rest styles and every sofa transition interruption return safely
+not ok 2 - sora precision: three personal rest styles and every sofa transition interruption return safely
+  ---
+  duration_ms: 9033.265584
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:93:21'
+  failureType: 'testCodeFailure'
+  error: 'activity settles within 45s'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:137)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:96:113)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+ok 3 - Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+  ---
+  duration_ms: 93934.2345
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 2
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 161470.491042

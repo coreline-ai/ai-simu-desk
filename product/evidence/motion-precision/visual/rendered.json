@@ -1,0 +1,1495 @@
+{
+  "passed": true,
+  "at": "2026-10-23T05:01:40.682Z",
+  "origin": "http://127.0.0.1:4193",
+  "rows": [
+    {
+      "actor": "nara",
+      "kind": "role",
+      "state": {
+        "action": "role_nara",
+        "time": 1.5999999999999992,
+        "pose": {
+          "time": 1.5999999999999992,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5316368566786881,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04920411771386618,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "nara",
+      "kind": "carry",
+      "state": {
+        "action": "walk",
+        "time": 1.100000000000001,
+        "pose": {
+          "x": -0.07909930000000051,
+          "z": -0.48,
+          "yaw": -1.5707963267948966,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.34000000000000097,
+          "gaitTime": 0.3695652173913054,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -6.123233995736766e-18,
+                0.085000000923872,
+                -0.58
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0,
+              "support": "flat",
+              "supportPoint": [
+                -6.123233995736766e-18,
+                0.0010000000000000009,
+                -0.58
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.10384995692670361,
+                0.144972338302919,
+                -0.38
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.06262225692446888,
+              "support": "swing",
+              "supportPoint": [
+                -0.10925085888057913,
+                0.056537261295521515,
+                -0.38
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.0058466877142249575,
+          "pelvisZ": 0.0022699524986977008,
+          "weightShift": 0.0058466877142249575,
+          "ensemblePhase": "first_step",
+          "travelLean": 0.027889667490883906
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "coffee",
+        "coffeePhase": "out"
+      },
+      "cup": {
+        "state": "carry",
+        "carry": {
+          "x": -0.22,
+          "height": 0.29,
+          "z": 0.4,
+          "phase": "walking",
+          "stability": 0
+        },
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 4.440892098500626e-16,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 1,
+        "padError": 9.220181747203677e-18,
+        "maxReach": 0.07206247289678563,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": [
+          {
+            "finger": "thumb",
+            "role": "grip",
+            "error": 2.4532694666933987e-18,
+            "reachable": true,
+            "target": [
+              -0.004999999999999534,
+              0.011999999999999993,
+              -0.03299999999999988
+            ],
+            "actual": [
+              -0.004999999999999533,
+              0.011999999999999992,
+              -0.03299999999999988
+            ]
+          },
+          {
+            "finger": "index",
+            "role": "grip",
+            "error": 3.576224061345498e-18,
+            "reachable": true,
+            "target": [
+              -0.005999999999999545,
+              -0.015000000000000003,
+              -0.045999999999999874
+            ],
+            "actual": [
+              -0.005999999999999544,
+              -0.015,
+              -0.045999999999999874
+            ]
+          },
+          {
+            "finger": "middle",
+            "role": "grip",
+            "error": 9.220181747203677e-18,
+            "reachable": true,
+            "target": [
+              0.0060000000000004616,
+              -7.806255641895632e-18,
+              -0.03599999999999988
+            ],
+            "actual": [
+              0.0060000000000004616,
+              -1.3877787807814457e-17,
+              -0.03599999999999987
+            ]
+          },
+          {
+            "finger": "ring",
+            "role": "support",
+            "error": 4.336808689942018e-18,
+            "reachable": true,
+            "target": [
+              -0.0049999999999995335,
+              0.02399999999999999,
+              -0.04199999999999987
+            ],
+            "actual": [
+              -0.004999999999999531,
+              0.023999999999999994,
+              -0.04199999999999987
+            ]
+          },
+          {
+            "finger": "little",
+            "role": "support",
+            "error": 3.576224061345498e-18,
+            "reachable": true,
+            "target": [
+              0.005000000000000467,
+              0.02499999999999999,
+              -0.04299999999999987
+            ],
+            "actual": [
+              0.005000000000000466,
+              0.024999999999999994,
+              -0.04299999999999987
+            ]
+          }
+        ]
+      },
+      "model": 9
+    },
+    {
+      "actor": "nara",
+      "kind": "sofa",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.11666666666666665,
+        "pose": {
+          "x": 7.529999999999999,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.11666666666666665,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                7.43,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                7.629999999999999,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04920411771386618,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "sora",
+      "kind": "role",
+      "state": {
+        "action": "role_sora",
+        "time": 1.5999999999999992,
+        "pose": {
+          "time": 1.5999999999999992,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5256071232384449,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.05021040355344696,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "sora",
+      "kind": "carry",
+      "state": {
+        "action": "walk",
+        "time": 1.1166666666666676,
+        "pose": {
+          "x": -0.09858868309467111,
+          "z": -0.48,
+          "yaw": -1.5707963267948966,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.3566666666666676,
+          "gaitTime": 0.4246031746031757,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -0.0007058204336659385,
+                0.08626539397636568,
+                -0.58
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.008335107999696756,
+              "support": "toe",
+              "supportPoint": [
+                -0.1635,
+                0.0010000000000000009,
+                -0.58
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.11343578920582872,
+                0.12931008536628494,
+                -0.38
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.11738216730879686,
+              "support": "swing",
+              "supportPoint": [
+                -0.12377904525043072,
+                0.03728033097699898,
+                -0.38
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.0036496852588252544,
+          "pelvisZ": 0.0016690342961688223,
+          "weightShift": 0.0036496852588252544,
+          "ensemblePhase": "first_step",
+          "travelLean": 0.020020083138390713
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "coffee",
+        "coffeePhase": "out"
+      },
+      "cup": {
+        "state": "carry",
+        "carry": {
+          "x": -0.24,
+          "height": 0.3,
+          "z": 0.42,
+          "phase": "walking",
+          "stability": 0
+        },
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 1,
+        "padError": 7.806255641895632e-18,
+        "maxReach": 0.07206247289678545,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": [
+          {
+            "finger": "thumb",
+            "role": "grip",
+            "error": 8.673617379884035e-19,
+            "reachable": true,
+            "target": [
+              -0.00500000000000085,
+              0.01199999999999998,
+              -0.032999999999999044
+            ],
+            "actual": [
+              -0.005000000000000851,
+              0.01199999999999998,
+              -0.032999999999999044
+            ]
+          },
+          {
+            "finger": "index",
+            "role": "grip",
+            "error": 7.806255641895632e-18,
+            "reachable": true,
+            "target": [
+              -0.006000000000000851,
+              -0.01500000000000001,
+              -0.04599999999999903
+            ],
+            "actual": [
+              -0.006000000000000852,
+              -0.015000000000000013,
+              -0.045999999999999035
+            ]
+          },
+          {
+            "finger": "middle",
+            "role": "grip",
+            "error": 8.673617379884035e-19,
+            "reachable": true,
+            "target": [
+              0.005999999999999151,
+              -1.3877787807814457e-17,
+              -0.03599999999999905
+            ],
+            "actual": [
+              0.00599999999999915,
+              -1.3877787807814457e-17,
+              -0.03599999999999905
+            ]
+          },
+          {
+            "finger": "ring",
+            "role": "support",
+            "error": 8.673617379884035e-19,
+            "reachable": true,
+            "target": [
+              -0.005000000000000855,
+              0.02399999999999998,
+              -0.04199999999999904
+            ],
+            "actual": [
+              -0.0050000000000008545,
+              0.02399999999999998,
+              -0.04199999999999904
+            ]
+          },
+          {
+            "finger": "little",
+            "role": "support",
+            "error": 0,
+            "reachable": true,
+            "target": [
+              0.004999999999999144,
+              0.02499999999999998,
+              -0.04299999999999904
+            ],
+            "actual": [
+              0.004999999999999144,
+              0.02499999999999998,
+              -0.04299999999999904
+            ]
+          }
+        ]
+      },
+      "model": 9
+    },
+    {
+      "actor": "sora",
+      "kind": "sofa",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.13333333333333333,
+        "pose": {
+          "x": 5.13,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.13333333333333333,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                5.03,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                5.2299999999999995,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.05021040355344696,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "jun",
+      "kind": "role",
+      "state": {
+        "action": "role_jun",
+        "time": 1.6333333333333324,
+        "pose": {
+          "time": 1.6333333333333324,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5271968559595076,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04880247150503752,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "jun",
+      "kind": "carry",
+      "state": {
+        "action": "walk",
+        "time": 1.1666666666666674,
+        "pose": {
+          "x": -0.10953333333333372,
+          "z": -0.48,
+          "yaw": -1.5707963267948966,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.4066666666666674,
+          "gaitTime": 0.4066666666666674,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -0.000054790288137546736,
+                0.08509917319639376,
+                -0.58
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.0006518518518519891,
+              "support": "toe",
+              "supportPoint": [
+                -0.1635,
+                0.0010000000000000009,
+                -0.58
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.12815956265447506,
+                0.13552320812969865,
+                -0.38
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.10172592592592661,
+              "support": "swing",
+              "supportPoint": [
+                -0.1370697777777781,
+                0.044493489413325524,
+                -0.38
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.004427132393946724,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.004427132393946724,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "coffee",
+        "coffeePhase": "out"
+      },
+      "cup": {
+        "state": "carry",
+        "carry": {
+          "x": -0.215,
+          "height": 0.28,
+          "z": 0.38,
+          "phase": "walking",
+          "stability": 0
+        },
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 4.996003610813204e-16,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 1,
+        "padError": 1.0152208857194486e-17,
+        "maxReach": 0.07206247289678581,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": [
+          {
+            "finger": "thumb",
+            "role": "grip",
+            "error": 3.576224061345498e-18,
+            "reachable": true,
+            "target": [
+              -0.004999999999999532,
+              0.012000000000000247,
+              -0.03299999999999989
+            ],
+            "actual": [
+              -0.004999999999999533,
+              0.012000000000000243,
+              -0.03299999999999989
+            ]
+          },
+          {
+            "finger": "index",
+            "role": "grip",
+            "error": 8.673617379884035e-19,
+            "reachable": true,
+            "target": [
+              -0.00599999999999955,
+              -0.014999999999999757,
+              -0.04599999999999989
+            ],
+            "actual": [
+              -0.005999999999999551,
+              -0.014999999999999757,
+              -0.04599999999999989
+            ]
+          },
+          {
+            "finger": "middle",
+            "role": "grip",
+            "error": 4.336808689942018e-18,
+            "reachable": true,
+            "target": [
+              0.006000000000000458,
+              2.402592014227878e-16,
+              -0.03599999999999989
+            ],
+            "actual": [
+              0.006000000000000458,
+              2.3592239273284576e-16,
+              -0.03599999999999989
+            ]
+          },
+          {
+            "finger": "ring",
+            "role": "support",
+            "error": 8.673617379884035e-19,
+            "reachable": true,
+            "target": [
+              -0.0049999999999995265,
+              0.024000000000000243,
+              -0.041999999999999885
+            ],
+            "actual": [
+              -0.004999999999999526,
+              0.024000000000000243,
+              -0.041999999999999885
+            ]
+          },
+          {
+            "finger": "little",
+            "role": "support",
+            "error": 1.0152208857194486e-17,
+            "reachable": true,
+            "target": [
+              0.005000000000000472,
+              0.025000000000000237,
+              -0.042999999999999886
+            ],
+            "actual": [
+              0.005000000000000469,
+              0.02500000000000023,
+              -0.04299999999999989
+            ]
+          }
+        ]
+      },
+      "model": 9
+    },
+    {
+      "actor": "jun",
+      "kind": "sofa",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.15,
+        "pose": {
+          "x": 2.73,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.15,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                2.63,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                2.83,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04880247150503752,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "min",
+      "kind": "role",
+      "state": {
+        "action": "role_min",
+        "time": 1.6999999999999988,
+        "pose": {
+          "time": 1.6999999999999988,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5290400704163503,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04959976436435963,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "min",
+      "kind": "carry",
+      "state": {
+        "action": "walk",
+        "time": 1.100000000000001,
+        "pose": {
+          "x": -0.0805117875000005,
+          "z": -0.48,
+          "yaw": -1.5707963267948966,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.34000000000000097,
+          "gaitTime": 0.38636363636363746,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -6.123233995736766e-18,
+                0.085000000923872,
+                -0.58
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0,
+              "support": "flat",
+              "supportPoint": [
+                -6.123233995736766e-18,
+                0.0010000000000000009,
+                -0.58
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.10288570716830653,
+                0.1413036663050131,
+                -0.38
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.08130678883358494,
+              "support": "swing",
+              "supportPoint": [
+                -0.10995076774981259,
+                0.05161169997323374,
+                -0.38
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.005238885871562239,
+          "pelvisZ": 0.0022699524986977008,
+          "weightShift": 0.005238885871562239,
+          "ensemblePhase": "first_step",
+          "travelLean": 0.027889667490883906
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "coffee",
+        "coffeePhase": "out"
+      },
+      "cup": {
+        "state": "carry",
+        "carry": {
+          "x": -0.225,
+          "height": 0.31,
+          "z": 0.39,
+          "phase": "walking",
+          "stability": 0
+        },
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 4.440892098500626e-16,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 1,
+        "padError": 6.992893892674703e-18,
+        "maxReach": 0.07206247289678569,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": [
+          {
+            "finger": "thumb",
+            "role": "grip",
+            "error": 3.469446951953614e-18,
+            "reachable": true,
+            "target": [
+              -0.005000000000000424,
+              0.011999999999999126,
+              -0.033000000000000376
+            ],
+            "actual": [
+              -0.005000000000000428,
+              0.011999999999999126,
+              -0.033000000000000376
+            ]
+          },
+          {
+            "finger": "index",
+            "role": "grip",
+            "error": 3.576224061345498e-18,
+            "reachable": true,
+            "target": [
+              -0.0060000000000004225,
+              -0.015000000000000863,
+              -0.04600000000000036
+            ],
+            "actual": [
+              -0.006000000000000422,
+              -0.01500000000000086,
+              -0.04600000000000036
+            ]
+          },
+          {
+            "finger": "middle",
+            "role": "grip",
+            "error": 6.992893892674703e-18,
+            "reachable": true,
+            "target": [
+              0.005999999999999574,
+              -8.673617379884035e-16,
+              -0.03600000000000038
+            ],
+            "actual": [
+              0.005999999999999573,
+              -8.604228440844963e-16,
+              -0.03600000000000038
+            ]
+          },
+          {
+            "finger": "ring",
+            "role": "support",
+            "error": 6.938893903907228e-18,
+            "reachable": true,
+            "target": [
+              -0.005000000000000428,
+              0.02399999999999912,
+              -0.04200000000000037
+            ],
+            "actual": [
+              -0.005000000000000428,
+              0.02399999999999912,
+              -0.04200000000000036
+            ]
+          },
+          {
+            "finger": "little",
+            "role": "support",
+            "error": 4.336808689942018e-18,
+            "reachable": true,
+            "target": [
+              0.00499999999999957,
+              0.02499999999999912,
+              -0.04300000000000037
+            ],
+            "actual": [
+              0.004999999999999574,
+              0.02499999999999912,
+              -0.04300000000000037
+            ]
+          }
+        ]
+      },
+      "model": 9
+    },
+    {
+      "actor": "min",
+      "kind": "sofa",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.13333333333333333,
+        "pose": {
+          "x": 0.3300000000000005,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.13333333333333333,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                0.2300000000000005,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                0.4300000000000005,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04959976436435963,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "leo",
+      "kind": "role",
+      "state": {
+        "action": "role_leo",
+        "time": 1.8999999999999981,
+        "pose": {
+          "time": 1.8999999999999981,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5351950034667787,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04982043757334935,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    },
+    {
+      "actor": "leo",
+      "kind": "carry",
+      "state": {
+        "action": "walk",
+        "time": 1.266666666666667,
+        "pose": {
+          "x": 0.16560000000000022,
+          "z": -0.48,
+          "yaw": 1.5707963267948966,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.506666666666667,
+          "gaitTime": 0.5170068027210888,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                0.011775775618931193,
+                0.1033530706153036,
+                -0.38
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.12526425906565183,
+              "support": "toe",
+              "supportPoint": [
+                0.1635,
+                0.0010000000000000009,
+                -0.38
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                0.1435754194741328,
+                0.09316206620029537,
+                -0.58
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": -0.14623592792413773,
+              "support": "heel",
+              "supportPoint": [
+                0.08310000000000002,
+                0.0010000000000000009,
+                -0.58
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ],
+          "pelvisX": -0.0008532292266809793,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.0008532292266809793,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "coffee",
+        "coffeePhase": "out"
+      },
+      "cup": {
+        "state": "carry",
+        "carry": {
+          "x": -0.235,
+          "height": 0.295,
+          "z": 0.415,
+          "phase": "walking",
+          "stability": 0
+        },
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 1,
+        "padError": 7.806255641895632e-18,
+        "maxReach": 0.07206247289678552,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": [
+          {
+            "finger": "thumb",
+            "role": "grip",
+            "error": 1.734723475976807e-18,
+            "reachable": true,
+            "target": [
+              -0.004999999999999092,
+              0.01200000000000003,
+              -0.03299999999999985
+            ],
+            "actual": [
+              -0.004999999999999092,
+              0.012000000000000028,
+              -0.03299999999999985
+            ]
+          },
+          {
+            "finger": "index",
+            "role": "grip",
+            "error": 3.576224061345498e-18,
+            "reachable": true,
+            "target": [
+              -0.005999999999999097,
+              -0.014999999999999982,
+              -0.04599999999999986
+            ],
+            "actual": [
+              -0.005999999999999096,
+              -0.014999999999999986,
+              -0.04599999999999986
+            ]
+          },
+          {
+            "finger": "middle",
+            "role": "grip",
+            "error": 7.806255641895632e-18,
+            "reachable": true,
+            "target": [
+              0.0060000000000009065,
+              2.42861286636753e-17,
+              -0.03599999999999985
+            ],
+            "actual": [
+              0.006000000000000907,
+              2.7755575615628914e-17,
+              -0.03599999999999986
+            ]
+          },
+          {
+            "finger": "ring",
+            "role": "support",
+            "error": 6.992893892674703e-18,
+            "reachable": true,
+            "target": [
+              -0.004999999999999093,
+              0.024000000000000028,
+              -0.04199999999999984
+            ],
+            "actual": [
+              -0.004999999999999092,
+              0.02400000000000002,
+              -0.04199999999999984
+            ]
+          },
+          {
+            "finger": "little",
+            "role": "support",
+            "error": 6.992893892674703e-18,
+            "reachable": true,
+            "target": [
+              0.005000000000000907,
+              0.02500000000000003,
+              -0.042999999999999844
+            ],
+            "actual": [
+              0.0050000000000009065,
+              0.025000000000000036,
+              -0.042999999999999844
+            ]
+          }
+        ]
+      },
+      "model": 9
+    },
+    {
+      "actor": "leo",
+      "kind": "sofa",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.3333333333333333,
+        "pose": {
+          "x": -2.07,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.3333333333333333,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                -2.17,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                -1.9699999999999998,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "cup": {
+        "state": "idle",
+        "recipe": null,
+        "duration": null,
+        "time": 0,
+        "owner": "desk",
+        "events": 0,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "hand": {
+        "surfaceVersion": 2,
+        "blend": 0,
+        "padError": 0,
+        "maxReach": 0.04982043757334935,
+        "fingers": 5,
+        "contactScope": "five-finger-target-points",
+        "contacts": []
+      },
+      "model": 9
+    }
+  ],
+  "errors": [],
+  "scope": "actual exported GLB screenshots; numerical checks do not guarantee subjective animation naturalness"
+}

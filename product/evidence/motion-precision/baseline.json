@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-23T04:19:32.734Z",
+  "commit": "7b72c61f5c038830250ecfe230100a94469adf5d",
+  "priorRegression": {
+    "passed": true,
+    "at": "2026-10-23T03:55:33.026Z",
+    "tests": 40,
+    "rows": [
+      {
+        "file": "carry-final-tests.tap",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "exit": 0
+      },
+      {
+        "file": "final-team-cup-tests.tap",
+        "tests": 15,
+        "passed": 15,
+        "failed": 0,
+        "exit": 0
+      },
+      {
+        "file": "regression-tests.tap",
+        "tests": 20,
+        "passed": 20,
+        "failed": 0,
+        "exit": 0
+      }
+    ],
+    "browser": true,
+    "staticChecks": {
+      "typecheck": 0,
+      "boundaries": 0,
+      "syntax": 0
+    },
+    "sources": {
+      "pilot-3d/activities/team-scheduler.mjs": "4876d958d82e9a094906fd6c8774a25e8369378a3b0a7a7bee061c66623de996",
+      "pilot-3d/ensemble-office/group-meeting.mjs": "16795f58aa3d921705f8fe3f55fe58f324b286f0b992c6c7bce82e3e609319e1",
+      "pilot-3d/activities/interactions.mjs": "1834fae00046ad706151bc2667123a90391f24bbe30507178358e8ec9e0d2679",
+      "pilot-3d/personal-office/app.mjs": "af9dd4082d32dee7c9141f061257f81878cd2081cf342dc244318a4cdbb9cb31",
+      "pilot-3d/personal-office/index.html": "97658ac8c0fa63c205476cb866262f17718383991442a894e60a2958ca4855c2",
+      "product/tests/personal-carry.test.mjs": "52ac279901f4e04a16aeda4a7a137cffa7228b6a62b473407cac45c6812e46df"
+    },
+    "priorScope": "406 complete tests and 7207-second soak predate the carrying correction, retained separately in personal-final"
+  },
+  "priorTwoHours": {
+    "path": "product/evidence/personal-final/soak.json",
+    "hash": "4002f2773b2490d3fdd83135b62a0a19f25a13af6b602f9b84d0ddb047320550",
+    "scope": "before carrying correction; not final current work"
+  }
+}

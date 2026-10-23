@@ -1,3 +1,4 @@
+import{groundSole}from'../personal-office/sole-contact.mjs';
 import{ExpressiveRoute}from'./expressive-route.mjs';import{ease}from'../sample/motion.mjs';
 const Y=-.084,HEEL=-.0735,TOE=.1635;
 // A planted heel/toe is fixed; the ankle rolls around that support rather than
@@ -12,6 +13,7 @@ export class GroundedRoute extends ExpressiveRoute{
    const pivot=pitch<0?HEEL:TOE,rotY=Y*Math.cos(pitch)-pivot*Math.sin(pitch),rotZ=Y*Math.sin(pitch)+pivot*Math.cos(pitch),offset=pivot-rotZ,yaw=p.yaw+(foot.yaw??0),position=[foot.position[0]+Math.sin(yaw)*offset,foot.position[1]+Y-rotY,foot.position[2]+Math.cos(yaw)*offset],support=phase<.18?'heel':phase<.4?'flat':phase<.6?'toe':'swing';
    return{...foot,position,pitch,support,planted:stance&&foot.planted,supportPoint:[foot.position[0]+Math.sin(yaw)*(support==='heel'?HEEL:support==='toe'?TOE:0),foot.position[1]+Y,foot.position[2]+Math.cos(yaw)*(support==='heel'?HEEL:support==='toe'?TOE:0)]};
   });
+  if(this.motion.soleProfile)p.feet=p.feet.map((foot,i)=>groundSole(foot,this.motion.soleProfile[i]));
   p.hip=Math.min(p.hip,...p.feet.map((foot,i)=>{const dx=foot.position[0]-p.x,dz=foot.position[2]-p.z,x=Math.cos(p.yaw)*dx-Math.sin(p.yaw)*dz-(i===0?-.1:.1)-p.pelvisX,z=Math.sin(p.yaw)*dx+Math.cos(p.yaw)*dz-p.pelvisZ;return foot.position[1]+Math.sqrt(Math.max(0,.773**2-x*x-z*z));}));return p;
  }
 }

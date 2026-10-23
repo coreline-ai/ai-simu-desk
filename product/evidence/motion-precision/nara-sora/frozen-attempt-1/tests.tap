@@ -1,0 +1,171 @@
+TAP version 13
+# Subtest: nara precision: sofa and window transitions, walking, turns and all three rest variants
+not ok 1 - nara precision: sofa and window transitions, walking, turns and all three rest variants
+  ---
+  duration_ms: 12094.567041
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:82:21'
+  failureType: 'testCodeFailure'
+  error: 'nara planted rendered sole must meet the floor, not float: 0.02100000000000001'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    sample (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:53:137)
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:128)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:86:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: sora precision: sofa and window transitions, walking, turns and all three rest variants
+not ok 2 - sora precision: sofa and window transitions, walking, turns and all three rest variants
+  ---
+  duration_ms: 6712.9865
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:82:21'
+  failureType: 'testCodeFailure'
+  error: 'sora planted rendered sole must meet the floor, not float: 0.02100000000000001'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    sample (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:53:137)
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:128)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:86:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: nara precision: three personal rest styles and every sofa transition interruption return safely
+not ok 3 - nara precision: three personal rest styles and every sofa transition interruption return safely
+  ---
+  duration_ms: 10823.231167
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:94:21'
+  failureType: 'testCodeFailure'
+  error: 'nara planted rendered sole must meet the floor, not float: 0.02100000000000001'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    sample (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:53:137)
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:128)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:100:79)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: sora precision: three personal rest styles and every sofa transition interruption return safely
+not ok 4 - sora precision: three personal rest styles and every sofa transition interruption return safely
+  ---
+  duration_ms: 18193.977959
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:94:21'
+  failureType: 'testCodeFailure'
+  error: 'sora planted rendered sole must meet the floor, not float: 0.02100000000000001'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    sample (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:53:137)
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:128)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:100:79)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: nara precision: three role prop recipes contact visible pen and recover every stage
+ok 5 - nara precision: three role prop recipes contact visible pen and recover every stage
+  ---
+  duration_ms: 11653.528833
+  type: 'test'
+  ...
+# Subtest: sora precision: three role prop recipes contact visible pen and recover every stage
+ok 6 - sora precision: three role prop recipes contact visible pen and recover every stage
+  ---
+  duration_ms: 12848.215625
+  type: 'test'
+  ...
+# Subtest: nara precision: cup has five real handle pads and safely yields during all drink stages
+ok 7 - nara precision: cup has five real handle pads and safely yields during all drink stages
+  ---
+  duration_ms: 11845.447708
+  type: 'test'
+  ...
+# Subtest: sora precision: cup has five real handle pads and safely yields during all drink stages
+ok 8 - sora precision: cup has five real handle pads and safely yields during all drink stages
+  ---
+  duration_ms: 17485.280042
+  type: 'test'
+  ...
+# Subtest: nara precision: purposeful coffee outbound, turn, machine, return and every interruption
+ok 9 - nara precision: purposeful coffee outbound, turn, machine, return and every interruption
+  ---
+  duration_ms: 62575.944334
+  type: 'test'
+  ...
+# Subtest: sora precision: purposeful coffee outbound, turn, machine, return and every interruption
+ok 10 - sora precision: purposeful coffee outbound, turn, machine, return and every interruption
+  ---
+  duration_ms: 53040.662166
+  type: 'test'
+  ...
+# Subtest: Nara and Sora precision: both seat orders keep meetings empty handed, speak/listen and release support
+not ok 11 - Nara and Sora precision: both seat orders keep meetings empty handed, speak/listen and release support
+  ---
+  duration_ms: 4428.703917
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:144:1'
+  failureType: 'testCodeFailure'
+  error: 'nara planted rendered sole must meet the floor, not float: 0.02100000000000002'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    Object.sample (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:53:137)
+    file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:149:94
+    until (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/living-fixture.mjs:6:128)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:149:4)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+ok 12 - Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+  ---
+  duration_ms: 69693.636167
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 7
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 291727.650458

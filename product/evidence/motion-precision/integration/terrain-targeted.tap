@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: five authored carrying styles are distinct, continuous on settling, and never tilt the cup
+ok 1 - five authored carrying styles are distinct, continuous on settling, and never tilt the cup
+  ---
+  duration_ms: 0.666542
+  type: 'test'
+  ...
+# Subtest: five complete real coffee routes preserve actual handle contact, upright mugs and personal carry offsets
+ok 2 - five complete real coffee routes preserve actual handle contact, upright mugs and personal carry offsets
+  ---
+  duration_ms: 12843.241042
+  type: 'test'
+  ...
+# Subtest: actual-work completion produces one seeded rest intent; paused/manual/scenario rules preserve control
+ok 3 - actual-work completion produces one seeded rest intent; paused/manual/scenario rules preserve control
+  ---
+  duration_ms: 0.608875
+  type: 'test'
+  ...
+# Subtest: rest/social completion returns to work once; disabled auto never queues manual completions
+ok 4 - rest/social completion returns to work once; disabled auto never queues manual completions
+  ---
+  duration_ms: 0.448042
+  type: 'test'
+  ...
+# Subtest: real two-person empty-hand meeting returns to contextual role work after the existing cooldown
+ok 5 - real two-person empty-hand meeting returns to contextual role work after the existing cooldown
+  ---
+  duration_ms: 5970.220709
+  type: 'test'
+  ...
+# Subtest: slow rehearsal is opt-in, exact at 30/60/120fps and frozen pause never accumulates catch-up
+ok 6 - slow rehearsal is opt-in, exact at 30/60/120fps and frozen pause never accumulates catch-up
+  ---
+  duration_ms: 2.489459
+  type: 'test'
+  ...
+# Subtest: rehearsal ranges reject unbounded replay, repeat exact fixed-step intervals and stop on failed restart
+ok 7 - rehearsal ranges reject unbounded replay, repeat exact fixed-step intervals and stop on failed restart
+  ---
+  duration_ms: 0.237084
+  type: 'test'
+  ...
+# Subtest: actual contact markers stay outside the shared model schema and release GPU resources
+ok 8 - actual contact markers stay outside the shared model schema and release GPU resources
+  ---
+  duration_ms: 2147.769125
+  type: 'test'
+  ...
+# Subtest: nara completes all seat transitions with original foot targets and fixed rig lengths
+ok 9 - nara completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 6882.036834
+  type: 'test'
+  ...
+# Subtest: sora completes all seat transitions with original foot targets and fixed rig lengths
+ok 10 - sora completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 4026.258
+  type: 'test'
+  ...
+# Subtest: jun completes all seat transitions with original foot targets and fixed rig lengths
+ok 11 - jun completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 4165.876625
+  type: 'test'
+  ...
+# Subtest: min completes all seat transitions with original foot targets and fixed rig lengths
+ok 12 - min completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3118.72525
+  type: 'test'
+  ...
+# Subtest: leo completes all seat transitions with original foot targets and fixed rig lengths
+ok 13 - leo completes all seat transitions with original foot targets and fixed rig lengths
+  ---
+  duration_ms: 3457.63575
+  type: 'test'
+  ...
+# Subtest: 2 seated colleagues use personal listening and safe support gestures, then return
+ok 14 - 2 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 5174.810583
+  type: 'test'
+  ...
+# Subtest: 3 seated colleagues use personal listening and safe support gestures, then return
+ok 15 - 3 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 6646.7875
+  type: 'test'
+  ...
+# Subtest: 4 seated colleagues use personal listening and safe support gestures, then return
+ok 16 - 4 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 10007.115708
+  type: 'test'
+  ...
+# Subtest: 5 seated colleagues use personal listening and safe support gestures, then return
+ok 17 - 5 seated colleagues use personal listening and safe support gestures, then return
+  ---
+  duration_ms: 18090.19225
+  type: 'test'
+  ...
+# Subtest: five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+ok 18 - five styles preserve pause exactly and yield table/cup ownership to actual work cancellation
+  ---
+  duration_ms: 14766.520917
+  type: 'test'
+  ...
+# Subtest: all five transition interruptions preserve return/cancel cleanup at different phases
+ok 19 - all five transition interruptions preserve return/cancel cleanup at different phases
+  ---
+  duration_ms: 17365.702166
+  type: 'test'
+  ...
+# Subtest: single-actor pilot does not enable posture for the other four, and repeated reset releases state
+ok 20 - single-actor pilot does not enable posture for the other four, and repeated reset releases state
+  ---
+  duration_ms: 5411.210625
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 120518.861167

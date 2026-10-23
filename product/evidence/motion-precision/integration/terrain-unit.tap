@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: v12 rounded-sole terrain solver follows actual rug triangles at the edge and releases its caches
+ok 1 - v12 rounded-sole terrain solver follows actual rug triangles at the edge and releases its caches
+  ---
+  duration_ms: 6577.675125
+  type: 'test'
+  ...
+# Subtest: v11 does not construct or apply the personal terrain solver
+ok 2 - v11 does not construct or apply the personal terrain solver
+  ---
+  duration_ms: 1284.005
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7946.440083

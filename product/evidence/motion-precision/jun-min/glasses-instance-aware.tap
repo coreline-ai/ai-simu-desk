@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: Jun glasses touch the actual rim, leave the face clear and preserve limb lengths and feet through a continuous cycle
+ok 1 - Jun glasses touch the actual rim, leave the face clear and preserve limb lengths and feet through a continuous cycle
+  ---
+  duration_ms: 8414.796208
+  type: 'test'
+  ...
+# Subtest: every glasses phase yields immediately to actual work, cups, walking and participant removal; manual cancel retracts
+ok 2 - every glasses phase yields immediately to actual work, cups, walking and participant removal; manual cancel retracts
+  ---
+  duration_ms: 13434.446458
+  type: 'test'
+  ...
+# Subtest: glasses are optional, sparse, frozen when paused and serialize with the unchanged five-person scene schema
+ok 3 - glasses are optional, sparse, frozen when paused and serialize with the unchanged five-person scene schema
+  ---
+  duration_ms: 10346.24725
+  type: 'test'
+  ...
+# Subtest: exported v9 GLB supports the same actual-rim gesture without adding nodes or clips
+ok 4 - exported v9 GLB supports the same actual-rim gesture without adding nodes or clips
+  ---
+  duration_ms: 3236.136542
+  type: 'test'
+  ...
+# Subtest: an impending ambient stretch waits for the short glasses cycle while business work still preempts it
+ok 5 - an impending ambient stretch waits for the short glasses cycle while business work still preempts it
+  ---
+  duration_ms: 5482.138208
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 41653.636208

@@ -1,0 +1,282 @@
+{
+  "passed": true,
+  "at": "2026-10-23T07:17:21.422Z",
+  "release": "1792739561745-913c0e64-6462-4b64-bf12-f5a931a52629",
+  "origin": "http://127.0.0.1:4194",
+  "rows": [
+    {
+      "route": "pilot-3d",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 25,
+        "range": 208
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 25,
+        "range": 208
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "visual-upgrade",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 25,
+        "range": 146
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 25,
+        "range": 146
+      },
+      "recovery": "documented reload recovery",
+      "canvas": 1
+    },
+    {
+      "route": "studio-v5",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "room-quality",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/team",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/natural",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/roles",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/expressive",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/interaction",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/refined",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/grounded",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/final",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/ensemble",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 14,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/living",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 15,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 15,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    },
+    {
+      "route": "activities/personal",
+      "loaded": {
+        "lost": false,
+        "error": 0,
+        "opaque": 15,
+        "range": 255
+      },
+      "recovered": {
+        "lost": false,
+        "error": 0,
+        "opaque": 15,
+        "range": 255
+      },
+      "recovery": "context restore",
+      "canvas": 1
+    }
+  ],
+  "errors": [],
+  "scope": "all 16 built 3D entrypoints actual GLB decode and context/reload recovery; not long-duration motion proof per older studio"
+}

@@ -37,7 +37,8 @@
     "build:prepare": "node --env-file-if-exists=.env.local scripts/build-product.mjs --prepare",
     "build:rollback": "node --env-file-if-exists=.env.local scripts/build-product.mjs --rollback",
     "qa:load": "node --import tsx scripts/qa/collaboration-load.ts",
-    "qa:performance": "node scripts/qa/performance.mjs"
+    "qa:performance": "node scripts/qa/performance.mjs",
+    "qa:motion:precision": "node scripts/qa/motion-precision.mjs"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "1.7.11",

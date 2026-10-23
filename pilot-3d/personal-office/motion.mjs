@@ -4,6 +4,9 @@ import {solveArm} from '../activities/interactions.mjs';
 import {HUMAN_PROFILES} from '../living-office/human-motion.mjs';
 import {part} from '../sample/character-rig.mjs';
 import {ease} from '../sample/motion.mjs';
+import {TerrainContact} from './terrain-contact.mjs';
+import {soleProfile} from './sole-contact.mjs';
+import {PersonalDaily} from './daily.mjs';
 import {GlassesAdjustment} from './glasses.mjs';
 
 const TRANSITIONS={stand:2,sit:2.6,rise:2.6,deskSit:2};
@@ -12,13 +15,14 @@ const transitionPulse=(stage,u)=>['stand','rise'].includes(stage)?ease(u/.24)*(1
 const LISTEN=new Set(['meeting_listen','meeting_wait','sofa_listen','sofa_agree']);
 // Optional v12 presentation. Root, feet, seat and held props retain their solvers.
 export class PersonalMotion {
- constructor(s,ids=s.ids){this.s=s;this.ids=new Set(ids.filter(id=>s.ids.includes(id)));this.rows=new Map();this.previous=new Map();this.glasses=new GlassesAdjustment(s);}
+ constructor(s,ids=s.ids,model){this.s=s;this.ids=new Set(ids.filter(id=>s.ids.includes(id)));this.rows=new Map();this.previous=new Map();this.soles=new Map([...this.ids].map(id=>[id,soleProfile(s.desks[id].actor)]));this.terrain=new TerrainContact(model,Object.fromEntries([...this.ids].map(id=>[id,s.desks[id].actor])));this.glasses=new GlassesAdjustment(s);this.daily=new PersonalDaily(s);}
  has(id){return this.ids.has(id);}
- routeMotion(id,fallback){return this.has(id)&&this.s.humanMotion?.enabled?{...fallback,speed:HUMAN_PROFILES[id].speed,period:HUMAN_PROFILES[id].period}:fallback;}
+ groundContact(id,pose){return this.has(id)?this.terrain.correct(id,pose):pose;}
+ routeMotion(id,fallback){return this.has(id)?{...fallback,...(this.s.humanMotion?.enabled?{speed:HUMAN_PROFILES[id].speed,period:HUMAN_PROFILES[id].period}:{}),soleProfile:this.soles.get(id)}:fallback;}
  prepare(id,state){
   if(!this.has(id)||!state.pose)return state;
   const trip=this.s.getRecord(id)?.trip,duration=TRANSITIONS[trip?.stage];
-  const flatFeet=state.pose.feet?.map(foot=>({...foot,pitch:foot.pitch??0}));
+  const flatFeet=state.pose.feet?.map(foot=>({...foot,pitch:foot.pitch??0,rotationOrder:'YXZ'}));
   if(!duration)return flatFeet?{...state,pose:{...state.pose,feet:flatFeet}}:state;
   const p=HUMAN_PROFILES[id].posture,u=T.MathUtils.clamp(trip.elapsed/duration,0,1),weight=p.weight*transitionPulse(trip.stage,u),pose={...state.pose,pelvisZ:(state.pose.pelvisZ??0)+weight,feet:flatFeet};
   // Seat transitions lift/tuck flat feet. The generic -0.1 airborne pitch would
@@ -88,6 +92,6 @@ export class PersonalMotion {
  attention(id){const row=this.rows.get(id);if(!this.has(id)||!row)return null;return{pitch:(row.phase==='listen'?row.pitch:0)+(row.attentionPitch??0),yaw:row.attentionYaw??0};}
  greeting(id){return HUMAN_PROFILES[id].dialogue.greeting;}
  talkLift(id,gesture){const p=HUMAN_PROFILES[id].posture;return p.lift*Math.pow(T.MathUtils.clamp(gesture,0,1),p.power);}
- diagnostics(){return{enabled:true,actors:[...this.ids],order:['base','gait','activity intent','gaze','support','prop','fingers','clearance'],states:Object.fromEntries(this.rows),glasses:this.glasses.diagnostics()};}
- dispose(){this.glasses.dispose();this.ids.clear();this.rows.clear();this.previous.clear();}
+ diagnostics(){return{enabled:true,actors:[...this.ids],order:['base','gait','activity intent','gaze','support','prop','fingers','clearance'],states:Object.fromEntries(this.rows),glasses:this.glasses.diagnostics(),daily:this.daily.diagnostics()};}
+ dispose(){this.daily.dispose();this.glasses.dispose();this.terrain.dispose();this.soles.clear();this.ids.clear();this.rows.clear();this.previous.clear();}
 }

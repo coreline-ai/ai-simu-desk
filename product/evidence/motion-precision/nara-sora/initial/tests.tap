@@ -1,0 +1,91 @@
+TAP version 13
+# Subtest: nara precision: sofa and window transitions, walking, turns and all three rest variants
+ok 1 - nara precision: sofa and window transitions, walking, turns and all three rest variants
+  ---
+  duration_ms: 71404.259917
+  type: 'test'
+  ...
+# Subtest: sora precision: sofa and window transitions, walking, turns and all three rest variants
+ok 2 - sora precision: sofa and window transitions, walking, turns and all three rest variants
+  ---
+  duration_ms: 75129.035417
+  type: 'test'
+  ...
+# Subtest: nara precision: three role prop recipes contact visible pen and recover every stage
+ok 3 - nara precision: three role prop recipes contact visible pen and recover every stage
+  ---
+  duration_ms: 9905.231084
+  type: 'test'
+  ...
+# Subtest: sora precision: three role prop recipes contact visible pen and recover every stage
+ok 4 - sora precision: three role prop recipes contact visible pen and recover every stage
+  ---
+  duration_ms: 11565.314084
+  type: 'test'
+  ...
+# Subtest: nara precision: cup has five real handle pads and safely yields during all drink stages
+ok 5 - nara precision: cup has five real handle pads and safely yields during all drink stages
+  ---
+  duration_ms: 6412.075125
+  type: 'test'
+  ...
+# Subtest: sora precision: cup has five real handle pads and safely yields during all drink stages
+ok 6 - sora precision: cup has five real handle pads and safely yields during all drink stages
+  ---
+  duration_ms: 5510.235708
+  type: 'test'
+  ...
+# Subtest: nara precision: purposeful coffee outbound, turn, machine, return and every interruption
+ok 7 - nara precision: purposeful coffee outbound, turn, machine, return and every interruption
+  ---
+  duration_ms: 39682.527375
+  type: 'test'
+  ...
+# Subtest: sora precision: purposeful coffee outbound, turn, machine, return and every interruption
+ok 8 - sora precision: purposeful coffee outbound, turn, machine, return and every interruption
+  ---
+  duration_ms: 34860.914375
+  type: 'test'
+  ...
+# Subtest: Nara and Sora precision: both seat orders keep meetings empty handed, speak/listen and release support
+ok 9 - Nara and Sora precision: both seat orders keep meetings empty handed, speak/listen and release support
+  ---
+  duration_ms: 110051.706125
+  type: 'test'
+  ...
+# Subtest: Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+not ok 10 - Nara and Sora precision: both document directions keep visible page contact, single owner and all-stage work return
+  ---
+  duration_ms: 68418.952875
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:140:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    'hand' !== 'desk'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'desk'
+  actual: 'hand'
+  operator: 'strictEqual'
+  stack: |-
+    clean (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:74:301)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-nara-sora.test.mjs:149:175)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 9
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 433103.767583

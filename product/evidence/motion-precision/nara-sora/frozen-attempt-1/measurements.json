@@ -1,0 +1,2238 @@
+{
+  "scope": "Nara and Sora; in-memory final scene geometry; no database or browser",
+  "measuredAt": "2026-10-23T04:47:20.968Z",
+  "physicalSkinGuarantee": false,
+  "measurements": [
+    {
+      "id": "nara",
+      "scenario": "sofa-variant-0",
+      "frames": 761,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk"
+      ],
+      "tripStages": [
+        "stand",
+        "out"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.02100000000000001,
+      "plantedSamples": 862,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "sofa-variant-0",
+      "frames": 609,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk"
+      ],
+      "tripStages": [
+        "stand",
+        "out"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 4.996003610813204e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.02100000000000001,
+      "plantedSamples": 681,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "personal-rest-0",
+      "frames": 322,
+      "actions": [
+        "natural_rise",
+        "natural_rest",
+        "natural_sit",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.718447854656915e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 560,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "personal-rest-1",
+      "frames": 322,
+      "actions": [
+        "natural_rise",
+        "natural_rest",
+        "natural_sit",
+        "idle"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.3306690738754696e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 560,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "personal-rest-2",
+      "frames": 322,
+      "actions": [
+        "personal_rest",
+        "idle"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 6.106226635438361e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "sofa-work-interrupt-stand",
+      "frames": 138,
+      "actions": [
+        "stand_up",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "stand",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.718447854656915e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 178,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "sofa-work-interrupt-sit",
+      "frames": 761,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk"
+      ],
+      "tripStages": [
+        "stand",
+        "out"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.02100000000000001,
+      "plantedSamples": 862,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "personal-rest-0",
+      "frames": 322,
+      "actions": [
+        "natural_rise",
+        "natural_rest",
+        "natural_sit",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.440892098500626e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 560,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "personal-rest-1",
+      "frames": 322,
+      "actions": [
+        "natural_rise",
+        "natural_rest",
+        "natural_sit",
+        "idle"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.3306690738754696e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 560,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "personal-rest-2",
+      "frames": 1600,
+      "actions": [
+        "natural_rise",
+        "natural_rest",
+        "turn",
+        "walk",
+        "window_rest",
+        "standing",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "work",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "prepare",
+        "weight-sit"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2290,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "sofa-work-interrupt-stand",
+      "frames": 138,
+      "actions": [
+        "stand_up",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "stand",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.3306690738754696e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 178,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "sofa-work-interrupt-sit",
+      "frames": 609,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk"
+      ],
+      "tripStages": [
+        "stand",
+        "out"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 4.996003610813204e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.02100000000000001,
+      "plantedSamples": 681,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-variant-0",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 6.661338147750939e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.0777197206126436e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882431217
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-variant-1",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882431835
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-variant-2",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.828670879282072e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882431607
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-work-interrupt-reach",
+      "frames": 25,
+      "actions": [
+        "role_nara",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.3306690738754696e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-work-interrupt-grasp",
+      "frames": 61,
+      "actions": [
+        "role_nara",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-work-interrupt-use",
+      "frames": 112,
+      "actions": [
+        "role_nara",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 1.948929177764125e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-work-interrupt-replace",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 6.38378239159465e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-work-interrupt-release",
+      "frames": 266,
+      "actions": [
+        "role_nara",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.828670879282072e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-work-interrupt-retract",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-variant-0",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.163336342344337e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882417803
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-variant-1",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.608224830031759e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882418274
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-variant-2",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882417188
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-work-interrupt-reach",
+      "frames": 25,
+      "actions": [
+        "role_sora",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.0531133177191805e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-work-interrupt-grasp",
+      "frames": 61,
+      "actions": [
+        "role_sora",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-work-interrupt-use",
+      "frames": 112,
+      "actions": [
+        "role_sora",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.608224830031759e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 1.948929177764125e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-work-interrupt-replace",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-work-interrupt-release",
+      "frames": 266,
+      "actions": [
+        "role_sora",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-work-interrupt-retract",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "error"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.440892098500626e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "drink",
+      "frames": 274,
+      "actions": [
+        "waiting",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 6.0421957822421635e-9,
+      "maxFingerLengthDrift": 1.980237279708419e-9,
+      "contacts": {
+        "cup-handle": {
+          "samples": 130,
+          "maxSurfaceDistance": 0.0016573955118667075
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "cup-work-interrupt-reach",
+      "frames": 14,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.3306690738754696e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "cup-work-interrupt-grasp",
+      "frames": 61,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "cup-work-interrupt-lift",
+      "frames": 107,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.440892098500626e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.4498684597682945e-9,
+      "maxFingerLengthDrift": 1.9588790103886033e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "cup-work-interrupt-sip",
+      "frames": 139,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.996003610813204e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.027911023457059e-9,
+      "maxFingerLengthDrift": 1.977270507047546e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "cup-work-interrupt-lower",
+      "frames": 248,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 6.106226635438361e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.25961250378189e-9,
+      "maxFingerLengthDrift": 2.038449145591592e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "cup-work-interrupt-place",
+      "frames": 274,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 7.216449660063518e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.239665495117906e-9,
+      "maxFingerLengthDrift": 1.9588790103886033e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "cup-work-interrupt-release",
+      "frames": 274,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.938157441461113e-9,
+      "maxFingerLengthDrift": 1.9986437296837245e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "drink",
+      "frames": 268,
+      "actions": [
+        "waiting",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.440892098500626e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.3954550079159505e-9,
+      "maxFingerLengthDrift": 1.9588790103886033e-9,
+      "contacts": {
+        "cup-handle": {
+          "samples": 130,
+          "maxSurfaceDistance": 0.0016573955118663322
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "cup-work-interrupt-reach",
+      "frames": 14,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 2.7755575615628914e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "cup-work-interrupt-grasp",
+      "frames": 53,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.3306690738754696e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "cup-work-interrupt-lift",
+      "frames": 95,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.608224830031759e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 3.999118219091582e-9,
+      "maxFingerLengthDrift": 1.9588790103886033e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "cup-work-interrupt-sip",
+      "frames": 124,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.440892098500626e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.6176636589746124e-9,
+      "maxFingerLengthDrift": 1.9588790103886033e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "cup-work-interrupt-lower",
+      "frames": 242,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.163336342344337e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.115876216432299e-9,
+      "maxFingerLengthDrift": 1.9588790103886033e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "cup-work-interrupt-place",
+      "frames": 268,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.4717096380158795e-9,
+      "maxFingerLengthDrift": 2.0130588723743514e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "cup-work-interrupt-release",
+      "frames": 268,
+      "actions": [
+        "waiting",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 6.033476534655459e-9,
+      "maxFingerLengthDrift": 2.012082403468618e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "coffee",
+      "frames": 2237,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "waiting"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 9.992007221626409e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2591,
+      "maxFingerJointGap": 5.179266646780199e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {
+        "carried-cup": {
+          "samples": 775,
+          "maxSurfaceDistance": 0.0016573955118674988
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "coffee-work-interrupt-pickup",
+      "frames": 15,
+      "actions": [
+        "idle",
+        "typing"
+      ],
+      "tripStages": [
+        "idle"
+      ],
+      "personalPhases": [
+        "idle",
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 2.7755575615628914e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.2061724813383634e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "coffee-work-interrupt-out",
+      "frames": 280,
+      "actions": [
+        "idle",
+        "stand_up",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 6.106226635438361e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 178,
+      "maxFingerJointGap": 5.179266646780199e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "coffee-work-interrupt-brew",
+      "frames": 2139,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 9.992007221626409e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2395,
+      "maxFingerJointGap": 5.179266646780199e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "coffee-work-interrupt-retrieve",
+      "frames": 2233,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 9.992007221626409e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2583,
+      "maxFingerJointGap": 5.179266646780199e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "coffee-work-interrupt-home",
+      "frames": 2234,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 9.992007221626409e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2587,
+      "maxFingerJointGap": 5.179266646780199e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "coffee",
+      "frames": 1884,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "waiting"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 7.216449660063518e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2172,
+      "maxFingerJointGap": 4.4475045084547e-9,
+      "maxFingerLengthDrift": 1.894144549541288e-9,
+      "contacts": {
+        "carried-cup": {
+          "samples": 630,
+          "maxSurfaceDistance": 0.0016573955118668628
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "coffee-work-interrupt-pickup",
+      "frames": 15,
+      "actions": [
+        "idle",
+        "typing"
+      ],
+      "tripStages": [
+        "idle"
+      ],
+      "personalPhases": [
+        "idle",
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.608224830031759e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "coffee-work-interrupt-out",
+      "frames": 265,
+      "actions": [
+        "idle",
+        "stand_up",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.000999999076128008,
+      "plantedSamples": 178,
+      "maxFingerJointGap": 4.4475045084547e-9,
+      "maxFingerLengthDrift": 1.894144549541288e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "coffee-work-interrupt-brew",
+      "frames": 1786,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 7.216449660063518e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 1976,
+      "maxFingerJointGap": 4.4475045084547e-9,
+      "maxFingerLengthDrift": 1.894144549541288e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "coffee-work-interrupt-retrieve",
+      "frames": 1880,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 7.216449660063518e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2164,
+      "maxFingerJointGap": 4.4475045084547e-9,
+      "maxFingerLengthDrift": 1.894144549541288e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "coffee-work-interrupt-home",
+      "frames": 1881,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 7.216449660063518e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2168,
+      "maxFingerJointGap": 4.4475045084547e-9,
+      "maxFingerLengthDrift": 1.894144549541288e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "meeting-nara-sora",
+      "frames": 462,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk"
+      ],
+      "tripStages": [
+        "stand",
+        "out"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 4.996003610813204e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.02100000000000002,
+      "plantedSamples": 503,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "meeting-nara-sora",
+      "frames": 461,
+      "actions": [
+        "idle"
+      ],
+      "tripStages": [
+        "queued"
+      ],
+      "personalPhases": [
+        "queued"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.1638838018357411e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-nara-to-sora",
+      "frames": 1437,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "sit_down",
+        "idle"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2116,
+      "maxFingerJointGap": 4.16945373895667e-9,
+      "maxFingerLengthDrift": 1.993851077297659e-9,
+      "contacts": {
+        "page": {
+          "samples": 65,
+          "maxSurfaceDistance": 0.0014479934259595362
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-nara-to-sora",
+      "frames": 1437,
+      "actions": [
+        "visit_invite",
+        "idle",
+        "desk_visit",
+        "desk_transfer",
+        "wrist_relax"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.564086143577255e-9,
+      "maxFingerLengthDrift": 1.9569448492240404e-9,
+      "contacts": {
+        "page": {
+          "samples": 75,
+          "maxSurfaceDistance": 0.001001639158413348
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-sora-to-nara",
+      "frames": 1745,
+      "actions": [
+        "visit_invite",
+        "idle",
+        "desk_visit",
+        "desk_transfer",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.828670879282072e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.4144432958621824e-9,
+      "maxFingerLengthDrift": 1.9569448492240404e-9,
+      "contacts": {
+        "page": {
+          "samples": 75,
+          "maxSurfaceDistance": 0.001000000000000223
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-sora-to-nara",
+      "frames": 1745,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "sit_down",
+        "idle"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 6.106226635438361e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000252,
+      "plantedSamples": 2400,
+      "maxFingerJointGap": 3.962412568087862e-9,
+      "maxFingerLengthDrift": 1.9346004243026016e-9,
+      "contacts": {
+        "page": {
+          "samples": 70,
+          "maxSurfaceDistance": 0.0020611972773096083
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-work-interrupt-pickup",
+      "frames": 1470,
+      "actions": [
+        "visit_invite",
+        "idle",
+        "desk_visit",
+        "desk_transfer",
+        "typing",
+        "role_nara"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 6.38378239159465e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.0777197206126436e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-work-interrupt-grasp",
+      "frames": 1505,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 6.106226635438361e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000252,
+      "plantedSamples": 1920,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-work-interrupt-present",
+      "frames": 1552,
+      "actions": [
+        "visit_invite",
+        "idle",
+        "desk_visit",
+        "desk_transfer",
+        "typing",
+        "role_nara"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 6.661338147750939e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-work-interrupt-receive",
+      "frames": 1588,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 6.106226635438361e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000252,
+      "plantedSamples": 2086,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-work-interrupt-accept",
+      "frames": 1624,
+      "actions": [
+        "visit_invite",
+        "idle",
+        "desk_visit",
+        "desk_transfer",
+        "typing",
+        "role_nara"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 5.828670879282072e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 5.0777197206126436e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-work-interrupt-read",
+      "frames": 1660,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 6.661338147750939e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000252,
+      "plantedSamples": 2108,
+      "maxFingerJointGap": 5.4058147735960436e-9,
+      "maxFingerLengthDrift": 1.8310280236466525e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-work-interrupt-giveback",
+      "frames": 1412,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 6.661338147750939e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 1944,
+      "maxFingerJointGap": 3.889352930788958e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-work-interrupt-regrasp",
+      "frames": 2098,
+      "actions": [
+        "idle",
+        "stretch",
+        "shoulder_roll",
+        "role_sora",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.440892098500626e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-work-interrupt-return",
+      "frames": 2095,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "sit_down",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [
+        "pivot",
+        "first_step",
+        "cruise",
+        "arrival"
+      ],
+      "maxLimbDrift": 5.828670879282072e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0.0010000000000000286,
+      "plantedSamples": 2818,
+      "maxFingerJointGap": 4.432361398231299e-9,
+      "maxFingerLengthDrift": 1.951784810161339e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-work-interrupt-release",
+      "frames": 2098,
+      "actions": [
+        "idle",
+        "shoulder_roll",
+        "role_sora",
+        "typing"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "routePhases": [],
+      "maxLimbDrift": 4.718447854656915e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxPlantedSoleHeight": 0,
+      "plantedSamples": 0,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    }
+  ]
+}

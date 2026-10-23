@@ -1,0 +1,111 @@
+TAP version 13
+# Subtest: precision: Leo completes all three document recipes, fixed limbs and one page owner
+ok 1 - precision: Leo completes all three document recipes, fixed limbs and one page owner
+  ---
+  duration_ms: 2900.420416
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes stand, walk, settle, sit, rest and independent window return
+ok 2 - precision: Leo completes stand, walk, settle, sit, rest and independent window return
+  ---
+  duration_ms: 7288.493084
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes full drink and purposeful coffee with outbound/return coverage
+not ok 3 - precision: Leo completes full drink and purposeful coffee with outbound/return coverage
+  ---
+  duration_ms: 1236.801125
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:3:33'
+  failureType: 'testCodeFailure'
+  error: 'retract'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:19:926)
+    runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:26:182)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:3:66)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: precision: 2–5 seated participants include Leo, speak and write completely with all cups home
+ok 4 - precision: 2–5 seated participants include Leo, speak and write completely with all cups home
+  ---
+  duration_ms: 27201.607459
+  type: 'test'
+  ...
+# Subtest: precision: 2–5 standing participants including Leo all arrive and answer before return
+ok 5 - precision: 2–5 standing participants including Leo all arrive and answer before return
+  ---
+  duration_ms: 25971.733666
+  type: 'test'
+  ...
+# Subtest: precision: Leo sends and receives actual documents through all ten stages and returns
+not ok 6 - precision: Leo sends and receives actual documents through all ten stages and returns
+  ---
+  duration_ms: 2775.357416
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:3:33'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'owner')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:22:474
+    run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:11:128)
+    Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:22:354)
+    runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:26:182)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:3:66)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+  ...
+# Subtest: precision: Work, participant removal and manual cancellation release all group phases and props
+not ok 7 - precision: Work, participant removal and manual cancellation release all group phases and props
+  ---
+  duration_ms: 1467.702458
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:3:33'
+  failureType: 'testCodeFailure'
+  error: 'non-vacuous cycle'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:11:149)
+    Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:23:298)
+    runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:26:182)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:3:66)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: precision: Invalid group membership never partially reserves or changes props
+ok 8 - precision: Invalid group membership never partially reserves or changes props
+  ---
+  duration_ms: 1911.407208
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 5
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 70936.606625

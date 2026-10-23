@@ -1,0 +1,1421 @@
+{
+  "scope": "Nara and Sora; in-memory final scene geometry; no database or browser",
+  "measuredAt": "2026-10-23T04:28:16.784Z",
+  "physicalSkinGuarantee": false,
+  "measurements": [
+    {
+      "id": "nara",
+      "scenario": "sofa-variant-0",
+      "frames": 2643,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "stretch"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0009935561058669537,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "sofa-variant-1",
+      "frames": 2643,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "stretch"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0009935561058669537,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "sofa-variant-2",
+      "frames": 2643,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "stretch"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0009935561058669537,
+      "maxFingerJointGap": 1.9775205039444916e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "window-variant-0",
+      "frames": 872,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "window_rest",
+        "standing",
+        "sit_down",
+        "idle"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "window-variant-1",
+      "frames": 872,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "window_rest",
+        "standing",
+        "sit_down",
+        "idle"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "window-variant-2",
+      "frames": 872,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "window_rest",
+        "standing",
+        "sit_down",
+        "idle"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "sofa-variant-0",
+      "frames": 2416,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.00099710674919401,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "sofa-variant-1",
+      "frames": 2416,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.00099710674919401,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "sofa-variant-2",
+      "frames": 2416,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.00099710674919401,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "window-variant-0",
+      "frames": 1398,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "window_rest",
+        "standing",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0007471282596114501,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "window-variant-1",
+      "frames": 1398,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "window_rest",
+        "standing",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0007471282596114501,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "window-variant-2",
+      "frames": 1398,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "window_rest",
+        "standing",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0007471282596114501,
+      "maxFingerJointGap": 1.8487169656943822e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-variant-0",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 6.661338147750939e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 5.0777197206126436e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882431217
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-variant-1",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882431835
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "role-variant-2",
+      "frames": 275,
+      "actions": [
+        "role_nara",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 5.828670879282072e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882431607
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-variant-0",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 4.163336342344337e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882417803
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-variant-1",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 3.608224830031759e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882418274
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "role-variant-2",
+      "frames": 275,
+      "actions": [
+        "role_sora",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.5356170624505964e-9,
+      "maxFingerLengthDrift": 2.0771174016886995e-9,
+      "contacts": {
+        "pen": {
+          "samples": 80,
+          "maxSurfaceDistance": 0.0013464100882417188
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "drink",
+      "frames": 274,
+      "actions": [
+        "waiting",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 6.0421957822421635e-9,
+      "maxFingerLengthDrift": 1.980237279708419e-9,
+      "contacts": {
+        "cup-handle": {
+          "samples": 130,
+          "maxSurfaceDistance": 0.0016573955118667075
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "drink",
+      "frames": 268,
+      "actions": [
+        "waiting",
+        "shoulder_roll"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 4.440892098500626e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 5.3954550079159505e-9,
+      "maxFingerLengthDrift": 1.9588790103886033e-9,
+      "contacts": {
+        "cup-handle": {
+          "samples": 130,
+          "maxSurfaceDistance": 0.0016573955118663322
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "coffee",
+      "frames": 2237,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "waiting"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 9.992007221626409e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 6.053837512273835e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {
+        "carried-cup": {
+          "samples": 775,
+          "maxSurfaceDistance": 0.0016573955118673906
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "coffee",
+      "frames": 1884,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "coffee_wait",
+        "coffee_press",
+        "standing",
+        "sit_down",
+        "waiting"
+      ],
+      "tripStages": [
+        "idle",
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "idle",
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "rest",
+        "home",
+        "deskTurn",
+        "weight-sit",
+        "work"
+      ],
+      "maxLimbDrift": 8.326672684688674e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.414621471067459e-9,
+      "maxFingerLengthDrift": 2.071770401068651e-9,
+      "contacts": {
+        "carried-cup": {
+          "samples": 630,
+          "maxSurfaceDistance": 0.0016573955118666037
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "meeting-nara-sora",
+      "frames": 3688,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "meeting_wait",
+        "meeting_listen",
+        "meeting_talk",
+        "meeting_pause",
+        "social_note",
+        "meeting_ack",
+        "sofa_rise",
+        "sit_down",
+        "stretch",
+        "idle",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "listen",
+        "speak",
+        "seat-settle",
+        "rest",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 7.216449660063518e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 7.108895957933346e-16
+    },
+    {
+      "id": "sora",
+      "scenario": "meeting-nara-sora",
+      "frames": 3688,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "meeting_talk",
+        "meeting_listen",
+        "meeting_pause",
+        "social_note",
+        "meeting_ack",
+        "sofa_rise",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "speak",
+        "listen",
+        "seat-settle",
+        "rest",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 8.881784197001252e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 9.155133597044475e-16
+    },
+    {
+      "id": "nara",
+      "scenario": "sofaPair-nara-sora",
+      "frames": 4274,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_listen",
+        "sofa_talk",
+        "sofa_agree",
+        "sofa_relax",
+        "sofa_rise",
+        "sit_down",
+        "shoulder_roll",
+        "idle",
+        "wrist_relax"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "listen",
+        "speak",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0009935561058669537,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 6.377745716588144e-16
+    },
+    {
+      "id": "sora",
+      "scenario": "sofaPair-nara-sora",
+      "frames": 4274,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_talk",
+        "sofa_listen",
+        "sofa_agree",
+        "sofa_relax",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "shoulder_roll"
+      ],
+      "tripStages": [
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "speak",
+        "listen",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 8.326672684688674e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 1.1957467920563633e-15
+    },
+    {
+      "id": "sora",
+      "scenario": "meeting-sora-nara",
+      "frames": 2305,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "meeting_wait",
+        "meeting_talk",
+        "meeting_listen",
+        "meeting_pause",
+        "social_note",
+        "meeting_ack",
+        "sofa_rise",
+        "sit_down",
+        "shoulder_roll",
+        "idle"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "listen",
+        "speak",
+        "seat-settle",
+        "rest",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 6.753223014464259e-16
+    },
+    {
+      "id": "nara",
+      "scenario": "meeting-sora-nara",
+      "frames": 2305,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "meeting_listen",
+        "meeting_talk",
+        "meeting_pause",
+        "social_note",
+        "meeting_ack",
+        "sofa_rise",
+        "sit_down",
+        "wrist_relax"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "listen",
+        "speak",
+        "seat-settle",
+        "rest",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 8.326672684688674e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 1.0877919644084146e-15
+    },
+    {
+      "id": "sora",
+      "scenario": "sofaPair-sora-nara",
+      "frames": 4283,
+      "actions": [
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_rest",
+        "sofa_listen",
+        "sofa_talk",
+        "sofa_agree",
+        "sofa_relax",
+        "sofa_rise",
+        "sit_down",
+        "wrist_relax",
+        "idle",
+        "stretch"
+      ],
+      "tripStages": [
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "listen",
+        "speak",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.00099710674919401,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.6880496306326265e-9,
+      "contacts": {},
+      "maxSupportError": 6.661338147750939e-16
+    },
+    {
+      "id": "nara",
+      "scenario": "sofaPair-sora-nara",
+      "frames": 4283,
+      "actions": [
+        "idle",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "sofa_sit",
+        "sofa_talk",
+        "sofa_listen",
+        "sofa_agree",
+        "sofa_relax",
+        "sofa_rest",
+        "sofa_rise",
+        "sit_down",
+        "wrist_relax"
+      ],
+      "tripStages": [
+        "queued",
+        "stand",
+        "out",
+        "align",
+        "back",
+        "sit",
+        "rest",
+        "rise",
+        "forward",
+        "home",
+        "deskTurn",
+        "deskSit"
+      ],
+      "personalPhases": [
+        "queued",
+        "prepare",
+        "weight-rise",
+        "settle",
+        "out",
+        "align",
+        "back",
+        "weight-sit",
+        "seat-settle",
+        "speak",
+        "listen",
+        "forward",
+        "home",
+        "deskTurn",
+        "work"
+      ],
+      "maxLimbDrift": 9.43689570931383e-16,
+      "minSoleY": 0.0009845935735956074,
+      "maxFingerJointGap": 2.098949024940064e-9,
+      "maxFingerLengthDrift": 1.9319347718815827e-9,
+      "contacts": {},
+      "maxSupportError": 1.137640067256873e-15
+    },
+    {
+      "id": "nara",
+      "scenario": "document-nara-to-sora",
+      "frames": 1437,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "sit_down",
+        "idle"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 5.551115123125783e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.16945373895667e-9,
+      "maxFingerLengthDrift": 1.993851077297659e-9,
+      "contacts": {
+        "page": {
+          "samples": 65,
+          "maxSurfaceDistance": 0.001000000000000112
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-nara-to-sora",
+      "frames": 1437,
+      "actions": [
+        "visit_invite",
+        "idle",
+        "desk_visit",
+        "desk_transfer",
+        "wrist_relax"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 3.885780586188048e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 4.564086143577255e-9,
+      "maxFingerLengthDrift": 1.9569448492240404e-9,
+      "contacts": {
+        "page": {
+          "samples": 75,
+          "maxSurfaceDistance": 0.0010054084428254815
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "nara",
+      "scenario": "document-sora-to-nara",
+      "frames": 1745,
+      "actions": [
+        "visit_invite",
+        "idle",
+        "desk_visit",
+        "desk_transfer",
+        "stretch"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 5.828670879282072e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 5.4144432958621824e-9,
+      "maxFingerLengthDrift": 1.9569448492240404e-9,
+      "contacts": {
+        "page": {
+          "samples": 75,
+          "maxSurfaceDistance": 0.001000000000000223
+        }
+      },
+      "maxSupportError": 0
+    },
+    {
+      "id": "sora",
+      "scenario": "document-sora-to-nara",
+      "frames": 1745,
+      "actions": [
+        "visit_invite",
+        "stand_up",
+        "turn",
+        "walk",
+        "standing",
+        "desk_visit",
+        "desk_transfer",
+        "sit_down",
+        "idle"
+      ],
+      "tripStages": [],
+      "personalPhases": [
+        "work"
+      ],
+      "maxLimbDrift": 6.661338147750939e-16,
+      "minSoleY": 0.000999999076128008,
+      "maxFingerJointGap": 3.962412568087862e-9,
+      "maxFingerLengthDrift": 1.9346004243026016e-9,
+      "contacts": {
+        "page": {
+          "samples": 70,
+          "maxSurfaceDistance": 0.001000000000000112
+        }
+      },
+      "maxSupportError": 0
+    }
+  ]
+}

@@ -9,7 +9,7 @@ import {qaOrigin} from './browser.mjs';
 // Playwright's default focus override makes even real inactive tabs report visible.
 // Connect to an isolated ordinary Chrome default context with documented noDefaults.
 const require=createRequire(import.meta.url),{chromium}=require(process.env.STUDIO_PLAYWRIGHT_PATH??'/Users/iriver/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-const out='product/evidence/personal-final',dir=await mkdtemp(join(tmpdir(),'studio-native-visibility-')),errors=[],checks=[],started=Date.now();await mkdir(out,{recursive:true});
+const out=process.env.STUDIO_QA_OUT??'product/evidence/personal-final',dir=await mkdtemp(join(tmpdir(),'studio-native-visibility-')),errors=[],checks=[],started=Date.now();await mkdir(out,{recursive:true});
 const child=spawn(process.env.STUDIO_CHROME_PATH??'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',['--user-data-dir='+dir,'--remote-debugging-port=0','--remote-debugging-address=127.0.0.1','--no-first-run','--no-default-browser-check','about:blank'],{stdio:'ignore'});
 let browser,page;
 try{

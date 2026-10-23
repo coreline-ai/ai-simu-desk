@@ -1,0 +1,25 @@
+{
+  "change": "trailing whitespace and surplus EOF blank lines only; test results unchanged; raw originals retained privately under /private/tmp/ai-simu-raw-log-backup",
+  "files": [
+    {
+      "path": "product/evidence/motion-precision/integration/final-typecheck.log",
+      "originalSha256": "06491e0168f91a23edf487710a9c8b029b3e0f879c465f0c20cc74cf9bad1f7c",
+      "normalizedSha256": "b245893309c506bde321d237977b1deb88708e0e42384b6f00d54e197c151f97"
+    },
+    {
+      "path": "product/evidence/motion-precision/integration/syntax.log",
+      "originalSha256": "1296d41516e237ad3377e6ad41bf4bcb5b721f6ce2f2e6b804400108005566e9",
+      "normalizedSha256": "7067c629125e65cba3be1e7ff0336f247ec3c7781455b43d0e12966e17219a30"
+    },
+    {
+      "path": "product/evidence/motion-precision/integration/typecheck.log",
+      "originalSha256": "06491e0168f91a23edf487710a9c8b029b3e0f879c465f0c20cc74cf9bad1f7c",
+      "normalizedSha256": "b245893309c506bde321d237977b1deb88708e0e42384b6f00d54e197c151f97"
+    },
+    {
+      "path": "product/evidence/motion-precision/nara-sora/initial/tests.tap",
+      "originalSha256": "bee5351e6559d671c5aaed4a5af9372c201e3995f845bbadcc07bbd9da6b1360",
+      "normalizedSha256": "8c70f1869f168ea0dd4978a5a4c3d19d81565ff3a73121bc155479befb2f515b"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+jun-min-routes-posture passed
+jun-min-listen-table passed
+jun-min-role-variants passed
+min-actual-writing-surface passed
+jun-min-cups-coffee passed
+jun-min-document-transfer passed
+jun-glasses-actual-geometry passed
+jun-glasses-all-stage-priority passed
+{
+  "passed": true,
+  "sourceUnchanged": true,
+  "cases": [
+    {
+      "name": "jun-min-routes-posture",
+      "status": "passed",
+      "elapsedMs": 89896
+    },
+    {
+      "name": "jun-min-listen-table",
+      "status": "passed",
+      "elapsedMs": 13584
+    },
+    {
+      "name": "jun-min-role-variants",
+      "status": "passed",
+      "elapsedMs": 15935
+    },
+    {
+      "name": "min-actual-writing-surface",
+      "status": "passed",
+      "elapsedMs": 4183
+    },
+    {
+      "name": "jun-min-cups-coffee",
+      "status": "passed",
+      "elapsedMs": 70145
+    },
+    {
+      "name": "jun-min-document-transfer",
+      "status": "passed",
+      "elapsedMs": 22282
+    },
+    {
+      "name": "jun-glasses-actual-geometry",
+      "status": "passed",
+      "elapsedMs": 7285
+    },
+    {
+      "name": "jun-glasses-all-stage-priority",
+      "status": "passed",
+      "elapsedMs": 48389
+    }
+  ]
+}

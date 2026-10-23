@@ -9,7 +9,10 @@ await build({entryPoints:['product/src/app.mjs'],outfile:join(dir,'app.js'),bund
 await build({entryPoints:['pilot-3d/activities/team/app.mjs'],outfile:join(dir,'activities/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 await build({entryPoints:['pilot-3d/living-office/app.mjs'],outfile:join(dir,'living/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 await build({entryPoints:['pilot-3d/personal-office/app.mjs'],outfile:join(dir,'personal/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
+await build({entryPoints:['scripts/qa/renderer-fixture.mjs'],outfile:join(dir,'renderer/app.js'),bundle:true,format:'esm',target:'es2022',minify:true,legalComments:'linked'});
 const db=await openDatabase(config.dataDir),app=createRuntime(db,config);
+app.get('/qa/renderer-fixture/',c=>c.html('<!doctype html><meta charset="utf-8"><title>Renderer lifecycle QA</title><div id="fixture-root"></div><script type="module" src="/qa/renderer-fixture/app.js"></script>'));
+app.get('/qa/renderer-fixture/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'renderer/app.js')));});
 app.get('/demos/activities/personal/',async c=>c.html(await readFile('pilot-3d/personal-office/index.html','utf8')));
 app.get('/demos/activities/personal/styles.css',async c=>{c.header('Content-Type','text/css');return c.body((await Promise.all(['pilot-3d/living-office/styles.css','pilot-3d/personal-office/styles.css'].map(p=>readFile(p,'utf8')))).join('\n'));});
 app.get('/demos/activities/personal/app.js',async c=>{c.header('Content-Type','text/javascript');return c.body(await readFile(join(dir,'personal/app.js')));});

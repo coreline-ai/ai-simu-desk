@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "at": "2026-10-23T05:13:47.134Z",
+  "scope": "idle desktop, same space and room camera; not a long-running or mobile benchmark",
+  "viewport": [
+    1280,
+    900
+  ],
+  "dpr": 1,
+  "quality": "balanced",
+  "secondsPerSample": 5,
+  "rows": [
+    {
+      "version": 11,
+      "samples": [
+        {
+          "p95": 16.799999999999272,
+          "p50": 16.699999999999818,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "geometries": 303,
+          "textures": 45,
+          "frames": 301
+        },
+        {
+          "p95": 16.799999999999272,
+          "p50": 16.69999999999891,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "geometries": 303,
+          "textures": 45,
+          "frames": 301
+        },
+        {
+          "p95": 16.799999999999272,
+          "p50": 16.69999999999891,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "geometries": 303,
+          "textures": 45,
+          "frames": 301
+        }
+      ],
+      "medianP95": 16.799999999999272
+    },
+    {
+      "version": 12,
+      "samples": [
+        {
+          "p95": 16.799999999999272,
+          "p50": 16.699999999999818,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "geometries": 303,
+          "textures": 45,
+          "frames": 300
+        },
+        {
+          "p95": 16.799999999999272,
+          "p50": 16.69999999999891,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "geometries": 303,
+          "textures": 45,
+          "frames": 301
+        },
+        {
+          "p95": 16.700000000000728,
+          "p50": 16.69999999999891,
+          "drawCalls": 1097,
+          "triangles": 773350,
+          "geometries": 303,
+          "textures": 45,
+          "frames": 301
+        }
+      ],
+      "medianP95": 16.799999999999272
+    }
+  ]
+}

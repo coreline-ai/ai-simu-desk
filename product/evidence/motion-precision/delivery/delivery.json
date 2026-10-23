@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "at": "2026-10-23T08:42:53.051Z",
+  "origin": "http://127.0.0.1:4180",
+  "release": "1792744828499-71dbd665-0a71-484e-ae01-0930d9c387a5",
+  "hashes": {
+    "assets/app.js": "31242ab1ee329fc05546b36bf5e60a0bd94d83c2e0c16c325d49ef9db0ba6d57",
+    "demos/activities/personal/app.js": "5080c2ac07b03d333d943f6a3759a18ba5c5905594f0a5920f16f50f809b5791",
+    "assets/studio-room-v9.glb": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e"
+  },
+  "testedBundleIdentical": true,
+  "health": {
+    "status": "ok",
+    "database": "pglite"
+  },
+  "worker": {
+    "provider": "fake"
+  },
+  "model": 9,
+  "activities": 12,
+  "actors": [
+    "nara",
+    "sora",
+    "jun",
+    "min",
+    "leo"
+  ],
+  "rate": 1.5,
+  "contacts": 14,
+  "cups": [
+    {
+      "id": "nara",
+      "state": "idle",
+      "recipe": null,
+      "duration": null,
+      "time": 0,
+      "owner": "desk",
+      "events": 0,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    },
+    {
+      "id": "sora",
+      "state": "idle",
+      "recipe": null,
+      "duration": null,
+      "time": 0,
+      "owner": "desk",
+      "events": 0,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    },
+    {
+      "id": "jun",
+      "state": "idle",
+      "recipe": null,
+      "duration": null,
+      "time": 0,
+      "owner": "desk",
+      "events": 0,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    },
+    {
+      "id": "min",
+      "state": "idle",
+      "recipe": null,
+      "duration": null,
+      "time": 0,
+      "owner": "desk",
+      "events": 0,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    },
+    {
+      "id": "leo",
+      "state": "idle",
+      "recipe": null,
+      "duration": null,
+      "time": 0,
+      "owner": "desk",
+      "events": 0,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    }
+  ],
+  "canvas": 1,
+  "errors": []
+}

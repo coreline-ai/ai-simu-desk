@@ -1,3 +1,4 @@
+import {RendererResources} from './renderer-resources.mjs';
 import * as T from 'three';
 import{studioLighting,qualitySettings}from'./lighting.mjs';
 import {GLTFLoader}from'three/addons/loaders/GLTFLoader.js';
@@ -8,7 +9,7 @@ import {fitOrthographic}from'../src/framing.mjs';
 import {releaseModel}from'../src/scene.mjs';
 const $=s=>document.querySelector(s),host=$('#viewport'),stage=$('.stage'),clock=new MotionClock(),abort=new AbortController();
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');clock.paused=reduced.matches;
-let renderer,actor,chair,oldMixer,disposed=false,frame=0,last=0,uiLast=0,view=innerWidth<700?'new':'split',loaded=false,models=[],finishedHold=0,benchmark=null,contextLost=false;
+let resources,renderer,actor,chair,oldMixer,disposed=false,frame=0,last=0,uiLast=0,view=innerWidth<700?'new':'split',loaded=false,models=[],finishedHold=0,benchmark=null,contextLost=false;
 const scenes=[new T.Scene(),new T.Scene()];for(const s of scenes)s.background=new T.Color('#e9e9df');
 const camera=new T.OrthographicCamera(-2,2,2,-2,.05,35);camera.position.set(-3.4,3.05,4.7);camera.lookAt(-.50,.77,-.35);
 let quality='auto',lightRigs=[];let controls;const target=new T.Vector3(-.50,.77,-.35);
@@ -24,14 +25,14 @@ function benchmarkTick(now,dt){if(!benchmark)return;const elapsed=(now-benchmark
 function tick(now){if(disposed)return;frame=requestAnimationFrame(tick);const realDt=last?(now-last)/1000:0;last=now;if(document.hidden||contextLost)return;
  if(loaded){clock.tick(realDt);if(clock.mode==='tour'&&clock.time>=22&&!clock.paused){finishedHold+=Math.min(.06,realDt);if(finishedHold>1.5&&$('#repeat').checked){clock.play('tour');finishedHold=0;}}else finishedHold=0;renderPose();if(!clock.paused)oldMixer?.update(Math.min(.06,realDt));}
  controls.update();renderer.info.reset();renderer.setScissorTest(true);const w=host.clientWidth,h=host.clientHeight;
- if(view==='split'){renderer.setViewport(0,0,w/2,h);renderer.setScissor(0,0,w/2,h);renderer.render(scenes[0],camera);renderer.setViewport(w/2,0,w/2,h);renderer.setScissor(w/2,0,w/2,h);renderer.render(scenes[1],camera);}else{renderer.setViewport(0,0,w,h);renderer.setScissor(0,0,w,h);renderer.render(scenes[view==='old'?0:1],camera);}
+ if(view==='split'){renderer.setViewport(0,0,w/2,h);renderer.setScissor(0,0,w/2,h);renderer.render(scenes[0],camera);renderer.setViewport(w/2,0,w/2,h);renderer.setScissor(w/2,0,w/2,h);renderer.render(scenes[1],camera);}else{renderer.setViewport(0,0,w,h);renderer.setScissor(0,0,w,h);renderer.render(scenes[view==='old'?0:1],camera);}for(const scene of scenes)resources.capture(scene);
  benchmarkTick(now,realDt);if(now-uiLast>120){updateUI();uiLast=now;}
 }
 async function init(){
  try{
- renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.03;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;renderer.info.autoReset=false;host.append(renderer.domElement);
+ renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});resources=new RendererResources(renderer);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.03;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;renderer.info.autoReset=false;host.append(renderer.domElement);
  controls=new OrbitControls(camera,renderer.domElement);controls.target.copy(target);controls.enablePan=false;controls.enableDamping=true;controls.minZoom=.65;controls.maxZoom=2.7;controls.maxPolarAngle=Math.PI*.48;controls.update();controls.addEventListener('start',()=>cancelBenchmark('카메라 조작'));lightRigs=scenes.map(s=>studioLighting(s));
- renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();contextLost=true;$('#load-status').textContent='3D 화면이 중단되었습니다. 새로고침하면 에셋을 다시 불러옵니다.';},{signal:abort.signal});
+ renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();resources.release();for(const scene of scenes)releaseModel(scene,{contextLost:true});for(const lights of lightRigs)lights.release();contextLost=true;$('#load-status').textContent='3D 화면이 중단되었습니다. 새로고침하면 에셋을 다시 불러옵니다.';},{signal:abort.signal});
  setView(view);const loader=new GLTFLoader();
  // TextureLoader decodes embedded blob images through img-src; keep the existing strict connect-src unchanged.
  loader.register(parser=>({name:'LocalEmbeddedPNG',loadTexture(index){return parser.loadTextureImage(index,parser.json.textures[index].source,new T.TextureLoader(parser.options.manager));}}));
@@ -64,6 +65,6 @@ $('#benchmark').addEventListener('click',()=>{if(!loaded)return;clock.play('tour
 reduced.addEventListener('change',()=>{if(reduced.matches){clock.paused=true;updateUI();}},{signal:abort.signal});
 document.addEventListener('visibilitychange',()=>{last=performance.now();if(document.hidden&&benchmark){$('#benchmark-result').textContent='측정 취소: 페이지 숨김';benchmark=null;$('#benchmark').disabled=false;}},{signal:abort.signal});
 const observer=new ResizeObserver(resize);observer.observe(host);
-function dispose(){if(disposed)return;disposed=true;abort.abort();observer.disconnect();cancelAnimationFrame(frame);controls?.dispose();oldMixer?.stopAllAction();for(const model of models){model.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.dispose();});releaseModel(model);}for(const s of scenes)s.traverse(o=>{if(o.isLight)o.shadow?.dispose();});renderer?.dispose();renderer?.forceContextLoss();}
+function dispose(){if(disposed)return;disposed=true;abort.abort();observer.disconnect();cancelAnimationFrame(frame);controls?.dispose();oldMixer?.stopAllAction();resources?.dispose();for(const model of models){model.traverse(o=>{if(o.isSkinnedMesh)o.skeleton.dispose();});releaseModel(model);}for(const s of scenes)s.traverse(o=>{if(o.isLight)o.shadow?.dispose();});renderer?.dispose();renderer?.forceContextLoss();}
 window.addEventListener('pagehide',dispose,{once:true});
 init();

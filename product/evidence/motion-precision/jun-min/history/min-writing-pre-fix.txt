@@ -1,0 +1,6 @@
+AssertionError [ERR_ASSERTION]: Min actual writing surface gap 0.004999999810011091; {"actor":"min","variant":0,"actFrames":38,"gapOver3mmFrames":35,"minActualGap":0.0004999999869612637,"maxActualGap":0.004999999810011091,"example":{"tip":[2.7312575141628113,0.7619999999999996,-3.1800000000000006],"gap":0.004999999810009759,"time":1.0333333333333332,"recipe":{"phase":"act","sample":0.7695744144693387,"reading":false,"progress":0.6691951430168164,"period":2.7,"variant":0}}}
+    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-jun-min.mjs:119:27
+    at withFixture (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-jun-min.mjs:14:76)
+    at Array.minWritingSurface (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-jun-min.mjs:110:37)
+    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/[eval1]:1:146
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

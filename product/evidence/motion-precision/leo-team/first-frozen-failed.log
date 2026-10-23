@@ -1,0 +1,10 @@
+leo-role-three passed
+leo-sofa-window failed: leo actual planted sole to ground-mesh gap 0.020999996423720434 at home
+leo-three-rests passed
+leo-cup-coffee passed
+seated-two-five failed: nara actual planted sole to ground-mesh gap -0.018702564739851206 at out
+standing-two-five passed
+leo-document-both-directions passed
+team-work-remove-cancel passed
+leo-prop-work-boundaries passed
+invalid-membership-atomic passed

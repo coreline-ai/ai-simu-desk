@@ -1,0 +1,150 @@
+[
+  {
+    "variant": 0,
+    "style": "side_stretch",
+    "maxPlantedHeight": 0.000999999076128008,
+    "peak": {
+      "variant": 0,
+      "style": "side_stretch",
+      "time": 0.7,
+      "actualSoleMin": 0.000999999076128008,
+      "action": "natural_rise",
+      "side": "L",
+      "foot": {
+        "position": [
+          -0.1,
+          0.085,
+          -0.48
+        ],
+        "planted": true
+      },
+      "actualAnkle": [
+        -2.5,
+        0.085,
+        -3.48
+      ],
+      "actualRotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "personal": {
+        "attentionPitch": 0,
+        "attentionYaw": 0,
+        "reaction": null,
+        "phase": "work",
+        "stage": "work",
+        "progress": 0,
+        "active": false,
+        "pitch": 0,
+        "torsoPitch": 0.03404521064290177,
+        "headRoll": 0,
+        "weight": 0
+      }
+    },
+    "done": true
+  },
+  {
+    "variant": 1,
+    "style": "back_open",
+    "maxPlantedHeight": 0.000999999076128008,
+    "peak": {
+      "variant": 1,
+      "style": "back_open",
+      "time": 11.433333333333303,
+      "actualSoleMin": 0.000999999076128008,
+      "action": "natural_rise",
+      "side": "L",
+      "foot": {
+        "position": [
+          -0.1,
+          0.085,
+          -0.48
+        ],
+        "planted": true
+      },
+      "actualAnkle": [
+        -2.5,
+        0.085,
+        -3.48
+      ],
+      "actualRotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "personal": {
+        "attentionPitch": 0,
+        "attentionYaw": 0,
+        "reaction": null,
+        "phase": "work",
+        "stage": "work",
+        "progress": 0,
+        "active": false,
+        "pitch": 0,
+        "torsoPitch": 0.03404520959282853,
+        "headRoll": 0,
+        "weight": 0
+      }
+    },
+    "done": true
+  },
+  {
+    "variant": 2,
+    "style": "shoulder_release",
+    "maxPlantedHeight": 0.010082417083019844,
+    "peak": {
+      "variant": 2,
+      "style": "shoulder_release",
+      "time": 41.16666666666689,
+      "actualSoleMin": 0.010082417083019844,
+      "action": "walk",
+      "stage": "out",
+      "phase": "cruise",
+      "side": "L",
+      "foot": {
+        "position": [
+          -3.466042664993818,
+          0.11546926331299007,
+          0.6752955718494811
+        ],
+        "planted": true,
+        "yaw": 1.1164942401015898,
+        "pitch": 0.1976423561844399,
+        "support": "toe",
+        "supportPoint": [
+          -3.595277285951645,
+          0.0010000000000000009,
+          0.6121809895212416
+        ]
+      },
+      "actualAnkle": [
+        -5.866042664993818,
+        0.11546926331299007,
+        -2.324704428150519
+      ],
+      "actualRotation": [
+        0.1976423561844399,
+        1.1164942401015898,
+        0,
+        "XYZ"
+      ],
+      "personal": {
+        "attentionPitch": -0.0015553406555054766,
+        "attentionYaw": -0.002419418797452964,
+        "reaction": null,
+        "phase": "out",
+        "stage": "out",
+        "progress": 0,
+        "active": false,
+        "pitch": 0,
+        "torsoPitch": 0.012,
+        "headRoll": 0,
+        "weight": 6.123233995736766e-19
+      }
+    },
+    "done": true
+  }
+]

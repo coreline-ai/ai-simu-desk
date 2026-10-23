@@ -1,0 +1,1421 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-23T05:17:27.033Z",
+  "scope": "v12 procedural runtime; mathematical and ownership QA; no rendered appearance claim",
+  "results": [
+    {
+      "id": "leo-role-three",
+      "title": "Leo completes all three document recipes, fixed limbs and one page owner",
+      "metrics": {
+        "variants": [
+          {
+            "variant": 0,
+            "gripSamples": 163,
+            "surfacePhases": {
+              "observe": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010004181522088311,
+                0.0010006969213453725
+              ],
+              "act": [
+                0.001000000000000112,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ],
+              "pause": [
+                0.001000000000000112,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ],
+              "check": [
+                0.001000000000000223,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ]
+            },
+            "phases": [
+              "observe",
+              "act",
+              "pause",
+              "check"
+            ],
+            "stages": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "idle"
+            ]
+          },
+          {
+            "variant": 1,
+            "gripSamples": 163,
+            "surfacePhases": {
+              "observe": [
+                0.0009999999999998899,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.0009999251902741775,
+                0.0009998753847685283
+              ],
+              "act": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009
+              ],
+              "pause": [
+                0.001000000000000112,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899,
+                0.0009999999999998899
+              ],
+              "check": [
+                0.0009999999999998899,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112
+              ]
+            },
+            "phases": [
+              "observe",
+              "act",
+              "pause",
+              "check"
+            ],
+            "stages": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "idle"
+            ]
+          },
+          {
+            "variant": 2,
+            "gripSamples": 163,
+            "surfacePhases": {
+              "observe": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.000999637101116733,
+                0.0009993967394782493
+              ],
+              "act": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009
+              ],
+              "pause": [
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009,
+                0.0010000000000000009
+              ],
+              "check": [
+                0.0009999999999998899,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112,
+                0.001000000000000112
+              ]
+            },
+            "phases": [
+              "observe",
+              "act",
+              "pause",
+              "check"
+            ],
+            "stages": [
+              "reach",
+              "grasp",
+              "use",
+              "replace",
+              "release",
+              "retract",
+              "idle"
+            ]
+          }
+        ],
+        "handSamples": 489,
+        "maxHandError": 1.2609709600486848e-15,
+        "maxPadError": 1.7690777709386487e-17
+      },
+      "elapsedMs": 8465.506083,
+      "status": "passed"
+    },
+    {
+      "id": "leo-sofa-window",
+      "title": "Leo completes stand, walk, settle, sit, rest and independent window return",
+      "metrics": {
+        "sofa": {
+          "stages": [
+            "stand",
+            "out",
+            "align",
+            "back",
+            "sit",
+            "rest",
+            "rise",
+            "forward",
+            "home",
+            "deskTurn",
+            "deskSit"
+          ],
+          "actions": [
+            "stand_up",
+            "turn",
+            "walk",
+            "standing",
+            "sofa_sit",
+            "sofa_rest",
+            "sofa_rise",
+            "sit_down",
+            "shoulder_roll"
+          ]
+        },
+        "window": {
+          "stages": [
+            "stand",
+            "out",
+            "align",
+            "rest",
+            "home",
+            "deskTurn",
+            "deskSit"
+          ],
+          "actions": [
+            "stand_up",
+            "turn",
+            "walk",
+            "window_rest",
+            "standing",
+            "sit_down",
+            "shoulder_roll"
+          ]
+        },
+        "pelvisStep": 0.03252388432926963,
+        "footTargetError": 1.9860273225978185e-15,
+        "armLengths": {
+          "elbowL": 0.235,
+          "handL": 0.2510497958573159,
+          "elbowR": 0.235,
+          "handR": 0.2510497958573159
+        },
+        "soles": {
+          "leo": {
+            "samples": 10044,
+            "minHeight": 0.000999999076128008,
+            "maxPlantedGap": 0.0010000002235174485,
+            "minPlantedGap": 0.0009999954998493182,
+            "minSignedGap": 0.0009999954998493182,
+            "plantedSamples": 6636,
+            "surfaceSamples": 1525472,
+            "surfaces": [
+              "RoomFloor",
+              "WovenRug"
+            ]
+          }
+        }
+      },
+      "elapsedMs": 31133.310250000002,
+      "status": "passed"
+    },
+    {
+      "id": "leo-three-rests",
+      "title": "Leo completes all three personal rest styles, with actual arm movement and return",
+      "metrics": [
+        {
+          "style": "back_open",
+          "restSamples": 321,
+          "armMovement": 0.5643168192478599,
+          "pelvisStep": 0.011078689472902595,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999954998493182,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 560,
+              "surfaceSamples": 97584,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "style": "shoulder_drop",
+          "restSamples": 321,
+          "armMovement": 0.41961238001590295,
+          "pelvisStep": 0.006705914306950889,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            }
+          }
+        },
+        {
+          "style": "side_stretch",
+          "restSamples": 321,
+          "armMovement": 0.8549215313661862,
+          "pelvisStep": 0.011078689472902595,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999954998493182,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 560,
+              "surfaceSamples": 97584,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        }
+      ],
+      "elapsedMs": 7897.369665999999,
+      "status": "passed"
+    },
+    {
+      "id": "leo-cup-coffee",
+      "title": "Leo completes full drink and purposeful coffee with outbound/return coverage",
+      "metrics": {
+        "states": [
+          "reach",
+          "grasp",
+          "lift",
+          "sip",
+          "lower",
+          "place",
+          "release",
+          "idle"
+        ],
+        "phases": [
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "directions": [
+          "out",
+          "home"
+        ],
+        "cupContactSamples": 229,
+        "maxHandError": 1.2755491433176288e-15,
+        "maxPadError": 1.2777036254241406e-17,
+        "minCupUp": 1,
+        "maxCarryStep": 0.05604161416586421,
+        "sipSurfaceGaps": [
+          0.000383508074432916,
+          0.0006573955118653885,
+          0.0006573955118658326,
+          0.0016573955118657224,
+          0.0016573955118657224
+        ],
+        "carryContactSamples": {
+          "out": 255,
+          "home": 255
+        },
+        "carrySurfaceGaps": {
+          "out": [
+            0.00038350807443380327,
+            0.0006573955118662766,
+            0.0006573955118649444,
+            0.0016573955118661665,
+            0.0016573955118652783
+          ],
+          "home": [
+            0.0003835080744322224,
+            0.0006573955118644471,
+            0.0006573955118671191,
+            0.0016573955118650487,
+            0.0016573955118668654
+          ]
+        }
+      },
+      "elapsedMs": 13285.310874999996,
+      "status": "passed"
+    },
+    {
+      "id": "seated-two-five",
+      "title": "2–5 seated participants include Leo, speak and write completely with all cups home",
+      "metrics": [
+        {
+          "size": 2,
+          "ids": [
+            "leo",
+            "nara"
+          ],
+          "speakers": [
+            "nara",
+            "leo"
+          ],
+          "noted": [],
+          "walked": [
+            "leo",
+            "nara"
+          ],
+          "speakingMovement": {
+            "nara": 0.07500000000000051,
+            "leo": 0.0899620383867834
+          },
+          "noteSurfaceByActor": {},
+          "samples": 2593,
+          "tableSamples": 1960,
+          "plantedSamples": 1582,
+          "maxTableError": 7.108895957933346e-16,
+          "soles": {
+            "nara": {
+              "samples": 5186,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.001000000223517445,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 3162,
+              "surfaceSamples": 743888,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "sora": {
+              "samples": 5186,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "jun": {
+              "samples": 5186,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "min": {
+              "samples": 5186,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "leo": {
+              "samples": 5186,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174485,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 3268,
+              "surfaceSamples": 787664,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            }
+          },
+          "tableByActor": {
+            "nara": 1124,
+            "leo": 836
+          }
+        },
+        {
+          "size": 3,
+          "ids": [
+            "leo",
+            "nara",
+            "sora"
+          ],
+          "speakers": [
+            "leo",
+            "nara",
+            "sora"
+          ],
+          "noted": [
+            "leo",
+            "nara",
+            "sora"
+          ],
+          "walked": [
+            "leo",
+            "nara",
+            "sora"
+          ],
+          "speakingMovement": {
+            "leo": 0.09000000000000019,
+            "nara": 0.07499999999999962,
+            "sora": 0.10500000000000032
+          },
+          "noteSurfaceByActor": {
+            "leo": 56,
+            "nara": 56,
+            "sora": 56
+          },
+          "samples": 4177,
+          "tableSamples": 7022,
+          "plantedSamples": 6391,
+          "maxTableError": 1.1102230246251565e-15,
+          "soles": {
+            "nara": {
+              "samples": 8354,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.001000000223517445,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 5132,
+              "surfaceSamples": 1043328,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "sora": {
+              "samples": 8354,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174416,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 5173,
+              "surfaceSamples": 934800,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "jun": {
+              "samples": 8354,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "min": {
+              "samples": 8354,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "leo": {
+              "samples": 8354,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174485,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 5238,
+              "surfaceSamples": 1087104,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            }
+          },
+          "tableByActor": {
+            "nara": 2932,
+            "leo": 2644,
+            "sora": 1446
+          }
+        },
+        {
+          "size": 4,
+          "ids": [
+            "leo",
+            "nara",
+            "sora",
+            "jun"
+          ],
+          "speakers": [
+            "leo",
+            "nara",
+            "sora",
+            "jun"
+          ],
+          "noted": [
+            "leo",
+            "nara",
+            "sora",
+            "jun"
+          ],
+          "walked": [
+            "leo",
+            "nara",
+            "sora",
+            "jun"
+          ],
+          "speakingMovement": {
+            "leo": 0.09000000000000019,
+            "nara": 0.07499999999999962,
+            "sora": 0.10500000000000032,
+            "jun": 0.04500000000000015
+          },
+          "noteSurfaceByActor": {
+            "leo": 56,
+            "nara": 56,
+            "sora": 56,
+            "jun": 56
+          },
+          "samples": 6242,
+          "tableSamples": 15958,
+          "plantedSamples": 15109,
+          "maxTableError": 1.1157603309187458e-15,
+          "soles": {
+            "nara": {
+              "samples": 12484,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.001000000223517445,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7456,
+              "surfaceSamples": 1396576,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "sora": {
+              "samples": 12484,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174416,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7497,
+              "surfaceSamples": 1288048,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "jun": {
+              "samples": 12484,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000023967665812,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7538,
+              "surfaceSamples": 1380464,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "min": {
+              "samples": 12484,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "leo": {
+              "samples": 12484,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174485,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7562,
+              "surfaceSamples": 1440352,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            }
+          },
+          "tableByActor": {
+            "nara": 5256,
+            "leo": 4968,
+            "sora": 3770,
+            "jun": 1964
+          }
+        },
+        {
+          "size": 5,
+          "ids": [
+            "leo",
+            "nara",
+            "sora",
+            "jun",
+            "min"
+          ],
+          "speakers": [
+            "leo",
+            "nara",
+            "sora",
+            "jun",
+            "min"
+          ],
+          "noted": [
+            "leo",
+            "nara",
+            "sora",
+            "jun",
+            "min"
+          ],
+          "walked": [
+            "leo",
+            "nara",
+            "sora",
+            "min",
+            "jun"
+          ],
+          "speakingMovement": {
+            "leo": 0.09000000000000019,
+            "nara": 0.07499999999999962,
+            "sora": 0.10500000000000032,
+            "jun": 0.04500000000000015,
+            "min": 0.0600000000000005
+          },
+          "noteSurfaceByActor": {
+            "leo": 56,
+            "nara": 56,
+            "sora": 56,
+            "jun": 56,
+            "min": 56
+          },
+          "samples": 6695,
+          "tableSamples": 22902,
+          "plantedSamples": 21835,
+          "maxTableError": 1.2609709600486848e-15,
+          "soles": {
+            "nara": {
+              "samples": 13390,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.001000000223517445,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 8168,
+              "surfaceSamples": 1504800,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "sora": {
+              "samples": 13390,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174416,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 8209,
+              "surfaceSamples": 1396272,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "jun": {
+              "samples": 13390,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000023967665812,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 8250,
+              "surfaceSamples": 1488688,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "min": {
+              "samples": 13390,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174485,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 8203,
+              "surfaceSamples": 1425456,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            },
+            "leo": {
+              "samples": 13390,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0010000002235174485,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 8274,
+              "surfaceSamples": 1548576,
+              "surfaces": [
+                "RoomFloor",
+                "MeetingWovenRug"
+              ]
+            }
+          },
+          "tableByActor": {
+            "nara": 5968,
+            "leo": 5680,
+            "sora": 4482,
+            "min": 4290,
+            "jun": 2482
+          }
+        }
+      ],
+      "elapsedMs": 131749.40575,
+      "status": "passed"
+    },
+    {
+      "id": "standing-two-five",
+      "title": "2–5 standing participants including Leo all arrive and answer before return",
+      "metrics": [
+        {
+          "size": 2,
+          "ids": [
+            "leo",
+            "min"
+          ],
+          "spoke": [
+            "leo",
+            "min"
+          ],
+          "talkSamples": 212,
+          "speakingMovement": {
+            "leo": 0.4474743030511028,
+            "min": 0.3384740024814541
+          },
+          "soles": {
+            "nara": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "sora": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "jun": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "min": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213353,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 2730,
+              "surfaceSamples": 511632,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 4922,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 2802,
+              "surfaceSamples": 642048,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "size": 3,
+          "ids": [
+            "leo",
+            "min",
+            "jun"
+          ],
+          "spoke": [
+            "leo",
+            "min",
+            "jun"
+          ],
+          "talkSamples": 318,
+          "speakingMovement": {
+            "leo": 0.4478001992122511,
+            "min": 0.3382036543818172,
+            "jun": 0.2998331243703865
+          },
+          "soles": {
+            "nara": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "sora": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "jun": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 4017,
+              "surfaceSamples": 746624,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "min": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213319,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 3977,
+              "surfaceSamples": 719568,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 7254,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 4074,
+              "surfaceSamples": 835392,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "size": 4,
+          "ids": [
+            "leo",
+            "min",
+            "jun",
+            "sora"
+          ],
+          "spoke": [
+            "leo",
+            "min",
+            "jun",
+            "sora"
+          ],
+          "talkSamples": 424,
+          "speakingMovement": {
+            "leo": 0.4472131688444601,
+            "min": 0.3380420718729048,
+            "jun": 0.2985743088565725,
+            "sora": 0.48632989038768576
+          },
+          "soles": {
+            "nara": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "minSignedGap": null,
+              "plantedSamples": 0,
+              "surfaceSamples": 0,
+              "surfaces": []
+            },
+            "sora": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 5917,
+              "surfaceSamples": 1090144,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "jun": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 5883,
+              "surfaceSamples": 1030256,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "min": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213353,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 5870,
+              "surfaceSamples": 1022656,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 10786,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 5990,
+              "surfaceSamples": 1146992,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        },
+        {
+          "size": 5,
+          "ids": [
+            "leo",
+            "min",
+            "jun",
+            "sora",
+            "nara"
+          ],
+          "spoke": [
+            "leo",
+            "min",
+            "jun",
+            "sora",
+            "nara"
+          ],
+          "talkSamples": 530,
+          "speakingMovement": {
+            "leo": 0.4480972344588389,
+            "min": 0.3392016474023446,
+            "jun": 0.29753192384877175,
+            "sora": 0.4837184561730143,
+            "nara": 0.37093857858444385
+          },
+          "soles": {
+            "nara": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7566,
+              "surfaceSamples": 1379856,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "sora": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7469,
+              "surfaceSamples": 1303248,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "jun": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7427,
+              "surfaceSamples": 1248224,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "min": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213353,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7442,
+              "surfaceSamples": 1261600,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            },
+            "leo": {
+              "samples": 13728,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.0009999964237213388,
+              "minPlantedGap": 0.0009999954998493182,
+              "minSignedGap": 0.0009999954998493182,
+              "plantedSamples": 7562,
+              "surfaceSamples": 1385936,
+              "surfaces": [
+                "RoomFloor"
+              ]
+            }
+          }
+        }
+      ],
+      "elapsedMs": 75769.16616699999,
+      "status": "passed"
+    },
+    {
+      "id": "leo-document-both-directions",
+      "title": "Leo sends and receives actual documents through all ten stages and returns",
+      "metrics": [
+        {
+          "visitor": "leo",
+          "host": "nara",
+          "stages": [
+            "pickup",
+            "grasp",
+            "present",
+            "receive",
+            "accept",
+            "read",
+            "giveback",
+            "regrasp",
+            "return",
+            "release"
+          ],
+          "owners": [
+            "desk:nara",
+            "hand:nara",
+            "hand:leo"
+          ]
+        },
+        {
+          "visitor": "min",
+          "host": "leo",
+          "stages": [
+            "pickup",
+            "grasp",
+            "present",
+            "receive",
+            "accept",
+            "read",
+            "giveback",
+            "regrasp",
+            "return",
+            "release"
+          ],
+          "owners": [
+            "desk:leo",
+            "hand:leo",
+            "hand:min"
+          ]
+        }
+      ],
+      "elapsedMs": 12550.578375000041,
+      "status": "passed"
+    },
+    {
+      "id": "team-work-remove-cancel",
+      "title": "Work, participant removal and manual cancellation release all group phases and props",
+      "metrics": [
+        {
+          "phase": "arriving",
+          "kind": "work",
+          "returnSeconds": 19.633333333333475,
+          "status": "cancelled"
+        },
+        {
+          "phase": "arriving",
+          "kind": "remove",
+          "returnSeconds": 18.8000000000001,
+          "status": "cancelled"
+        },
+        {
+          "phase": "arriving",
+          "kind": "cancel",
+          "returnSeconds": 18.8000000000001,
+          "status": "cancelled"
+        },
+        {
+          "phase": "talk",
+          "kind": "work",
+          "returnSeconds": 114.43333333332684,
+          "status": "cancelled"
+        },
+        {
+          "phase": "talk",
+          "kind": "remove",
+          "returnSeconds": 112.19999999999364,
+          "status": "cancelled"
+        },
+        {
+          "phase": "talk",
+          "kind": "cancel",
+          "returnSeconds": 112.19999999999364,
+          "status": "cancelled"
+        },
+        {
+          "phase": "note",
+          "kind": "work",
+          "returnSeconds": 113.06666666666025,
+          "status": "cancelled"
+        },
+        {
+          "phase": "note",
+          "kind": "remove",
+          "returnSeconds": 112.23333333332697,
+          "status": "cancelled"
+        },
+        {
+          "phase": "note",
+          "kind": "cancel",
+          "returnSeconds": 112.23333333332697,
+          "status": "cancelled"
+        }
+      ],
+      "elapsedMs": 139798.98404200003,
+      "status": "passed"
+    },
+    {
+      "id": "leo-prop-work-boundaries",
+      "title": "Leo work interrupts every drink and coffee phase without losing owned props",
+      "metrics": [
+        {
+          "kind": "cup",
+          "phase": "reach",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "grasp",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "lift",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "sip",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "lower",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "place",
+          "owner": "desk"
+        },
+        {
+          "kind": "cup",
+          "phase": "release",
+          "owner": "desk"
+        },
+        {
+          "kind": "coffee",
+          "phase": "pickup",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "out",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "place",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "press",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "brew",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "retrieve",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "home",
+          "status": "cancelled"
+        },
+        {
+          "kind": "coffee",
+          "phase": "putback",
+          "status": "cancelled"
+        }
+      ],
+      "elapsedMs": 25072.152249999985,
+      "status": "passed"
+    },
+    {
+      "id": "invalid-membership-atomic",
+      "title": "Invalid group membership never partially reserves or changes props",
+      "metrics": [
+        {
+          "method": "startMeeting",
+          "ids": [
+            "leo",
+            "leo"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "leo",
+            "leo"
+          ]
+        },
+        {
+          "method": "startMeeting",
+          "ids": [
+            "leo",
+            "unknown"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "leo",
+            "unknown"
+          ]
+        },
+        {
+          "method": "startMeeting",
+          "ids": [
+            "leo"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "leo"
+          ]
+        },
+        {
+          "method": "startMeeting",
+          "ids": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo",
+            "unknown"
+          ]
+        },
+        {
+          "method": "startHuddle",
+          "ids": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo",
+            "unknown"
+          ]
+        }
+      ],
+      "elapsedMs": 3196.1809169999906,
+      "status": "passed"
+    }
+  ],
+  "passed": true
+}

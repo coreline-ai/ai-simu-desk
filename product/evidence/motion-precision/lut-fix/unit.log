@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: renderer resources captures the rendered uniform, not a material-side lookalike
+ok 1 - renderer resources captures the rendered uniform, not a material-side lookalike
+  ---
+  duration_ms: 0.767875
+  type: 'test'
+  ...
+# Subtest: renderer resources can capture after first compilation and disposes repeated shared materials once
+ok 2 - renderer resources can capture after first compilation and disposes repeated shared materials once
+  ---
+  duration_ms: 0.113834
+  type: 'test'
+  ...
+# Subtest: renderer resources ignores absent, non-texture and differently named uniforms
+ok 3 - renderer resources ignores absent, non-texture and differently named uniforms
+  ---
+  duration_ms: 0.074625
+  type: 'test'
+  ...
+# Subtest: renderer resources keeps the first actual LUT and never reacquires after disposal
+ok 4 - renderer resources keeps the first actual LUT and never reacquires after disposal
+  ---
+  duration_ms: 0.479167
+  type: 'test'
+  ...
+# Subtest: renderer resources permits empty scene disposal before any material compiles
+ok 5 - renderer resources permits empty scene disposal before any material compiles
+  ---
+  duration_ms: 0.112708
+  type: 'test'
+  ...
+# Subtest: renderer resources releases a context epoch, recaptures restored uniforms and finally disposes once
+ok 6 - renderer resources releases a context epoch, recaptures restored uniforms and finally disposes once
+  ---
+  duration_ms: 0.073083
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 58.986625

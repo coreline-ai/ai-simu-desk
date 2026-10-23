@@ -1,0 +1,185 @@
+{
+  "passed": true,
+  "at": "2026-10-23T05:01:50.547Z",
+  "origin": "http://127.0.0.1:4193",
+  "capabilities": {
+    "safari:platformVersion": "26.5.2",
+    "safari:automaticInspection": false,
+    "webkit:WebRTC": {
+      "DisableICECandidateFiltering": false,
+      "DisableInsecureMediaCapture": false
+    },
+    "webkit:alwaysAllowAutoplay": false,
+    "browserVersion": "26.5.2",
+    "strictFileInteractability": false,
+    "browserName": "Safari",
+    "safari:useSimulator": false,
+    "safari:automaticProfiling": false,
+    "setWindowRect": true,
+    "acceptInsecureCerts": false,
+    "safari:platformBuildVersion": "25F84",
+    "safari:experimentalWebSocketUrl": false,
+    "platformName": "macOS",
+    "safari:diagnose": false
+  },
+  "checks": [
+    "actual Safari: six rates and five-person exported GLB",
+    "range replay, actual contacts, pause and work priority",
+    "real Safari cup contact and render",
+    "five-person empty-hand arrival, cancellation and return",
+    "Jun actual rim/index contact in Safari"
+  ],
+  "cup": {
+    "cup": {
+      "recipe": null,
+      "owner": "hand",
+      "time": 0,
+      "events": 1,
+      "returning": false,
+      "duration": null,
+      "carry": {
+        "phase": "walking",
+        "stability": 0,
+        "z": 0.4,
+        "x": -0.22,
+        "height": 0.29
+      },
+      "cupCount": 1,
+      "done": 0,
+      "state": "carry",
+      "handError": 2.220446049250313e-16
+    },
+    "hand": {
+      "padError": 7.806255641895632e-18,
+      "surfaceVersion": 2,
+      "blend": 1,
+      "maxReach": 0.07206247289678618,
+      "contacts": [
+        {
+          "reachable": true,
+          "actual": [
+            -0.005000000000001739,
+            0.011999999999999778,
+            -0.03299999999999988
+          ],
+          "role": "grip",
+          "finger": "thumb",
+          "error": 1.734723475976807e-18,
+          "target": [
+            -0.005000000000001741,
+            0.011999999999999778,
+            -0.03299999999999988
+          ]
+        },
+        {
+          "reachable": true,
+          "actual": [
+            -0.00600000000000173,
+            -0.015000000000000221,
+            -0.045999999999999874
+          ],
+          "role": "grip",
+          "finger": "index",
+          "error": 3.878959614448864e-18,
+          "target": [
+            -0.006000000000001728,
+            -0.015000000000000218,
+            -0.045999999999999874
+          ]
+        },
+        {
+          "reachable": true,
+          "actual": [
+            0.005999999999998267,
+            -2.0816681711721685e-16,
+            -0.03599999999999988
+          ],
+          "role": "grip",
+          "finger": "middle",
+          "error": 3.576224061345498e-18,
+          "target": [
+            0.005999999999998266,
+            -2.1163626406917047e-16,
+            -0.03599999999999988
+          ]
+        },
+        {
+          "reachable": true,
+          "actual": [
+            -0.005000000000001755,
+            0.02399999999999977,
+            -0.04199999999999988
+          ],
+          "role": "support",
+          "finger": "ring",
+          "error": 7.806255641895632e-18,
+          "target": [
+            -0.005000000000001754,
+            0.023999999999999775,
+            -0.04199999999999987
+          ]
+        },
+        {
+          "reachable": true,
+          "actual": [
+            0.004999999999998245,
+            0.024999999999999786,
+            -0.04299999999999988
+          ],
+          "role": "support",
+          "finger": "little",
+          "error": 7.757919228897728e-18,
+          "target": [
+            0.004999999999998245,
+            0.024999999999999783,
+            -0.04299999999999987
+          ]
+        }
+      ],
+      "fingers": 5,
+      "contactScope": "five-finger-target-points"
+    }
+  },
+  "contact": {
+    "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change",
+    "wrist": [
+      0.13037149899356704,
+      1.1127119937248102,
+      -3.2840802910321556
+    ],
+    "handError": 5.551115123125783e-17,
+    "contact": [
+      0.10193571222151854,
+      1.1844530137374936,
+      -3.321635257990066
+    ],
+    "pad": [
+      0.10222151904179971,
+      1.1842142299306526,
+      -3.313643931644892
+    ],
+    "time": 0.09999999999999999,
+    "stage": "adjust",
+    "done": 0,
+    "interruptions": 0,
+    "surface": [
+      0.09599999999999999,
+      0.022539919066586075,
+      0.16786152074083605
+    ],
+    "padError": 5.034405433428661e-16,
+    "reason": null,
+    "available": true,
+    "u": 0.15384615384615383,
+    "next": 45,
+    "indexBlend": 1,
+    "actualWrist": [
+      0.1303714989935669,
+      1.1127119937248102,
+      -3.2840802910321556
+    ]
+  },
+  "limits": [
+    "actual desktop Safari, not iPhone or simulator"
+  ]
+}

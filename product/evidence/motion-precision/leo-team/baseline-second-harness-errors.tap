@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: precision: Leo completes all three document recipes, fixed limbs and one page owner
+ok 1 - precision: Leo completes all three document recipes, fixed limbs and one page owner
+  ---
+  duration_ms: 8551.465833
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes stand, walk, settle, sit, rest and independent window return
+ok 2 - precision: Leo completes stand, walk, settle, sit, rest and independent window return
+  ---
+  duration_ms: 27255.074333
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes all three personal rest styles, with actual arm movement and return
+ok 3 - precision: Leo completes all three personal rest styles, with actual arm movement and return
+  ---
+  duration_ms: 7526.034333
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes full drink and purposeful coffee with outbound/return coverage
+ok 4 - precision: Leo completes full drink and purposeful coffee with outbound/return coverage
+  ---
+  duration_ms: 10762.548084
+  type: 'test'
+  ...
+# Subtest: precision: 2–5 seated participants include Leo, speak and write completely with all cups home
+ok 5 - precision: 2–5 seated participants include Leo, speak and write completely with all cups home
+  ---
+  duration_ms: 104302.472708
+  type: 'test'
+  ...
+# Subtest: precision: 2–5 standing participants including Leo all arrive and answer before return
+ok 6 - precision: 2–5 standing participants including Leo all arrive and answer before return
+  ---
+  duration_ms: 68359.182
+  type: 'test'
+  ...
+# Subtest: precision: Leo sends and receives actual documents through all ten stages and returns
+ok 7 - precision: Leo sends and receives actual documents through all ten stages and returns
+  ---
+  duration_ms: 21299.457542
+  type: 'test'
+  ...
+# Subtest: precision: Work, participant removal and manual cancellation release all group phases and props
+not ok 8 - precision: Work, participant removal and manual cancellation release all group phases and props
+  ---
+  duration_ms: 6578.715792
+  type: 'test'
+  location: '/Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:5:33'
+  failureType: 'testCodeFailure'
+  error: 'false == true'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:24:1068)
+    runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:27:182)
+    TestContext.<anonymous> (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/product/tests/precision-leo-team.test.mjs:5:84)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: precision: Invalid group membership never partially reserves or changes props
+ok 9 - precision: Invalid group membership never partially reserves or changes props
+  ---
+  duration_ms: 2726.692209
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 8
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 257932.974625

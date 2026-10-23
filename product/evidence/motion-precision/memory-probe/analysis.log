@@ -1,0 +1,752 @@
+{
+  "version": 11,
+  "baseline": 0,
+  "types": [
+    {
+      "key": "synthetic",
+      "countBefore": 32,
+      "countAfter": 32,
+      "countDelta": 0,
+      "bytesBefore": 0,
+      "bytesAfter": 0,
+      "bytesDelta": 0
+    },
+    {
+      "key": "native",
+      "countBefore": 46992,
+      "countAfter": 58220,
+      "countDelta": 11228,
+      "bytesBefore": 22012985,
+      "bytesAfter": 23094727,
+      "bytesDelta": 1081742
+    },
+    {
+      "key": "string",
+      "countBefore": 157959,
+      "countAfter": 188065,
+      "countDelta": 30106,
+      "bytesBefore": 2375816,
+      "bytesAfter": 3846860,
+      "bytesDelta": 1471044
+    },
+    {
+      "key": "object shape",
+      "countBefore": 10727,
+      "countAfter": 11858,
+      "countDelta": 1131,
+      "bytesBefore": 598600,
+      "bytesAfter": 661328,
+      "bytesDelta": 62728
+    },
+    {
+      "key": "code",
+      "countBefore": 39552,
+      "countAfter": 52438,
+      "countDelta": 12886,
+      "bytesBefore": 4665788,
+      "bytesAfter": 7478056,
+      "bytesDelta": 2812268
+    },
+    {
+      "key": "array",
+      "countBefore": 45717,
+      "countAfter": 49894,
+      "countDelta": 4177,
+      "bytesBefore": 4122804,
+      "bytesAfter": 6879300,
+      "bytesDelta": 2756496
+    },
+    {
+      "key": "number",
+      "countBefore": 84207,
+      "countAfter": 111627,
+      "countDelta": 27420,
+      "bytesBefore": 567468,
+      "bytesAfter": 720408,
+      "bytesDelta": 152940
+    },
+    {
+      "key": "symbol",
+      "countBefore": 62,
+      "countAfter": 65,
+      "countDelta": 3,
+      "bytesBefore": 112,
+      "bytesAfter": 160,
+      "bytesDelta": 48
+    },
+    {
+      "key": "object",
+      "countBefore": 235739,
+      "countAfter": 252523,
+      "countDelta": 16784,
+      "bytesBefore": 6881292,
+      "bytesAfter": 7405880,
+      "bytesDelta": 524588
+    },
+    {
+      "key": "closure",
+      "countBefore": 9230,
+      "countAfter": 21940,
+      "countDelta": 12710,
+      "bytesBefore": 274832,
+      "bytesAfter": 678756,
+      "bytesDelta": 403924
+    },
+    {
+      "key": "concatenated string",
+      "countBefore": 7883,
+      "countAfter": 9160,
+      "countDelta": 1277,
+      "bytesBefore": 157660,
+      "bytesAfter": 183200,
+      "bytesDelta": 25540
+    },
+    {
+      "key": "regexp",
+      "countBefore": 5,
+      "countAfter": 5,
+      "countDelta": 0,
+      "bytesBefore": 120,
+      "bytesAfter": 120,
+      "bytesDelta": 0
+    }
+  ],
+  "top": [
+    {
+      "key": "array:(object elements)",
+      "countBefore": 44930,
+      "countAfter": 48446,
+      "countDelta": 3516,
+      "bytesBefore": 2524788,
+      "bytesAfter": 5212608,
+      "bytesDelta": 2687820
+    },
+    {
+      "key": "code:system / InstructionStream",
+      "countBefore": 1435,
+      "countAfter": 2397,
+      "countDelta": 962,
+      "bytesBefore": 2388448,
+      "bytesAfter": 4090784,
+      "bytesDelta": 1702336
+    },
+    {
+      "key": "code:system / TrustedByteArray",
+      "countBefore": 3159,
+      "countAfter": 5311,
+      "countDelta": 2152,
+      "bytesBefore": 530820,
+      "bytesAfter": 1044448,
+      "bytesDelta": 513628
+    },
+    {
+      "key": "string:\n        (() => {\n        \n        const module = {};\n        \nvar __commonJS = obj => {\n…",
+      "countBefore": 0,
+      "countAfter": 1,
+      "countDelta": 1,
+      "bytesBefore": 0,
+      "bytesAfter": 317092,
+      "bytesDelta": 317092
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 6,
+      "countAfter": 186,
+      "countDelta": 180,
+      "bytesBefore": 9720,
+      "bytesAfter": 301320,
+      "bytesDelta": 291600
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 4,
+      "countAfter": 124,
+      "countDelta": 120,
+      "bytesBefore": 6416,
+      "bytesAfter": 198896,
+      "bytesDelta": 192480
+    },
+    {
+      "key": "native:blink::NetworkResourcesData::ResourceData",
+      "countBefore": 26,
+      "countAfter": 686,
+      "countDelta": 660,
+      "bytesBefore": 7488,
+      "bytesAfter": 197568,
+      "bytesDelta": 190080
+    },
+    {
+      "key": "native:system / WeakArrayList",
+      "countBefore": 1193,
+      "countAfter": 2089,
+      "countDelta": 896,
+      "bytesBefore": 88920,
+      "bytesAfter": 267080,
+      "bytesDelta": 178160
+    }
+  ]
+}
+{
+  "version": 11,
+  "baseline": 6,
+  "types": [
+    {
+      "key": "synthetic",
+      "countBefore": 32,
+      "countAfter": 32,
+      "countDelta": 0,
+      "bytesBefore": 0,
+      "bytesAfter": 0,
+      "bytesDelta": 0
+    },
+    {
+      "key": "native",
+      "countBefore": 52149,
+      "countAfter": 58220,
+      "countDelta": 6071,
+      "bytesBefore": 22413894,
+      "bytesAfter": 23094727,
+      "bytesDelta": 680833
+    },
+    {
+      "key": "string",
+      "countBefore": 174059,
+      "countAfter": 188065,
+      "countDelta": 14006,
+      "bytesBefore": 2926128,
+      "bytesAfter": 3846860,
+      "bytesDelta": 920732
+    },
+    {
+      "key": "object shape",
+      "countBefore": 11680,
+      "countAfter": 11858,
+      "countDelta": 178,
+      "bytesBefore": 652616,
+      "bytesAfter": 661328,
+      "bytesDelta": 8712
+    },
+    {
+      "key": "code",
+      "countBefore": 49072,
+      "countAfter": 52438,
+      "countDelta": 3366,
+      "bytesBefore": 6394324,
+      "bytesAfter": 7478056,
+      "bytesDelta": 1083732
+    },
+    {
+      "key": "array",
+      "countBefore": 46750,
+      "countAfter": 49894,
+      "countDelta": 3144,
+      "bytesBefore": 4514360,
+      "bytesAfter": 6879300,
+      "bytesDelta": 2364940
+    },
+    {
+      "key": "number",
+      "countBefore": 99527,
+      "countAfter": 111627,
+      "countDelta": 12100,
+      "bytesBefore": 601164,
+      "bytesAfter": 720408,
+      "bytesDelta": 119244
+    },
+    {
+      "key": "symbol",
+      "countBefore": 65,
+      "countAfter": 65,
+      "countDelta": 0,
+      "bytesBefore": 160,
+      "bytesAfter": 160,
+      "bytesDelta": 0
+    },
+    {
+      "key": "object",
+      "countBefore": 239686,
+      "countAfter": 252523,
+      "countDelta": 12837,
+      "bytesBefore": 6995896,
+      "bytesAfter": 7405880,
+      "bytesDelta": 409984
+    },
+    {
+      "key": "closure",
+      "countBefore": 12532,
+      "countAfter": 21940,
+      "countDelta": 9408,
+      "bytesBefore": 377892,
+      "bytesAfter": 678756,
+      "bytesDelta": 300864
+    },
+    {
+      "key": "concatenated string",
+      "countBefore": 8200,
+      "countAfter": 9160,
+      "countDelta": 960,
+      "bytesBefore": 164000,
+      "bytesAfter": 183200,
+      "bytesDelta": 19200
+    },
+    {
+      "key": "regexp",
+      "countBefore": 5,
+      "countAfter": 5,
+      "countDelta": 0,
+      "bytesBefore": 120,
+      "bytesAfter": 120,
+      "bytesDelta": 0
+    }
+  ],
+  "top": [
+    {
+      "key": "array:(object elements)",
+      "countBefore": 45798,
+      "countAfter": 48446,
+      "countDelta": 2648,
+      "bytesBefore": 2895292,
+      "bytesAfter": 5212608,
+      "bytesDelta": 2317316
+    },
+    {
+      "key": "code:system / InstructionStream",
+      "countBefore": 1995,
+      "countAfter": 2397,
+      "countDelta": 402,
+      "bytesBefore": 3382912,
+      "bytesAfter": 4090784,
+      "bytesDelta": 707872
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 42,
+      "countAfter": 186,
+      "countDelta": 144,
+      "bytesBefore": 68040,
+      "bytesAfter": 301320,
+      "bytesDelta": 233280
+    },
+    {
+      "key": "code:system / TrustedByteArray",
+      "countBefore": 4439,
+      "countAfter": 5311,
+      "countDelta": 872,
+      "bytesBefore": 834272,
+      "bytesAfter": 1044448,
+      "bytesDelta": 210176
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 28,
+      "countAfter": 124,
+      "countDelta": 96,
+      "bytesBefore": 44912,
+      "bytesAfter": 198896,
+      "bytesDelta": 153984
+    },
+    {
+      "key": "native:blink::NetworkResourcesData::ResourceData",
+      "countBefore": 158,
+      "countAfter": 686,
+      "countDelta": 528,
+      "bytesBefore": 45504,
+      "bytesAfter": 197568,
+      "bytesDelta": 152064
+    },
+    {
+      "key": "number:heap number",
+      "countBefore": 50107,
+      "countAfter": 60044,
+      "countDelta": 9937,
+      "bytesBefore": 601164,
+      "bytesAfter": 720408,
+      "bytesDelta": 119244
+    },
+    {
+      "key": "string:#define varying in\nlayout(location = 0) out highp vec4 pc_fragColor;\n#define gl_FragColor…",
+      "countBefore": 84,
+      "countAfter": 324,
+      "countDelta": 240,
+      "bytesBefore": 39984,
+      "bytesAfter": 154224,
+      "bytesDelta": 114240
+    }
+  ]
+}
+{
+  "version": 12,
+  "baseline": 0,
+  "types": [
+    {
+      "key": "synthetic",
+      "countBefore": 32,
+      "countAfter": 32,
+      "countDelta": 0,
+      "bytesBefore": 0,
+      "bytesAfter": 0,
+      "bytesDelta": 0
+    },
+    {
+      "key": "native",
+      "countBefore": 46867,
+      "countAfter": 58370,
+      "countDelta": 11503,
+      "bytesBefore": 21982191,
+      "bytesAfter": 23107709,
+      "bytesDelta": 1125518
+    },
+    {
+      "key": "string",
+      "countBefore": 167240,
+      "countAfter": 197505,
+      "countDelta": 30265,
+      "bytesBefore": 2386936,
+      "bytesAfter": 3860560,
+      "bytesDelta": 1473624
+    },
+    {
+      "key": "object shape",
+      "countBefore": 10833,
+      "countAfter": 11993,
+      "countDelta": 1160,
+      "bytesBefore": 603680,
+      "bytesAfter": 667540,
+      "bytesDelta": 63860
+    },
+    {
+      "key": "code",
+      "countBefore": 40131,
+      "countAfter": 53692,
+      "countDelta": 13561,
+      "bytesBefore": 4740392,
+      "bytesAfter": 7710416,
+      "bytesDelta": 2970024
+    },
+    {
+      "key": "array",
+      "countBefore": 46585,
+      "countAfter": 50771,
+      "countDelta": 4186,
+      "bytesBefore": 4201404,
+      "bytesAfter": 6958088,
+      "bytesDelta": 2756684
+    },
+    {
+      "key": "number",
+      "countBefore": 92825,
+      "countAfter": 120308,
+      "countDelta": 27483,
+      "bytesBefore": 670164,
+      "bytesAfter": 823716,
+      "bytesDelta": 153552
+    },
+    {
+      "key": "symbol",
+      "countBefore": 62,
+      "countAfter": 65,
+      "countDelta": 3,
+      "bytesBefore": 112,
+      "bytesAfter": 160,
+      "bytesDelta": 48
+    },
+    {
+      "key": "object",
+      "countBefore": 239749,
+      "countAfter": 256690,
+      "countDelta": 16941,
+      "bytesBefore": 6972580,
+      "bytesAfter": 7499660,
+      "bytesDelta": 527080
+    },
+    {
+      "key": "closure",
+      "countBefore": 9239,
+      "countAfter": 21949,
+      "countDelta": 12710,
+      "bytesBefore": 275076,
+      "bytesAfter": 679000,
+      "bytesDelta": 403924
+    },
+    {
+      "key": "concatenated string",
+      "countBefore": 7883,
+      "countAfter": 9160,
+      "countDelta": 1277,
+      "bytesBefore": 157660,
+      "bytesAfter": 183200,
+      "bytesDelta": 25540
+    },
+    {
+      "key": "regexp",
+      "countBefore": 5,
+      "countAfter": 5,
+      "countDelta": 0,
+      "bytesBefore": 120,
+      "bytesAfter": 120,
+      "bytesDelta": 0
+    }
+  ],
+  "top": [
+    {
+      "key": "array:(object elements)",
+      "countBefore": 45788,
+      "countAfter": 49313,
+      "countDelta": 3525,
+      "bytesBefore": 2588000,
+      "bytesAfter": 5276008,
+      "bytesDelta": 2688008
+    },
+    {
+      "key": "code:system / InstructionStream",
+      "countBefore": 1465,
+      "countAfter": 2473,
+      "countDelta": 1008,
+      "bytesBefore": 2428128,
+      "bytesAfter": 4230720,
+      "bytesDelta": 1802592
+    },
+    {
+      "key": "code:system / TrustedByteArray",
+      "countBefore": 3226,
+      "countAfter": 5492,
+      "countDelta": 2266,
+      "bytesBefore": 532588,
+      "bytesAfter": 1074488,
+      "bytesDelta": 541900
+    },
+    {
+      "key": "string:\n        (() => {\n        \n        const module = {};\n        \nvar __commonJS = obj => {\n…",
+      "countBefore": 0,
+      "countAfter": 1,
+      "countDelta": 1,
+      "bytesBefore": 0,
+      "bytesAfter": 317092,
+      "bytesDelta": 317092
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 6,
+      "countAfter": 186,
+      "countDelta": 180,
+      "bytesBefore": 9720,
+      "bytesAfter": 301320,
+      "bytesDelta": 291600
+    },
+    {
+      "key": "native:system / WeakArrayList",
+      "countBefore": 1187,
+      "countAfter": 2293,
+      "countDelta": 1106,
+      "bytesBefore": 91516,
+      "bytesAfter": 303008,
+      "bytesDelta": 211492
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 4,
+      "countAfter": 124,
+      "countDelta": 120,
+      "bytesBefore": 6416,
+      "bytesAfter": 198896,
+      "bytesDelta": 192480
+    },
+    {
+      "key": "native:blink::NetworkResourcesData::ResourceData",
+      "countBefore": 25,
+      "countAfter": 685,
+      "countDelta": 660,
+      "bytesBefore": 7200,
+      "bytesAfter": 197280,
+      "bytesDelta": 190080
+    }
+  ]
+}
+{
+  "version": 12,
+  "baseline": 6,
+  "types": [
+    {
+      "key": "synthetic",
+      "countBefore": 32,
+      "countAfter": 32,
+      "countDelta": 0,
+      "bytesBefore": 0,
+      "bytesAfter": 0,
+      "bytesDelta": 0
+    },
+    {
+      "key": "native",
+      "countBefore": 52105,
+      "countAfter": 58370,
+      "countDelta": 6265,
+      "bytesBefore": 22400109,
+      "bytesAfter": 23107709,
+      "bytesDelta": 707600
+    },
+    {
+      "key": "string",
+      "countBefore": 183763,
+      "countAfter": 197505,
+      "countDelta": 13742,
+      "bytesBefore": 2945688,
+      "bytesAfter": 3860560,
+      "bytesDelta": 914872
+    },
+    {
+      "key": "object shape",
+      "countBefore": 11799,
+      "countAfter": 11993,
+      "countDelta": 194,
+      "bytesBefore": 658384,
+      "bytesAfter": 667540,
+      "bytesDelta": 9156
+    },
+    {
+      "key": "code",
+      "countBefore": 49944,
+      "countAfter": 53692,
+      "countDelta": 3748,
+      "bytesBefore": 6533828,
+      "bytesAfter": 7710416,
+      "bytesDelta": 1176588
+    },
+    {
+      "key": "array",
+      "countBefore": 47621,
+      "countAfter": 50771,
+      "countDelta": 3150,
+      "bytesBefore": 4593008,
+      "bytesAfter": 6958088,
+      "bytesDelta": 2365080
+    },
+    {
+      "key": "number",
+      "countBefore": 108149,
+      "countAfter": 120308,
+      "countDelta": 12159,
+      "bytesBefore": 703920,
+      "bytesAfter": 823716,
+      "bytesDelta": 119796
+    },
+    {
+      "key": "symbol",
+      "countBefore": 65,
+      "countAfter": 65,
+      "countDelta": 0,
+      "bytesBefore": 160,
+      "bytesAfter": 160,
+      "bytesDelta": 0
+    },
+    {
+      "key": "object",
+      "countBefore": 243839,
+      "countAfter": 256690,
+      "countDelta": 12851,
+      "bytesBefore": 7089376,
+      "bytesAfter": 7499660,
+      "bytesDelta": 410284
+    },
+    {
+      "key": "closure",
+      "countBefore": 12541,
+      "countAfter": 21949,
+      "countDelta": 9408,
+      "bytesBefore": 378136,
+      "bytesAfter": 679000,
+      "bytesDelta": 300864
+    },
+    {
+      "key": "concatenated string",
+      "countBefore": 8200,
+      "countAfter": 9160,
+      "countDelta": 960,
+      "bytesBefore": 164000,
+      "bytesAfter": 183200,
+      "bytesDelta": 19200
+    },
+    {
+      "key": "regexp",
+      "countBefore": 5,
+      "countAfter": 5,
+      "countDelta": 0,
+      "bytesBefore": 120,
+      "bytesAfter": 120,
+      "bytesDelta": 0
+    }
+  ],
+  "top": [
+    {
+      "key": "array:(object elements)",
+      "countBefore": 46659,
+      "countAfter": 49313,
+      "countDelta": 2654,
+      "bytesBefore": 2958552,
+      "bytesAfter": 5276008,
+      "bytesDelta": 2317456
+    },
+    {
+      "key": "code:system / InstructionStream",
+      "countBefore": 2042,
+      "countAfter": 2473,
+      "countDelta": 431,
+      "bytesBefore": 3465408,
+      "bytesAfter": 4230720,
+      "bytesDelta": 765312
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 42,
+      "countAfter": 186,
+      "countDelta": 144,
+      "bytesBefore": 68040,
+      "bytesAfter": 301320,
+      "bytesDelta": 233280
+    },
+    {
+      "key": "code:system / TrustedByteArray",
+      "countBefore": 4549,
+      "countAfter": 5492,
+      "countDelta": 943,
+      "bytesBefore": 846120,
+      "bytesAfter": 1074488,
+      "bytesDelta": 228368
+    },
+    {
+      "key": "string:precision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp…",
+      "countBefore": 28,
+      "countAfter": 124,
+      "countDelta": 96,
+      "bytesBefore": 44912,
+      "bytesAfter": 198896,
+      "bytesDelta": 153984
+    },
+    {
+      "key": "native:blink::NetworkResourcesData::ResourceData",
+      "countBefore": 157,
+      "countAfter": 685,
+      "countDelta": 528,
+      "bytesBefore": 45216,
+      "bytesAfter": 197280,
+      "bytesDelta": 152064
+    },
+    {
+      "key": "number:heap number",
+      "countBefore": 58670,
+      "countAfter": 68653,
+      "countDelta": 9983,
+      "bytesBefore": 703920,
+      "bytesAfter": 823716,
+      "bytesDelta": 119796
+    },
+    {
+      "key": "string:#define varying in\nlayout(location = 0) out highp vec4 pc_fragColor;\n#define gl_FragColor…",
+      "countBefore": 84,
+      "countAfter": 324,
+      "countDelta": 240,
+      "bytesBefore": 39984,
+      "bytesAfter": 154224,
+      "bytesDelta": 114240
+    }
+  ]
+}

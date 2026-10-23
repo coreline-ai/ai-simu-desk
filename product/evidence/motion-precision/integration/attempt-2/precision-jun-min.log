@@ -1,0 +1,55 @@
+jun-min-routes-posture failed: actual ground meshes
+jun-min-listen-table passed
+jun-min-role-variants passed
+min-actual-writing-surface passed
+jun-min-cups-coffee passed
+jun-min-document-transfer passed
+jun-glasses-actual-geometry passed
+jun-glasses-all-stage-priority passed
+{
+  "passed": false,
+  "sourceUnchanged": true,
+  "cases": [
+    {
+      "name": "jun-min-routes-posture",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: actual ground meshes",
+      "elapsedMs": 4578
+    },
+    {
+      "name": "jun-min-listen-table",
+      "status": "passed",
+      "elapsedMs": 19084
+    },
+    {
+      "name": "jun-min-role-variants",
+      "status": "passed",
+      "elapsedMs": 12951
+    },
+    {
+      "name": "min-actual-writing-surface",
+      "status": "passed",
+      "elapsedMs": 3264
+    },
+    {
+      "name": "jun-min-cups-coffee",
+      "status": "passed",
+      "elapsedMs": 55227
+    },
+    {
+      "name": "jun-min-document-transfer",
+      "status": "passed",
+      "elapsedMs": 15469
+    },
+    {
+      "name": "jun-glasses-actual-geometry",
+      "status": "passed",
+      "elapsedMs": 3262
+    },
+    {
+      "name": "jun-glasses-all-stage-priority",
+      "status": "passed",
+      "elapsedMs": 18145
+    }
+  ]
+}

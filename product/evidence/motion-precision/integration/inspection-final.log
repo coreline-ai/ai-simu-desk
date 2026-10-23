@@ -1,0 +1,1 @@
+{"passed":true,"checks":["six rates accepted only on inspection page","fixed-step range repeats, pause freezes and actual work preempts","OS reduced motion cancels repetition and freezes","markers survive comparison outside schema, disable cleanly"],"errors":[]}

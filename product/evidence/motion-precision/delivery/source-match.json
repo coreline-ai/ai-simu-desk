@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "at": "2026-10-23T08:43:25.203Z",
+  "release": "1792744828499-71dbd665-0a71-484e-ae01-0930d9c387a5",
+  "sourceFiles": 391,
+  "sourceFingerprint": "3b6bee6da257b3ee94d9019430007503c226161d93e84649c05b3cea176cbaaa",
+  "personalBundle": "5080c2ac07b03d333d943f6a3759a18ba5c5905594f0a5920f16f50f809b5791",
+  "glb": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e",
+  "scope": "complete managed build source fingerprint matches working sources; private DB/env excluded"
+}

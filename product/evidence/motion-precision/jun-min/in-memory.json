@@ -1,0 +1,626 @@
+{
+  "startedAt": "2026-10-23T06:55:07.381Z",
+  "finishedAt": "2026-10-23T06:59:39.283Z",
+  "scope": "in-memory v12 Jun/Min; no DB/server/browser",
+  "sourceHashes": {
+    "pilot-3d/personal-office/motion.mjs": "e7b00ace43163b682b8dd4264bb9d6a162f86a465db23bb64bc8397c35d5c252",
+    "pilot-3d/personal-office/glasses.mjs": "5b138cf284dcf4288ea8a26c94f329f83f10c5889a2b0a3256a7dc3e621f7175",
+    "pilot-3d/personal-office/recipes.mjs": "782419da03326a075c0c7f954b62d4819427056ea9ea0ca0da5d7b9f60b37a99",
+    "pilot-3d/personal-office/sole-contact.mjs": "d206b0d468398b1fa511fff324463baf234852a2bd38d4215045a243e6a26de6",
+    "pilot-3d/personal-office/terrain-contact.mjs": "0035091a7e623d63981d89b3edcd8ed054970951ea6d03f5c32aae2d938fe998",
+    "pilot-3d/personal-office/carry.mjs": "11f7dbf615516c231db920432f80b3175d3be18f98adec7db5ea82fb320e9479",
+    "pilot-3d/personal-office/daily.mjs": "dc09149475dfa3dd1063b9ebb73d101d4418f50df4e5e7514c85ea20aed24b66",
+    "pilot-3d/activities/grounded-route.mjs": "c7568caf607644b34b71e5bd258204b72017712e75ca782d94d1b329128718d2",
+    "pilot-3d/activities/team-runtime.mjs": "11c732d1751cd7e00341487c9dea4167b2ea16bd72457dbc6acea251d885b638",
+    "pilot-3d/activities/interactions.mjs": "c1e2d50407140772e0369f04f9ae98bb2f880fa9e40959dd2ed75815f0bfc25e",
+    "pilot-3d/activities/hand-grips.mjs": "dacad48c5efd8a266129f2e60c2dbe3fddf383608e05c0aa209299999db57c46",
+    "pilot-3d/activities/desk-actions.mjs": "0782cf2ee205f9984086c211a64018db1219189c6b6c5d84f5d32de1bfdde03b",
+    "pilot-3d/living-office/human-motion.mjs": "808939f0ca9e083b3ea0a4125777496031f2bc929f4d401d19048f924aa4d900",
+    "pilot-3d/living-office/cup-support.mjs": "663c559df66a30eeb3a3d2267403862d3919bd5a57ff84695301fc8e9758b54f",
+    "pilot-3d/ensemble-office/coffee.mjs": "dc99b2ad18ec6f7766df1c93994391c00289953f4c04e8da9a01015b5b1b0218",
+    "pilot-3d/activities/prop-transfer.mjs": "483f554bc88167f35f9d8f61be993bcf4599dec042f7aa1744ce2f1a20be7683"
+  },
+  "sourceUnchanged": true,
+  "passed": true,
+  "cases": [
+    {
+      "name": "jun-min-routes-posture",
+      "status": "passed",
+      "result": {
+        "jun": {
+          "stages": [
+            "stand",
+            "out",
+            "align",
+            "back",
+            "sit",
+            "rest",
+            "rise",
+            "forward",
+            "home",
+            "deskTurn",
+            "deskSit",
+            "idle"
+          ],
+          "actions": [
+            "stand_up",
+            "turn",
+            "walk",
+            "standing",
+            "sofa_sit",
+            "sofa_rest",
+            "sofa_rise",
+            "sit_down",
+            "wrist_relax",
+            "window_rest"
+          ],
+          "maxPelvisStep": 0.03370116444656348,
+          "maxTorsoTurn": 0.1806257393688382,
+          "maxFootTargetError": 1.9860273225978185e-15,
+          "minSoleY": 0.000999999076128008,
+          "plantedSamples": 5753,
+          "maxPlantedGroundGap": 0.0010000002235183124,
+          "minPlantedGroundGap": 0.00099999549984843,
+          "groundMeshes": [
+            "RoomFloor",
+            "WovenRug",
+            "MeetingWovenRug"
+          ]
+        },
+        "min": {
+          "stages": [
+            "stand",
+            "out",
+            "align",
+            "back",
+            "sit",
+            "rest",
+            "rise",
+            "forward",
+            "home",
+            "deskTurn",
+            "deskSit",
+            "idle"
+          ],
+          "actions": [
+            "stand_up",
+            "turn",
+            "walk",
+            "standing",
+            "sofa_sit",
+            "sofa_rest",
+            "sofa_rise",
+            "sit_down",
+            "stretch",
+            "window_rest"
+          ],
+          "maxPelvisStep": 0.032897935048946225,
+          "maxTorsoTurn": 0.18062573943923305,
+          "maxFootTargetError": 1.831026719408895e-15,
+          "minSoleY": 0.000999999076128008,
+          "plantedSamples": 5274,
+          "maxPlantedGroundGap": 0.0010000002235174416,
+          "minPlantedGroundGap": 0.00099999549984843,
+          "groundMeshes": [
+            "RoomFloor",
+            "WovenRug",
+            "MeetingWovenRug"
+          ]
+        }
+      },
+      "elapsedMs": 94527
+    },
+    {
+      "name": "jun-min-listen-table",
+      "status": "passed",
+      "result": {
+        "jun": {
+          "listeningFrames": 164,
+          "quietFrames": 130,
+          "nodPeak": 0.02481009691265261,
+          "palmSamples": 707,
+          "minPalmGap": 0.0014999994635578329,
+          "maxPalmGap": 0.0015379051759830675
+        },
+        "min": {
+          "listeningFrames": 159,
+          "quietFrames": 102,
+          "nodPeak": 0.045,
+          "palmSamples": 660,
+          "minPalmGap": 0.0014999994635576108,
+          "maxPalmGap": 0.0015808807629507093
+        }
+      },
+      "elapsedMs": 27575
+    },
+    {
+      "name": "jun-min-role-variants",
+      "status": "passed",
+      "result": {
+        "jun": [
+          {
+            "variant": 0,
+            "phases": [
+              "act",
+              "pause",
+              "check",
+              "observe"
+            ],
+            "samples": 132,
+            "maxTipError": 0,
+            "maxGripError": 0,
+            "holdSamples": 60,
+            "maxHeldStep": 7.28550816809042e-16,
+            "minTipSurfaceDistance": null,
+            "maxTipSurfaceDistance": 0
+          },
+          {
+            "variant": 1,
+            "phases": [
+              "act",
+              "pause",
+              "check",
+              "observe"
+            ],
+            "samples": 132,
+            "maxTipError": 0,
+            "maxGripError": 0,
+            "holdSamples": 60,
+            "maxHeldStep": 8.08254562088053e-16,
+            "minTipSurfaceDistance": null,
+            "maxTipSurfaceDistance": 0
+          },
+          {
+            "variant": 2,
+            "phases": [
+              "act",
+              "pause",
+              "check",
+              "observe"
+            ],
+            "samples": 132,
+            "maxTipError": 0,
+            "maxGripError": 0,
+            "holdSamples": 62,
+            "maxHeldStep": 1.047382306668854e-15,
+            "minTipSurfaceDistance": null,
+            "maxTipSurfaceDistance": 0
+          }
+        ],
+        "min": [
+          {
+            "variant": 0,
+            "phases": [
+              "act",
+              "pause",
+              "check",
+              "observe"
+            ],
+            "samples": 132,
+            "maxTipError": 1.6050308076832566e-15,
+            "maxGripError": 1.0754176390211934e-17,
+            "holdSamples": 89,
+            "maxHeldStep": 1.336885555457667e-15,
+            "minTipSurfaceDistance": 0.00039999999999906777,
+            "maxTipSurfaceDistance": 0.004899999823048673
+          },
+          {
+            "variant": 1,
+            "phases": [
+              "act",
+              "pause",
+              "check",
+              "observe"
+            ],
+            "samples": 132,
+            "maxTipError": 1.5100665727558131e-15,
+            "maxGripError": 1.1638501691537624e-17,
+            "holdSamples": 87,
+            "maxHeldStep": 9.155133597044475e-16,
+            "minTipSurfaceDistance": 0.00039999999999895675,
+            "maxTipSurfaceDistance": 0.012053309250246502
+          },
+          {
+            "variant": 2,
+            "phases": [
+              "act",
+              "pause",
+              "check",
+              "observe"
+            ],
+            "samples": 132,
+            "maxTipError": 1.6011864169946884e-15,
+            "maxGripError": 1.0990929758576862e-17,
+            "holdSamples": 86,
+            "maxHeldStep": 1.047382306668854e-15,
+            "minTipSurfaceDistance": 0.00039999999999895675,
+            "maxTipSurfaceDistance": 0.013017212275377
+          }
+        ]
+      },
+      "elapsedMs": 21223
+    },
+    {
+      "name": "min-actual-writing-surface",
+      "status": "passed",
+      "result": {
+        "actor": "min",
+        "variant": 0,
+        "actFrames": 38,
+        "gapOver3mmFrames": 0,
+        "minActualGap": 0.00039999999999940083,
+        "maxActualGap": 0.00040000000000051106,
+        "example": null
+      },
+      "elapsedMs": 7066
+    },
+    {
+      "name": "jun-min-cups-coffee",
+      "status": "passed",
+      "result": {
+        "jun": {
+          "sipFrames": 81,
+          "supportFrames": 23,
+          "handleSamples": 840,
+          "maxHandlePadGap": 0.0016573955118668207,
+          "maxSupportPadGap": 1.4409695421113136e-17,
+          "carryFrames": 1098,
+          "carryPhases": [
+            "out",
+            "home"
+          ],
+          "minUprightY": 1,
+          "maxCarryStep": 0.02006775627177164
+        },
+        "min": {
+          "sipFrames": 100,
+          "supportFrames": 36,
+          "handleSamples": 1010,
+          "maxHandlePadGap": 0.0016573955118667888,
+          "maxSupportPadGap": 1.471961680016039e-17,
+          "carryFrames": 787,
+          "carryPhases": [
+            "out",
+            "home"
+          ],
+          "minUprightY": 1,
+          "maxCarryStep": 0.01921210511828005
+        }
+      },
+      "elapsedMs": 67481
+    },
+    {
+      "name": "jun-min-document-transfer",
+      "status": "passed",
+      "result": [
+        {
+          "visitor": "jun",
+          "host": "min",
+          "stages": [
+            "pickup",
+            "grasp",
+            "present",
+            "receive",
+            "accept",
+            "read",
+            "giveback",
+            "regrasp",
+            "return",
+            "release"
+          ],
+          "maxStep": 0.014337533907935893,
+          "maxHandError": 3.227294399221455e-15,
+          "maxPadError": 1.640565844652819e-17
+        },
+        {
+          "visitor": "min",
+          "host": "jun",
+          "stages": [
+            "pickup",
+            "grasp",
+            "present",
+            "receive",
+            "accept",
+            "read",
+            "giveback",
+            "regrasp",
+            "return",
+            "release"
+          ],
+          "maxStep": 0.014747648241275857,
+          "maxHandError": 3.227294399221455e-15,
+          "maxPadError": 1.8363077019567915e-17
+        }
+      ],
+      "elapsedMs": 18063
+    },
+    {
+      "name": "jun-glasses-actual-geometry",
+      "status": "passed",
+      "result": {
+        "stages": [
+          "prepare",
+          "approach",
+          "adjust",
+          "depart",
+          "recover",
+          "idle"
+        ],
+        "adjustSamples": 6,
+        "minRenderedIndexRimGap": 0.000010141089364010554,
+        "maxRenderedIndexRimGap": 0.00044399344789749075,
+        "minFacePadGap": 0.04419643421317688,
+        "minPalmFaceGap": 0.0889254278750362,
+        "maxWristStep": 0.024080611193824205,
+        "maxPadTargetError": 8.150173236313187e-16
+      },
+      "elapsedMs": 6822
+    },
+    {
+      "name": "jun-glasses-all-stage-priority",
+      "status": "passed",
+      "result": {
+        "interruptions": [
+          {
+            "stage": "prepare",
+            "action": "preparing",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "typing",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "reviewing",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "success",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "cup",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "coffee",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "window",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "meeting",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "visit",
+            "yielded": true
+          },
+          {
+            "stage": "prepare",
+            "action": "absent",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "preparing",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "typing",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "reviewing",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "success",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "cup",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "coffee",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "window",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "meeting",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "visit",
+            "yielded": true
+          },
+          {
+            "stage": "approach",
+            "action": "absent",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "preparing",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "typing",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "reviewing",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "success",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "cup",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "coffee",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "window",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "meeting",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "visit",
+            "yielded": true
+          },
+          {
+            "stage": "adjust",
+            "action": "absent",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "preparing",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "typing",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "reviewing",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "success",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "cup",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "coffee",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "window",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "meeting",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "visit",
+            "yielded": true
+          },
+          {
+            "stage": "depart",
+            "action": "absent",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "preparing",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "typing",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "reviewing",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "success",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "cup",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "coffee",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "window",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "meeting",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "visit",
+            "yielded": true
+          },
+          {
+            "stage": "recover",
+            "action": "absent",
+            "yielded": true
+          }
+        ],
+        "pause": true,
+        "manualRetraction": true
+      },
+      "elapsedMs": 29123
+    }
+  ],
+  "limits": [
+    "Triangle distances are unsigned sampled geometry distances, not a proof of collision-free skin polygons.",
+    "No browser image, texture decode, mobile thermal or visual naturalness claim.",
+    "The generated in-memory living model is used; exported GLB browser QA is a separate gate."
+  ]
+}

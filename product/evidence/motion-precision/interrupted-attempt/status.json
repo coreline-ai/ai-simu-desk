@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "state": "interrupted; incomplete; no final TAP or 7200-second completion",
+  "fullRegression": {
+    "observedPasses": 274,
+    "exitCode": 7
+  },
+  "soak": {
+    "observedSeconds": 4059,
+    "exitCode": 1
+  },
+  "cause": "not confirmed; transient filesystem/source HTTP500 observed separately",
+  "next": "shared PBR LUT lifecycle fix then restart final source gates"
+}

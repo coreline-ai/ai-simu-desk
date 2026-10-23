@@ -1,0 +1,116 @@
+{
+  "generatedAt": "2026-10-23T04:39:26.755Z",
+  "sourceBefore": {
+    "scripts/qa/precision-leo-team.mjs": "865ac8a96d6ed017397e804755ed639e9749169024723c614c0f68e736bfe23b",
+    "pilot-3d/sample/character-rig.mjs": "056be31e573160b047645c2ddc060b1bea33295f2b27ffbd95edc3e3e9f96689",
+    "pilot-3d/activities/team-runtime.mjs": "ddbb5eb502cb6ac0fd0729e5403ef98567545e801ac53519575c3c477591f2d6",
+    "pilot-3d/personal-office/motion.mjs": "cb763e1dbe0cfef957fc7453315ac13cdb929c498d1186f7b8f62db52f8cc3cc",
+    "pilot-3d/personal-office/daily.mjs": "050b26b0e850eb326643b983af8162fa7624703c464b305da381020268becf78",
+    "pilot-3d/living-office/human-motion.mjs": "808939f0ca9e083b3ea0a4125777496031f2bc929f4d401d19048f924aa4d900",
+    "pilot-3d/ensemble-office/group-meeting.mjs": "16795f58aa3d921705f8fe3f55fe58f324b286f0b992c6c7bce82e3e609319e1",
+    "pilot-3d/ensemble-office/group-notes.mjs": "e74c3023af622646e5e9d0187cf9e6c8815ddea1e025206279f6515bc974a92a"
+  },
+  "sourceAfter": {
+    "scripts/qa/precision-leo-team.mjs": "865ac8a96d6ed017397e804755ed639e9749169024723c614c0f68e736bfe23b",
+    "pilot-3d/sample/character-rig.mjs": "056be31e573160b047645c2ddc060b1bea33295f2b27ffbd95edc3e3e9f96689",
+    "pilot-3d/activities/team-runtime.mjs": "ddbb5eb502cb6ac0fd0729e5403ef98567545e801ac53519575c3c477591f2d6",
+    "pilot-3d/personal-office/motion.mjs": "cb763e1dbe0cfef957fc7453315ac13cdb929c498d1186f7b8f62db52f8cc3cc",
+    "pilot-3d/personal-office/daily.mjs": "050b26b0e850eb326643b983af8162fa7624703c464b305da381020268becf78",
+    "pilot-3d/living-office/human-motion.mjs": "808939f0ca9e083b3ea0a4125777496031f2bc929f4d401d19048f924aa4d900",
+    "pilot-3d/ensemble-office/group-meeting.mjs": "16795f58aa3d921705f8fe3f55fe58f324b286f0b992c6c7bce82e3e609319e1",
+    "pilot-3d/ensemble-office/group-notes.mjs": "e74c3023af622646e5e9d0187cf9e6c8815ddea1e025206279f6515bc974a92a"
+  },
+  "sourceStable": true,
+  "results": [
+    {
+      "id": "leo-sofa-window",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: leo actual planted sole to support-plane gap -0.003542957774784014 at out\n    at soleContact (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:67:5)\n    at monotonicMotion (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:53:3)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:161:11\n    at run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:15:5)\n    at Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:157:9)\n    at runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:446:47)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/[eval1]:1:738"
+    },
+    {
+      "id": "leo-three-rests",
+      "title": "Leo completes all three personal rest styles, with actual arm movement and return",
+      "metrics": [
+        {
+          "style": "back_open",
+          "restSamples": 321,
+          "armMovement": 0.5643168192478599,
+          "pelvisStep": 0.011078689472902595,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.000999999076128008,
+              "minPlantedGap": 0.000999999076128008,
+              "plantedSamples": 560
+            }
+          }
+        },
+        {
+          "style": "shoulder_drop",
+          "restSamples": 321,
+          "armMovement": 0.41961238001590295,
+          "pelvisStep": 0.006705914306950889,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": null,
+              "minPlantedGap": null,
+              "plantedSamples": 0
+            }
+          }
+        },
+        {
+          "style": "side_stretch",
+          "restSamples": 321,
+          "armMovement": 0.8549215313661862,
+          "pelvisStep": 0.011078689472902595,
+          "footTargetError": 0,
+          "armLengths": {
+            "elbowL": 0.235,
+            "handL": 0.2510497958573159,
+            "elbowR": 0.235,
+            "handR": 0.2510497958573159
+          },
+          "soles": {
+            "leo": {
+              "samples": 644,
+              "minHeight": 0.000999999076128008,
+              "maxPlantedGap": 0.000999999076128008,
+              "minPlantedGap": 0.000999999076128008,
+              "plantedSamples": 560
+            }
+          }
+        }
+      ],
+      "elapsedMs": 4803.360624999999,
+      "status": "passed"
+    },
+    {
+      "id": "seated-two-five",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: nara actual planted sole to support-plane gap -0.002444933706230685 at out\n    at soleContact (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:67:5)\n    at support (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:71:23)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:270:11\n    at run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:15:5)\n    at Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:269:25)\n    at runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:446:47)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/[eval1]:1:738"
+    },
+    {
+      "id": "standing-two-five",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: leo actual planted sole to support-plane gap -0.003542957774784014 at out\n    at soleContact (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:67:5)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:327:73\n    at run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:15:5)\n    at Object.run (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:320:9)\n    at runPrecisionCase (file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/scripts/qa/precision-leo-team.mjs:446:47)\n    at file:///Volumes/ExternalSSD/projects_10/ai-simu-desk/[eval1]:1:738"
+    }
+  ],
+  "passed": false
+}

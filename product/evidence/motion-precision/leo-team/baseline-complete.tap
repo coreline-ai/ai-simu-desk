@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: precision: Leo completes all three document recipes, fixed limbs and one page owner
+ok 1 - precision: Leo completes all three document recipes, fixed limbs and one page owner
+  ---
+  duration_ms: 6647.885791
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes stand, walk, settle, sit, rest and independent window return
+ok 2 - precision: Leo completes stand, walk, settle, sit, rest and independent window return
+  ---
+  duration_ms: 15057.789791
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes all three personal rest styles, with actual arm movement and return
+ok 3 - precision: Leo completes all three personal rest styles, with actual arm movement and return
+  ---
+  duration_ms: 4938.755959
+  type: 'test'
+  ...
+# Subtest: precision: Leo completes full drink and purposeful coffee with outbound/return coverage
+ok 4 - precision: Leo completes full drink and purposeful coffee with outbound/return coverage
+  ---
+  duration_ms: 6330.826042
+  type: 'test'
+  ...
+# Subtest: precision: 2–5 seated participants include Leo, speak and write completely with all cups home
+ok 5 - precision: 2–5 seated participants include Leo, speak and write completely with all cups home
+  ---
+  duration_ms: 83411.013584
+  type: 'test'
+  ...
+# Subtest: precision: 2–5 standing participants including Leo all arrive and answer before return
+ok 6 - precision: 2–5 standing participants including Leo all arrive and answer before return
+  ---
+  duration_ms: 82971.682333
+  type: 'test'
+  ...
+# Subtest: precision: Leo sends and receives actual documents through all ten stages and returns
+ok 7 - precision: Leo sends and receives actual documents through all ten stages and returns
+  ---
+  duration_ms: 23916.645916
+  type: 'test'
+  ...
+# Subtest: precision: Work, participant removal and manual cancellation release all group phases and props
+ok 8 - precision: Work, participant removal and manual cancellation release all group phases and props
+  ---
+  duration_ms: 185951.039459
+  type: 'test'
+  ...
+# Subtest: precision: Leo work interrupts every drink and coffee phase without losing owned props
+ok 9 - precision: Leo work interrupts every drink and coffee phase without losing owned props
+  ---
+  duration_ms: 29511.039958
+  type: 'test'
+  ...
+# Subtest: precision: Invalid group membership never partially reserves or changes props
+ok 10 - precision: Invalid group membership never partially reserves or changes props
+  ---
+  duration_ms: 3363.083834
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 442844.914834

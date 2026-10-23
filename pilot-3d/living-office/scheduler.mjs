@@ -9,7 +9,7 @@ import {HUMAN_PROFILES,HUMAN_RESTS} from './human-motion.mjs';
 export class LivingScheduler extends EnsembleScheduler{
   constructor(...args){super(...args);this.variants=new Map(this.ids.map((id,i)=>[id,i%3]));this.resume=new ActivityResume(this);this.group.minParticipants=3;this.huddles=new Huddles(this,args[5].model,args[5].metadata);this.reactions=new PeerReactions(this,args[5].model);this.scenario=new ScenarioDirector(this);this.cupSupport=new CupSupport(this);}
   startScenario(name='review'){return this.scenario.start(name);}
-  configure(trip,id){super.configure(trip,id);if(this.humanMotion?.enabled){const p=HUMAN_PROFILES[id];Object.assign(trip.options.routeMotion,{speed:p.speed,period:p.period});}return trip;}
+  configure(trip,id){super.configure(trip,id);if(this.humanMotion?.enabled){const p=HUMAN_PROFILES[id];Object.assign(trip.options.routeMotion,{speed:p.speed,period:p.period});}trip.options.routeMotion=this.personalMotion?.routeMotion(id,trip.options.routeMotion)??trip.options.routeMotion;if(this.personalMotion?.has(id))trip.options.groundContact=pose=>this.personalMotion.groundContact(id,pose);return trip;}
   idle(id){return !this.huddles?.current&&super.idle(id);}
   extraBusy(id){return !!this.huddles?.current?.records.has(id)||super.extraBusy(id);}
   getRecord(id){return this.huddles?.current?.records.get(id)??super.getRecord(id);}
@@ -22,11 +22,11 @@ export class LivingScheduler extends EnsembleScheduler{
   startSofa(id=this.vm.selectedAgent??'nara'){return super.startSofa(id)&&this.tagVariant(id);}
   startWindow(id=this.vm.selectedAgent??'nara'){return super.startWindow(id)&&this.tagVariant(id);}
   startRest(id=this.vm.selectedAgent??'nara'){if(!super.startRest(id))return false;if(this.humanMotion?.enabled){const r=this.records.get(id),styles=HUMAN_RESTS[id];r.style=styles[this.restCounts[id]%styles.length];r.seated=['wrist_release','shoulder_drop'].includes(r.style);if(r.seated)r.flowWindow=false;}return this.tagVariant(id);}
-  setViewModel(vm){this.resume?.capture(vm);super.setViewModel(vm);if(this.huddles?.current?.ids.some(id=>(vm.actors&&!vm.actors.some(a=>a.agentId===id))||this.rawIncoming(id).pose!=='idle'))this.huddles.end('업무 도착/참가자 종료 중단');}
-  setAuto(value){if(!value)this.resume?.clear();return super.setAuto(value);}
-  cancelAll(){this.scenario?.cancel();this.resume?.clear();this.reactions?.clear();this.huddles?.end('활동 중단');super.cancelAll();}
-  chooseAuto(){if(this.scenario?.current||this.huddles?.current||this.resume?.pending.size)return false;return super.chooseAuto();}
-  tick(dt){super.tick(dt);if(this.paused||this.disposed)return;this.huddles?.tick(Math.max(0,Math.min(.06,dt)));for(const r of this.records.values())if(r.kind==='window'&&r.resumeRemaining&&r.trip.stage==='rest'&&r.trip.elapsed>=r.resumeRemaining)r.trip.requestReturn('남은 창가 휴식 완료');this.resume?.tick();this.reactions?.tick();this.scenario?.watchdog();this.scenario?.tick();}
+  setViewModel(vm){this.personalMotion?.daily.setViewModel(vm);this.resume?.capture(vm);super.setViewModel(vm);if(this.huddles?.current?.ids.some(id=>(vm.actors&&!vm.actors.some(a=>a.agentId===id))||this.rawIncoming(id).pose!=='idle'))this.huddles.end('업무 도착/참가자 종료 중단');}
+  setAuto(value){if(!value){this.personalMotion?.daily.clear();this.resume?.clear();}return super.setAuto(value);}
+  cancelAll(){this.personalMotion?.daily.clear();this.scenario?.cancel();this.resume?.clear();this.reactions?.clear();this.huddles?.end('활동 중단');super.cancelAll();}
+  chooseAuto(){if(this.scenario?.current||this.huddles?.current||this.resume?.pending.size)return false;return this.personalMotion?.daily.choose()||super.chooseAuto();}
+  tick(dt){super.tick(dt);if(this.paused||this.disposed)return;this.huddles?.tick(Math.max(0,Math.min(.06,dt)));for(const r of this.records.values())if(r.kind==='window'&&r.resumeRemaining&&r.trip.stage==='rest'&&r.trip.elapsed>=r.resumeRemaining)r.trip.requestReturn('남은 창가 휴식 완료');this.resume?.tick();this.reactions?.tick();this.scenario?.watchdog();this.scenario?.tick();this.personalMotion?.daily.tick();}
   state(id){const state=this.huddles?.state(id)??super.state(id);return this.reactions?.state(id,state)??state;}
   present(id,state,dt){super.present(id,state,dt);this.huddles?.present(id,state,dt);}
   applyCustom(id,actor,state,dt){super.applyCustom(id,actor);this.huddles?.apply(id,actor);this.reactions?.apply(id,actor,this.state(id));this.cupSupport?.apply(id,actor,dt);}

@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {carryRecipe} from '../personal-office/carry.mjs';
 import {cupDuration,drinkRecipe} from '../personal-office/recipes.mjs';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {part} from '../sample/character-rig.mjs';
@@ -39,7 +40,7 @@ export class CupInteraction {
  // Drinking retains its separate mouth/support recipe. The wrist is level with
  // the handle rather than hovering above the rim; finger targets stay on the mesh.
  gripOffset(){return this.personal&&this.carryOnly&&this.handGrip?this.offset.clone().add(V(0,-.018,0)):this.offset;}
- holdPoint(){const pelvis=part(this.actor,'NaraPelvis');return this.actor.localToWorld(this.personal&&this.carryOnly?V(-.22,pelvis.position.y+.29,.40):V(-.14,pelvis.position.y+.26,.29));}
+ holdPoint(){const pelvis=part(this.actor,'NaraPelvis'),p=this.personal&&this.carryOnly?carryRecipe(this.id,this.motionState?.()):null;this.carryPose=p;return this.actor.localToWorld(p?V(p.x,pelvis.position.y+p.height,p.z):V(-.14,pelvis.position.y+.26,.29));}
  homePose(){this.homeParent.updateWorldMatrix(true,false);return {position:this.homeParent.localToWorld(this.home.clone()),quaternion:this.homeParent.getWorldQuaternion(new T.Quaternion())};}
  releaseToDesk(){this.homeParent.attach(this.mug);this.mug.position.copy(this.home);this.mug.quaternion.identity();this.owner='desk';this.events++;this.setGrip(false);}
  setGrip(value){for(const node of this.open)node.visible=!value;this.grip.visible=value;}
@@ -79,6 +80,6 @@ export class CupInteraction {
   this.reachError=solveArm(actor,handTarget,handQ);
   if(this.owner==='hand')setWorld(this.mug,cup.position,cup.quaternion);
  }
- diagnostics(){return {state:this.state,recipe:this.state==='sip'?this.drink():null,duration:this.duration()??null,time:+this.time.toFixed(3),owner:this.owner,events:this.events,done:this.done,returning:this.returning,handError:this.reachError,cupCount:1};}
+ diagnostics(){return {state:this.state,...(this.personal&&this.carryOnly?{carry:this.carryPose??null}:{}),recipe:this.state==='sip'?this.drink():null,duration:this.duration()??null,time:+this.time.toFixed(3),owner:this.owner,events:this.events,done:this.done,returning:this.returning,handError:this.reachError,cupCount:1};}
  dispose(){if(this.disposed)return;this.disposed=true;if(this.owner!=='desk')this.releaseToDesk();this.setGrip(false);this.state='idle';}
 }

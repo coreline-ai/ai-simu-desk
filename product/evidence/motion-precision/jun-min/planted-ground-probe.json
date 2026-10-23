@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-23T04:45:54.353Z",
+  "scope": "supplementary actual floor/rug triangle raycast; lower-bound all rendered sole vertices and planted final sole minimum",
+  "rows": [
+    {
+      "id": "jun",
+      "kind": "sofa",
+      "plantedSamples": 3448,
+      "maxLowestVertexGap": 0.02099999642372132,
+      "minLowestVertexGap": 0.00099999549984843,
+      "maxAnyVertexGap": 0.020999996423720427,
+      "violations": 6,
+      "peak": {
+        "time": 63.966666666665596,
+        "side": "L",
+        "stage": "home",
+        "action": "walk",
+        "lowestGap": 0.02099999642372132,
+        "anyGap": 0.009631045846892377,
+        "foot": {
+          "position": [
+            1.9,
+            0.1110595051605182,
+            4.2424847612293854
+          ],
+          "planted": true,
+          "yaw": 0,
+          "pitch": 0.040280154312316324,
+          "support": "toe",
+          "supportPoint": [
+            1.9,
+            0.0010000000000000009,
+            4.0825000000000005
+          ],
+          "rotationOrder": "YXZ"
+        }
+      }
+    },
+    {
+      "id": "jun",
+      "kind": "window",
+      "plantedSamples": 2305,
+      "maxLowestVertexGap": 0.0009999964237222166,
+      "minLowestVertexGap": 0.00099999549984843,
+      "maxAnyVertexGap": 0.0009999964237222166,
+      "violations": 0,
+      "peak": {
+        "time": 100.56666666666352,
+        "side": "L",
+        "stage": "out",
+        "action": "walk",
+        "lowestGap": 0.0009999964237222166,
+        "anyGap": 0.0009999964237222166,
+        "foot": {
+          "position": [
+            -5.731911231895376,
+            0.0865039680707109,
+            0.7000000000000003
+          ],
+          "planted": true,
+          "yaw": 0.12219517069135732,
+          "pitch": -0.024603940271976186,
+          "support": "heel",
+          "supportPoint": [
+            -5.6605,
+            0.0010000000000000009,
+            0.7000000000000003
+          ],
+          "rotationOrder": "YXZ"
+        }
+      }
+    },
+    {
+      "id": "min",
+      "kind": "sofa",
+      "plantedSamples": 2748,
+      "maxLowestVertexGap": 0.0010000002235183124,
+      "minLowestVertexGap": -0.018999999776482604,
+      "maxAnyVertexGap": 0.0010000002235183124,
+      "violations": 0,
+      "peak": {
+        "time": 188.39999999999188,
+        "side": "L",
+        "stage": "home",
+        "action": "walk",
+        "lowestGap": 0.0010000002235183124,
+        "anyGap": 0.0010000002235183124,
+        "foot": {
+          "position": [
+            -0.06706494471535517,
+            0.1057289639502011,
+            5.036267597603381
+          ],
+          "planted": true,
+          "yaw": 0,
+          "pitch": 0.004796926051904961,
+          "support": "toe",
+          "supportPoint": [
+            -0.22903110057739212,
+            0.0010000000000000009,
+            5.05542488485588
+          ],
+          "rotationOrder": "YXZ"
+        }
+      }
+    },
+    {
+      "id": "min",
+      "kind": "window",
+      "plantedSamples": 2526,
+      "maxLowestVertexGap": 0.0009999964237222166,
+      "minLowestVertexGap": 0.00099999549984843,
+      "maxAnyVertexGap": 0.0009999964237222166,
+      "violations": 0,
+      "peak": {
+        "time": 226.33333333332305,
+        "side": "R",
+        "stage": "out",
+        "action": "walk",
+        "lowestGap": 0.0009999964237222166,
+        "anyGap": 0.0009999964237222166,
+        "foot": {
+          "position": [
+            -8.286655622235513,
+            0.08669511674412984,
+            0.8829513644203036
+          ],
+          "planted": true,
+          "yaw": 1.0690903046241236,
+          "pitch": 0.011174560927060869,
+          "support": "toe",
+          "supportPoint": [
+            -8.442087023040765,
+            0.0010000000000000009,
+            0.8353703233574719
+          ],
+          "rotationOrder": "YXZ"
+        }
+      }
+    }
+  ]
+}

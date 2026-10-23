@@ -1,0 +1,162 @@
+{
+  "waitIdle": {
+    "time": 0.3,
+    "baseTime": 0.3,
+    "nextMicro": 10,
+    "micro": null,
+    "eligible": true,
+    "action": "idle",
+    "g": {
+      "available": true,
+      "stage": "idle",
+      "time": 0,
+      "done": 0,
+      "interruptions": 0,
+      "reason": null,
+      "next": 45,
+      "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+    },
+    "notice": "개인별 하루(v12)는 일반 회의에 빈손으로 이동합니다. 컵은 커피 준비·한 모금 마시기에서만 사용해요.",
+    "events": []
+  },
+  "beforeNative": {
+    "time": 10.100000000000081,
+    "baseTime": 10.100000000000081,
+    "nextMicro": 10,
+    "micro": {
+      "state": "wrist_relax",
+      "time": 0.09999999999999999
+    },
+    "eligible": false,
+    "action": "wrist_relax",
+    "g": {
+      "available": true,
+      "stage": "idle",
+      "time": 0,
+      "done": 0,
+      "interruptions": 0,
+      "reason": null,
+      "next": 45,
+      "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+    },
+    "notice": "개인별 하루(v12)는 일반 회의에 빈손으로 이동합니다. 컵은 커피 준비·한 모금 마시기에서만 사용해요.",
+    "events": []
+  },
+  "rejected": {
+    "time": 11.600000000000156,
+    "baseTime": 11.600000000000156,
+    "nextMicro": 10,
+    "micro": {
+      "state": "wrist_relax",
+      "time": 1.5999999999999992
+    },
+    "eligible": false,
+    "action": "wrist_relax",
+    "g": {
+      "available": true,
+      "stage": "idle",
+      "time": 0,
+      "done": 0,
+      "interruptions": 0,
+      "reason": null,
+      "next": 45,
+      "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+    },
+    "notice": "진행 중인 활동을 정리한 뒤 다시 시작해 주세요.",
+    "events": [
+      {
+        "type": "pointerdown",
+        "target": "glasses",
+        "eligible": false,
+        "action": "wrist_relax",
+        "stage": "idle",
+        "time": 10.666666666666776
+      },
+      {
+        "type": "pointerup",
+        "target": "glasses",
+        "eligible": false,
+        "action": "wrist_relax",
+        "stage": "idle",
+        "time": 10.666666666666776
+      },
+      {
+        "type": "click",
+        "target": "glasses",
+        "eligible": false,
+        "action": "wrist_relax",
+        "stage": "idle",
+        "time": 10.666666666666776
+      }
+    ]
+  },
+  "retryCompleted": {
+    "time": 16.766666666666996,
+    "baseTime": 16.766666666666996,
+    "nextMicro": 42.01666666666689,
+    "micro": null,
+    "eligible": true,
+    "action": "idle",
+    "g": {
+      "available": true,
+      "stage": "idle",
+      "time": 0,
+      "done": 1,
+      "interruptions": 0,
+      "reason": "complete",
+      "next": 121.666666666667,
+      "contactScope": "existing-right-rim-surface-and-index-pad; no glasses ownership change"
+    },
+    "notice": "준비부터 이동·착석·복귀까지 이어집니다.",
+    "events": [
+      {
+        "type": "pointerdown",
+        "target": "glasses",
+        "eligible": false,
+        "action": "wrist_relax",
+        "stage": "idle",
+        "time": 10.666666666666776
+      },
+      {
+        "type": "pointerup",
+        "target": "glasses",
+        "eligible": false,
+        "action": "wrist_relax",
+        "stage": "idle",
+        "time": 10.666666666666776
+      },
+      {
+        "type": "click",
+        "target": "glasses",
+        "eligible": false,
+        "action": "wrist_relax",
+        "stage": "idle",
+        "time": 10.666666666666776
+      },
+      {
+        "type": "pointerdown",
+        "target": "glasses",
+        "eligible": true,
+        "action": "idle",
+        "stage": "idle",
+        "time": 13.56666666666692
+      },
+      {
+        "type": "pointerup",
+        "target": "glasses",
+        "eligible": true,
+        "action": "idle",
+        "stage": "idle",
+        "time": 13.56666666666692
+      },
+      {
+        "type": "click",
+        "target": "glasses",
+        "eligible": true,
+        "action": "idle",
+        "stage": "idle",
+        "time": 13.56666666666692
+      }
+    ]
+  }
+}

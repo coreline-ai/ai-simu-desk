@@ -1,0 +1,28 @@
+{
+  "started": "2026-10-23T04:21:03.686Z",
+  "finished": "2026-10-23T04:28:16.842Z",
+  "exitCode": 1,
+  "sourceUnchanged": false,
+  "before": {
+    "product/tests/precision-nara-sora.test.mjs": "c39fd583cd4269d013c157b1ed4456e9f2c671f53fe517fdcbd97e1cef29d55c",
+    "pilot-3d/activities/team-runtime.mjs": "c440b4042a14fcc7442fbcd2b80c8a5658edaa183d91d6accc829c5bd9124edd",
+    "pilot-3d/activities/interactions.mjs": "1834fae00046ad706151bc2667123a90391f24bbe30507178358e8ec9e0d2679",
+    "pilot-3d/activities/hand-grips.mjs": "dacad48c5efd8a266129f2e60c2dbe3fddf383608e05c0aa209299999db57c46",
+    "pilot-3d/activities/desk-actions.mjs": "3b78bf704072aef0d0880d9f16482a70bb18de0da0d56123ae2235403a6609c6",
+    "pilot-3d/activities/prop-transfer.mjs": "483f554bc88167f35f9d8f61be993bcf4599dec042f7aa1744ce2f1a20be7683",
+    "pilot-3d/personal-office/motion.mjs": "ab743ef89296b1d928509989d160e82e18ad4f9e2f16ee39bcbe834de15beaf2",
+    "pilot-3d/living-office/human-motion.mjs": "808939f0ca9e083b3ea0a4125777496031f2bc929f4d401d19048f924aa4d900"
+  },
+  "after": {
+    "product/tests/precision-nara-sora.test.mjs": "c5a55939048d64b29ed599123847669d2de3bce316d9bdc0da59849ad863f61c",
+    "pilot-3d/activities/team-runtime.mjs": "c440b4042a14fcc7442fbcd2b80c8a5658edaa183d91d6accc829c5bd9124edd",
+    "pilot-3d/activities/interactions.mjs": "1834fae00046ad706151bc2667123a90391f24bbe30507178358e8ec9e0d2679",
+    "pilot-3d/activities/hand-grips.mjs": "dacad48c5efd8a266129f2e60c2dbe3fddf383608e05c0aa209299999db57c46",
+    "pilot-3d/activities/desk-actions.mjs": "3b78bf704072aef0d0880d9f16482a70bb18de0da0d56123ae2235403a6609c6",
+    "pilot-3d/activities/prop-transfer.mjs": "483f554bc88167f35f9d8f61be993bcf4599dec042f7aa1744ce2f1a20be7683",
+    "pilot-3d/personal-office/motion.mjs": "ab743ef89296b1d928509989d160e82e18ad4f9e2f16ee39bcbe834de15beaf2",
+    "pilot-3d/living-office/human-motion.mjs": "808939f0ca9e083b3ea0a4125777496031f2bc929f4d401d19048f924aa4d900"
+  },
+  "method": "in-memory models, deterministic 30 Hz simulation; final posed geometry measurements; no DB, 4180, build or Git mutation",
+  "physicalSkinGuarantee": false
+}

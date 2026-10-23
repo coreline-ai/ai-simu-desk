@@ -1,0 +1,98 @@
+{
+  "method": "Only an in-memory foot rotation is temporarily changed at a captured peak; product source untouched.",
+  "measuredAt": "2026-10-23T04:41:05.772Z",
+  "rows": [
+    {
+      "variant": 0,
+      "style": "side_stretch",
+      "maxPlantedHeight": 0.000999999076128008,
+      "peak": {
+        "time": 0.7,
+        "action": "natural_rise",
+        "side": "L",
+        "actualSoleMin": 0.000999999076128008,
+        "virtualYawThenLocalPitchSoleMin": 0.000999999076128008,
+        "foot": {
+          "position": [
+            -0.1,
+            0.085,
+            -0.48
+          ],
+          "planted": true
+        },
+        "rotation": [
+          0,
+          0,
+          0,
+          "YXZ"
+        ]
+      },
+      "complete": true
+    },
+    {
+      "variant": 1,
+      "style": "back_open",
+      "maxPlantedHeight": 0.000999999076128008,
+      "peak": {
+        "time": 11.433333333333303,
+        "action": "natural_rise",
+        "side": "L",
+        "actualSoleMin": 0.000999999076128008,
+        "virtualYawThenLocalPitchSoleMin": 0.000999999076128008,
+        "foot": {
+          "position": [
+            -0.1,
+            0.085,
+            -0.48
+          ],
+          "planted": true
+        },
+        "rotation": [
+          0,
+          0,
+          0,
+          "YXZ"
+        ]
+      },
+      "complete": true
+    },
+    {
+      "variant": 2,
+      "style": "shoulder_release",
+      "maxPlantedHeight": 0.0010000000000000286,
+      "peak": {
+        "time": 41.56666666666687,
+        "action": "walk",
+        "stage": "out",
+        "phase": "cruise",
+        "side": "L",
+        "actualSoleMin": 0.0010000000000000286,
+        "virtualYawThenLocalPitchSoleMin": 0.0010000000000000286,
+        "foot": {
+          "position": [
+            -3.5,
+            0.091175033355151,
+            0.3189543679250523
+          ],
+          "planted": true,
+          "yaw": 0,
+          "pitch": -0.10730824860627339,
+          "support": "heel",
+          "supportPoint": [
+            -3.5,
+            0.0010000000000000009,
+            0.38303499179622696
+          ],
+          "rotationOrder": "YXZ"
+        },
+        "rotation": [
+          -0.10730824860627339,
+          0,
+          0,
+          "YXZ"
+        ]
+      },
+      "complete": true
+    }
+  ]
+}

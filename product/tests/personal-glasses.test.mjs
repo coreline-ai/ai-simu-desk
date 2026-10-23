@@ -10,7 +10,17 @@ import {validateOfficeAsset} from '../../pilot-3d/sample/asset-contract.mjs';
 import {releaseStudioAsset} from '../../pilot-3d/sample/asset-loader.mjs';
 import {SceneFrames} from '../../pilot-3d/living-office/frames.mjs';
 const V=(...a)=>new T.Vector3(...a);
-function surfaceDistance(mesh,point){const p=mesh.worldToLocal(point.clone()),g=mesh.geometry,a=g.attributes.position,index=g.index;let distance=Infinity;for(let i=0;i<(index?.count??a.count);i+=3){const v=n=>V().fromBufferAttribute(a,index?index.getX(i+n):i+n),q=new T.Triangle(v(0),v(1),v(2)).closestPointToPoint(p,V());distance=Math.min(distance,p.distanceTo(q));}return distance;}
+function surfaceDistance(mesh,point){
+ let matrices=[mesh.matrixWorld.clone()];
+ // The optimized Face is one instance of a shared sphere. Its instance matrix
+ // contains the actual skin position and nonuniform scale; mesh.matrixWorld
+ // alone measures a unit sphere. Include the face, ears and nose instances.
+ if(mesh.isInstancedMesh){assert(mesh.userData.parts?.includes('Jun_Face'),'actual Jun face skin instances');matrices=Array.from({length:mesh.count},(_,instance)=>{const local=new T.Matrix4();mesh.getMatrixAt(instance,local);return mesh.matrixWorld.clone().multiply(local);});}
+ const g=mesh.geometry,a=g.attributes.position,index=g.index;let distance=Infinity;
+ const x=V(),y=V(),z=V(),closest=V(),triangle=new T.Triangle(x,y,z);
+ for(const matrix of matrices)for(let i=0;i<(index?.count??a.count);i+=3){x.fromBufferAttribute(a,index?index.getX(i):i).applyMatrix4(matrix);y.fromBufferAttribute(a,index?index.getX(i+1):i+1).applyMatrix4(matrix);z.fromBufferAttribute(a,index?index.getX(i+2):i+2).applyMatrix4(matrix);triangle.closestPointToPoint(point,closest);distance=Math.min(distance,point.distanceTo(closest));}
+ return distance;
+}
 function run(f,check=()=>{}){assert(f.s.personalMotion.glasses.start());until(f,()=>!f.s.personalMotion.glasses.active,10,check);assert.deepEqual(f.s.book.snapshot(),{});assert.equal(f.s.cups.jun.owner,'desk');}
 test('Jun glasses touch the actual rim, leave the face clear and preserve limb lengths and feet through a continuous cycle',()=>{
  const f=fixture({personalMotion:true});try{

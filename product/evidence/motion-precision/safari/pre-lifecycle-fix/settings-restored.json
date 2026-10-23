@@ -1,0 +1,13 @@
+{
+  "restored": true,
+  "at": "2026-10-23T14:03:33.658165",
+  "original": {
+    "remoteAutomation": false,
+    "webDeveloperFeatures": false
+  },
+  "verifiedAfter": {
+    "remoteAutomation": false,
+    "webDeveloperFeatures": false
+  },
+  "verification": "Native Safari AX checkbox values 0 after clicks. No user tab changed."
+}

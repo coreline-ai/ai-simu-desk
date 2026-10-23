@@ -1,0 +1,2128 @@
+{
+  "passed": true,
+  "origin": "http://127.0.0.1:4193",
+  "at": "2026-10-23T05:12:09.728Z",
+  "rows": [
+    {
+      "id": "nara",
+      "kind": "work-0",
+      "state": {
+        "action": "role_nara",
+        "time": 2.666666666666662,
+        "pose": {
+          "time": 2.666666666666662,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5260639507153142,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 0.39267542049180093,
+        "reading": false,
+        "progress": 0.34145688738417473,
+        "period": 2.8,
+        "variant": 0
+      }
+    },
+    {
+      "id": "nara",
+      "kind": "work-1",
+      "state": {
+        "action": "role_nara",
+        "time": 3.649999999999992,
+        "pose": {
+          "time": 3.649999999999992,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5296875773020868,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "pause",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.8,
+        "variant": 0
+      }
+    },
+    {
+      "id": "nara",
+      "kind": "work-2",
+      "state": {
+        "action": "role_nara",
+        "time": 4.649999999999989,
+        "pose": {
+          "time": 4.649999999999989,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5339947953817168,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "observe",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 0,
+        "period": 2.8,
+        "variant": 0
+      }
+    },
+    {
+      "id": "nara",
+      "kind": "walk-0",
+      "state": {
+        "action": "turn",
+        "time": 3.1999999999999935,
+        "pose": {
+          "x": -1.0499999999999998,
+          "z": -0.48,
+          "yaw": -1.377382103194102,
+          "hip": 0.84,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "turn",
+          "time": 0.16499999999999426,
+          "feet": [
+            {
+              "position": [
+                -1.1099822098715721,
+                0.10944254228288498,
+                -0.5600133395061264
+              ],
+              "planted": false,
+              "yaw": 0.4498645271264766,
+              "pitch": 0
+            },
+            {
+              "position": [
+                -1.0499999999999998,
+                0.085,
+                -0.38
+              ],
+              "planted": true,
+              "yaw": -0.19341422360079452,
+              "pitch": 0
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": 0,
+          "pelvisZ": 0,
+          "turnLead": 0.03818081732136491,
+          "ensemblePhase": "pivot"
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "nara",
+      "kind": "walk-1",
+      "state": {
+        "action": "walk",
+        "time": 3.8333333333333246,
+        "pose": {
+          "x": -1.0499941108776778,
+          "z": -0.4798492384685587,
+          "yaw": 0.03904264995516685,
+          "hip": 0.8377977612257479,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.035599247811346046,
+          "gaitTime": 0.03869483457755005,
+          "gaitFade": 0.05505596935630356,
+          "feet": [
+            {
+              "position": [
+                -1.1499477302881764,
+                0.08553267095749016,
+                -0.4767095148674878
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.007277552457444979,
+              "support": "heel",
+              "supportPoint": [
+                -1.1527926990382202,
+                0.0010000000000000009,
+                -0.5495407148686136
+              ]
+            },
+            {
+              "position": [
+                -0.9500479682490385,
+                0.08639348328571195,
+                -0.4831803676852218
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": 0.008541679396705817,
+              "support": "toe",
+              "supportPoint": [
+                -0.9436943551051475,
+                0.0010000000000000009,
+                -0.3205278712016123
+              ]
+            }
+          ],
+          "contact": [
+            false,
+            false
+          ],
+          "pelvisX": 0.000106032799956199,
+          "pelvisZ": 0.0013798360219507864,
+          "weightShift": 0.000106032799956199,
+          "ensemblePhase": "first_step",
+          "travelLean": 0.010319523785931149
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "nara",
+      "kind": "walk-2",
+      "state": {
+        "action": "walk",
+        "time": 4.499999999999989,
+        "pose": {
+          "x": -1.0390213060067994,
+          "z": -0.19894543377407126,
+          "yaw": 0.03904264995516685,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.7022659144780108,
+          "gaitTime": 0.7633325157369683,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.143939980961568,
+                0.15895950198875025,
+                -0.3229111321063107
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": 0.07258685878576118,
+              "support": "swing",
+              "supportPoint": [
+                -1.1441945712839892,
+                0.0633231642199419,
+                -0.3294286443602945
+              ]
+            },
+            {
+              "position": [
+                -0.9443930410032999,
+                0.085000000923872,
+                -0.3384142301943119
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0,
+              "support": "flat",
+              "supportPoint": [
+                -0.9443930410032999,
+                0.0010000000000000009,
+                -0.3384142301943119
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": -0.007971946312788775,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.007971946312788775,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "nara",
+      "kind": "walk-3",
+      "state": {
+        "action": "walk",
+        "time": 5.166666666666654,
+        "pose": {
+          "x": -1.0244490861570676,
+          "z": 0.17410339437906464,
+          "yaw": 0.03904264995516685,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 1.368932581144675,
+          "gaitTime": 1.4879701968963859,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.1338956352980836,
+                0.09718756927566409,
+                -0.06577588312110685
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.08204234069174543,
+              "support": "toe",
+              "supportPoint": [
+                -1.1278039441780463,
+                0.0010000000000000009,
+                0.0901714095518465
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.9248556195075318,
+                0.10111666704806091,
+                0.1617437600973479
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.14906934135189703,
+              "support": "swing",
+              "supportPoint": [
+                -0.9243368497025177,
+                0.007132187421250533,
+                0.17502426710570956
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.0006041082448722258,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.0006041082448722258,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "nara",
+      "kind": "seated",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.6666666666666671,
+        "pose": {
+          "x": 7.529999999999999,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.6666666666666671,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                7.43,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                7.629999999999999,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "sora",
+      "kind": "work-0",
+      "state": {
+        "action": "role_sora",
+        "time": 2.666666666666662,
+        "pose": {
+          "time": 2.666666666666662,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5257645200948164,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 0.7174189814814833,
+        "reading": false,
+        "progress": 0.6238425925925942,
+        "period": 2.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "sora",
+      "kind": "work-1",
+      "state": {
+        "action": "role_sora",
+        "time": 3.683333333333325,
+        "pose": {
+          "time": 3.683333333333325,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5361686870825689,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "sora",
+      "kind": "work-2",
+      "state": {
+        "action": "role_sora",
+        "time": 4.699999999999989,
+        "pose": {
+          "time": 4.699999999999989,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.532299916259429,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 1.3669067215363444,
+        "reading": false,
+        "progress": 0.18861454046638648,
+        "period": 2.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "sora",
+      "kind": "walk-0",
+      "state": {
+        "action": "turn",
+        "time": 3.383333333333326,
+        "pose": {
+          "x": -1.0500000000000003,
+          "z": -0.48,
+          "yaw": -0.4361100727932057,
+          "hip": 0.84,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "turn",
+          "time": 0.48833333333332574,
+          "feet": [
+            {
+              "position": [
+                -1.1499237932553048,
+                0.085,
+                -0.4760967268259646
+              ],
+              "planted": true,
+              "yaw": 0.47515272274837295,
+              "pitch": 0
+            },
+            {
+              "position": [
+                -1.019599550237603,
+                0.10428690006934455,
+                -0.38473294035059147
+              ],
+              "planted": false,
+              "yaw": -0.8257929588903011,
+              "pitch": 0
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0,
+          "pelvisZ": 0,
+          "turnLead": 0.05494867589632539,
+          "ensemblePhase": "pivot"
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0,
+        "lookAt": "nara",
+        "greeting": 0.7407407407407554,
+        "greetingPeer": "nara"
+      },
+      "role": null
+    },
+    {
+      "id": "sora",
+      "kind": "walk-1",
+      "state": {
+        "action": "walk",
+        "time": 4.099999999999991,
+        "pose": {
+          "x": -1.0443262197302092,
+          "z": -0.3347512250933518,
+          "yaw": 0.039042649955167194,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.44226591447801056,
+          "gaitTime": 0.5265070410452507,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.1494086655412086,
+                0.10524921346154102,
+                -0.46290945734510186
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.13882933843468862,
+              "support": "toe",
+              "supportPoint": [
+                -1.143541941615757,
+                0.0010000000000000009,
+                -0.3127213248535416
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.9454138583580898,
+                0.09291278321065416,
+                -0.3645471544769208
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": -0.14119939258850842,
+              "support": "heel",
+              "supportPoint": [
+                -0.9477927919378851,
+                0.0010000000000000009,
+                -0.4254478541196822
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ],
+          "pelvisX": -0.0013262380081772273,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.0013262380081772273,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "sora",
+      "kind": "walk-2",
+      "state": {
+        "action": "walk",
+        "time": 4.9166666666666545,
+        "pose": {
+          "x": -1.025200181177436,
+          "z": 0.15487536185763906,
+          "yaw": 0.039042649955167194,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 1.2589325811446743,
+          "gaitTime": 1.4987292632674696,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.1345834343257197,
+                0.0994988927872844,
+                -0.08338353822858965
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.09809399749869913,
+              "support": "toe",
+              "supportPoint": [
+                -1.1285533726274612,
+                0.0010000000000000009,
+                0.07098604124682803
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.9257741298213045,
+                0.09568854904244188,
+                0.13822989606477842
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.14998942550297967,
+              "support": "swing",
+              "supportPoint": [
+                -0.9252519837199988,
+                0.0016487115228093902,
+                0.1515968362582038
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.00006387351629038167,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.00006387351629038167,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "sora",
+      "kind": "walk-3",
+      "state": {
+        "action": "walk",
+        "time": 5.699999999999985,
+        "pose": {
+          "x": -1.00685479725947,
+          "z": 0.624517190157569,
+          "yaw": 0.039042649955167194,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 2.042265914478005,
+          "gaitTime": 2.431268945807149,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.1152191032475587,
+                0.08699179156978518,
+                0.4123433373723292
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.013137548724498866,
+              "support": "toe",
+              "supportPoint": [
+                -1.108880875830323,
+                0.0010000000000000009,
+                0.5746019592535634
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.9075440877301624,
+                0.12676330479896875,
+                0.6049189735980146
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.12255024280936538,
+              "support": "swing",
+              "supportPoint": [
+                -0.907121764733307,
+                0.034408382050334904,
+                0.615730442317513
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.00334841303353935,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.00334841303353935,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "sora",
+      "kind": "seated",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.9500000000000013,
+        "pose": {
+          "x": 5.13,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.9500000000000013,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                5.03,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                5.2299999999999995,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "jun",
+      "kind": "work-0",
+      "state": {
+        "action": "role_jun",
+        "time": 3.099999999999994,
+        "pose": {
+          "time": 3.099999999999994,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.532879842428559,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 0.44957755128831495,
+        "reading": false,
+        "progress": 0.3909370011202739,
+        "period": 3.1,
+        "variant": 0
+      }
+    },
+    {
+      "id": "jun",
+      "kind": "work-1",
+      "state": {
+        "action": "role_jun",
+        "time": 4.2833333333333234,
+        "pose": {
+          "time": 4.2833333333333234,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5295312623418997,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 3.1,
+        "variant": 0
+      }
+    },
+    {
+      "id": "jun",
+      "kind": "work-2",
+      "state": {
+        "action": "role_jun",
+        "time": 5.733333333333318,
+        "pose": {
+          "time": 5.733333333333318,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5285101304113945,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 1.1675989485586369,
+        "reading": false,
+        "progress": 0.015303433529249622,
+        "period": 3.1,
+        "variant": 0
+      }
+    },
+    {
+      "id": "jun",
+      "kind": "walk-0",
+      "state": {
+        "action": "turn",
+        "time": 3.516666666666659,
+        "pose": {
+          "x": -1.05,
+          "z": -0.48,
+          "yaw": -0.7843404996293385,
+          "hip": 0.84,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "turn",
+          "time": 0.375534591194961,
+          "feet": [
+            {
+              "position": [
+                -1.1499280949306592,
+                0.08620068963334504,
+                -0.47620845103827364
+              ],
+              "planted": false,
+              "yaw": 0.82226507958092,
+              "pitch": 0
+            },
+            {
+              "position": [
+                -1.05,
+                0.085,
+                -0.38
+              ],
+              "planted": true,
+              "yaw": -0.7864558271655581,
+              "pitch": 0
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": 0,
+          "pelvisZ": 0,
+          "turnLead": 0.06073247124309759,
+          "ensemblePhase": "pivot"
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0,
+        "lookAt": "sora",
+        "greeting": 0.7407407407407554,
+        "greetingPeer": "sora"
+      },
+      "role": null
+    },
+    {
+      "id": "jun",
+      "kind": "walk-1",
+      "state": {
+        "action": "walk",
+        "time": 4.549999999999989,
+        "pose": {
+          "x": -1.0407706740971396,
+          "z": -0.2437292568867711,
+          "yaw": 0.03904264995516702,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.6461338390063118,
+          "gaitTime": 0.6461338390063118,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.1485928433203876,
+                0.13698744520481126,
+                -0.44202440849208785
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": 0.18710675931964846,
+              "support": "swing",
+              "supportPoint": [
+                -1.149314131644991,
+                0.024039767280963173,
+                -0.4604893896019373
+              ]
+            },
+            {
+              "position": [
+                -0.9439159567992008,
+                0.08585788858932539,
+                -0.32620087456937097
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": -0.01393137249378707,
+              "support": "heel",
+              "supportPoint": [
+                -0.9467389081808953,
+                0.0010000000000000009,
+                -0.3984684299407498
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": -0.006356010783020317,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.006356010783020317,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "jun",
+      "kind": "walk-2",
+      "state": {
+        "action": "walk",
+        "time": 5.416666666666653,
+        "pose": {
+          "x": -1.0228416393177373,
+          "z": 0.21525403346592653,
+          "yaw": 0.03904264995516702,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 1.5128005056729754,
+          "gaitTime": 1.5128005056729754,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.132939145778481,
+                0.10248459809441057,
+                -0.04128975141927961
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.11909588848155309,
+              "support": "toe",
+              "supportPoint": [
+                -1.126992063357847,
+                0.0010000000000000009,
+                0.11095555854894991
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.9236968876004055,
+                0.09324058380812764,
+                0.19140729691979136
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": -0.14783215562127333,
+              "support": "heel",
+              "supportPoint": [
+                -0.9260515603585081,
+                0.0010000000000000009,
+                0.13112767431236463
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ],
+          "pelvisX": -0.0006427301368009691,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.0006427301368009691,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "jun",
+      "kind": "walk-3",
+      "state": {
+        "action": "walk",
+        "time": 6.183333333333317,
+        "pose": {
+          "x": -1.0069813393205738,
+          "z": 0.6212777133933127,
+          "yaw": 0.03904264995516702,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 2.2794671723396394,
+          "gaitTime": 2.2794671723396394,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.1126865671750075,
+                0.085000000923872,
+                0.47717626082964143
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0,
+              "support": "flat",
+              "supportPoint": [
+                -1.1126865671750075,
+                0.0010000000000000009,
+                0.47717626082964143
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.914275858544231,
+                0.15751815622001886,
+                0.43258564075785666
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": 0.05185465497377356,
+              "support": "swing",
+              "supportPoint": [
+                -0.9144543789576328,
+                0.06515662786663264,
+                0.42801551817477057
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.007863272561730578,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.007863272561730578,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "jun",
+      "kind": "seated",
+      "state": {
+        "action": "sofa_rest",
+        "time": 0.8833333333333344,
+        "pose": {
+          "x": 2.73,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 0.8833333333333344,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                2.63,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                2.83,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "min",
+      "kind": "work-0",
+      "state": {
+        "action": "role_min",
+        "time": 3.599999999999992,
+        "pose": {
+          "time": 3.599999999999992,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5305229317494182,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 1.1337171264543007,
+        "reading": false,
+        "progress": 0.9858409795254789,
+        "period": 2.7,
+        "variant": 0
+      }
+    },
+    {
+      "id": "min",
+      "kind": "work-1",
+      "state": {
+        "action": "role_min",
+        "time": 4.8333333333333215,
+        "pose": {
+          "time": 4.8333333333333215,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5254367851669383,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 2.7,
+        "variant": 0
+      }
+    },
+    {
+      "id": "min",
+      "kind": "work-2",
+      "state": {
+        "action": "role_min",
+        "time": 6.016666666666651,
+        "pose": {
+          "time": 6.016666666666651,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5337956082688315,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 1.9195744144693232,
+        "reading": false,
+        "progress": 0.6691951430168029,
+        "period": 2.7,
+        "variant": 0
+      }
+    },
+    {
+      "id": "min",
+      "kind": "walk-0",
+      "state": {
+        "action": "walk",
+        "time": 5.266666666666653,
+        "pose": {
+          "x": -0.9915212836673416,
+          "z": 0.2581313528211103,
+          "yaw": 0.07906021679499889,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 1.4990249608146282,
+          "gaitTime": 1.7034374554711684,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.1114306511463454,
+                0.15446306330432558,
+                0.010785963355217832
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": 0.14189042744397762,
+              "support": "swing",
+              "supportPoint": [
+                -1.1124985859025602,
+                0.048185908018232707,
+                -0.0026937464565607167
+              ]
+            },
+            {
+              "position": [
+                -0.899892883709176,
+                0.085000000923872,
+                0.14850808557953565
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0,
+              "support": "flat",
+              "supportPoint": [
+                -0.899892883709176,
+                0.0010000000000000009,
+                0.14850808557953565
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": -0.007660067061230361,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.007660067061230361,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "min",
+      "kind": "walk-1",
+      "state": {
+        "action": "walk",
+        "time": 6.199999999999983,
+        "pose": {
+          "x": -0.9495050508079002,
+          "z": 0.7884695809136164,
+          "yaw": 0.07906021679499889,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 2.4323582941479582,
+          "gaitTime": 2.7640435160772254,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.0644285830580034,
+                0.15891992216086148,
+                0.60405651167029
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": 0.07168443343385406,
+              "support": "swing",
+              "supportPoint": [
+                -1.064936903822751,
+                0.0634252838057552,
+                0.5976403740174749
+              ]
+            },
+            {
+              "position": [
+                -0.8602775784417025,
+                0.085000000923872,
+                0.6485412720667573
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0,
+              "support": "flat",
+              "supportPoint": [
+                -0.8602775784417025,
+                0.0010000000000000009,
+                0.6485412720667573
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": -0.007968876413374862,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.007968876413374862,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "min",
+      "kind": "walk-2",
+      "state": {
+        "action": "walk",
+        "time": 7.266666666666646,
+        "pose": {
+          "x": -0.9014864989685383,
+          "z": 1.394570413019338,
+          "yaw": 0.07906021679499889,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 3.499024960814621,
+          "gaitTime": 3.976164728198433,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -1.0016651390378875,
+                0.10692179352692562,
+                1.396270649524194
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.14641981926384995,
+              "support": "swing",
+              "supportPoint": [
+                -1.0006351226959809,
+                0.013097169638761633,
+                1.4092717446842602
+              ]
+            },
+            {
+              "position": [
+                -0.8202046543307665,
+                0.0946953808054347,
+                1.154350625289238
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.06492415724517232,
+              "support": "toe",
+              "supportPoint": [
+                -0.8077493895792689,
+                0.0010000000000000009,
+                1.3115637448192519
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": -0.001193617893504573,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": -0.001193617893504573,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "min",
+      "kind": "walk-3",
+      "state": {
+        "action": "walk",
+        "time": 8.24999999999999,
+        "pose": {
+          "x": -0.8572193964916262,
+          "z": 1.953319617616807,
+          "yaw": 0.07906021679499889,
+          "hip": 0.7983564150497043,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 4.482358294147964,
+          "gaitTime": 5.093588970622687,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                -0.9610964421120566,
+                0.08917136421542435,
+                1.9083377573880171
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": -0.07051616473039977,
+              "support": "heel",
+              "supportPoint": [
+                -0.9664194632686398,
+                0.0010000000000000009,
+                1.8411494014560321
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                -0.7794770380266962,
+                0.11347651341872816,
+                1.668423648860613
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.19939665561619097,
+              "support": "toe",
+              "supportPoint": [
+                -0.7681340843117952,
+                0.0010000000000000009,
+                1.811596931306474
+              ],
+              "rotationOrder": "YXZ"
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ],
+          "pelvisX": 0.00443782949295369,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.00443782949295369,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "min",
+      "kind": "seated",
+      "state": {
+        "action": "sofa_rest",
+        "time": 1.5999999999999992,
+        "pose": {
+          "x": 0.3300000000000005,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 1.5999999999999992,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                0.2300000000000005,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                0.4300000000000005,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "leo",
+      "kind": "work-0",
+      "state": {
+        "action": "role_leo",
+        "time": 3.349999999999993,
+        "pose": {
+          "time": 3.349999999999993,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.527829065382226,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "act",
+        "sample": 0.4563401001365506,
+        "reading": false,
+        "progress": 0.39681747837960923,
+        "period": 3.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "leo",
+      "kind": "work-1",
+      "state": {
+        "action": "role_leo",
+        "time": 4.7499999999999885,
+        "pose": {
+          "time": 4.7499999999999885,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5277112654924592,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "check",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 1,
+        "period": 3.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "leo",
+      "kind": "work-2",
+      "state": {
+        "action": "role_leo",
+        "time": 6.1499999999999835,
+        "pose": {
+          "time": 6.1499999999999835,
+          "action": "idle",
+          "x": 0,
+          "z": -0.6,
+          "yaw": 0,
+          "hip": 0.5354838223325761,
+          "stand": 0,
+          "arms": 0,
+          "chair": 0,
+          "feet": null,
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "activity": "role",
+        "roleStage": "use",
+        "returning": false,
+        "basePose": "idle"
+      },
+      "role": {
+        "phase": "observe",
+        "sample": 1.15,
+        "reading": true,
+        "progress": 0,
+        "period": 3.4,
+        "variant": 0
+      }
+    },
+    {
+      "id": "leo",
+      "kind": "walk-0",
+      "state": {
+        "action": "turn",
+        "time": 3.399999999999993,
+        "pose": {
+          "x": 1.0499999999999998,
+          "z": -0.48,
+          "yaw": 1.0329646274946327,
+          "hip": 0.84,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "turn",
+          "time": 0.2955555555555489,
+          "feet": [
+            {
+              "position": [
+                0.9514212039664636,
+                0.10123681234522809,
+                -0.46320056630185213
+              ],
+              "planted": false,
+              "yaw": -0.864169891141922,
+              "pitch": 0
+            },
+            {
+              "position": [
+                1.0499999999999998,
+                0.085,
+                -0.58
+              ],
+              "planted": true,
+              "yaw": 0.5378316993002639,
+              "pitch": 0
+            }
+          ],
+          "contact": [
+            false,
+            true
+          ],
+          "pelvisX": 0,
+          "pelvisZ": 0,
+          "turnLead": -0.05699478566425842,
+          "ensemblePhase": "pivot"
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "leo",
+      "kind": "walk-1",
+      "state": {
+        "action": "walk",
+        "time": 4.34999999999999,
+        "pose": {
+          "x": 1.0440387809320741,
+          "z": -0.3273927918611046,
+          "yaw": -0.03904264995516685,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 0.4828214700335667,
+          "gaitTime": 0.49267496942200684,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                0.9497594014170563,
+                0.09819712672891055,
+                -0.4757930567864761
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.0890321057517697,
+              "support": "toe",
+              "supportPoint": [
+                0.9436943551051475,
+                0.0010000000000000009,
+                -0.3205278712016123
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                1.1443382502377726,
+                0.09875698619822149,
+                -0.333106825577149
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.14965218081274761,
+              "support": "swing",
+              "supportPoint": [
+                1.143817341904058,
+                0.004737430143127941,
+                -0.3197715722340566
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.00036806622076570895,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.00036806622076570895,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "leo",
+      "kind": "walk-2",
+      "state": {
+        "action": "walk",
+        "time": 5.249999999999987,
+        "pose": {
+          "x": 1.0250688733062627,
+          "z": 0.15823684335967414,
+          "yaw": -0.03904264995516685,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 1.3828214700335635,
+          "gaitTime": 1.411042316360779,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                0.9336298341602469,
+                0.08526793793638511,
+                -0.0628761350121536
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0.0017616702588232954,
+              "support": "toe",
+              "supportPoint": [
+                0.9272537684961109,
+                0.0010000000000000009,
+                0.10035114598973072
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                1.1261278099471856,
+                0.1340981087630905,
+                0.13308044586187923
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": -0.10576746186087127,
+              "support": "swing",
+              "supportPoint": [
+                1.125765639222384,
+                0.042808092260030475,
+                0.14235201641679862
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.004242286269165959,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.004242286269165959,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "leo",
+      "kind": "walk-3",
+      "state": {
+        "action": "walk",
+        "time": 6.11666666666665,
+        "pose": {
+          "x": 1.0068015548517775,
+          "z": 0.6258801957944979,
+          "yaw": -0.03904264995516685,
+          "hip": 0.8,
+          "stand": 1,
+          "arms": 0,
+          "chair": 1,
+          "action": "walk",
+          "time": 2.249488136700227,
+          "gaitTime": 2.2953960578573747,
+          "gaitFade": 1,
+          "feet": [
+            {
+              "position": [
+                0.9129794984986637,
+                0.085000000923872,
+                0.46577245792437966
+              ],
+              "planted": true,
+              "yaw": 0,
+              "pitch": 0,
+              "support": "flat",
+              "supportPoint": [
+                0.9129794984986637,
+                0.0010000000000000009,
+                0.46577245792437966
+              ],
+              "rotationOrder": "YXZ"
+            },
+            {
+              "position": [
+                1.113105866333392,
+                0.15499153158863554,
+                0.46644220237500367
+              ],
+              "planted": false,
+              "yaw": 0,
+              "pitch": 0.03104160671027051,
+              "support": "swing",
+              "supportPoint": [
+                1.113210702110149,
+                0.06595751109704591,
+                0.46375840649002215
+              ]
+            }
+          ],
+          "contact": [
+            true,
+            false
+          ],
+          "pelvisX": 0.007676771538185507,
+          "pelvisZ": 6.123233995736766e-19,
+          "weightShift": 0.007676771538185507,
+          "ensemblePhase": "cruise",
+          "travelLean": 0.012
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    },
+    {
+      "id": "leo",
+      "kind": "seated",
+      "state": {
+        "action": "sofa_rest",
+        "time": 1.4,
+        "pose": {
+          "x": -2.07,
+          "z": 4.64,
+          "yaw": 0,
+          "hip": 0.585,
+          "stand": 0,
+          "arms": 0,
+          "chair": 1,
+          "action": "sofa_rest",
+          "time": 1.4,
+          "seatBlend": 1,
+          "feet": [
+            {
+              "position": [
+                -2.17,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            },
+            {
+              "position": [
+                -1.9699999999999998,
+                0.10500000000000001,
+                5.09
+              ],
+              "planted": true
+            }
+          ],
+          "contact": [
+            true,
+            true
+          ]
+        },
+        "returning": false,
+        "basePose": "idle",
+        "activity": "sofa",
+        "variant": 0
+      },
+      "role": null
+    }
+  ],
+  "errors": [],
+  "scope": "five actual GLB continuous work cycles and sofa roundtrips; x1 walking samples, x3 transit; screenshot visibility is reviewed separately"
+}

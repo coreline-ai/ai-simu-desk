@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-23T04:24:28.538Z",
+  "source": "xcrun xctrace list devices",
+  "physicalPhone": {
+    "name": "iPhone app",
+    "os": "18.7.9",
+    "state": "offline"
+  },
+  "status": "incomplete; no physical touch/thermal/background validation",
+  "simulatorsAreNotPhysical": true
+}
