@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-24",
+  "baseline": "preserved pre-optimization build including Min hair and Nara/Sora/Leo fills; localhost4197",
+  "candidate": "localhost4198",
+  "method": "Same current practice including hair fixes; alternating 4 paired rounds, 120 fixed steps +15 measured actual WebGL draws after 120-step/10-draw warmup. ProcessTime renderer CPU, forced-GC retained JS heap. Readback/quality draw outside CPU interval. Not total app CPU/FPS/GPU/RAM.",
+  "workloads": [
+    {
+      "workload": "idle",
+      "baselineCpuMedianMs": 313.2879999999965,
+      "candidateCpuMedianMs": 292.3139999999975,
+      "medianReductionPercent": 6.694798396363478,
+      "pairsImproved": 3,
+      "totalPairs": 4,
+      "baselineRetainedHeapMedian": 23170582,
+      "candidateRetainedHeapMedian": 23180154,
+      "allSceneAndPixelEqual": true
+    },
+    {
+      "workload": "roles",
+      "baselineCpuMedianMs": 523.2070000000011,
+      "candidateCpuMedianMs": 455.1859999999994,
+      "medianReductionPercent": 13.000781717370291,
+      "pairsImproved": 3,
+      "totalPairs": 4,
+      "baselineRetainedHeapMedian": 23373174,
+      "candidateRetainedHeapMedian": 23396820,
+      "allSceneAndPixelEqual": true
+    }
+  ],
+  "sourceHashes": {
+    "pilot-3d/activities/interactions.mjs": "f5766b03feacc25d70e90cc8e3e52989a711e686188118eda6827d1f936dafaf",
+    "pilot-3d/hand-v14/adapter.mjs": "2d4b76574afa992e9744865175c19065b5a8ec66cbdfc82723dbcaae0c0c04ef",
+    "practice/src/scenarios.mjs": "56f1fc6a1b893e8c5be903c9ef3875353f009d4945999d0f7b5667f0921ee37f",
+    "practice/src/app.mjs": "45dcd10758d73ee455fdf46d177b64e628afe3e878b7903990eb9e3bdf4a1cd1"
+  },
+  "notes": [
+    "Each workload has one CPU regression sample; medians are workload observations, not a guaranteed saving.",
+    "Forced-GC JS heap is similar; no RAM/RSS/GPU/whole-system CPU saving claim.",
+    "roundWallMs includes post-measure quality work and is not used as CPU percentage denominator.",
+    "First-iteration exploratory performance is excluded and retained only in ignored .data.",
+    "Final failure-only change releases the retired ScenarioPlayer reference; it does not alter measured active-render workloads."
+  ]
+}

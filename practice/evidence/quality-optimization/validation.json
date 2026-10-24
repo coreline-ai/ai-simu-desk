@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-24",
+  "scope": "quality-preserving practice local optimization; no git commit/push/remote deployment",
+  "tests": {
+    "practice": {
+      "pass": 30,
+      "fail": 0
+    },
+    "handClockQualityRegression": {
+      "pass": 19,
+      "fail": 0
+    },
+    "ikExactPoses": 80,
+    "invariantTicksWithoutNewSnapshots": 10000,
+    "typecheck": "pass",
+    "boundaries": "pass",
+    "fullNpmTest": "not run"
+  },
+  "assetInvariants": {
+    "model": true,
+    "poster": true,
+    "style": true,
+    "visual": true,
+    "hairAssets": true
+  },
+  "sceneAndFramebufferPairs": 22,
+  "allQualityMatches": true,
+  "returnPairs": [
+    {
+      "action": "roles",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "cup",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "roles",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "cup",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "glasses",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "visit",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "roles",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "cup",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "roles",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    },
+    {
+      "action": "cup",
+      "complete": true,
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "sameFinal": true
+    }
+  ],
+  "cpu": [
+    {
+      "workload": "idle",
+      "baselineCpuMedianMs": 313.2879999999965,
+      "candidateCpuMedianMs": 292.3139999999975,
+      "medianReductionPercent": 6.694798396363478,
+      "pairsImproved": 3,
+      "totalPairs": 4,
+      "baselineRetainedHeapMedian": 23170582,
+      "candidateRetainedHeapMedian": 23180154,
+      "allSceneAndPixelEqual": true
+    },
+    {
+      "workload": "roles",
+      "baselineCpuMedianMs": 523.2070000000011,
+      "candidateCpuMedianMs": 455.1859999999994,
+      "medianReductionPercent": 13.000781717370291,
+      "pairsImproved": 3,
+      "totalPairs": 4,
+      "baselineRetainedHeapMedian": 23373174,
+      "candidateRetainedHeapMedian": 23396820,
+      "allSceneAndPixelEqual": true
+    }
+  ],
+  "lifecycle": [
+    {
+      "mode": "baseline",
+      "fallback": {
+        "canvases": 0,
+        "fallback": true,
+        "sceneDisabled": true,
+        "resultPhase": "done",
+        "scenarioReleased": false
+      },
+      "heapBefore": 29936556,
+      "heapAfter": 16364772
+    },
+    {
+      "mode": "candidate",
+      "fallback": {
+        "canvases": 0,
+        "fallback": true,
+        "sceneDisabled": true,
+        "resultPhase": "done",
+        "scenarioReleased": true
+      },
+      "heapBefore": 33511968,
+      "heapAfter": 17718816
+    }
+  ],
+  "limitations": [
+    "Each workload has one CPU regression sample; medians are workload observations, not a guaranteed saving.",
+    "Forced-GC JS heap is similar; no RAM/RSS/GPU/whole-system CPU saving claim.",
+    "roundWallMs includes post-measure quality work and is not used as CPU percentage denominator.",
+    "First-iteration exploratory performance is excluded and retained only in ignored .data.",
+    "Final failure-only change releases the retired ScenarioPlayer reference; it does not alter measured active-render workloads."
+  ]
+}

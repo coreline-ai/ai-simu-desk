@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-24",
+  "scope": "practice local only; no git commit/push or remote deployment",
+  "tests": {
+    "practice": 25,
+    "personalityAndSharedRegression": 28,
+    "failed": 0,
+    "typecheck": "pass",
+    "boundaries": "pass"
+  },
+  "geometry": {
+    "meshes": 3,
+    "triangles": 2208,
+    "newTextures": 0,
+    "newMaterials": 0,
+    "raysPerActor": 1920
+  },
+  "cases": [
+    {
+      "actor": "nara",
+      "action": "role",
+      "phase": "complete",
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "violations": []
+    },
+    {
+      "actor": "nara",
+      "action": "rest",
+      "phase": "complete",
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "violations": []
+    },
+    {
+      "actor": "sora",
+      "action": "role",
+      "phase": "complete",
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "violations": []
+    },
+    {
+      "actor": "sora",
+      "action": "rest",
+      "phase": "complete",
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "violations": []
+    },
+    {
+      "actor": "leo",
+      "action": "role",
+      "phase": "complete",
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "violations": []
+    },
+    {
+      "actor": "leo",
+      "action": "rest",
+      "phase": "complete",
+      "home": true,
+      "returned": true,
+      "claimsReleased": true,
+      "violations": []
+    }
+  ],
+  "limitations": [
+    "Controlled WebGL, not a FPS/CPU benchmark",
+    "Not all possible frames/devices/angles",
+    "Original canonical GLB, hands, Min and Jun unchanged"
+  ]
+}

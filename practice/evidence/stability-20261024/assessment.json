@@ -1,0 +1,126 @@
+{
+  "classification": "completed-with-resource-warmup-qualification-not-unconditional-all-gates-pass",
+  "originalPassed": false,
+  "originalGates": {
+    "actualTwoHours": true,
+    "noRuntimeErrors": true,
+    "simulationProgress": true,
+    "drawProgress": true,
+    "retainedHeapBounded": true,
+    "geometryBounded": true,
+    "texturesBounded": false,
+    "cleanupIdle": true,
+    "home": true,
+    "props": true,
+    "claims": true,
+    "violations": true,
+    "noReset": true
+  },
+  "wallSeconds": 7201.421,
+  "cleanupWallSeconds": 327.002,
+  "simulationSecondsAdvanced": 4086.5166666911687,
+  "renderedFramesAdvanced": 96697,
+  "retainedHeap": {
+    "warmEarlyMedianBytes": 24611908,
+    "lateMedianBytes": 25689320,
+    "growthBytes": 1077412,
+    "limitBytes": 8388608
+  },
+  "resourceObservation": {
+    "coldTextureCount": 56,
+    "maxTextureCount": 65,
+    "warmWindowFromSeconds": 900,
+    "warmTextureRange": [
+      65,
+      65
+    ],
+    "warmGeometryRange": [
+      345,
+      349
+    ],
+    "note": "The cold +5 texture gate failed (56 to65); original false is preserved. All sampled counts from minute15 onward stay65. This secondary warm-window analysis was added after observing initial growth; it is not the predeclared all-gates pass, not a proof of no GPU leak, and the precise allocation cause is not instrumented."
+  },
+  "rendererCpuPercent": {
+    "method": "100*delta CDP Performance.ProcessTime / wall seconds, one-minute intervals; not total machine/browser/GPU CPU",
+    "allMedian": 32.88334693001381,
+    "allRange": [
+      5.252462787324803,
+      60.71225427368229
+    ],
+    "afterMinute40Median": 42.48387857895892,
+    "afterMinute40Range": [
+      5.252462787324803,
+      60.71225427368229
+    ],
+    "fullTestsOverlapUntil": "2026-10-24T18:12:51+09:00",
+    "savingClaim": false
+  },
+  "automaticActivityCounts": {
+    "nara": {
+      "sofa": 4,
+      "cup": 3,
+      "meeting": 4,
+      "interruptions": 0,
+      "rest": 3,
+      "social": 0,
+      "role": 18,
+      "sofaPair": 3,
+      "pairAttempts": 4,
+      "window": 4
+    },
+    "sora": {
+      "sofa": 3,
+      "cup": 3,
+      "meeting": 4,
+      "interruptions": 0,
+      "rest": 3,
+      "social": 0,
+      "role": 17,
+      "sofaPair": 2,
+      "pairAttempts": 2,
+      "window": 3
+    },
+    "jun": {
+      "sofa": 4,
+      "cup": 3,
+      "meeting": 4,
+      "interruptions": 0,
+      "rest": 2,
+      "social": 0,
+      "role": 17,
+      "sofaPair": 3,
+      "pairAttempts": 3,
+      "window": 2
+    },
+    "min": {
+      "sofa": 3,
+      "cup": 3,
+      "meeting": 4,
+      "interruptions": 0,
+      "rest": 3,
+      "social": 0,
+      "role": 17,
+      "sofaPair": 2,
+      "pairAttempts": 3,
+      "window": 3
+    },
+    "leo": {
+      "sofa": 3,
+      "cup": 3,
+      "meeting": 4,
+      "interruptions": 0,
+      "rest": 3,
+      "social": 0,
+      "role": 12,
+      "sofaPair": 2,
+      "pairAttempts": 2,
+      "window": 2
+    }
+  },
+  "limits": [
+    "Not a pre/post two-hour comparison. Previous controlled CPU comparison remains a separate result.",
+    "RAM/RSS/GPU savings and normal foreground60FPS not certified.",
+    "Texture initial growth gate was not passed; retain qualification for release review.",
+    "No physical mobile device or thermal measurement."
+  ]
+}

@@ -1,4 +1,5 @@
 import {build} from 'esbuild';
+import {HAIR_FILL_ASSETS} from './src/assets/hair-fill.mjs';
 import {MIN_HAIR_ASSET} from './src/assets/min-hair.mjs';
 import {createHash} from 'node:crypto';
 import {readFile,writeFile,mkdir,rm,readdir,stat} from 'node:fs/promises';
@@ -25,7 +26,7 @@ html=html.replace('__SCRIPT__','./'+path.relative(out,path.resolve(root,script))
 await writeFile(path.join(out,'index.html'),html);
 await writeFile(path.join(out,'.htaccess'),`Options -Indexes\nDirectoryIndex index.html\n<IfModule mod_headers.c>\n Header always set X-Content-Type-Options "nosniff"\n Header always set Referrer-Policy "strict-origin-when-cross-origin"\n Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"\n <FilesMatch "\\.(js|css|glb|png|txt)$">\n Header set Cache-Control "public, max-age=31536000, immutable"\n </FilesMatch>\n <FilesMatch "\\.(html|json)$">\n Header set Cache-Control "no-cache"\n </FilesMatch>\n</IfModule>\n<IfModule mod_deflate.c>\n AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json model/gltf-binary\n</IfModule>\n`);
 await writeFile(path.join(out,'robots.txt'),'User-agent: *\nAllow: /\n');
-const manifest={schema:1,edition:'practice-static',model,poster,style,visualBaselineCommit:'14e7c9ece22e1e5bf9e96ef64d441b27c9161f13',visual:{model:9,personalities:13,hands:14,quality:'balanced',motionHz:60},practiceAssets:[MIN_HAIR_ASSET],server:false,externalAI:false};
+const manifest={schema:1,edition:'practice-static',model,poster,style,visualBaselineCommit:'14e7c9ece22e1e5bf9e96ef64d441b27c9161f13',visual:{model:9,personalities:13,hands:14,quality:'balanced',motionHz:60},practiceAssets:[MIN_HAIR_ASSET,...HAIR_FILL_ASSETS],server:false,externalAI:false};
 await writeFile(path.join(out,'build-manifest.json'),JSON.stringify(manifest,null,2)+'\n');
 const files=await readdir(out,{recursive:true});
 for(const name of files){if((await stat(path.join(out,name))).isDirectory())continue;if(!/^(index\.html|\.htaccess|robots\.txt|build-manifest\.json|assets\/[\w.\-]+\.(js|css|glb|png|txt))$/.test(name))throw Error('Unexpected deploy file: '+name);}

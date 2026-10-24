@@ -11,3 +11,12 @@
 - 해제: 원래 visible 값을 복원하고 생성한 geometry/material을 해제한다. 중복 장착은 거부하며 해제는 멱등이다.
 - 빌드: JS 번들에 포함되므로 GLB 재생성/추가 요청이 필요 없다. build-manifest.json의 practiceAssets에 식별자를 기록한다.
 - 검수: `../../MIN_HAIR_QA.md`, `../../tests/min-hair.test.mjs`.
+
+## 나라·소라·레오 continuous-hair-roots v1
+
+- 소스: `hair-fill.mjs`. 기존 헤어를 대체하지 않고 그 안쪽에 연속 두피를 추가한다. 직접 작성한 절차형 형상이며 외부 이미지/에셋을 사용하지 않는다.
+- 원점/좌표: 기존 NaraHead/SoraHead/LeoHead 로컬, metre/+Y.
+- 각1메시·736 triangles, 원본 머리 재질 공유, 새 텍스처/재질/루프 없음.
+- 열린 경계는 의도한 헤어라인뿐이며 눈/눈썹·귀를 가리지 않도록 앞/옆/뒤 경계를 다르게 작성했다.
+- 기존 단발/포니테일/낮은 번과 민·준·손·개성은 변경하지 않는다. 해제는 추가 geometry만 반납한다.
+- 검수: `../../HAIR_FILL_QA.md`, `../../tests/hair-fill.test.mjs`.

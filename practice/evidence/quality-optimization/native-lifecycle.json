@@ -1,0 +1,55 @@
+{
+  "method": "Ordinary UI/native keyboard; own-page WebGL context loss; own-renderer forced-GC retained JS heap snapshot, one run per build, not RSS/GPU/whole memory measurement.",
+  "rows": [
+    {
+      "mode": "baseline",
+      "paused": {
+        "status": "다섯 동료가 함께하는 작업실",
+        "paused": true,
+        "speed": 0.5,
+        "reviewExposed": false
+      },
+      "playing": {
+        "status": "잠시 쉬는 작업실",
+        "paused": false,
+        "speed": 2,
+        "resultKept": true
+      },
+      "fallback": {
+        "canvases": 0,
+        "fallback": true,
+        "sceneDisabled": true,
+        "resultPhase": "done",
+        "scenarioReleased": false
+      },
+      "retainedHeapBefore": 29936556,
+      "retainedHeapAfter": 16364772,
+      "heapReleased": 13571784
+    },
+    {
+      "mode": "candidate",
+      "paused": {
+        "status": "잠시 쉬는 작업실",
+        "paused": true,
+        "speed": 0.5,
+        "reviewExposed": false
+      },
+      "playing": {
+        "status": "다섯 동료가 함께하는 작업실",
+        "paused": false,
+        "speed": 2,
+        "resultKept": true
+      },
+      "fallback": {
+        "canvases": 0,
+        "fallback": true,
+        "sceneDisabled": true,
+        "resultPhase": "done",
+        "scenarioReleased": true
+      },
+      "retainedHeapBefore": 33511968,
+      "retainedHeapAfter": 17718816,
+      "heapReleased": 15793152
+    }
+  ]
+}

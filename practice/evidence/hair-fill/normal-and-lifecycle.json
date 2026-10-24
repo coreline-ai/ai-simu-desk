@@ -1,0 +1,67 @@
+{
+  "normal": {
+    "reviewExposed": false,
+    "hair": [
+      {
+        "id": "nara-continuous-hair-roots",
+        "version": 1,
+        "actor": "nara",
+        "source": "original local procedural geometry",
+        "meshes": 1,
+        "textures": 0,
+        "parent": "NaraHead",
+        "triangles": 736,
+        "material": "Nara_Hair",
+        "head": "NaraHead"
+      },
+      {
+        "id": "sora-continuous-hair-roots",
+        "version": 1,
+        "actor": "sora",
+        "source": "original local procedural geometry",
+        "meshes": 1,
+        "textures": 0,
+        "parent": "SoraHead",
+        "triangles": 736,
+        "material": "Nara_Hair",
+        "head": "SoraHead"
+      },
+      {
+        "id": "leo-continuous-hair-roots",
+        "version": 1,
+        "actor": "leo",
+        "source": "original local procedural geometry",
+        "meshes": 1,
+        "textures": 0,
+        "parent": "LeoHead",
+        "triangles": 736,
+        "material": "Nara_Hair",
+        "head": "LeoHead"
+      }
+    ],
+    "min": {
+      "id": "min-soft-curls",
+      "version": 1,
+      "actor": "min",
+      "source": "original local procedural geometry",
+      "meshes": 2,
+      "textures": 0,
+      "parent": "MinHead",
+      "hidden": [
+        "Min_HairBack",
+        "MinHead_Instances_252"
+      ],
+      "triangles": 7940
+    },
+    "quality": "balanced",
+    "hands": 14,
+    "speed": 1,
+    "paused": false
+  },
+  "loss": {
+    "canvases": 0,
+    "fallback": true,
+    "disabled": true
+  },
+  "reload": "3D and auto daily ready again"
+}

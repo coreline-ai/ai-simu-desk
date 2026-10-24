@@ -46,7 +46,14 @@ export function settled(s){return ACTORS.every(id=>s.idle(id))&&!s.personalMotio
 export class ScenarioPlayer{
  constructor(s,onChange=()=>{}){this.s=s;this.onChange=onChange;this.phase='idle';this.current=null;this.pending=null;this.lastSelection=null;this.error='';this.returnAt=0;this.key='';this.disposed=false;}
  snapshot(){const sequence=this.current?.entry.sequence?this.s.scenario?.current:null;return{phase:this.phase,id:this.current?.entry.id??null,pending:this.pending?.entry.id??null,label:this.current?.entry.label??'업무 자리',participants:[...(this.current?.participants??[])],step:sequence?sequence.index+1:null,total:sequence?4:null,stage:sequence?.stage??null,error:this.error,canRestart:!!this.lastSelection};}
- emit(){const state=this.snapshot(),key=JSON.stringify(state);if(key!==this.key){this.key=key;this.onChange(state);}}
+ emit(){
+  const sequence=this.current?.entry.sequence?this.s.scenario?.current:null,c=this.emissionCache;
+  // The selection is frozen. Between actual phase/sequence changes a 60Hz tick
+  // cannot change the visible snapshot; keep legacy JSON equality on changes.
+  if(c&&c.current===this.current&&c.pending===this.pending&&c.phase===this.phase&&c.error===this.error&&c.canRestart===!!this.lastSelection&&c.sequence===!!sequence&&c.index===sequence?.index&&c.stage===sequence?.stage)return;
+  this.emissionCache={current:this.current,pending:this.pending,phase:this.phase,error:this.error,canRestart:!!this.lastSelection,sequence:!!sequence,index:sequence?.index,stage:sequence?.stage};
+  const state=this.snapshot(),key=JSON.stringify(state);if(key!==this.key){this.key=key;this.onChange(state);}
+ }
  returnHome(){if(this.phase!=='returning'){this.s.setAuto(false);this.s.cancelAll();this.phase='returning';this.returnAt=this.s.time;}this.emit();}
  request(id,actor,peer){if(this.disposed)return false;const next=selectionFor(id,actor,peer);this.pending=next;this.lastSelection=next;this.error='';this.returnHome();this.tick();return true;}
  stop(){if(this.disposed)return;this.pending=null;this.error='';this.returnHome();this.tick();}

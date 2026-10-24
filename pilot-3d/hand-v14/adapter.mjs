@@ -5,6 +5,15 @@ import {tripod} from './tripod.mjs';
 import {part} from '../sample/character-rig.mjs';
 import {solveArm} from '../activities/interactions.mjs';
 const V=(...p)=>new T.Vector3(...p),Q=()=>new T.Quaternion().setFromAxisAngle(V(1,0,0),-Math.PI/2);
+// Actor transform is constant during this search. Preserve the exact inverse /
+// applyMatrix4 math and stable first-candidate tie policy without 2N ancestor walks.
+export function nearestKeyToLocalX(actor,keys,x){
+ if(!keys.length)return undefined;
+ actor.updateWorldMatrix(true,false);const inverse=actor.matrixWorld.clone().invert(),point=V();
+ let best=keys[0],distance=Math.abs(point.copy(best.point).applyMatrix4(inverse).x-x);
+ for(let i=1;i<keys.length;i++){const next=Math.abs(point.copy(keys[i].point).applyMatrix4(inverse).x-x);if(next<distance){distance=next;best=keys[i];}}
+ return best;
+}
 export function keyAnchors(model,prefix){
  const keys=[];model.updateWorldMatrix(true,true);
  model.traverse(n=>{
@@ -48,7 +57,7 @@ export class HandRevision {
   }else if(mode==='palm-check'){
    const target=this.actor.localToWorld(V(this.side==='R'?.15:-.15,.99,.32)),q=this.actor.getWorldQuaternion(new T.Quaternion()).multiply(new T.Quaternion().setFromAxisAngle(V(1,0,0),Math.PI/2)).multiply(new T.Quaternion().setFromAxisAngle(V(0,0,1),Math.PI));solveArm(this.actor,target,q,this.side);
   }else if(['keyboard-hover','key-press','mouse-rest','paper-pinch'].includes(mode)){
-   const key=this.keys.reduce((best,k)=>Math.abs(this.actor.worldToLocal(k.point.clone()).x-(this.side==='R'?.08:-.12))<Math.abs(this.actor.worldToLocal(best.point.clone()).x-(this.side==='R'?.08:-.12))?k:best,this.keys[0]);
+   const key=nearestKeyToLocalX(this.actor,this.keys,this.side==='R'?.08:-.12);
    if(key){const local=this.actor.worldToLocal(key.point.clone());const target=this.actor.localToWorld(V(this.side==='R'?.08:-.12,local.y+.036,local.z-.070));solveArm(this.actor,target,this.actor.getWorldQuaternion(new T.Quaternion()).multiply(Q()),this.side);}
   }else{
    // The new canonical dorsal normal is +Z. A keyboard frame puts it upwards;

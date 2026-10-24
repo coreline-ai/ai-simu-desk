@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-24",
+  "node": "22.23.4",
+  "fullTest": {
+    "command": "npm test",
+    "tests": 537,
+    "pass": 537,
+    "fail": 0,
+    "durationMs": 2204520.2165,
+    "logSha256": "aab6dc664afb93c17bd86c3e262f23e6b89d58676cae17611fa9d6dc23b58fee",
+    "finishedAt": "2026-10-24T18:12:51+09:00"
+  },
+  "practiceTest": {
+    "command": "npm run test:practice",
+    "tests": 30,
+    "pass": 30,
+    "fail": 0,
+    "logSha256": "29ed740066855225c0f8fbddd319c5e278190fbf98fc35b201a5e110543a3da9"
+  },
+  "checks": {
+    "typecheck": true,
+    "boundaries": true,
+    "checkProduct": true,
+    "buildPractice": true,
+    "buildManifestUnchanged": true
+  },
+  "servedBundle": {
+    "path": "practice/dist/assets/app.L5MLXBVE.js",
+    "sha256": "e61bcb9af0492a23ef23af30d647c27fb7ff417e6dffff6185532fa21994aa45"
+  },
+  "limits": [
+    "Full npm test includes synthetic temporary server/database tests; no production database operations.",
+    "Concurrent ordinary browser soak affects throughput; test time is not a performance benchmark.",
+    "Practice tests are separate from root npm test, not included in its 537 count."
+  ],
+  "testSideEffects": "A legacy test rewrote generatedAt/elapsedMs in product/evidence/motion-precision/leo-team/numeric-qa.json. Exact non-timing equality was verified, run artifact kept in ignored .data, historical tracked evidence restored."
+}

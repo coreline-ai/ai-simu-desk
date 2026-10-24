@@ -1,3 +1,4 @@
+import {installHairFill} from './assets/hair-fill.mjs';
 import {installMinHair} from './assets/min-hair.mjs';
 import {createSession,TEAM} from './session.mjs';
 import {SCENARIOS,CATEGORIES,SPEEDS,ScenarioPlayer} from './scenarios.mjs';
@@ -19,6 +20,7 @@ function renderSession(state){
 function syncMotion(){
  const stopped=paused||pref.matches&&!motionOptIn;
  view?.setViewModel({actors:ids.map(agentId=>({agentId,pose:'idle'})),selectedAgent:selected,motionPaused:stopped});
+ if(ready)$('scene-status').textContent=stopped?'잠시 쉬는 작업실':'다섯 동료가 함께하는 작업실';
  $('pause').textContent=stopped?'다시 재생':'일시정지';$('pause').setAttribute('aria-pressed',String(stopped));
  $('motion-note').textContent=stopped?'장면 일시정지 중':`${speed}배 · 새로고침해도 자동으로 움직여요`;
  if(player)renderScenario(player.snapshot());
@@ -61,33 +63,33 @@ for(const [button,target]of [['room','room'],['close',()=>selected],['hands',()=
 for(const kind of ['roles','cup','daily']){$(kind).dataset.scenario=kind;$(kind).setAttribute('aria-pressed','false');$(kind).onclick=()=>sceneAction(kind);}
 for(const [button,preset]of [['day','day'],['evening','evening']])$(button).onclick=()=>{view?.setLighting(preset);$('day').setAttribute('aria-pressed',String(preset==='day'));$('evening').setAttribute('aria-pressed',String(preset==='evening'));};
 function failure(){
- ready=false;player?.dispose();$('scenario-current').textContent='3D 장면을 표시할 수 없어요';$('scenario-progress').textContent='새로고침 후 다시 시도해 주세요. 오른쪽 2D 실습은 계속 사용할 수 있습니다.';$('stage').hidden=true;$('poster').hidden=false;$('loading').hidden=true;$('fallback').hidden=false;$('scene-status').textContent='작업실 미리보기';
+ ready=false;player?.dispose();player=undefined;$('scenario-current').textContent='3D 장면을 표시할 수 없어요';$('scenario-progress').textContent='새로고침 후 다시 시도해 주세요. 오른쪽 2D 실습은 계속 사용할 수 있습니다.';$('stage').hidden=true;$('poster').hidden=false;$('loading').hidden=true;$('fallback').hidden=false;$('scene-status').textContent='작업실 미리보기';
  for(const b of document.querySelectorAll('[data-scene],#day,#evening'))b.disabled=true;
  // Release a failed renderer instead of leaving its RAF/GPU resources alive.
  queueMicrotask(()=>{view?.dispose();view=undefined;engine=undefined;});
 }
 function mountRuntime(model,meta){
  const hair=installMinHair(model);
- let runtime;
- try{runtime=createTeamRuntime(model,meta,{auto:false,natural:true,enriched:true,expressive:true,interaction:true,refined:true,grounded:true,personalMotion:true,personalities:true,anatomicalActors:ids});}
- catch(error){hair.dispose();throw error;}
+ let fill,runtime;
+ try{fill=installHairFill(model);runtime=createTeamRuntime(model,meta,{auto:false,natural:true,enriched:true,expressive:true,interaction:true,refined:true,grounded:true,personalMotion:true,personalities:true,anatomicalActors:ids});}
+ catch(error){fill?.dispose();hair.dispose();throw error;}
  const dispose=runtime.dispose.bind(runtime);
- runtime.dispose=()=>{try{dispose();}finally{hair.dispose();}};
+ runtime.dispose=()=>{try{dispose();}finally{fill.dispose();hair.dispose();}};
  const diagnostics=runtime.diagnostics.bind(runtime);
- runtime.diagnostics=()=>{const d=diagnostics();d.teamActivities.practiceMinHair=hair.diagnostics();return d;};
+ runtime.diagnostics=()=>{const d=diagnostics();d.teamActivities.practiceMinHair=hair.diagnostics();d.teamActivities.practiceHairFill=fill.diagnostics();return d;};
  engine=runtime.scheduler;player=new ScenarioPlayer(engine,renderScenario);
  const update=runtime.update.bind(runtime);runtime.update=dt=>{update(dt);player.tick();};
  return runtime;
 }
 async function mount(){
  try{
-  view=createQualityView($('stage'),{onSelect:select,onStatus(kind){if(disposed)return;if(kind==='error'||kind==='lost')failure();},onMetrics(d){if(ready)$('scene-status').textContent=d.paused?'잠시 쉬는 작업실':'다섯 동료가 함께하는 작업실';}},
+  view=createQualityView($('stage'),{onSelect:select,onStatus(kind){if(disposed)return;if(kind==='error'||kind==='lost')failure();}},
   {motionReview:reviewMode,allowSlowMotion:true,roomQuality:true,modelVersion:9,modelUrl:__OFFICE_MODEL__,actorLabels:names,runtimeFactory:mountRuntime});
   // Explicit balanced matches desktop production quality, including on narrow
   // screens: no automatic low-quality downgrade or FPS cap in the Lite shell.
   view.setQuality('balanced');view.setLighting('day');view.setMotionSpeed(speed);syncMotion();
   const loaded=await view.ready;if(disposed)return;if(!loaded||!view){failure();return;}
-  ready=true;$('poster').hidden=true;$('loading').hidden=true;$('scene-status').textContent='다섯 동료가 함께하는 작업실';
+  ready=true;$('poster').hidden=true;$('loading').hidden=true;syncMotion();
   for(const b of document.querySelectorAll('[data-scene]'))b.disabled=false;
   sceneAction('daily');
  }catch{failure();}

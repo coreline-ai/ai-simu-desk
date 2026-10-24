@@ -1,0 +1,5610 @@
+{
+  "method": "Actual WebGL; continuous scalp fill; controlled review uses existing clock/runtime, not a performance measurement.",
+  "actors": [
+    {
+      "id": "nara",
+      "actions": [
+        {
+          "action": "role",
+          "sample": {
+            "scenario": {
+              "phase": "playing",
+              "id": "role",
+              "pending": null,
+              "label": "선택 동료의 업무",
+              "participants": [
+                "nara"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "role",
+                "stage": "use",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": {
+                    "phase": "act",
+                    "sample": 5.999999999999984,
+                    "reading": false,
+                    "period": 9.6,
+                    "variant": 0,
+                    "label": "우선순위 3번째 줄을 짧게 기록",
+                    "cue": "nara-three-line-plan"
+                  },
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [],
+                  "stage": "use",
+                  "time": 5.999999999999984,
+                  "owner": "hand",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 1,
+                  "handError": 9.992007221626409e-16,
+                  "tipError": 1.0175362097255202e-15,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "태블릿 스케치",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-three-line-plan",
+                  "action": "우선순위 3번째 줄을 짧게 기록",
+                  "phase": "act",
+                  "weight": 1,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "final": {
+            "scenario": {
+              "phase": "complete",
+              "id": "role",
+              "pending": null,
+              "label": "선택 동료의 업무",
+              "participants": [
+                "nara"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "태블릿 스케치",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "home": true,
+          "returned": true,
+          "claimsReleased": true
+        },
+        {
+          "action": "rest",
+          "sample": {
+            "scenario": {
+              "phase": "playing",
+              "id": "rest",
+              "pending": null,
+              "label": "가벼운 스트레칭",
+              "participants": [
+                "nara"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.48
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "micro",
+                "stage": "rest",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": "one_arm",
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "태블릿 스케치",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "final": {
+            "scenario": {
+              "phase": "complete",
+              "id": "rest",
+              "pending": null,
+              "label": "가벼운 스트레칭",
+              "participants": [
+                "nara"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "태블릿 스케치",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "home": true,
+          "returned": true,
+          "claimsReleased": true
+        }
+      ]
+    },
+    {
+      "id": "sora",
+      "actions": [
+        {
+          "action": "role",
+          "sample": {
+            "scenario": {
+              "phase": "playing",
+              "id": "role",
+              "pending": null,
+              "label": "선택 동료의 업무",
+              "participants": [
+                "sora"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "role",
+                "stage": "use",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": {
+                    "phase": "pause",
+                    "sample": 5.999999999999984,
+                    "reading": true,
+                    "period": 10.8,
+                    "variant": 2,
+                    "label": "동료를 바라보며 열린 손으로 의도 설명",
+                    "cue": "sora-explain-peer"
+                  },
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [],
+                  "stage": "use",
+                  "time": 5.999999999999984,
+                  "owner": "hand",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 1,
+                  "handError": 1.1102230246251565e-16,
+                  "tipError": 4.965068306494546e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-explain-peer",
+                  "action": "동료를 바라보며 열린 손으로 의도 설명",
+                  "phase": "pause",
+                  "weight": 1,
+                  "leftError": 4.965068306494546e-16,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "final": {
+            "scenario": {
+              "phase": "complete",
+              "id": "role",
+              "pending": null,
+              "label": "선택 동료의 업무",
+              "participants": [
+                "sora"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [
+                    2
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 5.087681048627601e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "home": true,
+          "returned": true,
+          "claimsReleased": true
+        },
+        {
+          "action": "rest",
+          "sample": {
+            "scenario": {
+              "phase": "playing",
+              "id": "rest",
+              "pending": null,
+              "label": "가벼운 스트레칭",
+              "participants": [
+                "sora"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.48
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "micro",
+                "stage": "rest",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": "side_stretch",
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [
+                    2
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 5.087681048627601e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "final": {
+            "scenario": {
+              "phase": "complete",
+              "id": "rest",
+              "pending": null,
+              "label": "가벼운 스트레칭",
+              "participants": [
+                "sora"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [
+                    2
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 5.087681048627601e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 정리",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-count-then-release-fingers",
+                  "action": "왼손 엄지와 검지를 가볍게 모아 정리 순서 떠올리기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "home": true,
+          "returned": true,
+          "claimsReleased": true
+        }
+      ]
+    },
+    {
+      "id": "leo",
+      "actions": [
+        {
+          "action": "role",
+          "sample": {
+            "scenario": {
+              "phase": "playing",
+              "id": "role",
+              "pending": null,
+              "label": "선택 동료의 업무",
+              "participants": [
+                "leo"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [
+                    2
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 5.087681048627601e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "role",
+                "stage": "use",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 모서리 정렬",
+                  "variant": 1,
+                  "recipe": {
+                    "phase": "pause",
+                    "sample": 5.999999999999984,
+                    "reading": true,
+                    "period": 11.2,
+                    "variant": 1,
+                    "label": "긴 문장을 끝까지 읽고 다음 줄로 시선 이동",
+                    "cue": "leo-follow-three-long-lines"
+                  },
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "use",
+                  "time": 5.999999999999984,
+                  "owner": "hand",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 1,
+                  "handError": 2.220446049250313e-16,
+                  "tipError": 0,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use"
+                  ]
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "leo-follow-three-long-lines",
+                  "action": "긴 문장을 끝까지 읽고 다음 줄로 시선 이동",
+                  "phase": "pause",
+                  "weight": 1,
+                  "leftError": 2.220446049250313e-16,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "final": {
+            "scenario": {
+              "phase": "complete",
+              "id": "role",
+              "pending": null,
+              "label": "선택 동료의 업무",
+              "participants": [
+                "leo"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [
+                    2
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 5.087681048627601e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 모서리 정렬",
+                  "variant": 1,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [
+                    1
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 0,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "home": true,
+          "returned": true,
+          "claimsReleased": true
+        },
+        {
+          "action": "rest",
+          "sample": {
+            "scenario": {
+              "phase": "playing",
+              "id": "rest",
+              "pending": null,
+              "label": "가벼운 스트레칭",
+              "participants": [
+                "leo"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.48
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [
+                    2
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 5.087681048627601e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "micro",
+                "stage": "rest",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": "back_open",
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 모서리 정렬",
+                  "variant": 1,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [
+                    1
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 0,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "jun-rest-two-finger-beats",
+                  "action": "왼손 검지로 두 번 리듬을 짚고 편하게 쉬기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "final": {
+            "scenario": {
+              "phase": "complete",
+              "id": "rest",
+              "pending": null,
+              "label": "가벼운 스트레칭",
+              "participants": [
+                "leo"
+              ],
+              "step": null,
+              "total": null,
+              "stage": null,
+              "error": "",
+              "canRestart": true
+            },
+            "positions": {
+              "nara": [
+                -4.8,
+                0,
+                -3.6
+              ],
+              "sora": [
+                -2.4,
+                0,
+                -3.6
+              ],
+              "jun": [
+                0,
+                0,
+                -3.6
+              ],
+              "min": [
+                2.3999999999999995,
+                0,
+                -3.6
+              ],
+              "leo": [
+                4.8,
+                0,
+                -3.6
+              ]
+            },
+            "claims": {},
+            "violations": [],
+            "fill": [
+              {
+                "id": "nara-continuous-hair-roots",
+                "version": 1,
+                "actor": "nara",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "NaraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "NaraHead"
+              },
+              {
+                "id": "sora-continuous-hair-roots",
+                "version": 1,
+                "actor": "sora",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "SoraHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "SoraHead"
+              },
+              {
+                "id": "leo-continuous-hair-roots",
+                "version": 1,
+                "actor": "leo",
+                "source": "original local procedural geometry",
+                "meshes": 1,
+                "textures": 0,
+                "parent": "LeoHead",
+                "triangles": 736,
+                "material": "Nara_Hair",
+                "head": "LeoHead"
+              }
+            ],
+            "actors": {
+              "nara": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "기획 메모",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.78,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "NaraPlanningNotebook"
+                  },
+                  "variantsSeen": [
+                    0
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 4.440892098500626e-16,
+                  "tipError": 4.440892098500626e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "sora": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "화면과 스케치 비교",
+                  "variant": 2,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.772,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "SoraPenTablet"
+                  },
+                  "variantsSeen": [
+                    2
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 5.087681048627601e-16,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              },
+              "jun": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "입력하고 코드 화면 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": null,
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "min": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 0,
+                  "social": 0,
+                  "role": 0,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "체크리스트 확인",
+                  "variant": 0,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.45999999999999996,
+                      0.768,
+                      -0.10000000000000009
+                    ],
+                    "pageEdge": "MinChecklist"
+                  },
+                  "variantsSeen": [],
+                  "stage": "idle",
+                  "time": 0,
+                  "owner": "desk",
+                  "done": 0,
+                  "interruptions": 0,
+                  "events": 0,
+                  "handError": 0,
+                  "tipError": 0,
+                  "history": []
+                }
+              },
+              "leo": {
+                "kind": "desk",
+                "stage": "idle",
+                "returning": false,
+                "slot": null,
+                "cup": {
+                  "state": "idle",
+                  "recipe": null,
+                  "duration": null,
+                  "time": 0,
+                  "owner": "desk",
+                  "events": 0,
+                  "done": 0,
+                  "returning": false,
+                  "handError": 0,
+                  "cupCount": 1
+                },
+                "restStyle": null,
+                "counts": {
+                  "sofa": 0,
+                  "cup": 0,
+                  "meeting": 0,
+                  "interruptions": 0,
+                  "rest": 1,
+                  "social": 0,
+                  "role": 1,
+                  "sofaPair": 0,
+                  "pairAttempts": 0,
+                  "window": 0
+                },
+                "role": {
+                  "label": "문서 모서리 정렬",
+                  "variant": 1,
+                  "recipe": null,
+                  "anchors": {
+                    "penPark": [
+                      0.41000000000000014,
+                      0.755,
+                      -0.08999999999999986
+                    ],
+                    "pageEdge": null
+                  },
+                  "variantsSeen": [
+                    1
+                  ],
+                  "stage": "idle",
+                  "time": 0.8000000000000008,
+                  "owner": "desk",
+                  "done": 1,
+                  "interruptions": 0,
+                  "events": 2,
+                  "handError": 0,
+                  "tipError": 0,
+                  "returning": false,
+                  "history": [
+                    "reach",
+                    "grasp",
+                    "use",
+                    "replace",
+                    "release",
+                    "retract"
+                  ]
+                }
+              }
+            },
+            "personalities": {
+              "version": 1,
+              "starts": [],
+              "pending": [],
+              "actors": {
+                "nara": {
+                  "label": "차분하게 생각을 구조화하는 기획자 나라",
+                  "signatures": [
+                    "three-line-plan",
+                    "board-reflection",
+                    "connect-two-ideas"
+                  ],
+                  "cue": "nara-quiet-reflection",
+                  "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 9.6
+                },
+                "sora": {
+                  "label": "소라 · 시각적으로 탐색하는 디자이너",
+                  "signatures": [
+                    "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+                    "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+                    "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+                  ],
+                  "cue": "sora-idle-composition",
+                  "action": "펜을 띄우고 고개를 기울여 구도 다시 보기",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 10.8
+                },
+                "jun": {
+                  "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+                  "signatures": [
+                    "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+                    "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+                    "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 10.4
+                },
+                "min": {
+                  "label": "민 · 확인하고 확정하는 QA",
+                  "signatures": [
+                    "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+                    "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+                    "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+                  ],
+                  "cue": "min-idle-reference",
+                  "action": "검지를 편 채 기준 카드와 화면을 번갈아 확인",
+                  "phase": "pause",
+                  "weight": 0.35,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                },
+                "leo": {
+                  "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+                  "signatures": [
+                    "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+                    "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+                    "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+                  ],
+                  "cue": "activity",
+                  "action": "",
+                  "weight": 0,
+                  "leftError": 0,
+                  "workDuration": 11.2
+                }
+              }
+            },
+            "hands": {
+              "version": 14,
+              "actors": [
+                "nara",
+                "sora",
+                "jun",
+                "min",
+                "leo"
+              ],
+              "pose": "auto",
+              "actor": "sora",
+              "approval": "team-expanded"
+            },
+            "quality": "balanced",
+            "model": 9
+          },
+          "home": true,
+          "returned": true,
+          "claimsReleased": true
+        }
+      ]
+    }
+  ]
+}
