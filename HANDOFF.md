@@ -4,6 +4,8 @@
 
 ## 최신 후속 — 초기 texture 증가 원인·공용 골격
 
+소스·검수 `3dbb0fe`를 origin/main에 푸시, 원격 동일 해시·clean tree 확인. 이 전달 완료 기록은 문서 전용 후속 커밋으로 보존하며 원격 사이트 배포는 하지 않았다.
+
 - 실제 native WebGL 할당과 Three 소유 객체를 대응했다. 초기56→65는10개 legacy HandSkin 중 아직 사용되지 않았던9개의8×8 RGBA32F 골격 텍스처가 지연 생성된 결과다. 이미지 반복 생성/무한 누수라는 증거는 아니었다. 이전2시간 실패 gate는 원시값 그대로 보존한다.
 - `pilot-3d/sample/bone-texture-atlas.mjs`가 동일160뼈를4×160 텍스처1개로 묶는다. practice만 sharedLegacyHandTexture=true, 공용 런타임 기본false. CPU 스키닝/raycast/바운드와room/close·원복/해제/복구를 보존한다. 숨긴 legacy 손의 행렬 계산을 추가하지 않는다.
 - 피크65→56(객체9개 감소), payload10,240bytes 동일. 일부 손만 보일 때 업로드량이 늘 수 있으며 CPU/RAM/VRAM 절감률로 확대하지 않는다.
