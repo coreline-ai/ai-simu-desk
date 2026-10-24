@@ -15,9 +15,9 @@
 
 </div>
 
-![AI Simu Desk의 실제 3D 사무실 — 창가의 다섯 작업 자리와 회의·휴식 공간](docs/images/studio-overview.png)
+![다섯 동료와 작업·회의·휴식 공간을 크게 담은 실제 3D 사무실](docs/images/studio-overview.png)
 
-<sub>다섯 동료와 작업·회의·휴식 공간을 담은 실제 로컬 실행 화면입니다. 사용자 데이터와 분리된 임시 게스트 공간에서 촬영했습니다. [캡처 정보](docs/images/README.md)</sub>
+<sub>다섯 동료와 작업·회의·휴식 공간이 잘 보이도록 여백을 줄여 촬영한 실제 로컬 실행 화면입니다. 사용자 데이터와 분리된 임시 게스트 공간에서 촬영했습니다. [캡처 정보](docs/images/README.md)</sub>
 
 > [!IMPORTANT]
 > **실제 기능은 로그인·업무 관리·승인·저장·협업이고, 답변 생성은 규칙 기반 Fake AI입니다.**
