@@ -1,0 +1,39 @@
+{
+  "method": "4 alternating paired rounds in a clean, non-instrumented page. Each360-step/30-draw warmup +120 measured fixed steps/15draws. Renderer ProcessTime only. Full npm test and other QA overlap; not isolated normal RAF CPU/FPS or RAM saving.",
+  "workloads": [
+    {
+      "workload": "idle",
+      "baselineCpuMedianMs": 216.19649999999524,
+      "candidateCpuMedianMs": 213.18400000000094,
+      "medianReductionPercent": 1.3934083114177986,
+      "pairsImproved": 2,
+      "totalPairs": 4,
+      "allScenePixelEqual": true
+    },
+    {
+      "workload": "roles",
+      "baselineCpuMedianMs": 273.51050000000043,
+      "candidateCpuMedianMs": 267.79100000000255,
+      "medianReductionPercent": 2.0911445812858642,
+      "pairsImproved": 2,
+      "totalPairs": 4,
+      "allScenePixelEqual": true
+    },
+    {
+      "workload": "cup",
+      "baselineCpuMedianMs": 251.70899999999995,
+      "candidateCpuMedianMs": 218.27650000000176,
+      "medianReductionPercent": 13.282202861239846,
+      "pairsImproved": 2,
+      "totalPairs": 4,
+      "allScenePixelEqual": true
+    }
+  ],
+  "limits": [
+    "Small samples and concurrent load; medians are not guaranteed improvements.",
+    "All twelve final paired framebuffer FNV1a32 + scene SHA256 matches.",
+    "First all-bones-update prototype performance excluded, retained only in ignored.data.",
+    "A single fallback hand can upload more bone bytes from shared storage; exact matrix payload/storage stays10,240bytes total.",
+    "Renderer memory.textures is native resource count, not VRAM byte count."
+  ]
+}

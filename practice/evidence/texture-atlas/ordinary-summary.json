@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "actualWallSeconds": 1200.635,
+  "simulationSecondsAdvanced": 369.2999999999927,
+  "framesAdvanced": 11276,
+  "initialTextures": 55,
+  "peakTextures": 56,
+  "coldGrowth": 1,
+  "cleanupWallSeconds": 19.699,
+  "gcSamples": [
+    {
+      "wallSeconds": 0.225,
+      "retainedJsHeapBytes": 32086104
+    },
+    {
+      "wallSeconds": 300.082,
+      "retainedJsHeapBytes": 24213020
+    },
+    {
+      "wallSeconds": 600.072,
+      "retainedJsHeapBytes": 24604160
+    },
+    {
+      "wallSeconds": 900.074,
+      "retainedJsHeapBytes": 24698028
+    },
+    {
+      "wallSeconds": 1200.635,
+      "retainedJsHeapBytes": 24778532
+    }
+  ],
+  "notes": [
+    "Actual20-minute rerun of final code, not a new two-hour test.",
+    "First30-second attempt invalidated by a QA tab switch/hidden event and excluded; valid run has no hidden events.",
+    "Full npm test overlaps. Heap is JS only; no RSS/VRAM/thermal or memory saving claim."
+  ],
+  "gates": {
+    "actual20Minutes": true,
+    "texturesColdGrowth": true,
+    "texturesAtMost56": true,
+    "nativeAutoplay": true,
+    "noRuntimeErrors": true,
+    "home": true,
+    "props": true,
+    "claims": true,
+    "noReset": true
+  }
+}

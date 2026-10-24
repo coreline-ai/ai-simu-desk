@@ -1,0 +1,20 @@
+{
+  "baselineCommit": "8c47ad9821903a27abb2f2f1a36da10192c2fa27",
+  "candidateApp": "practice/dist/assets/app.FVJDPFQ2.js",
+  "candidateAppSha256": "4f9ba1e2605841684c2662f10b61f0262d0c105a033d43350d8a8d712dc6cfbe",
+  "sameBuildManifest": true,
+  "modelSha256": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e",
+  "sourceHashes": {
+    "pilot-3d/sample/bone-texture-atlas.mjs": "dcd0b0681fa11427b127ef8d482fc24bb694321710518236300d17dd41a76100",
+    "pilot-3d/activities/hand-grips.mjs": "4225584fe5d2c47400aa7f9ca8ab910dc6472ea960e86b7df30fa432320ae83b",
+    "pilot-3d/activities/team-runtime.mjs": "bbd7f41c3796ab1849b3b1374ea102bcddfcda9452a571027177af12d46213c7",
+    "practice/src/app.mjs": "2c427a8994b57ccc4ba38a910d88cfae2b5b7f1360d436b9f2a71e4bc85053bc",
+    "practice/tests/texture-atlas.test.mjs": "99b928cebe5cbe70e51273f27eb289a809fe6d8540e348e7a58f2a1551bdb914"
+  },
+  "productionInstrumentation": false,
+  "limits": [
+    "Temporary audit.html/audit.js and native WebGL prototype wrappers live only in ignored .data, not practice/dist.",
+    "Textures metric counts GPU objects, not bytes."
+  ],
+  "baselineAppSha256": "e61bcb9af0492a23ef23af30d647c27fb7ff417e6dffff6185532fa21994aa45"
+}

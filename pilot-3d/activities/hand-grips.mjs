@@ -1,3 +1,4 @@
+import {createBoneTextureAtlas} from '../sample/bone-texture-atlas.mjs';
 import {paperBendAt} from '../ensemble-office/props.mjs';
 import {HandSurface} from '../ensemble-office/hand-surface.mjs';
 import {HandRevision} from '../hand-v14/adapter.mjs';
@@ -98,11 +99,13 @@ class HandGrip{
   diagnostics(){return{surfaceVersion:this.smoothHands?3:this.enhanced?2:1,skin:this.surface?.diagnostics?.(),blend:this.blend,padError:this.error,maxReach:this.maxReach,fingers:this.fingers.length,...(this.refined?{contactScope:'five-finger-target-points',contacts:this.contactRows}: {})};}
 }
 export class HandGrips{
-  constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,Object.fromEntries(['R','L'].map(side=>{const legacy=new HandGrip(part(actors[id],'NaraHand'+side),side,{...options,enhanced:!!actors[id].userData.ensembleAsset});return [side,options.anatomicalActors?.includes(id)?new HandRevision(legacy,{actor:actors[id],id,side,desk:desks[id],cup:cups[id],scheduler:options.scheduler,model:options.model}):legacy];}))]));}
+  constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,Object.fromEntries(['R','L'].map(side=>{const legacy=new HandGrip(part(actors[id],'NaraHand'+side),side,{...options,enhanced:!!actors[id].userData.ensembleAsset});return [side,options.anatomicalActors?.includes(id)?new HandRevision(legacy,{actor:actors[id],id,side,desk:desks[id],cup:cups[id],scheduler:options.scheduler,model:options.model}):legacy];}))]));
+    if(options.sharedLegacyHandTexture){const surfaces=[...this.rows.values()].flatMap(row=>Object.values(row).map(hand=>(hand.legacy??hand).surface)).filter(s=>s?.mesh?.isSkinnedMesh);this.textureAtlas=createBoneTextureAtlas(surfaces.map(s=>({mesh:s.mesh,geometries:[...s.levels.values()].map(l=>l.geometry)})));}
+  }
   setRelaxation(id,profile){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].relaxation=profile?.free?.[side]?{curl:profile.curl,spread:profile.spread??0}:null;}
   setPresentation(id,poses){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].presentation=poses?.[side]??null;}
   setDetail(level){if(level===this.detailLevel)return;this.detailLevel=level;for(const row of this.rows.values())for(const side of['L','R']){if(row[side].setDetail)row[side].setDetail(level);else row[side].surface?.setDetail?.(level);}}
   apply(id,dt,override){const row=this.rows.get(id);if(!row)return;const d=this.desks[id],c=this.cups[id];row.R.apply(dt,override?.R?.blend??(d.personal&&id==='jun'?0:amount(d.stage,d.time)),override?.R?.prop??d.prop,override?.R?.kind??(id==='leo'?'page':'pen'),override?.R?.points);row.L.apply(dt,override?.L?.blend??(c.personal&&c.state==='release'?1-ease(c.time/c.duration()):amount(c.state,c.time,true)),override?.L?.prop??c.mug,override?.L?.kind??'cup',override?.L?.points);}
   diagnostics(){return Object.fromEntries([...this.rows].map(([id,row])=>[id,Object.fromEntries(Object.entries(row).map(([side,hand])=>[side,hand.diagnostics()]))]));}
-  dispose(){for(const row of this.rows.values())for(const hand of Object.values(row))hand.dispose();this.rows.clear();}
+  dispose(){this.textureAtlas?.dispose();for(const row of this.rows.values())for(const hand of Object.values(row))hand.dispose();this.rows.clear();}
 }

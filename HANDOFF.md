@@ -2,7 +2,15 @@
 
 갱신: 2026-10-24 · 대상 브랜치: `main` · 저장소: `coreline-ai/ai-simu-desk`
 
-## 최신 후속 — practice 장시간 검수·Git 전달
+## 최신 후속 — 초기 texture 증가 원인·공용 골격
+
+- 실제 native WebGL 할당과 Three 소유 객체를 대응했다. 초기56→65는10개 legacy HandSkin 중 아직 사용되지 않았던9개의8×8 RGBA32F 골격 텍스처가 지연 생성된 결과다. 이미지 반복 생성/무한 누수라는 증거는 아니었다. 이전2시간 실패 gate는 원시값 그대로 보존한다.
+- `pilot-3d/sample/bone-texture-atlas.mjs`가 동일160뼈를4×160 텍스처1개로 묶는다. practice만 sharedLegacyHandTexture=true, 공용 런타임 기본false. CPU 스키닝/raycast/바운드와room/close·원복/해제/복구를 보존한다. 숨긴 legacy 손의 행렬 계산을 추가하지 않는다.
+- 피크65→56(객체9개 감소), payload10,240bytes 동일. 일부 손만 보일 때 업로드량이 늘 수 있으며 CPU/RAM/VRAM 절감률로 확대하지 않는다.
+- 최종26짝 픽셀/장면 표본과10짝 활동/복귀 동일, 세 번 context 재생성 동일 포즈/4×160 유지·비누적. 일반 손실 후 폐기/2D 결과 유지. practice35/35·정적 검사 통과. 단독 일반20분은55→56(증가1), 초기+5/전체56상한 통과·오류/hidden/violations0,19.699초 자연 복귀 완료. 전체 회귀537/537·practice35/35 통과. 계측/임시4197 서버는 종료, Ego77은 최종1배daily 탭만 남기고 종료했다.
+- 최신 문서 `practice/TEXTURE_ATLAS_QA.md`, 증거 `practice/evidence/texture-atlas/`, 계획 `dev-plan/implement_20261024_204857.md`. 이전2시간을 새 코드의2시간 결과로 합산하지 않는다. 원격 배포·Hostinger/DNS·원본4180/DB/managed release 수정 금지.
+
+## 이전 인계 — practice 장시간 검수·Git 전달
 
 2026-10-24 사용자 승인으로 남은 검수·문서 정리와 main 소스 전달 완료. 소스/검수 커밋 `5370efc`의 origin/main 동일 해시·clean tree를 확인했고, 이 완료 기록은 후속 문서 커밋으로 보존한다. **원격 사이트 배포 금지**, 원본4180/DB/managed release 유지. 최신 문서 `practice/STABILITY_QA.md`, 증거 `practice/evidence/stability-20261024/`.
 

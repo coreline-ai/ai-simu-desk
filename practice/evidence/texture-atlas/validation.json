@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "node": "22.23.4",
+  "rootTest": {
+    "command": "npm test",
+    "pass": 537,
+    "fail": 0,
+    "durationMs": 2245065.214458,
+    "logSha256": "1f3908e3e2373ebb9b1a647283e7136719bf90fcfcdc2bc3b4d727e27b0d7996"
+  },
+  "practiceTest": {
+    "command": "npm run test:practice",
+    "pass": 35,
+    "fail": 0,
+    "logSha256": "29d0a6e3b90cdee171ae91949d16fa8226d792986a90c050e5a5926dac37242b"
+  },
+  "checks": {
+    "typecheck": true,
+    "boundaries": true,
+    "checkProduct": true,
+    "buildPractice": true,
+    "diffCheck": true,
+    "manifestExact": true,
+    "contactScenePixelPairsExact": 14,
+    "performanceScenePixelPairsExact": 12,
+    "coldTextureGrowthGate": true,
+    "actual20Minutes": true,
+    "naturalReturn": true,
+    "threeContextEpochsExactAndCompact": true
+  },
+  "resourceResult": {
+    "oldPeakTextures": 65,
+    "newPeakTextures": 56,
+    "nativeObjectsFewer": 9,
+    "oldPayloadBytes": 10240,
+    "newPayloadBytes": 10240,
+    "ramOrVramSavingClaim": false
+  },
+  "limits": [
+    "Old two-hour raw passed:false is preserved and is not a new two-hour test.",
+    "Final ordinary run is20minutes; simulated time is369.3seconds with sparse RAF.",
+    "No real-device mobile, normal60FPS, all-frame contact, GPU memory/RSS/thermal or guaranteed CPU saving.",
+    "Full npm test ran during some browser samples.",
+    "Legacy generated numeric evidence changed only timestamps/durations; exact results verified and historical file restored."
+  ]
+}

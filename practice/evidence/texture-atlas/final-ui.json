@@ -1,0 +1,34 @@
+{
+  "evening": {
+    "lighting": "evening",
+    "textures": 56,
+    "quality": "balanced",
+    "violations": []
+  },
+  "final": {
+    "scenario": {
+      "phase": "playing",
+      "id": "daily",
+      "pending": null,
+      "label": "자유로운 하루",
+      "participants": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "step": null,
+      "total": null,
+      "stage": null,
+      "error": "",
+      "canRestart": true
+    },
+    "time": 419.66666666661365,
+    "speed": 1,
+    "quality": "balanced",
+    "textures": 56,
+    "reset": 0,
+    "hasReviewFrames": false
+  }
+}

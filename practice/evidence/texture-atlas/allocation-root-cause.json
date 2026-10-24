@@ -1,0 +1,255 @@
+{
+  "method": "Temporary locally bundled inventory + native WebGL create/delete/storage wrappers. Diagnostic fixture is not shipped and is not used for performance timing. Same current assets/clock; daily advanced to240 simulated seconds, not 240 wall seconds.",
+  "baseline": "8c47ad9 practice build",
+  "baselineInitialCount": 55,
+  "baselinePeakCount": 65,
+  "baselineChanges": [
+    {
+      "simulationSeconds": 4.999999999999988,
+      "count": 56,
+      "newAllocations": [
+        {
+          "handle": 82,
+          "uuid": "34026ed7-bee8-4ed3-adb5-2606c0bf6bd4",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_R"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "simulationSeconds": 22.000000000000032,
+      "count": 61,
+      "newAllocations": [
+        {
+          "handle": 83,
+          "uuid": "4b6d40b6-f143-4ce4-9556-76d428ba72e8",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_L"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        },
+        {
+          "handle": 84,
+          "uuid": "70fecc06-7af4-4ce8-b6aa-439a34e53bf0",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_R"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        },
+        {
+          "handle": 85,
+          "uuid": "001b1fd3-8c99-4ee3-bc55-d594cda312c9",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_L"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        },
+        {
+          "handle": 86,
+          "uuid": "ae3e27b5-4568-4391-9db0-74a7b4ab1739",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_R"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        },
+        {
+          "handle": 87,
+          "uuid": "dc3d1294-a0d1-4906-9d09-a768c0e74f72",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_L"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "simulationSeconds": 45.99999999999867,
+      "count": 62,
+      "newAllocations": [
+        {
+          "handle": 88,
+          "uuid": "9a14fe13-5950-46be-a639-39df1edd6533",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_R"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "simulationSeconds": 107.99999999999515,
+      "count": 65,
+      "newAllocations": [
+        {
+          "handle": 89,
+          "uuid": "156432ab-4d54-4aa4-b85a-74002f711337",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_L"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        },
+        {
+          "handle": 90,
+          "uuid": "91db35ab-9e12-429f-a9ec-d9ed18c1dda9",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_L"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        },
+        {
+          "handle": 91,
+          "uuid": "681c75b6-e594-4b25-a38e-a0a238fe6ef4",
+          "w": 8,
+          "h": 8,
+          "type": 1015,
+          "format": 1023,
+          "owners": [
+            "skeleton:ContinuousHandSkin_R"
+          ],
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 8,
+              "h": 8,
+              "format": 34836
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "candidateChanges": [
+    {
+      "simulationSeconds": 0,
+      "count": 55,
+      "atlas": []
+    },
+    {
+      "simulationSeconds": 4.999999999999988,
+      "count": 56,
+      "atlas": [
+        {
+          "name": "LegacyHandBoneAtlas",
+          "w": 4,
+          "h": 160,
+          "type": 1015,
+          "format": 1023,
+          "ownerCount": 10,
+          "handle": 82,
+          "nativeStorage": [
+            {
+              "kind": "texStorage2D",
+              "w": 4,
+              "h": 160,
+              "format": 34836
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "confirmedCause": "Ten original legacy HandSkin skeletons allocate one8x8 RGBA Float32 palette on first visible fallback render. At old soak initial simulation12.28s, one was already resident (56); remaining9 brought count65. These were not image asset copies or unbounded growth.",
+  "improvement": "Opt-in to one4x160 standard bone-matrix texture for the same160 legacy bones. No preloading. No custom shader. Ten8x8 palettes (10,240 payload bytes) become one4x160 (10,240 bytes). Expected peak65→56; count reduction is not VRAM/RAM-byte saving.",
+  "tradeoff": "When only one fallback hand is visible, the shared upload can be10KiB instead of1KiB. The final implementation only recomputes visible legacy skeletons, not all160 pool bones. Fewer texture handles is not guaranteed whole-application CPU/RAM saving."
+}

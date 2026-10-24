@@ -71,7 +71,7 @@ function failure(){
 function mountRuntime(model,meta){
  const hair=installMinHair(model);
  let fill,runtime;
- try{fill=installHairFill(model);runtime=createTeamRuntime(model,meta,{auto:false,natural:true,enriched:true,expressive:true,interaction:true,refined:true,grounded:true,personalMotion:true,personalities:true,anatomicalActors:ids});}
+ try{fill=installHairFill(model);runtime=createTeamRuntime(model,meta,{auto:false,natural:true,enriched:true,expressive:true,interaction:true,refined:true,grounded:true,personalMotion:true,personalities:true,anatomicalActors:ids,sharedLegacyHandTexture:true});}
  catch(error){fill?.dispose();hair.dispose();throw error;}
  const dispose=runtime.dispose.bind(runtime);
  runtime.dispose=()=>{try{dispose();}finally{fill.dispose();hair.dispose();}};

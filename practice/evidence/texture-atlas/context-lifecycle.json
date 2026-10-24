@@ -1,0 +1,141 @@
+{
+  "method": "Three actual WebGL restore3epochs in a temporary QA fixture that suppresses practice dispose-on-loss. Same pose/same pixel+packet hash; then ordinary practice failure cleanup+2D task. Not a production restore-button feature.",
+  "before": {
+    "pixels": "bb0e5341",
+    "time": 3.9999999999999907,
+    "textures": 56,
+    "atlas": [
+      {
+        "w": 4,
+        "h": 160,
+        "allocated": true
+      }
+    ],
+    "cup": {
+      "state": "sip",
+      "recipe": {
+        "progress": 0.3686868686868689,
+        "amount": 1,
+        "support": 1,
+        "phase": "sip"
+      },
+      "duration": 3.3,
+      "time": 1.217,
+      "owner": "hand",
+      "events": 1,
+      "done": 0,
+      "returning": false,
+      "handError": 0,
+      "cupCount": 1
+    },
+    "reset": 0,
+    "packetHash": "dd91f80763769dffb6d1ba6148c7f852e2e518f7aec207b4b570fba36ee96c5f"
+  },
+  "epochs": [
+    {
+      "pixels": "bb0e5341",
+      "time": 3.9999999999999907,
+      "textures": 50,
+      "atlas": [
+        {
+          "w": 4,
+          "h": 160,
+          "allocated": true
+        }
+      ],
+      "cup": {
+        "state": "sip",
+        "recipe": {
+          "progress": 0.3686868686868689,
+          "amount": 1,
+          "support": 1,
+          "phase": "sip"
+        },
+        "duration": 3.3,
+        "time": 1.217,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "reset": 0,
+      "packetHash": "dd91f80763769dffb6d1ba6148c7f852e2e518f7aec207b4b570fba36ee96c5f",
+      "samePixels": true,
+      "samePacket": true
+    },
+    {
+      "pixels": "bb0e5341",
+      "time": 3.9999999999999907,
+      "textures": 50,
+      "atlas": [
+        {
+          "w": 4,
+          "h": 160,
+          "allocated": true
+        }
+      ],
+      "cup": {
+        "state": "sip",
+        "recipe": {
+          "progress": 0.3686868686868689,
+          "amount": 1,
+          "support": 1,
+          "phase": "sip"
+        },
+        "duration": 3.3,
+        "time": 1.217,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "reset": 0,
+      "packetHash": "dd91f80763769dffb6d1ba6148c7f852e2e518f7aec207b4b570fba36ee96c5f",
+      "samePixels": true,
+      "samePacket": true
+    },
+    {
+      "pixels": "bb0e5341",
+      "time": 3.9999999999999907,
+      "textures": 50,
+      "atlas": [
+        {
+          "w": 4,
+          "h": 160,
+          "allocated": true
+        }
+      ],
+      "cup": {
+        "state": "sip",
+        "recipe": {
+          "progress": 0.3686868686868689,
+          "amount": 1,
+          "support": 1,
+          "phase": "sip"
+        },
+        "duration": 3.3,
+        "time": 1.217,
+        "owner": "hand",
+        "events": 1,
+        "done": 0,
+        "returning": false,
+        "handError": 0,
+        "cupCount": 1
+      },
+      "reset": 0,
+      "packetHash": "dd91f80763769dffb6d1ba6148c7f852e2e518f7aec207b4b570fba36ee96c5f",
+      "samePixels": true,
+      "samePacket": true
+    }
+  ],
+  "fallback": {
+    "canvas": 0,
+    "sceneReleased": true,
+    "fallback": true,
+    "result": "done"
+  }
+}
