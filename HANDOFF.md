@@ -4,7 +4,7 @@
 
 ## 최신 후속 — practice 장시간 검수·Git 전달
 
-2026-10-24 사용자 승인: 남은 검수·문서·main 커밋/푸시 진행. **원격 사이트 배포 금지**, 원본4180/DB/managed release 유지. 최신 문서 `practice/STABILITY_QA.md`, 증거 `practice/evidence/stability-20261024/`.
+2026-10-24 사용자 승인으로 남은 검수·문서 정리와 main 소스 전달 완료. 소스/검수 커밋 `5370efc`의 origin/main 동일 해시·clean tree를 확인했고, 이 완료 기록은 후속 문서 커밋으로 보존한다. **원격 사이트 배포 금지**, 원본4180/DB/managed release 유지. 최신 문서 `practice/STABILITY_QA.md`, 증거 `practice/evidence/stability-20261024/`.
 
 - 최신 머리 보완과 계산 최적화 빌드: 전체537/537, 별도practice30/30, 타입/경계/check:product/동일 빌드 통과.
 - 일반1배 실제7,201.421초 실행, 오류/WebGL손실/hidden/violations 없음. 시뮬레이션 약4,086.52초,96,697회 그리기. 중단 후327.002초 자연 복귀, 전원 home/소품desk/예약해제/reset0.
