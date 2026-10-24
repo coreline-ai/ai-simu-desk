@@ -1,0 +1,478 @@
+{
+  "at": "2026-10-24T15:21:09+09:00",
+  "baseline": "b963d1795895daa1658b334858cf30f49fe9d267",
+  "optimized": "14e7c9ece22e1e5bf9e96ef64d441b27c9161f13",
+  "environment": {
+    "browser": "Ego Lite Chromium 154",
+    "renderer": "ANGLE Metal Apple M4",
+    "quality": "balanced",
+    "canvas": [
+      1650,
+      1110
+    ],
+    "dpr": 1.5
+  },
+  "quality": {
+    "cases": 35,
+    "exactMatches": 35,
+    "comparisons": [
+      {
+        "kind": "main",
+        "name": "idle",
+        "time": 0,
+        "focus": "room",
+        "framebufferHash": "cd281cfb",
+        "runtimeSha256": "c665e8843b6322cb72ab3ac9d9084cbd8593d4c9f33862d4bedb5e8b2b6d6c24",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 2,
+        "focus": "room",
+        "framebufferHash": "996ee69c",
+        "runtimeSha256": "b63eb1b1540ea2284fefe0839dd36028c261c7f8f351d7cc93a5381cc517d108",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 4,
+        "focus": "room",
+        "framebufferHash": "19e27a21",
+        "runtimeSha256": "08090d873fa2315b080362241564e85936a3625e3d8f9bd0c6efd22683dc8b8f",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 8,
+        "focus": "room",
+        "framebufferHash": "9f9ff8bd",
+        "runtimeSha256": "23f980498bb8887b44b3d9ebb0e32383f1f221f8007807d9ecdbadc42e0b1737",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:nara",
+        "framebufferHash": "b131e4",
+        "runtimeSha256": "4b6de145e86b67255dc23072fa3961b2580d4b80a142df19c57b9af14a88cabe",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:sora",
+        "framebufferHash": "a5899420",
+        "runtimeSha256": "4b6de145e86b67255dc23072fa3961b2580d4b80a142df19c57b9af14a88cabe",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:jun",
+        "framebufferHash": "8fc8c699",
+        "runtimeSha256": "4b6de145e86b67255dc23072fa3961b2580d4b80a142df19c57b9af14a88cabe",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:min",
+        "framebufferHash": "5759d251",
+        "runtimeSha256": "4b6de145e86b67255dc23072fa3961b2580d4b80a142df19c57b9af14a88cabe",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:leo",
+        "framebufferHash": "fbc3b93f",
+        "runtimeSha256": "4b6de145e86b67255dc23072fa3961b2580d4b80a142df19c57b9af14a88cabe",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles1",
+        "time": 5,
+        "focus": "hands:nara",
+        "framebufferHash": "ce0801f0",
+        "runtimeSha256": "ca744e1c63df080f916fbadf166c42c2a715e0c1b7fc8efdd54a883023433edc",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles1",
+        "time": 5,
+        "focus": "hands:sora",
+        "framebufferHash": "ccb7fc96",
+        "runtimeSha256": "ca744e1c63df080f916fbadf166c42c2a715e0c1b7fc8efdd54a883023433edc",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles1",
+        "time": 5,
+        "focus": "hands:jun",
+        "framebufferHash": "2ecabb2",
+        "runtimeSha256": "ca744e1c63df080f916fbadf166c42c2a715e0c1b7fc8efdd54a883023433edc",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles1",
+        "time": 5,
+        "focus": "hands:min",
+        "framebufferHash": "697c316d",
+        "runtimeSha256": "ca744e1c63df080f916fbadf166c42c2a715e0c1b7fc8efdd54a883023433edc",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles1",
+        "time": 5,
+        "focus": "hands:leo",
+        "framebufferHash": "522040a2",
+        "runtimeSha256": "ca744e1c63df080f916fbadf166c42c2a715e0c1b7fc8efdd54a883023433edc",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles2",
+        "time": 4,
+        "focus": "hands:nara",
+        "framebufferHash": "a9ac697d",
+        "runtimeSha256": "18b07cf06909c8695e7566ef76686f1aaeae1ec2e2126963712e5116d02e544f",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles2",
+        "time": 4,
+        "focus": "hands:sora",
+        "framebufferHash": "4a716e42",
+        "runtimeSha256": "18b07cf06909c8695e7566ef76686f1aaeae1ec2e2126963712e5116d02e544f",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles2",
+        "time": 4,
+        "focus": "hands:jun",
+        "framebufferHash": "202e8bfd",
+        "runtimeSha256": "18b07cf06909c8695e7566ef76686f1aaeae1ec2e2126963712e5116d02e544f",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles2",
+        "time": 4,
+        "focus": "hands:min",
+        "framebufferHash": "e0292213",
+        "runtimeSha256": "18b07cf06909c8695e7566ef76686f1aaeae1ec2e2126963712e5116d02e544f",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "roles2",
+        "time": 4,
+        "focus": "hands:leo",
+        "framebufferHash": "803480b5",
+        "runtimeSha256": "18b07cf06909c8695e7566ef76686f1aaeae1ec2e2126963712e5116d02e544f",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "cups",
+        "time": 3,
+        "focus": "hands:nara",
+        "framebufferHash": "c82194da",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "cups",
+        "time": 3,
+        "focus": "hands:sora",
+        "framebufferHash": "e911291a",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "cups",
+        "time": 3,
+        "focus": "hands:jun",
+        "framebufferHash": "f587d741",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "cups",
+        "time": 3,
+        "focus": "hands:min",
+        "framebufferHash": "73c24da",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "cups",
+        "time": 3,
+        "focus": "hands:leo",
+        "framebufferHash": "c78248ea",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "glasses",
+        "time": 4,
+        "focus": "hands:jun",
+        "framebufferHash": "12269e76",
+        "runtimeSha256": "b2357ba12013254c2b59091431a1100f44cb5c46cb83909d03ae398f8c1d75ca",
+        "identical": true
+      },
+      {
+        "kind": "main",
+        "name": "transfer",
+        "time": 25,
+        "focus": "room",
+        "framebufferHash": "ad165b04",
+        "runtimeSha256": "ac3b7f09967b222d2781085c63d4be6fca14899b1eef256fb411712aa44798b0",
+        "identical": true
+      },
+      {
+        "kind": "active",
+        "name": "roles1",
+        "time": 2.5,
+        "focus": "hands:jun",
+        "framebufferHash": "1db8d8c9",
+        "runtimeSha256": "eb8ac061d04240b33171889f1dbdbab27659a126060aeb55296cabd2260ee5bc",
+        "identical": true
+      },
+      {
+        "kind": "active",
+        "name": "roles0",
+        "time": 2.3,
+        "focus": "hands:jun",
+        "framebufferHash": "cb8ea7f2",
+        "runtimeSha256": "e5a17ca68cfa63d022ee1c14c0954101273809e0a6ce8f006834a0e79fed4585",
+        "identical": true
+      },
+      {
+        "kind": "active",
+        "name": "glasses",
+        "time": 1.5,
+        "focus": "hands:jun",
+        "framebufferHash": "f3387f40",
+        "runtimeSha256": "30ef4c35a4932d83a01b953a775d44741606bdd8792fcee3778c35c53f09bcd2",
+        "identical": true
+      },
+      {
+        "kind": "side",
+        "name": "nara",
+        "time": null,
+        "focus": null,
+        "framebufferHash": "a48ced5a",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "side",
+        "name": "sora",
+        "time": null,
+        "focus": null,
+        "framebufferHash": "60cbbcd4",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "side",
+        "name": "jun",
+        "time": null,
+        "focus": null,
+        "framebufferHash": "904ff43d",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "side",
+        "name": "min",
+        "time": null,
+        "focus": null,
+        "framebufferHash": "c56fc896",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "side",
+        "name": "leo",
+        "time": null,
+        "focus": null,
+        "framebufferHash": "216d831c",
+        "runtimeSha256": "b7538d7947a7f74da8f4d9071107e9a1a14a48ec0fa1a90b221c8fd34c210a2e",
+        "identical": true
+      },
+      {
+        "kind": "side",
+        "name": "jun-keyboard",
+        "time": 2.35,
+        "focus": null,
+        "framebufferHash": "4c92bd6f",
+        "runtimeSha256": "099f24eb2b80556e872613423241b10b322407e9fe95d8add0761f23ae10d18f",
+        "identical": true
+      }
+    ],
+    "activeContactChecks": [
+      {
+        "kind": "jun-mouse",
+        "time": 2.5,
+        "maxPadTargetErrorMm": 0.4547481256767497,
+        "surface": "actual JunMouseShell raycast + existing 4mm pad allowance"
+      },
+      {
+        "kind": "jun-glasses",
+        "time": 1.5,
+        "stage": "adjust",
+        "worldPadErrorMm": 6.403362282114315e-13
+      },
+      {
+        "kind": "jun-keyboard",
+        "time": 2.35,
+        "presses": [
+          {
+            "side": "L",
+            "finger": "index",
+            "errorMm": 0.6301397436651496
+          }
+        ]
+      }
+    ],
+    "limits": [
+      "Sampled equality, not every-frame/all-GPU proof.",
+      "Existing simple legacy fists and occlusion/skin overlap remain; no new anatomy claim."
+    ]
+  },
+  "fixedCpu": {
+    "idle": {
+      "baselineMedianMs": 374.2249999999956,
+      "optimizedMedianMs": 330.23500000000183,
+      "medianReductionPercent": 11.754960251184254,
+      "pairedReductionPercent": [
+        21.80105551473177,
+        -18.190960888735287,
+        -5.6613288537934014
+      ],
+      "stableDirection": false,
+      "baselineRetainedHeapMiB": 31.92571258544922,
+      "optimizedRetainedHeapMiB": 31.77081298828125,
+      "baselineRssMiB": 310.265625,
+      "optimizedRssMiB": 306.359375
+    },
+    "roles1": {
+      "baselineMedianMs": 494.3309999999883,
+      "optimizedMedianMs": 413.0210000000005,
+      "medianReductionPercent": 16.44849301378827,
+      "pairedReductionPercent": [
+        16.44849301378827,
+        16.16613609784968,
+        35.3534811921656
+      ],
+      "stableDirection": true,
+      "baselineRetainedHeapMiB": 31.941524505615234,
+      "optimizedRetainedHeapMiB": 31.947303771972656,
+      "baselineRssMiB": 310.46875,
+      "optimizedRssMiB": 369.296875
+    }
+  },
+  "passiveCpu": {
+    "idle": {
+      "baseline": {
+        "medianCpuPercentOneCore": 9.967897287552795,
+        "rafHzRange": [
+          1.2586532410320956,
+          2.003946232566353
+        ],
+        "medianJsHeapMiB": 47.97275924682617,
+        "medianRssMiB": 204.15625
+      },
+      "optimized": {
+        "medianCpuPercentOneCore": 11.00186342370235,
+        "rafHzRange": [
+          1.591748376422697,
+          2.57288500810094
+        ],
+        "medianJsHeapMiB": 48.1093864440918,
+        "medianRssMiB": 201.765625
+      }
+    },
+    "roles1": {
+      "baseline": {
+        "medianCpuPercentOneCore": 14.736079337724458,
+        "rafHzRange": [
+          1.8250395425101862,
+          2.1307982297983936
+        ],
+        "medianJsHeapMiB": 44.1247673034668,
+        "medianRssMiB": 247.9375
+      },
+      "optimized": {
+        "medianCpuPercentOneCore": 10.936512649285994,
+        "rafHzRange": [
+          1.2703857208500682,
+          2.0282393322412045
+        ],
+        "medianJsHeapMiB": 43.838096618652344,
+        "medianRssMiB": 186.34375
+      }
+    },
+    "offscreen": {
+      "baseline": {
+        "medianCpuPercentOneCore": 9.322281384261283,
+        "rafHzRange": [
+          1.0998680158216185,
+          1.1031613452306082
+        ],
+        "medianJsHeapMiB": 53.12450408935547,
+        "medianRssMiB": 295.09375
+      },
+      "optimized": {
+        "medianCpuPercentOneCore": 5.640390079396284,
+        "rafHzRange": [
+          0.9790643408335056,
+          1.1533265232193457
+        ],
+        "medianJsHeapMiB": 44.63173294067383,
+        "medianRssMiB": 284.015625
+      }
+    }
+  },
+  "limits": [
+    "Actual automation RAF varied about 1-2.6Hz. Raw CPU% is not an improvement-rate comparison or normal foreground claim.",
+    "CPU covers page renderer only, excluding GPU/browser/server/other renderers.",
+    "RSS includes shared resident pages; no stable RAM reduction or leak-free soak claim.",
+    "Aborted unequal-RAF first attempt is excluded. No Chrome restart or security weakening."
+  ],
+  "sourceSha256": {
+    "pilot-3d/activities/gaze.mjs": "4052c0cbaf68516f641c213a9d27a56702a61e9d64d69355f3f5c9f699b8aaaa",
+    "pilot-3d/activities/hand-grips.mjs": "2964a477bd5107cd9428d0950f525cb58c7ca379ab58c91333857f3223dfa9a0",
+    "pilot-3d/character-personalities/director.mjs": "cf345877aa7ce5368a1a917e70a633d71b9a78976de940e37f997b848fb483ed",
+    "pilot-3d/hand-v14/adapter.mjs": "f6378efdf020e397e1d8c33dabaebbcfb787aa9b7294309d7276675296f72610",
+    "pilot-3d/sample/quality-view.mjs": "e91a664fbb0451c6824d005ada19117480ae3ed80fa60a02585d9c3de4ffb09b",
+    "pilot-3d/sample/runtime.mjs": "b7199854770d9adea38d55900c727fc5a89468d035ce5661a29be9bbf84729d8",
+    "product/tests/resource-quality.test.mjs": "bc85a23994ee5e109d23dfccec72a521282c760f59351e124c936aa8bd96c3d3",
+    "scripts/qa/resource-cpu.mjs": "28e056df8c12ebc16a86e267d7d5af747757d4ed01b4ed0da113765ddea0d0b2",
+    "scripts/qa/resource-equivalence.mjs": "5b217097d949d946361c24dad95b356b356b1302ce7db46fff31770fdfd82ec5",
+    "scripts/qa/resource-fixture.mjs": "26a8cdb5602ce77c4e5a47c11817f8e79dbe864caafbbbab4ff93e78642d70e9",
+    "scripts/qa/build-resource-fixture.mjs": "6e0bac590e32ab2905e776bb4cfec884ce8ad8e0e27e53d7e9f2a895296dd34b"
+  }
+}

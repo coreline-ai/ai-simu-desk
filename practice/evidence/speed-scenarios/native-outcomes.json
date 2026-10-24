@@ -1,0 +1,273 @@
+{
+  "pair": [
+    {
+      "cue": "responsive-sofa-3",
+      "phase": "done",
+      "status": "complete",
+      "history": [
+        "greet",
+        "respond",
+        "reply",
+        "reflect",
+        "explain",
+        "confirm",
+        "relax"
+      ],
+      "presented": {
+        "nara": 0,
+        "sora": 0
+      },
+      "variant": 2,
+      "leader": "sora",
+      "speakers": [
+        "sora",
+        "nara"
+      ],
+      "ids": [
+        "nara",
+        "sora"
+      ]
+    },
+    {
+      "cue": "responsive-sofa-23",
+      "phase": "done",
+      "status": "complete",
+      "history": [
+        "greet",
+        "respond",
+        "reflect",
+        "explain",
+        "reply",
+        "confirm",
+        "relax"
+      ],
+      "presented": {
+        "nara": 0,
+        "jun": 0
+      },
+      "variant": 0,
+      "leader": "nara",
+      "speakers": [
+        "nara",
+        "jun"
+      ],
+      "ids": [
+        "nara",
+        "jun"
+      ]
+    }
+  ],
+  "group": [
+    {
+      "ids": [
+        "nara",
+        "sora",
+        "jun"
+      ],
+      "status": "complete",
+      "reason": "3인 회의 완료",
+      "spoke": [
+        "nara",
+        "sora",
+        "jun"
+      ],
+      "noted": [
+        "nara",
+        "sora",
+        "jun"
+      ],
+      "seconds": 185.35000000003964
+    },
+    {
+      "ids": [
+        "nara",
+        "sora",
+        "jun"
+      ],
+      "status": "complete",
+      "reason": "3인 회의 완료",
+      "spoke": [
+        "nara",
+        "sora",
+        "jun"
+      ],
+      "noted": [
+        "nara",
+        "sora",
+        "jun"
+      ],
+      "seconds": 185.35000000003964
+    },
+    {
+      "ids": [
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "status": "complete",
+      "reason": "4인 회의 완료",
+      "spoke": [
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "noted": [
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "seconds": 244.20000000008648
+    }
+  ],
+  "huddles": [
+    {
+      "ids": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "review": true,
+      "status": "complete",
+      "spoke": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "seconds": 161.06666666668698
+    },
+    {
+      "ids": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "review": true,
+      "status": "complete",
+      "spoke": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "seconds": 161.06666666668698
+    }
+  ],
+  "coffee": {
+    "counts": {
+      "nara": 1,
+      "sora": 1,
+      "jun": 1,
+      "min": 1,
+      "leo": 1
+    },
+    "presses": 5,
+    "handError": 1.2008898127460164e-15,
+    "active": [],
+    "history": [
+      {
+        "id": "nara",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 1305.2166666658084
+      },
+      {
+        "id": "sora",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 1366.166666665753
+      },
+      {
+        "id": "jun",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 1423.366666665701
+      },
+      {
+        "id": "min",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 1471.0999999989908
+      },
+      {
+        "id": "leo",
+        "status": "complete",
+        "reason": "",
+        "stages": [
+          "queued",
+          "pickup",
+          "out",
+          "place",
+          "press",
+          "brew",
+          "retrieve",
+          "home",
+          "putback"
+        ],
+        "time": 1508.1166666656238
+      }
+    ],
+    "flow": false
+  },
+  "scenario": {
+    "current": null,
+    "last": {
+      "name": "break",
+      "status": "complete",
+      "steps": 4
+    }
+  }
+}

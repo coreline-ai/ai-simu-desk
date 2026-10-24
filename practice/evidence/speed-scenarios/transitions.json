@@ -1,0 +1,92 @@
+{
+  "paused": {
+    "pending": {
+      "phase": "returning",
+      "id": "cup",
+      "pending": "pair",
+      "label": "선택 동료의 커피",
+      "participants": [
+        "nara"
+      ],
+      "step": null,
+      "total": null,
+      "stage": null,
+      "error": "",
+      "canRestart": true
+    },
+    "paused": true,
+    "speed": 2,
+    "clockFrozen": true,
+    "cupBefore": "hand",
+    "cupAfter": "hand",
+    "resetTimes": 0
+  },
+  "started": {
+    "state": {
+      "phase": "playing",
+      "id": "pair",
+      "pending": null,
+      "label": "둘이 소파에서 대화",
+      "participants": [
+        "nara",
+        "sora"
+      ],
+      "step": null,
+      "total": null,
+      "stage": null,
+      "error": "",
+      "canRestart": true
+    },
+    "cup": "desk"
+  },
+  "final": {
+    "state": {
+      "phase": "idle",
+      "id": null,
+      "pending": null,
+      "label": "업무 자리",
+      "participants": [],
+      "step": null,
+      "total": null,
+      "stage": null,
+      "error": "",
+      "canRestart": true
+    },
+    "positions": {
+      "nara": [
+        -4.8,
+        0,
+        -3.6
+      ],
+      "sora": [
+        -2.4,
+        0,
+        -3.6
+      ],
+      "jun": [
+        0,
+        0,
+        -3.6
+      ],
+      "min": [
+        2.3999999999999995,
+        0,
+        -3.6
+      ],
+      "leo": [
+        4.8,
+        0,
+        -3.6
+      ]
+    },
+    "claims": {},
+    "cups": [
+      "desk",
+      "desk",
+      "desk",
+      "desk",
+      "desk"
+    ],
+    "resetTimes": 0
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="다섯 동료가 살아 움직이는 3D 사무실에서 역할별 업무 흐름을 체험하는 규칙 기반 실습 공간. 로그인이나 외부 AI 호출 없이 동작합니다.">
+<meta name="theme-color" content="#f7f5ed"><title>Simu Desk · 작은 팀의 작업실</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23425a45'/%3E%3Cpath d='M7 14h18v4H7zm3 4h2v8h-2zm10 0h2v8h-2zM12 6h10v6H12z' fill='%23f7f5ed'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="__STYLE__"><script type="module" src="__SCRIPT__"></script>
+</head>
+<body>
+<a class="skip" href="#request">실습 요청으로 건너뛰기</a>
+<header class="topbar"><a class="brand" href="./" aria-label="Simu Desk 처음으로"><span class="brand-mark" aria-hidden="true">S<span>·</span></span><span>SIMU DESK<small>작은 팀의 작업실</small></span></a><div class="header-note"><span class="live-dot" aria-hidden="true"></span>브라우저에서 만나는 다섯 동료</div><span class="edition">PRACTICE EDITION</span></header>
+<main>
+<section class="intro"><div><p class="eyebrow">FIVE PEOPLE. DIFFERENT RHYTHMS.</p><h1>같은 공간, 다섯 가지 일하는 방식.</h1><p>작업실을 둘러보고 동료에게 작은 업무를 맡겨보세요.</p></div><p class="simulation-note">규칙 기반 시뮬레이션<br><strong>실제 생성형 AI 서비스가 아닙니다.</strong></p></section>
+<div class="workspace">
+<section class="office" aria-label="3D 작업실">
+ <div class="scene-top"><span><i class="live-dot" aria-hidden="true"></i><span id="scene-status" role="status">작업실을 준비하고 있어요</span></span><div class="segmented" aria-label="시간대"><button id="day" aria-pressed="true">낮</button><button id="evening" aria-pressed="false">저녁</button></div></div>
+ <div class="stage-wrap"><img id="poster" src="__POSTER__" alt="나라, 소라, 준, 민, 레오의 책상과 회의·휴식 공간이 있는 따뜻한 사무실" fetchpriority="high"><div id="stage"></div><div id="loading" role="status">3D 사무실을 불러오는 중…</div></div>
+ <div id="fallback" class="fallback" hidden>이 브라우저에서는 3D를 표시하지 못했습니다. 그래픽 가속을 확인한 뒤 새로고침해 주세요. 아래 업무 실습은 계속 이용할 수 있어요.</div>
+ <div class="scene-controls"><div class="control-group"><button id="room" data-scene disabled>전체 보기</button><button id="close" data-scene disabled>동료 가까이</button><button id="hands" data-scene disabled>손·소품 보기</button></div><div class="playback"><div class="speed-control" role="group" aria-label="캐릭터 재생 속도"><span>속도</span><button type="button" data-speed="0.5" data-scene disabled aria-pressed="false">0.5×</button><button type="button" data-speed="1" data-scene disabled aria-pressed="true">1×</button><button type="button" data-speed="1.5" data-scene disabled aria-pressed="false">1.5×</button><button type="button" data-speed="2" data-scene disabled aria-pressed="false">2×</button></div><button id="pause" data-scene disabled aria-pressed="false">일시정지</button></div></div>
+ <div class="scene-caption"><span>드래그로 회전 · 스크롤로 확대</span><span id="motion-note">새로고침해도 자동으로 움직여요</span></div>
+</section>
+<aside class="practice-panel" aria-labelledby="practice-title">
+ <div class="panel-title"><p class="eyebrow">YOUR FIRST TASK</p><h2 id="practice-title">누구와 함께할까요?</h2><p>동료의 역할에 따라 예시 결과가 달라져요.</p></div>
+ <div id="team" class="team" role="group" aria-label="실습 동료 선택"></div>
+ <form id="request-form"><div class="field-label"><label for="request">작은 업무를 맡겨보세요</label><span id="count">0 / 1,200</span></div><textarea id="request" rows="3" maxlength="1200" minlength="2" required placeholder="예: 독서 모임 모집 페이지를 기획해줘"></textarea><button type="button" id="example" class="example">예시 요청 넣기 ↗</button><p id="form-error" role="alert" class="error"></p><button id="submit" type="submit" class="primary">나라에게 업무 맡기기 <span aria-hidden="true">↗</span></button></form>
+ <div class="result-heading"><h3>실습 노트</h3><button id="reset" type="button" class="text-button">초기화</button></div>
+ <div id="progress" role="status" aria-live="polite">업무를 맡기면 분석 → 작성 → 확인 순서로 이어집니다.</div><pre id="result" hidden tabindex="0" aria-label="규칙 기반 예시 결과"></pre>
+ <p class="privacy-note">로그인·외부 AI 호출·서버 저장 없음.<br>입력과 결과는 이 탭의 메모리에만 남고, 새로고침하면 사라집니다. 개인정보나 민감한 정보는 입력하지 마세요.</p>
+</aside>
+</div>
+<section class="activity-bar" aria-label="동료 활동 체험"><div><strong>잠깐, 다른 리듬으로.</strong><span>업무 실습과 별개로 캐릭터 동작을 살펴보세요.</span></div><div class="control-group"><button id="roles" data-scene disabled>각자의 업무</button><button id="cup" data-scene disabled>선택 동료의 커피</button><button id="daily" data-scene disabled>자유로운 하루</button></div></section>
+<section class="scenario-library" aria-labelledby="scenario-title">
+ <div class="library-heading"><div><p class="eyebrow">CHOOSE A MOMENT</p><h2 id="scenario-title">다른 장면을 만나보세요.</h2><p>새 장면은 현재 동작과 소품 정리를 마친 뒤 시작합니다. 실습 입력과 결과는 그대로 남아요.</p></div><label class="peer-field" for="peer">함께할 상대 <select id="peer" aria-label="대화·자료 전달 상대"></select></label></div>
+ <div class="scenario-state"><div><strong id="scenario-current">작업실 준비 중</strong><p id="scenario-progress" role="status" aria-live="polite">사무실을 불러오면 자유로운 하루가 자동으로 시작됩니다.</p></div><div class="control-group"><button id="scenario-restart" data-scene disabled>다시 시작</button><button id="scenario-stop" data-scene disabled>중단 후 복귀</button></div></div>
+ <div id="scenario-filters" class="scenario-filters" role="group" aria-label="시나리오 분류"></div>
+ <div id="scenario-cards" class="scenario-cards"></div>
+ <p class="scenario-footnote">배속은 3D 동작에만 적용됩니다. 빠른 배속은 연산량이 늘 수 있어요. 일시정지 중에는 복귀도 멈추며, 다시 재생하면 이어집니다.</p>
+</section>
+<footer><span>SIMU DESK / 함께 일하는 장면을 위한 작은 실험</span><span>3D 표시는 기기의 그래픽 자원을 사용합니다. 잠시 쉴 때는 일시정지를 눌러주세요.</span></footer>
+<noscript><p class="fallback">이 실습 공간은 JavaScript가 필요합니다. 현재는 작업실 미리보기만 표시됩니다.</p></noscript>
+</main></body></html>

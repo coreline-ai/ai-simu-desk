@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-24",
+  "scope": "practice-local-only; main source handoff; no remote deployment",
+  "baseCommit": "14e7c9ece22e1e5bf9e96ef64d441b27c9161f13",
+  "modelSha256": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e",
+  "practiceAssets": [
+    {
+      "id": "min-soft-curls",
+      "version": 1,
+      "actor": "min",
+      "source": "original local procedural geometry",
+      "meshes": 2,
+      "textures": 0
+    }
+  ],
+  "tests": {
+    "practice": {
+      "pass": 21,
+      "fail": 0
+    },
+    "minAndSharedRegression": {
+      "pass": 13,
+      "fail": 0
+    },
+    "typecheck": "pass",
+    "boundaries": "pass",
+    "fullNpmTest": "not run"
+  },
+  "webgl": {
+    "method": "Actual WebGL, localhost controlled reviewFrames uses unchanged MotionClock/runtime; not real-time FPS/CPU measurement.",
+    "runs": [
+      {
+        "rate": 0.5,
+        "id": "roles",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      },
+      {
+        "rate": 0.5,
+        "id": "cup",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      },
+      {
+        "rate": 1,
+        "id": "roles",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      },
+      {
+        "rate": 1,
+        "id": "cup",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      },
+      {
+        "rate": 1.5,
+        "id": "roles",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      },
+      {
+        "rate": 1.5,
+        "id": "cup",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      },
+      {
+        "rate": 2,
+        "id": "roles",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      },
+      {
+        "rate": 2,
+        "id": "cup",
+        "complete": true,
+        "home": true,
+        "propsReturned": true,
+        "claimsReleased": true,
+        "violations": []
+      }
+    ],
+    "normalReviewExposed": false,
+    "pausedResultKept": true,
+    "contextLost": {
+      "canvases": 0,
+      "fallback": true,
+      "allSceneDisabled": true,
+      "resultPhase": "done"
+    }
+  },
+  "limitations": [
+    "Existing legacy cup hand shape and arm/prop occlusion remain.",
+    "No new FPS/CPU/RAM measurement, real mobile or long soak.",
+    "Earlier full scenario catalog QA predates Min hair and is not counted again."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "normalInitial": {
+    "time": 0.05,
+    "reviewExposed": false,
+    "hair": {
+      "id": "min-soft-curls",
+      "version": 1,
+      "actor": "min",
+      "source": "original local procedural geometry",
+      "meshes": 2,
+      "textures": 0,
+      "parent": "MinHead",
+      "hidden": [
+        "Min_HairBack",
+        "MinHead_Instances_252"
+      ],
+      "triangles": 7940
+    }
+  },
+  "paused": {
+    "phase": "done",
+    "result": "민의 제안\n\n요청: 독서 모임 모집 페이지를 검수할 체크리스트를 만들어줘\n\n기간 | 실행할 작업 | 완료 기준\n--- | --- | ---\n단계 1 | 검증 범위: 개발 산출물의 정상·오류·취소 흐름을 시험 항목으로 변환 | 재현 입력과 기대 결과 명시\n단계 2 | 권한 검사: 소유자·참여자·보기 전용의 접근 경계 확인 | 다른 공간 정보 노출 없음\n단계 3 | 회귀 검사: 새로고침·중복 요청·작은 화면의 기존 기능 확인 | 결과 보존과 상태 일치 확인\n단계 4 | 검토 인계: 결함·심각도·수정 확인 내용을 최종 정리에 전달 | 미해결 항목과 다음 행동 표시\n\nFake AI 시뮬레이션 · 규칙 기반 초안이며 실제 언어 모델의 추론·검색 결과가 아닙니다.",
+    "paused": true,
+    "speed": 0.5
+  },
+  "queued": {
+    "scenario": {
+      "phase": "returning",
+      "id": "daily",
+      "pending": "roles",
+      "label": "자유로운 하루",
+      "participants": [
+        "nara",
+        "sora",
+        "jun",
+        "min",
+        "leo"
+      ],
+      "step": null,
+      "total": null,
+      "stage": null,
+      "error": "",
+      "canRestart": true
+    },
+    "paused": true,
+    "speed": 2,
+    "resultKept": true
+  },
+  "resumed": {
+    "time": 0.15,
+    "paused": false,
+    "speed": 2,
+    "violations": [],
+    "hair": {
+      "id": "min-soft-curls",
+      "version": 1,
+      "actor": "min",
+      "source": "original local procedural geometry",
+      "meshes": 2,
+      "textures": 0,
+      "parent": "MinHead",
+      "hidden": [
+        "Min_HairBack",
+        "MinHead_Instances_252"
+      ],
+      "triangles": 7940
+    }
+  },
+  "contextLost": {
+    "canvases": 0,
+    "fallback": true,
+    "allSceneDisabled": true,
+    "resultPhase": "done"
+  }
+}

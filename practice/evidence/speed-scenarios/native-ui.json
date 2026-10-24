@@ -1,0 +1,28 @@
+{
+  "normalReviewHook": false,
+  "keyboardRateHalf": true,
+  "held": {
+    "phase": "returning",
+    "speed": 2,
+    "paused": true,
+    "resetTimes": 0,
+    "resultPreserved": true
+  },
+  "filtered": 4,
+  "participants": [
+    "nara",
+    "leo"
+  ],
+  "final": {
+    "phase": "idle",
+    "id": null,
+    "pending": null,
+    "label": "업무 자리",
+    "participants": [],
+    "step": null,
+    "total": null,
+    "stage": null,
+    "error": "",
+    "canRestart": true
+  }
+}

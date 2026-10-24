@@ -1,0 +1,3994 @@
+{
+  "method": "Actual WebGL controlled-clock review, 2x; all scenario phases and full return.",
+  "results": [
+    {
+      "id": "role",
+      "stages": [
+        {
+          "key": "[\"playing\",null,null]",
+          "scenario": {
+            "phase": "playing",
+            "id": "role",
+            "pending": null,
+            "label": "선택 동료의 업무",
+            "participants": [
+              "nara"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 3.9999999999999907,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "role",
+            "pending": null,
+            "label": "선택 동료의 업무",
+            "participants": [
+              "nara"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 16.000000000000373,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "role",
+          "pending": null,
+          "label": "선택 동료의 업무",
+          "participants": [
+            "nara"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 16.000000000000373,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": null
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "pair",
+      "stages": [
+        {
+          "key": "[\"playing\",null,null]",
+          "scenario": {
+            "phase": "playing",
+            "id": "pair",
+            "pending": null,
+            "label": "둘이 소파에서 대화",
+            "participants": [
+              "nara",
+              "sora"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 20.000000000000146,
+          "positions": {
+            "nara": [
+              -5.363733333333332,
+              0,
+              -3.48
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "sofa-0": "nara-sofa",
+            "sofa-1": "sora-sofa",
+            "walkway-0": "nara-sofa"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "pair",
+            "pending": null,
+            "label": "둘이 소파에서 대화",
+            "participants": [
+              "nara",
+              "sora"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 160.00000000001947,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "pair",
+          "pending": null,
+          "label": "둘이 소파에서 대화",
+          "participants": [
+            "nara",
+            "sora"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 160.00000000001947,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": null
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "meeting",
+      "stages": [
+        {
+          "key": "[\"playing\",null,null]",
+          "scenario": {
+            "phase": "playing",
+            "id": "meeting",
+            "pending": null,
+            "label": "짧은 팀 회의",
+            "participants": [
+              "nara",
+              "sora",
+              "jun"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 164.00000000002265,
+          "positions": {
+            "nara": [
+              -5.363733333333332,
+              0,
+              -3.48
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "meeting-0": "nara-group",
+            "meeting-1": "sora-group",
+            "meeting-2": "jun-group",
+            "walkway-0": "nara-group"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "meeting",
+            "pending": null,
+            "label": "짧은 팀 회의",
+            "participants": [
+              "nara",
+              "sora",
+              "jun"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 348.00000000001216,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "meeting",
+          "pending": null,
+          "label": "짧은 팀 회의",
+          "participants": [
+            "nara",
+            "sora",
+            "jun"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 348.00000000001216,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": null
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "board",
+      "stages": [
+        {
+          "key": "[\"playing\",null,null]",
+          "scenario": {
+            "phase": "playing",
+            "id": "board",
+            "pending": null,
+            "label": "함께 보드 검토",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 352.0000000000085,
+          "positions": {
+            "nara": [
+              -5.363733333333332,
+              0,
+              -3.48
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              -0.5335333333333323,
+              0,
+              -3.48
+            ],
+            "min": [
+              1.8262000000000007,
+              0,
+              -3.48
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "huddle-0": "nara-huddle",
+            "huddle-1": "sora-huddle",
+            "huddle-2": "jun-huddle",
+            "huddle-3": "min-huddle",
+            "huddle-4": "leo-huddle",
+            "walkway-0": "nara-huddle",
+            "walkway-1": "jun-huddle",
+            "walkway-2": "min-huddle"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "board",
+            "pending": null,
+            "label": "함께 보드 검토",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 511.999999999863,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "board",
+          "pending": null,
+          "label": "함께 보드 검토",
+          "participants": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 511.999999999863,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": null
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "window",
+      "stages": [
+        {
+          "key": "[\"playing\",null,null]",
+          "scenario": {
+            "phase": "playing",
+            "id": "window",
+            "pending": null,
+            "label": "창가에서 생각 정리",
+            "participants": [
+              "nara"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 515.9999999998594,
+          "positions": {
+            "nara": [
+              -5.363733333333332,
+              0,
+              -3.48
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "window-0": "nara-window",
+            "walkway-0": "nara-window"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "window",
+            "pending": null,
+            "label": "창가에서 생각 정리",
+            "participants": [
+              "nara"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 543.9999999998339,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "window",
+          "pending": null,
+          "label": "창가에서 생각 정리",
+          "participants": [
+            "nara"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 543.9999999998339,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": null
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "rest",
+      "stages": [
+        {
+          "key": "[\"playing\",null,null]",
+          "scenario": {
+            "phase": "playing",
+            "id": "rest",
+            "pending": null,
+            "label": "가벼운 스트레칭",
+            "participants": [
+              "nara"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 547.9999999998303,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.48
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "rest",
+            "pending": null,
+            "label": "가벼운 스트레칭",
+            "participants": [
+              "nara"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 555.999999999823,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": null
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "rest",
+          "pending": null,
+          "label": "가벼운 스트레칭",
+          "participants": [
+            "nara"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 555.999999999823,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": null
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "focus",
+      "stages": [
+        {
+          "key": "[\"playing\",1,\"역할별 업무\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "focus",
+            "pending": null,
+            "label": "집중하는 오전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 1,
+            "total": 4,
+            "stage": "역할별 업무",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 559.9999999998194,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "hand"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "focus",
+              "index": 0,
+              "stage": "역할별 업무",
+              "since": 556.0166666664896,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "집중과 짧은 회의"
+            },
+            "last": null
+          }
+        },
+        {
+          "key": "[\"playing\",2,\"3인 진행 확인\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "focus",
+            "pending": null,
+            "label": "집중하는 오전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 2,
+            "total": 4,
+            "stage": "3인 진행 확인",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 571.9999999998084,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.5615618106995885
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "meeting-0": "nara-group",
+            "meeting-1": "sora-group",
+            "meeting-2": "jun-group",
+            "walkway-0": "nara-group"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "focus",
+              "index": 1,
+              "stage": "3인 진행 확인",
+              "since": 570.9166666664761,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "집중과 짧은 회의"
+            },
+            "last": null
+          }
+        },
+        {
+          "key": "[\"playing\",3,\"자리에서 휴식\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "focus",
+            "pending": null,
+            "label": "집중하는 오전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 3,
+            "total": 4,
+            "stage": "자리에서 휴식",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 759.9999999996375,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.48
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.48
+            ],
+            "jun": [
+              0,
+              0,
+              -3.48
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.48
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "focus",
+              "index": 2,
+              "stage": "자리에서 휴식",
+              "since": 756.2666666663075,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "집중과 짧은 회의"
+            },
+            "last": null
+          }
+        },
+        {
+          "key": "[\"playing\",4,\"업무 복귀\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "focus",
+            "pending": null,
+            "label": "집중하는 오전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 4,
+            "total": 4,
+            "stage": "업무 복귀",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 767.9999999996302,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "focus",
+              "index": 3,
+              "stage": "업무 복귀",
+              "since": 766.9666666662978,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "집중과 짧은 회의"
+            },
+            "last": null
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "focus",
+            "pending": null,
+            "label": "집중하는 오전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 783.9999999996156,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": {
+              "name": "focus",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "focus",
+          "pending": null,
+          "label": "집중하는 오전",
+          "participants": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 783.9999999996156,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": {
+            "name": "focus",
+            "status": "complete",
+            "steps": 4
+          }
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "review",
+      "stages": [
+        {
+          "key": "[\"playing\",1,\"역할별 초안\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "review",
+            "pending": null,
+            "label": "함께 검토하는 오후",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 1,
+            "total": 4,
+            "stage": "역할별 초안",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 787.999999999612,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "hand"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "review",
+              "index": 0,
+              "stage": "역할별 초안",
+              "since": 784.0166666662823,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "함께 검토하는 하루"
+            },
+            "last": {
+              "name": "focus",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"playing\",2,\"4인 검토 회의\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "review",
+            "pending": null,
+            "label": "함께 검토하는 오후",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 2,
+            "total": 4,
+            "stage": "4인 검토 회의",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 799.9999999996011,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.5615618106995885
+            ],
+            "jun": [
+              0,
+              0,
+              -3.5615618106995885
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "meeting-0": "sora-group",
+            "meeting-1": "jun-group",
+            "meeting-2": "min-group",
+            "meeting-3": "leo-group",
+            "walkway-0": "sora-group",
+            "walkway-1": "jun-group"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "review",
+              "index": 1,
+              "stage": "4인 검토 회의",
+              "since": 798.9166666662687,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "함께 검토하는 하루"
+            },
+            "last": {
+              "name": "focus",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"playing\",3,\"5인 보드 검토\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "review",
+            "pending": null,
+            "label": "함께 검토하는 오후",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 3,
+            "total": 4,
+            "stage": "5인 보드 검토",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1043.9999999993793,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.581994403292181
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.581994403292181
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.581994403292181
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "huddle-0": "nara-huddle",
+            "huddle-1": "sora-huddle",
+            "huddle-2": "jun-huddle",
+            "huddle-3": "min-huddle",
+            "huddle-4": "leo-huddle",
+            "walkway-0": "nara-huddle",
+            "walkway-1": "jun-huddle",
+            "walkway-2": "min-huddle"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "review",
+              "index": 2,
+              "stage": "5인 보드 검토",
+              "since": 1043.1166666660467,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "함께 검토하는 하루"
+            },
+            "last": {
+              "name": "focus",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"playing\",4,\"결과 정리\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "review",
+            "pending": null,
+            "label": "함께 검토하는 오후",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 4,
+            "total": 4,
+            "stage": "결과 정리",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1207.99999999923,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "hand"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "review",
+              "index": 3,
+              "stage": "결과 정리",
+              "since": 1204.183333332567,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "함께 검토하는 하루"
+            },
+            "last": {
+              "name": "focus",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "review",
+            "pending": null,
+            "label": "함께 검토하는 오후",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1219.9999999992192,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": {
+              "name": "review",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "review",
+          "pending": null,
+          "label": "함께 검토하는 오후",
+          "participants": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 1219.9999999992192,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": {
+            "name": "review",
+            "status": "complete",
+            "steps": 4
+          }
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    },
+    {
+      "id": "break",
+      "stages": [
+        {
+          "key": "[\"playing\",1,\"어깨와 손목 풀기\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "break",
+            "pending": null,
+            "label": "커피와 재충전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 1,
+            "total": 4,
+            "stage": "어깨와 손목 풀기",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1223.9999999992156,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.48
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.48
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "break",
+              "index": 0,
+              "stage": "어깨와 손목 풀기",
+              "since": 1220.0166666658859,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "커피와 재충전"
+            },
+            "last": {
+              "name": "review",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"playing\",2,\"다섯 동료 커피 순환\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "break",
+            "pending": null,
+            "label": "커피와 재충전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 2,
+            "total": 4,
+            "stage": "다섯 동료 커피 순환",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1231.9999999992083,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {
+            "coffee-0": "nara-coffee"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "break",
+              "index": 1,
+              "stage": "다섯 동료 커피 순환",
+              "since": 1230.7166666658761,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "커피와 재충전"
+            },
+            "last": {
+              "name": "review",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"playing\",3,\"소파 대화와 창가 휴식\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "break",
+            "pending": null,
+            "label": "커피와 재충전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 3,
+            "total": 4,
+            "stage": "소파 대화와 창가 휴식",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1511.9999999989536,
+          "positions": {
+            "nara": [
+              -5.298399999999999,
+              0,
+              -3.48
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.48
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.48
+            ]
+          },
+          "claims": {
+            "sofa-0": "nara-sofa",
+            "sofa-1": "jun-sofa",
+            "walkway-0": "nara-sofa"
+          },
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "break",
+              "index": 2,
+              "stage": "소파 대화와 창가 휴식",
+              "since": 1508.1166666656238,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "커피와 재충전"
+            },
+            "last": {
+              "name": "review",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"playing\",4,\"업무 복귀\"]",
+          "scenario": {
+            "phase": "playing",
+            "id": "break",
+            "pending": null,
+            "label": "커피와 재충전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": 4,
+            "total": 4,
+            "stage": "업무 복귀",
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1651.9999999988263,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "hand"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "hand"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": {
+              "name": "break",
+              "index": 3,
+              "stage": "업무 복귀",
+              "since": 1650.383333332161,
+              "interrupted": false,
+              "retries": 0,
+              "started": true,
+              "total": 4,
+              "label": "커피와 재충전"
+            },
+            "last": {
+              "name": "review",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        },
+        {
+          "key": "[\"complete\",null,null]",
+          "scenario": {
+            "phase": "complete",
+            "id": "break",
+            "pending": null,
+            "label": "커피와 재충전",
+            "participants": [
+              "nara",
+              "sora",
+              "jun",
+              "min",
+              "leo"
+            ],
+            "step": null,
+            "total": null,
+            "stage": null,
+            "error": "",
+            "canRestart": true
+          },
+          "time": 1667.9999999988117,
+          "positions": {
+            "nara": [
+              -4.8,
+              0,
+              -3.6
+            ],
+            "sora": [
+              -2.4,
+              0,
+              -3.6
+            ],
+            "jun": [
+              0,
+              0,
+              -3.6
+            ],
+            "min": [
+              2.3999999999999995,
+              0,
+              -3.6
+            ],
+            "leo": [
+              4.8,
+              0,
+              -3.6
+            ]
+          },
+          "claims": {},
+          "violations": [],
+          "owners": {
+            "nara": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "sora": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "jun": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "min": {
+              "cup": "desk",
+              "role": "desk"
+            },
+            "leo": {
+              "cup": "desk",
+              "role": "desk"
+            }
+          },
+          "pages": [
+            {
+              "id": "nara",
+              "owner": "desk:nara",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "sora",
+              "owner": "desk:sora",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "jun",
+              "owner": "desk:jun",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "min",
+              "owner": "desk:min",
+              "supportGap": 0.0004999999999999449
+            },
+            {
+              "id": "leo",
+              "owner": "desk:leo",
+              "supportGap": 0.0004999999999999449
+            }
+          ],
+          "scenarioEngine": {
+            "current": null,
+            "last": {
+              "name": "break",
+              "status": "complete",
+              "steps": 4
+            }
+          }
+        }
+      ],
+      "complete": true,
+      "final": {
+        "scenario": {
+          "phase": "complete",
+          "id": "break",
+          "pending": null,
+          "label": "커피와 재충전",
+          "participants": [
+            "nara",
+            "sora",
+            "jun",
+            "min",
+            "leo"
+          ],
+          "step": null,
+          "total": null,
+          "stage": null,
+          "error": "",
+          "canRestart": true
+        },
+        "time": 1667.9999999988117,
+        "positions": {
+          "nara": [
+            -4.8,
+            0,
+            -3.6
+          ],
+          "sora": [
+            -2.4,
+            0,
+            -3.6
+          ],
+          "jun": [
+            0,
+            0,
+            -3.6
+          ],
+          "min": [
+            2.3999999999999995,
+            0,
+            -3.6
+          ],
+          "leo": [
+            4.8,
+            0,
+            -3.6
+          ]
+        },
+        "claims": {},
+        "violations": [],
+        "owners": {
+          "nara": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "sora": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "jun": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "min": {
+            "cup": "desk",
+            "role": "desk"
+          },
+          "leo": {
+            "cup": "desk",
+            "role": "desk"
+          }
+        },
+        "pages": [
+          {
+            "id": "nara",
+            "owner": "desk:nara",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "sora",
+            "owner": "desk:sora",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "jun",
+            "owner": "desk:jun",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "min",
+            "owner": "desk:min",
+            "supportGap": 0.0004999999999999449
+          },
+          {
+            "id": "leo",
+            "owner": "desk:leo",
+            "supportGap": 0.0004999999999999449
+          }
+        ],
+        "scenarioEngine": {
+          "current": null,
+          "last": {
+            "name": "break",
+            "status": "complete",
+            "steps": 4
+          }
+        }
+      },
+      "home": true,
+      "propsReturned": true,
+      "claimsReleased": true
+    }
+  ]
+}

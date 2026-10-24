@@ -1,0 +1,329 @@
+{
+  "scope": "Controlled real WebGL browser workload, not end-user FPS or whole-application CPU%. Three alternating paired runs, each 60 fixed simulation steps and 15 full draws at balanced DPR1.5 1650x1110; final framebuffer readback included equally. Setup and forced GC excluded from CPU interval. Retained JS heap after forced GC and RSS endpoint are not peak/unique memory. Correction: draws=15 records loop submissions only; pixels() submits one extra verification draw. Actual timed total=16 draws per run.",
+  "rows": [
+    {
+      "round": 0,
+      "workload": "idle",
+      "mode": "baseline",
+      "cpuMs": 374.2249999999956,
+      "metricWallMs": 292.88800002541393,
+      "retainedJsHeapBytes": 33327852,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 105.55,
+        "rssKiB": 317712
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 286,
+      "pixels": {
+        "hash": "9f868e4f",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "40efe2edc9a73dcce4fc2f7aebdf734fcd21c25e72b667e16c2a6c080ab3796f",
+      "drawCalls": 1093,
+      "triangles": 788342,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 0,
+      "workload": "idle",
+      "mode": "optimized",
+      "cpuMs": 292.6399999999916,
+      "metricWallMs": 218.464000034146,
+      "retainedJsHeapBytes": 33218680,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 109.99000000000001,
+        "rssKiB": 313712
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 212.79999995231628,
+      "pixels": {
+        "hash": "9f868e4f",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "40efe2edc9a73dcce4fc2f7aebdf734fcd21c25e72b667e16c2a6c080ab3796f",
+      "drawCalls": 1093,
+      "triangles": 788342,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 0,
+      "workload": "roles1",
+      "mode": "baseline",
+      "cpuMs": 494.3309999999883,
+      "metricWallMs": 378.0030000489205,
+      "retainedJsHeapBytes": 43594988,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 113.86,
+        "rssKiB": 358960
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 367.10000002384186,
+      "pixels": {
+        "hash": "686d20e7",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "7af918d198fcd3bbc8fabfe9f20a97b3fe9b73778c875bc650c1127038120bd2",
+      "drawCalls": 1093,
+      "triangles": 789214,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 0,
+      "workload": "roles1",
+      "mode": "optimized",
+      "cpuMs": 413.0210000000005,
+      "metricWallMs": 308.82200004998595,
+      "retainedJsHeapBytes": 33499176,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 118.03999999999999,
+        "rssKiB": 378160
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 301.3000000715256,
+      "pixels": {
+        "hash": "686d20e7",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "7af918d198fcd3bbc8fabfe9f20a97b3fe9b73778c875bc650c1127038120bd2",
+      "drawCalls": 1093,
+      "triangles": 789214,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 1,
+      "workload": "idle",
+      "mode": "optimized",
+      "cpuMs": 330.23500000000183,
+      "metricWallMs": 227.2390000289306,
+      "retainedJsHeapBytes": 33648008,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 121.86,
+        "rssKiB": 355888
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 221.80000007152557,
+      "pixels": {
+        "hash": "9f868e4f",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "40efe2edc9a73dcce4fc2f7aebdf734fcd21c25e72b667e16c2a6c080ab3796f",
+      "drawCalls": 1093,
+      "triangles": 788342,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 1,
+      "workload": "idle",
+      "mode": "baseline",
+      "cpuMs": 279.40800000000365,
+      "metricWallMs": 208.7329999776557,
+      "retainedJsHeapBytes": 43843728,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 126.07,
+        "rssKiB": 363200
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 203,
+      "pixels": {
+        "hash": "9f868e4f",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "40efe2edc9a73dcce4fc2f7aebdf734fcd21c25e72b667e16c2a6c080ab3796f",
+      "drawCalls": 1093,
+      "triangles": 788342,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 1,
+      "workload": "roles1",
+      "mode": "optimized",
+      "cpuMs": 392.1220000000005,
+      "metricWallMs": 282.74699999019504,
+      "retainedJsHeapBytes": 33372912,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 129.81,
+        "rssKiB": 379088
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 275.60000002384186,
+      "pixels": {
+        "hash": "686d20e7",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "7af918d198fcd3bbc8fabfe9f20a97b3fe9b73778c875bc650c1127038120bd2",
+      "drawCalls": 1093,
+      "triangles": 789214,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 1,
+      "workload": "roles1",
+      "mode": "baseline",
+      "cpuMs": 467.7369999999996,
+      "metricWallMs": 346.90799994859844,
+      "retainedJsHeapBytes": 33493116,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 134.15,
+        "rssKiB": 317920
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 340.5,
+      "pixels": {
+        "hash": "686d20e7",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "7af918d198fcd3bbc8fabfe9f20a97b3fe9b73778c875bc650c1127038120bd2",
+      "drawCalls": 1093,
+      "triangles": 789214,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 2,
+      "workload": "idle",
+      "mode": "baseline",
+      "cpuMs": 581.011999999987,
+      "metricWallMs": 478.0549999559298,
+      "retainedJsHeapBytes": 33476536,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 138.79,
+        "rssKiB": 289744
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 461.1999999284744,
+      "pixels": {
+        "hash": "9f868e4f",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "40efe2edc9a73dcce4fc2f7aebdf734fcd21c25e72b667e16c2a6c080ab3796f",
+      "drawCalls": 1093,
+      "triangles": 788342,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 2,
+      "workload": "idle",
+      "mode": "optimized",
+      "cpuMs": 613.9049999999884,
+      "metricWallMs": 527.1629999624565,
+      "retainedJsHeapBytes": 33314112,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 145.38,
+        "rssKiB": 244256
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 496,
+      "pixels": {
+        "hash": "9f868e4f",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "40efe2edc9a73dcce4fc2f7aebdf734fcd21c25e72b667e16c2a6c080ab3796f",
+      "drawCalls": 1093,
+      "triangles": 788342,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 2,
+      "workload": "roles1",
+      "mode": "baseline",
+      "cpuMs": 708.6940000000084,
+      "metricWallMs": 561.1230001086369,
+      "retainedJsHeapBytes": 33401928,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 152.29,
+        "rssKiB": 247600
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 550.1999999284744,
+      "pixels": {
+        "hash": "686d20e7",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "7af918d198fcd3bbc8fabfe9f20a97b3fe9b73778c875bc650c1127038120bd2",
+      "drawCalls": 1093,
+      "triangles": 789214,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    },
+    {
+      "round": 2,
+      "workload": "roles1",
+      "mode": "optimized",
+      "cpuMs": 458.1459999999993,
+      "metricWallMs": 337.7399999881163,
+      "retainedJsHeapBytes": 33699820,
+      "retainedRss": {
+        "pid": 36055,
+        "cpu": 158.29,
+        "rssKiB": 251808
+      },
+      "steps": 60,
+      "draws": 15,
+      "wallMs": 331.89999997615814,
+      "pixels": {
+        "hash": "686d20e7",
+        "width": 1650,
+        "height": 1110,
+        "error": 0
+      },
+      "runtimeHash": "7af918d198fcd3bbc8fabfe9f20a97b3fe9b73778c875bc650c1127038120bd2",
+      "drawCalls": 1093,
+      "triangles": 789214,
+      "errors": [],
+      "actualDrawsIncludingReadback": 16
+    }
+  ]
+}

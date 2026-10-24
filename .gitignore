@@ -7,3 +7,6 @@ product/dist
 server/dist
 
 .vercel/
+
+# Local-only practice generated output
+practice/dist/

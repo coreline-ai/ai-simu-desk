@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-24T07:13:10.499Z",
+  "url": "http://127.0.0.1:4198/",
+  "build": true,
+  "unitHttpTests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "typecheck": true,
+  "boundaries": true,
+  "webgl": {
+    "model": 9,
+    "hands": 14,
+    "quality": "balanced",
+    "autoplayAfterReload": true
+  },
+  "ui": {
+    "roleResult": "min",
+    "resetDuringTask": true,
+    "lateResultSuppressed": true,
+    "keyboardPause": true,
+    "pauseSurvivesActivitySelection": true,
+    "externalResources": 0
+  },
+  "handSample": {
+    "actor": "nara",
+    "stage": "use",
+    "owner": "hand",
+    "rightMode": "tripod-write",
+    "handError": 4.440892098500626e-16,
+    "tipError": 0,
+    "violations": []
+  },
+  "contextLoss": {
+    "posterVisible": true,
+    "canvasAfterRelease": 0,
+    "twoDimensionalResultCompleted": true
+  },
+  "scope": {
+    "localOnly": true,
+    "parent4180Health": 200,
+    "hostingerWritesThisFollowup": false,
+    "gitCommitOrPush": false
+  },
+  "limits": [
+    "Representative hand sample only; not all frames or all prop contacts.",
+    "No new CPU/RAM comparison or real-device mobile test.",
+    "Previous 390px iframe layout check remains applicable; shared UI/3D sources unchanged."
+  ]
+}

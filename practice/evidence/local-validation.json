@@ -1,0 +1,179 @@
+{
+  "actors": [
+    {
+      "id": "nara",
+      "model": 9,
+      "quality": "balanced",
+      "hands": {
+        "version": 14,
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pose": "auto",
+        "actor": "sora",
+        "approval": "team-expanded"
+      },
+      "camera": "hands:nara",
+      "signature": {
+        "label": "차분하게 생각을 구조화하는 기획자 나라",
+        "signatures": [
+          "three-line-plan",
+          "board-reflection",
+          "connect-two-ideas"
+        ],
+        "cue": "nara-quiet-reflection",
+        "action": "손을 편히 두고 보드를 바라보며 생각 정리",
+        "phase": "pause",
+        "weight": 0.35,
+        "leftError": 0,
+        "workDuration": 9.6
+      },
+      "violations": []
+    },
+    {
+      "id": "sora",
+      "model": 9,
+      "quality": "balanced",
+      "hands": {
+        "version": 14,
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pose": "auto",
+        "actor": "sora",
+        "approval": "team-expanded"
+      },
+      "camera": "hands:sora",
+      "signature": {
+        "label": "소라 · 시각적으로 탐색하는 디자이너",
+        "signatures": [
+          "큰 S 곡선을 그린 뒤 펜을 띄워 전체 구도 확인",
+          "왼쪽 색상 견본과 태블릿을 비교하고 짧게 수정",
+          "핵심 선을 짚고 동료를 바라보며 열린 손으로 설명"
+        ],
+        "cue": "sora-settle",
+        "action": "태블릿을 향해 조용히 준비",
+        "phase": "observe",
+        "weight": 0,
+        "leftError": 0,
+        "workDuration": 10.8
+      },
+      "violations": []
+    },
+    {
+      "id": "jun",
+      "model": 9,
+      "quality": "balanced",
+      "hands": {
+        "version": 14,
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pose": "auto",
+        "actor": "sora",
+        "approval": "team-expanded"
+      },
+      "camera": "hands:jun",
+      "signature": {
+        "label": "준 · 입력은 빠르게, 생각은 충분히 하는 개발자",
+        "signatures": [
+          "양손으로 짧게 입력한 뒤 손을 멈추고 코드를 길게 읽기",
+          "마우스로 탐색하고 오류를 생각한 뒤 필요한 부분만 재입력하기",
+          "코드 한 줄을 가리키고 동료의 눈을 확인하며 설명하기"
+        ],
+        "cue": "jun-safe-stage-settle",
+        "action": "도구와 자세를 안전하게 정리",
+        "phase": "observe",
+        "weight": 0,
+        "leftError": 0,
+        "workDuration": 10.4
+      },
+      "violations": []
+    },
+    {
+      "id": "min",
+      "model": 9,
+      "quality": "balanced",
+      "hands": {
+        "version": 14,
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pose": "auto",
+        "actor": "sora",
+        "approval": "team-expanded"
+      },
+      "camera": "hands:min",
+      "signature": {
+        "label": "민 · 확인하고 확정하는 QA",
+        "signatures": [
+          "항목을 차례로 짚고 화면과 길게 대조한 뒤 짧게 표시",
+          "불일치를 발견하면 펜을 멈추고 종이와 화면을 다시 확인",
+          "최종 항목을 검토하고 작은 체크 두 개와 두 번의 끄덕임으로 확정"
+        ],
+        "cue": "min-settle",
+        "action": "체크리스트 앞에서 차분하게 준비",
+        "phase": "observe",
+        "weight": 0,
+        "leftError": 0,
+        "workDuration": 11.2
+      },
+      "violations": []
+    },
+    {
+      "id": "leo",
+      "model": 9,
+      "quality": "balanced",
+      "hands": {
+        "version": 14,
+        "actors": [
+          "nara",
+          "sora",
+          "jun",
+          "min",
+          "leo"
+        ],
+        "pose": "auto",
+        "actor": "sora",
+        "approval": "team-expanded"
+      },
+      "camera": "hands:leo",
+      "signature": {
+        "label": "레오 · 흐름을 정돈하고 차분하게 마무리하는 정리 담당",
+        "signatures": [
+          "문서 가장자리를 두 번 가볍게 정렬한 뒤 여백을 오래 확인하기",
+          "문서를 높여 긴 문장을 읽고 줄을 바꿀 때만 시선과 손을 옮기기",
+          "왼쪽 분류 탭을 대조하고 문서를 놓을 위치를 신중하게 고르기"
+        ],
+        "cue": "leo-safe-owned-paper-transition",
+        "action": "실제 문서의 반납과 손 회수를 안전하게 기다리기",
+        "phase": "observe",
+        "weight": 0,
+        "leftError": 0,
+        "workDuration": 11.2
+      },
+      "violations": []
+    }
+  ],
+  "reload": {
+    "paused": false,
+    "phase": "idle",
+    "time": 0.06666666666666667
+  }
+}

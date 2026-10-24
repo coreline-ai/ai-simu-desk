@@ -20,6 +20,10 @@
 
 이 기기의 로컬 적용 release는 `1792820338580-e8f0935f-55f1-4ff0-b3f9-cbdc5188f631`이며 정상 종료·비공개 DB 백업·publish·재시작과 4180 health/제공 JS 해시 확인을 완료했다. 기존 탭을 새로고침한다. 이 ID는 다른 기기의 배포 명령에 복사하지 않는다. 외부 호스팅 배포는 하지 않았다.
 
+## 후속 Ego Lite 재검수
+
+2026-10-24: [실제 브라우저 CPU·메모리·접촉 재검수](docs/ego-resource-recheck-20261024.md). 35개 시각/접촉 쌍 동일. 같은60스텝·총16회 WebGL 그리기에서 역할 업무 CPU 시간 중앙값 약16.45% 감소(3회 모두 감소), 대기는 결과 엇갈림. 유지 JS 힙 약32MiB로 유사하며 RSS 증가 표본도 있어 RAM 절감 판정은 하지 않는다. 자동 재생의 낮고 불균등한 RAF 때문에 일반 전경 CPU%/FPS 개선 보장은 하지 않는다. Google Chrome 복구 완료로 인계하지 않으며 사용자 선택으로 Ego Lite에서 검사했다. 제품 코드와 실행 release는 변경하지 않았다.
+
 ## 핵심 파일
 
 | 경로 | 역할 |
@@ -94,3 +98,43 @@ npm start
 - 전원 손 v14 전달 당시 관련81개/서버79개 통과, 새 잠금 의존성 설치·전체 빌드·격리 서버 smoke 통과. 전체 npm test는 장시간 회귀 중 중단한 미완료 상태다. 상세 결과는 `docs/local-release-20261024.md`와 `product/evidence/local-release-20261024/validation.json`에 기록했다. 예전 장시간/Safari 검수 결과를 이번 손 v14의 새 검사로 합산하지 않는다.
 - 실물 모바일, 새 2시간 soak, 피부 전체의 매 프레임 무관통, 의료적 손 구조·FPS 보장은 하지 않는다.
 - `.data/`의 세부 로그/전체 캡처는 로컬 전용이며 Git에 없다. Git에서 재현 가능한 소스/테스트와 요약은 저장소에 포함한다.
+
+## 2026-10-24 실습 하위 폴더 — 최신 요청 우선
+
+- `practice/`에 기존 3D 소스를 재사용하는 정적 실습 화면 구현. 루트 `build:practice`, `test:practice`, `serve:practice` 명령 추가. 별도 저장소/의존성 설치 없음.
+- **사용자가 최종적으로 로컬 실행만 요청했다. Hostinger 운영 업로드 금지.** 전용 화면은 practice/에서 별도 4198로 로컬 실행한다. 2026-10-24 사용자의 로컬 진행 요청으로 범위를 확정했다.
+- 4341은 승인받은 일시 검수 뒤 보존한 원래 미리보기로 복구. 임시 4199 종료. 4180/DB/기존 managed 배포는 그대로.
+- Hostinger에는 앞선 승인으로 빈 work.aitoolslab.win 사이트 항목만 생성됨. 파일 업로드·DNS 수정·유료 구매·커밋/푸시 없음. 불필요한 사이트 삭제는 별도 승인 필요.
+- 상세 상태·검수 한계는 `practice/DEPLOYMENT.md`. `.data/hostinger-work-20261024/`의 부모 통합 후보는 **배포하지 않는다**.
+
+## 2026-10-24 로컬 실습 마무리
+
+- 활성 코드는 `practice/`, 실행 `npm run build:practice && npm run serve:practice`, 화면 127.0.0.1:4198. `practice/` 내부에서 `node build.mjs`, `node serve.mjs`도 가능.
+- 다른 웹사이트 연결 도구/관련 테스트를 활성 트리에서 제거. 별도 저장소·새 의존성·원격 배포 없음.
+- 최신 빌드·8/8 기본 검사·typecheck·check:boundaries 통과. 원본 4180 health 200, 공유 3D 소스 변경 없음, GLB 바이트 동일.
+- Ego 실제 역할 결과·진행 중 초기화·늦은 완료 억제·키보드 일시정지·새로고침 자동 재생·나라 필기 손 표본 검수. WebGL 손실 뒤 캔버스 해제/안내/2D 결과 계속 가능 확인.
+- 자세한 결과와 한계: `practice/DEPLOYMENT.md`, `practice/evidence/final-validation.json`. 계획: `dev-plan/implement_20261024_161015.md`. 새 CPU/RAM 비교·전체 장시간 회귀·실물 모바일 검수는 미실행.
+- 빈 호스팅 사이트는 이전 승인으로 만들어진 과거 이력일 뿐 현재 실습 실행에 사용하지 않는다. 추가 원격 작업·커밋/푸시는 별도 요청 없이는 금지.
+
+## 2026-10-24 practice 배속·시나리오 추가 완료
+
+- 현재 practice 로컬4198 화면에 0.5/1/1.5/2배 및 기존3+새11 시나리오. 업무·협업·휴식·하루 필터, 상대 선택, 진행·다시 시작·중단 후 복귀.
+- `practice/src/scenarios.mjs`가 목록/참가자 스냅샷/최신 요청 하나/안전 복귀를 관리한다. 기존 런타임의 cancelAll을 기다리고 resetActivity로 강제 초기화하지 않는다. 요청 결과·배속·수동 정지는 보존한다.
+- 모델·캐릭터·리그는 변경 없음. 공용 motion-clock/quality-view만 allowSlowMotion 및 motionReview 옵션 추가(기본 제품 정책/자동 RAF 유지). localhost `?review=1`만 제어된 실제 WebGL 검수 모드이며 FPS/CPU 측정용이 아니다.
+- 로컬17/17·기존 시계/품질회귀6/6·typecheck·경계 통과. 4배속×4행동16회와 추가9종 전체 복귀·3개 하루4단계·native완료 기록·배속별 동일 포즈 해시·일시정지 전환/중단 검수.
+- 최신 문서 `practice/SCENARIO_QA.md`, 증거 `practice/evidence/speed-scenarios/`, 계획 `dev-plan/implement_20261024_162550.md`. 전체 장시간 테스트·새CPU/RAM비교·실물모바일 검수 없음.
+- 기존4180/DB/managed release 보존, 원격/Hostinger/DNS·커밋/푸시 없음. `npm run build:practice`, `npm run test:practice`, `npm run serve:practice`로 재현한다.
+
+## 2026-10-24 최종 인계 — 민 머리·practice main 전달
+
+**최신 범위: main 커밋·푸시 승인 / 원격 사이트 배포 금지.** 이전 단계의 커밋/푸시 없음·별도 요청 필요 문구는 역사 기록이며 현재 요청으로 Git 소스 동기화만 추가됐다. Hostinger·DNS·다른 웹사이트 연결을 재개하지 않는다.
+
+- `practice/src/assets/min-hair.mjs`: 민 전용 min-soft-curls v1. 연결된 머리 볼륨·굽은 앞머리·관자놀이 컬. 메시2·7,940 triangles·텍스처0·추가 렌더 루프 없음. 기존 GLB는 바이트 동일하고 나머지 네 명·눈/안경·손·소품·개성 코드는 유지한다.
+- 머리는 MinHead를 상속한다. 기존 HairBack 및 순수 Curl 인스턴스만 숨기며 혼합 피부 배치를 거부한다. dispose는 기존 가시성을 복원하고 새 자원을 해제한다.
+- 0.5/1/1.5/2배와 총14 시나리오·상대·안전 전환/복귀는 유지한다. 시나리오/결과 시간 분리, 마지막 대기 요청 하나, 실습 결과/수동 정지 보존 계약을 유지한다.
+- 최종 practice **21/21**, 민 개성+기존 시계/품질 회귀 **13/13**, 빌드·typecheck·check:boundaries 통과. 전체 장시간 npm test 결과는 아니다.
+- 머리 최종본의 실제 WebGL 4배속×업무/민 커피 **8회** 완료·소품반납·5명원위치·예약해제·violations=[] 확인. 머리 전 기존16회+추가9종과 구분하며 합산하지 않는다.
+- 새 문서 `practice/MIN_HAIR_QA.md`가 최신 결과/한계, `practice/SCENARIO_QA.md`는 이전 전체 시나리오 검수, `practice/README.md`는 사용법, `practice/DEPLOYMENT.md`는 로컬 범위/취소 이력이다. 머리 출처는 `practice/src/assets/README.md`.
+- 컵의 기존 legacy 그립·주먹형 손·팔/컵 겹침은 남는다. 접촉 수치를 모든 프레임의 무관통·손의 해부학적 완성으로 해석하지 않는다. 새 성능 측정·실물 모바일·2시간 soak는 하지 않았다.
+- 재현: Node22, `npm ci` → `npm run build:practice` → `npm run test:practice` → `npm run serve:practice`. 화면 127.0.0.1:4198, 원본4180/DB/managed release 보존. 기존 dist는 Git 제외이므로 pull만으로 실행 화면이 바뀌지 않는다.
+- 이전 Ego 자원 비교의 아직 미커밋 문서·증거도 링크 무결성을 위해 함께 보존한다. 그 수치를 이번 머리/실습의 새 CPU/RAM 결과로 재사용하지 않는다.

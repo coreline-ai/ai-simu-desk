@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "edition": "practice-static",
+  "model": {
+    "url": "./assets/studio-room-v9.ff2187450fa2270e.glb",
+    "sha256": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e",
+    "bytes": 8768140
+  },
+  "poster": {
+    "url": "./assets/office.f60e7fbacd345a3d.png",
+    "sha256": "f60e7fbacd345a3d61d62512e2d86d24cf3644f202867e299930e2865a7843da",
+    "bytes": 1258253
+  },
+  "style": {
+    "url": "./assets/style.6ecfbde7a0871a21.css",
+    "sha256": "6ecfbde7a0871a212283c610a4b5cd7848404b995545626f2ca24b9bd846ff30",
+    "bytes": 11293
+  },
+  "visualBaselineCommit": "14e7c9ece22e1e5bf9e96ef64d441b27c9161f13",
+  "visual": {
+    "model": 9,
+    "personalities": 13,
+    "hands": 14,
+    "quality": "balanced",
+    "motionHz": 60
+  },
+  "practiceAssets": [
+    {
+      "id": "min-soft-curls",
+      "version": 1,
+      "actor": "min",
+      "source": "original local procedural geometry",
+      "meshes": 2,
+      "textures": 0
+    }
+  ],
+  "server": false,
+  "externalAI": false
+}

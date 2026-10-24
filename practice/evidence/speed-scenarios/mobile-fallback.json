@@ -1,0 +1,15 @@
+{
+  "layout": {
+    "width": 390,
+    "scrollWidth": 375,
+    "columns": "345px",
+    "speedButtons": 4,
+    "cards": 11
+  },
+  "failure": {
+    "canvas": 0,
+    "allSceneControlsDisabled": true,
+    "resultCompleted": true
+  },
+  "realDevice": false
+}
