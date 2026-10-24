@@ -1,5 +1,5 @@
 const copy=selection=>Object.freeze({...selection,...(selection.ids?{ids:Object.freeze([...selection.ids])}:{}),...(selection.variants?{variants:Object.freeze({...selection.variants})}:{})});
-const roleOptions=(selection,id)=>{const variant=selection.variants?.[id]??selection.variant;return variant===undefined?{}:{variant};};
+const roleOptions=(selection,id,fallback)=>{const variant=selection.variants?.[id]??selection.variant??fallback;return variant===undefined?{}:{variant};};
 
 // A rehearsal repeats the last successful command, including its participants
 // and resolved role variants. Live DOM values never change a saved rehearsal.
@@ -9,7 +9,7 @@ export class ActivityReplay {
   if(!s||!selection)return false;
   const {kind,actor,ids,peer,scenario}=selection;let ok=false;
   if(kind==='glasses')ok=s.personalMotion?.glasses.start()??false;
-  else if(kind==='roles')ok=ids.map(id=>s.startRole(id,roleOptions(selection,id))).every(Boolean);
+  else if(kind==='roles')ok=ids.map(id=>s.startRole(id,roleOptions(selection,id,s.personalities?.variantFor(id)))).every(Boolean);
   else if(kind==='role')ok=s.startRole(actor,roleOptions(selection,actor));
   else if(kind==='daily')ok=s.startDemo();
   else if(kind==='scenario')ok=s.startScenario(scenario);

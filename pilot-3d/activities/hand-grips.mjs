@@ -1,5 +1,7 @@
 import {paperBendAt} from '../ensemble-office/props.mjs';
 import {HandSurface} from '../ensemble-office/hand-surface.mjs';
+import {HandRevision} from '../hand-v14/adapter.mjs';
+import {HandSkin} from '../character-personalities/hand-skin.mjs';
 import * as T from 'three';
 import {part} from '../sample/character-rig.mjs';
 import {ease} from '../sample/motion.mjs';
@@ -14,8 +16,8 @@ function amount(stage,time,cup=false){
 // Two phalanges per controlled finger. Only their joints move; their lengths stay
 // fixed. The existing wrist solver and prop owner remain the contact authority.
 class HandGrip{
-  constructor(hand,side,{refined=false,enhanced=false}={}){
-    this.refined=refined;this.enhanced=enhanced;this.contactRows=[];
+  constructor(hand,side,{refined=false,enhanced=false,smoothHands=false}={}){
+    this.refined=refined;this.enhanced=enhanced;this.smoothHands=smoothHands&&enhanced;this.contactRows=[];
     this.hand=hand;this.side=side;this.original=hand.children.map(node=>({node,visible:node.visible}));
     const material=hand.children.find(n=>n.material)?.material;
     this.root=new T.Group();this.root.name='ContinuousHand'+side;hand.add(this.root);
@@ -32,7 +34,11 @@ class HandGrip{
       const pad=new T.Object3D();pad.name='GripPad'+i;this.root.add(pad);
       this.fingers.push({base,end,lengths,links,pad});
     }
-    this.surface=enhanced?new HandSurface(this.root,material,side):null;
+    this.surface=enhanced?(this.smoothHands?new HandSkin(this.root,material,side,this.fingers):new HandSurface(this.root,material,side)):null;
+    palm.visible=this.batch.visible=!this.smoothHands;
+    // A paused/reduced-motion runtime may never tick before its first render.
+    // Populate every instance now; default unit-sphere matrices hide the actors.
+    this.apply(0,0,null);
   }
   shaftContact(prop,point,index,local){
     // Slide the support along the real shaft, never shorten a far-away target
@@ -75,8 +81,10 @@ class HandGrip{
     for(const {node}of this.original)node.visible=false;this.root.visible=true;
     const targets=points?this.fingers.map((f,i)=>points[i]?this.hand.worldToLocal(V(...points[i])):kind==='glasses'?(i===0?V(.042,-.020,.026):V(f.end.x,-.040+(i===4?.006:0),.035)):f.end.clone()):this.contacts(prop,kind);this.error=0;this.maxReach=0;this.contactRows=[];
     this.fingers.forEach((f,i)=>{
-      const relaxed=f.end.clone();if(this.relaxation){const curl=this.relaxation.curl;if(i===0){relaxed.x*=1-.18*curl;relaxed.z+=.014*curl;}else{relaxed.x+=(i-2.5)*(this.relaxation.spread??0);relaxed.y+=.014+.018*curl+(i===4?.005:0);relaxed.z+=.012+.020*curl;}}
-      const target=relaxed.lerp(targets[i],this.blend),axis=target.clone().sub(f.base),raw=axis.length(),[a,b]=f.lengths,d=T.MathUtils.clamp(raw,.009,a+b-.0001);axis.normalize();
+      const authored=this.smoothHands&&this.presentation&&this.blend<.001,relaxed=f.end.clone();if(this.relaxation&&!authored){const curl=this.relaxation.curl;if(i===0){relaxed.x*=1-.18*curl;relaxed.z+=.014*curl;}else{relaxed.x+=(i-2.5)*(this.relaxation.spread??0);relaxed.y+=.014+.018*curl+(i===4?.005:0);relaxed.z+=.012+.020*curl;}}
+      if(authored){const curl=T.MathUtils.clamp(this.presentation[i]??0,0,1);if(i===0){relaxed.x*=1-.25*curl;relaxed.y+=curl*.015;relaxed.z+=curl*.020;}else{const straight=f.base.clone().addScaledVector(f.end.clone().sub(f.base).normalize(),(f.lengths[0]+f.lengths[1])*.97),bent=f.end.clone().add(V(0,.035,.040));relaxed.copy(straight).lerp(bent,curl);}}
+      const fingerBlend=this.smoothHands?ease(T.MathUtils.clamp((this.blend-[.02,0,.035,.07,.1][i])/(1-[.02,0,.035,.07,.1][i]),0,1)):this.blend;
+      const target=relaxed.lerp(targets[i],fingerBlend),axis=target.clone().sub(f.base),raw=axis.length(),[a,b]=f.lengths,d=T.MathUtils.clamp(raw,.009,a+b-.0001);axis.normalize();
       const end=f.base.clone().addScaledVector(axis,d),pole=V(0,0,1),bend=pole.addScaledVector(axis,-pole.dot(axis)).normalize(),along=(a*a-b*b+d*d)/(2*d),mid=f.base.clone().addScaledVector(axis,along).addScaledVector(bend,Math.sqrt(Math.max(0,a*a-along*along)));
       for(const [j,p,q]of [[0,f.base,mid],[1,mid,end]]){const link=f.links[j];link.position.copy(p).add(q).multiplyScalar(.5);link.quaternion.setFromUnitVectors(Y,q.clone().sub(p).normalize());link.updateMatrix();this.batch.setMatrixAt(i*2+j,link.matrix);}
       f.pad.position.copy(end);this.maxReach=Math.max(this.maxReach,raw);
@@ -85,11 +93,13 @@ class HandGrip{
     this.surface?.update(this.fingers);this.batch.instanceMatrix.needsUpdate=true;this.hand.updateWorldMatrix(false,true);
   }
   dispose(){this.surface?.dispose();for(const {node,visible}of this.original)node.visible=visible;this.root.removeFromParent();this.batch.dispose();for(const g of this.geometries)g.dispose();}
-  diagnostics(){return{surfaceVersion:this.enhanced?2:1,blend:this.blend,padError:this.error,maxReach:this.maxReach,fingers:this.fingers.length,...(this.refined?{contactScope:'five-finger-target-points',contacts:this.contactRows}: {})};}
+  diagnostics(){return{surfaceVersion:this.smoothHands?3:this.enhanced?2:1,skin:this.surface?.diagnostics?.(),blend:this.blend,padError:this.error,maxReach:this.maxReach,fingers:this.fingers.length,...(this.refined?{contactScope:'five-finger-target-points',contacts:this.contactRows}: {})};}
 }
 export class HandGrips{
-  constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,{R:new HandGrip(part(actors[id],'NaraHandR'),'R',{...options,enhanced:!!actors[id].userData.ensembleAsset}),L:new HandGrip(part(actors[id],'NaraHandL'),'L',{...options,enhanced:!!actors[id].userData.ensembleAsset})}]));}
+  constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,Object.fromEntries(['R','L'].map(side=>{const legacy=new HandGrip(part(actors[id],'NaraHand'+side),side,{...options,enhanced:!!actors[id].userData.ensembleAsset});return [side,options.anatomicalActors?.includes(id)?new HandRevision(legacy,{actor:actors[id],id,side,desk:desks[id],cup:cups[id],scheduler:options.scheduler,model:options.model}):legacy];}))]));}
   setRelaxation(id,profile){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].relaxation=profile?.free?.[side]?{curl:profile.curl,spread:profile.spread??0}:null;}
+  setPresentation(id,poses){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].presentation=poses?.[side]??null;}
+  setDetail(level){for(const row of this.rows.values())for(const side of['L','R']){row[side].surface?.setDetail?.(level);row[side].legacy?.surface?.setDetail?.(level);}}
   apply(id,dt,override){const row=this.rows.get(id);if(!row)return;const d=this.desks[id],c=this.cups[id];row.R.apply(dt,override?.R?.blend??(d.personal&&id==='jun'?0:amount(d.stage,d.time)),override?.R?.prop??d.prop,override?.R?.kind??(id==='leo'?'page':'pen'),override?.R?.points);row.L.apply(dt,override?.L?.blend??(c.personal&&c.state==='release'?1-ease(c.time/c.duration()):amount(c.state,c.time,true)),override?.L?.prop??c.mug,override?.L?.kind??'cup',override?.L?.points);}
   diagnostics(){return Object.fromEntries([...this.rows].map(([id,row])=>[id,Object.fromEntries(Object.entries(row).map(([side,hand])=>[side,hand.diagnostics()]))]));}
   dispose(){for(const row of this.rows.values())for(const hand of Object.values(row))hand.dispose();this.rows.clear();}

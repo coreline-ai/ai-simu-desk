@@ -2,7 +2,7 @@ import*as T from'three';import{AmbientScheduler}from'./ambient-motion.mjs';impor
 const JOINTS=['NaraHead','NaraTorso','NaraShoulderL','NaraShoulderR','NaraElbowL','NaraElbowR','NaraHandL','NaraHandR'];
 export function createOfficeRuntime(model,metadata,options={}){
  const scheduler=options.scheduler??new AmbientScheduler(metadata.actorIds),actors=Object.fromEntries(metadata.actorIds.map(id=>[id,model.getObjectByName(metadata.bindings[id].actor)])),transition=new Map();
- return {scheduler,setViewModel(vm){scheduler.setViewModel(vm);},startDemo(){scheduler.startDemo();},update(dt){if(scheduler.paused)return;scheduler.tick(dt);
+ return {scheduler,setViewModel(vm){scheduler.setViewModel(vm);},startDemo(){scheduler.startDemo();},update(dt){if(scheduler.paused)return;options.beforeTick?.(dt);scheduler.tick(dt);
   for(const[id,actor]of Object.entries(actors)){const rawState=scheduler.state(id),state=options.beforePose?.(id,rawState,dt)??rawState,previous=transition.get(id);let current=previous;
    if(!current||current.action!==state.action){current={action:state.action,time:0,from:new Map(JOINTS.map(name=>{const node=part(actor,name);return[name,{p:node.position.clone(),q:node.quaternion.clone()}];}))};transition.set(id,current);}current.time+=dt;
    const targetActor=actors[state.lookAt],targetHead=targetActor?part(targetActor,'NaraHead').getWorldPosition(new T.Vector3()).toArray():null;

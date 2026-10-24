@@ -1,0 +1,134 @@
+{
+  "schema": "local-release-validation/v1",
+  "date": "2026-10-24T01:40:54.518066+00:00",
+  "baseCommit": "2ba62763fb1d442ea670cad528d231ff10f199fe",
+  "node": "22.23.4",
+  "relatedTests": {
+    "tests": 81,
+    "pass": 81,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "durationMs": 71614.49275
+  },
+  "serverTests": {
+    "tests": 79,
+    "pass": 79,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "durationMs": 77092.151917
+  },
+  "fullSuite": {
+    "status": "incomplete-interrupted",
+    "exitCode": 130,
+    "observedPassingTopLevelTests": 52,
+    "countsAreNotFinal": true,
+    "reason": "existing full suite includes approximately114-minute historical regression; not included in pass claim"
+  },
+  "checks": {
+    "typecheck": true,
+    "boundaries": true,
+    "check": true,
+    "checkProduct": true,
+    "diffWhitespace": true
+  },
+  "freshBuild": {
+    "passed": true,
+    "health": {
+      "status": "ok",
+      "edition": "local",
+      "database": "pglite",
+      "aiProvider": "fake"
+    },
+    "checks": [
+      "compiled server health: local/pglite/fake",
+      "8 public routes/assets 200 and no-cache",
+      "4 private/source routes denied",
+      "hashed demo entry URL resolves",
+      "actual room9 GLB 105 clips and valid header",
+      "fresh lockfile install JS/GLB bytes equal previously visually inspected live release",
+      "setup preserves existing private settings with mode0600"
+    ],
+    "clipCount": 105,
+    "glbBytes": 8768140,
+    "parity": [
+      {
+        "file": "assets/app.js",
+        "sha256": "2772311a41710b746b6c6823453daa8c44e6c23aaad64d2e66a23b7b521e7d6c"
+      },
+      {
+        "file": "demos/activities/personal/app.js",
+        "sha256": "aa6ee3ec761f71dcfa49dbfdaa618d931c6f28aa737825886b86a1828984aba7"
+      },
+      {
+        "file": "assets/studio-room-v9.glb",
+        "sha256": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e"
+      }
+    ],
+    "releaseId": "1792805946836-a2325f47-5d22-471f-a1df-b9fde0796edb",
+    "liveReleaseId": "1792804949256-46f07ee0-b0e5-4315-b345-951e46f99104",
+    "dependencyInstall": "npm ci --ignore-scripts; locked registry download after ENOTCACHED",
+    "database": "isolated temporary PGlite; no user DB read/write",
+    "stop": "SIGTERM"
+  },
+  "sourceFileHashes": {
+    "pilot-3d/activities/desk-actions.mjs": "c60076ca257f7518bfaa6f8261adf42bb37da1bd617a009b858e1579ad09d3f1",
+    "pilot-3d/activities/hand-grips.mjs": "75d2e5f0a80f3425685691e800a5a579e403ea14882e2b896d9e2ab49580203b",
+    "pilot-3d/activities/team-runtime.mjs": "a54597c21eb785a948171fdb5d2a096028aa4f7c8d01b343be8fed32b8bfe47a",
+    "pilot-3d/character-personalities/director.mjs": "a3754cefb049442afbdd6608d7e1524a39a2e7b9fbef4f3419602011f6661048",
+    "pilot-3d/character-personalities/hand-skin.mjs": "898b676351c0208e5fa9dd74563dacea3b886a8093b0419188522602f3e31258",
+    "pilot-3d/character-personalities/jun/motion.mjs": "7aeef6a1a0c1f896f9c58ad3dee16dab916b275e5a6bd122f7fe821c0805de07",
+    "pilot-3d/character-personalities/jun/profile.mjs": "7e4ee82c328c9f70f20e64561f702175af6a873483d0f2f731615352a6066166",
+    "pilot-3d/character-personalities/jun/props.mjs": "f5c4655aff1c3f958ade5f9ef23c05b7ff36df409f6e53b95781b9a0bd0c4902",
+    "pilot-3d/character-personalities/leo/motion.mjs": "6de0df193ff804eb6075aaa4feadf468ab03a650cb58777ca8323fb00bf316a0",
+    "pilot-3d/character-personalities/leo/profile.mjs": "573fbe40aa3fd1b06b7d29aeeffdecb1a2917b19017e58324f5fcb30cede15a4",
+    "pilot-3d/character-personalities/leo/props.mjs": "8f15dec1383a2685fe0298ae4ac1dc36b8b69e8048aba3b91537530f1570e18f",
+    "pilot-3d/character-personalities/min/motion.mjs": "9e0a64ae9156215eefe058bba69fe09dfbe0f2941dfa6013f83946851903191c",
+    "pilot-3d/character-personalities/min/profile.mjs": "63f6131c8362ce2265b9f17bf1475d505ecbeb4dbed4517878e3d969bcd0b409",
+    "pilot-3d/character-personalities/min/props.mjs": "61980f762efb146fff07b0f20c463c2db1460bb401b6b91fb4643061093d7827",
+    "pilot-3d/character-personalities/nara/motion.mjs": "924bac2c1717f734f6ac8e749359e429f15bd8c794b8ba6849e21332c6f1574d",
+    "pilot-3d/character-personalities/nara/profile.mjs": "fb9438f13a8b7232ef01edd1c346c19242dcf664a0a4794e9b3e2c8985190035",
+    "pilot-3d/character-personalities/nara/props.mjs": "2ed4a919606503434fe4630dfb94423923b7c48abeb06c9e5345f06e13caf1c2",
+    "pilot-3d/character-personalities/registry.mjs": "0b18df05b3c0b4db545f15c9463d625e81c2aa80b51f2a24901fe555699d7a81",
+    "pilot-3d/character-personalities/sora/motion.mjs": "cc092aac8cefa7a9d0f3c996fef27184b7b60758fb80b5d4ce27ce7c5114076c",
+    "pilot-3d/character-personalities/sora/profile.mjs": "b1af1aa73019cdcb1beac35ff7aadc8e7313bf4eb0d66f1aea61e9a9d3a2ef98",
+    "pilot-3d/character-personalities/sora/props.mjs": "f8a643afdf4600171c74d8e6bdd7af615d7dc0a4521a7a648587c23d6a8b0d17",
+    "pilot-3d/ensemble-office/scheduler.mjs": "7e9ccc7cbb6a6c8f5663d0ea5a01e3eb1e7fd1b35c690a11cb090921e0772130",
+    "pilot-3d/hand-v14/adapter.mjs": "45fd7b02f72d3fc1f3946a896e126c6003f9d300f0538bb8ed8ed5a3d0c1e9a3",
+    "pilot-3d/hand-v14/kinematics.mjs": "2b3faa1a7c2a16d17e3a2b6d28bb656004517e23c6983251707b217137a48a09",
+    "pilot-3d/hand-v14/skin.mjs": "cad35e7c64802537b9d5eed583c47ab46da9e6ef25d23e395e3e4247c1b0c8fd",
+    "pilot-3d/hand-v14/tripod.mjs": "a413c857a6d3e32410cca8e7b52513c57d381d2ba5253bbb5877640c041abcab",
+    "pilot-3d/personal-office/app.mjs": "2db53ee3801030b7bdbcc388734f4a94ee1b581d5bd181c8c37622907ba87145",
+    "pilot-3d/personal-office/index.html": "ae68248ed06bdaace9a6f53ba0662b206e22f03101dfc8dbfd14af3b3f79b6c7",
+    "pilot-3d/personal-office/replay.mjs": "3faa7610d973c93fc98ce6f728b4801ed16a7d5cd3542386b6e2d35d4d70f51a",
+    "pilot-3d/personal-office/styles.css": "3d6039959d64ee716192ec2199af0252c397526e1233f4fc98b6e1cfd1ead84d",
+    "pilot-3d/sample/quality-view.mjs": "53d79c1514a9fb495dabdf38d8a60137ab280cfc6b3ab2f6c1b1cd9843a326d4",
+    "pilot-3d/sample/runtime.mjs": "321df9213a475e92ff4bd11fbd253c09a18095f5af47c60bf942ef2d58163d03",
+    "product/src/app.mjs": "8a79b38b82e798caa26a98731d083e7cf20900173d1100d9844e6b311e23b700",
+    "product/tests/hand-skin.test.mjs": "f6eb1f6d718b43fa94609f08369980481243b386ce8d29c5c7a511526b589c7b",
+    "product/tests/hand-v14-team.test.mjs": "1acfa63f3955c3e78304111615a442a0fd4b66f91c509a995fe9c1578e41ea6e",
+    "product/tests/hand-v14.test.mjs": "b2e36a0c0b42d31c85324d6121e220e92fad83ce736422ccde60758df01be79b",
+    "product/tests/paused-hands.test.mjs": "51a07ffc7324b1243b1c8659cea3b70d4cd4e3491f69a24d36d7572892e67b68",
+    "product/tests/personal-replay.test.mjs": "081c8f2f13f2dfed41e8e55ec012c84899a99261d6d1a028268c224925757d38",
+    "product/tests/personalities-runtime.test.mjs": "e9cab43e010c86a6cae2082800b063e42e33e9c2c709c7728ad9db5f419567f1",
+    "product/tests/personality-jun.test.mjs": "e7c0ae440b09ca4b711e789e3550bcdc53eadeca2d8d364ead74dbbe6ac653a9",
+    "product/tests/personality-leo.test.mjs": "cbc577f97ee518838d0816a58e5e692c8bf576ff22024b8171d8f05afc516698",
+    "product/tests/personality-min.test.mjs": "bec6e5b686604c3c6befcd39ba11dbfb423c4cf1c5ac00a4a1e507e8c933b7e2",
+    "product/tests/personality-nara.test.mjs": "cee9fb79b98af21ae59d982ff1b35e9e38034b0a9b5756e69c5f46cdecf5aab8",
+    "product/tests/personality-sora.test.mjs": "04101a70eab60f669d35f14ee61de85899cb6fb0bdecb0bef89211cf8efd3eed"
+  },
+  "sensitiveGeneratedFilesExcluded": [
+    ".env*",
+    ".data/",
+    "node_modules/",
+    "product/dist",
+    "server/dist"
+  ],
+  "limitations": [
+    "no new full-suite pass",
+    "no new 2h soak or real mobile/Safari run",
+    "cup/page/glasses/transfer keep legacy contact rig",
+    "not a guarantee of complete skin nonpenetration or subjective naturalness"
+  ]
+}

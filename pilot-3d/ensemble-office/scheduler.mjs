@@ -48,11 +48,12 @@ export class EnsembleScheduler extends InteractionScheduler {
   startDemo() {
     this.auto = true;
     this.introAt = this.demoAt = this.walkDemoAt = null;
-    for (const id of this.ids) this.startRole(id);
+    if (this.personalities) this.personalities.scheduleIntro();
+    else for (const id of this.ids) this.startRole(id);
     this.demoGroupExpected = true;
-    this.threeWalkAt = this.time + 12;
-    this.groupIntentAt = this.time + 13;
-    this.nextAuto = this.time + 14;
+    this.threeWalkAt = this.time + (this.personalities ? 22 : 12);
+    this.groupIntentAt = this.time + (this.personalities ? 26 : 13);
+    this.nextAuto = this.time + (this.personalities ? 20 : 14);
     return true;
   }
   startThreeWalkDemo({ pair = false } = {}) {
@@ -73,6 +74,7 @@ export class EnsembleScheduler extends InteractionScheduler {
   }
   setAuto(value) {
     if (!value) {
+      this.personalities?.cancelIntro();
       this.groupIntentAt = null;
       this.threeWalkAt = null;
       this.demoGroupExpected = false;
@@ -80,6 +82,7 @@ export class EnsembleScheduler extends InteractionScheduler {
     return super.setAuto(value);
   }
   cancelAll() {
+    this.personalities?.cancelIntro();
     this.demoGroupExpected = false;
     this.threeWalkAt = null;
     this.groupIntentAt = null;
