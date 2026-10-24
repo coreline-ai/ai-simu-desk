@@ -23,10 +23,15 @@ export class HandRevision {
  get fingers(){return this.fallback?this.legacy.fingers:this.pads;}
  get surface(){return this.fallback?this.legacy.surface:this.skin;}
  get batch(){return this.legacy.batch;}
+ setDetail(level){this.skin.setDetail(level);this.legacy.surface?.setDetail?.(level);}
  apply(dt,desired,prop,kind,points){
-  this.legacy.relaxation=this.relaxation;this.legacy.presentation=this.presentation;this.legacy.apply(dt,desired,prop,kind,points);
+  this.legacy.relaxation=this.relaxation;this.legacy.presentation=this.presentation;
   const s=this.scheduler,d=this.desk,writing=this.pen&&this.side==='R'&&d.busy&&prop===d.prop&&kind==='pen';
   const external=!!points||desired>.001&&!writing||!!s.getRecord?.(this.id)||!!s.handControl?.(this.id,this.side)&&!s.handReviewControls?.(this.id);
+  // Only the visible contact owner needs geometry/IK work. Keep its blend
+  // clock exact while hidden; a takeover still solves the complete legacy hand.
+  if(external)this.legacy.apply(dt,desired,prop,kind,points);
+  else{this.legacy.advanceBlend(dt,desired);this.legacy.hideOriginal();}
   this.fallback=external;this.root.visible=!external;this.legacy.root.visible=external;
   if(external){this.mode='legacy-owned-contact';this.error=this.legacy.error;this.contactRows=this.legacy.contactRows;this.pressRows=[];return;}
   const review=(s.handReviewActor??'sora')===this.id?s.handReviewPose:null;this.pressRows=[];this.contactRows=[];this.error=0;

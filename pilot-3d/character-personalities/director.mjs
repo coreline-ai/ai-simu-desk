@@ -17,7 +17,7 @@ export class PersonalityDirector {
    const deskY=actor.parent.worldToLocal(V(world.x,tableY,world.z)).y-actor.position.y;
    const props=entry.createProps({actor,model,THREE:T,deskY});
    props.root.name='PersonalityProps_'+id;props.root.position.copy(actor.position);props.root.rotation.y=actor.rotation.y;actor.parent.add(props.root);
-   const row={...entry,sampleFn:entry.sample,actor,props,sample:null,weight:0,left:null,error:0};this.rows.set(id,row);scheduler.desks[id].personality=entry;
+   const row={...entry,expressions:model.getObjectByName(actor.userData.prefix+'ExpressionMouths'),sampleFn:entry.sample,actor,props,sample:null,weight:0,left:null,error:0};this.rows.set(id,row);scheduler.desks[id].personality=entry;
   }
  }
  variantFor(id){return {nara:0,sora:2,jun:0,min:1,leo:1}[id]??0;}
@@ -57,7 +57,7 @@ export class PersonalityDirector {
  }
  expression(id){
   const row=this.rows.get(id),pose=row?.sample;if(!pose||row.weight<.1||!['focus','thinking','positive','relaxed'].includes(pose.expression))return;
-  const g=this.model.getObjectByName(row.actor.userData.prefix+'ExpressionMouths');if(g)for(const n of g.children)n.visible=n.name.endsWith('_'+pose.expression);
+  const g=row.expressions;if(g)for(const n of g.children)n.visible=n.name.endsWith('_'+pose.expression);
  }
  diagnostics(){return{version:1,starts:[...this.starts],pending:[...this.pending.keys()],actors:Object.fromEntries([...this.rows].map(([id,r])=>[id,{label:r.profile.label,signatures:r.profile.signatures,cue:r.sample?.cue??'activity',action:r.sample?.label??'',phase:r.sample?.phase,weight:r.weight,leftError:r.error,workDuration:r.profile.workDuration}]))};}
  dispose(){for(const[id,row]of this.rows){row.props.root.removeFromParent();row.props.dispose();delete this.s.desks[id].personality;delete this.s.desks[id].personalityPose;this.s.handGrips?.setPresentation(id,null);}this.rows.clear();this.pending.clear();}

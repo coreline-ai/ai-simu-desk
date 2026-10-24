@@ -12,6 +12,14 @@
 - 이전 손 비교: `?hands=13`; 이전 개인화/활동 비교: `?version=13`, `?version=12`, `?version=11`.
 - 기본 데모는 새로고침 후 버튼 없이 자동 하루를 재생한다. 수동 정지와 실행 중 OS 동작 줄이기 변경을 보존한다. `play=0`은 시연 명령을 보내지 않는 링크이며 별도의 전체 시간 정지 옵션은 아니다.
 
+## 품질 유지 리소스 최적화
+
+2026-10-24 후속: 숨긴 legacy 손의 중복 계산, 반복 노드 검색/진단/detail 재지정을 줄였다. 화면 밖에서는 **그리기만 생략하고 시뮬레이션·공동 송신은 유지**한다. FPS/DPR/모델/그림자/손 접촉 알고리즘과 배속은 낮추거나 바꾸지 않았다. 컵의 기존 원래 손 메시 표시 복원을 매 스텝 다시 숨기는 계약을 보존해야 한다.
+
+167개 수치 표본과 WebGL 13개 장면 해시 동일. CPU 단독 워크로드 3회 중앙값은 대기 13.10%, 역할 업무 21.67% 감소했으며 전체 앱 CPU 절감률은 아니다. 상세 검증/측정 한계/재현은 [리소스 최적화 검수](docs/resource-efficiency-20261024.md)를 따른다. 관련 회귀 43개와 정적 검사도 통과했다. 자동화 브라우저 RAF 약 2Hz 제한으로 정상 전경 FPS·전체 CPU 절감률은 미확정이다. 이번 결과를 기존 장시간/실물 기기 결과로 확대 해석하지 않는다.
+
+이 기기의 로컬 적용 release는 `1792820338580-e8f0935f-55f1-4ff0-b3f9-cbdc5188f631`이며 정상 종료·비공개 DB 백업·publish·재시작과 4180 health/제공 JS 해시 확인을 완료했다. 기존 탭을 새로고침한다. 이 ID는 다른 기기의 배포 명령에 복사하지 않는다. 외부 호스팅 배포는 하지 않았다.
+
 ## 핵심 파일
 
 | 경로 | 역할 |
@@ -21,6 +29,10 @@
 | `pilot-3d/hand-v14/` | 관절/FK·피부·펜 캘리브레이션·키/마우스 어댑터 |
 | `pilot-3d/activities/{hand-grips,desk-actions,team-runtime}.mjs` | 손·도구 연결과 최종 접촉 우선권 |
 | `pilot-3d/personal-office/{app,replay}.mjs` | 자동 재생·포즈/버전 비교·정확한 시연 반복 |
+| `pilot-3d/sample/{runtime,quality-view}.mjs` | 경량 표시 조회·노드 캐시·화면 밖 render 생략과 해제 |
+| `product/tests/resource-quality.test.mjs` | 숨긴 손 계산 생략·표시 복원·detail/소유권 전환 동등성 |
+| `scripts/qa/resource-*.mjs`, `scripts/qa/build-resource-fixture.mjs` | CPU/수치/격리 화면 재현 도구 |
+| `product/evidence/resource-efficiency-20261024/` | 품질 해시·성능 원시 표본·실제 화면 증거 |
 | `product/src/app.mjs` | 기본 제품에서 5명 opt-in |
 | `product/tests/hand-v14{,-team}.test.mjs` | 전원 초기화·15개 업무·후처리 접촉·공유/해제 |
 | `docs/team-hand-v14-qa.md` | 실제 화면 목록·오차 기준·검수 한계 |
@@ -76,7 +88,9 @@ npm start
 
 ## 검증과 남은 범위
 
+- 후속 리소스 최적화: 관련 **43/43** 통과, 수치 167개·WebGL 13개 표본 동일, 화면 재진입/컨텍스트 복구 동일. prepare/격리 제품 요청·저장 smoke/실제 로컬 적용 확인 완료. 아래 81개/79개 및 과거 장시간 결과와 중복 합산하지 않는다.
+
 - 손/개성/재생 관련 **81개 회귀 통과**, 실제 화면에서 5명 대표 업무·준 마우스/가리키기·5명 컵·레오 문서·준 안경 검수 완료.
-- 이번 커밋 전 관련81개/서버79개 통과, 새 잠금 의존성 설치·전체 빌드·격리 서버 smoke 통과. 전체 npm test는 장시간 회귀 중 중단한 미완료 상태다. 상세 결과는 `docs/local-release-20261024.md`와 `product/evidence/local-release-20261024/validation.json`에 기록했다. 예전 장시간/Safari 검수 결과를 이번 손 v14의 새 검사로 합산하지 않는다.
+- 전원 손 v14 전달 당시 관련81개/서버79개 통과, 새 잠금 의존성 설치·전체 빌드·격리 서버 smoke 통과. 전체 npm test는 장시간 회귀 중 중단한 미완료 상태다. 상세 결과는 `docs/local-release-20261024.md`와 `product/evidence/local-release-20261024/validation.json`에 기록했다. 예전 장시간/Safari 검수 결과를 이번 손 v14의 새 검사로 합산하지 않는다.
 - 실물 모바일, 새 2시간 soak, 피부 전체의 매 프레임 무관통, 의료적 손 구조·FPS 보장은 하지 않는다.
 - `.data/`의 세부 로그/전체 캡처는 로컬 전용이며 Git에 없다. Git에서 재현 가능한 소스/테스트와 요약은 저장소에 포함한다.

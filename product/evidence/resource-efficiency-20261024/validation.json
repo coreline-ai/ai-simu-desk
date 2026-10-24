@@ -1,0 +1,534 @@
+{
+  "baseline": "b963d1795895daa1658b334858cf30f49fe9d267",
+  "visibleTrace": {
+    "samples": 167,
+    "fixedStepHz": 60,
+    "identicalVisibleAndContacts": true,
+    "scope": "fixed 60Hz generated-model visible transforms, skeletons, dynamic instances, paper vertices and full runtime diagnostics"
+  },
+  "webgl": {
+    "renderer": "ANGLE Metal Renderer: Apple M4",
+    "quality": "balanced",
+    "dpr": 1.5,
+    "canvas": [
+      1650,
+      1110
+    ],
+    "exactFramebufferMatches": 13,
+    "cases": [
+      {
+        "name": "idle",
+        "time": 0,
+        "focus": "room",
+        "baselineHash": "cd281cfb",
+        "candidateHash": "cd281cfb",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles0",
+        "time": 4,
+        "focus": "room",
+        "baselineHash": "19e27a21",
+        "candidateHash": "19e27a21",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles1",
+        "time": 5,
+        "focus": "room",
+        "baselineHash": "a4b32ee2",
+        "candidateHash": "a4b32ee2",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles2",
+        "time": 4,
+        "focus": "room",
+        "baselineHash": "95297680",
+        "candidateHash": "95297680",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:nara",
+        "baselineHash": "b131e4",
+        "candidateHash": "b131e4",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:sora",
+        "baselineHash": "a5899420",
+        "candidateHash": "a5899420",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:jun",
+        "baselineHash": "8fc8c699",
+        "candidateHash": "8fc8c699",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:min",
+        "baselineHash": "5759d251",
+        "candidateHash": "5759d251",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles0",
+        "time": 4,
+        "focus": "hands:leo",
+        "baselineHash": "fbc3b93f",
+        "candidateHash": "fbc3b93f",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "roles1",
+        "time": 5,
+        "focus": "hands:jun",
+        "baselineHash": "2ecabb2",
+        "candidateHash": "2ecabb2",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "cups",
+        "time": 3,
+        "focus": "hands:sora",
+        "baselineHash": "e911291a",
+        "candidateHash": "e911291a",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "glasses",
+        "time": 4,
+        "focus": "jun",
+        "baselineHash": "9d911ef2",
+        "candidateHash": "9d911ef2",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      },
+      {
+        "name": "transfer",
+        "time": 25,
+        "focus": "room",
+        "baselineHash": "ad165b04",
+        "candidateHash": "ad165b04",
+        "sameCalls": true,
+        "sameTriangles": true,
+        "errors": []
+      }
+    ]
+  },
+  "browserPerformance": {
+    "scope": "same Chromium page main-thread TaskDuration, not OS total CPU or GPU utilization; 6s x 2, alternating order, fixed 60Hz simulation preserved; frame scheduling may be occlusion-throttled",
+    "rows": [
+      {
+        "round": 0,
+        "mode": "baseline",
+        "visibility": "visible",
+        "seconds": 6.0081589999608696,
+        "mainThreadTaskMs": 755.5459999999999,
+        "scriptMs": 610.101,
+        "layoutMs": 3.3600000000000003,
+        "simulationAdvance": 0.7166666666666678,
+        "rendered": null,
+        "skipped": null,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      },
+      {
+        "round": 0,
+        "mode": "baseline",
+        "visibility": "offscreen",
+        "seconds": 6.006180000025779,
+        "mainThreadTaskMs": 387.53000000000014,
+        "scriptMs": 361.436,
+        "layoutMs": 1.8050000000000002,
+        "simulationAdvance": 0.34999999999999887,
+        "rendered": null,
+        "skipped": null,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      },
+      {
+        "round": 0,
+        "mode": "candidate",
+        "visibility": "visible",
+        "seconds": 6.0078600000124425,
+        "mainThreadTaskMs": 401.6230000000003,
+        "scriptMs": 380.19599999999997,
+        "layoutMs": 3.9909999999999988,
+        "simulationAdvance": 0.7333333333333345,
+        "rendered": 12,
+        "skipped": 0,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      },
+      {
+        "round": 0,
+        "mode": "candidate",
+        "visibility": "offscreen",
+        "seconds": 6.005860999925062,
+        "mainThreadTaskMs": 790.4480000000001,
+        "scriptMs": 105.50800000000005,
+        "layoutMs": 0,
+        "simulationAdvance": 0.349999999999999,
+        "rendered": 0,
+        "skipped": 6,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      },
+      {
+        "round": 1,
+        "mode": "candidate",
+        "visibility": "visible",
+        "seconds": 6.00566600007005,
+        "mainThreadTaskMs": 492.391,
+        "scriptMs": 462.60200000000003,
+        "layoutMs": 4.241,
+        "simulationAdvance": 0.7333333333333345,
+        "rendered": 12,
+        "skipped": 0,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      },
+      {
+        "round": 1,
+        "mode": "candidate",
+        "visibility": "offscreen",
+        "seconds": 6.0053680000128224,
+        "mainThreadTaskMs": 107.52899999999998,
+        "scriptMs": 103.57699999999991,
+        "layoutMs": 0,
+        "simulationAdvance": 0.3499999999999991,
+        "rendered": 0,
+        "skipped": 6,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      },
+      {
+        "round": 1,
+        "mode": "baseline",
+        "visibility": "visible",
+        "seconds": 6.0064860000275075,
+        "mainThreadTaskMs": 369.4449999999998,
+        "scriptMs": 347.08399999999995,
+        "layoutMs": 8.669,
+        "simulationAdvance": 0.7166666666666678,
+        "rendered": null,
+        "skipped": null,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      },
+      {
+        "round": 1,
+        "mode": "baseline",
+        "visibility": "offscreen",
+        "seconds": 6.006874999962747,
+        "mainThreadTaskMs": 266.1740000000004,
+        "scriptMs": 169.82500000000005,
+        "layoutMs": 1.6320000000000014,
+        "simulationAdvance": 0.3166666666666661,
+        "rendered": null,
+        "skipped": null,
+        "canvas": [
+          1650,
+          1110
+        ],
+        "pixelRatio": 1.5,
+        "drawCalls": 1093,
+        "triangles": 788342,
+        "errors": []
+      }
+    ]
+  },
+  "limits": [
+    "Framebuffer hashes cover the listed poses on one GPU/browser, not all hardware or times.",
+    "Browser RAF was throttled to about 2Hz in this automation environment. No foreground FPS, OS CPU or energy reduction claim.",
+    "TaskDuration samples are noisy including an offscreen outlier; no stable browser CPU percentage claimed.",
+    "Offscreen candidate submitted zero renders in both windows, with simulation steps continuing."
+  ],
+  "recovery": {
+    "first": {
+      "hash": "19e27a21",
+      "width": 1650,
+      "height": 1110,
+      "error": 0
+    },
+    "returned": {
+      "hash": "19e27a21",
+      "width": 1650,
+      "height": 1110,
+      "error": 0
+    },
+    "restored": {
+      "hash": "19e27a21",
+      "width": 1650,
+      "height": 1110,
+      "error": 0
+    },
+    "errors": []
+  },
+  "cpuBenchmark": {
+    "scope": "Node22 CPU-only generated-model fixed-step workload, three alternating runs, excludes model construction, no WebGL/DOM/network; not OS application CPU percentage",
+    "baseline": "b963d17",
+    "rows": [
+      {
+        "round": 0,
+        "workload": "idle",
+        "mode": "baseline",
+        "steps": 360,
+        "wallMs": 571.5837919999994,
+        "cpuMs": 723.188
+      },
+      {
+        "round": 0,
+        "workload": "idle",
+        "mode": "candidate",
+        "steps": 360,
+        "wallMs": 436.41620799999964,
+        "cpuMs": 560.638
+      },
+      {
+        "round": 0,
+        "workload": "roles1",
+        "mode": "baseline",
+        "steps": 360,
+        "wallMs": 920.3402500000011,
+        "cpuMs": 1141.15
+      },
+      {
+        "round": 0,
+        "workload": "roles1",
+        "mode": "candidate",
+        "steps": 360,
+        "wallMs": 817.541541999999,
+        "cpuMs": 1004.496
+      },
+      {
+        "round": 1,
+        "workload": "idle",
+        "mode": "candidate",
+        "steps": 360,
+        "wallMs": 413.3936250000006,
+        "cpuMs": 452.843
+      },
+      {
+        "round": 1,
+        "workload": "idle",
+        "mode": "baseline",
+        "steps": 360,
+        "wallMs": 516.6072499999991,
+        "cpuMs": 579.497
+      },
+      {
+        "round": 1,
+        "workload": "roles1",
+        "mode": "candidate",
+        "steps": 360,
+        "wallMs": 932.208749999998,
+        "cpuMs": 959.925
+      },
+      {
+        "round": 1,
+        "workload": "roles1",
+        "mode": "baseline",
+        "steps": 360,
+        "wallMs": 1189.7938749999994,
+        "cpuMs": 1225.44
+      },
+      {
+        "round": 2,
+        "workload": "idle",
+        "mode": "baseline",
+        "steps": 360,
+        "wallMs": 547.7548339999994,
+        "cpuMs": 559.601
+      },
+      {
+        "round": 2,
+        "workload": "idle",
+        "mode": "candidate",
+        "steps": 360,
+        "wallMs": 468.1957919999986,
+        "cpuMs": 503.567
+      },
+      {
+        "round": 2,
+        "workload": "roles1",
+        "mode": "baseline",
+        "steps": 360,
+        "wallMs": 1386.042125,
+        "cpuMs": 1398.046
+      },
+      {
+        "round": 2,
+        "workload": "roles1",
+        "mode": "candidate",
+        "steps": 360,
+        "wallMs": 894.2734999999993,
+        "cpuMs": 936.622
+      }
+    ]
+  },
+  "cpuSummary": {
+    "idle": {
+      "baselineMedianCpuMs": 579.497,
+      "candidateMedianCpuMs": 503.567,
+      "reductionPercent": 13.1,
+      "stepsPerRun": 360,
+      "runsPerVersion": 3
+    },
+    "roles1": {
+      "baselineMedianCpuMs": 1225.44,
+      "candidateMedianCpuMs": 959.925,
+      "reductionPercent": 21.67,
+      "stepsPerRun": 360,
+      "runsPerVersion": 3
+    }
+  },
+  "tests": {
+    "newQualityTests": 3,
+    "existingAffectedTests": 23,
+    "typecheck": true,
+    "boundaries": true,
+    "productSyntax": true,
+    "fullSuiteRun": false,
+    "additionalPausedRoomLifecycleTests": 17,
+    "totalRelated": 43
+  },
+  "build": {
+    "release": "1792820140520-f8990eca-5a59-4fe7-99ed-4c1242aa3f31",
+    "passed": true,
+    "v9AssetBytes": 8768140,
+    "v9AssetUnchanged": true,
+    "v9AssetSha256": "ff2187450fa2270e572ce0c5a16f532e252007afb973875e03c711427030249e",
+    "finalRelease": "1792820338580-e8f0935f-55f1-4ff0-b3f9-cbdc5188f631",
+    "finalRuntimeAndAssetsEqualTestedCandidate": true,
+    "updatedLibraryDocuments": [
+      "library/dev-plan/implement_20261024_142422.html",
+      "library/docs/resource-efficiency-20261024.html"
+    ]
+  },
+  "compiledSmoke": {
+    "isolatedGuest": true,
+    "modelVersion": 9,
+    "handVersion": 14,
+    "syntheticRequestSucceeded": true,
+    "answerSavedAndHistoryVisible": true,
+    "publicRoutesOk": true,
+    "privateRoutes404": true
+  },
+  "localApplication": {
+    "origin": "http://127.0.0.1:4180",
+    "privateDatabaseBackupCreated": true,
+    "release": "1792820338580-e8f0935f-55f1-4ff0-b3f9-cbdc5188f631",
+    "healthAndRoutesOk": true,
+    "servedClientHashVerified": true,
+    "externalDeployment": false
+  },
+  "preCommitVerification": {
+    "at": "2026-10-24T14:48:53+09:00",
+    "relatedTests": {
+      "tests": 43,
+      "pass": 43,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "durationMs": 72432.70375
+    },
+    "typecheck": true,
+    "boundaries": true,
+    "productSyntax": true,
+    "qaScriptSyntax": true,
+    "evidenceConsistency": true,
+    "documentationLinks": true,
+    "localHealth": true,
+    "cpuReproductionToolExecuted": true,
+    "cpuReproductionNote": "Tool smoke only; concurrent tests ran. The published CPU summary remains the original controlled alternating benchmark, not this smoke.",
+    "sourceSha256": {
+      "pilot-3d/activities/gaze.mjs": "4052c0cbaf68516f641c213a9d27a56702a61e9d64d69355f3f5c9f699b8aaaa",
+      "pilot-3d/activities/hand-grips.mjs": "2964a477bd5107cd9428d0950f525cb58c7ca379ab58c91333857f3223dfa9a0",
+      "pilot-3d/character-personalities/director.mjs": "cf345877aa7ce5368a1a917e70a633d71b9a78976de940e37f997b848fb483ed",
+      "pilot-3d/hand-v14/adapter.mjs": "f6378efdf020e397e1d8c33dabaebbcfb787aa9b7294309d7276675296f72610",
+      "pilot-3d/sample/quality-view.mjs": "e91a664fbb0451c6824d005ada19117480ae3ed80fa60a02585d9c3de4ffb09b",
+      "pilot-3d/sample/runtime.mjs": "b7199854770d9adea38d55900c727fc5a89468d035ce5661a29be9bbf84729d8",
+      "product/tests/resource-quality.test.mjs": "bc85a23994ee5e109d23dfccec72a521282c760f59351e124c936aa8bd96c3d3",
+      "scripts/qa/resource-cpu.mjs": "28e056df8c12ebc16a86e267d7d5af747757d4ed01b4ed0da113765ddea0d0b2",
+      "scripts/qa/resource-equivalence.mjs": "5b217097d949d946361c24dad95b356b356b1302ce7db46fff31770fdfd82ec5",
+      "scripts/qa/resource-fixture.mjs": "26a8cdb5602ce77c4e5a47c11817f8e79dbe864caafbbbab4ff93e78642d70e9",
+      "scripts/qa/build-resource-fixture.mjs": "6e0bac590e32ab2905e776bb4cfec884ce8ad8e0e27e53d7e9f2a895296dd34b"
+    }
+  }
+}

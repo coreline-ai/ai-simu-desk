@@ -76,9 +76,11 @@ class HandGrip{
     const points=[V(r,level,0),V(-r,level+.006,0),V(0,level-.010,r),V(r,level-.022,0),V(r,level-.030,0)];
     return points.map((point,index)=>this.refined&&this.blend>.001?this.shaftContact(prop,point,index,local):local(point));
   }
+  advanceBlend(dt,desired){this.blend+=T.MathUtils.clamp(desired-this.blend,-dt*5,dt*5);}
+  hideOriginal(){for(const {node}of this.original)node.visible=false;}
   apply(dt,desired,prop,kind,points){
-    this.blend+=T.MathUtils.clamp(desired-this.blend,-dt*5,dt*5);
-    for(const {node}of this.original)node.visible=false;this.root.visible=true;
+    this.advanceBlend(dt,desired);
+    this.hideOriginal();this.root.visible=true;
     const targets=points?this.fingers.map((f,i)=>points[i]?this.hand.worldToLocal(V(...points[i])):kind==='glasses'?(i===0?V(.042,-.020,.026):V(f.end.x,-.040+(i===4?.006:0),.035)):f.end.clone()):this.contacts(prop,kind);this.error=0;this.maxReach=0;this.contactRows=[];
     this.fingers.forEach((f,i)=>{
       const authored=this.smoothHands&&this.presentation&&this.blend<.001,relaxed=f.end.clone();if(this.relaxation&&!authored){const curl=this.relaxation.curl;if(i===0){relaxed.x*=1-.18*curl;relaxed.z+=.014*curl;}else{relaxed.x+=(i-2.5)*(this.relaxation.spread??0);relaxed.y+=.014+.018*curl+(i===4?.005:0);relaxed.z+=.012+.020*curl;}}
@@ -99,7 +101,7 @@ export class HandGrips{
   constructor(actors,desks,cups,ids,options={}){this.desks=desks;this.cups=cups;this.rows=new Map(ids.map(id=>[id,Object.fromEntries(['R','L'].map(side=>{const legacy=new HandGrip(part(actors[id],'NaraHand'+side),side,{...options,enhanced:!!actors[id].userData.ensembleAsset});return [side,options.anatomicalActors?.includes(id)?new HandRevision(legacy,{actor:actors[id],id,side,desk:desks[id],cup:cups[id],scheduler:options.scheduler,model:options.model}):legacy];}))]));}
   setRelaxation(id,profile){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].relaxation=profile?.free?.[side]?{curl:profile.curl,spread:profile.spread??0}:null;}
   setPresentation(id,poses){const row=this.rows.get(id);if(row)for(const side of['L','R'])row[side].presentation=poses?.[side]??null;}
-  setDetail(level){for(const row of this.rows.values())for(const side of['L','R']){row[side].surface?.setDetail?.(level);row[side].legacy?.surface?.setDetail?.(level);}}
+  setDetail(level){if(level===this.detailLevel)return;this.detailLevel=level;for(const row of this.rows.values())for(const side of['L','R']){if(row[side].setDetail)row[side].setDetail(level);else row[side].surface?.setDetail?.(level);}}
   apply(id,dt,override){const row=this.rows.get(id);if(!row)return;const d=this.desks[id],c=this.cups[id];row.R.apply(dt,override?.R?.blend??(d.personal&&id==='jun'?0:amount(d.stage,d.time)),override?.R?.prop??d.prop,override?.R?.kind??(id==='leo'?'page':'pen'),override?.R?.points);row.L.apply(dt,override?.L?.blend??(c.personal&&c.state==='release'?1-ease(c.time/c.duration()):amount(c.state,c.time,true)),override?.L?.prop??c.mug,override?.L?.kind??'cup',override?.L?.points);}
   diagnostics(){return Object.fromEntries([...this.rows].map(([id,row])=>[id,Object.fromEntries(Object.entries(row).map(([side,hand])=>[side,hand.diagnostics()]))]));}
   dispose(){for(const row of this.rows.values())for(const hand of Object.values(row))hand.dispose();this.rows.clear();}
